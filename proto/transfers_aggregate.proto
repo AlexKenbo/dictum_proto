@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+
+
+
+
+  
+message TransfersAggregate
+{
+  double total = 1;
+  int32 count = 2;
+  double income_total = 3;
+  int32 income_count = 4;
+  double outcome_total = 5;
+  int32 outcome_count = 6;
+
+}   

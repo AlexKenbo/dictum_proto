@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum Direction
+{
+  DIRECTION_UNKNOWN = 0;
+  DIRECTION_INCOME = 1;
+  DIRECTION_EXPENSE = 2;
+  DIRECTION_ANY = 3;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+message Country
+{
+  string country_code = 1;
+  string title = 2;
+  int64 create_time = 3;
+
+}

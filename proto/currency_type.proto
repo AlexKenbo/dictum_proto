@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum CurrencyType
+{
+  CURRENCY_TYPE_UNKNOWN = 0;
+  CURRENCY_TYPE_CRYPTO = 1;
+  CURRENCY_TYPE_FIAT = 2;
+}

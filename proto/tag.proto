@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+  
+message Tag
+{
+  int32 tag_id = 1;
+  string alias = 3;
+  string tag_type = 4;
+  string resource_name = 5;
+
+}   

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+          
+enum AccountType
+{ 
+  ACCOUNT_TYPE_UNKNOWN = 0;
+  ACCOUNT_TYPE_CASH = 1;
+  ACCOUNT_TYPE_CARD = 2;
+  ACCOUNT_TYPE_ELECTRONIC = 3;
+  ACCOUNT_TYPE_BLOCKCHAIN_ADDRESS = 4;
+  ACCOUNT_TYPE_EMONEY = 5;
+  ACCOUNT_TYPE_BANK = 6;
+}

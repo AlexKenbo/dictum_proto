@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum PluginOwnerType
+{
+  PLUGIN_OWNER_TYPE_UNKNOWN = 0;
+  PLUGIN_OWNER_TYPE_ACCOUNT = 1;
+  PLUGIN_OWNER_TYPE_AGENT = 2;
+} 

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+message AccountShare {
+    int64 id = 1;             
+    int32 owner_id = 2;       
+    int32 shared_account_id = 3;
+    int32 receiver_id = 4;    
+  }

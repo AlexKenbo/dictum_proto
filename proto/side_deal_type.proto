@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum SideDealType
+{
+  SIDE_DEAL_TYPE_UNKNOWN = 0;
+  SIDE_DEAL_TYPE_ANY = 1;
+  SIDE_DEAL_TYPE_SELLER = 2;
+  SIDE_DEAL_TYPE_BUYER = 3;
+}   

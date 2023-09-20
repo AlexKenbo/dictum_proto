@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/attachment_type.proto";
+import "api/employee.proto";
+  
+message Attachment
+{
+  int32 attachment_id = 1;
+  string raw_url = 2;
+  string mime_type = 3;
+  AttachmentType type = 4;
+  string name = 5;
+  int32 uploader_id = 7;
+  string resource_name = 9;
+  Employee uploader = 11;
+
+}

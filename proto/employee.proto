@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/role.proto";
+import "api/user.proto";
+import "api/entity.proto";
+import "api/country.proto";
+  
+message Employee
+{
+  int32 user_id = 1;
+  int32 entity_id = 2;
+  int64 hire_time = 3;
+  Role role = 4;
+  int64 unhire_time = 5;
+  string personal_document_number = 7;
+  string personal_document_country_code = 9;
+  User user = 11;
+  Entity entity = 13;
+  Country country = 15;
+
+}

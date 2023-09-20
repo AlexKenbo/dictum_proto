@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum ServiceRunState
+{
+  SERVICE_RUN_STATE_UNKNOWN = 0;
+  SERVICE_RUN_STATE_RUNNING = 1;
+  SERVICE_RUN_STATE_COMPLETED = 2;
+  SERVICE_RUN_STATE_FAILED = 3;
+}   

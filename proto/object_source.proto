@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/service.proto";
+  
+message ObjectSource
+{
+  int32 service_id = 1;
+  string source_key = 2;
+  string object_type = 3;
+  string object_id = 4;
+  int64 create_time = 5;
+  Service service = 6;
+
+} 

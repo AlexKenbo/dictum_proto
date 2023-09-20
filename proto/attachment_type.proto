@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum AttachmentType
+{
+  ATTACHMENT_TYPE_UNKNOWN = 0;
+  ATTACHMENT_TYPE_INVOICE = 1;
+  ATTACHMENT_TYPE_RECEIPT = 2;
+  ATTACHMENT_TYPE_CONTRACT = 3;
+} 

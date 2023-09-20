@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/entity_type.proto";
+import "api/telegram_user.proto";
+import "api/country.proto";
+import "api/agent.proto";
+import "api/entity_source.proto";
+
+//TODO: нужно сделать для всех сущностей вариаци Create без entity_id, сейчас на клиенте ставим 0  
+message Entity
+{
+  int32 entity_id = 1;
+  int32 conglomerate_id = 2;
+  string title = 3;
+  EntityType entity_type = 4;
+  bool is_agent = 5;
+  bool is_employee_of_nullable = 6;
+  int64 create_time = 8;
+  string email = 9;
+  string phone = 11;
+  string address = 13;
+  int32 telegram_user_id = 15;
+  string country_code = 17;
+  string source_key = 19;
+  TelegramUser telegram_user = 21;
+  Country country = 23;
+  Agent agent = 25;
+  repeated EntitySource sources = 27;
+  int32 contact_creator_id = 28;
+}   

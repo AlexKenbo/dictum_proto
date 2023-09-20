@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum EventColor
+{
+  EVENT_COLOR_UNKNOWN = 0;
+  EVENT_COLOR_TRANSPARENT = 1;
+  EVENT_COLOR_RED = 2;
+  EVENT_COLOR_GREEN = 3;
+  EVENT_COLOR_BLUE = 4;
+}

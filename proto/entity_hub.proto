@@ -1,0 +1,223 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "api/requests.proto";
+import "api/entity.proto";
+import "api/employee.proto";
+import "api/account_detail.proto";
+import "api/account.proto";
+import "api/country.proto";
+import "api/entity_aggregate.proto";
+import "api/currency.proto";
+import "api/fi.proto";
+
+//Репо - Entity, Account
+service EntityHub {
+    //--
+    rpc ListEntities(ListRequest) returns (ListEntitiesResponse) {
+        option (google.api.http) = {
+            get: "/v1/entities"
+        };
+    }
+
+    rpc GetEntity(GetRequest) returns (Entity) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=entities/*}"
+        };
+    }
+
+    rpc CreateEntity(Entity) returns (Entity) {
+        option (google.api.http) = {
+            post: "/v1/entities"
+            body: "entity"
+        };
+    };
+
+    rpc BatchInsertEntities(BatchInsertEntitiesRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/batch-entities"
+            body: "batch_entities"
+        };
+    };
+
+    rpc UpdateEntity(Entity) returns (Entity) {
+        option (google.api.http) = {
+            patch:  "/v1/{entity.resource_name=entities/*}"
+            body: "entity"
+        };
+    };
+
+    rpc AggregateEntity(GetRequest) returns (EntityAggregate) {
+        option (google.api.http) = {
+            get: "/v1/{parent=entities/*}/aggregate"
+        };
+    }
+
+    
+    //--
+    rpc ListEmployees(ListRequest) returns (ListEmployeesResponse) {
+        option (google.api.http) = {
+          get: "/v1/employees"
+        };
+    }
+
+    rpc CreateEmployee(Employee) returns (Employee) {
+        option (google.api.http) = {
+            post: "/v1/employees"
+            body: "employee"
+        };
+    }
+
+
+    //--
+    rpc ListCountries(ListRequest) returns (ListCountriesResponse) {
+        option (google.api.http) = {
+          get: "/v1/countries"
+        };
+    }
+
+    
+    //--
+    rpc ListAccounts(ListRequest) returns (ListAccountsResponse) {
+        option (google.api.http) = {
+          get: "/v1/accounts"
+        };
+    }
+
+    rpc ListAccountDetails(ListRequest) returns (ListAccountDetailsResponse) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=entities/*}/accounts/-/details"
+        };
+    }
+
+    rpc GetAccount(GetRequest) returns (Account) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}"
+        };
+    }
+
+    rpc GetAccountDetail(GetRequest) returns (AccountDetail) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}/details"
+        };
+    }
+
+    rpc CreateAccount(Account) returns (Account) {
+        option (google.api.http) = {
+            post: "/v1/accounts"
+            body: "account"
+        };
+    };
+
+    rpc CreateAccountDetails(AccountDetail) returns (AccountDetail) {
+        option (google.api.http) = {
+            post: "/v1/{account_details.resource_name=accounts/*}/details"
+            body: "account_details"
+        };
+    };
+
+    rpc BatchInsertAccounts(BatchInsertAccountsRequest) returns (BatchInsertAccountsResponse) {
+        option (google.api.http) = {
+            post: "/v1/batch-accounts"
+            body: "batch_accounts"
+        };
+    };
+
+    rpc UpdateAccount(Account) returns (Account) {
+        option (google.api.http) = {
+            patch:  "/v1/{account.resource_name=accounts/*}"
+            body: "account"
+        };
+    };
+
+    rpc UpdateAccountDetails(AccountDetail) returns (AccountDetail) {
+        option (google.api.http) = {
+            patch:  "/v1/{account_details.resource_name=accounts/*}/details"
+            body: "account_details"
+        };
+    };
+
+    rpc DeleteAccount(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete:  "/v1/{account.resource_name=accounts/*}"
+            body: "account"
+        };
+    };
+
+
+    //--
+    rpc ListCurrencies (ListRequest) returns (ListCurrenciesResponse) {
+        option (google.api.http) = {
+            get: "/v1/currencies"
+        };
+    }   
+
+
+    //--
+    rpc ListFis (ListRequest) returns (ListFisResponse) {
+        option (google.api.http) = {
+            get: "/v1/fis"
+        };
+    }
+
+
+}
+
+message ListEntitiesResponse {
+    string resource_name = 1;
+    repeated Entity entities = 2;
+    string next_page_token = 3;
+}
+
+
+message BatchInsertEntitiesRequest {
+    repeated Entity entities = 1;
+    int32 service_id = 2;
+}
+
+message ListEmployeesResponse {
+    string resource_name = 1;
+    repeated Employee employees = 2;
+    string next_page_token = 3;
+}
+
+message ListCountriesResponse {
+    string resource_name = 1;
+    repeated Country countries = 2;
+}
+
+message ListAccountsResponse {
+    string resource_name = 1;
+    repeated Account accounts = 2;
+    string next_page_token = 3;
+}
+
+message ListAccountDetailsResponse {
+    string resource_name = 1;
+    repeated AccountDetail account_details = 2;
+    string next_page_token = 3;
+}
+
+message BatchInsertAccountsRequest {
+    repeated Account accounts = 1;
+    int32 service_id = 2;
+}
+
+message BatchInsertAccountsResponse {
+    repeated Account accounts = 1;
+}
+
+message ListCurrenciesResponse {
+    string resource_name = 1;
+    repeated Currency currencies = 2;
+    string next_page_token = 3;
+}
+
+message ListFisResponse {
+    string resource_name = 1;
+    repeated Fi fis = 2;
+    string next_page_token = 3;
+}

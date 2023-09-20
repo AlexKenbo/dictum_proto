@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/user.proto";
+  
+message AuthProvider
+{
+  int32 user_id = 1;
+  string provider_name = 2;
+  string ref_key = 3;
+  string resource_name = 4;
+  User user = 6;
+
+}

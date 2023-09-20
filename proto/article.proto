@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/article_group.proto";
+import "api/direction.proto";
+  
+message Article
+{
+  int32 article_id = 1;
+  string english_name = 2;
+  bool is_computable = 3;
+  bool is_standard = 4;
+  bool allow_subarticles = 5;
+  bool allow_linking = 6;
+  int32 conglomerate_id = 7;
+  ArticleGroup article_group = 8;
+  Direction direction = 9;
+  int32 parent_article_id = 10;
+  Article parent_article = 12;
+
+} 

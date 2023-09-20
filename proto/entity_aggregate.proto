@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+message EntityAggregate
+{
+  int32 attachments_count = 1;
+  int32 account_details_count = 2;
+
+}   

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+
+enum AccrualType
+{
+  ACCRUAL_TYPE_UNKNOWN = 0;
+  ACCRUAL_TYPE_INVOICE = 1;
+  ACCRUAL_TYPE_CORRECTION = 2;
+  ACCRUAL_TYPE_TEMPORAL_CORRECTION = 3;
+}

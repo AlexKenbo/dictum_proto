@@ -1,2 +1,3 @@
 # dictum_proto
- Transport contract between frontend and backend
+ 
+Transport contract between frontend and backend.

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+enum ActionType
+{
+  ACTION_TYPE_UNKNOWN = 0;
+  ACTION_TYPE_INSERT = 1;
+  ACTION_TYPE_UPDATE = 2;
+  ACTION_TYPE_DELETE = 3;
+}

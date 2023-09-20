@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/account.proto";
+import "api/employee.proto";
+
+message AccountAudit
+{
+  int32 account_id = 1;
+  int64 audit_time = 2;
+  double actual_balance = 3;
+  double account_balance = 4;
+  int32 auditor_id = 5;
+  string resource_name = 7;
+  Account account = 9;
+  Employee employee = 11;
+
+}

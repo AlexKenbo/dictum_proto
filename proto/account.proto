@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/account_type.proto";
+import "api/entity.proto";
+import "api/currency.proto";
+import "api/fi.proto";
+import "api/employee.proto";
+import "api/account_detail.proto";
+
+message Account
+{
+  int32 account_id = 1;
+  int32 conglomerate_id = 2;
+  string currency_code = 3;
+  int32 entity_id = 4;
+  string number = 5;
+  AccountType type = 6;
+  bool is_default = 7;
+  string fi_name = 8;
+  string title = 9;
+  int32 cashier_id = 11;
+  string resource_name = 13;
+  Entity entity = 15;
+  Currency currency = 17;
+  Fi fi = 19;
+  Employee cashier = 21;
+  AccountDetail account_detail = 23;
+
+}

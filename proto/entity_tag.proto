@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/entity.proto";
+import "api/tag.proto";
+  
+message EntityTag
+{
+  int32 tag_id = 1;
+  int32 entity_id = 2;
+  Entity entity = 3;
+  Tag tag = 5;
+
+} 

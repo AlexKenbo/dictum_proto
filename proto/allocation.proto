@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/accrual.proto";
+import "api/transfer.proto";
+
+message Allocation
+{
+  int32 accrual_id = 1;
+  int32 transfer_id = 2;
+  int32 conglomerate_id = 3;
+  double accrual_paid_amount = 4;
+  string accrual_currency_code = 5;
+  double transfer_allocated_amount = 6;
+  string transfer_currency_code = 7;
+  int64 create_time = 8;
+  string resource_name = 9;
+  Accrual accrual = 11;
+  Transfer transfer = 13;
+
+} 

@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/accrual_type.proto";
+import "api/payment_type.proto";
+import "api/user.proto";
+import "api/event.proto";
+import "api/operation.proto";
+import "api/currency.proto";
+import "api/account.proto";
+import "api/article.proto";
+
+message Accrual
+{
+  int32 event_id = 1;
+  int32 conglomerate_id = 2;
+  bool one_transfer_pay = 3;
+  int32 operation_id = 4;
+  string currency_code = 5;
+  AccrualType type = 6;
+  int32 article_id = 7;
+  string sys_period = 8;
+  string invoice_number = 9;
+  int64 perform_time = 11;
+  int64 pay_time = 13;
+  int64 payment_due_time = 15;
+  int32 project_id = 17;  
+  int32 recipient_account_id = 19;
+  int32 payer_account_id = 21;
+  bool is_initial = 23;
+  string status = 25;
+  PaymentType payment_type = 27;
+  bool has_other_money_recipient = 29;
+  int32 approver_id = 31;
+  int32 payer_user_id = 33;
+  bool allow_payout = 35;
+  int64 payout_date = 37;
+  string resource_name = 39;
+  string source_key = 41;
+  User payer_user = 43;
+  User approver = 45;
+  Event event = 47;
+  Operation operation = 49;
+  Currency currency = 51;
+  Account recipient_account = 53;
+  Account payer_account = 55;
+  Article article = 57;
+  int32 payer_id = 58;             
+  int32 recipient_id = 59;         
+  double amount = 60;              
+  double allocated_amount = 61;    
+  int64 full_allocated_at = 62;    
+  string datasource = 63;          
+  string color = 64;               
+  string payout_proof = 65;        
+  string note = 66;    
+
+}

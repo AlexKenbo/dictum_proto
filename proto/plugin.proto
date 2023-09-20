@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/plugin_owner_type.proto";
+  
+message Plugin
+{
+  int32 plugin_id = 1;
+  string name = 2;
+  PluginOwnerType owner_type = 3;
+  string scopes = 4;
+
+}   

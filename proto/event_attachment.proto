@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/attachment.proto";
+import "api/event.proto";
+
+message EventAttachment
+{
+  int32 event_attachment_id = 1;
+  int32 attachment_id = 2;
+  int32 event_id = 3;
+  Attachment attachment = 4;
+  Event event = 6;
+
+} 

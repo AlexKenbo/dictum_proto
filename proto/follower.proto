@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+message Follower {
+    int64 id = 1;             
+    int32 follower = 2;       
+    int32 follows = 3;        
+  }

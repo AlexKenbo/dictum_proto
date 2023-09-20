@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum PaymentType
+{
+  PAYMENT_TYPE_UNKNOWN = 0;
+  PAYMENT_TYPE_PREPAY = 1;
+  PAYMENT_TYPE_POSTPAY = 2;
+  PAYMENT_TYPE_ANY = 3;
+}   

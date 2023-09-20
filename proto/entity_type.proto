@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum EntityType
+{
+  ENTITY_TYPE_UNKNOWN = 0;
+  ENTITY_TYPE_COMPANY = 1;
+  ENTITY_TYPE_PERSON = 2;
+  ENTITY_TYPE_GROUP = 3;
+}

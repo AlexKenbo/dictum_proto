@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/operation.proto";
+import "api/accrual_allocations.proto";
+  
+message OperationAccruals
+{
+  Operation operation = 1;
+  repeated AccrualAllocations accruals = 2;
+
+} 

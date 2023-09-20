@@ -1,0 +1,240 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "api/requests.proto";
+import "api/accruals_aggregate.proto";
+import "api/transfers_aggregate.proto";
+import "api/accrual.proto";
+import "api/position.proto";
+import "api/product.proto";
+import "api/transfer.proto";
+import "api/allocation.proto";
+import "api/article.proto";
+
+//Репы - Трансферы, Перевод, Продукт
+service FinEvent {
+    //--
+    rpc ListTransfers(ListRequest) returns (ListTransfersResponse) {
+        option (google.api.http) = {
+            get: "/v1/transfers"
+        };
+    }
+    
+    rpc GetTransfer(GetRequest) returns (Transfer) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=transfers/*}"
+        };
+    }
+
+    rpc CreateTransfer(Transfer) returns (Transfer) {
+        option (google.api.http) = {
+            post: "/v1/transfers"
+            body: "transfer"
+        };
+    };
+
+    rpc BatchInsertTransfers(BatchInsertTransfersRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/batch-transfers"
+            body: "batch_transfers"
+        };
+    };
+
+    rpc UpdateTransfer(Transfer) returns (Transfer) {
+        option (google.api.http) = {
+            patch: "/v1/{transfer.resource_name=transfers/*}"
+            body: "transfer"
+        };
+    };
+
+    rpc AggregateTransfers(AggregateRequest) returns (TransfersAggregate) {
+        option (google.api.http) = {
+            get: "/v1/transfers/-/aggregate"
+        };
+    }
+
+
+    //--
+    rpc ListAccruals(ListRequest) returns (ListAccrualsResponse) {
+        option (google.api.http) = {
+            get: "/v1/accruals"
+            additional_bindings {
+              get: "/v1/{parent=operations/*}/accruals"
+            }
+        };
+    }
+
+    rpc GetAccrual(GetRequest) returns (Accrual) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accruals/*}"
+        };
+    }
+
+    rpc CreateAccrual(Accrual) returns (Accrual) {
+        option (google.api.http) = {
+            post: "/v1/accruals"
+            body: "accrual"
+        };
+    };
+
+    rpc UpdateAccrual(Accrual) returns (Accrual) {
+        option (google.api.http) = {
+            patch:  "/v1/{accrual.resource_name=accruals/*}"
+            body: "accrual"
+        };
+    };
+
+    rpc AggregateAccruals(AggregateRequest) returns (AccrualsAggregate) {
+        option (google.api.http) = {
+            get: "/v1/accruals/-/aggregate"
+            additional_bindings {
+              get: "/v1/{parent=operations/*}/accruals/-/aggregate"
+            }
+        };
+    }
+
+    rpc BatchInsertAccruals(BatchInsertAccrualsRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/batch-accruals"
+            body: "batch_accrual"
+        };
+    };
+
+    //--
+    rpc ListProducts(ListRequest) returns (ListProductsResponse) {
+        option (google.api.http) = {
+            get: "/v1/products"
+            additional_bindings {
+                get: "/v1/{parent=entities/*}/products"
+            }
+        };
+    }
+
+    rpc ListPositions(ListRequest) returns (ListPositionsResponse) {
+        option (google.api.http) = {
+            get: "/v1/positions"
+            additional_bindings {
+                get: "/v1/{parent=events/*}/positions"
+            }
+        };
+    }
+
+    rpc UpdatePosition(Position) returns (Position) {
+        option (google.api.http) = {
+            patch: "/v1/{position.resource_name=positions/*}"
+            body: "position"
+        };
+    }
+
+    rpc BatchInsertPostions(BatchInsertPositionsRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/positions"
+            body: "batch_positions"
+            additional_bindings {
+                post: "/v1/{resource_name=events/*}/positions"
+                body: "batch_positions"
+            }
+        };
+    }
+
+    //--
+    rpc ListArticles(google.protobuf.Empty) returns (ListArticlesResponse) {
+        option (google.api.http) = {
+            get: "/v1/articles"
+        };
+    }
+    
+    rpc GetArticle(GetRequest) returns (Article) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=articles/*}"
+        };
+    }
+
+    rpc CreateArticle(Article) returns (Article) {
+        option (google.api.http) = {
+            post: "/v1/articles"
+            body: "article"
+        };
+    };
+
+    rpc UpdateArticle(Article) returns (Article) {
+        option (google.api.http) = {
+            patch:  "/v1/{article.resource_name=articles/*}"
+            body: "article"
+        };
+    };
+
+    //--
+    rpc ListAllocations(ListRequest) returns (ListAllocationsResponse) {
+        option (google.api.http) = {
+            get: "/v1/allocations"
+            additional_bindings {
+              get: "/v1/{parent=transfers/*}/allocations"
+            }
+            additional_bindings {
+              get: "/v1/{parent=accruals/*}/allocations"
+            }
+        };
+    }
+
+    rpc CreateAllocation(Allocation) returns (Allocation) {
+        option (google.api.http) = {
+            post: "/v1/allocations"
+            body: "allocation"
+        };
+    }
+
+
+}
+
+message ListTransfersResponse {
+    string resource_name = 1;
+    repeated Transfer transfers = 2;
+    string next_page_token = 3;
+}
+
+message BatchInsertTransfersRequest {
+    repeated Transfer transfers = 1;
+    int32 service_id = 2;
+}
+
+message ListAccrualsResponse {
+    string resource_name = 1;
+    repeated Accrual accruals = 2;
+    string next_page_token = 3;
+}
+
+message BatchInsertAccrualsRequest {
+    repeated Accrual accruals = 1;
+    int32 service_id = 2;
+}
+
+message BatchInsertPositionsRequest {
+    string resource_name = 1;
+    repeated Position positions = 2;
+}
+
+message ListProductsResponse {
+    string resource_name = 1;
+    repeated Product products = 2;
+    string next_page_token = 3;
+}
+message ListPositionsResponse {
+    string resource_name = 1;
+    repeated Position positions = 2;
+    string next_page_token = 3;
+}
+
+message ListArticlesResponse {
+    string resource_name = 1;
+    repeated Article articles = 2;
+}
+
+message ListAllocationsResponse {
+    string resource_name = 1;
+    repeated Allocation allocations = 2;
+    string next_page_token = 3;
+}

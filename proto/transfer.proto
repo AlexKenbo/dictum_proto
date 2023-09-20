@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+
+
+
+
+
+      
+import "api/transfer_type.proto";
+import "api/event.proto";
+import "api/account.proto";
+import "api/user.proto";
+  
+message Transfer
+{
+  int32 event_id = 1;
+  int32 conglomerate_id = 2;
+  int32 account_id = 3;
+  bool is_virtual = 4;
+  string sys_period = 5;
+  int32 counterparty_account_id = 6;
+  string counterparty_currency_code = 8;
+  string payment_purpose = 10;
+  int64 payment_time = 12;
+  int32 verifier_id = 14;
+  int64 verify_time = 16;
+  string resource_name = 18;
+  string number = 20;
+  TransferType type = 22;
+  Event event = 24;
+  Account account = 26;
+  User verifier = 28;
+  Account counterparty_account = 30;
+  int32 payer_id = 31;                   
+  int32 payer_account_id = 32;           
+  string payer_transfer_key = 33;        
+  int32 recipient_id = 34;               
+  int32 recipient_account_id = 35;       
+  string recipient_transfer_key = 36;    
+  double amount = 37;                    
+  double allocated_amount = 38;          
+  int64 full_allocated_at = 39;          
+  int32 parent_id = 40;                  
+  string datasource = 41;                
+  string color = 42;                     
+  string note = 43;   
+}   
+

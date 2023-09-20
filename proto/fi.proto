@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+message Fi
+{
+  string fi_name = 1;
+  int64 create_time = 2;
+
+} 

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+  
+message TelegramUser
+{
+  int32 telegram_user_id = 1;
+  string source_username = 2;
+  int32 source_key = 3;
+
+}   

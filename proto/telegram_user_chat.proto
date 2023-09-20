@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/telegram_user.proto";
+  
+message TelegramUserChat
+{
+  int32 telegram_user_chat_id = 1;
+  int32 chat_source_key = 2;
+  int32 telegram_user_id = 3;
+  TelegramUser telegram_user = 4;
+
+}   

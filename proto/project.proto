@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+message Project
+{
+  int32 project_id = 1;
+  string title = 2;
+  int64 start_time = 3;
+  int64 end_time = 4;
+}   

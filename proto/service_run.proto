@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/service_run_state.proto";
+import "api/service.proto";
+  
+message ServiceRun
+{
+  int32 service_id = 1;
+  int64 sync_time = 2;
+  ServiceRunState state = 3;
+  string message = 4;
+  Service service = 6;
+
+}   

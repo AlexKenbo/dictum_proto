@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/payment_type.proto";
+import "api/side_deal_type.proto";
+  
+message AccrualStatusTransition
+{
+  string status = 1;
+  string next_status = 2;
+  PaymentType payment_type = 3;
+  bool is_external_flow = 4;
+  SideDealType side_deal = 5;
+
+}

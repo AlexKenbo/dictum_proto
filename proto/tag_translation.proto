@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/language.proto";
+  
+message TagTranslation
+{
+  int32 article_id = 1;
+  string language_code = 2;
+  string translation = 3;
+  Language language = 4;
+
+}   

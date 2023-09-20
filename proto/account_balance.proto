@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/account.proto";
+  
+message AccountBalance
+{
+  int32 account_id = 1;
+  double receipts_amount = 2;
+  double unverified_receipts_amount = 3;
+  double payouts_amount = 4;
+  double unverified_payouts_amount = 5;
+  double incomes_amount = 6;
+  double expenses_amount = 7;
+  string resource_name = 8;
+  Account account = 10;
+
+}

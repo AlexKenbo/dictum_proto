@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/currency.proto";
+  
+message CurrencyRate
+{
+  string receive_currency = 1;
+  string give_currency = 2;
+  int64 create_time = 3;
+  double purchase_price = 4;
+  double selling_price = 5;
+  Currency receive = 6;
+  Currency give = 8;
+
+}

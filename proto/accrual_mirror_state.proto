@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/payment_type.proto";
+
+message AccrualMirrorState
+{
+  int32 accrual_mirror_state_id = 1;
+  PaymentType payment_type = 2;
+  string buyer_status = 3;
+  string seller_status = 4;
+  bool is_sync = 5;
+  string buyer_action = 6;
+  string seller_action = 8;
+
+}

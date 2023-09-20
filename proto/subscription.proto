@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/action_type.proto";
+
+message Subscription
+{
+  int32 subscription_id = 1;
+  ActionType action_type = 3;
+  string table = 4;
+  string fields = 5;
+  string webhook_url = 6;
+  string credentials = 7;
+
+}   

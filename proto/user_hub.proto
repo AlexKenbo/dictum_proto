@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/google/api/annotations.proto";
+import "api/requests.proto";
+import "api/user.proto";
+import "api/auth_provider.proto";
+
+//Репо - User
+service UserHub {
+    rpc ListUsers(ListRequest) returns (ListUsersResponse) {
+        option (google.api.http) = {
+          get: "/v1/users"
+        };
+    }
+
+    rpc GetUser(GetRequest) returns (User) {
+        option (google.api.http) = {
+          get: "/v1/{resource_name=users/*}"
+        };
+    }
+
+    rpc CreateUser(User) returns (User) {
+        option (google.api.http) = {
+            post: "/v1/users"
+            body: "user"
+        };
+    }
+
+    rpc UpdateUser(User) returns (User) {
+        option (google.api.http) = {
+            patch: "/v1/{user.resource_name=users/*}"
+            body: "user"
+        };
+    }
+
+    rpc CreateUserProvider(AuthProvider) returns (AuthProvider) {
+        option (google.api.http) = {
+            post: "/v1/{provider.resource_name=users/*}/providers"
+            body: "provider"
+        };
+    }
+
+}
+
+message ListUsersResponse
+{
+  string resource_name = 1;
+  repeated User users = 2;
+  string next_page_token = 3;
+
+}   

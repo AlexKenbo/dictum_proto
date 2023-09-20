@@ -1,0 +1,162 @@
+syntax = "proto3";
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/google/api/annotations.proto";
+import "api/tag.proto";
+import "api/accrual_status_transition.proto";
+import "api/account_audit.proto";
+import "api/account_balance.proto";
+
+service Accounting {
+    rpc ListAccountBalances(ListAccountBalancesRequest) returns (ListAccountBalancesResponse) {
+        option (google.api.http) = {
+          get: "/v1/{parent=accounts/*}/balances"
+        };
+    }
+
+    rpc ListAccountAudits(ListAccountAuditsRequest) returns (ListAccountAuditsResponse) {
+        option (google.api.http) = {
+          get: "/v1/{parent=accounts/*}/audits"
+        };
+    }
+
+    rpc GetAccountAudit(GetAccountAuditRequest) returns (AccountAudit) {
+        option (google.api.http) = {
+          get: "/v1/{parent=accounts/*}/audits"
+        };
+    }
+
+    rpc GetAccountBalance(GetAccountBalanceRequest) returns (AccountBalance) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}/balance"
+        };
+    }
+
+    rpc CreateAccountBalance(CreateAccountBalanceRequest) returns (AccountBalance) {
+        option (google.api.http) = {
+            post: "/v1/{account_balance.resource_name=accounts/*}/balances"
+            body: "account_balance"
+        };
+    };
+    rpc CreateAccountAudit(CreateAccountAuditRequest) returns (AccountAudit) {
+        option (google.api.http) = {
+            post: "/v1/{account_audit.resource_name=accounts/*}/audits"
+            body: "account_audit"
+        };
+    };
+
+
+    //--
+    rpc ListAccrualStatusTransitions(ListAccrualStatusTransitionsRequest) returns (ListAccrualStatusTransitionsResponse) {
+        option (google.api.http) = {
+          get: "/v1/accrual-status-transitions"
+        };
+    }
+
+
+    rpc ListTags(ListTagsRequest) returns (ListTagsResponse) {
+        option (google.api.http) = {
+          get: "/v1/tags"
+          additional_bindings {
+            get: "/v1/{parent=entities/*}/tags"
+          }
+        };
+    }
+
+    rpc CreateTag(CreateTagRequest) returns (Tag) {
+        option (google.api.http) = {
+            post: "/v1/tags"
+            body: "tag"
+            additional_bindings {
+                post: "/v1/{tag.resource_name=entities/*}/tags"
+                body: "tag"
+              }
+        };
+    };
+
+
+
+}
+
+message ListAccrualHistoryRequest {
+    string parent = 1;
+}
+
+
+message ListTransferHistoryRequest {
+    string parent = 1;
+}
+
+message ListTagsRequest {
+    string filter = 1;
+    string parent = 2;
+}
+
+message ListAccountBalancesRequest {
+    int32 page_size = 1;
+    string page_token = 2;
+    string filter = 3;
+    string parent = 4;
+}
+message ListAccountAuditsRequest {
+    int32 page_size = 1;
+    string page_token = 2;
+    string filter = 3;
+    string parent = 4;
+}
+
+message ListAccrualStatusTransitionsRequest {
+    string filter = 1;
+}
+
+message GetAccountAuditRequest {
+    string resource_name = 1;
+}
+
+message GetAccountBalanceRequest {
+    string resource_name = 1;
+}
+
+message CreateAccountBalanceRequest {
+    /// All relations will be ignored.
+    AccountBalance account_balance = 1;
+}
+message CreateAccountAuditRequest {
+    /// All relations will be ignored.
+    AccountAudit account_audit = 1;
+}
+
+
+message CreateTagRequest {
+    Tag tag = 1;
+}
+
+
+message ListAccountBalancesResponse {
+    string resource_name = 1;
+    repeated AccountBalance account_balances = 2;
+    string next_page_token = 3;
+}
+message ListAccountAuditsResponse {
+    string resource_name = 1;
+    repeated AccountAudit account_audits = 2;
+    string next_page_token = 3;
+}
+
+message ListTagsResponse {
+    string resource_name = 1;
+    repeated Tag tags = 2;
+}
+
+message ListAccrualStatusTransitionsResponse {
+    string resource_name = 1;
+    repeated AccrualStatusTransition accrual_status_transitions = 2;
+}
+
+// message BatchInsertEntitiesResponse {
+//     repeated Entity entities = 1;
+// }
+// message BatchInsertTransfersResponse {
+//     repeated Transfer transfers = 1;
+// }
+

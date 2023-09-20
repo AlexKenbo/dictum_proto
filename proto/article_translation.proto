@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/article.proto";
+import "api/language.proto";
+
+message ArticleTranslation
+{
+  int32 article_id = 1;
+  string language_code = 2;
+  string translation = 3;
+  Article article = 4;
+  Language language = 6;
+
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+      
+message AccountDetail
+{
+  int32 account_id = 1;
+  string beneficiary_name = 2;
+  string beneficiary_address = 4;
+  string vat_number = 6;
+  string fi_code = 8;
+  string fi_address = 10;
+  string correspondent_account_number = 12;
+  string correspondent_code = 14;
+  string correspondent_address = 16;
+  string correspondent_fi_name = 18;
+  string intermediary_account_number = 20;
+  string intermediary_code = 22;
+  string intermediary_address = 24;
+  string intermediary_fi_name = 26;
+  string routing_number = 28;
+  string blockchain_network = 30;
+  string token_standard = 32;
+  string resource_name = 34;
+
+}

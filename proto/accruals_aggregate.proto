@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+message AccrualsAggregate
+{
+  int32 count = 1;
+  double paid_income_total = 2;
+  double unpaid_income_total = 3;
+  double paid_outcome_total = 4;
+  double unpaid_outcome_total = 5;
+
+}

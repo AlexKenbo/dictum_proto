@@ -1,0 +1,141 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/google/api/annotations.proto";
+import "api/object_source.proto";
+import "api/service.proto";
+import "api/service_run.proto";
+
+service PluginService {
+    // * Sources
+    rpc ListObjectSources(ListObjectSourcesRequest) returns (ListObjectSourcesResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=agents/*/accruals/*}/sources"
+            additional_bindings {
+                get: "/v1/{parent=agents/*/counterparties/*}/sources"
+            }
+            additional_bindings {
+                get: "/v1/{parent=accounts/*/transfers/*}/sources"
+            }
+            additional_bindings {
+                get: "/v1/object-sources"
+            }
+        };
+    }
+
+    rpc GetLatestSource(GetLatestSourceRequest) returns (ObjectSource);
+
+    rpc CreateObjectSource(ObjectSource) returns (ObjectSource) {
+        option (google.api.http) = {
+            post: "/v1/accruals/sources"
+            additional_bindings {
+                post: "/v1/counterparties/sources"
+            }
+            additional_bindings {
+                post: "/v1/transfers/sources"
+            }
+        };
+    }
+
+    // * Service
+    rpc CreateService(Service) returns (Service) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=services/*}/runs"
+        };
+    }
+
+    rpc ListServices(ListServicesRequest) returns (ListServicesResponse) {
+        option (google.api.http) = {
+            get: "/v1/services"
+        };
+    }
+
+    rpc GetService(GetServiceRequest) returns (Service) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=services/*}"
+        };
+    }
+    
+    rpc UpdateService(Service) returns (Service) {
+        option (google.api.http) = {
+            patch: "/v1/{resource_name=services/*}"
+        };
+    }
+
+    // * Service Runs
+    rpc CreateServiceRun(ServiceRun) returns (ServiceRun) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=services/*}/runs"
+        };
+    }
+
+    rpc UpdateServiceRun(ServiceRun) returns (ServiceRun) {
+        option (google.api.http) = {
+            patch: "/v1/{resource_name=services/*/runs/*}"
+        };
+    }
+
+    rpc GetServiceRun(GetServiceRunRequest) returns (ServiceRun) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=services/*/runs/*}"
+        };
+    }
+
+    rpc ListServiceRuns(ListServiceRunsRequest) returns (ListServiceRunsResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=services/*}/runs"
+        };
+    }
+
+    rpc RunService(RunServiceRequest) returns (stream ServiceRun) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=services/*}:run"
+        };
+    }
+}
+
+message GetLatestSourceRequest {
+    string objectType = 1;
+    int32 serviceId = 2;
+}
+
+message ListObjectSourcesRequest {
+    string parent = 1;
+    string filter = 2;
+}
+
+message ListObjectSourcesResponse {
+    string resourceName = 1;
+    repeated ObjectSource sources = 2;
+}
+
+// * Service
+message GetServiceRequest {
+    string resourceName = 1;
+}
+
+message ListServicesRequest {
+    string filter = 1;
+}
+message ListServicesResponse {
+    string resourceName = 1;
+    repeated Service services = 2;
+}
+
+// * Service Runs
+message GetServiceRunRequest {
+    string resourceName = 1;
+}
+message ListServiceRunsRequest {
+    string parent = 1;
+    string filter = 2;
+}
+message ListServiceRunsResponse {
+    string resourceName = 1;
+    repeated ServiceRun serviceRuns = 2;
+}
+
+message RunServiceRequest {
+    string resourceName = 1;
+}

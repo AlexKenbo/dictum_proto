@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+message ListRequest {
+    int32 page_size = 1;
+    string page_token = 2;
+    string parent = 3;
+    string filter = 4;
+}
+
+message GetRequest {
+    string resource_name = 1;
+}
+
+message AggregateRequest {
+    string filter = 1;
+    string parent = 2;   
+}
+
+message DeleteRequest {
+    //resource_name: accounts/123, при удалении парситься ID, а ресурс для валидации по RPC-методу  
+    string resource_name = 1;
+
+}

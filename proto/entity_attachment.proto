@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+      
+import "api/attachment.proto";
+import "api/entity.proto";
+  
+message EntityAttachment
+{
+  int32 entity_attachment_id = 1;
+  int32 attachment_id = 2;
+  int32 entity_id = 3;
+  Attachment attachment = 4;
+  Entity entity = 6;
+
+} 

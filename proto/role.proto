@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum Role
+{
+  ROLE_UNKNOWN = 0;
+  ROLE_OWNER = 1;
+  ROLE_TREASURER = 2;
+  ROLE_ACCOUNTANT = 3;
+  ROLE_VIEWER = 4;
+  ROLE_PLUGIN = 5;
+  ROLE_AUTHENTICATION = 6;
+}   

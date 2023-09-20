@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+    
+enum TransferType
+{
+  TRANSFER_TYPE_UNKNOWN = 0;
+  TRANSFER_TYPE_PAYMENT = 1;
+  TRANSFER_TYPE_INITIALIZATION = 2;
+  TRANSFER_TYPE_TRANSFER_WITH_CONVERSION = 3;
+  TRANSFER_TYPE_MOVING = 4;
+  TRANSFER_TYPE_COMMISSION = 5;
+}   
+     
+

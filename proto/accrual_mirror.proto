@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexkenbo/dictum-service/api";
+
+import "api/accrual.proto";
+import "api/accrual_mirror_state.proto";
+  
+message AccrualMirror
+{
+  int32 outcome_accrual_id = 1;
+  int32 income_accrual_id = 2;
+  int32 accrual_mirror_state_id = 3;
+  Accrual outcome_accrual = 5;
+  Accrual income_accrual = 7;
+  AccrualMirrorState accrual_mirror_state = 9;
+}
