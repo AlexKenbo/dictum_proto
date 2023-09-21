@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
 import "google/api/annotations.proto";

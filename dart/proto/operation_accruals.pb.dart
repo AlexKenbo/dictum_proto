@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual_allocations.pb.dart' as $56;
+import 'accrual_allocations.pb.dart' as $57;
 import 'operation.pb.dart' as $46;
 
 class OperationAccruals extends $pb.GeneratedMessage {
   factory OperationAccruals({
     $46.Operation? operation,
-    $core.Iterable<$56.AccrualAllocations>? accruals,
+    $core.Iterable<$57.AccrualAllocations>? accruals,
   }) {
     final $result = create();
     if (operation != null) {
@@ -36,7 +36,7 @@ class OperationAccruals extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OperationAccruals', createEmptyInstance: create)
     ..aOM<$46.Operation>(1, _omitFieldNames ? '' : 'operation', subBuilder: $46.Operation.create)
-    ..pc<$56.AccrualAllocations>(2, _omitFieldNames ? '' : 'accruals', $pb.PbFieldType.PM, subBuilder: $56.AccrualAllocations.create)
+    ..pc<$57.AccrualAllocations>(2, _omitFieldNames ? '' : 'accruals', $pb.PbFieldType.PM, subBuilder: $57.AccrualAllocations.create)
     ..hasRequiredFields = false
   ;
 
@@ -73,7 +73,7 @@ class OperationAccruals extends $pb.GeneratedMessage {
   $46.Operation ensureOperation() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$56.AccrualAllocations> get accruals => $_getList(1);
+  $core.List<$57.AccrualAllocations> get accruals => $_getList(1);
 }
 
 

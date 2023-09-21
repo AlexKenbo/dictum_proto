@@ -4,7 +4,7 @@
 // - protoc             v4.23.4
 // source: proto/accounting.proto
 
-package proto
+package _go
 
 import (
 	context "context"

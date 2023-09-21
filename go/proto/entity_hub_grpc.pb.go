@@ -4,7 +4,7 @@
 // - protoc             v4.23.4
 // source: proto/entity_hub.proto
 
-package proto
+package _go
 
 import (
 	context "context"

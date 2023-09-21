@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'event.pb.dart' as $45;
-import 'product.pb.dart' as $50;
+import 'product.pb.dart' as $51;
 
 class Position extends $pb.GeneratedMessage {
   factory Position({
@@ -25,7 +25,7 @@ class Position extends $pb.GeneratedMessage {
     $core.int? quantity,
     $core.double? sum,
     $core.String? resourceName,
-    $50.Product? product,
+    $51.Product? product,
     $45.Event? event,
   }) {
     final $result = create();
@@ -70,7 +70,7 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'quantity', $pb.PbFieldType.O3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'sum', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$50.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $50.Product.create)
+    ..aOM<$51.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $51.Product.create)
     ..aOM<$45.Event>(11, _omitFieldNames ? '' : 'event', subBuilder: $45.Event.create)
     ..hasRequiredFields = false
   ;
@@ -160,15 +160,15 @@ class Position extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $50.Product get product => $_getN(7);
+  $51.Product get product => $_getN(7);
   @$pb.TagNumber(9)
-  set product($50.Product v) { setField(9, v); }
+  set product($51.Product v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasProduct() => $_has(7);
   @$pb.TagNumber(9)
   void clearProduct() => clearField(9);
   @$pb.TagNumber(9)
-  $50.Product ensureProduct() => $_ensure(7);
+  $51.Product ensureProduct() => $_ensure(7);
 
   @$pb.TagNumber(11)
   $45.Event get event => $_getN(8);

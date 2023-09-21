@@ -4,7 +4,7 @@
 // - protoc             v4.23.4
 // source: proto/plugin_service.proto
 
-package proto
+package _go
 
 import (
 	context "context"

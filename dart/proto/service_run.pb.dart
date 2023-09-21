@@ -15,13 +15,13 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'service.pb.dart' as $19;
-import 'service_run_state.pbenum.dart' as $57;
+import 'service_run_state.pbenum.dart' as $58;
 
 class ServiceRun extends $pb.GeneratedMessage {
   factory ServiceRun({
     $core.int? serviceId,
     $fixnum.Int64? syncTime,
-    $57.ServiceRunState? state,
+    $58.ServiceRunState? state,
     $core.String? message,
     $19.Service? service,
   }) {
@@ -50,7 +50,7 @@ class ServiceRun extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ServiceRun', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..aInt64(2, _omitFieldNames ? '' : 'syncTime')
-    ..e<$57.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $57.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $57.ServiceRunState.valueOf, enumValues: $57.ServiceRunState.values)
+    ..e<$58.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $58.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $58.ServiceRunState.valueOf, enumValues: $58.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
     ..aOM<$19.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $19.Service.create)
     ..hasRequiredFields = false
@@ -96,9 +96,9 @@ class ServiceRun extends $pb.GeneratedMessage {
   void clearSyncTime() => clearField(2);
 
   @$pb.TagNumber(3)
-  $57.ServiceRunState get state => $_getN(2);
+  $58.ServiceRunState get state => $_getN(2);
   @$pb.TagNumber(3)
-  set state($57.ServiceRunState v) { setField(3, v); }
+  set state($58.ServiceRunState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(2);
   @$pb.TagNumber(3)

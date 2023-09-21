@@ -16,7 +16,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account.pb.dart' as $6;
 import 'event.pb.dart' as $45;
-import 'transfer_type.pbenum.dart' as $51;
+import 'transfer_type.pbenum.dart' as $52;
 import 'user.pb.dart' as $13;
 
 class Transfer extends $pb.GeneratedMessage {
@@ -34,7 +34,7 @@ class Transfer extends $pb.GeneratedMessage {
     $fixnum.Int64? verifyTime,
     $core.String? resourceName,
     $core.String? number,
-    $51.TransferType? type,
+    $52.TransferType? type,
     $45.Event? event,
     $6.Account? account,
     $13.User? verifier,
@@ -167,7 +167,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..aInt64(16, _omitFieldNames ? '' : 'verifyTime')
     ..aOS(18, _omitFieldNames ? '' : 'resourceName')
     ..aOS(20, _omitFieldNames ? '' : 'number')
-    ..e<$51.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $51.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $51.TransferType.valueOf, enumValues: $51.TransferType.values)
+    ..e<$52.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $52.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $52.TransferType.valueOf, enumValues: $52.TransferType.values)
     ..aOM<$45.Event>(24, _omitFieldNames ? '' : 'event', subBuilder: $45.Event.create)
     ..aOM<$6.Account>(26, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..aOM<$13.User>(28, _omitFieldNames ? '' : 'verifier', subBuilder: $13.User.create)
@@ -327,9 +327,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearNumber() => clearField(20);
 
   @$pb.TagNumber(22)
-  $51.TransferType get type => $_getN(13);
+  $52.TransferType get type => $_getN(13);
   @$pb.TagNumber(22)
-  set type($51.TransferType v) { setField(22, v); }
+  set type($52.TransferType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasType() => $_has(13);
   @$pb.TagNumber(22)
