@@ -64,7 +64,7 @@ Protocol Buffers - буффер между протоколами бекенда
 
    ```yaml
    dependencies:
-     my_protos:
+     dictum_proto:
        git:
          url: git@github.com:AlexKenbo/dictum_proto.git
          ref: your_tag_version
@@ -108,6 +108,7 @@ Protocol Buffers - буффер между протоколами бекенда
 
     dependencies:
       protobuf: ^2.0.0
+      grpc:
     ```
 
 2. Чтобы установить все зависимости, перейдите в директорию `dart` и выполните:
