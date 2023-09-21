@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
     
 enum EntityType
 {

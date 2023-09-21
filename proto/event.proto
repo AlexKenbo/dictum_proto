@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/event_source.proto";
-import "api/event_color.proto";
-import "api/user.proto";
-import "api/entity.proto";
+
+import "proto/event_source.proto";
+import "proto/event_color.proto";
+import "proto/user.proto";
+import "proto/entity.proto";
   
 message Event
 {

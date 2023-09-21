@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
-import "api/requests.proto";
-import "api/user.proto";
-import "api/auth_provider.proto";
+
+import "google/api/annotations.proto";
+import "proto/requests.proto";
+import "proto/user.proto";
+import "proto/auth_provider.proto";
 
 //Репо - User
 service UserHub {

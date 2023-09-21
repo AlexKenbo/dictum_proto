@@ -1,13 +1,14 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/account_type.proto";
-import "api/entity.proto";
-import "api/currency.proto";
-import "api/fi.proto";
-import "api/employee.proto";
-import "api/account_detail.proto";
+
+import "proto/account_type.proto";
+import "proto/entity.proto";
+import "proto/currency.proto";
+import "proto/fi.proto";
+import "proto/employee.proto";
+import "proto/account_detail.proto";
 
 message Account
 {

@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
-import "api/object_source.proto";
-import "api/service.proto";
-import "api/service_run.proto";
+
+import "google/api/annotations.proto";
+import "proto/object_source.proto";
+import "proto/service.proto";
+import "proto/service_run.proto";
 
 service PluginService {
     // * Sources

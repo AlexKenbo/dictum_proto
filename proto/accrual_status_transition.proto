@@ -1,9 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/payment_type.proto";
-import "api/side_deal_type.proto";
+import "proto/payment_type.proto";
+import "proto/side_deal_type.proto";
   
 message AccrualStatusTransition
 {

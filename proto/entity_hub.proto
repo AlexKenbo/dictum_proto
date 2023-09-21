@@ -1,18 +1,19 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
+
+import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "api/requests.proto";
-import "api/entity.proto";
-import "api/employee.proto";
-import "api/account_detail.proto";
-import "api/account.proto";
-import "api/country.proto";
-import "api/entity_aggregate.proto";
-import "api/currency.proto";
-import "api/fi.proto";
+import "proto/requests.proto";
+import "proto/entity.proto";
+import "proto/employee.proto";
+import "proto/account_detail.proto";
+import "proto/account.proto";
+import "proto/country.proto";
+import "proto/entity_aggregate.proto";
+import "proto/currency.proto";
+import "proto/fi.proto";
 
 //Репо - Entity, Account
 service EntityHub {

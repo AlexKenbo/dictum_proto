@@ -1,9 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/service_run_state.proto";
-import "api/service.proto";
+import "proto/service_run_state.proto";
+import "proto/service.proto";
   
 message ServiceRun
 {

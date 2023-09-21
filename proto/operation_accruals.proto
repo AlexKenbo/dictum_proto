@@ -1,9 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/operation.proto";
-import "api/accrual_allocations.proto";
+import "proto/operation.proto";
+import "proto/accrual_allocations.proto";
   
 message OperationAccruals
 {

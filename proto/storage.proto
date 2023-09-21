@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
-import "api/requests.proto";
+
+import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "api/attachment.proto";
+import "proto/requests.proto";
+import "proto/attachment.proto";
 
 //Репо - Attachment
 service Storage {

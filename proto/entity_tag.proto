@@ -1,9 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/entity.proto";
-import "api/tag.proto";
+import "proto/entity.proto";
+import "proto/tag.proto";
   
 message EntityTag
 {

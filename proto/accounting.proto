@@ -1,12 +1,14 @@
 syntax = "proto3";
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
-import "api/tag.proto";
-import "api/accrual_status_transition.proto";
-import "api/account_audit.proto";
-import "api/account_balance.proto";
 
+import "google/api/annotations.proto";
+import "proto/tag.proto";
+import "proto/accrual_status_transition.proto";
+import "proto/account_audit.proto";
+import "proto/account_balance.proto";
+
+// Сервис не используется!
 service Accounting {
     rpc ListAccountBalances(ListAccountBalancesRequest) returns (ListAccountBalancesResponse) {
         option (google.api.http) = {

@@ -1,15 +1,16 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/accrual_type.proto";
-import "api/payment_type.proto";
-import "api/user.proto";
-import "api/event.proto";
-import "api/operation.proto";
-import "api/currency.proto";
-import "api/account.proto";
-import "api/article.proto";
+
+import "proto/accrual_type.proto";
+import "proto/payment_type.proto";
+import "proto/user.proto";
+import "proto/event.proto";
+import "proto/operation.proto";
+import "proto/currency.proto";
+import "proto/account.proto";
+import "proto/article.proto";
 
 message Accrual
 {

@@ -1,18 +1,19 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/google/api/annotations.proto";
+
+import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "api/requests.proto";
-import "api/accruals_aggregate.proto";
-import "api/transfers_aggregate.proto";
-import "api/accrual.proto";
-import "api/position.proto";
-import "api/product.proto";
-import "api/transfer.proto";
-import "api/allocation.proto";
-import "api/article.proto";
+import "proto/requests.proto";
+import "proto/accruals_aggregate.proto";
+import "proto/transfers_aggregate.proto";
+import "proto/accrual.proto";
+import "proto/position.proto";
+import "proto/product.proto";
+import "proto/transfer.proto";
+import "proto/allocation.proto";
+import "proto/article.proto";
 
 //Репы - Трансферы, Перевод, Продукт
 service FinEvent {

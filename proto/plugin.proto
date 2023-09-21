@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/plugin_owner_type.proto";
+import "proto/plugin_owner_type.proto";
   
 message Plugin
 {

@@ -1,7 +1,8 @@
 
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
 
 
@@ -9,8 +10,8 @@ option go_package = "github.com/alexkenbo/dictum-service/api";
 
 
 
-import "api/entity_role.proto";
-import "api/telegram_user.proto";
+import "proto/entity_role.proto";
+import "proto/telegram_user.proto";
 
   
 message User

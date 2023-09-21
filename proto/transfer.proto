@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
 
 
 
@@ -8,10 +9,10 @@ option go_package = "github.com/alexkenbo/dictum-service/api";
 
 
       
-import "api/transfer_type.proto";
-import "api/event.proto";
-import "api/account.proto";
-import "api/user.proto";
+import "proto/transfer_type.proto";
+import "proto/event.proto";
+import "proto/account.proto";
+import "proto/user.proto";
   
 message Transfer
 {

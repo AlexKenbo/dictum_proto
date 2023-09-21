@@ -1,11 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/role.proto";
-import "api/user.proto";
-import "api/entity.proto";
-import "api/country.proto";
+import "proto/role.proto";
+import "proto/user.proto";
+import "proto/entity.proto";
+import "proto/country.proto";
   
 message Employee
 {

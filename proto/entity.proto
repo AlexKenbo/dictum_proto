@@ -1,12 +1,13 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
+
       
-import "api/entity_type.proto";
-import "api/telegram_user.proto";
-import "api/country.proto";
-import "api/agent.proto";
-import "api/entity_source.proto";
+import "proto/entity_type.proto";
+import "proto/telegram_user.proto";
+import "proto/country.proto";
+import "proto/agent.proto";
+import "proto/entity_source.proto";
 
 //TODO: нужно сделать для всех сущностей вариаци Create без entity_id, сейчас на клиенте ставим 0  
 message Entity

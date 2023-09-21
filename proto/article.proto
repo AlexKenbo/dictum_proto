@@ -1,9 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexkenbo/dictum-service/api";
+option go_package = "github.com/AlexKenbo/dictum_proto/go/proto";
 
-import "api/article_group.proto";
-import "api/direction.proto";
+
+import "proto/article_group.proto";
+import "proto/direction.proto";
   
 message Article
 {
