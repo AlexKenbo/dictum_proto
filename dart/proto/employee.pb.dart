@@ -14,9 +14,9 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'country.pb.dart' as $32;
+import 'country.pb.dart' as $34;
 import 'entity.pb.dart' as $2;
-import 'role.pbenum.dart' as $39;
+import 'role.pbenum.dart' as $41;
 import 'user.pb.dart' as $13;
 
 class Employee extends $pb.GeneratedMessage {
@@ -24,13 +24,13 @@ class Employee extends $pb.GeneratedMessage {
     $core.int? userId,
     $core.int? entityId,
     $fixnum.Int64? hireTime,
-    $39.Role? role,
+    $41.Role? role,
     $fixnum.Int64? unhireTime,
     $core.String? personalDocumentNumber,
     $core.String? personalDocumentCountryCode,
     $13.User? user,
     $2.Entity? entity,
-    $32.Country? country,
+    $34.Country? country,
   }) {
     final $result = create();
     if (userId != null) {
@@ -73,13 +73,13 @@ class Employee extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aInt64(3, _omitFieldNames ? '' : 'hireTime')
-    ..e<$39.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $39.Role.ROLE_UNKNOWN, valueOf: $39.Role.valueOf, enumValues: $39.Role.values)
+    ..e<$41.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $41.Role.ROLE_UNKNOWN, valueOf: $41.Role.valueOf, enumValues: $41.Role.values)
     ..aInt64(5, _omitFieldNames ? '' : 'unhireTime')
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
     ..aOM<$13.User>(11, _omitFieldNames ? '' : 'user', subBuilder: $13.User.create)
     ..aOM<$2.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
-    ..aOM<$32.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $32.Country.create)
+    ..aOM<$34.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $34.Country.create)
     ..hasRequiredFields = false
   ;
 
@@ -132,9 +132,9 @@ class Employee extends $pb.GeneratedMessage {
   void clearHireTime() => clearField(3);
 
   @$pb.TagNumber(4)
-  $39.Role get role => $_getN(3);
+  $41.Role get role => $_getN(3);
   @$pb.TagNumber(4)
-  set role($39.Role v) { setField(4, v); }
+  set role($41.Role v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRole() => $_has(3);
   @$pb.TagNumber(4)
@@ -190,15 +190,15 @@ class Employee extends $pb.GeneratedMessage {
   $2.Entity ensureEntity() => $_ensure(8);
 
   @$pb.TagNumber(15)
-  $32.Country get country => $_getN(9);
+  $34.Country get country => $_getN(9);
   @$pb.TagNumber(15)
-  set country($32.Country v) { setField(15, v); }
+  set country($34.Country v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasCountry() => $_has(9);
   @$pb.TagNumber(15)
   void clearCountry() => clearField(15);
   @$pb.TagNumber(15)
-  $32.Country ensureCountry() => $_ensure(9);
+  $34.Country ensureCountry() => $_ensure(9);
 }
 
 

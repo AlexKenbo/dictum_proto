@@ -15,8 +15,8 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account.pb.dart' as $6;
-import 'event.pb.dart' as $45;
-import 'transfer_type.pbenum.dart' as $52;
+import 'event.pb.dart' as $47;
+import 'transfer_type.pbenum.dart' as $54;
 import 'user.pb.dart' as $13;
 
 class Transfer extends $pb.GeneratedMessage {
@@ -34,8 +34,8 @@ class Transfer extends $pb.GeneratedMessage {
     $fixnum.Int64? verifyTime,
     $core.String? resourceName,
     $core.String? number,
-    $52.TransferType? type,
-    $45.Event? event,
+    $54.TransferType? type,
+    $47.Event? event,
     $6.Account? account,
     $13.User? verifier,
     $6.Account? counterpartyAccount,
@@ -167,8 +167,8 @@ class Transfer extends $pb.GeneratedMessage {
     ..aInt64(16, _omitFieldNames ? '' : 'verifyTime')
     ..aOS(18, _omitFieldNames ? '' : 'resourceName')
     ..aOS(20, _omitFieldNames ? '' : 'number')
-    ..e<$52.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $52.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $52.TransferType.valueOf, enumValues: $52.TransferType.values)
-    ..aOM<$45.Event>(24, _omitFieldNames ? '' : 'event', subBuilder: $45.Event.create)
+    ..e<$54.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $54.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $54.TransferType.valueOf, enumValues: $54.TransferType.values)
+    ..aOM<$47.Event>(24, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
     ..aOM<$6.Account>(26, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..aOM<$13.User>(28, _omitFieldNames ? '' : 'verifier', subBuilder: $13.User.create)
     ..aOM<$6.Account>(30, _omitFieldNames ? '' : 'counterpartyAccount', subBuilder: $6.Account.create)
@@ -327,24 +327,24 @@ class Transfer extends $pb.GeneratedMessage {
   void clearNumber() => clearField(20);
 
   @$pb.TagNumber(22)
-  $52.TransferType get type => $_getN(13);
+  $54.TransferType get type => $_getN(13);
   @$pb.TagNumber(22)
-  set type($52.TransferType v) { setField(22, v); }
+  set type($54.TransferType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasType() => $_has(13);
   @$pb.TagNumber(22)
   void clearType() => clearField(22);
 
   @$pb.TagNumber(24)
-  $45.Event get event => $_getN(14);
+  $47.Event get event => $_getN(14);
   @$pb.TagNumber(24)
-  set event($45.Event v) { setField(24, v); }
+  set event($47.Event v) { setField(24, v); }
   @$pb.TagNumber(24)
   $core.bool hasEvent() => $_has(14);
   @$pb.TagNumber(24)
   void clearEvent() => clearField(24);
   @$pb.TagNumber(24)
-  $45.Event ensureEvent() => $_ensure(14);
+  $47.Event ensureEvent() => $_ensure(14);
 
   @$pb.TagNumber(26)
   $6.Account get account => $_getN(15);

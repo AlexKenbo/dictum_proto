@@ -15,8 +15,8 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity.pb.dart' as $2;
-import 'event_color.pbenum.dart' as $37;
-import 'event_source.pbenum.dart' as $36;
+import 'event_color.pbenum.dart' as $39;
+import 'event_source.pbenum.dart' as $38;
 import 'user.pb.dart' as $13;
 
 class Event extends $pb.GeneratedMessage {
@@ -27,9 +27,9 @@ class Event extends $pb.GeneratedMessage {
     $core.int? conglomerateId,
     $core.double? amount,
     $core.double? processedAmount,
-    $36.EventSource? eventSource,
+    $38.EventSource? eventSource,
     $fixnum.Int64? createTime,
-    $37.EventColor? eventColor,
+    $39.EventColor? eventColor,
     $core.String? sysPeriod,
     $core.String? confirmationUrl,
     $fixnum.Int64? updateTime,
@@ -116,9 +116,9 @@ class Event extends $pb.GeneratedMessage {
     ..a<$core.int>(4, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'processedAmount', $pb.PbFieldType.OD)
-    ..e<$36.EventSource>(7, _omitFieldNames ? '' : 'eventSource', $pb.PbFieldType.OE, defaultOrMaker: $36.EventSource.EVENT_SOURCE_UNKNOWN, valueOf: $36.EventSource.valueOf, enumValues: $36.EventSource.values)
+    ..e<$38.EventSource>(7, _omitFieldNames ? '' : 'eventSource', $pb.PbFieldType.OE, defaultOrMaker: $38.EventSource.EVENT_SOURCE_UNKNOWN, valueOf: $38.EventSource.valueOf, enumValues: $38.EventSource.values)
     ..aInt64(8, _omitFieldNames ? '' : 'createTime')
-    ..e<$37.EventColor>(9, _omitFieldNames ? '' : 'eventColor', $pb.PbFieldType.OE, defaultOrMaker: $37.EventColor.EVENT_COLOR_UNKNOWN, valueOf: $37.EventColor.valueOf, enumValues: $37.EventColor.values)
+    ..e<$39.EventColor>(9, _omitFieldNames ? '' : 'eventColor', $pb.PbFieldType.OE, defaultOrMaker: $39.EventColor.EVENT_COLOR_UNKNOWN, valueOf: $39.EventColor.valueOf, enumValues: $39.EventColor.values)
     ..aOS(10, _omitFieldNames ? '' : 'sysPeriod')
     ..aOS(11, _omitFieldNames ? '' : 'confirmationUrl')
     ..aInt64(13, _omitFieldNames ? '' : 'updateTime')
@@ -209,9 +209,9 @@ class Event extends $pb.GeneratedMessage {
   void clearProcessedAmount() => clearField(6);
 
   @$pb.TagNumber(7)
-  $36.EventSource get eventSource => $_getN(6);
+  $38.EventSource get eventSource => $_getN(6);
   @$pb.TagNumber(7)
-  set eventSource($36.EventSource v) { setField(7, v); }
+  set eventSource($38.EventSource v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasEventSource() => $_has(6);
   @$pb.TagNumber(7)
@@ -227,9 +227,9 @@ class Event extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(8);
 
   @$pb.TagNumber(9)
-  $37.EventColor get eventColor => $_getN(8);
+  $39.EventColor get eventColor => $_getN(8);
   @$pb.TagNumber(9)
-  set eventColor($37.EventColor v) { setField(9, v); }
+  set eventColor($39.EventColor v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasEventColor() => $_has(8);
   @$pb.TagNumber(9)

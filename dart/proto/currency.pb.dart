@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'currency_type.pbenum.dart' as $38;
+import 'currency_type.pbenum.dart' as $40;
 
 class Currency extends $pb.GeneratedMessage {
   factory Currency({
     $core.String? currencyCode,
-    $38.CurrencyType? currencyType,
+    $40.CurrencyType? currencyType,
   }) {
     final $result = create();
     if (currencyCode != null) {
@@ -35,7 +35,7 @@ class Currency extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Currency', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'currencyCode')
-    ..e<$38.CurrencyType>(2, _omitFieldNames ? '' : 'currencyType', $pb.PbFieldType.OE, defaultOrMaker: $38.CurrencyType.CURRENCY_TYPE_UNKNOWN, valueOf: $38.CurrencyType.valueOf, enumValues: $38.CurrencyType.values)
+    ..e<$40.CurrencyType>(2, _omitFieldNames ? '' : 'currencyType', $pb.PbFieldType.OE, defaultOrMaker: $40.CurrencyType.CURRENCY_TYPE_UNKNOWN, valueOf: $40.CurrencyType.valueOf, enumValues: $40.CurrencyType.values)
     ..hasRequiredFields = false
   ;
 
@@ -70,9 +70,9 @@ class Currency extends $pb.GeneratedMessage {
   void clearCurrencyCode() => clearField(1);
 
   @$pb.TagNumber(2)
-  $38.CurrencyType get currencyType => $_getN(1);
+  $40.CurrencyType get currencyType => $_getN(1);
   @$pb.TagNumber(2)
-  set currencyType($38.CurrencyType v) { setField(2, v); }
+  set currencyType($40.CurrencyType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCurrencyType() => $_has(1);
   @$pb.TagNumber(2)

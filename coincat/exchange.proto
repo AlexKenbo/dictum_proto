@@ -1,0 +1,37 @@
+syntax = "proto3";
+package coincat;
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+message ExchangeResponse {
+    string id = 1;
+    string from_id = 2;
+    string to_id = 3;
+    bool active = 4;
+    repeated LevelDetailsResponse levels = 5;
+    CumulativeDetailsResponse cumulative = 6;
+}
+
+message LevelDetailsResponse {
+    double min_amount = 1;
+    double max_amount = 2;
+    double reserve = 3;
+    double rate = 4;
+    double fee_deposit = 5;
+    double fee_withdrawal = 6;
+    double fee = 7;
+    double rate_effective_lower_limit = 8;
+    double rate_effective_upper_limit = 9;
+}
+
+message CumulativeDetailsResponse {
+    double min_amount = 1;
+    double max_amount = 2;
+    double reserve = 3;
+    double rate = 4;
+    double fee_deposit = 5;
+    double fee_withdrawal = 6;
+    double fee = 7;
+    double rate_effective_lower_limit = 8;
+    double rate_effective_upper_limit = 9;
+}

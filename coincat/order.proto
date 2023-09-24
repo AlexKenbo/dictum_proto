@@ -1,0 +1,58 @@
+syntax = "proto3";
+package coincat;
+
+import "google/protobuf/any.proto";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+message OrderRequest {
+    string email = 1;
+    string exchange = 2;
+    string sum = 3;
+    string desired_sum_side = 4;
+    map<string, string> from = 5;
+    map<string, string> to = 6;
+}
+
+enum OrderStatus {
+    NONE = 0;
+    PRECONDITION = 1;
+    REGISTERED = 2;
+    PLACED = 3;
+    CANCELED = 4;
+    PROCESSING = 5;
+    EXPIRED = 6;
+    FILLED = 7;
+    FAILED = 8;
+}
+
+message OrderResponse {
+    string id = 1;
+    string amount_from = 2;
+    string amount_to = 3;
+    string exchange_id = 4;
+    OrderStatus status = 5;
+    string access_code = 6;
+    int32 amount_from_usd = 7;
+    int64 created_at = 8;
+    int64 updated_at = 9;
+    int64 complete_at = 10;
+    string address_fee = 11;
+    int64 expire = 12;
+    int64 expired_at = 13;
+    string fee = 14;
+    string price = 15;
+    string payment_link = 16;
+    string payment_link_bill = 17;
+    // TODO(Denis): пока закомментировал, сложно мапить этот тип
+    // repeated google.protobuf.Any withdrawal_transactions = 18;
+    google.protobuf.Any deposit_transaction = 19;
+    int32 required_confirmations = 20;
+    int32 estimated_fee = 21;
+    int32 estimated_processing_time = 22;
+    google.protobuf.Any withdrawal_extensions = 23;
+    string currency_from = 24;
+    string currency_to = 25;
+    string partner_address = 26;
+    string muid = 27;
+}

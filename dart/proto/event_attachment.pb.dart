@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'attachment.pb.dart' as $16;
-import 'event.pb.dart' as $45;
+import 'event.pb.dart' as $47;
 
 class EventAttachment extends $pb.GeneratedMessage {
   factory EventAttachment({
@@ -22,7 +22,7 @@ class EventAttachment extends $pb.GeneratedMessage {
     $core.int? attachmentId,
     $core.int? eventId,
     $16.Attachment? attachment,
-    $45.Event? event,
+    $47.Event? event,
   }) {
     final $result = create();
     if (eventAttachmentId != null) {
@@ -51,7 +51,7 @@ class EventAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
     ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
-    ..aOM<$45.Event>(6, _omitFieldNames ? '' : 'event', subBuilder: $45.Event.create)
+    ..aOM<$47.Event>(6, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
     ..hasRequiredFields = false
   ;
 
@@ -115,15 +115,15 @@ class EventAttachment extends $pb.GeneratedMessage {
   $16.Attachment ensureAttachment() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $45.Event get event => $_getN(4);
+  $47.Event get event => $_getN(4);
   @$pb.TagNumber(6)
-  set event($45.Event v) { setField(6, v); }
+  set event($47.Event v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasEvent() => $_has(4);
   @$pb.TagNumber(6)
   void clearEvent() => clearField(6);
   @$pb.TagNumber(6)
-  $45.Event ensureEvent() => $_ensure(4);
+  $47.Event ensureEvent() => $_ensure(4);
 }
 
 

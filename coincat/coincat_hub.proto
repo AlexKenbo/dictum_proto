@@ -1,0 +1,63 @@
+syntax = "proto3";
+package coincat;
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+import "coincat/exchange.proto";
+import "coincat/currency.proto";
+import "coincat/order.proto";
+
+
+// Репо - Coincat
+service CoincatHub {
+    rpc ListExchanges(google.protobuf.Empty) returns (ListExchangesResponse) {
+        option (google.api.http) = {
+            get: "/v1/exchanges"
+        };
+    }
+
+    rpc ListCurrencies(google.protobuf.Empty) returns (ListCurrenciesResponse) {
+        option (google.api.http) = {
+            get: "/v1/currencies"
+        };
+    }
+
+    rpc GetOrderStatus(GetOrderStatusRequest) returns (OrderResponse) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=orders/*}"
+        };
+    }
+    
+    rpc RescheduleOrder(RescheduleOrderRequest) returns (OrderResponse) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=orders/*}/reschedule"
+        };
+    }
+
+    rpc CreateExchangeOrder(OrderRequest) returns (OrderResponse) {
+        option (google.api.http) = {
+            post: "/v1/orders"
+        };
+    };
+}
+
+message ListCurrenciesResponse {
+    string resource_name = 1;
+    repeated CurrencyResponse currencies = 2;
+}
+
+message ListExchangesResponse {
+    string resource_name = 1;
+    repeated ExchangeResponse exchanges = 2;
+}
+
+message GetOrderStatusRequest {
+    string resource_name = 1;
+    string access_code = 2;
+}
+
+message RescheduleOrderRequest {
+    string resource_name = 1;
+}

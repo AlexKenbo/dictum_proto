@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment_type.pbenum.dart' as $50;
+import 'attachment_type.pbenum.dart' as $52;
 import 'employee.pb.dart' as $5;
 
 class Attachment extends $pb.GeneratedMessage {
@@ -21,7 +21,7 @@ class Attachment extends $pb.GeneratedMessage {
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $50.AttachmentType? type,
+    $52.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
@@ -62,7 +62,7 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$50.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $50.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $50.AttachmentType.valueOf, enumValues: $50.AttachmentType.values)
+    ..e<$52.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $52.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $52.AttachmentType.valueOf, enumValues: $52.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(7, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
@@ -119,9 +119,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $50.AttachmentType get type => $_getN(3);
+  $52.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($50.AttachmentType v) { setField(4, v); }
+  set type($52.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)

@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'payment_type.pbenum.dart' as $48;
-import 'side_deal_type.pbenum.dart' as $55;
+import 'payment_type.pbenum.dart' as $50;
+import 'side_deal_type.pbenum.dart' as $57;
 
 class AccrualStatusTransition extends $pb.GeneratedMessage {
   factory AccrualStatusTransition({
     $core.String? status,
     $core.String? nextStatus,
-    $48.PaymentType? paymentType,
+    $50.PaymentType? paymentType,
     $core.bool? isExternalFlow,
-    $55.SideDealType? sideDeal,
+    $57.SideDealType? sideDeal,
   }) {
     final $result = create();
     if (status != null) {
@@ -49,9 +49,9 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualStatusTransition', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'status')
     ..aOS(2, _omitFieldNames ? '' : 'nextStatus')
-    ..e<$48.PaymentType>(3, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $48.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $48.PaymentType.valueOf, enumValues: $48.PaymentType.values)
+    ..e<$50.PaymentType>(3, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $50.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $50.PaymentType.valueOf, enumValues: $50.PaymentType.values)
     ..aOB(4, _omitFieldNames ? '' : 'isExternalFlow')
-    ..e<$55.SideDealType>(5, _omitFieldNames ? '' : 'sideDeal', $pb.PbFieldType.OE, defaultOrMaker: $55.SideDealType.SIDE_DEAL_TYPE_UNKNOWN, valueOf: $55.SideDealType.valueOf, enumValues: $55.SideDealType.values)
+    ..e<$57.SideDealType>(5, _omitFieldNames ? '' : 'sideDeal', $pb.PbFieldType.OE, defaultOrMaker: $57.SideDealType.SIDE_DEAL_TYPE_UNKNOWN, valueOf: $57.SideDealType.valueOf, enumValues: $57.SideDealType.values)
     ..hasRequiredFields = false
   ;
 
@@ -95,9 +95,9 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   void clearNextStatus() => clearField(2);
 
   @$pb.TagNumber(3)
-  $48.PaymentType get paymentType => $_getN(2);
+  $50.PaymentType get paymentType => $_getN(2);
   @$pb.TagNumber(3)
-  set paymentType($48.PaymentType v) { setField(3, v); }
+  set paymentType($50.PaymentType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPaymentType() => $_has(2);
   @$pb.TagNumber(3)
@@ -113,9 +113,9 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   void clearIsExternalFlow() => clearField(4);
 
   @$pb.TagNumber(5)
-  $55.SideDealType get sideDeal => $_getN(4);
+  $57.SideDealType get sideDeal => $_getN(4);
   @$pb.TagNumber(5)
-  set sideDeal($55.SideDealType v) { setField(5, v); }
+  set sideDeal($57.SideDealType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSideDeal() => $_has(4);
   @$pb.TagNumber(5)

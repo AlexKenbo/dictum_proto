@@ -8,3 +8,4 @@ environment:
 dependencies:
   protobuf:
   grpc:
+  protoc_plugin: ^21.1.1

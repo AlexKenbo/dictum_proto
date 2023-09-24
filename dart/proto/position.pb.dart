@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'event.pb.dart' as $45;
-import 'product.pb.dart' as $51;
+import 'event.pb.dart' as $47;
+import 'product.pb.dart' as $53;
 
 class Position extends $pb.GeneratedMessage {
   factory Position({
@@ -25,8 +25,8 @@ class Position extends $pb.GeneratedMessage {
     $core.int? quantity,
     $core.double? sum,
     $core.String? resourceName,
-    $51.Product? product,
-    $45.Event? event,
+    $53.Product? product,
+    $47.Event? event,
   }) {
     final $result = create();
     if (positionId != null) {
@@ -70,8 +70,8 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'quantity', $pb.PbFieldType.O3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'sum', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$51.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $51.Product.create)
-    ..aOM<$45.Event>(11, _omitFieldNames ? '' : 'event', subBuilder: $45.Event.create)
+    ..aOM<$53.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $53.Product.create)
+    ..aOM<$47.Event>(11, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
     ..hasRequiredFields = false
   ;
 
@@ -160,26 +160,26 @@ class Position extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $51.Product get product => $_getN(7);
+  $53.Product get product => $_getN(7);
   @$pb.TagNumber(9)
-  set product($51.Product v) { setField(9, v); }
+  set product($53.Product v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasProduct() => $_has(7);
   @$pb.TagNumber(9)
   void clearProduct() => clearField(9);
   @$pb.TagNumber(9)
-  $51.Product ensureProduct() => $_ensure(7);
+  $53.Product ensureProduct() => $_ensure(7);
 
   @$pb.TagNumber(11)
-  $45.Event get event => $_getN(8);
+  $47.Event get event => $_getN(8);
   @$pb.TagNumber(11)
-  set event($45.Event v) { setField(11, v); }
+  set event($47.Event v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasEvent() => $_has(8);
   @$pb.TagNumber(11)
   void clearEvent() => clearField(11);
   @$pb.TagNumber(11)
-  $45.Event ensureEvent() => $_ensure(8);
+  $47.Event ensureEvent() => $_ensure(8);
 }
 
 
