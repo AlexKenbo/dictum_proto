@@ -106,6 +106,7 @@ Protocol Buffers - буффер между протоколами бекенда
      dictum_proto:
        git:
          url: git@github.com:AlexKenbo/dictum_proto.git
+         path: dart
          ref: your_tag_version
    ```
 
