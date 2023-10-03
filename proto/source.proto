@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+
+enum Source
+{
+  SOURCE_UNKNOWN = 0;
+  SOURCE_MANUAL = 1;
+  SOURCE_FILE_IMPORT = 2;
+  SOURCE_SYNC_MODULE = 3;
+  SOURCE_LOGICAL = 4;
+}   
+     
