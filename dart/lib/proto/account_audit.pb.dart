@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'account.pb.dart' as $6;
-import 'employee.pb.dart' as $5;
+import 'account.pb.dart' as $0;
+import 'employee.pb.dart' as $1;
 
 class AccountAudit extends $pb.GeneratedMessage {
   factory AccountAudit({
@@ -25,8 +25,8 @@ class AccountAudit extends $pb.GeneratedMessage {
     $core.double? accountBalance,
     $core.int? auditorId,
     $core.String? resourceName,
-    $6.Account? account,
-    $5.Employee? employee,
+    $0.Account? account,
+    $1.Employee? employee,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -66,8 +66,8 @@ class AccountAudit extends $pb.GeneratedMessage {
     ..a<$core.double>(4, _omitFieldNames ? '' : 'accountBalance', $pb.PbFieldType.OD)
     ..a<$core.int>(5, _omitFieldNames ? '' : 'auditorId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$6.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
-    ..aOM<$5.Employee>(11, _omitFieldNames ? '' : 'employee', subBuilder: $5.Employee.create)
+    ..aOM<$0.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $0.Account.create)
+    ..aOM<$1.Employee>(11, _omitFieldNames ? '' : 'employee', subBuilder: $1.Employee.create)
     ..hasRequiredFields = false
   ;
 
@@ -147,26 +147,26 @@ class AccountAudit extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $6.Account get account => $_getN(6);
+  $0.Account get account => $_getN(6);
   @$pb.TagNumber(9)
-  set account($6.Account v) { setField(9, v); }
+  set account($0.Account v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasAccount() => $_has(6);
   @$pb.TagNumber(9)
   void clearAccount() => clearField(9);
   @$pb.TagNumber(9)
-  $6.Account ensureAccount() => $_ensure(6);
+  $0.Account ensureAccount() => $_ensure(6);
 
   @$pb.TagNumber(11)
-  $5.Employee get employee => $_getN(7);
+  $1.Employee get employee => $_getN(7);
   @$pb.TagNumber(11)
-  set employee($5.Employee v) { setField(11, v); }
+  set employee($1.Employee v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasEmployee() => $_has(7);
   @$pb.TagNumber(11)
   void clearEmployee() => clearField(11);
   @$pb.TagNumber(11)
-  $5.Employee ensureEmployee() => $_ensure(7);
+  $1.Employee ensureEmployee() => $_ensure(7);
 }
 
 

@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity_role.pb.dart' as $32;
-import 'telegram_user.pb.dart' as $33;
+import 'entity_role.pb.dart' as $0;
+import 'telegram_user.pb.dart' as $1;
 
 class User extends $pb.GeneratedMessage {
   factory User({
@@ -27,8 +27,8 @@ class User extends $pb.GeneratedMessage {
     $core.int? telegramUserId,
     $core.String? refKey,
     $core.String? resourceName,
-    $core.Iterable<$32.EntityRole>? entityRoles,
-    $33.TelegramUser? telegramUser,
+    $core.Iterable<$0.EntityRole>? entityRoles,
+    $1.TelegramUser? telegramUser,
   }) {
     final $result = create();
     if (userId != null) {
@@ -76,8 +76,8 @@ class User extends $pb.GeneratedMessage {
     ..a<$core.int>(7, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$32.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $32.EntityRole.create)
-    ..aOM<$33.TelegramUser>(15, _omitFieldNames ? '' : 'telegramUser', subBuilder: $33.TelegramUser.create)
+    ..pc<$0.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $0.EntityRole.create)
+    ..aOM<$1.TelegramUser>(15, _omitFieldNames ? '' : 'telegramUser', subBuilder: $1.TelegramUser.create)
     ..hasRequiredFields = false
   ;
 
@@ -175,18 +175,18 @@ class User extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(11);
 
   @$pb.TagNumber(13)
-  $core.List<$32.EntityRole> get entityRoles => $_getList(8);
+  $core.List<$0.EntityRole> get entityRoles => $_getList(8);
 
   @$pb.TagNumber(15)
-  $33.TelegramUser get telegramUser => $_getN(9);
+  $1.TelegramUser get telegramUser => $_getN(9);
   @$pb.TagNumber(15)
-  set telegramUser($33.TelegramUser v) { setField(15, v); }
+  set telegramUser($1.TelegramUser v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasTelegramUser() => $_has(9);
   @$pb.TagNumber(15)
   void clearTelegramUser() => clearField(15);
   @$pb.TagNumber(15)
-  $33.TelegramUser ensureTelegramUser() => $_ensure(9);
+  $1.TelegramUser ensureTelegramUser() => $_ensure(9);
 }
 
 

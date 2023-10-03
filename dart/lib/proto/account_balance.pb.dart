@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'account.pb.dart' as $6;
+import 'account.pb.dart' as $0;
 
 class AccountBalance extends $pb.GeneratedMessage {
   factory AccountBalance({
@@ -25,7 +25,7 @@ class AccountBalance extends $pb.GeneratedMessage {
     $core.double? incomesAmount,
     $core.double? expensesAmount,
     $core.String? resourceName,
-    $6.Account? account,
+    $0.Account? account,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -70,7 +70,7 @@ class AccountBalance extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'incomesAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(7, _omitFieldNames ? '' : 'expensesAmount', $pb.PbFieldType.OD)
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$6.Account>(10, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
+    ..aOM<$0.Account>(10, _omitFieldNames ? '' : 'account', subBuilder: $0.Account.create)
     ..hasRequiredFields = false
   ;
 
@@ -168,15 +168,15 @@ class AccountBalance extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(8);
 
   @$pb.TagNumber(10)
-  $6.Account get account => $_getN(8);
+  $0.Account get account => $_getN(8);
   @$pb.TagNumber(10)
-  set account($6.Account v) { setField(10, v); }
+  set account($0.Account v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasAccount() => $_has(8);
   @$pb.TagNumber(10)
   void clearAccount() => clearField(10);
   @$pb.TagNumber(10)
-  $6.Account ensureAccount() => $_ensure(8);
+  $0.Account ensureAccount() => $_ensure(8);
 }
 
 

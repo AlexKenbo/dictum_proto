@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment.pb.dart' as $16;
-import 'event.pb.dart' as $47;
+import 'attachment.pb.dart' as $0;
+import 'event.pb.dart' as $1;
 
 class EventAttachment extends $pb.GeneratedMessage {
   factory EventAttachment({
     $core.int? eventAttachmentId,
     $core.int? attachmentId,
     $core.int? eventId,
-    $16.Attachment? attachment,
-    $47.Event? event,
+    $0.Attachment? attachment,
+    $1.Event? event,
   }) {
     final $result = create();
     if (eventAttachmentId != null) {
@@ -50,8 +50,8 @@ class EventAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'eventAttachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
-    ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
-    ..aOM<$47.Event>(6, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
+    ..aOM<$0.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $0.Attachment.create)
+    ..aOM<$1.Event>(6, _omitFieldNames ? '' : 'event', subBuilder: $1.Event.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,26 +104,26 @@ class EventAttachment extends $pb.GeneratedMessage {
   void clearEventId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $16.Attachment get attachment => $_getN(3);
+  $0.Attachment get attachment => $_getN(3);
   @$pb.TagNumber(4)
-  set attachment($16.Attachment v) { setField(4, v); }
+  set attachment($0.Attachment v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAttachment() => $_has(3);
   @$pb.TagNumber(4)
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
-  $16.Attachment ensureAttachment() => $_ensure(3);
+  $0.Attachment ensureAttachment() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $47.Event get event => $_getN(4);
+  $1.Event get event => $_getN(4);
   @$pb.TagNumber(6)
-  set event($47.Event v) { setField(6, v); }
+  set event($1.Event v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasEvent() => $_has(4);
   @$pb.TagNumber(6)
   void clearEvent() => clearField(6);
   @$pb.TagNumber(6)
-  $47.Event ensureEvent() => $_ensure(4);
+  $1.Event ensureEvent() => $_ensure(4);
 }
 
 

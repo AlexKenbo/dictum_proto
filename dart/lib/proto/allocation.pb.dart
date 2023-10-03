@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $24;
-import 'transfer.pb.dart' as $22;
+import 'accrual.pb.dart' as $0;
+import 'transfer.pb.dart' as $1;
 
 class Allocation extends $pb.GeneratedMessage {
   factory Allocation({
@@ -28,8 +28,8 @@ class Allocation extends $pb.GeneratedMessage {
     $core.String? transferCurrencyCode,
     $fixnum.Int64? createTime,
     $core.String? resourceName,
-    $24.Accrual? accrual,
-    $22.Transfer? transfer,
+    $0.Accrual? accrual,
+    $1.Transfer? transfer,
   }) {
     final $result = create();
     if (accrualId != null) {
@@ -81,8 +81,8 @@ class Allocation extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'transferCurrencyCode')
     ..aInt64(8, _omitFieldNames ? '' : 'createTime')
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$24.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
-    ..aOM<$22.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $22.Transfer.create)
+    ..aOM<$0.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $0.Accrual.create)
+    ..aOM<$1.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $1.Transfer.create)
     ..hasRequiredFields = false
   ;
 
@@ -189,26 +189,26 @@ class Allocation extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(9);
 
   @$pb.TagNumber(11)
-  $24.Accrual get accrual => $_getN(9);
+  $0.Accrual get accrual => $_getN(9);
   @$pb.TagNumber(11)
-  set accrual($24.Accrual v) { setField(11, v); }
+  set accrual($0.Accrual v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAccrual() => $_has(9);
   @$pb.TagNumber(11)
   void clearAccrual() => clearField(11);
   @$pb.TagNumber(11)
-  $24.Accrual ensureAccrual() => $_ensure(9);
+  $0.Accrual ensureAccrual() => $_ensure(9);
 
   @$pb.TagNumber(13)
-  $22.Transfer get transfer => $_getN(10);
+  $1.Transfer get transfer => $_getN(10);
   @$pb.TagNumber(13)
-  set transfer($22.Transfer v) { setField(13, v); }
+  set transfer($1.Transfer v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasTransfer() => $_has(10);
   @$pb.TagNumber(13)
   void clearTransfer() => clearField(13);
   @$pb.TagNumber(13)
-  $22.Transfer ensureTransfer() => $_ensure(10);
+  $1.Transfer ensureTransfer() => $_ensure(10);
 }
 
 

@@ -15,7 +15,7 @@ message Entity
   int32 entity_id = 1;
   int32 conglomerate_id = 2;
   string title = 3;
-  EntityType entity_type = 4;
+  EntityType type = 4;
   bool is_agent = 5;
   bool is_employee_of_nullable = 6;
   int64 create_time = 8;

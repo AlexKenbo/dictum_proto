@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'service.pb.dart' as $19;
+import 'service.pb.dart' as $0;
 
 class ObjectSource extends $pb.GeneratedMessage {
   factory ObjectSource({
@@ -23,7 +23,7 @@ class ObjectSource extends $pb.GeneratedMessage {
     $core.String? objectType,
     $core.String? objectId,
     $fixnum.Int64? createTime,
-    $19.Service? service,
+    $0.Service? service,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -56,7 +56,7 @@ class ObjectSource extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'objectType')
     ..aOS(4, _omitFieldNames ? '' : 'objectId')
     ..aInt64(5, _omitFieldNames ? '' : 'createTime')
-    ..aOM<$19.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $19.Service.create)
+    ..aOM<$0.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $0.Service.create)
     ..hasRequiredFields = false
   ;
 
@@ -127,15 +127,15 @@ class ObjectSource extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(5);
 
   @$pb.TagNumber(6)
-  $19.Service get service => $_getN(5);
+  $0.Service get service => $_getN(5);
   @$pb.TagNumber(6)
-  set service($19.Service v) { setField(6, v); }
+  set service($0.Service v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasService() => $_has(5);
   @$pb.TagNumber(6)
   void clearService() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Service ensureService() => $_ensure(5);
+  $0.Service ensureService() => $_ensure(5);
 }
 
 

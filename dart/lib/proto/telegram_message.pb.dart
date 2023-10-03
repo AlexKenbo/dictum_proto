@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'event.pb.dart' as $47;
+import 'event.pb.dart' as $0;
 
 class TelegramMessage extends $pb.GeneratedMessage {
   factory TelegramMessage({
     $core.int? telegramMessageId,
     $core.int? chatSourceKey,
     $core.int? eventId,
-    $47.Event? event,
+    $0.Event? event,
   }) {
     final $result = create();
     if (telegramMessageId != null) {
@@ -45,7 +45,7 @@ class TelegramMessage extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'telegramMessageId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'chatSourceKey', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
-    ..aOM<$47.Event>(4, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
+    ..aOM<$0.Event>(4, _omitFieldNames ? '' : 'event', subBuilder: $0.Event.create)
     ..hasRequiredFields = false
   ;
 
@@ -98,15 +98,15 @@ class TelegramMessage extends $pb.GeneratedMessage {
   void clearEventId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $47.Event get event => $_getN(3);
+  $0.Event get event => $_getN(3);
   @$pb.TagNumber(4)
-  set event($47.Event v) { setField(4, v); }
+  set event($0.Event v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasEvent() => $_has(3);
   @$pb.TagNumber(4)
   void clearEvent() => clearField(4);
   @$pb.TagNumber(4)
-  $47.Event ensureEvent() => $_ensure(3);
+  $0.Event ensureEvent() => $_ensure(3);
 }
 
 

@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'currency.pb.dart' as $42;
+import 'currency.pb.dart' as $0;
 
 class CurrencyRate extends $pb.GeneratedMessage {
   factory CurrencyRate({
@@ -23,8 +23,8 @@ class CurrencyRate extends $pb.GeneratedMessage {
     $fixnum.Int64? createTime,
     $core.double? purchasePrice,
     $core.double? sellingPrice,
-    $42.Currency? receive,
-    $42.Currency? give,
+    $0.Currency? receive,
+    $0.Currency? give,
   }) {
     final $result = create();
     if (receiveCurrency != null) {
@@ -60,8 +60,8 @@ class CurrencyRate extends $pb.GeneratedMessage {
     ..aInt64(3, _omitFieldNames ? '' : 'createTime')
     ..a<$core.double>(4, _omitFieldNames ? '' : 'purchasePrice', $pb.PbFieldType.OD)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'sellingPrice', $pb.PbFieldType.OD)
-    ..aOM<$42.Currency>(6, _omitFieldNames ? '' : 'receive', subBuilder: $42.Currency.create)
-    ..aOM<$42.Currency>(8, _omitFieldNames ? '' : 'give', subBuilder: $42.Currency.create)
+    ..aOM<$0.Currency>(6, _omitFieldNames ? '' : 'receive', subBuilder: $0.Currency.create)
+    ..aOM<$0.Currency>(8, _omitFieldNames ? '' : 'give', subBuilder: $0.Currency.create)
     ..hasRequiredFields = false
   ;
 
@@ -132,26 +132,26 @@ class CurrencyRate extends $pb.GeneratedMessage {
   void clearSellingPrice() => clearField(5);
 
   @$pb.TagNumber(6)
-  $42.Currency get receive => $_getN(5);
+  $0.Currency get receive => $_getN(5);
   @$pb.TagNumber(6)
-  set receive($42.Currency v) { setField(6, v); }
+  set receive($0.Currency v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasReceive() => $_has(5);
   @$pb.TagNumber(6)
   void clearReceive() => clearField(6);
   @$pb.TagNumber(6)
-  $42.Currency ensureReceive() => $_ensure(5);
+  $0.Currency ensureReceive() => $_ensure(5);
 
   @$pb.TagNumber(8)
-  $42.Currency get give => $_getN(6);
+  $0.Currency get give => $_getN(6);
   @$pb.TagNumber(8)
-  set give($42.Currency v) { setField(8, v); }
+  set give($0.Currency v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasGive() => $_has(6);
   @$pb.TagNumber(8)
   void clearGive() => clearField(8);
   @$pb.TagNumber(8)
-  $42.Currency ensureGive() => $_ensure(6);
+  $0.Currency ensureGive() => $_ensure(6);
 }
 
 

@@ -14,10 +14,10 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart' as $2;
-import 'event_color.pbenum.dart' as $39;
-import 'event_source.pbenum.dart' as $38;
-import 'user.pb.dart' as $13;
+import 'entity.pb.dart' as $1;
+import 'event_color.pbenum.dart' as $3;
+import 'event_source.pbenum.dart' as $2;
+import 'user.pb.dart' as $0;
 
 class Event extends $pb.GeneratedMessage {
   factory Event({
@@ -27,9 +27,9 @@ class Event extends $pb.GeneratedMessage {
     $core.int? conglomerateId,
     $core.double? amount,
     $core.double? processedAmount,
-    $38.EventSource? eventSource,
+    $2.EventSource? eventSource,
     $fixnum.Int64? createTime,
-    $39.EventColor? eventColor,
+    $3.EventColor? eventColor,
     $core.String? sysPeriod,
     $core.String? confirmationUrl,
     $fixnum.Int64? updateTime,
@@ -37,9 +37,9 @@ class Event extends $pb.GeneratedMessage {
     $fixnum.Int64? completeTime,
     $core.String? comment,
     $core.int? editorId,
-    $13.User? editor,
-    $2.Entity? payer,
-    $2.Entity? recipient,
+    $0.User? editor,
+    $1.Entity? payer,
+    $1.Entity? recipient,
     Event? parentEvent,
   }) {
     final $result = create();
@@ -116,9 +116,9 @@ class Event extends $pb.GeneratedMessage {
     ..a<$core.int>(4, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'processedAmount', $pb.PbFieldType.OD)
-    ..e<$38.EventSource>(7, _omitFieldNames ? '' : 'eventSource', $pb.PbFieldType.OE, defaultOrMaker: $38.EventSource.EVENT_SOURCE_UNKNOWN, valueOf: $38.EventSource.valueOf, enumValues: $38.EventSource.values)
+    ..e<$2.EventSource>(7, _omitFieldNames ? '' : 'eventSource', $pb.PbFieldType.OE, defaultOrMaker: $2.EventSource.EVENT_SOURCE_UNKNOWN, valueOf: $2.EventSource.valueOf, enumValues: $2.EventSource.values)
     ..aInt64(8, _omitFieldNames ? '' : 'createTime')
-    ..e<$39.EventColor>(9, _omitFieldNames ? '' : 'eventColor', $pb.PbFieldType.OE, defaultOrMaker: $39.EventColor.EVENT_COLOR_UNKNOWN, valueOf: $39.EventColor.valueOf, enumValues: $39.EventColor.values)
+    ..e<$3.EventColor>(9, _omitFieldNames ? '' : 'eventColor', $pb.PbFieldType.OE, defaultOrMaker: $3.EventColor.EVENT_COLOR_UNKNOWN, valueOf: $3.EventColor.valueOf, enumValues: $3.EventColor.values)
     ..aOS(10, _omitFieldNames ? '' : 'sysPeriod')
     ..aOS(11, _omitFieldNames ? '' : 'confirmationUrl')
     ..aInt64(13, _omitFieldNames ? '' : 'updateTime')
@@ -126,9 +126,9 @@ class Event extends $pb.GeneratedMessage {
     ..aInt64(17, _omitFieldNames ? '' : 'completeTime')
     ..aOS(19, _omitFieldNames ? '' : 'comment')
     ..a<$core.int>(21, _omitFieldNames ? '' : 'editorId', $pb.PbFieldType.O3)
-    ..aOM<$13.User>(23, _omitFieldNames ? '' : 'editor', subBuilder: $13.User.create)
-    ..aOM<$2.Entity>(25, _omitFieldNames ? '' : 'payer', subBuilder: $2.Entity.create)
-    ..aOM<$2.Entity>(27, _omitFieldNames ? '' : 'recipient', subBuilder: $2.Entity.create)
+    ..aOM<$0.User>(23, _omitFieldNames ? '' : 'editor', subBuilder: $0.User.create)
+    ..aOM<$1.Entity>(25, _omitFieldNames ? '' : 'payer', subBuilder: $1.Entity.create)
+    ..aOM<$1.Entity>(27, _omitFieldNames ? '' : 'recipient', subBuilder: $1.Entity.create)
     ..aOM<Event>(29, _omitFieldNames ? '' : 'parentEvent', subBuilder: Event.create)
     ..hasRequiredFields = false
   ;
@@ -209,9 +209,9 @@ class Event extends $pb.GeneratedMessage {
   void clearProcessedAmount() => clearField(6);
 
   @$pb.TagNumber(7)
-  $38.EventSource get eventSource => $_getN(6);
+  $2.EventSource get eventSource => $_getN(6);
   @$pb.TagNumber(7)
-  set eventSource($38.EventSource v) { setField(7, v); }
+  set eventSource($2.EventSource v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasEventSource() => $_has(6);
   @$pb.TagNumber(7)
@@ -227,9 +227,9 @@ class Event extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(8);
 
   @$pb.TagNumber(9)
-  $39.EventColor get eventColor => $_getN(8);
+  $3.EventColor get eventColor => $_getN(8);
   @$pb.TagNumber(9)
-  set eventColor($39.EventColor v) { setField(9, v); }
+  set eventColor($3.EventColor v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasEventColor() => $_has(8);
   @$pb.TagNumber(9)
@@ -299,37 +299,37 @@ class Event extends $pb.GeneratedMessage {
   void clearEditorId() => clearField(21);
 
   @$pb.TagNumber(23)
-  $13.User get editor => $_getN(16);
+  $0.User get editor => $_getN(16);
   @$pb.TagNumber(23)
-  set editor($13.User v) { setField(23, v); }
+  set editor($0.User v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasEditor() => $_has(16);
   @$pb.TagNumber(23)
   void clearEditor() => clearField(23);
   @$pb.TagNumber(23)
-  $13.User ensureEditor() => $_ensure(16);
+  $0.User ensureEditor() => $_ensure(16);
 
   @$pb.TagNumber(25)
-  $2.Entity get payer => $_getN(17);
+  $1.Entity get payer => $_getN(17);
   @$pb.TagNumber(25)
-  set payer($2.Entity v) { setField(25, v); }
+  set payer($1.Entity v) { setField(25, v); }
   @$pb.TagNumber(25)
   $core.bool hasPayer() => $_has(17);
   @$pb.TagNumber(25)
   void clearPayer() => clearField(25);
   @$pb.TagNumber(25)
-  $2.Entity ensurePayer() => $_ensure(17);
+  $1.Entity ensurePayer() => $_ensure(17);
 
   @$pb.TagNumber(27)
-  $2.Entity get recipient => $_getN(18);
+  $1.Entity get recipient => $_getN(18);
   @$pb.TagNumber(27)
-  set recipient($2.Entity v) { setField(27, v); }
+  set recipient($1.Entity v) { setField(27, v); }
   @$pb.TagNumber(27)
   $core.bool hasRecipient() => $_has(18);
   @$pb.TagNumber(27)
   void clearRecipient() => clearField(27);
   @$pb.TagNumber(27)
-  $2.Entity ensureRecipient() => $_ensure(18);
+  $1.Entity ensureRecipient() => $_ensure(18);
 
   @$pb.TagNumber(29)
   Event get parentEvent => $_getN(19);

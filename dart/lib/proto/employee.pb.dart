@@ -14,23 +14,23 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'country.pb.dart' as $34;
-import 'entity.pb.dart' as $2;
-import 'role.pbenum.dart' as $41;
-import 'user.pb.dart' as $13;
+import 'country.pb.dart' as $2;
+import 'entity.pb.dart' as $1;
+import 'role.pbenum.dart' as $3;
+import 'user.pb.dart' as $0;
 
 class Employee extends $pb.GeneratedMessage {
   factory Employee({
     $core.int? userId,
     $core.int? entityId,
     $fixnum.Int64? hireTime,
-    $41.Role? role,
+    $3.Role? role,
     $fixnum.Int64? unhireTime,
     $core.String? personalDocumentNumber,
     $core.String? personalDocumentCountryCode,
-    $13.User? user,
-    $2.Entity? entity,
-    $34.Country? country,
+    $0.User? user,
+    $1.Entity? entity,
+    $2.Country? country,
   }) {
     final $result = create();
     if (userId != null) {
@@ -73,13 +73,13 @@ class Employee extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aInt64(3, _omitFieldNames ? '' : 'hireTime')
-    ..e<$41.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $41.Role.ROLE_UNKNOWN, valueOf: $41.Role.valueOf, enumValues: $41.Role.values)
+    ..e<$3.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $3.Role.ROLE_UNKNOWN, valueOf: $3.Role.valueOf, enumValues: $3.Role.values)
     ..aInt64(5, _omitFieldNames ? '' : 'unhireTime')
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
-    ..aOM<$13.User>(11, _omitFieldNames ? '' : 'user', subBuilder: $13.User.create)
-    ..aOM<$2.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
-    ..aOM<$34.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $34.Country.create)
+    ..aOM<$0.User>(11, _omitFieldNames ? '' : 'user', subBuilder: $0.User.create)
+    ..aOM<$1.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $1.Entity.create)
+    ..aOM<$2.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $2.Country.create)
     ..hasRequiredFields = false
   ;
 
@@ -132,9 +132,9 @@ class Employee extends $pb.GeneratedMessage {
   void clearHireTime() => clearField(3);
 
   @$pb.TagNumber(4)
-  $41.Role get role => $_getN(3);
+  $3.Role get role => $_getN(3);
   @$pb.TagNumber(4)
-  set role($41.Role v) { setField(4, v); }
+  set role($3.Role v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRole() => $_has(3);
   @$pb.TagNumber(4)
@@ -168,37 +168,37 @@ class Employee extends $pb.GeneratedMessage {
   void clearPersonalDocumentCountryCode() => clearField(9);
 
   @$pb.TagNumber(11)
-  $13.User get user => $_getN(7);
+  $0.User get user => $_getN(7);
   @$pb.TagNumber(11)
-  set user($13.User v) { setField(11, v); }
+  set user($0.User v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasUser() => $_has(7);
   @$pb.TagNumber(11)
   void clearUser() => clearField(11);
   @$pb.TagNumber(11)
-  $13.User ensureUser() => $_ensure(7);
+  $0.User ensureUser() => $_ensure(7);
 
   @$pb.TagNumber(13)
-  $2.Entity get entity => $_getN(8);
+  $1.Entity get entity => $_getN(8);
   @$pb.TagNumber(13)
-  set entity($2.Entity v) { setField(13, v); }
+  set entity($1.Entity v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasEntity() => $_has(8);
   @$pb.TagNumber(13)
   void clearEntity() => clearField(13);
   @$pb.TagNumber(13)
-  $2.Entity ensureEntity() => $_ensure(8);
+  $1.Entity ensureEntity() => $_ensure(8);
 
   @$pb.TagNumber(15)
-  $34.Country get country => $_getN(9);
+  $2.Country get country => $_getN(9);
   @$pb.TagNumber(15)
-  set country($34.Country v) { setField(15, v); }
+  set country($2.Country v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasCountry() => $_has(9);
   @$pb.TagNumber(15)
   void clearCountry() => clearField(15);
   @$pb.TagNumber(15)
-  $34.Country ensureCountry() => $_ensure(9);
+  $2.Country ensureCountry() => $_ensure(9);
 }
 
 

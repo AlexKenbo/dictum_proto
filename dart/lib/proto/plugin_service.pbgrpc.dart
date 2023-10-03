@@ -15,63 +15,63 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'object_source.pb.dart' as $18;
-import 'plugin_service.pb.dart' as $17;
-import 'service.pb.dart' as $19;
-import 'service_run.pb.dart' as $20;
+import 'object_source.pb.dart' as $1;
+import 'plugin_service.pb.dart' as $0;
+import 'service.pb.dart' as $2;
+import 'service_run.pb.dart' as $3;
 
 export 'plugin_service.pb.dart';
 
 @$pb.GrpcServiceName('PluginService')
 class PluginServiceClient extends $grpc.Client {
-  static final _$listObjectSources = $grpc.ClientMethod<$17.ListObjectSourcesRequest, $17.ListObjectSourcesResponse>(
+  static final _$listObjectSources = $grpc.ClientMethod<$0.ListObjectSourcesRequest, $0.ListObjectSourcesResponse>(
       '/PluginService/ListObjectSources',
-      ($17.ListObjectSourcesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $17.ListObjectSourcesResponse.fromBuffer(value));
-  static final _$getLatestSource = $grpc.ClientMethod<$17.GetLatestSourceRequest, $18.ObjectSource>(
+      ($0.ListObjectSourcesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ListObjectSourcesResponse.fromBuffer(value));
+  static final _$getLatestSource = $grpc.ClientMethod<$0.GetLatestSourceRequest, $1.ObjectSource>(
       '/PluginService/GetLatestSource',
-      ($17.GetLatestSourceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $18.ObjectSource.fromBuffer(value));
-  static final _$createObjectSource = $grpc.ClientMethod<$18.ObjectSource, $18.ObjectSource>(
+      ($0.GetLatestSourceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ObjectSource.fromBuffer(value));
+  static final _$createObjectSource = $grpc.ClientMethod<$1.ObjectSource, $1.ObjectSource>(
       '/PluginService/CreateObjectSource',
-      ($18.ObjectSource value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $18.ObjectSource.fromBuffer(value));
-  static final _$createService = $grpc.ClientMethod<$19.Service, $19.Service>(
+      ($1.ObjectSource value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ObjectSource.fromBuffer(value));
+  static final _$createService = $grpc.ClientMethod<$2.Service, $2.Service>(
       '/PluginService/CreateService',
-      ($19.Service value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $19.Service.fromBuffer(value));
-  static final _$listServices = $grpc.ClientMethod<$17.ListServicesRequest, $17.ListServicesResponse>(
+      ($2.Service value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Service.fromBuffer(value));
+  static final _$listServices = $grpc.ClientMethod<$0.ListServicesRequest, $0.ListServicesResponse>(
       '/PluginService/ListServices',
-      ($17.ListServicesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $17.ListServicesResponse.fromBuffer(value));
-  static final _$getService = $grpc.ClientMethod<$17.GetServiceRequest, $19.Service>(
+      ($0.ListServicesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ListServicesResponse.fromBuffer(value));
+  static final _$getService = $grpc.ClientMethod<$0.GetServiceRequest, $2.Service>(
       '/PluginService/GetService',
-      ($17.GetServiceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $19.Service.fromBuffer(value));
-  static final _$updateService = $grpc.ClientMethod<$19.Service, $19.Service>(
+      ($0.GetServiceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Service.fromBuffer(value));
+  static final _$updateService = $grpc.ClientMethod<$2.Service, $2.Service>(
       '/PluginService/UpdateService',
-      ($19.Service value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $19.Service.fromBuffer(value));
-  static final _$createServiceRun = $grpc.ClientMethod<$20.ServiceRun, $20.ServiceRun>(
+      ($2.Service value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.Service.fromBuffer(value));
+  static final _$createServiceRun = $grpc.ClientMethod<$3.ServiceRun, $3.ServiceRun>(
       '/PluginService/CreateServiceRun',
-      ($20.ServiceRun value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value));
-  static final _$updateServiceRun = $grpc.ClientMethod<$20.ServiceRun, $20.ServiceRun>(
+      ($3.ServiceRun value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value));
+  static final _$updateServiceRun = $grpc.ClientMethod<$3.ServiceRun, $3.ServiceRun>(
       '/PluginService/UpdateServiceRun',
-      ($20.ServiceRun value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value));
-  static final _$getServiceRun = $grpc.ClientMethod<$17.GetServiceRunRequest, $20.ServiceRun>(
+      ($3.ServiceRun value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value));
+  static final _$getServiceRun = $grpc.ClientMethod<$0.GetServiceRunRequest, $3.ServiceRun>(
       '/PluginService/GetServiceRun',
-      ($17.GetServiceRunRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value));
-  static final _$listServiceRuns = $grpc.ClientMethod<$17.ListServiceRunsRequest, $17.ListServiceRunsResponse>(
+      ($0.GetServiceRunRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value));
+  static final _$listServiceRuns = $grpc.ClientMethod<$0.ListServiceRunsRequest, $0.ListServiceRunsResponse>(
       '/PluginService/ListServiceRuns',
-      ($17.ListServiceRunsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $17.ListServiceRunsResponse.fromBuffer(value));
-  static final _$runService = $grpc.ClientMethod<$17.RunServiceRequest, $20.ServiceRun>(
+      ($0.ListServiceRunsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.ListServiceRunsResponse.fromBuffer(value));
+  static final _$runService = $grpc.ClientMethod<$0.RunServiceRequest, $3.ServiceRun>(
       '/PluginService/RunService',
-      ($17.RunServiceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value));
+      ($0.RunServiceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value));
 
   PluginServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -79,51 +79,51 @@ class PluginServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$17.ListObjectSourcesResponse> listObjectSources($17.ListObjectSourcesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.ListObjectSourcesResponse> listObjectSources($0.ListObjectSourcesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listObjectSources, request, options: options);
   }
 
-  $grpc.ResponseFuture<$18.ObjectSource> getLatestSource($17.GetLatestSourceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ObjectSource> getLatestSource($0.GetLatestSourceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getLatestSource, request, options: options);
   }
 
-  $grpc.ResponseFuture<$18.ObjectSource> createObjectSource($18.ObjectSource request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ObjectSource> createObjectSource($1.ObjectSource request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createObjectSource, request, options: options);
   }
 
-  $grpc.ResponseFuture<$19.Service> createService($19.Service request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.Service> createService($2.Service request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createService, request, options: options);
   }
 
-  $grpc.ResponseFuture<$17.ListServicesResponse> listServices($17.ListServicesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.ListServicesResponse> listServices($0.ListServicesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listServices, request, options: options);
   }
 
-  $grpc.ResponseFuture<$19.Service> getService($17.GetServiceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.Service> getService($0.GetServiceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getService, request, options: options);
   }
 
-  $grpc.ResponseFuture<$19.Service> updateService($19.Service request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.Service> updateService($2.Service request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateService, request, options: options);
   }
 
-  $grpc.ResponseFuture<$20.ServiceRun> createServiceRun($20.ServiceRun request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.ServiceRun> createServiceRun($3.ServiceRun request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createServiceRun, request, options: options);
   }
 
-  $grpc.ResponseFuture<$20.ServiceRun> updateServiceRun($20.ServiceRun request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.ServiceRun> updateServiceRun($3.ServiceRun request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateServiceRun, request, options: options);
   }
 
-  $grpc.ResponseFuture<$20.ServiceRun> getServiceRun($17.GetServiceRunRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$3.ServiceRun> getServiceRun($0.GetServiceRunRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getServiceRun, request, options: options);
   }
 
-  $grpc.ResponseFuture<$17.ListServiceRunsResponse> listServiceRuns($17.ListServiceRunsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.ListServiceRunsResponse> listServiceRuns($0.ListServiceRunsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listServiceRuns, request, options: options);
   }
 
-  $grpc.ResponseStream<$20.ServiceRun> runService($17.RunServiceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$3.ServiceRun> runService($0.RunServiceRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$runService, $async.Stream.fromIterable([request]), options: options);
   }
 }
@@ -133,150 +133,150 @@ abstract class PluginServiceBase extends $grpc.Service {
   $core.String get $name => 'PluginService';
 
   PluginServiceBase() {
-    $addMethod($grpc.ServiceMethod<$17.ListObjectSourcesRequest, $17.ListObjectSourcesResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ListObjectSourcesRequest, $0.ListObjectSourcesResponse>(
         'ListObjectSources',
         listObjectSources_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.ListObjectSourcesRequest.fromBuffer(value),
-        ($17.ListObjectSourcesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.GetLatestSourceRequest, $18.ObjectSource>(
+        ($core.List<$core.int> value) => $0.ListObjectSourcesRequest.fromBuffer(value),
+        ($0.ListObjectSourcesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetLatestSourceRequest, $1.ObjectSource>(
         'GetLatestSource',
         getLatestSource_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.GetLatestSourceRequest.fromBuffer(value),
-        ($18.ObjectSource value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$18.ObjectSource, $18.ObjectSource>(
+        ($core.List<$core.int> value) => $0.GetLatestSourceRequest.fromBuffer(value),
+        ($1.ObjectSource value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.ObjectSource, $1.ObjectSource>(
         'CreateObjectSource',
         createObjectSource_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $18.ObjectSource.fromBuffer(value),
-        ($18.ObjectSource value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$19.Service, $19.Service>(
+        ($core.List<$core.int> value) => $1.ObjectSource.fromBuffer(value),
+        ($1.ObjectSource value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.Service, $2.Service>(
         'CreateService',
         createService_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $19.Service.fromBuffer(value),
-        ($19.Service value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.ListServicesRequest, $17.ListServicesResponse>(
+        ($core.List<$core.int> value) => $2.Service.fromBuffer(value),
+        ($2.Service value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListServicesRequest, $0.ListServicesResponse>(
         'ListServices',
         listServices_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.ListServicesRequest.fromBuffer(value),
-        ($17.ListServicesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.GetServiceRequest, $19.Service>(
+        ($core.List<$core.int> value) => $0.ListServicesRequest.fromBuffer(value),
+        ($0.ListServicesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetServiceRequest, $2.Service>(
         'GetService',
         getService_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.GetServiceRequest.fromBuffer(value),
-        ($19.Service value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$19.Service, $19.Service>(
+        ($core.List<$core.int> value) => $0.GetServiceRequest.fromBuffer(value),
+        ($2.Service value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.Service, $2.Service>(
         'UpdateService',
         updateService_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $19.Service.fromBuffer(value),
-        ($19.Service value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$20.ServiceRun, $20.ServiceRun>(
+        ($core.List<$core.int> value) => $2.Service.fromBuffer(value),
+        ($2.Service value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ServiceRun, $3.ServiceRun>(
         'CreateServiceRun',
         createServiceRun_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value),
-        ($20.ServiceRun value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$20.ServiceRun, $20.ServiceRun>(
+        ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value),
+        ($3.ServiceRun value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ServiceRun, $3.ServiceRun>(
         'UpdateServiceRun',
         updateServiceRun_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value),
-        ($20.ServiceRun value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.GetServiceRunRequest, $20.ServiceRun>(
+        ($core.List<$core.int> value) => $3.ServiceRun.fromBuffer(value),
+        ($3.ServiceRun value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetServiceRunRequest, $3.ServiceRun>(
         'GetServiceRun',
         getServiceRun_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.GetServiceRunRequest.fromBuffer(value),
-        ($20.ServiceRun value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.ListServiceRunsRequest, $17.ListServiceRunsResponse>(
+        ($core.List<$core.int> value) => $0.GetServiceRunRequest.fromBuffer(value),
+        ($3.ServiceRun value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListServiceRunsRequest, $0.ListServiceRunsResponse>(
         'ListServiceRuns',
         listServiceRuns_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.ListServiceRunsRequest.fromBuffer(value),
-        ($17.ListServiceRunsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.RunServiceRequest, $20.ServiceRun>(
+        ($core.List<$core.int> value) => $0.ListServiceRunsRequest.fromBuffer(value),
+        ($0.ListServiceRunsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RunServiceRequest, $3.ServiceRun>(
         'RunService',
         runService_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $17.RunServiceRequest.fromBuffer(value),
-        ($20.ServiceRun value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.RunServiceRequest.fromBuffer(value),
+        ($3.ServiceRun value) => value.writeToBuffer()));
   }
 
-  $async.Future<$17.ListObjectSourcesResponse> listObjectSources_Pre($grpc.ServiceCall call, $async.Future<$17.ListObjectSourcesRequest> request) async {
+  $async.Future<$0.ListObjectSourcesResponse> listObjectSources_Pre($grpc.ServiceCall call, $async.Future<$0.ListObjectSourcesRequest> request) async {
     return listObjectSources(call, await request);
   }
 
-  $async.Future<$18.ObjectSource> getLatestSource_Pre($grpc.ServiceCall call, $async.Future<$17.GetLatestSourceRequest> request) async {
+  $async.Future<$1.ObjectSource> getLatestSource_Pre($grpc.ServiceCall call, $async.Future<$0.GetLatestSourceRequest> request) async {
     return getLatestSource(call, await request);
   }
 
-  $async.Future<$18.ObjectSource> createObjectSource_Pre($grpc.ServiceCall call, $async.Future<$18.ObjectSource> request) async {
+  $async.Future<$1.ObjectSource> createObjectSource_Pre($grpc.ServiceCall call, $async.Future<$1.ObjectSource> request) async {
     return createObjectSource(call, await request);
   }
 
-  $async.Future<$19.Service> createService_Pre($grpc.ServiceCall call, $async.Future<$19.Service> request) async {
+  $async.Future<$2.Service> createService_Pre($grpc.ServiceCall call, $async.Future<$2.Service> request) async {
     return createService(call, await request);
   }
 
-  $async.Future<$17.ListServicesResponse> listServices_Pre($grpc.ServiceCall call, $async.Future<$17.ListServicesRequest> request) async {
+  $async.Future<$0.ListServicesResponse> listServices_Pre($grpc.ServiceCall call, $async.Future<$0.ListServicesRequest> request) async {
     return listServices(call, await request);
   }
 
-  $async.Future<$19.Service> getService_Pre($grpc.ServiceCall call, $async.Future<$17.GetServiceRequest> request) async {
+  $async.Future<$2.Service> getService_Pre($grpc.ServiceCall call, $async.Future<$0.GetServiceRequest> request) async {
     return getService(call, await request);
   }
 
-  $async.Future<$19.Service> updateService_Pre($grpc.ServiceCall call, $async.Future<$19.Service> request) async {
+  $async.Future<$2.Service> updateService_Pre($grpc.ServiceCall call, $async.Future<$2.Service> request) async {
     return updateService(call, await request);
   }
 
-  $async.Future<$20.ServiceRun> createServiceRun_Pre($grpc.ServiceCall call, $async.Future<$20.ServiceRun> request) async {
+  $async.Future<$3.ServiceRun> createServiceRun_Pre($grpc.ServiceCall call, $async.Future<$3.ServiceRun> request) async {
     return createServiceRun(call, await request);
   }
 
-  $async.Future<$20.ServiceRun> updateServiceRun_Pre($grpc.ServiceCall call, $async.Future<$20.ServiceRun> request) async {
+  $async.Future<$3.ServiceRun> updateServiceRun_Pre($grpc.ServiceCall call, $async.Future<$3.ServiceRun> request) async {
     return updateServiceRun(call, await request);
   }
 
-  $async.Future<$20.ServiceRun> getServiceRun_Pre($grpc.ServiceCall call, $async.Future<$17.GetServiceRunRequest> request) async {
+  $async.Future<$3.ServiceRun> getServiceRun_Pre($grpc.ServiceCall call, $async.Future<$0.GetServiceRunRequest> request) async {
     return getServiceRun(call, await request);
   }
 
-  $async.Future<$17.ListServiceRunsResponse> listServiceRuns_Pre($grpc.ServiceCall call, $async.Future<$17.ListServiceRunsRequest> request) async {
+  $async.Future<$0.ListServiceRunsResponse> listServiceRuns_Pre($grpc.ServiceCall call, $async.Future<$0.ListServiceRunsRequest> request) async {
     return listServiceRuns(call, await request);
   }
 
-  $async.Stream<$20.ServiceRun> runService_Pre($grpc.ServiceCall call, $async.Future<$17.RunServiceRequest> request) async* {
+  $async.Stream<$3.ServiceRun> runService_Pre($grpc.ServiceCall call, $async.Future<$0.RunServiceRequest> request) async* {
     yield* runService(call, await request);
   }
 
-  $async.Future<$17.ListObjectSourcesResponse> listObjectSources($grpc.ServiceCall call, $17.ListObjectSourcesRequest request);
-  $async.Future<$18.ObjectSource> getLatestSource($grpc.ServiceCall call, $17.GetLatestSourceRequest request);
-  $async.Future<$18.ObjectSource> createObjectSource($grpc.ServiceCall call, $18.ObjectSource request);
-  $async.Future<$19.Service> createService($grpc.ServiceCall call, $19.Service request);
-  $async.Future<$17.ListServicesResponse> listServices($grpc.ServiceCall call, $17.ListServicesRequest request);
-  $async.Future<$19.Service> getService($grpc.ServiceCall call, $17.GetServiceRequest request);
-  $async.Future<$19.Service> updateService($grpc.ServiceCall call, $19.Service request);
-  $async.Future<$20.ServiceRun> createServiceRun($grpc.ServiceCall call, $20.ServiceRun request);
-  $async.Future<$20.ServiceRun> updateServiceRun($grpc.ServiceCall call, $20.ServiceRun request);
-  $async.Future<$20.ServiceRun> getServiceRun($grpc.ServiceCall call, $17.GetServiceRunRequest request);
-  $async.Future<$17.ListServiceRunsResponse> listServiceRuns($grpc.ServiceCall call, $17.ListServiceRunsRequest request);
-  $async.Stream<$20.ServiceRun> runService($grpc.ServiceCall call, $17.RunServiceRequest request);
+  $async.Future<$0.ListObjectSourcesResponse> listObjectSources($grpc.ServiceCall call, $0.ListObjectSourcesRequest request);
+  $async.Future<$1.ObjectSource> getLatestSource($grpc.ServiceCall call, $0.GetLatestSourceRequest request);
+  $async.Future<$1.ObjectSource> createObjectSource($grpc.ServiceCall call, $1.ObjectSource request);
+  $async.Future<$2.Service> createService($grpc.ServiceCall call, $2.Service request);
+  $async.Future<$0.ListServicesResponse> listServices($grpc.ServiceCall call, $0.ListServicesRequest request);
+  $async.Future<$2.Service> getService($grpc.ServiceCall call, $0.GetServiceRequest request);
+  $async.Future<$2.Service> updateService($grpc.ServiceCall call, $2.Service request);
+  $async.Future<$3.ServiceRun> createServiceRun($grpc.ServiceCall call, $3.ServiceRun request);
+  $async.Future<$3.ServiceRun> updateServiceRun($grpc.ServiceCall call, $3.ServiceRun request);
+  $async.Future<$3.ServiceRun> getServiceRun($grpc.ServiceCall call, $0.GetServiceRunRequest request);
+  $async.Future<$0.ListServiceRunsResponse> listServiceRuns($grpc.ServiceCall call, $0.ListServiceRunsRequest request);
+  $async.Stream<$3.ServiceRun> runService($grpc.ServiceCall call, $0.RunServiceRequest request);
 }

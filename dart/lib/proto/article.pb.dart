@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article_group.pbenum.dart' as $45;
-import 'direction.pbenum.dart' as $46;
+import 'article_group.pbenum.dart' as $0;
+import 'direction.pbenum.dart' as $1;
 
 class Article extends $pb.GeneratedMessage {
   factory Article({
@@ -25,8 +25,8 @@ class Article extends $pb.GeneratedMessage {
     $core.bool? allowSubarticles,
     $core.bool? allowLinking,
     $core.int? conglomerateId,
-    $45.ArticleGroup? articleGroup,
-    $46.Direction? direction,
+    $0.ArticleGroup? articleGroup,
+    $1.Direction? direction,
     $core.int? parentArticleId,
     Article? parentArticle,
   }) {
@@ -78,8 +78,8 @@ class Article extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'allowSubarticles')
     ..aOB(6, _omitFieldNames ? '' : 'allowLinking')
     ..a<$core.int>(7, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
-    ..e<$45.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $45.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $45.ArticleGroup.valueOf, enumValues: $45.ArticleGroup.values)
-    ..e<$46.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $46.Direction.DIRECTION_UNKNOWN, valueOf: $46.Direction.valueOf, enumValues: $46.Direction.values)
+    ..e<$0.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $0.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $0.ArticleGroup.valueOf, enumValues: $0.ArticleGroup.values)
+    ..e<$1.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $1.Direction.DIRECTION_UNKNOWN, valueOf: $1.Direction.valueOf, enumValues: $1.Direction.values)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'parentArticleId', $pb.PbFieldType.O3)
     ..aOM<Article>(12, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
     ..hasRequiredFields = false
@@ -170,18 +170,18 @@ class Article extends $pb.GeneratedMessage {
   void clearConglomerateId() => clearField(7);
 
   @$pb.TagNumber(8)
-  $45.ArticleGroup get articleGroup => $_getN(7);
+  $0.ArticleGroup get articleGroup => $_getN(7);
   @$pb.TagNumber(8)
-  set articleGroup($45.ArticleGroup v) { setField(8, v); }
+  set articleGroup($0.ArticleGroup v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasArticleGroup() => $_has(7);
   @$pb.TagNumber(8)
   void clearArticleGroup() => clearField(8);
 
   @$pb.TagNumber(9)
-  $46.Direction get direction => $_getN(8);
+  $1.Direction get direction => $_getN(8);
   @$pb.TagNumber(9)
-  set direction($46.Direction v) { setField(9, v); }
+  set direction($1.Direction v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDirection() => $_has(8);
   @$pb.TagNumber(9)
