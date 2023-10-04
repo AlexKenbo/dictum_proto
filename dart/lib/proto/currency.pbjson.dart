@@ -17,13 +17,13 @@ import 'dart:typed_data' as $typed_data;
 const Currency$json = {
   '1': 'Currency',
   '2': [
-    {'1': 'currency_code', '3': 1, '4': 1, '5': 9, '10': 'currencyCode'},
-    {'1': 'currency_type', '3': 2, '4': 1, '5': 14, '6': '.CurrencyType', '10': 'currencyType'},
+    {'1': 'code', '3': 1, '4': 1, '5': 9, '10': 'code'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.CurrencyType', '10': 'type'},
   ],
 };
 
 /// Descriptor for `Currency`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List currencyDescriptor = $convert.base64Decode(
-    'CghDdXJyZW5jeRIjCg1jdXJyZW5jeV9jb2RlGAEgASgJUgxjdXJyZW5jeUNvZGUSMgoNY3Vycm'
-    'VuY3lfdHlwZRgCIAEoDjINLkN1cnJlbmN5VHlwZVIMY3VycmVuY3lUeXBl');
+    'CghDdXJyZW5jeRISCgRjb2RlGAEgASgJUgRjb2RlEiEKBHR5cGUYAiABKA4yDS5DdXJyZW5jeV'
+    'R5cGVSBHR5cGU=');
 
