@@ -3,8 +3,8 @@ syntax = "proto3";
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
-import "proto/event_source.proto";
-import "proto/event_color.proto";
+import "proto/source.proto";
+import "proto/color.proto";
 import "proto/user.proto";
 import "proto/entity.proto";
   
@@ -16,9 +16,9 @@ message Event
   int32 conglomerate_id = 4;
   double amount = 5;
   double processed_amount = 6;
-  EventSource event_source = 7;
+  Source event_source = 7;
   int64 create_time = 8;
-  EventColor event_color = 9;
+  Color event_color = 9;
   string sys_period = 10;
   string confirmation_url = 11;
   int64 update_time = 13;

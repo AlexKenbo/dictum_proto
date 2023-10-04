@@ -34,9 +34,17 @@ Protocol Buffers - буффер между протоколами бекенда
 1. Установите Dart плагин для protoc. Следуйте инструкциям на [официальной странице пакета](https://pub.dev/packages/protoc_plugin).
 
 2. Запустите компиляцию из корня:
-
    ```bash
-   protoc -I . -I ./google --dart_out=grpc:dart $(find . -name "*.proto")
+      protoc -I . -I ./google --dart_out=grpc:dart $(find . -name "*.proto")
+   ```
+
+   ```powershell
+      $base_dir = Get-Location
+      $proto_files = Get-ChildItem -Recurse -Filter "*.proto"
+      foreach ($proto_file in $proto_files) {
+          $relative_path = $proto_file.FullName.Replace("$base_dir\", ".\")
+          protoc -I . -I .\google --dart_out=grpc:dart/lib $relative_path
+      }
    ```
 
 ## 4. Разработка proto, go и dart. Git-теги для версионирования
