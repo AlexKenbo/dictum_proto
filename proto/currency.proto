@@ -7,7 +7,7 @@ import "proto/currency_type.proto";
   
 message Currency
 {
-  string currency_code = 1;
-  CurrencyType currency_type = 2;
+  string code = 1;
+  CurrencyType type = 2;
 
 }
