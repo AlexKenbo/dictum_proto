@@ -16,12 +16,12 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class Fi extends $pb.GeneratedMessage {
   factory Fi({
-    $core.String? fiName,
+    $core.String? name,
     $fixnum.Int64? createTime,
   }) {
     final $result = create();
-    if (fiName != null) {
-      $result.fiName = fiName;
+    if (name != null) {
+      $result.name = name;
     }
     if (createTime != null) {
       $result.createTime = createTime;
@@ -33,7 +33,7 @@ class Fi extends $pb.GeneratedMessage {
   factory Fi.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Fi', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'fiName')
+    ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aInt64(2, _omitFieldNames ? '' : 'createTime')
     ..hasRequiredFields = false
   ;
@@ -60,13 +60,13 @@ class Fi extends $pb.GeneratedMessage {
   static Fi? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get fiName => $_getSZ(0);
+  $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fiName($core.String v) { $_setString(0, v); }
+  set name($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasFiName() => $_has(0);
+  $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFiName() => clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get createTime => $_getI64(1);

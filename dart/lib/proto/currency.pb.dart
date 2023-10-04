@@ -17,15 +17,15 @@ import 'currency_type.pbenum.dart' as $0;
 
 class Currency extends $pb.GeneratedMessage {
   factory Currency({
-    $core.String? currencyCode,
-    $0.CurrencyType? currencyType,
+    $core.String? code,
+    $0.CurrencyType? type,
   }) {
     final $result = create();
-    if (currencyCode != null) {
-      $result.currencyCode = currencyCode;
+    if (code != null) {
+      $result.code = code;
     }
-    if (currencyType != null) {
-      $result.currencyType = currencyType;
+    if (type != null) {
+      $result.type = type;
     }
     return $result;
   }
@@ -34,8 +34,8 @@ class Currency extends $pb.GeneratedMessage {
   factory Currency.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Currency', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'currencyCode')
-    ..e<$0.CurrencyType>(2, _omitFieldNames ? '' : 'currencyType', $pb.PbFieldType.OE, defaultOrMaker: $0.CurrencyType.CURRENCY_TYPE_UNKNOWN, valueOf: $0.CurrencyType.valueOf, enumValues: $0.CurrencyType.values)
+    ..aOS(1, _omitFieldNames ? '' : 'code')
+    ..e<$0.CurrencyType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $0.CurrencyType.CURRENCY_TYPE_UNKNOWN, valueOf: $0.CurrencyType.valueOf, enumValues: $0.CurrencyType.values)
     ..hasRequiredFields = false
   ;
 
@@ -61,22 +61,22 @@ class Currency extends $pb.GeneratedMessage {
   static Currency? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get currencyCode => $_getSZ(0);
+  $core.String get code => $_getSZ(0);
   @$pb.TagNumber(1)
-  set currencyCode($core.String v) { $_setString(0, v); }
+  set code($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasCurrencyCode() => $_has(0);
+  $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCurrencyCode() => clearField(1);
+  void clearCode() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.CurrencyType get currencyType => $_getN(1);
+  $0.CurrencyType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set currencyType($0.CurrencyType v) { setField(2, v); }
+  set type($0.CurrencyType v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasCurrencyType() => $_has(1);
+  $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCurrencyType() => clearField(2);
+  void clearType() => clearField(2);
 }
 
 

@@ -23,9 +23,9 @@ const Event$json = {
     {'1': 'conglomerate_id', '3': 4, '4': 1, '5': 5, '10': 'conglomerateId'},
     {'1': 'amount', '3': 5, '4': 1, '5': 1, '10': 'amount'},
     {'1': 'processed_amount', '3': 6, '4': 1, '5': 1, '10': 'processedAmount'},
-    {'1': 'event_source', '3': 7, '4': 1, '5': 14, '6': '.EventSource', '10': 'eventSource'},
+    {'1': 'event_source', '3': 7, '4': 1, '5': 14, '6': '.Source', '10': 'eventSource'},
     {'1': 'create_time', '3': 8, '4': 1, '5': 3, '10': 'createTime'},
-    {'1': 'event_color', '3': 9, '4': 1, '5': 14, '6': '.EventColor', '10': 'eventColor'},
+    {'1': 'event_color', '3': 9, '4': 1, '5': 14, '6': '.Color', '10': 'eventColor'},
     {'1': 'sys_period', '3': 10, '4': 1, '5': 9, '10': 'sysPeriod'},
     {'1': 'confirmation_url', '3': 11, '4': 1, '5': 9, '10': 'confirmationUrl'},
     {'1': 'update_time', '3': 13, '4': 1, '5': 3, '10': 'updateTime'},
@@ -45,14 +45,14 @@ final $typed_data.Uint8List eventDescriptor = $convert.base64Decode(
     'CgVFdmVudBIZCghldmVudF9pZBgBIAEoBVIHZXZlbnRJZBIZCghwYXllcl9pZBgCIAEoBVIHcG'
     'F5ZXJJZBIhCgxyZWNpcGllbnRfaWQYAyABKAVSC3JlY2lwaWVudElkEicKD2Nvbmdsb21lcmF0'
     'ZV9pZBgEIAEoBVIOY29uZ2xvbWVyYXRlSWQSFgoGYW1vdW50GAUgASgBUgZhbW91bnQSKQoQcH'
-    'JvY2Vzc2VkX2Ftb3VudBgGIAEoAVIPcHJvY2Vzc2VkQW1vdW50Ei8KDGV2ZW50X3NvdXJjZRgH'
-    'IAEoDjIMLkV2ZW50U291cmNlUgtldmVudFNvdXJjZRIfCgtjcmVhdGVfdGltZRgIIAEoA1IKY3'
-    'JlYXRlVGltZRIsCgtldmVudF9jb2xvchgJIAEoDjILLkV2ZW50Q29sb3JSCmV2ZW50Q29sb3IS'
-    'HQoKc3lzX3BlcmlvZBgKIAEoCVIJc3lzUGVyaW9kEikKEGNvbmZpcm1hdGlvbl91cmwYCyABKA'
-    'lSD2NvbmZpcm1hdGlvblVybBIfCgt1cGRhdGVfdGltZRgNIAEoA1IKdXBkYXRlVGltZRImCg9w'
-    'YXJlbnRfZXZlbnRfaWQYDyABKAVSDXBhcmVudEV2ZW50SWQSIwoNY29tcGxldGVfdGltZRgRIA'
-    'EoA1IMY29tcGxldGVUaW1lEhgKB2NvbW1lbnQYEyABKAlSB2NvbW1lbnQSGwoJZWRpdG9yX2lk'
-    'GBUgASgFUghlZGl0b3JJZBIdCgZlZGl0b3IYFyABKAsyBS5Vc2VyUgZlZGl0b3ISHQoFcGF5ZX'
-    'IYGSABKAsyBy5FbnRpdHlSBXBheWVyEiUKCXJlY2lwaWVudBgbIAEoCzIHLkVudGl0eVIJcmVj'
-    'aXBpZW50EikKDHBhcmVudF9ldmVudBgdIAEoCzIGLkV2ZW50UgtwYXJlbnRFdmVudA==');
+    'JvY2Vzc2VkX2Ftb3VudBgGIAEoAVIPcHJvY2Vzc2VkQW1vdW50EioKDGV2ZW50X3NvdXJjZRgH'
+    'IAEoDjIHLlNvdXJjZVILZXZlbnRTb3VyY2USHwoLY3JlYXRlX3RpbWUYCCABKANSCmNyZWF0ZV'
+    'RpbWUSJwoLZXZlbnRfY29sb3IYCSABKA4yBi5Db2xvclIKZXZlbnRDb2xvchIdCgpzeXNfcGVy'
+    'aW9kGAogASgJUglzeXNQZXJpb2QSKQoQY29uZmlybWF0aW9uX3VybBgLIAEoCVIPY29uZmlybW'
+    'F0aW9uVXJsEh8KC3VwZGF0ZV90aW1lGA0gASgDUgp1cGRhdGVUaW1lEiYKD3BhcmVudF9ldmVu'
+    'dF9pZBgPIAEoBVINcGFyZW50RXZlbnRJZBIjCg1jb21wbGV0ZV90aW1lGBEgASgDUgxjb21wbG'
+    'V0ZVRpbWUSGAoHY29tbWVudBgTIAEoCVIHY29tbWVudBIbCgllZGl0b3JfaWQYFSABKAVSCGVk'
+    'aXRvcklkEh0KBmVkaXRvchgXIAEoCzIFLlVzZXJSBmVkaXRvchIdCgVwYXllchgZIAEoCzIHLk'
+    'VudGl0eVIFcGF5ZXISJQoJcmVjaXBpZW50GBsgASgLMgcuRW50aXR5UglyZWNpcGllbnQSKQoM'
+    'cGFyZW50X2V2ZW50GB0gASgLMgYuRXZlbnRSC3BhcmVudEV2ZW50');
 
