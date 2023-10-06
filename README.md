@@ -20,8 +20,8 @@ Protocol Buffers - буффер между протоколами бекенда
 2. Запустите компиляцию из корня:
 
    ```bash
-   protoc \    
-      -I . -I ./google \ 
+   protoc \
+      -I . -I ./google \
       --go_out=go --go_opt=paths=source_relative \
       --go-grpc_out=go --go-grpc_opt=paths=source_relative \
       $(find . -name "*.proto")
@@ -34,6 +34,7 @@ Protocol Buffers - буффер между протоколами бекенда
 1. Установите Dart плагин для protoc. Следуйте инструкциям на [официальной странице пакета](https://pub.dev/packages/protoc_plugin).
 
 2. Запустите компиляцию из корня:
+
    ```bash
       protoc -I . -I ./google --dart_out=grpc:dart $(find . -name "*.proto")
    ```
