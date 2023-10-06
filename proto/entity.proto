@@ -30,4 +30,5 @@ message Entity
   Agent agent = 25;
   repeated EntitySource sources = 27;
   int32 contact_creator_id = 28;
+  string alias_code = 29;
 }   

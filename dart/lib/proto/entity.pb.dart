@@ -41,6 +41,7 @@ class Entity extends $pb.GeneratedMessage {
     $2.Agent? agent,
     $core.Iterable<$3.EntitySource>? sources,
     $core.int? contactCreatorId,
+    $core.String? aliasCode,
   }) {
     final $result = create();
     if (entityId != null) {
@@ -97,6 +98,9 @@ class Entity extends $pb.GeneratedMessage {
     if (contactCreatorId != null) {
       $result.contactCreatorId = contactCreatorId;
     }
+    if (aliasCode != null) {
+      $result.aliasCode = aliasCode;
+    }
     return $result;
   }
   Entity._() : super();
@@ -122,6 +126,7 @@ class Entity extends $pb.GeneratedMessage {
     ..aOM<$2.Agent>(25, _omitFieldNames ? '' : 'agent', subBuilder: $2.Agent.create)
     ..pc<$3.EntitySource>(27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $3.EntitySource.create)
     ..a<$core.int>(28, _omitFieldNames ? '' : 'contactCreatorId', $pb.PbFieldType.O3)
+    ..aOS(29, _omitFieldNames ? '' : 'aliasCode')
     ..hasRequiredFields = false
   ;
 
@@ -307,6 +312,15 @@ class Entity extends $pb.GeneratedMessage {
   $core.bool hasContactCreatorId() => $_has(17);
   @$pb.TagNumber(28)
   void clearContactCreatorId() => clearField(28);
+
+  @$pb.TagNumber(29)
+  $core.String get aliasCode => $_getSZ(18);
+  @$pb.TagNumber(29)
+  set aliasCode($core.String v) { $_setString(18, v); }
+  @$pb.TagNumber(29)
+  $core.bool hasAliasCode() => $_has(18);
+  @$pb.TagNumber(29)
+  void clearAliasCode() => clearField(29);
 }
 
 

@@ -35,6 +35,7 @@ const Entity$json = {
     {'1': 'agent', '3': 25, '4': 1, '5': 11, '6': '.Agent', '10': 'agent'},
     {'1': 'sources', '3': 27, '4': 3, '5': 11, '6': '.EntitySource', '10': 'sources'},
     {'1': 'contact_creator_id', '3': 28, '4': 1, '5': 5, '10': 'contactCreatorId'},
+    {'1': 'alias_code', '3': 29, '4': 1, '5': 9, '10': 'aliasCode'},
   ],
 };
 
@@ -51,5 +52,5 @@ final $typed_data.Uint8List entityDescriptor = $convert.base64Decode(
     'FSABKAsyDS5UZWxlZ3JhbVVzZXJSDHRlbGVncmFtVXNlchIiCgdjb3VudHJ5GBcgASgLMgguQ2'
     '91bnRyeVIHY291bnRyeRIcCgVhZ2VudBgZIAEoCzIGLkFnZW50UgVhZ2VudBInCgdzb3VyY2Vz'
     'GBsgAygLMg0uRW50aXR5U291cmNlUgdzb3VyY2VzEiwKEmNvbnRhY3RfY3JlYXRvcl9pZBgcIA'
-    'EoBVIQY29udGFjdENyZWF0b3JJZA==');
+    'EoBVIQY29udGFjdENyZWF0b3JJZBIdCgphbGlhc19jb2RlGB0gASgJUglhbGlhc0NvZGU=');
 
