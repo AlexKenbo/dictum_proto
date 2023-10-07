@@ -44,7 +44,6 @@ const Accrual$json = {
     {'1': 'source_key', '3': 41, '4': 1, '5': 9, '10': 'sourceKey'},
     {'1': 'payer_user', '3': 43, '4': 1, '5': 11, '6': '.User', '10': 'payerUser'},
     {'1': 'approver', '3': 45, '4': 1, '5': 11, '6': '.User', '10': 'approver'},
-    {'1': 'event', '3': 47, '4': 1, '5': 11, '6': '.Event', '10': 'event'},
     {'1': 'operation', '3': 49, '4': 1, '5': 11, '6': '.Operation', '10': 'operation'},
     {'1': 'currency', '3': 51, '4': 1, '5': 11, '6': '.Currency', '10': 'currency'},
     {'1': 'recipient_account', '3': 53, '4': 1, '5': 11, '6': '.Account', '10': 'recipientAccount'},
@@ -55,10 +54,14 @@ const Accrual$json = {
     {'1': 'amount', '3': 60, '4': 1, '5': 1, '10': 'amount'},
     {'1': 'allocated_amount', '3': 61, '4': 1, '5': 1, '10': 'allocatedAmount'},
     {'1': 'full_allocated_at', '3': 62, '4': 1, '5': 3, '10': 'fullAllocatedAt'},
-    {'1': 'datasource', '3': 63, '4': 1, '5': 9, '10': 'datasource'},
-    {'1': 'color', '3': 64, '4': 1, '5': 9, '10': 'color'},
     {'1': 'payout_proof', '3': 65, '4': 1, '5': 9, '10': 'payoutProof'},
     {'1': 'note', '3': 66, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'create_time', '3': 67, '4': 1, '5': 3, '10': 'createTime'},
+    {'1': 'taxAmount', '3': 68, '4': 1, '5': 1, '10': 'taxAmount'},
+    {'1': 'taxPercent', '3': 69, '4': 1, '5': 1, '10': 'taxPercent'},
+    {'1': 'taxInclusive', '3': 70, '4': 1, '5': 8, '10': 'taxInclusive'},
+    {'1': 'datasource', '3': 71, '4': 1, '5': 14, '6': '.Source', '10': 'datasource'},
+    {'1': 'color', '3': 72, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
   ],
 };
 
@@ -81,15 +84,17 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'ZXJVc2VySWQSIQoMYWxsb3dfcGF5b3V0GCMgASgIUgthbGxvd1BheW91dBIfCgtwYXlvdXRfZG'
     'F0ZRglIAEoA1IKcGF5b3V0RGF0ZRIjCg1yZXNvdXJjZV9uYW1lGCcgASgJUgxyZXNvdXJjZU5h'
     'bWUSHQoKc291cmNlX2tleRgpIAEoCVIJc291cmNlS2V5EiQKCnBheWVyX3VzZXIYKyABKAsyBS'
-    '5Vc2VyUglwYXllclVzZXISIQoIYXBwcm92ZXIYLSABKAsyBS5Vc2VyUghhcHByb3ZlchIcCgVl'
-    'dmVudBgvIAEoCzIGLkV2ZW50UgVldmVudBIoCglvcGVyYXRpb24YMSABKAsyCi5PcGVyYXRpb2'
-    '5SCW9wZXJhdGlvbhIlCghjdXJyZW5jeRgzIAEoCzIJLkN1cnJlbmN5UghjdXJyZW5jeRI1ChFy'
-    'ZWNpcGllbnRfYWNjb3VudBg1IAEoCzIILkFjY291bnRSEHJlY2lwaWVudEFjY291bnQSLQoNcG'
-    'F5ZXJfYWNjb3VudBg3IAEoCzIILkFjY291bnRSDHBheWVyQWNjb3VudBIiCgdhcnRpY2xlGDkg'
-    'ASgLMgguQXJ0aWNsZVIHYXJ0aWNsZRIZCghwYXllcl9pZBg6IAEoBVIHcGF5ZXJJZBIhCgxyZW'
-    'NpcGllbnRfaWQYOyABKAVSC3JlY2lwaWVudElkEhYKBmFtb3VudBg8IAEoAVIGYW1vdW50EikK'
-    'EGFsbG9jYXRlZF9hbW91bnQYPSABKAFSD2FsbG9jYXRlZEFtb3VudBIqChFmdWxsX2FsbG9jYX'
-    'RlZF9hdBg+IAEoA1IPZnVsbEFsbG9jYXRlZEF0Eh4KCmRhdGFzb3VyY2UYPyABKAlSCmRhdGFz'
-    'b3VyY2USFAoFY29sb3IYQCABKAlSBWNvbG9yEiEKDHBheW91dF9wcm9vZhhBIAEoCVILcGF5b3'
-    'V0UHJvb2YSEgoEbm90ZRhCIAEoCVIEbm90ZQ==');
+    '5Vc2VyUglwYXllclVzZXISIQoIYXBwcm92ZXIYLSABKAsyBS5Vc2VyUghhcHByb3ZlchIoCglv'
+    'cGVyYXRpb24YMSABKAsyCi5PcGVyYXRpb25SCW9wZXJhdGlvbhIlCghjdXJyZW5jeRgzIAEoCz'
+    'IJLkN1cnJlbmN5UghjdXJyZW5jeRI1ChFyZWNpcGllbnRfYWNjb3VudBg1IAEoCzIILkFjY291'
+    'bnRSEHJlY2lwaWVudEFjY291bnQSLQoNcGF5ZXJfYWNjb3VudBg3IAEoCzIILkFjY291bnRSDH'
+    'BheWVyQWNjb3VudBIiCgdhcnRpY2xlGDkgASgLMgguQXJ0aWNsZVIHYXJ0aWNsZRIZCghwYXll'
+    'cl9pZBg6IAEoBVIHcGF5ZXJJZBIhCgxyZWNpcGllbnRfaWQYOyABKAVSC3JlY2lwaWVudElkEh'
+    'YKBmFtb3VudBg8IAEoAVIGYW1vdW50EikKEGFsbG9jYXRlZF9hbW91bnQYPSABKAFSD2FsbG9j'
+    'YXRlZEFtb3VudBIqChFmdWxsX2FsbG9jYXRlZF9hdBg+IAEoA1IPZnVsbEFsbG9jYXRlZEF0Ei'
+    'EKDHBheW91dF9wcm9vZhhBIAEoCVILcGF5b3V0UHJvb2YSEgoEbm90ZRhCIAEoCVIEbm90ZRIf'
+    'CgtjcmVhdGVfdGltZRhDIAEoA1IKY3JlYXRlVGltZRIcCgl0YXhBbW91bnQYRCABKAFSCXRheE'
+    'Ftb3VudBIeCgp0YXhQZXJjZW50GEUgASgBUgp0YXhQZXJjZW50EiIKDHRheEluY2x1c2l2ZRhG'
+    'IAEoCFIMdGF4SW5jbHVzaXZlEicKCmRhdGFzb3VyY2UYRyABKA4yBy5Tb3VyY2VSCmRhdGFzb3'
+    'VyY2USHAoFY29sb3IYSCABKA4yBi5Db2xvclIFY29sb3I=');
 

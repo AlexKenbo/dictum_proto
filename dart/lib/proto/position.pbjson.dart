@@ -25,7 +25,7 @@ const Position$json = {
     {'1': 'sum', '3': 6, '4': 1, '5': 1, '10': 'sum'},
     {'1': 'resource_name', '3': 7, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'product', '3': 9, '4': 1, '5': 11, '6': '.Product', '10': 'product'},
-    {'1': 'event', '3': 11, '4': 1, '5': 11, '6': '.Event', '10': 'event'},
+    {'1': 'accrual', '3': 12, '4': 1, '5': 11, '6': '.Accrual', '10': 'accrual'},
   ],
 };
 
@@ -35,5 +35,6 @@ final $typed_data.Uint8List positionDescriptor = $convert.base64Decode(
     'gCIAEoBVIHZXZlbnRJZBIdCgpwcm9kdWN0X2lkGAMgASgFUglwcm9kdWN0SWQSFAoFcHJpY2UY'
     'BCABKAFSBXByaWNlEhoKCHF1YW50aXR5GAUgASgFUghxdWFudGl0eRIQCgNzdW0YBiABKAFSA3'
     'N1bRIjCg1yZXNvdXJjZV9uYW1lGAcgASgJUgxyZXNvdXJjZU5hbWUSIgoHcHJvZHVjdBgJIAEo'
-    'CzIILlByb2R1Y3RSB3Byb2R1Y3QSHAoFZXZlbnQYCyABKAsyBi5FdmVudFIFZXZlbnQ=');
+    'CzIILlByb2R1Y3RSB3Byb2R1Y3QSIgoHYWNjcnVhbBgMIAEoCzIILkFjY3J1YWxSB2FjY3J1YW'
+    'w=');
 

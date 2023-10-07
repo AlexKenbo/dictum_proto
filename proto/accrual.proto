@@ -6,11 +6,12 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 import "proto/accrual_type.proto";
 import "proto/payment_type.proto";
 import "proto/user.proto";
-import "proto/event.proto";
 import "proto/operation.proto";
 import "proto/currency.proto";
 import "proto/account.proto";
 import "proto/article.proto";
+import "proto/color.proto";
+import "proto/source.proto";
 
 message Accrual
 {
@@ -41,7 +42,7 @@ message Accrual
   string source_key = 41;
   User payer_user = 43;
   User approver = 45;
-  Event event = 47;
+  // Event event = 47;
   Operation operation = 49;
   Currency currency = 51;
   Account recipient_account = 53;
@@ -52,9 +53,12 @@ message Accrual
   double amount = 60;              
   double allocated_amount = 61;    
   int64 full_allocated_at = 62;    
-  string datasource = 63;          
-  string color = 64;               
   string payout_proof = 65;        
   string note = 66;    
-
+  int64 create_time = 67;
+  double taxAmount = 68;              
+  double taxPercent = 69;              
+  bool taxInclusive = 70;              
+  Source datasource = 71;          
+  Color color = 72;
 }

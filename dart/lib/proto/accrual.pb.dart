@@ -14,13 +14,14 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'account.pb.dart' as $4;
-import 'accrual_type.pbenum.dart' as $6;
-import 'article.pb.dart' as $5;
-import 'currency.pb.dart' as $3;
-import 'event.pb.dart' as $1;
-import 'operation.pb.dart' as $2;
-import 'payment_type.pbenum.dart' as $7;
+import 'account.pb.dart' as $3;
+import 'accrual_type.pbenum.dart' as $5;
+import 'article.pb.dart' as $4;
+import 'color.pbenum.dart' as $8;
+import 'currency.pb.dart' as $2;
+import 'operation.pb.dart' as $1;
+import 'payment_type.pbenum.dart' as $6;
+import 'source.pbenum.dart' as $7;
 import 'user.pb.dart' as $0;
 
 class Accrual extends $pb.GeneratedMessage {
@@ -30,7 +31,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.bool? oneTransferPay,
     $core.int? operationId,
     $core.String? currencyCode,
-    $6.AccrualType? type,
+    $5.AccrualType? type,
     $core.int? articleId,
     $core.String? sysPeriod,
     $core.String? invoiceNumber,
@@ -42,7 +43,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? payerAccountId,
     $core.bool? isInitial,
     $core.String? status,
-    $7.PaymentType? paymentType,
+    $6.PaymentType? paymentType,
     $core.bool? hasOtherMoneyRecipient,
     $core.int? approverId,
     $core.int? payerUserId,
@@ -52,21 +53,24 @@ class Accrual extends $pb.GeneratedMessage {
     $core.String? sourceKey,
     $0.User? payerUser,
     $0.User? approver,
-    $1.Event? event,
-    $2.Operation? operation,
-    $3.Currency? currency,
-    $4.Account? recipientAccount,
-    $4.Account? payerAccount,
-    $5.Article? article,
+    $1.Operation? operation,
+    $2.Currency? currency,
+    $3.Account? recipientAccount,
+    $3.Account? payerAccount,
+    $4.Article? article,
     $core.int? payerId,
     $core.int? recipientId,
     $core.double? amount,
     $core.double? allocatedAmount,
     $fixnum.Int64? fullAllocatedAt,
-    $core.String? datasource,
-    $core.String? color,
     $core.String? payoutProof,
     $core.String? note,
+    $fixnum.Int64? createTime,
+    $core.double? taxAmount,
+    $core.double? taxPercent,
+    $core.bool? taxInclusive,
+    $7.Source? datasource,
+    $8.Color? color,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -150,9 +154,6 @@ class Accrual extends $pb.GeneratedMessage {
     if (approver != null) {
       $result.approver = approver;
     }
-    if (event != null) {
-      $result.event = event;
-    }
     if (operation != null) {
       $result.operation = operation;
     }
@@ -183,17 +184,29 @@ class Accrual extends $pb.GeneratedMessage {
     if (fullAllocatedAt != null) {
       $result.fullAllocatedAt = fullAllocatedAt;
     }
-    if (datasource != null) {
-      $result.datasource = datasource;
-    }
-    if (color != null) {
-      $result.color = color;
-    }
     if (payoutProof != null) {
       $result.payoutProof = payoutProof;
     }
     if (note != null) {
       $result.note = note;
+    }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
+    if (taxAmount != null) {
+      $result.taxAmount = taxAmount;
+    }
+    if (taxPercent != null) {
+      $result.taxPercent = taxPercent;
+    }
+    if (taxInclusive != null) {
+      $result.taxInclusive = taxInclusive;
+    }
+    if (datasource != null) {
+      $result.datasource = datasource;
+    }
+    if (color != null) {
+      $result.color = color;
     }
     return $result;
   }
@@ -207,7 +220,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'oneTransferPay')
     ..a<$core.int>(4, _omitFieldNames ? '' : 'operationId', $pb.PbFieldType.O3)
     ..aOS(5, _omitFieldNames ? '' : 'currencyCode')
-    ..e<$6.AccrualType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $6.AccrualType.ACCRUAL_TYPE_UNKNOWN, valueOf: $6.AccrualType.valueOf, enumValues: $6.AccrualType.values)
+    ..e<$5.AccrualType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $5.AccrualType.ACCRUAL_TYPE_UNKNOWN, valueOf: $5.AccrualType.valueOf, enumValues: $5.AccrualType.values)
     ..a<$core.int>(7, _omitFieldNames ? '' : 'articleId', $pb.PbFieldType.O3)
     ..aOS(8, _omitFieldNames ? '' : 'sysPeriod')
     ..aOS(9, _omitFieldNames ? '' : 'invoiceNumber')
@@ -219,7 +232,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(21, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
     ..aOB(23, _omitFieldNames ? '' : 'isInitial')
     ..aOS(25, _omitFieldNames ? '' : 'status')
-    ..e<$7.PaymentType>(27, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $7.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $7.PaymentType.valueOf, enumValues: $7.PaymentType.values)
+    ..e<$6.PaymentType>(27, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $6.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $6.PaymentType.valueOf, enumValues: $6.PaymentType.values)
     ..aOB(29, _omitFieldNames ? '' : 'hasOtherMoneyRecipient')
     ..a<$core.int>(31, _omitFieldNames ? '' : 'approverId', $pb.PbFieldType.O3)
     ..a<$core.int>(33, _omitFieldNames ? '' : 'payerUserId', $pb.PbFieldType.O3)
@@ -229,21 +242,24 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOS(41, _omitFieldNames ? '' : 'sourceKey')
     ..aOM<$0.User>(43, _omitFieldNames ? '' : 'payerUser', subBuilder: $0.User.create)
     ..aOM<$0.User>(45, _omitFieldNames ? '' : 'approver', subBuilder: $0.User.create)
-    ..aOM<$1.Event>(47, _omitFieldNames ? '' : 'event', subBuilder: $1.Event.create)
-    ..aOM<$2.Operation>(49, _omitFieldNames ? '' : 'operation', subBuilder: $2.Operation.create)
-    ..aOM<$3.Currency>(51, _omitFieldNames ? '' : 'currency', subBuilder: $3.Currency.create)
-    ..aOM<$4.Account>(53, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $4.Account.create)
-    ..aOM<$4.Account>(55, _omitFieldNames ? '' : 'payerAccount', subBuilder: $4.Account.create)
-    ..aOM<$5.Article>(57, _omitFieldNames ? '' : 'article', subBuilder: $5.Article.create)
+    ..aOM<$1.Operation>(49, _omitFieldNames ? '' : 'operation', subBuilder: $1.Operation.create)
+    ..aOM<$2.Currency>(51, _omitFieldNames ? '' : 'currency', subBuilder: $2.Currency.create)
+    ..aOM<$3.Account>(53, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $3.Account.create)
+    ..aOM<$3.Account>(55, _omitFieldNames ? '' : 'payerAccount', subBuilder: $3.Account.create)
+    ..aOM<$4.Article>(57, _omitFieldNames ? '' : 'article', subBuilder: $4.Article.create)
     ..a<$core.int>(58, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(59, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
     ..a<$core.double>(60, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(61, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
     ..aInt64(62, _omitFieldNames ? '' : 'fullAllocatedAt')
-    ..aOS(63, _omitFieldNames ? '' : 'datasource')
-    ..aOS(64, _omitFieldNames ? '' : 'color')
     ..aOS(65, _omitFieldNames ? '' : 'payoutProof')
     ..aOS(66, _omitFieldNames ? '' : 'note')
+    ..aInt64(67, _omitFieldNames ? '' : 'createTime')
+    ..a<$core.double>(68, _omitFieldNames ? '' : 'taxAmount', $pb.PbFieldType.OD, protoName: 'taxAmount')
+    ..a<$core.double>(69, _omitFieldNames ? '' : 'taxPercent', $pb.PbFieldType.OD, protoName: 'taxPercent')
+    ..aOB(70, _omitFieldNames ? '' : 'taxInclusive', protoName: 'taxInclusive')
+    ..e<$7.Source>(71, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $7.Source.SOURCE_UNKNOWN, valueOf: $7.Source.valueOf, enumValues: $7.Source.values)
+    ..e<$8.Color>(72, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $8.Color.COLOR_UNKNOWN, valueOf: $8.Color.valueOf, enumValues: $8.Color.values)
     ..hasRequiredFields = false
   ;
 
@@ -314,9 +330,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearCurrencyCode() => clearField(5);
 
   @$pb.TagNumber(6)
-  $6.AccrualType get type => $_getN(5);
+  $5.AccrualType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type($6.AccrualType v) { setField(6, v); }
+  set type($5.AccrualType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)
@@ -422,9 +438,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearStatus() => clearField(25);
 
   @$pb.TagNumber(27)
-  $7.PaymentType get paymentType => $_getN(17);
+  $6.PaymentType get paymentType => $_getN(17);
   @$pb.TagNumber(27)
-  set paymentType($7.PaymentType v) { setField(27, v); }
+  set paymentType($6.PaymentType v) { setField(27, v); }
   @$pb.TagNumber(27)
   $core.bool hasPaymentType() => $_has(17);
   @$pb.TagNumber(27)
@@ -515,152 +531,178 @@ class Accrual extends $pb.GeneratedMessage {
   @$pb.TagNumber(45)
   $0.User ensureApprover() => $_ensure(26);
 
-  @$pb.TagNumber(47)
-  $1.Event get event => $_getN(27);
-  @$pb.TagNumber(47)
-  set event($1.Event v) { setField(47, v); }
-  @$pb.TagNumber(47)
-  $core.bool hasEvent() => $_has(27);
-  @$pb.TagNumber(47)
-  void clearEvent() => clearField(47);
-  @$pb.TagNumber(47)
-  $1.Event ensureEvent() => $_ensure(27);
-
+  /// Event event = 47;
   @$pb.TagNumber(49)
-  $2.Operation get operation => $_getN(28);
+  $1.Operation get operation => $_getN(27);
   @$pb.TagNumber(49)
-  set operation($2.Operation v) { setField(49, v); }
+  set operation($1.Operation v) { setField(49, v); }
   @$pb.TagNumber(49)
-  $core.bool hasOperation() => $_has(28);
+  $core.bool hasOperation() => $_has(27);
   @$pb.TagNumber(49)
   void clearOperation() => clearField(49);
   @$pb.TagNumber(49)
-  $2.Operation ensureOperation() => $_ensure(28);
+  $1.Operation ensureOperation() => $_ensure(27);
 
   @$pb.TagNumber(51)
-  $3.Currency get currency => $_getN(29);
+  $2.Currency get currency => $_getN(28);
   @$pb.TagNumber(51)
-  set currency($3.Currency v) { setField(51, v); }
+  set currency($2.Currency v) { setField(51, v); }
   @$pb.TagNumber(51)
-  $core.bool hasCurrency() => $_has(29);
+  $core.bool hasCurrency() => $_has(28);
   @$pb.TagNumber(51)
   void clearCurrency() => clearField(51);
   @$pb.TagNumber(51)
-  $3.Currency ensureCurrency() => $_ensure(29);
+  $2.Currency ensureCurrency() => $_ensure(28);
 
   @$pb.TagNumber(53)
-  $4.Account get recipientAccount => $_getN(30);
+  $3.Account get recipientAccount => $_getN(29);
   @$pb.TagNumber(53)
-  set recipientAccount($4.Account v) { setField(53, v); }
+  set recipientAccount($3.Account v) { setField(53, v); }
   @$pb.TagNumber(53)
-  $core.bool hasRecipientAccount() => $_has(30);
+  $core.bool hasRecipientAccount() => $_has(29);
   @$pb.TagNumber(53)
   void clearRecipientAccount() => clearField(53);
   @$pb.TagNumber(53)
-  $4.Account ensureRecipientAccount() => $_ensure(30);
+  $3.Account ensureRecipientAccount() => $_ensure(29);
 
   @$pb.TagNumber(55)
-  $4.Account get payerAccount => $_getN(31);
+  $3.Account get payerAccount => $_getN(30);
   @$pb.TagNumber(55)
-  set payerAccount($4.Account v) { setField(55, v); }
+  set payerAccount($3.Account v) { setField(55, v); }
   @$pb.TagNumber(55)
-  $core.bool hasPayerAccount() => $_has(31);
+  $core.bool hasPayerAccount() => $_has(30);
   @$pb.TagNumber(55)
   void clearPayerAccount() => clearField(55);
   @$pb.TagNumber(55)
-  $4.Account ensurePayerAccount() => $_ensure(31);
+  $3.Account ensurePayerAccount() => $_ensure(30);
 
   @$pb.TagNumber(57)
-  $5.Article get article => $_getN(32);
+  $4.Article get article => $_getN(31);
   @$pb.TagNumber(57)
-  set article($5.Article v) { setField(57, v); }
+  set article($4.Article v) { setField(57, v); }
   @$pb.TagNumber(57)
-  $core.bool hasArticle() => $_has(32);
+  $core.bool hasArticle() => $_has(31);
   @$pb.TagNumber(57)
   void clearArticle() => clearField(57);
   @$pb.TagNumber(57)
-  $5.Article ensureArticle() => $_ensure(32);
+  $4.Article ensureArticle() => $_ensure(31);
 
   @$pb.TagNumber(58)
-  $core.int get payerId => $_getIZ(33);
+  $core.int get payerId => $_getIZ(32);
   @$pb.TagNumber(58)
-  set payerId($core.int v) { $_setSignedInt32(33, v); }
+  set payerId($core.int v) { $_setSignedInt32(32, v); }
   @$pb.TagNumber(58)
-  $core.bool hasPayerId() => $_has(33);
+  $core.bool hasPayerId() => $_has(32);
   @$pb.TagNumber(58)
   void clearPayerId() => clearField(58);
 
   @$pb.TagNumber(59)
-  $core.int get recipientId => $_getIZ(34);
+  $core.int get recipientId => $_getIZ(33);
   @$pb.TagNumber(59)
-  set recipientId($core.int v) { $_setSignedInt32(34, v); }
+  set recipientId($core.int v) { $_setSignedInt32(33, v); }
   @$pb.TagNumber(59)
-  $core.bool hasRecipientId() => $_has(34);
+  $core.bool hasRecipientId() => $_has(33);
   @$pb.TagNumber(59)
   void clearRecipientId() => clearField(59);
 
   @$pb.TagNumber(60)
-  $core.double get amount => $_getN(35);
+  $core.double get amount => $_getN(34);
   @$pb.TagNumber(60)
-  set amount($core.double v) { $_setDouble(35, v); }
+  set amount($core.double v) { $_setDouble(34, v); }
   @$pb.TagNumber(60)
-  $core.bool hasAmount() => $_has(35);
+  $core.bool hasAmount() => $_has(34);
   @$pb.TagNumber(60)
   void clearAmount() => clearField(60);
 
   @$pb.TagNumber(61)
-  $core.double get allocatedAmount => $_getN(36);
+  $core.double get allocatedAmount => $_getN(35);
   @$pb.TagNumber(61)
-  set allocatedAmount($core.double v) { $_setDouble(36, v); }
+  set allocatedAmount($core.double v) { $_setDouble(35, v); }
   @$pb.TagNumber(61)
-  $core.bool hasAllocatedAmount() => $_has(36);
+  $core.bool hasAllocatedAmount() => $_has(35);
   @$pb.TagNumber(61)
   void clearAllocatedAmount() => clearField(61);
 
   @$pb.TagNumber(62)
-  $fixnum.Int64 get fullAllocatedAt => $_getI64(37);
+  $fixnum.Int64 get fullAllocatedAt => $_getI64(36);
   @$pb.TagNumber(62)
-  set fullAllocatedAt($fixnum.Int64 v) { $_setInt64(37, v); }
+  set fullAllocatedAt($fixnum.Int64 v) { $_setInt64(36, v); }
   @$pb.TagNumber(62)
-  $core.bool hasFullAllocatedAt() => $_has(37);
+  $core.bool hasFullAllocatedAt() => $_has(36);
   @$pb.TagNumber(62)
   void clearFullAllocatedAt() => clearField(62);
 
-  @$pb.TagNumber(63)
-  $core.String get datasource => $_getSZ(38);
-  @$pb.TagNumber(63)
-  set datasource($core.String v) { $_setString(38, v); }
-  @$pb.TagNumber(63)
-  $core.bool hasDatasource() => $_has(38);
-  @$pb.TagNumber(63)
-  void clearDatasource() => clearField(63);
-
-  @$pb.TagNumber(64)
-  $core.String get color => $_getSZ(39);
-  @$pb.TagNumber(64)
-  set color($core.String v) { $_setString(39, v); }
-  @$pb.TagNumber(64)
-  $core.bool hasColor() => $_has(39);
-  @$pb.TagNumber(64)
-  void clearColor() => clearField(64);
-
   @$pb.TagNumber(65)
-  $core.String get payoutProof => $_getSZ(40);
+  $core.String get payoutProof => $_getSZ(37);
   @$pb.TagNumber(65)
-  set payoutProof($core.String v) { $_setString(40, v); }
+  set payoutProof($core.String v) { $_setString(37, v); }
   @$pb.TagNumber(65)
-  $core.bool hasPayoutProof() => $_has(40);
+  $core.bool hasPayoutProof() => $_has(37);
   @$pb.TagNumber(65)
   void clearPayoutProof() => clearField(65);
 
   @$pb.TagNumber(66)
-  $core.String get note => $_getSZ(41);
+  $core.String get note => $_getSZ(38);
   @$pb.TagNumber(66)
-  set note($core.String v) { $_setString(41, v); }
+  set note($core.String v) { $_setString(38, v); }
   @$pb.TagNumber(66)
-  $core.bool hasNote() => $_has(41);
+  $core.bool hasNote() => $_has(38);
   @$pb.TagNumber(66)
   void clearNote() => clearField(66);
+
+  @$pb.TagNumber(67)
+  $fixnum.Int64 get createTime => $_getI64(39);
+  @$pb.TagNumber(67)
+  set createTime($fixnum.Int64 v) { $_setInt64(39, v); }
+  @$pb.TagNumber(67)
+  $core.bool hasCreateTime() => $_has(39);
+  @$pb.TagNumber(67)
+  void clearCreateTime() => clearField(67);
+
+  @$pb.TagNumber(68)
+  $core.double get taxAmount => $_getN(40);
+  @$pb.TagNumber(68)
+  set taxAmount($core.double v) { $_setDouble(40, v); }
+  @$pb.TagNumber(68)
+  $core.bool hasTaxAmount() => $_has(40);
+  @$pb.TagNumber(68)
+  void clearTaxAmount() => clearField(68);
+
+  @$pb.TagNumber(69)
+  $core.double get taxPercent => $_getN(41);
+  @$pb.TagNumber(69)
+  set taxPercent($core.double v) { $_setDouble(41, v); }
+  @$pb.TagNumber(69)
+  $core.bool hasTaxPercent() => $_has(41);
+  @$pb.TagNumber(69)
+  void clearTaxPercent() => clearField(69);
+
+  @$pb.TagNumber(70)
+  $core.bool get taxInclusive => $_getBF(42);
+  @$pb.TagNumber(70)
+  set taxInclusive($core.bool v) { $_setBool(42, v); }
+  @$pb.TagNumber(70)
+  $core.bool hasTaxInclusive() => $_has(42);
+  @$pb.TagNumber(70)
+  void clearTaxInclusive() => clearField(70);
+
+  @$pb.TagNumber(71)
+  $7.Source get datasource => $_getN(43);
+  @$pb.TagNumber(71)
+  set datasource($7.Source v) { setField(71, v); }
+  @$pb.TagNumber(71)
+  $core.bool hasDatasource() => $_has(43);
+  @$pb.TagNumber(71)
+  void clearDatasource() => clearField(71);
+
+  @$pb.TagNumber(72)
+  $8.Color get color => $_getN(44);
+  @$pb.TagNumber(72)
+  set color($8.Color v) { setField(72, v); }
+  @$pb.TagNumber(72)
+  $core.bool hasColor() => $_has(44);
+  @$pb.TagNumber(72)
+  void clearColor() => clearField(72);
 }
 
 

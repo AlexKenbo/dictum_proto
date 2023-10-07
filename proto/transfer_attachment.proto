@@ -4,14 +4,14 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
 import "proto/attachment.proto";
-import "proto/event.proto";
+import "proto/transfer.proto";
 
-message EventAttachment
+message TransferAttachment
 {
   int32 event_attachment_id = 1;
   int32 attachment_id = 2;
   int32 event_id = 3;
   Attachment attachment = 4;
-  Event event = 6;
+  Transfer transfer = 6;
 
 } 

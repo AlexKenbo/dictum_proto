@@ -13,6 +13,9 @@ import "proto/transfer_type.proto";
 import "proto/event.proto";
 import "proto/account.proto";
 import "proto/user.proto";
+import "proto/color.proto";
+import "proto/source.proto";
+
   
 message Transfer
 {
@@ -44,8 +47,8 @@ message Transfer
   double allocated_amount = 38;          
   int64 full_allocated_at = 39;          
   int32 parent_id = 40;                  
-  string datasource = 41;                
-  string color = 42;                     
-  string note = 43;   
+  Source datasource = 42;
+  Color color = 43;                     
+  string note = 44;   
+  int64 create_time = 45;
 }   
-

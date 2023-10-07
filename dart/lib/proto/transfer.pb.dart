@@ -15,7 +15,9 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account.pb.dart' as $1;
+import 'color.pbenum.dart' as $5;
 import 'event.pb.dart' as $0;
+import 'source.pbenum.dart' as $4;
 import 'transfer_type.pbenum.dart' as $3;
 import 'user.pb.dart' as $2;
 
@@ -49,9 +51,10 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? allocatedAmount,
     $fixnum.Int64? fullAllocatedAt,
     $core.int? parentId,
-    $core.String? datasource,
-    $core.String? color,
+    $4.Source? datasource,
+    $5.Color? color,
     $core.String? note,
+    $fixnum.Int64? createTime,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -147,6 +150,9 @@ class Transfer extends $pb.GeneratedMessage {
     if (note != null) {
       $result.note = note;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     return $result;
   }
   Transfer._() : super();
@@ -182,9 +188,10 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(38, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
     ..aInt64(39, _omitFieldNames ? '' : 'fullAllocatedAt')
     ..a<$core.int>(40, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
-    ..aOS(41, _omitFieldNames ? '' : 'datasource')
-    ..aOS(42, _omitFieldNames ? '' : 'color')
-    ..aOS(43, _omitFieldNames ? '' : 'note')
+    ..e<$4.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $4.Source.SOURCE_UNKNOWN, valueOf: $4.Source.valueOf, enumValues: $4.Source.values)
+    ..e<$5.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $5.Color.COLOR_UNKNOWN, valueOf: $5.Color.valueOf, enumValues: $5.Color.values)
+    ..aOS(44, _omitFieldNames ? '' : 'note')
+    ..aInt64(45, _omitFieldNames ? '' : 'createTime')
     ..hasRequiredFields = false
   ;
 
@@ -469,32 +476,41 @@ class Transfer extends $pb.GeneratedMessage {
   @$pb.TagNumber(40)
   void clearParentId() => clearField(40);
 
-  @$pb.TagNumber(41)
-  $core.String get datasource => $_getSZ(28);
-  @$pb.TagNumber(41)
-  set datasource($core.String v) { $_setString(28, v); }
-  @$pb.TagNumber(41)
+  @$pb.TagNumber(42)
+  $4.Source get datasource => $_getN(28);
+  @$pb.TagNumber(42)
+  set datasource($4.Source v) { setField(42, v); }
+  @$pb.TagNumber(42)
   $core.bool hasDatasource() => $_has(28);
-  @$pb.TagNumber(41)
-  void clearDatasource() => clearField(41);
+  @$pb.TagNumber(42)
+  void clearDatasource() => clearField(42);
 
-  @$pb.TagNumber(42)
-  $core.String get color => $_getSZ(29);
-  @$pb.TagNumber(42)
-  set color($core.String v) { $_setString(29, v); }
-  @$pb.TagNumber(42)
+  @$pb.TagNumber(43)
+  $5.Color get color => $_getN(29);
+  @$pb.TagNumber(43)
+  set color($5.Color v) { setField(43, v); }
+  @$pb.TagNumber(43)
   $core.bool hasColor() => $_has(29);
-  @$pb.TagNumber(42)
-  void clearColor() => clearField(42);
+  @$pb.TagNumber(43)
+  void clearColor() => clearField(43);
 
-  @$pb.TagNumber(43)
+  @$pb.TagNumber(44)
   $core.String get note => $_getSZ(30);
-  @$pb.TagNumber(43)
+  @$pb.TagNumber(44)
   set note($core.String v) { $_setString(30, v); }
-  @$pb.TagNumber(43)
+  @$pb.TagNumber(44)
   $core.bool hasNote() => $_has(30);
-  @$pb.TagNumber(43)
-  void clearNote() => clearField(43);
+  @$pb.TagNumber(44)
+  void clearNote() => clearField(44);
+
+  @$pb.TagNumber(45)
+  $fixnum.Int64 get createTime => $_getI64(31);
+  @$pb.TagNumber(45)
+  set createTime($fixnum.Int64 v) { $_setInt64(31, v); }
+  @$pb.TagNumber(45)
+  $core.bool hasCreateTime() => $_has(31);
+  @$pb.TagNumber(45)
+  void clearCreateTime() => clearField(45);
 }
 
 

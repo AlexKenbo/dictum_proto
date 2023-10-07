@@ -45,9 +45,10 @@ const Transfer$json = {
     {'1': 'allocated_amount', '3': 38, '4': 1, '5': 1, '10': 'allocatedAmount'},
     {'1': 'full_allocated_at', '3': 39, '4': 1, '5': 3, '10': 'fullAllocatedAt'},
     {'1': 'parent_id', '3': 40, '4': 1, '5': 5, '10': 'parentId'},
-    {'1': 'datasource', '3': 41, '4': 1, '5': 9, '10': 'datasource'},
-    {'1': 'color', '3': 42, '4': 1, '5': 9, '10': 'color'},
-    {'1': 'note', '3': 43, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'datasource', '3': 42, '4': 1, '5': 14, '6': '.Source', '10': 'datasource'},
+    {'1': 'color', '3': 43, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
+    {'1': 'note', '3': 44, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'create_time', '3': 45, '4': 1, '5': 3, '10': 'createTime'},
   ],
 };
 
@@ -72,6 +73,7 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'ZBI0ChZyZWNpcGllbnRfdHJhbnNmZXJfa2V5GCQgASgJUhRyZWNpcGllbnRUcmFuc2ZlcktleR'
     'IWCgZhbW91bnQYJSABKAFSBmFtb3VudBIpChBhbGxvY2F0ZWRfYW1vdW50GCYgASgBUg9hbGxv'
     'Y2F0ZWRBbW91bnQSKgoRZnVsbF9hbGxvY2F0ZWRfYXQYJyABKANSD2Z1bGxBbGxvY2F0ZWRBdB'
-    'IbCglwYXJlbnRfaWQYKCABKAVSCHBhcmVudElkEh4KCmRhdGFzb3VyY2UYKSABKAlSCmRhdGFz'
-    'b3VyY2USFAoFY29sb3IYKiABKAlSBWNvbG9yEhIKBG5vdGUYKyABKAlSBG5vdGU=');
+    'IbCglwYXJlbnRfaWQYKCABKAVSCHBhcmVudElkEicKCmRhdGFzb3VyY2UYKiABKA4yBy5Tb3Vy'
+    'Y2VSCmRhdGFzb3VyY2USHAoFY29sb3IYKyABKA4yBi5Db2xvclIFY29sb3ISEgoEbm90ZRgsIA'
+    'EoCVIEbm90ZRIfCgtjcmVhdGVfdGltZRgtIAEoA1IKY3JlYXRlVGltZQ==');
 
