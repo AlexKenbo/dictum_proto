@@ -49,12 +49,12 @@ class Transfer extends $pb.GeneratedMessage {
     $core.String? recipientTransferKey,
     $core.double? amount,
     $core.double? allocatedAmount,
-    $fixnum.Int64? fullAllocatedAt,
     $core.int? parentId,
     $4.Source? datasource,
     $5.Color? color,
     $core.String? note,
     $fixnum.Int64? createTime,
+    $fixnum.Int64? fullAllocationTime,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -135,9 +135,6 @@ class Transfer extends $pb.GeneratedMessage {
     if (allocatedAmount != null) {
       $result.allocatedAmount = allocatedAmount;
     }
-    if (fullAllocatedAt != null) {
-      $result.fullAllocatedAt = fullAllocatedAt;
-    }
     if (parentId != null) {
       $result.parentId = parentId;
     }
@@ -152,6 +149,9 @@ class Transfer extends $pb.GeneratedMessage {
     }
     if (createTime != null) {
       $result.createTime = createTime;
+    }
+    if (fullAllocationTime != null) {
+      $result.fullAllocationTime = fullAllocationTime;
     }
     return $result;
   }
@@ -186,12 +186,12 @@ class Transfer extends $pb.GeneratedMessage {
     ..aOS(36, _omitFieldNames ? '' : 'recipientTransferKey')
     ..a<$core.double>(37, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(38, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
-    ..aInt64(39, _omitFieldNames ? '' : 'fullAllocatedAt')
     ..a<$core.int>(40, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
     ..e<$4.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $4.Source.SOURCE_UNKNOWN, valueOf: $4.Source.valueOf, enumValues: $4.Source.values)
     ..e<$5.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $5.Color.COLOR_UNKNOWN, valueOf: $5.Color.valueOf, enumValues: $5.Color.values)
     ..aOS(44, _omitFieldNames ? '' : 'note')
     ..aInt64(45, _omitFieldNames ? '' : 'createTime')
+    ..aInt64(74, _omitFieldNames ? '' : 'fullAllocationTime')
     ..hasRequiredFields = false
   ;
 
@@ -458,59 +458,59 @@ class Transfer extends $pb.GeneratedMessage {
   @$pb.TagNumber(38)
   void clearAllocatedAmount() => clearField(38);
 
-  @$pb.TagNumber(39)
-  $fixnum.Int64 get fullAllocatedAt => $_getI64(26);
-  @$pb.TagNumber(39)
-  set fullAllocatedAt($fixnum.Int64 v) { $_setInt64(26, v); }
-  @$pb.TagNumber(39)
-  $core.bool hasFullAllocatedAt() => $_has(26);
-  @$pb.TagNumber(39)
-  void clearFullAllocatedAt() => clearField(39);
-
   @$pb.TagNumber(40)
-  $core.int get parentId => $_getIZ(27);
+  $core.int get parentId => $_getIZ(26);
   @$pb.TagNumber(40)
-  set parentId($core.int v) { $_setSignedInt32(27, v); }
+  set parentId($core.int v) { $_setSignedInt32(26, v); }
   @$pb.TagNumber(40)
-  $core.bool hasParentId() => $_has(27);
+  $core.bool hasParentId() => $_has(26);
   @$pb.TagNumber(40)
   void clearParentId() => clearField(40);
 
   @$pb.TagNumber(42)
-  $4.Source get datasource => $_getN(28);
+  $4.Source get datasource => $_getN(27);
   @$pb.TagNumber(42)
   set datasource($4.Source v) { setField(42, v); }
   @$pb.TagNumber(42)
-  $core.bool hasDatasource() => $_has(28);
+  $core.bool hasDatasource() => $_has(27);
   @$pb.TagNumber(42)
   void clearDatasource() => clearField(42);
 
   @$pb.TagNumber(43)
-  $5.Color get color => $_getN(29);
+  $5.Color get color => $_getN(28);
   @$pb.TagNumber(43)
   set color($5.Color v) { setField(43, v); }
   @$pb.TagNumber(43)
-  $core.bool hasColor() => $_has(29);
+  $core.bool hasColor() => $_has(28);
   @$pb.TagNumber(43)
   void clearColor() => clearField(43);
 
   @$pb.TagNumber(44)
-  $core.String get note => $_getSZ(30);
+  $core.String get note => $_getSZ(29);
   @$pb.TagNumber(44)
-  set note($core.String v) { $_setString(30, v); }
+  set note($core.String v) { $_setString(29, v); }
   @$pb.TagNumber(44)
-  $core.bool hasNote() => $_has(30);
+  $core.bool hasNote() => $_has(29);
   @$pb.TagNumber(44)
   void clearNote() => clearField(44);
 
   @$pb.TagNumber(45)
-  $fixnum.Int64 get createTime => $_getI64(31);
+  $fixnum.Int64 get createTime => $_getI64(30);
   @$pb.TagNumber(45)
-  set createTime($fixnum.Int64 v) { $_setInt64(31, v); }
+  set createTime($fixnum.Int64 v) { $_setInt64(30, v); }
   @$pb.TagNumber(45)
-  $core.bool hasCreateTime() => $_has(31);
+  $core.bool hasCreateTime() => $_has(30);
   @$pb.TagNumber(45)
   void clearCreateTime() => clearField(45);
+
+  @$pb.TagNumber(74)
+  $fixnum.Int64 get fullAllocationTime => $_getI64(31);
+  @$pb.TagNumber(74)
+  set fullAllocationTime($fixnum.Int64 v) { $_setInt64(31, v); }
+  @$pb.TagNumber(74)
+  $core.bool hasFullAllocationTime() => $_has(31);
+  @$pb.TagNumber(74)
+  void clearFullAllocationTime() => clearField(74);
 }
 
 

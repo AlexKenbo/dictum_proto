@@ -45,10 +45,11 @@ message Transfer
   string recipient_transfer_key = 36;    
   double amount = 37;                    
   double allocated_amount = 38;          
-  int64 full_allocated_at = 39;          
   int32 parent_id = 40;                  
   Source datasource = 42;
   Color color = 43;                     
   string note = 44;   
   int64 create_time = 45;
+  int64 full_allocation_time = 74;    
+
 }   

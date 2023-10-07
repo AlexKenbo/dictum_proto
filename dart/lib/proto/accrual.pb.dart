@@ -62,7 +62,6 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? recipientId,
     $core.double? amount,
     $core.double? allocatedAmount,
-    $fixnum.Int64? fullAllocatedAt,
     $core.String? payoutProof,
     $core.String? note,
     $fixnum.Int64? createTime,
@@ -71,6 +70,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.bool? taxInclusive,
     $7.Source? datasource,
     $8.Color? color,
+    $fixnum.Int64? fullAllocationTime,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -181,9 +181,6 @@ class Accrual extends $pb.GeneratedMessage {
     if (allocatedAmount != null) {
       $result.allocatedAmount = allocatedAmount;
     }
-    if (fullAllocatedAt != null) {
-      $result.fullAllocatedAt = fullAllocatedAt;
-    }
     if (payoutProof != null) {
       $result.payoutProof = payoutProof;
     }
@@ -207,6 +204,9 @@ class Accrual extends $pb.GeneratedMessage {
     }
     if (color != null) {
       $result.color = color;
+    }
+    if (fullAllocationTime != null) {
+      $result.fullAllocationTime = fullAllocationTime;
     }
     return $result;
   }
@@ -251,7 +251,6 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(59, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
     ..a<$core.double>(60, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(61, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
-    ..aInt64(62, _omitFieldNames ? '' : 'fullAllocatedAt')
     ..aOS(65, _omitFieldNames ? '' : 'payoutProof')
     ..aOS(66, _omitFieldNames ? '' : 'note')
     ..aInt64(67, _omitFieldNames ? '' : 'createTime')
@@ -260,6 +259,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOB(70, _omitFieldNames ? '' : 'taxInclusive', protoName: 'taxInclusive')
     ..e<$7.Source>(71, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $7.Source.SOURCE_UNKNOWN, valueOf: $7.Source.valueOf, enumValues: $7.Source.values)
     ..e<$8.Color>(72, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $8.Color.COLOR_UNKNOWN, valueOf: $8.Color.valueOf, enumValues: $8.Color.values)
+    ..aInt64(73, _omitFieldNames ? '' : 'fullAllocationTime')
     ..hasRequiredFields = false
   ;
 
@@ -623,86 +623,86 @@ class Accrual extends $pb.GeneratedMessage {
   @$pb.TagNumber(61)
   void clearAllocatedAmount() => clearField(61);
 
-  @$pb.TagNumber(62)
-  $fixnum.Int64 get fullAllocatedAt => $_getI64(36);
-  @$pb.TagNumber(62)
-  set fullAllocatedAt($fixnum.Int64 v) { $_setInt64(36, v); }
-  @$pb.TagNumber(62)
-  $core.bool hasFullAllocatedAt() => $_has(36);
-  @$pb.TagNumber(62)
-  void clearFullAllocatedAt() => clearField(62);
-
   @$pb.TagNumber(65)
-  $core.String get payoutProof => $_getSZ(37);
+  $core.String get payoutProof => $_getSZ(36);
   @$pb.TagNumber(65)
-  set payoutProof($core.String v) { $_setString(37, v); }
+  set payoutProof($core.String v) { $_setString(36, v); }
   @$pb.TagNumber(65)
-  $core.bool hasPayoutProof() => $_has(37);
+  $core.bool hasPayoutProof() => $_has(36);
   @$pb.TagNumber(65)
   void clearPayoutProof() => clearField(65);
 
   @$pb.TagNumber(66)
-  $core.String get note => $_getSZ(38);
+  $core.String get note => $_getSZ(37);
   @$pb.TagNumber(66)
-  set note($core.String v) { $_setString(38, v); }
+  set note($core.String v) { $_setString(37, v); }
   @$pb.TagNumber(66)
-  $core.bool hasNote() => $_has(38);
+  $core.bool hasNote() => $_has(37);
   @$pb.TagNumber(66)
   void clearNote() => clearField(66);
 
   @$pb.TagNumber(67)
-  $fixnum.Int64 get createTime => $_getI64(39);
+  $fixnum.Int64 get createTime => $_getI64(38);
   @$pb.TagNumber(67)
-  set createTime($fixnum.Int64 v) { $_setInt64(39, v); }
+  set createTime($fixnum.Int64 v) { $_setInt64(38, v); }
   @$pb.TagNumber(67)
-  $core.bool hasCreateTime() => $_has(39);
+  $core.bool hasCreateTime() => $_has(38);
   @$pb.TagNumber(67)
   void clearCreateTime() => clearField(67);
 
   @$pb.TagNumber(68)
-  $core.double get taxAmount => $_getN(40);
+  $core.double get taxAmount => $_getN(39);
   @$pb.TagNumber(68)
-  set taxAmount($core.double v) { $_setDouble(40, v); }
+  set taxAmount($core.double v) { $_setDouble(39, v); }
   @$pb.TagNumber(68)
-  $core.bool hasTaxAmount() => $_has(40);
+  $core.bool hasTaxAmount() => $_has(39);
   @$pb.TagNumber(68)
   void clearTaxAmount() => clearField(68);
 
   @$pb.TagNumber(69)
-  $core.double get taxPercent => $_getN(41);
+  $core.double get taxPercent => $_getN(40);
   @$pb.TagNumber(69)
-  set taxPercent($core.double v) { $_setDouble(41, v); }
+  set taxPercent($core.double v) { $_setDouble(40, v); }
   @$pb.TagNumber(69)
-  $core.bool hasTaxPercent() => $_has(41);
+  $core.bool hasTaxPercent() => $_has(40);
   @$pb.TagNumber(69)
   void clearTaxPercent() => clearField(69);
 
   @$pb.TagNumber(70)
-  $core.bool get taxInclusive => $_getBF(42);
+  $core.bool get taxInclusive => $_getBF(41);
   @$pb.TagNumber(70)
-  set taxInclusive($core.bool v) { $_setBool(42, v); }
+  set taxInclusive($core.bool v) { $_setBool(41, v); }
   @$pb.TagNumber(70)
-  $core.bool hasTaxInclusive() => $_has(42);
+  $core.bool hasTaxInclusive() => $_has(41);
   @$pb.TagNumber(70)
   void clearTaxInclusive() => clearField(70);
 
   @$pb.TagNumber(71)
-  $7.Source get datasource => $_getN(43);
+  $7.Source get datasource => $_getN(42);
   @$pb.TagNumber(71)
   set datasource($7.Source v) { setField(71, v); }
   @$pb.TagNumber(71)
-  $core.bool hasDatasource() => $_has(43);
+  $core.bool hasDatasource() => $_has(42);
   @$pb.TagNumber(71)
   void clearDatasource() => clearField(71);
 
   @$pb.TagNumber(72)
-  $8.Color get color => $_getN(44);
+  $8.Color get color => $_getN(43);
   @$pb.TagNumber(72)
   set color($8.Color v) { setField(72, v); }
   @$pb.TagNumber(72)
-  $core.bool hasColor() => $_has(44);
+  $core.bool hasColor() => $_has(43);
   @$pb.TagNumber(72)
   void clearColor() => clearField(72);
+
+  @$pb.TagNumber(73)
+  $fixnum.Int64 get fullAllocationTime => $_getI64(44);
+  @$pb.TagNumber(73)
+  set fullAllocationTime($fixnum.Int64 v) { $_setInt64(44, v); }
+  @$pb.TagNumber(73)
+  $core.bool hasFullAllocationTime() => $_has(44);
+  @$pb.TagNumber(73)
+  void clearFullAllocationTime() => clearField(73);
 }
 
 

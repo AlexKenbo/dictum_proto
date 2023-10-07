@@ -52,7 +52,6 @@ message Accrual
   int32 recipient_id = 59;         
   double amount = 60;              
   double allocated_amount = 61;    
-  int64 full_allocated_at = 62;    
   string payout_proof = 65;        
   string note = 66;    
   int64 create_time = 67;
@@ -61,4 +60,5 @@ message Accrual
   bool taxInclusive = 70;              
   Source datasource = 71;          
   Color color = 72;
+  int64 full_allocation_time = 73;    
 }

@@ -43,12 +43,12 @@ const Transfer$json = {
     {'1': 'recipient_transfer_key', '3': 36, '4': 1, '5': 9, '10': 'recipientTransferKey'},
     {'1': 'amount', '3': 37, '4': 1, '5': 1, '10': 'amount'},
     {'1': 'allocated_amount', '3': 38, '4': 1, '5': 1, '10': 'allocatedAmount'},
-    {'1': 'full_allocated_at', '3': 39, '4': 1, '5': 3, '10': 'fullAllocatedAt'},
     {'1': 'parent_id', '3': 40, '4': 1, '5': 5, '10': 'parentId'},
     {'1': 'datasource', '3': 42, '4': 1, '5': 14, '6': '.Source', '10': 'datasource'},
     {'1': 'color', '3': 43, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
     {'1': 'note', '3': 44, '4': 1, '5': 9, '10': 'note'},
     {'1': 'create_time', '3': 45, '4': 1, '5': 3, '10': 'createTime'},
+    {'1': 'full_allocation_time', '3': 74, '4': 1, '5': 3, '10': 'fullAllocationTime'},
   ],
 };
 
@@ -72,8 +72,8 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'BpZW50SWQSMAoUcmVjaXBpZW50X2FjY291bnRfaWQYIyABKAVSEnJlY2lwaWVudEFjY291bnRJ'
     'ZBI0ChZyZWNpcGllbnRfdHJhbnNmZXJfa2V5GCQgASgJUhRyZWNpcGllbnRUcmFuc2ZlcktleR'
     'IWCgZhbW91bnQYJSABKAFSBmFtb3VudBIpChBhbGxvY2F0ZWRfYW1vdW50GCYgASgBUg9hbGxv'
-    'Y2F0ZWRBbW91bnQSKgoRZnVsbF9hbGxvY2F0ZWRfYXQYJyABKANSD2Z1bGxBbGxvY2F0ZWRBdB'
-    'IbCglwYXJlbnRfaWQYKCABKAVSCHBhcmVudElkEicKCmRhdGFzb3VyY2UYKiABKA4yBy5Tb3Vy'
-    'Y2VSCmRhdGFzb3VyY2USHAoFY29sb3IYKyABKA4yBi5Db2xvclIFY29sb3ISEgoEbm90ZRgsIA'
-    'EoCVIEbm90ZRIfCgtjcmVhdGVfdGltZRgtIAEoA1IKY3JlYXRlVGltZQ==');
+    'Y2F0ZWRBbW91bnQSGwoJcGFyZW50X2lkGCggASgFUghwYXJlbnRJZBInCgpkYXRhc291cmNlGC'
+    'ogASgOMgcuU291cmNlUgpkYXRhc291cmNlEhwKBWNvbG9yGCsgASgOMgYuQ29sb3JSBWNvbG9y'
+    'EhIKBG5vdGUYLCABKAlSBG5vdGUSHwoLY3JlYXRlX3RpbWUYLSABKANSCmNyZWF0ZVRpbWUSMA'
+    'oUZnVsbF9hbGxvY2F0aW9uX3RpbWUYSiABKANSEmZ1bGxBbGxvY2F0aW9uVGltZQ==');
 

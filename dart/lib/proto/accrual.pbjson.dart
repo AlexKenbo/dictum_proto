@@ -53,7 +53,6 @@ const Accrual$json = {
     {'1': 'recipient_id', '3': 59, '4': 1, '5': 5, '10': 'recipientId'},
     {'1': 'amount', '3': 60, '4': 1, '5': 1, '10': 'amount'},
     {'1': 'allocated_amount', '3': 61, '4': 1, '5': 1, '10': 'allocatedAmount'},
-    {'1': 'full_allocated_at', '3': 62, '4': 1, '5': 3, '10': 'fullAllocatedAt'},
     {'1': 'payout_proof', '3': 65, '4': 1, '5': 9, '10': 'payoutProof'},
     {'1': 'note', '3': 66, '4': 1, '5': 9, '10': 'note'},
     {'1': 'create_time', '3': 67, '4': 1, '5': 3, '10': 'createTime'},
@@ -62,6 +61,7 @@ const Accrual$json = {
     {'1': 'taxInclusive', '3': 70, '4': 1, '5': 8, '10': 'taxInclusive'},
     {'1': 'datasource', '3': 71, '4': 1, '5': 14, '6': '.Source', '10': 'datasource'},
     {'1': 'color', '3': 72, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
+    {'1': 'full_allocation_time', '3': 73, '4': 1, '5': 3, '10': 'fullAllocationTime'},
   ],
 };
 
@@ -91,10 +91,10 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'BheWVyQWNjb3VudBIiCgdhcnRpY2xlGDkgASgLMgguQXJ0aWNsZVIHYXJ0aWNsZRIZCghwYXll'
     'cl9pZBg6IAEoBVIHcGF5ZXJJZBIhCgxyZWNpcGllbnRfaWQYOyABKAVSC3JlY2lwaWVudElkEh'
     'YKBmFtb3VudBg8IAEoAVIGYW1vdW50EikKEGFsbG9jYXRlZF9hbW91bnQYPSABKAFSD2FsbG9j'
-    'YXRlZEFtb3VudBIqChFmdWxsX2FsbG9jYXRlZF9hdBg+IAEoA1IPZnVsbEFsbG9jYXRlZEF0Ei'
-    'EKDHBheW91dF9wcm9vZhhBIAEoCVILcGF5b3V0UHJvb2YSEgoEbm90ZRhCIAEoCVIEbm90ZRIf'
-    'CgtjcmVhdGVfdGltZRhDIAEoA1IKY3JlYXRlVGltZRIcCgl0YXhBbW91bnQYRCABKAFSCXRheE'
-    'Ftb3VudBIeCgp0YXhQZXJjZW50GEUgASgBUgp0YXhQZXJjZW50EiIKDHRheEluY2x1c2l2ZRhG'
-    'IAEoCFIMdGF4SW5jbHVzaXZlEicKCmRhdGFzb3VyY2UYRyABKA4yBy5Tb3VyY2VSCmRhdGFzb3'
-    'VyY2USHAoFY29sb3IYSCABKA4yBi5Db2xvclIFY29sb3I=');
+    'YXRlZEFtb3VudBIhCgxwYXlvdXRfcHJvb2YYQSABKAlSC3BheW91dFByb29mEhIKBG5vdGUYQi'
+    'ABKAlSBG5vdGUSHwoLY3JlYXRlX3RpbWUYQyABKANSCmNyZWF0ZVRpbWUSHAoJdGF4QW1vdW50'
+    'GEQgASgBUgl0YXhBbW91bnQSHgoKdGF4UGVyY2VudBhFIAEoAVIKdGF4UGVyY2VudBIiCgx0YX'
+    'hJbmNsdXNpdmUYRiABKAhSDHRheEluY2x1c2l2ZRInCgpkYXRhc291cmNlGEcgASgOMgcuU291'
+    'cmNlUgpkYXRhc291cmNlEhwKBWNvbG9yGEggASgOMgYuQ29sb3JSBWNvbG9yEjAKFGZ1bGxfYW'
+    'xsb2NhdGlvbl90aW1lGEkgASgDUhJmdWxsQWxsb2NhdGlvblRpbWU=');
 
