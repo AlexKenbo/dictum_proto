@@ -2,14 +2,16 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
-//import "proto/entity.proto";
+import "proto/entity.proto";
+
   
 message EntityRole
 {
   int32 user_id = 1;
-  //Entity entity = 2;
+  Entity entity = 2;
   string role = 3;
-  int64 hire_time = 4;
+  google.protobuf.Timestamp hire_time = 5;
 
 } 

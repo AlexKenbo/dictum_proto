@@ -1,17 +1,16 @@
 syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
-
-
-
-import "proto/event.proto";
-
   
+import "proto/accrual.proto";
+import "proto/transfer.proto";
+
 message TelegramMessage
 {
   int32 telegram_message_id = 1;
   int32 chat_source_key = 2;
-  int32 event_id = 3;
-  Event event = 4;
-
+  int32 transfer_id = 5;
+  int32 accrual_id = 6;
+  Transfer transfer = 7;
+  Accrual accrual = 8;
 }   

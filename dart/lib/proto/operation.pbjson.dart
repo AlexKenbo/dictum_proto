@@ -21,9 +21,9 @@ const Operation$json = {
     {'1': 'conglomerate_id', '3': 2, '4': 1, '5': 5, '10': 'conglomerateId'},
     {'1': 'is_composite', '3': 3, '4': 1, '5': 8, '10': 'isComposite'},
     {'1': 'is_multicurrency', '3': 4, '4': 1, '5': 8, '10': 'isMulticurrency'},
-    {'1': 'create_time', '3': 5, '4': 1, '5': 3, '10': 'createTime'},
     {'1': 'alias', '3': 6, '4': 1, '5': 9, '10': 'alias'},
     {'1': 'resource_name', '3': 8, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'create_time', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
@@ -32,6 +32,7 @@ final $typed_data.Uint8List operationDescriptor = $convert.base64Decode(
     'CglPcGVyYXRpb24SIQoMb3BlcmF0aW9uX2lkGAEgASgFUgtvcGVyYXRpb25JZBInCg9jb25nbG'
     '9tZXJhdGVfaWQYAiABKAVSDmNvbmdsb21lcmF0ZUlkEiEKDGlzX2NvbXBvc2l0ZRgDIAEoCFIL'
     'aXNDb21wb3NpdGUSKQoQaXNfbXVsdGljdXJyZW5jeRgEIAEoCFIPaXNNdWx0aWN1cnJlbmN5Eh'
-    '8KC2NyZWF0ZV90aW1lGAUgASgDUgpjcmVhdGVUaW1lEhQKBWFsaWFzGAYgASgJUgVhbGlhcxIj'
-    'Cg1yZXNvdXJjZV9uYW1lGAggASgJUgxyZXNvdXJjZU5hbWU=');
+    'QKBWFsaWFzGAYgASgJUgVhbGlhcxIjCg1yZXNvdXJjZV9uYW1lGAggASgJUgxyZXNvdXJjZU5h'
+    'bWUSOwoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcm'
+    'VhdGVUaW1l');
 

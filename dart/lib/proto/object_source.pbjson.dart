@@ -21,8 +21,8 @@ const ObjectSource$json = {
     {'1': 'source_key', '3': 2, '4': 1, '5': 9, '10': 'sourceKey'},
     {'1': 'object_type', '3': 3, '4': 1, '5': 9, '10': 'objectType'},
     {'1': 'object_id', '3': 4, '4': 1, '5': 9, '10': 'objectId'},
-    {'1': 'create_time', '3': 5, '4': 1, '5': 3, '10': 'createTime'},
     {'1': 'service', '3': 6, '4': 1, '5': 11, '6': '.Service', '10': 'service'},
+    {'1': 'create_time', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
@@ -30,6 +30,7 @@ const ObjectSource$json = {
 final $typed_data.Uint8List objectSourceDescriptor = $convert.base64Decode(
     'CgxPYmplY3RTb3VyY2USHQoKc2VydmljZV9pZBgBIAEoBVIJc2VydmljZUlkEh0KCnNvdXJjZV'
     '9rZXkYAiABKAlSCXNvdXJjZUtleRIfCgtvYmplY3RfdHlwZRgDIAEoCVIKb2JqZWN0VHlwZRIb'
-    'CglvYmplY3RfaWQYBCABKAlSCG9iamVjdElkEh8KC2NyZWF0ZV90aW1lGAUgASgDUgpjcmVhdG'
-    'VUaW1lEiIKB3NlcnZpY2UYBiABKAsyCC5TZXJ2aWNlUgdzZXJ2aWNl');
+    'CglvYmplY3RfaWQYBCABKAlSCG9iamVjdElkEiIKB3NlcnZpY2UYBiABKAsyCC5TZXJ2aWNlUg'
+    'dzZXJ2aWNlEjsKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt'
+    'cFIKY3JlYXRlVGltZQ==');
 

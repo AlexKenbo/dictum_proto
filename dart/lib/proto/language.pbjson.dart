@@ -21,7 +21,7 @@ const Language$json = {
     {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
     {'1': 'english_title', '3': 3, '4': 1, '5': 9, '10': 'englishTitle'},
     {'1': 'is_supported', '3': 4, '4': 1, '5': 8, '10': 'isSupported'},
-    {'1': 'create_time', '3': 5, '4': 1, '5': 3, '10': 'createTime'},
+    {'1': 'create_time', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
@@ -29,6 +29,6 @@ const Language$json = {
 final $typed_data.Uint8List languageDescriptor = $convert.base64Decode(
     'CghMYW5ndWFnZRIjCg1sYW5ndWFnZV9jb2RlGAEgASgJUgxsYW5ndWFnZUNvZGUSFAoFdGl0bG'
     'UYAiABKAlSBXRpdGxlEiMKDWVuZ2xpc2hfdGl0bGUYAyABKAlSDGVuZ2xpc2hUaXRsZRIhCgxp'
-    'c19zdXBwb3J0ZWQYBCABKAhSC2lzU3VwcG9ydGVkEh8KC2NyZWF0ZV90aW1lGAUgASgDUgpjcm'
-    'VhdGVUaW1l');
+    'c19zdXBwb3J0ZWQYBCABKAhSC2lzU3VwcG9ydGVkEjsKC2NyZWF0ZV90aW1lGAYgASgLMhouZ2'
+    '9vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZQ==');
 

@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
 import "proto/account.proto";
 import "proto/accrual_type.proto";
@@ -25,9 +26,6 @@ message Accrual
   int32 article_id = 7;
   string sys_period = 8;
   string invoice_number = 9;
-  int64 perform_time = 11;
-  int64 pay_time = 13;
-  int64 payment_due_time = 15;
   int32 project_id = 17;  
   int32 recipient_account_id = 19;
   int32 payer_account_id = 21;
@@ -38,7 +36,6 @@ message Accrual
   int32 approver_id = 31;
   int32 payer_user_id = 33;
   bool allow_payout = 35;
-  int64 payout_date = 37;
   string resource_name = 39;
   string source_key = 41;
   User payer_user = 43;
@@ -55,13 +52,17 @@ message Accrual
   double allocated_amount = 61;    
   string payout_proof = 65;        
   string note = 66;    
-  int64 create_time = 67;
   double taxAmount = 68;              
   double taxPercent = 69;              
   bool taxInclusive = 70;              
   Source datasource = 71;          
-  Color color = 72;
-  int64 full_allocation_time = 73;    
+  Color color = 72;   
+  google.protobuf.Timestamp full_allocation_time = 73;  
   Entity payer = 74;
   Entity recipient = 75;
+  google.protobuf.Timestamp perform_time = 76;
+  google.protobuf.Timestamp payment_due_time = 77;
+  google.protobuf.Timestamp payout_date = 78;
+  google.protobuf.Timestamp pay_time = 79;
+  google.protobuf.Timestamp create_time = 80;
 }

@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
   
 message Language
 {
@@ -9,6 +10,6 @@ message Language
   string title = 2;
   string english_title = 3;
   bool is_supported = 4;
-  int64 create_time = 5;
+  google.protobuf.Timestamp create_time = 6;
 
 } 

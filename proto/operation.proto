@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
   
 message Operation
 {
@@ -9,8 +10,7 @@ message Operation
   int32 conglomerate_id = 2;
   bool is_composite = 3;
   bool is_multicurrency = 4;
-  int64 create_time = 5;
   string alias = 6;
   string resource_name = 8;
-
+  google.protobuf.Timestamp create_time = 9;
 }   

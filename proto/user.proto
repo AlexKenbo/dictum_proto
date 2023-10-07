@@ -3,28 +3,21 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
-      
-
-
-
-
-
+import "google/protobuf/timestamp.proto";
 
 import "proto/entity_role.proto";
 import "proto/telegram_user.proto";
 
-  
 message User
 {
   int32 user_id = 1;
   string email = 2;
   string user_name = 3;
-  int64 create_time = 4;
   string full_name = 5;
   int32 telegram_user_id = 7;
   string ref_key = 9;
   string resource_name = 11;
   repeated EntityRole entity_roles = 13;
   TelegramUser telegram_user = 15;
-
-}   
+  google.protobuf.Timestamp create_time = 16;
+}

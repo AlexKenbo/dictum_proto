@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
       
 import "proto/plugin_owner_type.proto";
 import "proto/plugin.proto";
@@ -14,7 +15,6 @@ message Service
   int32 plugin_id = 2;
   string client_id = 3;
   PluginOwnerType owner_type = 4;
-  int64 sync_time = 5;
   int32 entity_id = 6;
   int32 account_id = 8;
   string credentials_storage_key = 10;
@@ -22,5 +22,5 @@ message Service
   Plugin plugin = 14;
   Entity entity = 16;
   Account account = 18;
-
+  google.protobuf.Timestamp sync_time = 19;
 }   

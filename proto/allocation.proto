@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
 import "proto/accrual.proto";
 import "proto/transfer.proto";
@@ -15,9 +16,8 @@ message Allocation
   string accrual_currency_code = 5;
   double transfer_allocated_amount = 6;
   string transfer_currency_code = 7;
-  int64 create_time = 8;
   string resource_name = 9;
   Accrual accrual = 11;
   Transfer transfer = 13;
-
+  google.protobuf.Timestamp create_time = 14;
 } 

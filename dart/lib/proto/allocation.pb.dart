@@ -11,9 +11,9 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $2;
 import 'accrual.pb.dart' as $0;
 import 'transfer.pb.dart' as $1;
 
@@ -26,10 +26,10 @@ class Allocation extends $pb.GeneratedMessage {
     $core.String? accrualCurrencyCode,
     $core.double? transferAllocatedAmount,
     $core.String? transferCurrencyCode,
-    $fixnum.Int64? createTime,
     $core.String? resourceName,
     $0.Accrual? accrual,
     $1.Transfer? transfer,
+    $2.Timestamp? createTime,
   }) {
     final $result = create();
     if (accrualId != null) {
@@ -53,9 +53,6 @@ class Allocation extends $pb.GeneratedMessage {
     if (transferCurrencyCode != null) {
       $result.transferCurrencyCode = transferCurrencyCode;
     }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
@@ -64,6 +61,9 @@ class Allocation extends $pb.GeneratedMessage {
     }
     if (transfer != null) {
       $result.transfer = transfer;
+    }
+    if (createTime != null) {
+      $result.createTime = createTime;
     }
     return $result;
   }
@@ -79,10 +79,10 @@ class Allocation extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'accrualCurrencyCode')
     ..a<$core.double>(6, _omitFieldNames ? '' : 'transferAllocatedAmount', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'transferCurrencyCode')
-    ..aInt64(8, _omitFieldNames ? '' : 'createTime')
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$0.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $0.Accrual.create)
     ..aOM<$1.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $1.Transfer.create)
+    ..aOM<$2.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -170,45 +170,47 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearTransferCurrencyCode() => clearField(7);
 
-  @$pb.TagNumber(8)
-  $fixnum.Int64 get createTime => $_getI64(7);
-  @$pb.TagNumber(8)
-  set createTime($fixnum.Int64 v) { $_setInt64(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasCreateTime() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearCreateTime() => clearField(8);
-
   @$pb.TagNumber(9)
-  $core.String get resourceName => $_getSZ(8);
+  $core.String get resourceName => $_getSZ(7);
   @$pb.TagNumber(9)
-  set resourceName($core.String v) { $_setString(8, v); }
+  set resourceName($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(9)
-  $core.bool hasResourceName() => $_has(8);
+  $core.bool hasResourceName() => $_has(7);
   @$pb.TagNumber(9)
   void clearResourceName() => clearField(9);
 
   @$pb.TagNumber(11)
-  $0.Accrual get accrual => $_getN(9);
+  $0.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(11)
   set accrual($0.Accrual v) { setField(11, v); }
   @$pb.TagNumber(11)
-  $core.bool hasAccrual() => $_has(9);
+  $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(11)
   void clearAccrual() => clearField(11);
   @$pb.TagNumber(11)
-  $0.Accrual ensureAccrual() => $_ensure(9);
+  $0.Accrual ensureAccrual() => $_ensure(8);
 
   @$pb.TagNumber(13)
-  $1.Transfer get transfer => $_getN(10);
+  $1.Transfer get transfer => $_getN(9);
   @$pb.TagNumber(13)
   set transfer($1.Transfer v) { setField(13, v); }
   @$pb.TagNumber(13)
-  $core.bool hasTransfer() => $_has(10);
+  $core.bool hasTransfer() => $_has(9);
   @$pb.TagNumber(13)
   void clearTransfer() => clearField(13);
   @$pb.TagNumber(13)
-  $1.Transfer ensureTransfer() => $_ensure(10);
+  $1.Transfer ensureTransfer() => $_ensure(9);
+
+  @$pb.TagNumber(14)
+  $2.Timestamp get createTime => $_getN(10);
+  @$pb.TagNumber(14)
+  set createTime($2.Timestamp v) { setField(14, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasCreateTime() => $_has(10);
+  @$pb.TagNumber(14)
+  void clearCreateTime() => clearField(14);
+  @$pb.TagNumber(14)
+  $2.Timestamp ensureCreateTime() => $_ensure(10);
 }
 
 

@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
       
 import "proto/entity_type.proto";
 import "proto/telegram_user.proto";
@@ -18,7 +19,6 @@ message Entity
   EntityType type = 4;
   bool is_agent = 5;
   bool is_employee_of_nullable = 6;
-  int64 create_time = 8;
   string email = 9;
   string phone = 11;
   string address = 13;
@@ -31,4 +31,5 @@ message Entity
   repeated EntitySource sources = 27;
   int32 contact_creator_id = 28;
   string alias_code = 29;
+  google.protobuf.Timestamp create_time = 30;
 }   

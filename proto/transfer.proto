@@ -2,21 +2,14 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
-
-
-
-
-
-
+import "google/protobuf/timestamp.proto";
       
 import "proto/transfer_type.proto";
 import "proto/account.proto";
 import "proto/color.proto";
 import "proto/entity.proto";
-import "proto/event.proto";
 import "proto/source.proto";
 import "proto/user.proto";
-
   
 message Transfer
 {
@@ -28,13 +21,10 @@ message Transfer
   int32 counterparty_account_id = 6;
   string counterparty_currency_code = 8;
   string payment_purpose = 10;
-  int64 payment_time = 12;
   int32 verifier_id = 14;
-  int64 verify_time = 16;
   string resource_name = 18;
   string number = 20;
   TransferType type = 22;
-  Event event = 24;
   User verifier = 28;
   int32 payer_id = 31;                   
   int32 payer_account_id = 32;           
@@ -48,11 +38,13 @@ message Transfer
   Source datasource = 42;
   Color color = 43;                     
   string note = 44;   
-  int64 create_time = 45;
-  int64 full_allocation_time = 46;    
   Account payer_account = 47;
   Account recipient_account = 48;
   Entity payer = 49;
   Entity recipient = 50;
-  Event parent_event = 51;
+  google.protobuf.Timestamp create_time = 52;
+  google.protobuf.Timestamp full_allocation_time = 53;    
+  google.protobuf.Timestamp payment_time = 54;
+  google.protobuf.Timestamp verify_time = 55;
+  Transfer parent = 58;
 }   

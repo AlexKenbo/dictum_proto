@@ -2,11 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
       
 message Project
 {
   int32 project_id = 1;
   string title = 2;
-  int64 start_time = 3;
-  int64 end_time = 4;
+  google.protobuf.Timestamp start_time = 5;
+  google.protobuf.Timestamp end_time = 6;
 }   

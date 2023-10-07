@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
 import "proto/account_type.proto";
 import "proto/entity.proto";
@@ -28,5 +29,5 @@ message Account
   Fi fi = 19;
   Employee cashier = 21;
   AccountDetail account_detail = 23;
-
+  google.protobuf.Timestamp create_time = 24;
 }

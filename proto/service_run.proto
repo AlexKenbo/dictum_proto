@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
       
 import "proto/service_run_state.proto";
 import "proto/service.proto";
@@ -9,9 +10,8 @@ import "proto/service.proto";
 message ServiceRun
 {
   int32 service_id = 1;
-  int64 sync_time = 2;
   ServiceRunState state = 3;
   string message = 4;
   Service service = 6;
-
+  google.protobuf.Timestamp sync_time = 7;
 }   
