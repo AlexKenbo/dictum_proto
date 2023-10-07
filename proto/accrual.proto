@@ -3,15 +3,16 @@ syntax = "proto3";
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
-import "proto/accrual_type.proto";
-import "proto/payment_type.proto";
-import "proto/user.proto";
-import "proto/operation.proto";
-import "proto/currency.proto";
 import "proto/account.proto";
+import "proto/accrual_type.proto";
 import "proto/article.proto";
 import "proto/color.proto";
+import "proto/currency.proto";
+import "proto/entity.proto";
+import "proto/operation.proto";
+import "proto/payment_type.proto";
 import "proto/source.proto";
+import "proto/user.proto";
 
 message Accrual
 {
@@ -61,4 +62,6 @@ message Accrual
   Source datasource = 71;          
   Color color = 72;
   int64 full_allocation_time = 73;    
+  Entity payer = 74;
+  Entity recipient = 75;
 }

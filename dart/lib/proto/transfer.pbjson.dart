@@ -32,9 +32,7 @@ const Transfer$json = {
     {'1': 'number', '3': 20, '4': 1, '5': 9, '10': 'number'},
     {'1': 'type', '3': 22, '4': 1, '5': 14, '6': '.TransferType', '10': 'type'},
     {'1': 'event', '3': 24, '4': 1, '5': 11, '6': '.Event', '10': 'event'},
-    {'1': 'account', '3': 26, '4': 1, '5': 11, '6': '.Account', '10': 'account'},
     {'1': 'verifier', '3': 28, '4': 1, '5': 11, '6': '.User', '10': 'verifier'},
-    {'1': 'counterparty_account', '3': 30, '4': 1, '5': 11, '6': '.Account', '10': 'counterpartyAccount'},
     {'1': 'payer_id', '3': 31, '4': 1, '5': 5, '10': 'payerId'},
     {'1': 'payer_account_id', '3': 32, '4': 1, '5': 5, '10': 'payerAccountId'},
     {'1': 'payer_transfer_key', '3': 33, '4': 1, '5': 9, '10': 'payerTransferKey'},
@@ -48,7 +46,12 @@ const Transfer$json = {
     {'1': 'color', '3': 43, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
     {'1': 'note', '3': 44, '4': 1, '5': 9, '10': 'note'},
     {'1': 'create_time', '3': 45, '4': 1, '5': 3, '10': 'createTime'},
-    {'1': 'full_allocation_time', '3': 74, '4': 1, '5': 3, '10': 'fullAllocationTime'},
+    {'1': 'full_allocation_time', '3': 46, '4': 1, '5': 3, '10': 'fullAllocationTime'},
+    {'1': 'payer_account', '3': 47, '4': 1, '5': 11, '6': '.Account', '10': 'payerAccount'},
+    {'1': 'recipient_account', '3': 48, '4': 1, '5': 11, '6': '.Account', '10': 'recipientAccount'},
+    {'1': 'payer', '3': 49, '4': 1, '5': 11, '6': '.Entity', '10': 'payer'},
+    {'1': 'recipient', '3': 50, '4': 1, '5': 11, '6': '.Entity', '10': 'recipient'},
+    {'1': 'parent_event', '3': 51, '4': 1, '5': 11, '6': '.Event', '10': 'parentEvent'},
   ],
 };
 
@@ -64,16 +67,18 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'ZlcmlmaWVySWQSHwoLdmVyaWZ5X3RpbWUYECABKANSCnZlcmlmeVRpbWUSIwoNcmVzb3VyY2Vf'
     'bmFtZRgSIAEoCVIMcmVzb3VyY2VOYW1lEhYKBm51bWJlchgUIAEoCVIGbnVtYmVyEiEKBHR5cG'
     'UYFiABKA4yDS5UcmFuc2ZlclR5cGVSBHR5cGUSHAoFZXZlbnQYGCABKAsyBi5FdmVudFIFZXZl'
-    'bnQSIgoHYWNjb3VudBgaIAEoCzIILkFjY291bnRSB2FjY291bnQSIQoIdmVyaWZpZXIYHCABKA'
-    'syBS5Vc2VyUgh2ZXJpZmllchI7ChRjb3VudGVycGFydHlfYWNjb3VudBgeIAEoCzIILkFjY291'
-    'bnRSE2NvdW50ZXJwYXJ0eUFjY291bnQSGQoIcGF5ZXJfaWQYHyABKAVSB3BheWVySWQSKAoQcG'
-    'F5ZXJfYWNjb3VudF9pZBggIAEoBVIOcGF5ZXJBY2NvdW50SWQSLAoScGF5ZXJfdHJhbnNmZXJf'
-    'a2V5GCEgASgJUhBwYXllclRyYW5zZmVyS2V5EiEKDHJlY2lwaWVudF9pZBgiIAEoBVILcmVjaX'
-    'BpZW50SWQSMAoUcmVjaXBpZW50X2FjY291bnRfaWQYIyABKAVSEnJlY2lwaWVudEFjY291bnRJ'
-    'ZBI0ChZyZWNpcGllbnRfdHJhbnNmZXJfa2V5GCQgASgJUhRyZWNpcGllbnRUcmFuc2ZlcktleR'
-    'IWCgZhbW91bnQYJSABKAFSBmFtb3VudBIpChBhbGxvY2F0ZWRfYW1vdW50GCYgASgBUg9hbGxv'
-    'Y2F0ZWRBbW91bnQSGwoJcGFyZW50X2lkGCggASgFUghwYXJlbnRJZBInCgpkYXRhc291cmNlGC'
-    'ogASgOMgcuU291cmNlUgpkYXRhc291cmNlEhwKBWNvbG9yGCsgASgOMgYuQ29sb3JSBWNvbG9y'
-    'EhIKBG5vdGUYLCABKAlSBG5vdGUSHwoLY3JlYXRlX3RpbWUYLSABKANSCmNyZWF0ZVRpbWUSMA'
-    'oUZnVsbF9hbGxvY2F0aW9uX3RpbWUYSiABKANSEmZ1bGxBbGxvY2F0aW9uVGltZQ==');
+    'bnQSIQoIdmVyaWZpZXIYHCABKAsyBS5Vc2VyUgh2ZXJpZmllchIZCghwYXllcl9pZBgfIAEoBV'
+    'IHcGF5ZXJJZBIoChBwYXllcl9hY2NvdW50X2lkGCAgASgFUg5wYXllckFjY291bnRJZBIsChJw'
+    'YXllcl90cmFuc2Zlcl9rZXkYISABKAlSEHBheWVyVHJhbnNmZXJLZXkSIQoMcmVjaXBpZW50X2'
+    'lkGCIgASgFUgtyZWNpcGllbnRJZBIwChRyZWNpcGllbnRfYWNjb3VudF9pZBgjIAEoBVIScmVj'
+    'aXBpZW50QWNjb3VudElkEjQKFnJlY2lwaWVudF90cmFuc2Zlcl9rZXkYJCABKAlSFHJlY2lwaW'
+    'VudFRyYW5zZmVyS2V5EhYKBmFtb3VudBglIAEoAVIGYW1vdW50EikKEGFsbG9jYXRlZF9hbW91'
+    'bnQYJiABKAFSD2FsbG9jYXRlZEFtb3VudBIbCglwYXJlbnRfaWQYKCABKAVSCHBhcmVudElkEi'
+    'cKCmRhdGFzb3VyY2UYKiABKA4yBy5Tb3VyY2VSCmRhdGFzb3VyY2USHAoFY29sb3IYKyABKA4y'
+    'Bi5Db2xvclIFY29sb3ISEgoEbm90ZRgsIAEoCVIEbm90ZRIfCgtjcmVhdGVfdGltZRgtIAEoA1'
+    'IKY3JlYXRlVGltZRIwChRmdWxsX2FsbG9jYXRpb25fdGltZRguIAEoA1ISZnVsbEFsbG9jYXRp'
+    'b25UaW1lEi0KDXBheWVyX2FjY291bnQYLyABKAsyCC5BY2NvdW50UgxwYXllckFjY291bnQSNQ'
+    'oRcmVjaXBpZW50X2FjY291bnQYMCABKAsyCC5BY2NvdW50UhByZWNpcGllbnRBY2NvdW50Eh0K'
+    'BXBheWVyGDEgASgLMgcuRW50aXR5UgVwYXllchIlCglyZWNpcGllbnQYMiABKAsyBy5FbnRpdH'
+    'lSCXJlY2lwaWVudBIpCgxwYXJlbnRfZXZlbnQYMyABKAsyBi5FdmVudFILcGFyZW50RXZlbnQ=');
 

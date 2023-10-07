@@ -62,6 +62,8 @@ const Accrual$json = {
     {'1': 'datasource', '3': 71, '4': 1, '5': 14, '6': '.Source', '10': 'datasource'},
     {'1': 'color', '3': 72, '4': 1, '5': 14, '6': '.Color', '10': 'color'},
     {'1': 'full_allocation_time', '3': 73, '4': 1, '5': 3, '10': 'fullAllocationTime'},
+    {'1': 'payer', '3': 74, '4': 1, '5': 11, '6': '.Entity', '10': 'payer'},
+    {'1': 'recipient', '3': 75, '4': 1, '5': 11, '6': '.Entity', '10': 'recipient'},
   ],
 };
 
@@ -96,5 +98,6 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'GEQgASgBUgl0YXhBbW91bnQSHgoKdGF4UGVyY2VudBhFIAEoAVIKdGF4UGVyY2VudBIiCgx0YX'
     'hJbmNsdXNpdmUYRiABKAhSDHRheEluY2x1c2l2ZRInCgpkYXRhc291cmNlGEcgASgOMgcuU291'
     'cmNlUgpkYXRhc291cmNlEhwKBWNvbG9yGEggASgOMgYuQ29sb3JSBWNvbG9yEjAKFGZ1bGxfYW'
-    'xsb2NhdGlvbl90aW1lGEkgASgDUhJmdWxsQWxsb2NhdGlvblRpbWU=');
+    'xsb2NhdGlvbl90aW1lGEkgASgDUhJmdWxsQWxsb2NhdGlvblRpbWUSHQoFcGF5ZXIYSiABKAsy'
+    'By5FbnRpdHlSBXBheWVyEiUKCXJlY2lwaWVudBhLIAEoCzIHLkVudGl0eVIJcmVjaXBpZW50');
 

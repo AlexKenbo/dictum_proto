@@ -10,11 +10,12 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
       
 import "proto/transfer_type.proto";
-import "proto/event.proto";
 import "proto/account.proto";
-import "proto/user.proto";
 import "proto/color.proto";
+import "proto/entity.proto";
+import "proto/event.proto";
 import "proto/source.proto";
+import "proto/user.proto";
 
   
 message Transfer
@@ -34,9 +35,7 @@ message Transfer
   string number = 20;
   TransferType type = 22;
   Event event = 24;
-  Account account = 26;
   User verifier = 28;
-  Account counterparty_account = 30;
   int32 payer_id = 31;                   
   int32 payer_account_id = 32;           
   string payer_transfer_key = 33;        
@@ -50,6 +49,10 @@ message Transfer
   Color color = 43;                     
   string note = 44;   
   int64 create_time = 45;
-  int64 full_allocation_time = 74;    
-
+  int64 full_allocation_time = 46;    
+  Account payer_account = 47;
+  Account recipient_account = 48;
+  Entity payer = 49;
+  Entity recipient = 50;
+  Event parent_event = 51;
 }   
