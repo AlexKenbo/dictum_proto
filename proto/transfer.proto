@@ -15,11 +15,7 @@ message Transfer
 {
   int32 event_id = 1;
   int32 conglomerate_id = 2;
-  int32 account_id = 3;
   bool is_virtual = 4;
-  string sys_period = 5;
-  int32 counterparty_account_id = 6;
-  string counterparty_currency_code = 8;
   string payment_purpose = 10;
   int32 verifier_id = 14;
   string resource_name = 18;
@@ -46,5 +42,7 @@ message Transfer
   google.protobuf.Timestamp full_allocation_time = 53;    
   google.protobuf.Timestamp payment_time = 54;
   google.protobuf.Timestamp verify_time = 55;
-  Transfer parent = 58;
+  Transfer parent = 56;
+  string recipient_currency_code = 57;
+  string confirmationUrl = 58;
 }   
