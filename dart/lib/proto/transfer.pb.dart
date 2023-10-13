@@ -54,12 +54,12 @@ class Transfer extends $pb.GeneratedMessage {
     $3.Timestamp? verifyTime,
     Transfer? parent,
     $core.String? recipientCurrencyCode,
-    $core.String? confirmationUrl,
     $core.String? payerAccountNumber,
     $core.String? recipientAccountNumber,
     $core.double? payerAmount,
     $core.double? recipientAmount,
     $core.String? payerCurrencyCode,
+    $core.String? externalUrl,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -155,9 +155,6 @@ class Transfer extends $pb.GeneratedMessage {
     if (recipientCurrencyCode != null) {
       $result.recipientCurrencyCode = recipientCurrencyCode;
     }
-    if (confirmationUrl != null) {
-      $result.confirmationUrl = confirmationUrl;
-    }
     if (payerAccountNumber != null) {
       $result.payerAccountNumber = payerAccountNumber;
     }
@@ -172,6 +169,9 @@ class Transfer extends $pb.GeneratedMessage {
     }
     if (payerCurrencyCode != null) {
       $result.payerCurrencyCode = payerCurrencyCode;
+    }
+    if (externalUrl != null) {
+      $result.externalUrl = externalUrl;
     }
     return $result;
   }
@@ -211,12 +211,12 @@ class Transfer extends $pb.GeneratedMessage {
     ..aOM<$3.Timestamp>(55, _omitFieldNames ? '' : 'verifyTime', subBuilder: $3.Timestamp.create)
     ..aOM<Transfer>(56, _omitFieldNames ? '' : 'parent', subBuilder: Transfer.create)
     ..aOS(57, _omitFieldNames ? '' : 'recipientCurrencyCode')
-    ..aOS(58, _omitFieldNames ? '' : 'confirmationUrl', protoName: 'confirmationUrl')
     ..aOS(59, _omitFieldNames ? '' : 'payerAccountNumber')
     ..aOS(60, _omitFieldNames ? '' : 'recipientAccountNumber')
     ..a<$core.double>(61, _omitFieldNames ? '' : 'payerAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(62, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
     ..aOS(63, _omitFieldNames ? '' : 'payerCurrencyCode')
+    ..aOS(64, _omitFieldNames ? '' : 'externalUrl')
     ..hasRequiredFields = false
   ;
 
@@ -540,59 +540,59 @@ class Transfer extends $pb.GeneratedMessage {
   @$pb.TagNumber(57)
   void clearRecipientCurrencyCode() => clearField(57);
 
-  @$pb.TagNumber(58)
-  $core.String get confirmationUrl => $_getSZ(31);
-  @$pb.TagNumber(58)
-  set confirmationUrl($core.String v) { $_setString(31, v); }
-  @$pb.TagNumber(58)
-  $core.bool hasConfirmationUrl() => $_has(31);
-  @$pb.TagNumber(58)
-  void clearConfirmationUrl() => clearField(58);
-
   @$pb.TagNumber(59)
-  $core.String get payerAccountNumber => $_getSZ(32);
+  $core.String get payerAccountNumber => $_getSZ(31);
   @$pb.TagNumber(59)
-  set payerAccountNumber($core.String v) { $_setString(32, v); }
+  set payerAccountNumber($core.String v) { $_setString(31, v); }
   @$pb.TagNumber(59)
-  $core.bool hasPayerAccountNumber() => $_has(32);
+  $core.bool hasPayerAccountNumber() => $_has(31);
   @$pb.TagNumber(59)
   void clearPayerAccountNumber() => clearField(59);
 
   @$pb.TagNumber(60)
-  $core.String get recipientAccountNumber => $_getSZ(33);
+  $core.String get recipientAccountNumber => $_getSZ(32);
   @$pb.TagNumber(60)
-  set recipientAccountNumber($core.String v) { $_setString(33, v); }
+  set recipientAccountNumber($core.String v) { $_setString(32, v); }
   @$pb.TagNumber(60)
-  $core.bool hasRecipientAccountNumber() => $_has(33);
+  $core.bool hasRecipientAccountNumber() => $_has(32);
   @$pb.TagNumber(60)
   void clearRecipientAccountNumber() => clearField(60);
 
   @$pb.TagNumber(61)
-  $core.double get payerAmount => $_getN(34);
+  $core.double get payerAmount => $_getN(33);
   @$pb.TagNumber(61)
-  set payerAmount($core.double v) { $_setDouble(34, v); }
+  set payerAmount($core.double v) { $_setDouble(33, v); }
   @$pb.TagNumber(61)
-  $core.bool hasPayerAmount() => $_has(34);
+  $core.bool hasPayerAmount() => $_has(33);
   @$pb.TagNumber(61)
   void clearPayerAmount() => clearField(61);
 
   @$pb.TagNumber(62)
-  $core.double get recipientAmount => $_getN(35);
+  $core.double get recipientAmount => $_getN(34);
   @$pb.TagNumber(62)
-  set recipientAmount($core.double v) { $_setDouble(35, v); }
+  set recipientAmount($core.double v) { $_setDouble(34, v); }
   @$pb.TagNumber(62)
-  $core.bool hasRecipientAmount() => $_has(35);
+  $core.bool hasRecipientAmount() => $_has(34);
   @$pb.TagNumber(62)
   void clearRecipientAmount() => clearField(62);
 
   @$pb.TagNumber(63)
-  $core.String get payerCurrencyCode => $_getSZ(36);
+  $core.String get payerCurrencyCode => $_getSZ(35);
   @$pb.TagNumber(63)
-  set payerCurrencyCode($core.String v) { $_setString(36, v); }
+  set payerCurrencyCode($core.String v) { $_setString(35, v); }
   @$pb.TagNumber(63)
-  $core.bool hasPayerCurrencyCode() => $_has(36);
+  $core.bool hasPayerCurrencyCode() => $_has(35);
   @$pb.TagNumber(63)
   void clearPayerCurrencyCode() => clearField(63);
+
+  @$pb.TagNumber(64)
+  $core.String get externalUrl => $_getSZ(36);
+  @$pb.TagNumber(64)
+  set externalUrl($core.String v) { $_setString(36, v); }
+  @$pb.TagNumber(64)
+  $core.bool hasExternalUrl() => $_has(36);
+  @$pb.TagNumber(64)
+  void clearExternalUrl() => clearField(64);
 }
 
 

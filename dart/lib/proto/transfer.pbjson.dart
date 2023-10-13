@@ -48,12 +48,12 @@ const Transfer$json = {
     {'1': 'verify_time', '3': 55, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'verifyTime'},
     {'1': 'parent', '3': 56, '4': 1, '5': 11, '6': '.Transfer', '10': 'parent'},
     {'1': 'recipient_currency_code', '3': 57, '4': 1, '5': 9, '10': 'recipientCurrencyCode'},
-    {'1': 'confirmationUrl', '3': 58, '4': 1, '5': 9, '10': 'confirmationUrl'},
     {'1': 'payer_account_number', '3': 59, '4': 1, '5': 9, '10': 'payerAccountNumber'},
     {'1': 'recipient_account_number', '3': 60, '4': 1, '5': 9, '10': 'recipientAccountNumber'},
     {'1': 'payer_amount', '3': 61, '4': 1, '5': 1, '10': 'payerAmount'},
     {'1': 'recipient_amount', '3': 62, '4': 1, '5': 1, '10': 'recipientAmount'},
     {'1': 'payer_currency_code', '3': 63, '4': 1, '5': 9, '10': 'payerCurrencyCode'},
+    {'1': 'external_url', '3': 64, '4': 1, '5': 9, '10': 'externalUrl'},
   ],
 };
 
@@ -82,10 +82,9 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'ZXN0YW1wUgtwYXltZW50VGltZRI7Cgt2ZXJpZnlfdGltZRg3IAEoCzIaLmdvb2dsZS5wcm90b2'
     'J1Zi5UaW1lc3RhbXBSCnZlcmlmeVRpbWUSIQoGcGFyZW50GDggASgLMgkuVHJhbnNmZXJSBnBh'
     'cmVudBI2ChdyZWNpcGllbnRfY3VycmVuY3lfY29kZRg5IAEoCVIVcmVjaXBpZW50Q3VycmVuY3'
-    'lDb2RlEigKD2NvbmZpcm1hdGlvblVybBg6IAEoCVIPY29uZmlybWF0aW9uVXJsEjAKFHBheWVy'
-    'X2FjY291bnRfbnVtYmVyGDsgASgJUhJwYXllckFjY291bnROdW1iZXISOAoYcmVjaXBpZW50X2'
-    'FjY291bnRfbnVtYmVyGDwgASgJUhZyZWNpcGllbnRBY2NvdW50TnVtYmVyEiEKDHBheWVyX2Ft'
-    'b3VudBg9IAEoAVILcGF5ZXJBbW91bnQSKQoQcmVjaXBpZW50X2Ftb3VudBg+IAEoAVIPcmVjaX'
-    'BpZW50QW1vdW50Ei4KE3BheWVyX2N1cnJlbmN5X2NvZGUYPyABKAlSEXBheWVyQ3VycmVuY3lD'
-    'b2Rl');
+    'lDb2RlEjAKFHBheWVyX2FjY291bnRfbnVtYmVyGDsgASgJUhJwYXllckFjY291bnROdW1iZXIS'
+    'OAoYcmVjaXBpZW50X2FjY291bnRfbnVtYmVyGDwgASgJUhZyZWNpcGllbnRBY2NvdW50TnVtYm'
+    'VyEiEKDHBheWVyX2Ftb3VudBg9IAEoAVILcGF5ZXJBbW91bnQSKQoQcmVjaXBpZW50X2Ftb3Vu'
+    'dBg+IAEoAVIPcmVjaXBpZW50QW1vdW50Ei4KE3BheWVyX2N1cnJlbmN5X2NvZGUYPyABKAlSEX'
+    'BheWVyQ3VycmVuY3lDb2RlEiEKDGV4dGVybmFsX3VybBhAIAEoCVILZXh0ZXJuYWxVcmw=');
 
