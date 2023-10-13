@@ -54,6 +54,7 @@ const Transfer$json = {
     {'1': 'recipient_amount', '3': 62, '4': 1, '5': 1, '10': 'recipientAmount'},
     {'1': 'payer_currency_code', '3': 63, '4': 1, '5': 9, '10': 'payerCurrencyCode'},
     {'1': 'external_url', '3': 64, '4': 1, '5': 9, '10': 'externalUrl'},
+    {'1': 'status', '3': 65, '4': 1, '5': 14, '6': '.Status', '10': 'status'},
   ],
 };
 
@@ -86,5 +87,6 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'OAoYcmVjaXBpZW50X2FjY291bnRfbnVtYmVyGDwgASgJUhZyZWNpcGllbnRBY2NvdW50TnVtYm'
     'VyEiEKDHBheWVyX2Ftb3VudBg9IAEoAVILcGF5ZXJBbW91bnQSKQoQcmVjaXBpZW50X2Ftb3Vu'
     'dBg+IAEoAVIPcmVjaXBpZW50QW1vdW50Ei4KE3BheWVyX2N1cnJlbmN5X2NvZGUYPyABKAlSEX'
-    'BheWVyQ3VycmVuY3lDb2RlEiEKDGV4dGVybmFsX3VybBhAIAEoCVILZXh0ZXJuYWxVcmw=');
+    'BheWVyQ3VycmVuY3lDb2RlEiEKDGV4dGVybmFsX3VybBhAIAEoCVILZXh0ZXJuYWxVcmwSHwoG'
+    'c3RhdHVzGEEgASgOMgcuU3RhdHVzUgZzdGF0dXM=');
 

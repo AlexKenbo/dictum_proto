@@ -9,6 +9,7 @@ import "proto/account.proto";
 import "proto/color.proto";
 import "proto/entity.proto";
 import "proto/source.proto";
+import "proto/status.proto";
 import "proto/user.proto";
   
 message Transfer
@@ -51,4 +52,5 @@ message Transfer
   double recipient_amount = 62;
   string payer_currency_code = 63;
   string external_url = 64;
+  Status status = 65;
 }   

@@ -18,6 +18,7 @@ import 'account.pb.dart' as $1;
 import 'color.pbenum.dart' as $6;
 import 'entity.pb.dart' as $2;
 import 'source.pbenum.dart' as $5;
+import 'status.pbenum.dart' as $7;
 import 'transfer_type.pbenum.dart' as $4;
 import 'user.pb.dart' as $0;
 
@@ -60,6 +61,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? recipientAmount,
     $core.String? payerCurrencyCode,
     $core.String? externalUrl,
+    $7.Status? status,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -173,6 +175,9 @@ class Transfer extends $pb.GeneratedMessage {
     if (externalUrl != null) {
       $result.externalUrl = externalUrl;
     }
+    if (status != null) {
+      $result.status = status;
+    }
     return $result;
   }
   Transfer._() : super();
@@ -217,6 +222,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(62, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
     ..aOS(63, _omitFieldNames ? '' : 'payerCurrencyCode')
     ..aOS(64, _omitFieldNames ? '' : 'externalUrl')
+    ..e<$7.Status>(65, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $7.Status.STATUS_UNSPECIFIED, valueOf: $7.Status.valueOf, enumValues: $7.Status.values)
     ..hasRequiredFields = false
   ;
 
@@ -593,6 +599,15 @@ class Transfer extends $pb.GeneratedMessage {
   $core.bool hasExternalUrl() => $_has(36);
   @$pb.TagNumber(64)
   void clearExternalUrl() => clearField(64);
+
+  @$pb.TagNumber(65)
+  $7.Status get status => $_getN(37);
+  @$pb.TagNumber(65)
+  set status($7.Status v) { setField(65, v); }
+  @$pb.TagNumber(65)
+  $core.bool hasStatus() => $_has(37);
+  @$pb.TagNumber(65)
+  void clearStatus() => clearField(65);
 }
 
 

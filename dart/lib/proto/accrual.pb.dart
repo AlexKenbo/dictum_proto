@@ -23,6 +23,7 @@ import 'entity.pb.dart' as $6;
 import 'operation.pb.dart' as $1;
 import 'payment_type.pbenum.dart' as $8;
 import 'source.pbenum.dart' as $9;
+import 'status.pbenum.dart' as $11;
 import 'user.pb.dart' as $0;
 
 class Accrual extends $pb.GeneratedMessage {
@@ -40,7 +41,6 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? recipientAccountId,
     $core.int? payerAccountId,
     $core.bool? isInitial,
-    $core.String? status,
     $8.PaymentType? paymentType,
     $core.bool? hasOtherMoneyRecipient,
     $core.int? approverId,
@@ -74,6 +74,7 @@ class Accrual extends $pb.GeneratedMessage {
     $5.Timestamp? payoutDate,
     $5.Timestamp? payTime,
     $5.Timestamp? createTime,
+    $11.Status? status,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -114,9 +115,6 @@ class Accrual extends $pb.GeneratedMessage {
     }
     if (isInitial != null) {
       $result.isInitial = isInitial;
-    }
-    if (status != null) {
-      $result.status = status;
     }
     if (paymentType != null) {
       $result.paymentType = paymentType;
@@ -217,6 +215,9 @@ class Accrual extends $pb.GeneratedMessage {
     if (createTime != null) {
       $result.createTime = createTime;
     }
+    if (status != null) {
+      $result.status = status;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -237,7 +238,6 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(19, _omitFieldNames ? '' : 'recipientAccountId', $pb.PbFieldType.O3)
     ..a<$core.int>(21, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
     ..aOB(23, _omitFieldNames ? '' : 'isInitial')
-    ..aOS(25, _omitFieldNames ? '' : 'status')
     ..e<$8.PaymentType>(27, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $8.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $8.PaymentType.valueOf, enumValues: $8.PaymentType.values)
     ..aOB(29, _omitFieldNames ? '' : 'hasOtherMoneyRecipient')
     ..a<$core.int>(31, _omitFieldNames ? '' : 'approverId', $pb.PbFieldType.O3)
@@ -271,6 +271,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$5.Timestamp>(78, _omitFieldNames ? '' : 'payoutDate', subBuilder: $5.Timestamp.create)
     ..aOM<$5.Timestamp>(79, _omitFieldNames ? '' : 'payTime', subBuilder: $5.Timestamp.create)
     ..aOM<$5.Timestamp>(80, _omitFieldNames ? '' : 'createTime', subBuilder: $5.Timestamp.create)
+    ..e<$11.Status>(81, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $11.Status.STATUS_UNSPECIFIED, valueOf: $11.Status.valueOf, enumValues: $11.Status.values)
     ..hasRequiredFields = false
   ;
 
@@ -412,342 +413,342 @@ class Accrual extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   void clearIsInitial() => clearField(23);
 
-  @$pb.TagNumber(25)
-  $core.String get status => $_getSZ(13);
-  @$pb.TagNumber(25)
-  set status($core.String v) { $_setString(13, v); }
-  @$pb.TagNumber(25)
-  $core.bool hasStatus() => $_has(13);
-  @$pb.TagNumber(25)
-  void clearStatus() => clearField(25);
-
   @$pb.TagNumber(27)
-  $8.PaymentType get paymentType => $_getN(14);
+  $8.PaymentType get paymentType => $_getN(13);
   @$pb.TagNumber(27)
   set paymentType($8.PaymentType v) { setField(27, v); }
   @$pb.TagNumber(27)
-  $core.bool hasPaymentType() => $_has(14);
+  $core.bool hasPaymentType() => $_has(13);
   @$pb.TagNumber(27)
   void clearPaymentType() => clearField(27);
 
   @$pb.TagNumber(29)
-  $core.bool get hasOtherMoneyRecipient => $_getBF(15);
+  $core.bool get hasOtherMoneyRecipient => $_getBF(14);
   @$pb.TagNumber(29)
-  set hasOtherMoneyRecipient($core.bool v) { $_setBool(15, v); }
+  set hasOtherMoneyRecipient($core.bool v) { $_setBool(14, v); }
   @$pb.TagNumber(29)
-  $core.bool hasHasOtherMoneyRecipient() => $_has(15);
+  $core.bool hasHasOtherMoneyRecipient() => $_has(14);
   @$pb.TagNumber(29)
   void clearHasOtherMoneyRecipient() => clearField(29);
 
   @$pb.TagNumber(31)
-  $core.int get approverId => $_getIZ(16);
+  $core.int get approverId => $_getIZ(15);
   @$pb.TagNumber(31)
-  set approverId($core.int v) { $_setSignedInt32(16, v); }
+  set approverId($core.int v) { $_setSignedInt32(15, v); }
   @$pb.TagNumber(31)
-  $core.bool hasApproverId() => $_has(16);
+  $core.bool hasApproverId() => $_has(15);
   @$pb.TagNumber(31)
   void clearApproverId() => clearField(31);
 
   @$pb.TagNumber(33)
-  $core.int get payerUserId => $_getIZ(17);
+  $core.int get payerUserId => $_getIZ(16);
   @$pb.TagNumber(33)
-  set payerUserId($core.int v) { $_setSignedInt32(17, v); }
+  set payerUserId($core.int v) { $_setSignedInt32(16, v); }
   @$pb.TagNumber(33)
-  $core.bool hasPayerUserId() => $_has(17);
+  $core.bool hasPayerUserId() => $_has(16);
   @$pb.TagNumber(33)
   void clearPayerUserId() => clearField(33);
 
   @$pb.TagNumber(35)
-  $core.bool get allowPayout => $_getBF(18);
+  $core.bool get allowPayout => $_getBF(17);
   @$pb.TagNumber(35)
-  set allowPayout($core.bool v) { $_setBool(18, v); }
+  set allowPayout($core.bool v) { $_setBool(17, v); }
   @$pb.TagNumber(35)
-  $core.bool hasAllowPayout() => $_has(18);
+  $core.bool hasAllowPayout() => $_has(17);
   @$pb.TagNumber(35)
   void clearAllowPayout() => clearField(35);
 
   @$pb.TagNumber(39)
-  $core.String get resourceName => $_getSZ(19);
+  $core.String get resourceName => $_getSZ(18);
   @$pb.TagNumber(39)
-  set resourceName($core.String v) { $_setString(19, v); }
+  set resourceName($core.String v) { $_setString(18, v); }
   @$pb.TagNumber(39)
-  $core.bool hasResourceName() => $_has(19);
+  $core.bool hasResourceName() => $_has(18);
   @$pb.TagNumber(39)
   void clearResourceName() => clearField(39);
 
   @$pb.TagNumber(41)
-  $core.String get sourceKey => $_getSZ(20);
+  $core.String get sourceKey => $_getSZ(19);
   @$pb.TagNumber(41)
-  set sourceKey($core.String v) { $_setString(20, v); }
+  set sourceKey($core.String v) { $_setString(19, v); }
   @$pb.TagNumber(41)
-  $core.bool hasSourceKey() => $_has(20);
+  $core.bool hasSourceKey() => $_has(19);
   @$pb.TagNumber(41)
   void clearSourceKey() => clearField(41);
 
   @$pb.TagNumber(43)
-  $0.User get payerUser => $_getN(21);
+  $0.User get payerUser => $_getN(20);
   @$pb.TagNumber(43)
   set payerUser($0.User v) { setField(43, v); }
   @$pb.TagNumber(43)
-  $core.bool hasPayerUser() => $_has(21);
+  $core.bool hasPayerUser() => $_has(20);
   @$pb.TagNumber(43)
   void clearPayerUser() => clearField(43);
   @$pb.TagNumber(43)
-  $0.User ensurePayerUser() => $_ensure(21);
+  $0.User ensurePayerUser() => $_ensure(20);
 
   @$pb.TagNumber(45)
-  $0.User get approver => $_getN(22);
+  $0.User get approver => $_getN(21);
   @$pb.TagNumber(45)
   set approver($0.User v) { setField(45, v); }
   @$pb.TagNumber(45)
-  $core.bool hasApprover() => $_has(22);
+  $core.bool hasApprover() => $_has(21);
   @$pb.TagNumber(45)
   void clearApprover() => clearField(45);
   @$pb.TagNumber(45)
-  $0.User ensureApprover() => $_ensure(22);
+  $0.User ensureApprover() => $_ensure(21);
 
   /// Event event = 47;
   @$pb.TagNumber(49)
-  $1.Operation get operation => $_getN(23);
+  $1.Operation get operation => $_getN(22);
   @$pb.TagNumber(49)
   set operation($1.Operation v) { setField(49, v); }
   @$pb.TagNumber(49)
-  $core.bool hasOperation() => $_has(23);
+  $core.bool hasOperation() => $_has(22);
   @$pb.TagNumber(49)
   void clearOperation() => clearField(49);
   @$pb.TagNumber(49)
-  $1.Operation ensureOperation() => $_ensure(23);
+  $1.Operation ensureOperation() => $_ensure(22);
 
   @$pb.TagNumber(51)
-  $2.Currency get currency => $_getN(24);
+  $2.Currency get currency => $_getN(23);
   @$pb.TagNumber(51)
   set currency($2.Currency v) { setField(51, v); }
   @$pb.TagNumber(51)
-  $core.bool hasCurrency() => $_has(24);
+  $core.bool hasCurrency() => $_has(23);
   @$pb.TagNumber(51)
   void clearCurrency() => clearField(51);
   @$pb.TagNumber(51)
-  $2.Currency ensureCurrency() => $_ensure(24);
+  $2.Currency ensureCurrency() => $_ensure(23);
 
   @$pb.TagNumber(53)
-  $3.Account get recipientAccount => $_getN(25);
+  $3.Account get recipientAccount => $_getN(24);
   @$pb.TagNumber(53)
   set recipientAccount($3.Account v) { setField(53, v); }
   @$pb.TagNumber(53)
-  $core.bool hasRecipientAccount() => $_has(25);
+  $core.bool hasRecipientAccount() => $_has(24);
   @$pb.TagNumber(53)
   void clearRecipientAccount() => clearField(53);
   @$pb.TagNumber(53)
-  $3.Account ensureRecipientAccount() => $_ensure(25);
+  $3.Account ensureRecipientAccount() => $_ensure(24);
 
   @$pb.TagNumber(55)
-  $3.Account get payerAccount => $_getN(26);
+  $3.Account get payerAccount => $_getN(25);
   @$pb.TagNumber(55)
   set payerAccount($3.Account v) { setField(55, v); }
   @$pb.TagNumber(55)
-  $core.bool hasPayerAccount() => $_has(26);
+  $core.bool hasPayerAccount() => $_has(25);
   @$pb.TagNumber(55)
   void clearPayerAccount() => clearField(55);
   @$pb.TagNumber(55)
-  $3.Account ensurePayerAccount() => $_ensure(26);
+  $3.Account ensurePayerAccount() => $_ensure(25);
 
   @$pb.TagNumber(57)
-  $4.Article get article => $_getN(27);
+  $4.Article get article => $_getN(26);
   @$pb.TagNumber(57)
   set article($4.Article v) { setField(57, v); }
   @$pb.TagNumber(57)
-  $core.bool hasArticle() => $_has(27);
+  $core.bool hasArticle() => $_has(26);
   @$pb.TagNumber(57)
   void clearArticle() => clearField(57);
   @$pb.TagNumber(57)
-  $4.Article ensureArticle() => $_ensure(27);
+  $4.Article ensureArticle() => $_ensure(26);
 
   @$pb.TagNumber(58)
-  $core.int get payerId => $_getIZ(28);
+  $core.int get payerId => $_getIZ(27);
   @$pb.TagNumber(58)
-  set payerId($core.int v) { $_setSignedInt32(28, v); }
+  set payerId($core.int v) { $_setSignedInt32(27, v); }
   @$pb.TagNumber(58)
-  $core.bool hasPayerId() => $_has(28);
+  $core.bool hasPayerId() => $_has(27);
   @$pb.TagNumber(58)
   void clearPayerId() => clearField(58);
 
   @$pb.TagNumber(59)
-  $core.int get recipientId => $_getIZ(29);
+  $core.int get recipientId => $_getIZ(28);
   @$pb.TagNumber(59)
-  set recipientId($core.int v) { $_setSignedInt32(29, v); }
+  set recipientId($core.int v) { $_setSignedInt32(28, v); }
   @$pb.TagNumber(59)
-  $core.bool hasRecipientId() => $_has(29);
+  $core.bool hasRecipientId() => $_has(28);
   @$pb.TagNumber(59)
   void clearRecipientId() => clearField(59);
 
   @$pb.TagNumber(60)
-  $core.double get amount => $_getN(30);
+  $core.double get amount => $_getN(29);
   @$pb.TagNumber(60)
-  set amount($core.double v) { $_setDouble(30, v); }
+  set amount($core.double v) { $_setDouble(29, v); }
   @$pb.TagNumber(60)
-  $core.bool hasAmount() => $_has(30);
+  $core.bool hasAmount() => $_has(29);
   @$pb.TagNumber(60)
   void clearAmount() => clearField(60);
 
   @$pb.TagNumber(61)
-  $core.double get allocatedAmount => $_getN(31);
+  $core.double get allocatedAmount => $_getN(30);
   @$pb.TagNumber(61)
-  set allocatedAmount($core.double v) { $_setDouble(31, v); }
+  set allocatedAmount($core.double v) { $_setDouble(30, v); }
   @$pb.TagNumber(61)
-  $core.bool hasAllocatedAmount() => $_has(31);
+  $core.bool hasAllocatedAmount() => $_has(30);
   @$pb.TagNumber(61)
   void clearAllocatedAmount() => clearField(61);
 
   @$pb.TagNumber(65)
-  $core.String get payoutProof => $_getSZ(32);
+  $core.String get payoutProof => $_getSZ(31);
   @$pb.TagNumber(65)
-  set payoutProof($core.String v) { $_setString(32, v); }
+  set payoutProof($core.String v) { $_setString(31, v); }
   @$pb.TagNumber(65)
-  $core.bool hasPayoutProof() => $_has(32);
+  $core.bool hasPayoutProof() => $_has(31);
   @$pb.TagNumber(65)
   void clearPayoutProof() => clearField(65);
 
   @$pb.TagNumber(66)
-  $core.String get note => $_getSZ(33);
+  $core.String get note => $_getSZ(32);
   @$pb.TagNumber(66)
-  set note($core.String v) { $_setString(33, v); }
+  set note($core.String v) { $_setString(32, v); }
   @$pb.TagNumber(66)
-  $core.bool hasNote() => $_has(33);
+  $core.bool hasNote() => $_has(32);
   @$pb.TagNumber(66)
   void clearNote() => clearField(66);
 
   @$pb.TagNumber(68)
-  $core.double get taxAmount => $_getN(34);
+  $core.double get taxAmount => $_getN(33);
   @$pb.TagNumber(68)
-  set taxAmount($core.double v) { $_setDouble(34, v); }
+  set taxAmount($core.double v) { $_setDouble(33, v); }
   @$pb.TagNumber(68)
-  $core.bool hasTaxAmount() => $_has(34);
+  $core.bool hasTaxAmount() => $_has(33);
   @$pb.TagNumber(68)
   void clearTaxAmount() => clearField(68);
 
   @$pb.TagNumber(69)
-  $core.double get taxPercent => $_getN(35);
+  $core.double get taxPercent => $_getN(34);
   @$pb.TagNumber(69)
-  set taxPercent($core.double v) { $_setDouble(35, v); }
+  set taxPercent($core.double v) { $_setDouble(34, v); }
   @$pb.TagNumber(69)
-  $core.bool hasTaxPercent() => $_has(35);
+  $core.bool hasTaxPercent() => $_has(34);
   @$pb.TagNumber(69)
   void clearTaxPercent() => clearField(69);
 
   @$pb.TagNumber(70)
-  $core.bool get taxInclusive => $_getBF(36);
+  $core.bool get taxInclusive => $_getBF(35);
   @$pb.TagNumber(70)
-  set taxInclusive($core.bool v) { $_setBool(36, v); }
+  set taxInclusive($core.bool v) { $_setBool(35, v); }
   @$pb.TagNumber(70)
-  $core.bool hasTaxInclusive() => $_has(36);
+  $core.bool hasTaxInclusive() => $_has(35);
   @$pb.TagNumber(70)
   void clearTaxInclusive() => clearField(70);
 
   @$pb.TagNumber(71)
-  $9.Source get datasource => $_getN(37);
+  $9.Source get datasource => $_getN(36);
   @$pb.TagNumber(71)
   set datasource($9.Source v) { setField(71, v); }
   @$pb.TagNumber(71)
-  $core.bool hasDatasource() => $_has(37);
+  $core.bool hasDatasource() => $_has(36);
   @$pb.TagNumber(71)
   void clearDatasource() => clearField(71);
 
   @$pb.TagNumber(72)
-  $10.Color get color => $_getN(38);
+  $10.Color get color => $_getN(37);
   @$pb.TagNumber(72)
   set color($10.Color v) { setField(72, v); }
   @$pb.TagNumber(72)
-  $core.bool hasColor() => $_has(38);
+  $core.bool hasColor() => $_has(37);
   @$pb.TagNumber(72)
   void clearColor() => clearField(72);
 
   @$pb.TagNumber(73)
-  $5.Timestamp get fullAllocationTime => $_getN(39);
+  $5.Timestamp get fullAllocationTime => $_getN(38);
   @$pb.TagNumber(73)
   set fullAllocationTime($5.Timestamp v) { setField(73, v); }
   @$pb.TagNumber(73)
-  $core.bool hasFullAllocationTime() => $_has(39);
+  $core.bool hasFullAllocationTime() => $_has(38);
   @$pb.TagNumber(73)
   void clearFullAllocationTime() => clearField(73);
   @$pb.TagNumber(73)
-  $5.Timestamp ensureFullAllocationTime() => $_ensure(39);
+  $5.Timestamp ensureFullAllocationTime() => $_ensure(38);
 
   @$pb.TagNumber(74)
-  $6.Entity get payer => $_getN(40);
+  $6.Entity get payer => $_getN(39);
   @$pb.TagNumber(74)
   set payer($6.Entity v) { setField(74, v); }
   @$pb.TagNumber(74)
-  $core.bool hasPayer() => $_has(40);
+  $core.bool hasPayer() => $_has(39);
   @$pb.TagNumber(74)
   void clearPayer() => clearField(74);
   @$pb.TagNumber(74)
-  $6.Entity ensurePayer() => $_ensure(40);
+  $6.Entity ensurePayer() => $_ensure(39);
 
   @$pb.TagNumber(75)
-  $6.Entity get recipient => $_getN(41);
+  $6.Entity get recipient => $_getN(40);
   @$pb.TagNumber(75)
   set recipient($6.Entity v) { setField(75, v); }
   @$pb.TagNumber(75)
-  $core.bool hasRecipient() => $_has(41);
+  $core.bool hasRecipient() => $_has(40);
   @$pb.TagNumber(75)
   void clearRecipient() => clearField(75);
   @$pb.TagNumber(75)
-  $6.Entity ensureRecipient() => $_ensure(41);
+  $6.Entity ensureRecipient() => $_ensure(40);
 
   @$pb.TagNumber(76)
-  $5.Timestamp get performTime => $_getN(42);
+  $5.Timestamp get performTime => $_getN(41);
   @$pb.TagNumber(76)
   set performTime($5.Timestamp v) { setField(76, v); }
   @$pb.TagNumber(76)
-  $core.bool hasPerformTime() => $_has(42);
+  $core.bool hasPerformTime() => $_has(41);
   @$pb.TagNumber(76)
   void clearPerformTime() => clearField(76);
   @$pb.TagNumber(76)
-  $5.Timestamp ensurePerformTime() => $_ensure(42);
+  $5.Timestamp ensurePerformTime() => $_ensure(41);
 
   @$pb.TagNumber(77)
-  $5.Timestamp get paymentDueTime => $_getN(43);
+  $5.Timestamp get paymentDueTime => $_getN(42);
   @$pb.TagNumber(77)
   set paymentDueTime($5.Timestamp v) { setField(77, v); }
   @$pb.TagNumber(77)
-  $core.bool hasPaymentDueTime() => $_has(43);
+  $core.bool hasPaymentDueTime() => $_has(42);
   @$pb.TagNumber(77)
   void clearPaymentDueTime() => clearField(77);
   @$pb.TagNumber(77)
-  $5.Timestamp ensurePaymentDueTime() => $_ensure(43);
+  $5.Timestamp ensurePaymentDueTime() => $_ensure(42);
 
   @$pb.TagNumber(78)
-  $5.Timestamp get payoutDate => $_getN(44);
+  $5.Timestamp get payoutDate => $_getN(43);
   @$pb.TagNumber(78)
   set payoutDate($5.Timestamp v) { setField(78, v); }
   @$pb.TagNumber(78)
-  $core.bool hasPayoutDate() => $_has(44);
+  $core.bool hasPayoutDate() => $_has(43);
   @$pb.TagNumber(78)
   void clearPayoutDate() => clearField(78);
   @$pb.TagNumber(78)
-  $5.Timestamp ensurePayoutDate() => $_ensure(44);
+  $5.Timestamp ensurePayoutDate() => $_ensure(43);
 
   @$pb.TagNumber(79)
-  $5.Timestamp get payTime => $_getN(45);
+  $5.Timestamp get payTime => $_getN(44);
   @$pb.TagNumber(79)
   set payTime($5.Timestamp v) { setField(79, v); }
   @$pb.TagNumber(79)
-  $core.bool hasPayTime() => $_has(45);
+  $core.bool hasPayTime() => $_has(44);
   @$pb.TagNumber(79)
   void clearPayTime() => clearField(79);
   @$pb.TagNumber(79)
-  $5.Timestamp ensurePayTime() => $_ensure(45);
+  $5.Timestamp ensurePayTime() => $_ensure(44);
 
   @$pb.TagNumber(80)
-  $5.Timestamp get createTime => $_getN(46);
+  $5.Timestamp get createTime => $_getN(45);
   @$pb.TagNumber(80)
   set createTime($5.Timestamp v) { setField(80, v); }
   @$pb.TagNumber(80)
-  $core.bool hasCreateTime() => $_has(46);
+  $core.bool hasCreateTime() => $_has(45);
   @$pb.TagNumber(80)
   void clearCreateTime() => clearField(80);
   @$pb.TagNumber(80)
-  $5.Timestamp ensureCreateTime() => $_ensure(46);
+  $5.Timestamp ensureCreateTime() => $_ensure(45);
+
+  @$pb.TagNumber(81)
+  $11.Status get status => $_getN(46);
+  @$pb.TagNumber(81)
+  set status($11.Status v) { setField(81, v); }
+  @$pb.TagNumber(81)
+  $core.bool hasStatus() => $_has(46);
+  @$pb.TagNumber(81)
+  void clearStatus() => clearField(81);
 }
 
 

@@ -13,6 +13,7 @@ import "proto/entity.proto";
 import "proto/operation.proto";
 import "proto/payment_type.proto";
 import "proto/source.proto";
+import "proto/status.proto";
 import "proto/user.proto";
 
 message Accrual
@@ -30,7 +31,6 @@ message Accrual
   int32 recipient_account_id = 19;
   int32 payer_account_id = 21;
   bool is_initial = 23;
-  string status = 25;
   PaymentType payment_type = 27;
   bool has_other_money_recipient = 29;
   int32 approver_id = 31;
@@ -65,4 +65,5 @@ message Accrual
   google.protobuf.Timestamp payout_date = 78;
   google.protobuf.Timestamp pay_time = 79;
   google.protobuf.Timestamp create_time = 80;
+  Status status = 81;
 }
