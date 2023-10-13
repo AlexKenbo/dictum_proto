@@ -45,4 +45,10 @@ message Transfer
   Transfer parent = 56;
   string recipient_currency_code = 57;
   string confirmationUrl = 58;
+  
+  string payer_account_number = 59;
+  string recipient_account_number = 60;
+  double payer_amount = 61;
+  double recipient_amount = 62;
+  string payer_currency_code = 63;
 }   

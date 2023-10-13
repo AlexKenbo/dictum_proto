@@ -6,7 +6,7 @@ import "google/protobuf/timestamp.proto";
 
 message Country
 {
-  string country_code = 1;
+  string code = 1;
   string title = 2;
   google.protobuf.Timestamp create_time = 4;
 
