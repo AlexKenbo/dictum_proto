@@ -104,6 +104,12 @@ service FinEvent {
         };
     };
 
+    rpc GeneratePdf(GetRequest) returns (FileResponse) {
+        option (google.api.http) = {
+            get: "/v1/{accrual.resource_name=accruals/*}/generate-pdf"
+        };
+    };
+
     //--
     rpc ListProducts(ListRequest) returns (ListProductsResponse) {
         option (google.api.http) = {
@@ -238,4 +244,8 @@ message ListAllocationsResponse {
     string resource_name = 1;
     repeated Allocation allocations = 2;
     string next_page_token = 3;
+}
+
+message FileResponse {
+    bytes file = 1;
 }

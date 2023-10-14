@@ -612,6 +612,56 @@ class ListAllocationsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(3);
 }
 
+class FileResponse extends $pb.GeneratedMessage {
+  factory FileResponse({
+    $core.List<$core.int>? file,
+  }) {
+    final $result = create();
+    if (file != null) {
+      $result.file = file;
+    }
+    return $result;
+  }
+  FileResponse._() : super();
+  factory FileResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FileResponse', createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'file', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FileResponse clone() => FileResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FileResponse copyWith(void Function(FileResponse) updates) => super.copyWith((message) => updates(message as FileResponse)) as FileResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FileResponse create() => FileResponse._();
+  FileResponse createEmptyInstance() => create();
+  static $pb.PbList<FileResponse> createRepeated() => $pb.PbList<FileResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FileResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileResponse>(create);
+  static FileResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get file => $_getN(0);
+  @$pb.TagNumber(1)
+  set file($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFile() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFile() => clearField(1);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
