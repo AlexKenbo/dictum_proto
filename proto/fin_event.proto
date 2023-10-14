@@ -104,7 +104,7 @@ service FinEvent {
         };
     };
 
-    rpc GeneratePdf(GetRequest) returns (FileResponse) {
+    rpc GenerateAccrualPDF(GetRequest) returns (FileResponse) {
         option (google.api.http) = {
             get: "/v1/{accrual.resource_name=accruals/*}/generate-pdf"
         };
