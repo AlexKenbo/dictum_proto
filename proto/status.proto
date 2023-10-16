@@ -8,6 +8,7 @@ enum Status
   PROCESSING = 1;
   SENT = 2;
   DELIVERED = 3;
+  CANCEL = 4;
 }
      
 
