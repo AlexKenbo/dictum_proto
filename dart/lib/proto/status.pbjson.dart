@@ -21,11 +21,12 @@ const Status$json = {
     {'1': 'PROCESSING', '2': 1},
     {'1': 'SENT', '2': 2},
     {'1': 'DELIVERED', '2': 3},
+    {'1': 'CANCEL', '2': 4},
   ],
 };
 
 /// Descriptor for `Status`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List statusDescriptor = $convert.base64Decode(
     'CgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASDgoKUFJPQ0VTU0lORxABEggKBFNFTl'
-    'QQAhINCglERUxJVkVSRUQQAw==');
+    'QQAhINCglERUxJVkVSRUQQAxIKCgZDQU5DRUwQBA==');
 

@@ -18,12 +18,14 @@ class Status extends $pb.ProtobufEnum {
   static const Status PROCESSING = Status._(1, _omitEnumNames ? '' : 'PROCESSING');
   static const Status SENT = Status._(2, _omitEnumNames ? '' : 'SENT');
   static const Status DELIVERED = Status._(3, _omitEnumNames ? '' : 'DELIVERED');
+  static const Status CANCEL = Status._(4, _omitEnumNames ? '' : 'CANCEL');
 
   static const $core.List<Status> values = <Status> [
     STATUS_UNSPECIFIED,
     PROCESSING,
     SENT,
     DELIVERED,
+    CANCEL,
   ];
 
   static final $core.Map<$core.int, Status> _byValue = $pb.ProtobufEnum.initByValue(values);
