@@ -19,19 +19,20 @@ const CurrencyRate$json = {
   '2': [
     {'1': 'receive_currency', '3': 1, '4': 1, '5': 9, '10': 'receiveCurrency'},
     {'1': 'give_currency', '3': 2, '4': 1, '5': 9, '10': 'giveCurrency'},
-    {'1': 'create_time', '3': 3, '4': 1, '5': 3, '10': 'createTime'},
     {'1': 'purchase_price', '3': 4, '4': 1, '5': 1, '10': 'purchasePrice'},
     {'1': 'selling_price', '3': 5, '4': 1, '5': 1, '10': 'sellingPrice'},
     {'1': 'receive', '3': 6, '4': 1, '5': 11, '6': '.Currency', '10': 'receive'},
     {'1': 'give', '3': 8, '4': 1, '5': 11, '6': '.Currency', '10': 'give'},
+    {'1': 'create_time', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
 /// Descriptor for `CurrencyRate`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List currencyRateDescriptor = $convert.base64Decode(
     'CgxDdXJyZW5jeVJhdGUSKQoQcmVjZWl2ZV9jdXJyZW5jeRgBIAEoCVIPcmVjZWl2ZUN1cnJlbm'
-    'N5EiMKDWdpdmVfY3VycmVuY3kYAiABKAlSDGdpdmVDdXJyZW5jeRIfCgtjcmVhdGVfdGltZRgD'
-    'IAEoA1IKY3JlYXRlVGltZRIlCg5wdXJjaGFzZV9wcmljZRgEIAEoAVINcHVyY2hhc2VQcmljZR'
-    'IjCg1zZWxsaW5nX3ByaWNlGAUgASgBUgxzZWxsaW5nUHJpY2USIwoHcmVjZWl2ZRgGIAEoCzIJ'
-    'LkN1cnJlbmN5UgdyZWNlaXZlEh0KBGdpdmUYCCABKAsyCS5DdXJyZW5jeVIEZ2l2ZQ==');
+    'N5EiMKDWdpdmVfY3VycmVuY3kYAiABKAlSDGdpdmVDdXJyZW5jeRIlCg5wdXJjaGFzZV9wcmlj'
+    'ZRgEIAEoAVINcHVyY2hhc2VQcmljZRIjCg1zZWxsaW5nX3ByaWNlGAUgASgBUgxzZWxsaW5nUH'
+    'JpY2USIwoHcmVjZWl2ZRgGIAEoCzIJLkN1cnJlbmN5UgdyZWNlaXZlEh0KBGdpdmUYCCABKAsy'
+    'CS5DdXJyZW5jeVIEZ2l2ZRI7CgtjcmVhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi'
+    '5UaW1lc3RhbXBSCmNyZWF0ZVRpbWU=');
 

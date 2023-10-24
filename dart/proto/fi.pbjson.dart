@@ -17,13 +17,13 @@ import 'dart:typed_data' as $typed_data;
 const Fi$json = {
   '1': 'Fi',
   '2': [
-    {'1': 'fi_name', '3': 1, '4': 1, '5': 9, '10': 'fiName'},
-    {'1': 'create_time', '3': 2, '4': 1, '5': 3, '10': 'createTime'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'create_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
 /// Descriptor for `Fi`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List fiDescriptor = $convert.base64Decode(
-    'CgJGaRIXCgdmaV9uYW1lGAEgASgJUgZmaU5hbWUSHwoLY3JlYXRlX3RpbWUYAiABKANSCmNyZW'
-    'F0ZVRpbWU=');
+    'CgJGaRISCgRuYW1lGAEgASgJUgRuYW1lEjsKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLn'
+    'Byb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZQ==');
 

@@ -11,18 +11,19 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../google/protobuf/timestamp.pb.dart' as $32;
 
 class Country extends $pb.GeneratedMessage {
   factory Country({
-    $core.String? countryCode,
+    $core.String? code,
     $core.String? title,
-    $fixnum.Int64? createTime,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
-    if (countryCode != null) {
-      $result.countryCode = countryCode;
+    if (code != null) {
+      $result.code = code;
     }
     if (title != null) {
       $result.title = title;
@@ -37,9 +38,9 @@ class Country extends $pb.GeneratedMessage {
   factory Country.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Country', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'countryCode')
+    ..aOS(1, _omitFieldNames ? '' : 'code')
     ..aOS(2, _omitFieldNames ? '' : 'title')
-    ..aInt64(3, _omitFieldNames ? '' : 'createTime')
+    ..aOM<$32.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -65,13 +66,13 @@ class Country extends $pb.GeneratedMessage {
   static Country? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get countryCode => $_getSZ(0);
+  $core.String get code => $_getSZ(0);
   @$pb.TagNumber(1)
-  set countryCode($core.String v) { $_setString(0, v); }
+  set code($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasCountryCode() => $_has(0);
+  $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCountryCode() => clearField(1);
+  void clearCode() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
@@ -82,14 +83,16 @@ class Country extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => clearField(2);
 
-  @$pb.TagNumber(3)
-  $fixnum.Int64 get createTime => $_getI64(2);
-  @$pb.TagNumber(3)
-  set createTime($fixnum.Int64 v) { $_setInt64(2, v); }
-  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  $32.Timestamp get createTime => $_getN(2);
+  @$pb.TagNumber(4)
+  set createTime($32.Timestamp v) { setField(4, v); }
+  @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
+  @$pb.TagNumber(4)
+  void clearCreateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $32.Timestamp ensureCreateTime() => $_ensure(2);
 }
 
 

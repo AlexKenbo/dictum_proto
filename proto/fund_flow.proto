@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+
+enum FundFlow
+{
+  FUND_FLOW_UNKNOWN = 0;
+  FUND_FLOW_OPERATIONAL = 1;
+  FUND_FLOW_NON_OPERATIONAL = 2;
+}

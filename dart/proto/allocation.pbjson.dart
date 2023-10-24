@@ -24,10 +24,10 @@ const Allocation$json = {
     {'1': 'accrual_currency_code', '3': 5, '4': 1, '5': 9, '10': 'accrualCurrencyCode'},
     {'1': 'transfer_allocated_amount', '3': 6, '4': 1, '5': 1, '10': 'transferAllocatedAmount'},
     {'1': 'transfer_currency_code', '3': 7, '4': 1, '5': 9, '10': 'transferCurrencyCode'},
-    {'1': 'create_time', '3': 8, '4': 1, '5': 3, '10': 'createTime'},
     {'1': 'resource_name', '3': 9, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'accrual', '3': 11, '4': 1, '5': 11, '6': '.Accrual', '10': 'accrual'},
     {'1': 'transfer', '3': 13, '4': 1, '5': 11, '6': '.Transfer', '10': 'transfer'},
+    {'1': 'create_time', '3': 14, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
@@ -38,8 +38,9 @@ final $typed_data.Uint8List allocationDescriptor = $convert.base64Decode(
     'cmF0ZUlkEi4KE2FjY3J1YWxfcGFpZF9hbW91bnQYBCABKAFSEWFjY3J1YWxQYWlkQW1vdW50Ej'
     'IKFWFjY3J1YWxfY3VycmVuY3lfY29kZRgFIAEoCVITYWNjcnVhbEN1cnJlbmN5Q29kZRI6Chl0'
     'cmFuc2Zlcl9hbGxvY2F0ZWRfYW1vdW50GAYgASgBUhd0cmFuc2ZlckFsbG9jYXRlZEFtb3VudB'
-    'I0ChZ0cmFuc2Zlcl9jdXJyZW5jeV9jb2RlGAcgASgJUhR0cmFuc2ZlckN1cnJlbmN5Q29kZRIf'
-    'CgtjcmVhdGVfdGltZRgIIAEoA1IKY3JlYXRlVGltZRIjCg1yZXNvdXJjZV9uYW1lGAkgASgJUg'
-    'xyZXNvdXJjZU5hbWUSIgoHYWNjcnVhbBgLIAEoCzIILkFjY3J1YWxSB2FjY3J1YWwSJQoIdHJh'
-    'bnNmZXIYDSABKAsyCS5UcmFuc2ZlclIIdHJhbnNmZXI=');
+    'I0ChZ0cmFuc2Zlcl9jdXJyZW5jeV9jb2RlGAcgASgJUhR0cmFuc2ZlckN1cnJlbmN5Q29kZRIj'
+    'Cg1yZXNvdXJjZV9uYW1lGAkgASgJUgxyZXNvdXJjZU5hbWUSIgoHYWNjcnVhbBgLIAEoCzIILk'
+    'FjY3J1YWxSB2FjY3J1YWwSJQoIdHJhbnNmZXIYDSABKAsyCS5UcmFuc2ZlclIIdHJhbnNmZXIS'
+    'OwoLY3JlYXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdG'
+    'VUaW1l');
 

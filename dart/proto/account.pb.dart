@@ -13,6 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'account_detail.pb.dart' as $7;
 import 'account_type.pbenum.dart' as $44;
 import 'currency.pb.dart' as $42;
@@ -38,6 +39,7 @@ class Account extends $pb.GeneratedMessage {
     $43.Fi? fi,
     $5.Employee? cashier,
     $7.AccountDetail? accountDetail,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -88,6 +90,9 @@ class Account extends $pb.GeneratedMessage {
     if (accountDetail != null) {
       $result.accountDetail = accountDetail;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     return $result;
   }
   Account._() : super();
@@ -111,6 +116,7 @@ class Account extends $pb.GeneratedMessage {
     ..aOM<$43.Fi>(19, _omitFieldNames ? '' : 'fi', subBuilder: $43.Fi.create)
     ..aOM<$5.Employee>(21, _omitFieldNames ? '' : 'cashier', subBuilder: $5.Employee.create)
     ..aOM<$7.AccountDetail>(23, _omitFieldNames ? '' : 'accountDetail', subBuilder: $7.AccountDetail.create)
+    ..aOM<$32.Timestamp>(24, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -288,6 +294,17 @@ class Account extends $pb.GeneratedMessage {
   void clearAccountDetail() => clearField(23);
   @$pb.TagNumber(23)
   $7.AccountDetail ensureAccountDetail() => $_ensure(15);
+
+  @$pb.TagNumber(24)
+  $32.Timestamp get createTime => $_getN(16);
+  @$pb.TagNumber(24)
+  set createTime($32.Timestamp v) { setField(24, v); }
+  @$pb.TagNumber(24)
+  $core.bool hasCreateTime() => $_has(16);
+  @$pb.TagNumber(24)
+  void clearCreateTime() => clearField(24);
+  @$pb.TagNumber(24)
+  $32.Timestamp ensureCreateTime() => $_ensure(16);
 }
 
 

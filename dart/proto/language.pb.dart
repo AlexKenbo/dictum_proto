@@ -11,8 +11,9 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../google/protobuf/timestamp.pb.dart' as $32;
 
 class Language extends $pb.GeneratedMessage {
   factory Language({
@@ -20,7 +21,7 @@ class Language extends $pb.GeneratedMessage {
     $core.String? title,
     $core.String? englishTitle,
     $core.bool? isSupported,
-    $fixnum.Int64? createTime,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (languageCode != null) {
@@ -49,7 +50,7 @@ class Language extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'title')
     ..aOS(3, _omitFieldNames ? '' : 'englishTitle')
     ..aOB(4, _omitFieldNames ? '' : 'isSupported')
-    ..aInt64(5, _omitFieldNames ? '' : 'createTime')
+    ..aOM<$32.Timestamp>(6, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -110,14 +111,16 @@ class Language extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIsSupported() => clearField(4);
 
-  @$pb.TagNumber(5)
-  $fixnum.Int64 get createTime => $_getI64(4);
-  @$pb.TagNumber(5)
-  set createTime($fixnum.Int64 v) { $_setInt64(4, v); }
-  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  $32.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(6)
+  set createTime($32.Timestamp v) { setField(6, v); }
+  @$pb.TagNumber(6)
   $core.bool hasCreateTime() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearCreateTime() => clearField(5);
+  @$pb.TagNumber(6)
+  void clearCreateTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $32.Timestamp ensureCreateTime() => $_ensure(4);
 }
 
 

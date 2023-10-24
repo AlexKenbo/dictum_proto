@@ -11,9 +11,9 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'agent.pb.dart' as $35;
 import 'country.pb.dart' as $34;
 import 'entity_source.pb.dart' as $36;
@@ -26,10 +26,9 @@ class Entity extends $pb.GeneratedMessage {
     $core.int? entityId,
     $core.int? conglomerateId,
     $core.String? title,
-    $37.EntityType? entityType,
+    $37.EntityType? type,
     $core.bool? isAgent,
     $core.bool? isEmployeeOfNullable,
-    $fixnum.Int64? createTime,
     $core.String? email,
     $core.String? phone,
     $core.String? address,
@@ -41,6 +40,8 @@ class Entity extends $pb.GeneratedMessage {
     $35.Agent? agent,
     $core.Iterable<$36.EntitySource>? sources,
     $core.int? contactCreatorId,
+    $core.String? aliasCode,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (entityId != null) {
@@ -52,17 +53,14 @@ class Entity extends $pb.GeneratedMessage {
     if (title != null) {
       $result.title = title;
     }
-    if (entityType != null) {
-      $result.entityType = entityType;
+    if (type != null) {
+      $result.type = type;
     }
     if (isAgent != null) {
       $result.isAgent = isAgent;
     }
     if (isEmployeeOfNullable != null) {
       $result.isEmployeeOfNullable = isEmployeeOfNullable;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
     }
     if (email != null) {
       $result.email = email;
@@ -97,6 +95,12 @@ class Entity extends $pb.GeneratedMessage {
     if (contactCreatorId != null) {
       $result.contactCreatorId = contactCreatorId;
     }
+    if (aliasCode != null) {
+      $result.aliasCode = aliasCode;
+    }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     return $result;
   }
   Entity._() : super();
@@ -107,10 +111,9 @@ class Entity extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'title')
-    ..e<$37.EntityType>(4, _omitFieldNames ? '' : 'entityType', $pb.PbFieldType.OE, defaultOrMaker: $37.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $37.EntityType.valueOf, enumValues: $37.EntityType.values)
+    ..e<$37.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $37.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $37.EntityType.valueOf, enumValues: $37.EntityType.values)
     ..aOB(5, _omitFieldNames ? '' : 'isAgent')
     ..aOB(6, _omitFieldNames ? '' : 'isEmployeeOfNullable')
-    ..aInt64(8, _omitFieldNames ? '' : 'createTime')
     ..aOS(9, _omitFieldNames ? '' : 'email')
     ..aOS(11, _omitFieldNames ? '' : 'phone')
     ..aOS(13, _omitFieldNames ? '' : 'address')
@@ -122,6 +125,8 @@ class Entity extends $pb.GeneratedMessage {
     ..aOM<$35.Agent>(25, _omitFieldNames ? '' : 'agent', subBuilder: $35.Agent.create)
     ..pc<$36.EntitySource>(27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $36.EntitySource.create)
     ..a<$core.int>(28, _omitFieldNames ? '' : 'contactCreatorId', $pb.PbFieldType.O3)
+    ..aOS(29, _omitFieldNames ? '' : 'aliasCode')
+    ..aOM<$32.Timestamp>(30, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -174,13 +179,13 @@ class Entity extends $pb.GeneratedMessage {
   void clearTitle() => clearField(3);
 
   @$pb.TagNumber(4)
-  $37.EntityType get entityType => $_getN(3);
+  $37.EntityType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set entityType($37.EntityType v) { setField(4, v); }
+  set type($37.EntityType v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasEntityType() => $_has(3);
+  $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEntityType() => clearField(4);
+  void clearType() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get isAgent => $_getBF(4);
@@ -200,113 +205,124 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIsEmployeeOfNullable() => clearField(6);
 
-  @$pb.TagNumber(8)
-  $fixnum.Int64 get createTime => $_getI64(6);
-  @$pb.TagNumber(8)
-  set createTime($fixnum.Int64 v) { $_setInt64(6, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasCreateTime() => $_has(6);
-  @$pb.TagNumber(8)
-  void clearCreateTime() => clearField(8);
-
   @$pb.TagNumber(9)
-  $core.String get email => $_getSZ(7);
+  $core.String get email => $_getSZ(6);
   @$pb.TagNumber(9)
-  set email($core.String v) { $_setString(7, v); }
+  set email($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(9)
-  $core.bool hasEmail() => $_has(7);
+  $core.bool hasEmail() => $_has(6);
   @$pb.TagNumber(9)
   void clearEmail() => clearField(9);
 
   @$pb.TagNumber(11)
-  $core.String get phone => $_getSZ(8);
+  $core.String get phone => $_getSZ(7);
   @$pb.TagNumber(11)
-  set phone($core.String v) { $_setString(8, v); }
+  set phone($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(11)
-  $core.bool hasPhone() => $_has(8);
+  $core.bool hasPhone() => $_has(7);
   @$pb.TagNumber(11)
   void clearPhone() => clearField(11);
 
   @$pb.TagNumber(13)
-  $core.String get address => $_getSZ(9);
+  $core.String get address => $_getSZ(8);
   @$pb.TagNumber(13)
-  set address($core.String v) { $_setString(9, v); }
+  set address($core.String v) { $_setString(8, v); }
   @$pb.TagNumber(13)
-  $core.bool hasAddress() => $_has(9);
+  $core.bool hasAddress() => $_has(8);
   @$pb.TagNumber(13)
   void clearAddress() => clearField(13);
 
   @$pb.TagNumber(15)
-  $core.int get telegramUserId => $_getIZ(10);
+  $core.int get telegramUserId => $_getIZ(9);
   @$pb.TagNumber(15)
-  set telegramUserId($core.int v) { $_setSignedInt32(10, v); }
+  set telegramUserId($core.int v) { $_setSignedInt32(9, v); }
   @$pb.TagNumber(15)
-  $core.bool hasTelegramUserId() => $_has(10);
+  $core.bool hasTelegramUserId() => $_has(9);
   @$pb.TagNumber(15)
   void clearTelegramUserId() => clearField(15);
 
   @$pb.TagNumber(17)
-  $core.String get countryCode => $_getSZ(11);
+  $core.String get countryCode => $_getSZ(10);
   @$pb.TagNumber(17)
-  set countryCode($core.String v) { $_setString(11, v); }
+  set countryCode($core.String v) { $_setString(10, v); }
   @$pb.TagNumber(17)
-  $core.bool hasCountryCode() => $_has(11);
+  $core.bool hasCountryCode() => $_has(10);
   @$pb.TagNumber(17)
   void clearCountryCode() => clearField(17);
 
   @$pb.TagNumber(19)
-  $core.String get sourceKey => $_getSZ(12);
+  $core.String get sourceKey => $_getSZ(11);
   @$pb.TagNumber(19)
-  set sourceKey($core.String v) { $_setString(12, v); }
+  set sourceKey($core.String v) { $_setString(11, v); }
   @$pb.TagNumber(19)
-  $core.bool hasSourceKey() => $_has(12);
+  $core.bool hasSourceKey() => $_has(11);
   @$pb.TagNumber(19)
   void clearSourceKey() => clearField(19);
 
   @$pb.TagNumber(21)
-  $33.TelegramUser get telegramUser => $_getN(13);
+  $33.TelegramUser get telegramUser => $_getN(12);
   @$pb.TagNumber(21)
   set telegramUser($33.TelegramUser v) { setField(21, v); }
   @$pb.TagNumber(21)
-  $core.bool hasTelegramUser() => $_has(13);
+  $core.bool hasTelegramUser() => $_has(12);
   @$pb.TagNumber(21)
   void clearTelegramUser() => clearField(21);
   @$pb.TagNumber(21)
-  $33.TelegramUser ensureTelegramUser() => $_ensure(13);
+  $33.TelegramUser ensureTelegramUser() => $_ensure(12);
 
   @$pb.TagNumber(23)
-  $34.Country get country => $_getN(14);
+  $34.Country get country => $_getN(13);
   @$pb.TagNumber(23)
   set country($34.Country v) { setField(23, v); }
   @$pb.TagNumber(23)
-  $core.bool hasCountry() => $_has(14);
+  $core.bool hasCountry() => $_has(13);
   @$pb.TagNumber(23)
   void clearCountry() => clearField(23);
   @$pb.TagNumber(23)
-  $34.Country ensureCountry() => $_ensure(14);
+  $34.Country ensureCountry() => $_ensure(13);
 
   @$pb.TagNumber(25)
-  $35.Agent get agent => $_getN(15);
+  $35.Agent get agent => $_getN(14);
   @$pb.TagNumber(25)
   set agent($35.Agent v) { setField(25, v); }
   @$pb.TagNumber(25)
-  $core.bool hasAgent() => $_has(15);
+  $core.bool hasAgent() => $_has(14);
   @$pb.TagNumber(25)
   void clearAgent() => clearField(25);
   @$pb.TagNumber(25)
-  $35.Agent ensureAgent() => $_ensure(15);
+  $35.Agent ensureAgent() => $_ensure(14);
 
   @$pb.TagNumber(27)
-  $core.List<$36.EntitySource> get sources => $_getList(16);
+  $core.List<$36.EntitySource> get sources => $_getList(15);
 
   @$pb.TagNumber(28)
-  $core.int get contactCreatorId => $_getIZ(17);
+  $core.int get contactCreatorId => $_getIZ(16);
   @$pb.TagNumber(28)
-  set contactCreatorId($core.int v) { $_setSignedInt32(17, v); }
+  set contactCreatorId($core.int v) { $_setSignedInt32(16, v); }
   @$pb.TagNumber(28)
-  $core.bool hasContactCreatorId() => $_has(17);
+  $core.bool hasContactCreatorId() => $_has(16);
   @$pb.TagNumber(28)
   void clearContactCreatorId() => clearField(28);
+
+  @$pb.TagNumber(29)
+  $core.String get aliasCode => $_getSZ(17);
+  @$pb.TagNumber(29)
+  set aliasCode($core.String v) { $_setString(17, v); }
+  @$pb.TagNumber(29)
+  $core.bool hasAliasCode() => $_has(17);
+  @$pb.TagNumber(29)
+  void clearAliasCode() => clearField(29);
+
+  @$pb.TagNumber(30)
+  $32.Timestamp get createTime => $_getN(18);
+  @$pb.TagNumber(30)
+  set createTime($32.Timestamp v) { setField(30, v); }
+  @$pb.TagNumber(30)
+  $core.bool hasCreateTime() => $_has(18);
+  @$pb.TagNumber(30)
+  void clearCreateTime() => clearField(30);
+  @$pb.TagNumber(30)
+  $32.Timestamp ensureCreateTime() => $_ensure(18);
 }
 
 

@@ -15,6 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'article_group.pbenum.dart' as $0;
 import 'direction.pbenum.dart' as $1;
+import 'fund_flow.pbenum.dart' as $2;
 
 class Article extends $pb.GeneratedMessage {
   factory Article({
@@ -29,6 +30,7 @@ class Article extends $pb.GeneratedMessage {
     $1.Direction? direction,
     $core.int? parentArticleId,
     Article? parentArticle,
+    $2.FundFlow? fundFlow,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -64,6 +66,9 @@ class Article extends $pb.GeneratedMessage {
     if (parentArticle != null) {
       $result.parentArticle = parentArticle;
     }
+    if (fundFlow != null) {
+      $result.fundFlow = fundFlow;
+    }
     return $result;
   }
   Article._() : super();
@@ -81,7 +86,8 @@ class Article extends $pb.GeneratedMessage {
     ..e<$0.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $0.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $0.ArticleGroup.valueOf, enumValues: $0.ArticleGroup.values)
     ..e<$1.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $1.Direction.DIRECTION_UNKNOWN, valueOf: $1.Direction.valueOf, enumValues: $1.Direction.values)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'parentArticleId', $pb.PbFieldType.O3)
-    ..aOM<Article>(12, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
+    ..aOM<Article>(11, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
+    ..e<$2.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $2.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $2.FundFlow.valueOf, enumValues: $2.FundFlow.values)
     ..hasRequiredFields = false
   ;
 
@@ -196,16 +202,25 @@ class Article extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearParentArticleId() => clearField(10);
 
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(11)
   Article get parentArticle => $_getN(10);
-  @$pb.TagNumber(12)
-  set parentArticle(Article v) { setField(12, v); }
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(11)
+  set parentArticle(Article v) { setField(11, v); }
+  @$pb.TagNumber(11)
   $core.bool hasParentArticle() => $_has(10);
-  @$pb.TagNumber(12)
-  void clearParentArticle() => clearField(12);
-  @$pb.TagNumber(12)
+  @$pb.TagNumber(11)
+  void clearParentArticle() => clearField(11);
+  @$pb.TagNumber(11)
   Article ensureParentArticle() => $_ensure(10);
+
+  @$pb.TagNumber(12)
+  $2.FundFlow get fundFlow => $_getN(11);
+  @$pb.TagNumber(12)
+  set fundFlow($2.FundFlow v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasFundFlow() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearFundFlow() => clearField(12);
 }
 
 

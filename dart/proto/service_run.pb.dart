@@ -11,26 +11,23 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'service.pb.dart' as $19;
-import 'service_run_state.pbenum.dart' as $60;
+import 'service_run_state.pbenum.dart' as $62;
 
 class ServiceRun extends $pb.GeneratedMessage {
   factory ServiceRun({
     $core.int? serviceId,
-    $fixnum.Int64? syncTime,
-    $60.ServiceRunState? state,
+    $62.ServiceRunState? state,
     $core.String? message,
     $19.Service? service,
+    $32.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
       $result.serviceId = serviceId;
-    }
-    if (syncTime != null) {
-      $result.syncTime = syncTime;
     }
     if (state != null) {
       $result.state = state;
@@ -41,6 +38,9 @@ class ServiceRun extends $pb.GeneratedMessage {
     if (service != null) {
       $result.service = service;
     }
+    if (syncTime != null) {
+      $result.syncTime = syncTime;
+    }
     return $result;
   }
   ServiceRun._() : super();
@@ -49,10 +49,10 @@ class ServiceRun extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ServiceRun', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
-    ..aInt64(2, _omitFieldNames ? '' : 'syncTime')
-    ..e<$60.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $60.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $60.ServiceRunState.valueOf, enumValues: $60.ServiceRunState.values)
+    ..e<$62.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $62.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $62.ServiceRunState.valueOf, enumValues: $62.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
     ..aOM<$19.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $19.Service.create)
+    ..aOM<$32.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -86,43 +86,45 @@ class ServiceRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceId() => clearField(1);
 
-  @$pb.TagNumber(2)
-  $fixnum.Int64 get syncTime => $_getI64(1);
-  @$pb.TagNumber(2)
-  set syncTime($fixnum.Int64 v) { $_setInt64(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasSyncTime() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearSyncTime() => clearField(2);
-
   @$pb.TagNumber(3)
-  $60.ServiceRunState get state => $_getN(2);
+  $62.ServiceRunState get state => $_getN(1);
   @$pb.TagNumber(3)
-  set state($60.ServiceRunState v) { setField(3, v); }
+  set state($62.ServiceRunState v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasState() => $_has(2);
+  $core.bool hasState() => $_has(1);
   @$pb.TagNumber(3)
   void clearState() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get message => $_getSZ(3);
+  $core.String get message => $_getSZ(2);
   @$pb.TagNumber(4)
-  set message($core.String v) { $_setString(3, v); }
+  set message($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(4)
-  $core.bool hasMessage() => $_has(3);
+  $core.bool hasMessage() => $_has(2);
   @$pb.TagNumber(4)
   void clearMessage() => clearField(4);
 
   @$pb.TagNumber(6)
-  $19.Service get service => $_getN(4);
+  $19.Service get service => $_getN(3);
   @$pb.TagNumber(6)
   set service($19.Service v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasService() => $_has(4);
+  $core.bool hasService() => $_has(3);
   @$pb.TagNumber(6)
   void clearService() => clearField(6);
   @$pb.TagNumber(6)
-  $19.Service ensureService() => $_ensure(4);
+  $19.Service ensureService() => $_ensure(3);
+
+  @$pb.TagNumber(7)
+  $32.Timestamp get syncTime => $_getN(4);
+  @$pb.TagNumber(7)
+  set syncTime($32.Timestamp v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasSyncTime() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearSyncTime() => clearField(7);
+  @$pb.TagNumber(7)
+  $32.Timestamp ensureSyncTime() => $_ensure(4);
 }
 
 

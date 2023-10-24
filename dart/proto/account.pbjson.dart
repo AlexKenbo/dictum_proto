@@ -33,6 +33,7 @@ const Account$json = {
     {'1': 'fi', '3': 19, '4': 1, '5': 11, '6': '.Fi', '10': 'fi'},
     {'1': 'cashier', '3': 21, '4': 1, '5': 11, '6': '.Employee', '10': 'cashier'},
     {'1': 'account_detail', '3': 23, '4': 1, '5': 11, '6': '.AccountDetail', '10': 'accountDetail'},
+    {'1': 'create_time', '3': 24, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
 };
 
@@ -47,5 +48,6 @@ final $typed_data.Uint8List accountDescriptor = $convert.base64Decode(
     'IAEoCVIMcmVzb3VyY2VOYW1lEh8KBmVudGl0eRgPIAEoCzIHLkVudGl0eVIGZW50aXR5EiUKCG'
     'N1cnJlbmN5GBEgASgLMgkuQ3VycmVuY3lSCGN1cnJlbmN5EhMKAmZpGBMgASgLMgMuRmlSAmZp'
     'EiMKB2Nhc2hpZXIYFSABKAsyCS5FbXBsb3llZVIHY2FzaGllchI1Cg5hY2NvdW50X2RldGFpbB'
-    'gXIAEoCzIOLkFjY291bnREZXRhaWxSDWFjY291bnREZXRhaWw=');
+    'gXIAEoCzIOLkFjY291bnREZXRhaWxSDWFjY291bnREZXRhaWwSOwoLY3JlYXRlX3RpbWUYGCAB'
+    'KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdGVUaW1l');
 

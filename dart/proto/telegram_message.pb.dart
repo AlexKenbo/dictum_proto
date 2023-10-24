@@ -13,14 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'event.pb.dart' as $47;
+import 'accrual.pb.dart' as $24;
+import 'transfer.pb.dart' as $22;
 
 class TelegramMessage extends $pb.GeneratedMessage {
   factory TelegramMessage({
     $core.int? telegramMessageId,
     $core.int? chatSourceKey,
-    $core.int? eventId,
-    $47.Event? event,
+    $core.int? transferId,
+    $core.int? accrualId,
+    $22.Transfer? transfer,
+    $24.Accrual? accrual,
   }) {
     final $result = create();
     if (telegramMessageId != null) {
@@ -29,11 +32,17 @@ class TelegramMessage extends $pb.GeneratedMessage {
     if (chatSourceKey != null) {
       $result.chatSourceKey = chatSourceKey;
     }
-    if (eventId != null) {
-      $result.eventId = eventId;
+    if (transferId != null) {
+      $result.transferId = transferId;
     }
-    if (event != null) {
-      $result.event = event;
+    if (accrualId != null) {
+      $result.accrualId = accrualId;
+    }
+    if (transfer != null) {
+      $result.transfer = transfer;
+    }
+    if (accrual != null) {
+      $result.accrual = accrual;
     }
     return $result;
   }
@@ -44,8 +53,10 @@ class TelegramMessage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TelegramMessage', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'telegramMessageId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'chatSourceKey', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
-    ..aOM<$47.Event>(4, _omitFieldNames ? '' : 'event', subBuilder: $47.Event.create)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'transferId', $pb.PbFieldType.O3)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
+    ..aOM<$22.Transfer>(7, _omitFieldNames ? '' : 'transfer', subBuilder: $22.Transfer.create)
+    ..aOM<$24.Accrual>(8, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -88,25 +99,45 @@ class TelegramMessage extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearChatSourceKey() => clearField(2);
 
-  @$pb.TagNumber(3)
-  $core.int get eventId => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set eventId($core.int v) { $_setSignedInt32(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasEventId() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearEventId() => clearField(3);
+  @$pb.TagNumber(5)
+  $core.int get transferId => $_getIZ(2);
+  @$pb.TagNumber(5)
+  set transferId($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasTransferId() => $_has(2);
+  @$pb.TagNumber(5)
+  void clearTransferId() => clearField(5);
 
-  @$pb.TagNumber(4)
-  $47.Event get event => $_getN(3);
-  @$pb.TagNumber(4)
-  set event($47.Event v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasEvent() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearEvent() => clearField(4);
-  @$pb.TagNumber(4)
-  $47.Event ensureEvent() => $_ensure(3);
+  @$pb.TagNumber(6)
+  $core.int get accrualId => $_getIZ(3);
+  @$pb.TagNumber(6)
+  set accrualId($core.int v) { $_setSignedInt32(3, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAccrualId() => $_has(3);
+  @$pb.TagNumber(6)
+  void clearAccrualId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $22.Transfer get transfer => $_getN(4);
+  @$pb.TagNumber(7)
+  set transfer($22.Transfer v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasTransfer() => $_has(4);
+  @$pb.TagNumber(7)
+  void clearTransfer() => clearField(7);
+  @$pb.TagNumber(7)
+  $22.Transfer ensureTransfer() => $_ensure(4);
+
+  @$pb.TagNumber(8)
+  $24.Accrual get accrual => $_getN(5);
+  @$pb.TagNumber(8)
+  set accrual($24.Accrual v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasAccrual() => $_has(5);
+  @$pb.TagNumber(8)
+  void clearAccrual() => clearField(8);
+  @$pb.TagNumber(8)
+  $24.Accrual ensureAccrual() => $_ensure(5);
 }
 
 

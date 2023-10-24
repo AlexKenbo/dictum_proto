@@ -5,6 +5,7 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "proto/article_group.proto";
 import "proto/direction.proto";
+import "proto/fund_flow.proto";
   
 message Article
 {
@@ -18,6 +19,7 @@ message Article
   ArticleGroup article_group = 8;
   Direction direction = 9;
   int32 parent_article_id = 10;
-  Article parent_article = 12;
+  Article parent_article = 11;
+  FundFlow fundFlow = 12;
 
 } 

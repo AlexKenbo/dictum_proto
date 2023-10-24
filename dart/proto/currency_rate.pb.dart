@@ -11,20 +11,20 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'currency.pb.dart' as $42;
 
 class CurrencyRate extends $pb.GeneratedMessage {
   factory CurrencyRate({
     $core.String? receiveCurrency,
     $core.String? giveCurrency,
-    $fixnum.Int64? createTime,
     $core.double? purchasePrice,
     $core.double? sellingPrice,
     $42.Currency? receive,
     $42.Currency? give,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (receiveCurrency != null) {
@@ -32,9 +32,6 @@ class CurrencyRate extends $pb.GeneratedMessage {
     }
     if (giveCurrency != null) {
       $result.giveCurrency = giveCurrency;
-    }
-    if (createTime != null) {
-      $result.createTime = createTime;
     }
     if (purchasePrice != null) {
       $result.purchasePrice = purchasePrice;
@@ -48,6 +45,9 @@ class CurrencyRate extends $pb.GeneratedMessage {
     if (give != null) {
       $result.give = give;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     return $result;
   }
   CurrencyRate._() : super();
@@ -57,11 +57,11 @@ class CurrencyRate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CurrencyRate', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'receiveCurrency')
     ..aOS(2, _omitFieldNames ? '' : 'giveCurrency')
-    ..aInt64(3, _omitFieldNames ? '' : 'createTime')
     ..a<$core.double>(4, _omitFieldNames ? '' : 'purchasePrice', $pb.PbFieldType.OD)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'sellingPrice', $pb.PbFieldType.OD)
     ..aOM<$42.Currency>(6, _omitFieldNames ? '' : 'receive', subBuilder: $42.Currency.create)
     ..aOM<$42.Currency>(8, _omitFieldNames ? '' : 'give', subBuilder: $42.Currency.create)
+    ..aOM<$32.Timestamp>(9, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,54 +104,56 @@ class CurrencyRate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGiveCurrency() => clearField(2);
 
-  @$pb.TagNumber(3)
-  $fixnum.Int64 get createTime => $_getI64(2);
-  @$pb.TagNumber(3)
-  set createTime($fixnum.Int64 v) { $_setInt64(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasCreateTime() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearCreateTime() => clearField(3);
-
   @$pb.TagNumber(4)
-  $core.double get purchasePrice => $_getN(3);
+  $core.double get purchasePrice => $_getN(2);
   @$pb.TagNumber(4)
-  set purchasePrice($core.double v) { $_setDouble(3, v); }
+  set purchasePrice($core.double v) { $_setDouble(2, v); }
   @$pb.TagNumber(4)
-  $core.bool hasPurchasePrice() => $_has(3);
+  $core.bool hasPurchasePrice() => $_has(2);
   @$pb.TagNumber(4)
   void clearPurchasePrice() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.double get sellingPrice => $_getN(4);
+  $core.double get sellingPrice => $_getN(3);
   @$pb.TagNumber(5)
-  set sellingPrice($core.double v) { $_setDouble(4, v); }
+  set sellingPrice($core.double v) { $_setDouble(3, v); }
   @$pb.TagNumber(5)
-  $core.bool hasSellingPrice() => $_has(4);
+  $core.bool hasSellingPrice() => $_has(3);
   @$pb.TagNumber(5)
   void clearSellingPrice() => clearField(5);
 
   @$pb.TagNumber(6)
-  $42.Currency get receive => $_getN(5);
+  $42.Currency get receive => $_getN(4);
   @$pb.TagNumber(6)
   set receive($42.Currency v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasReceive() => $_has(5);
+  $core.bool hasReceive() => $_has(4);
   @$pb.TagNumber(6)
   void clearReceive() => clearField(6);
   @$pb.TagNumber(6)
-  $42.Currency ensureReceive() => $_ensure(5);
+  $42.Currency ensureReceive() => $_ensure(4);
 
   @$pb.TagNumber(8)
-  $42.Currency get give => $_getN(6);
+  $42.Currency get give => $_getN(5);
   @$pb.TagNumber(8)
   set give($42.Currency v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasGive() => $_has(6);
+  $core.bool hasGive() => $_has(5);
   @$pb.TagNumber(8)
   void clearGive() => clearField(8);
   @$pb.TagNumber(8)
-  $42.Currency ensureGive() => $_ensure(6);
+  $42.Currency ensureGive() => $_ensure(5);
+
+  @$pb.TagNumber(9)
+  $32.Timestamp get createTime => $_getN(6);
+  @$pb.TagNumber(9)
+  set createTime($32.Timestamp v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasCreateTime() => $_has(6);
+  @$pb.TagNumber(9)
+  void clearCreateTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $32.Timestamp ensureCreateTime() => $_ensure(6);
 }
 
 

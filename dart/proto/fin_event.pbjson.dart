@@ -149,3 +149,15 @@ final $typed_data.Uint8List listAllocationsResponseDescriptor = $convert.base64D
     'JjZU5hbWUSLQoLYWxsb2NhdGlvbnMYAiADKAsyCy5BbGxvY2F0aW9uUgthbGxvY2F0aW9ucxIm'
     'Cg9uZXh0X3BhZ2VfdG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
 
+@$core.Deprecated('Use fileResponseDescriptor instead')
+const FileResponse$json = {
+  '1': 'FileResponse',
+  '2': [
+    {'1': 'file', '3': 1, '4': 1, '5': 12, '10': 'file'},
+  ],
+};
+
+/// Descriptor for `FileResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fileResponseDescriptor = $convert.base64Decode(
+    'CgxGaWxlUmVzcG9uc2USEgoEZmlsZRgBIAEoDFIEZmlsZQ==');
+

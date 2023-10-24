@@ -18,17 +18,17 @@ const ServiceRun$json = {
   '1': 'ServiceRun',
   '2': [
     {'1': 'service_id', '3': 1, '4': 1, '5': 5, '10': 'serviceId'},
-    {'1': 'sync_time', '3': 2, '4': 1, '5': 3, '10': 'syncTime'},
     {'1': 'state', '3': 3, '4': 1, '5': 14, '6': '.ServiceRunState', '10': 'state'},
     {'1': 'message', '3': 4, '4': 1, '5': 9, '10': 'message'},
     {'1': 'service', '3': 6, '4': 1, '5': 11, '6': '.Service', '10': 'service'},
+    {'1': 'sync_time', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'syncTime'},
   ],
 };
 
 /// Descriptor for `ServiceRun`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceRunDescriptor = $convert.base64Decode(
-    'CgpTZXJ2aWNlUnVuEh0KCnNlcnZpY2VfaWQYASABKAVSCXNlcnZpY2VJZBIbCglzeW5jX3RpbW'
-    'UYAiABKANSCHN5bmNUaW1lEiYKBXN0YXRlGAMgASgOMhAuU2VydmljZVJ1blN0YXRlUgVzdGF0'
-    'ZRIYCgdtZXNzYWdlGAQgASgJUgdtZXNzYWdlEiIKB3NlcnZpY2UYBiABKAsyCC5TZXJ2aWNlUg'
-    'dzZXJ2aWNl');
+    'CgpTZXJ2aWNlUnVuEh0KCnNlcnZpY2VfaWQYASABKAVSCXNlcnZpY2VJZBImCgVzdGF0ZRgDIA'
+    'EoDjIQLlNlcnZpY2VSdW5TdGF0ZVIFc3RhdGUSGAoHbWVzc2FnZRgEIAEoCVIHbWVzc2FnZRIi'
+    'CgdzZXJ2aWNlGAYgASgLMgguU2VydmljZVIHc2VydmljZRI3CglzeW5jX3RpbWUYByABKAsyGi'
+    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUghzeW5jVGltZQ==');
 

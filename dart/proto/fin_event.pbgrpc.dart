@@ -78,6 +78,10 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/BatchInsertAccruals',
       ($21.BatchInsertAccrualsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$generateAccrualPDF = $grpc.ClientMethod<$0.GetRequest, $21.FileResponse>(
+      '/FinEvent/GenerateAccrualPDF',
+      ($0.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $21.FileResponse.fromBuffer(value));
   static final _$listProducts = $grpc.ClientMethod<$0.ListRequest, $21.ListProductsResponse>(
       '/FinEvent/ListProducts',
       ($0.ListRequest value) => value.writeToBuffer(),
@@ -171,6 +175,10 @@ class FinEventClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$3.Empty> batchInsertAccruals($21.BatchInsertAccrualsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchInsertAccruals, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$21.FileResponse> generateAccrualPDF($0.GetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$generateAccrualPDF, request, options: options);
   }
 
   $grpc.ResponseFuture<$21.ListProductsResponse> listProducts($0.ListRequest request, {$grpc.CallOptions? options}) {
@@ -303,6 +311,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $21.BatchInsertAccrualsRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetRequest, $21.FileResponse>(
+        'GenerateAccrualPDF',
+        generateAccrualPDF_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetRequest.fromBuffer(value),
+        ($21.FileResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $21.ListProductsResponse>(
         'ListProducts',
         listProducts_Pre,
@@ -423,6 +438,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return batchInsertAccruals(call, await request);
   }
 
+  $async.Future<$21.FileResponse> generateAccrualPDF_Pre($grpc.ServiceCall call, $async.Future<$0.GetRequest> request) async {
+    return generateAccrualPDF(call, await request);
+  }
+
   $async.Future<$21.ListProductsResponse> listProducts_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listProducts(call, await request);
   }
@@ -475,6 +494,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$24.Accrual> updateAccrual($grpc.ServiceCall call, $24.Accrual request);
   $async.Future<$25.AccrualsAggregate> aggregateAccruals($grpc.ServiceCall call, $0.AggregateRequest request);
   $async.Future<$3.Empty> batchInsertAccruals($grpc.ServiceCall call, $21.BatchInsertAccrualsRequest request);
+  $async.Future<$21.FileResponse> generateAccrualPDF($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$21.ListProductsResponse> listProducts($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$21.ListPositionsResponse> listPositions($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$26.Position> updatePosition($grpc.ServiceCall call, $26.Position request);

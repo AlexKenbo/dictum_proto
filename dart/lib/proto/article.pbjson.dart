@@ -27,7 +27,8 @@ const Article$json = {
     {'1': 'article_group', '3': 8, '4': 1, '5': 14, '6': '.ArticleGroup', '10': 'articleGroup'},
     {'1': 'direction', '3': 9, '4': 1, '5': 14, '6': '.Direction', '10': 'direction'},
     {'1': 'parent_article_id', '3': 10, '4': 1, '5': 5, '10': 'parentArticleId'},
-    {'1': 'parent_article', '3': 12, '4': 1, '5': 11, '6': '.Article', '10': 'parentArticle'},
+    {'1': 'parent_article', '3': 11, '4': 1, '5': 11, '6': '.Article', '10': 'parentArticle'},
+    {'1': 'fundFlow', '3': 12, '4': 1, '5': 14, '6': '.FundFlow', '10': 'fundFlow'},
   ],
 };
 
@@ -40,6 +41,6 @@ final $typed_data.Uint8List articleDescriptor = $convert.base64Decode(
     'bmtpbmcSJwoPY29uZ2xvbWVyYXRlX2lkGAcgASgFUg5jb25nbG9tZXJhdGVJZBIyCg1hcnRpY2'
     'xlX2dyb3VwGAggASgOMg0uQXJ0aWNsZUdyb3VwUgxhcnRpY2xlR3JvdXASKAoJZGlyZWN0aW9u'
     'GAkgASgOMgouRGlyZWN0aW9uUglkaXJlY3Rpb24SKgoRcGFyZW50X2FydGljbGVfaWQYCiABKA'
-    'VSD3BhcmVudEFydGljbGVJZBIvCg5wYXJlbnRfYXJ0aWNsZRgMIAEoCzIILkFydGljbGVSDXBh'
-    'cmVudEFydGljbGU=');
+    'VSD3BhcmVudEFydGljbGVJZBIvCg5wYXJlbnRfYXJ0aWNsZRgLIAEoCzIILkFydGljbGVSDXBh'
+    'cmVudEFydGljbGUSJQoIZnVuZEZsb3cYDCABKA4yCS5GdW5kRmxvd1IIZnVuZEZsb3c=');
 

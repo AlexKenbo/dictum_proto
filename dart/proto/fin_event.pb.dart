@@ -17,7 +17,7 @@ import 'accrual.pb.dart' as $24;
 import 'allocation.pb.dart' as $28;
 import 'article.pb.dart' as $27;
 import 'position.pb.dart' as $26;
-import 'product.pb.dart' as $53;
+import 'product.pb.dart' as $56;
 import 'transfer.pb.dart' as $22;
 
 class ListTransfersResponse extends $pb.GeneratedMessage {
@@ -341,7 +341,7 @@ class BatchInsertPositionsRequest extends $pb.GeneratedMessage {
 class ListProductsResponse extends $pb.GeneratedMessage {
   factory ListProductsResponse({
     $core.String? resourceName,
-    $core.Iterable<$53.Product>? products,
+    $core.Iterable<$56.Product>? products,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -362,7 +362,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListProductsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$53.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $53.Product.create)
+    ..pc<$56.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $56.Product.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -398,7 +398,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$53.Product> get products => $_getList(1);
+  $core.List<$56.Product> get products => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -610,6 +610,56 @@ class ListAllocationsResponse extends $pb.GeneratedMessage {
   $core.bool hasNextPageToken() => $_has(2);
   @$pb.TagNumber(3)
   void clearNextPageToken() => clearField(3);
+}
+
+class FileResponse extends $pb.GeneratedMessage {
+  factory FileResponse({
+    $core.List<$core.int>? file,
+  }) {
+    final $result = create();
+    if (file != null) {
+      $result.file = file;
+    }
+    return $result;
+  }
+  FileResponse._() : super();
+  factory FileResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory FileResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FileResponse', createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'file', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  FileResponse clone() => FileResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  FileResponse copyWith(void Function(FileResponse) updates) => super.copyWith((message) => updates(message as FileResponse)) as FileResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FileResponse create() => FileResponse._();
+  FileResponse createEmptyInstance() => create();
+  static $pb.PbList<FileResponse> createRepeated() => $pb.PbList<FileResponse>();
+  @$core.pragma('dart2js:noInline')
+  static FileResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileResponse>(create);
+  static FileResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get file => $_getN(0);
+  @$pb.TagNumber(1)
+  set file($core.List<$core.int> v) { $_setBytes(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFile() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFile() => clearField(1);
 }
 
 

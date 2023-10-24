@@ -11,8 +11,9 @@
 
 import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../google/protobuf/timestamp.pb.dart' as $32;
 
 class Operation extends $pb.GeneratedMessage {
   factory Operation({
@@ -20,9 +21,9 @@ class Operation extends $pb.GeneratedMessage {
     $core.int? conglomerateId,
     $core.bool? isComposite,
     $core.bool? isMulticurrency,
-    $fixnum.Int64? createTime,
     $core.String? alias,
     $core.String? resourceName,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (operationId != null) {
@@ -37,14 +38,14 @@ class Operation extends $pb.GeneratedMessage {
     if (isMulticurrency != null) {
       $result.isMulticurrency = isMulticurrency;
     }
-    if (createTime != null) {
-      $result.createTime = createTime;
-    }
     if (alias != null) {
       $result.alias = alias;
     }
     if (resourceName != null) {
       $result.resourceName = resourceName;
+    }
+    if (createTime != null) {
+      $result.createTime = createTime;
     }
     return $result;
   }
@@ -57,9 +58,9 @@ class Operation extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..aOB(3, _omitFieldNames ? '' : 'isComposite')
     ..aOB(4, _omitFieldNames ? '' : 'isMulticurrency')
-    ..aInt64(5, _omitFieldNames ? '' : 'createTime')
     ..aOS(6, _omitFieldNames ? '' : 'alias')
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
+    ..aOM<$32.Timestamp>(9, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -120,32 +121,34 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearIsMulticurrency() => clearField(4);
 
-  @$pb.TagNumber(5)
-  $fixnum.Int64 get createTime => $_getI64(4);
-  @$pb.TagNumber(5)
-  set createTime($fixnum.Int64 v) { $_setInt64(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasCreateTime() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearCreateTime() => clearField(5);
-
   @$pb.TagNumber(6)
-  $core.String get alias => $_getSZ(5);
+  $core.String get alias => $_getSZ(4);
   @$pb.TagNumber(6)
-  set alias($core.String v) { $_setString(5, v); }
+  set alias($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(6)
-  $core.bool hasAlias() => $_has(5);
+  $core.bool hasAlias() => $_has(4);
   @$pb.TagNumber(6)
   void clearAlias() => clearField(6);
 
   @$pb.TagNumber(8)
-  $core.String get resourceName => $_getSZ(6);
+  $core.String get resourceName => $_getSZ(5);
   @$pb.TagNumber(8)
-  set resourceName($core.String v) { $_setString(6, v); }
+  set resourceName($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(8)
-  $core.bool hasResourceName() => $_has(6);
+  $core.bool hasResourceName() => $_has(5);
   @$pb.TagNumber(8)
   void clearResourceName() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $32.Timestamp get createTime => $_getN(6);
+  @$pb.TagNumber(9)
+  set createTime($32.Timestamp v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasCreateTime() => $_has(6);
+  @$pb.TagNumber(9)
+  void clearCreateTime() => clearField(9);
+  @$pb.TagNumber(9)
+  $32.Timestamp ensureCreateTime() => $_ensure(6);
 }
 
 
