@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $4;
-import 'agent.pb.dart' as $2;
-import 'country.pb.dart' as $1;
-import 'entity_source.pb.dart' as $3;
-import 'entity_type.pbenum.dart' as $5;
-import 'telegram_user.pb.dart' as $0;
+import '../google/protobuf/timestamp.pb.dart' as $32;
+import 'agent.pb.dart' as $35;
+import 'country.pb.dart' as $34;
+import 'entity_source.pb.dart' as $36;
+import 'entity_type.pbenum.dart' as $37;
+import 'telegram_user.pb.dart' as $33;
 
 /// TODO: нужно сделать для всех сущностей вариаци Create без entity_id, сейчас на клиенте ставим 0
 class Entity extends $pb.GeneratedMessage {
@@ -26,7 +26,7 @@ class Entity extends $pb.GeneratedMessage {
     $core.int? entityId,
     $core.int? conglomerateId,
     $core.String? title,
-    $5.EntityType? type,
+    $37.EntityType? type,
     $core.bool? isAgent,
     $core.bool? isEmployeeOfNullable,
     $core.String? email,
@@ -35,13 +35,13 @@ class Entity extends $pb.GeneratedMessage {
     $core.int? telegramUserId,
     $core.String? countryCode,
     $core.String? sourceKey,
-    $0.TelegramUser? telegramUser,
-    $1.Country? country,
-    $2.Agent? agent,
-    $core.Iterable<$3.EntitySource>? sources,
+    $33.TelegramUser? telegramUser,
+    $34.Country? country,
+    $35.Agent? agent,
+    $core.Iterable<$36.EntitySource>? sources,
     $core.int? contactCreatorId,
     $core.String? aliasCode,
-    $4.Timestamp? createTime,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (entityId != null) {
@@ -111,7 +111,7 @@ class Entity extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'title')
-    ..e<$5.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $5.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $5.EntityType.valueOf, enumValues: $5.EntityType.values)
+    ..e<$37.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $37.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $37.EntityType.valueOf, enumValues: $37.EntityType.values)
     ..aOB(5, _omitFieldNames ? '' : 'isAgent')
     ..aOB(6, _omitFieldNames ? '' : 'isEmployeeOfNullable')
     ..aOS(9, _omitFieldNames ? '' : 'email')
@@ -120,13 +120,13 @@ class Entity extends $pb.GeneratedMessage {
     ..a<$core.int>(15, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(17, _omitFieldNames ? '' : 'countryCode')
     ..aOS(19, _omitFieldNames ? '' : 'sourceKey')
-    ..aOM<$0.TelegramUser>(21, _omitFieldNames ? '' : 'telegramUser', subBuilder: $0.TelegramUser.create)
-    ..aOM<$1.Country>(23, _omitFieldNames ? '' : 'country', subBuilder: $1.Country.create)
-    ..aOM<$2.Agent>(25, _omitFieldNames ? '' : 'agent', subBuilder: $2.Agent.create)
-    ..pc<$3.EntitySource>(27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $3.EntitySource.create)
+    ..aOM<$33.TelegramUser>(21, _omitFieldNames ? '' : 'telegramUser', subBuilder: $33.TelegramUser.create)
+    ..aOM<$34.Country>(23, _omitFieldNames ? '' : 'country', subBuilder: $34.Country.create)
+    ..aOM<$35.Agent>(25, _omitFieldNames ? '' : 'agent', subBuilder: $35.Agent.create)
+    ..pc<$36.EntitySource>(27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $36.EntitySource.create)
     ..a<$core.int>(28, _omitFieldNames ? '' : 'contactCreatorId', $pb.PbFieldType.O3)
     ..aOS(29, _omitFieldNames ? '' : 'aliasCode')
-    ..aOM<$4.Timestamp>(30, _omitFieldNames ? '' : 'createTime', subBuilder: $4.Timestamp.create)
+    ..aOM<$32.Timestamp>(30, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -179,9 +179,9 @@ class Entity extends $pb.GeneratedMessage {
   void clearTitle() => clearField(3);
 
   @$pb.TagNumber(4)
-  $5.EntityType get type => $_getN(3);
+  $37.EntityType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($5.EntityType v) { setField(4, v); }
+  set type($37.EntityType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -260,40 +260,40 @@ class Entity extends $pb.GeneratedMessage {
   void clearSourceKey() => clearField(19);
 
   @$pb.TagNumber(21)
-  $0.TelegramUser get telegramUser => $_getN(12);
+  $33.TelegramUser get telegramUser => $_getN(12);
   @$pb.TagNumber(21)
-  set telegramUser($0.TelegramUser v) { setField(21, v); }
+  set telegramUser($33.TelegramUser v) { setField(21, v); }
   @$pb.TagNumber(21)
   $core.bool hasTelegramUser() => $_has(12);
   @$pb.TagNumber(21)
   void clearTelegramUser() => clearField(21);
   @$pb.TagNumber(21)
-  $0.TelegramUser ensureTelegramUser() => $_ensure(12);
+  $33.TelegramUser ensureTelegramUser() => $_ensure(12);
 
   @$pb.TagNumber(23)
-  $1.Country get country => $_getN(13);
+  $34.Country get country => $_getN(13);
   @$pb.TagNumber(23)
-  set country($1.Country v) { setField(23, v); }
+  set country($34.Country v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasCountry() => $_has(13);
   @$pb.TagNumber(23)
   void clearCountry() => clearField(23);
   @$pb.TagNumber(23)
-  $1.Country ensureCountry() => $_ensure(13);
+  $34.Country ensureCountry() => $_ensure(13);
 
   @$pb.TagNumber(25)
-  $2.Agent get agent => $_getN(14);
+  $35.Agent get agent => $_getN(14);
   @$pb.TagNumber(25)
-  set agent($2.Agent v) { setField(25, v); }
+  set agent($35.Agent v) { setField(25, v); }
   @$pb.TagNumber(25)
   $core.bool hasAgent() => $_has(14);
   @$pb.TagNumber(25)
   void clearAgent() => clearField(25);
   @$pb.TagNumber(25)
-  $2.Agent ensureAgent() => $_ensure(14);
+  $35.Agent ensureAgent() => $_ensure(14);
 
   @$pb.TagNumber(27)
-  $core.List<$3.EntitySource> get sources => $_getList(15);
+  $core.List<$36.EntitySource> get sources => $_getList(15);
 
   @$pb.TagNumber(28)
   $core.int get contactCreatorId => $_getIZ(16);
@@ -314,15 +314,15 @@ class Entity extends $pb.GeneratedMessage {
   void clearAliasCode() => clearField(29);
 
   @$pb.TagNumber(30)
-  $4.Timestamp get createTime => $_getN(18);
+  $32.Timestamp get createTime => $_getN(18);
   @$pb.TagNumber(30)
-  set createTime($4.Timestamp v) { setField(30, v); }
+  set createTime($32.Timestamp v) { setField(30, v); }
   @$pb.TagNumber(30)
   $core.bool hasCreateTime() => $_has(18);
   @$pb.TagNumber(30)
   void clearCreateTime() => clearField(30);
   @$pb.TagNumber(30)
-  $4.Timestamp ensureCreateTime() => $_ensure(18);
+  $32.Timestamp ensureCreateTime() => $_ensure(18);
 }
 
 

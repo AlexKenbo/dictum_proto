@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $2;
-import 'entity_role.pb.dart' as $0;
-import 'telegram_user.pb.dart' as $1;
+import '../google/protobuf/timestamp.pb.dart' as $32;
+import 'entity_role.pb.dart' as $38;
+import 'telegram_user.pb.dart' as $33;
 
 class User extends $pb.GeneratedMessage {
   factory User({
@@ -26,9 +26,9 @@ class User extends $pb.GeneratedMessage {
     $core.int? telegramUserId,
     $core.String? refKey,
     $core.String? resourceName,
-    $core.Iterable<$0.EntityRole>? entityRoles,
-    $1.TelegramUser? telegramUser,
-    $2.Timestamp? createTime,
+    $core.Iterable<$38.EntityRole>? entityRoles,
+    $33.TelegramUser? telegramUser,
+    $32.Timestamp? createTime,
   }) {
     final $result = create();
     if (userId != null) {
@@ -75,9 +75,9 @@ class User extends $pb.GeneratedMessage {
     ..a<$core.int>(7, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$0.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $0.EntityRole.create)
-    ..aOM<$1.TelegramUser>(15, _omitFieldNames ? '' : 'telegramUser', subBuilder: $1.TelegramUser.create)
-    ..aOM<$2.Timestamp>(16, _omitFieldNames ? '' : 'createTime', subBuilder: $2.Timestamp.create)
+    ..pc<$38.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $38.EntityRole.create)
+    ..aOM<$33.TelegramUser>(15, _omitFieldNames ? '' : 'telegramUser', subBuilder: $33.TelegramUser.create)
+    ..aOM<$32.Timestamp>(16, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -166,29 +166,29 @@ class User extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(11);
 
   @$pb.TagNumber(13)
-  $core.List<$0.EntityRole> get entityRoles => $_getList(7);
+  $core.List<$38.EntityRole> get entityRoles => $_getList(7);
 
   @$pb.TagNumber(15)
-  $1.TelegramUser get telegramUser => $_getN(8);
+  $33.TelegramUser get telegramUser => $_getN(8);
   @$pb.TagNumber(15)
-  set telegramUser($1.TelegramUser v) { setField(15, v); }
+  set telegramUser($33.TelegramUser v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasTelegramUser() => $_has(8);
   @$pb.TagNumber(15)
   void clearTelegramUser() => clearField(15);
   @$pb.TagNumber(15)
-  $1.TelegramUser ensureTelegramUser() => $_ensure(8);
+  $33.TelegramUser ensureTelegramUser() => $_ensure(8);
 
   @$pb.TagNumber(16)
-  $2.Timestamp get createTime => $_getN(9);
+  $32.Timestamp get createTime => $_getN(9);
   @$pb.TagNumber(16)
-  set createTime($2.Timestamp v) { setField(16, v); }
+  set createTime($32.Timestamp v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasCreateTime() => $_has(9);
   @$pb.TagNumber(16)
   void clearCreateTime() => clearField(16);
   @$pb.TagNumber(16)
-  $2.Timestamp ensureCreateTime() => $_ensure(9);
+  $32.Timestamp ensureCreateTime() => $_ensure(9);
 }
 
 

@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $2;
-import 'account.pb.dart' as $0;
-import 'employee.pb.dart' as $1;
+import '../google/protobuf/timestamp.pb.dart' as $32;
+import 'account.pb.dart' as $6;
+import 'employee.pb.dart' as $5;
 
 class AccountAudit extends $pb.GeneratedMessage {
   factory AccountAudit({
@@ -24,9 +24,9 @@ class AccountAudit extends $pb.GeneratedMessage {
     $core.double? accountBalance,
     $core.int? auditorId,
     $core.String? resourceName,
-    $0.Account? account,
-    $1.Employee? employee,
-    $2.Timestamp? auditTime,
+    $6.Account? account,
+    $5.Employee? employee,
+    $32.Timestamp? auditTime,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -65,9 +65,9 @@ class AccountAudit extends $pb.GeneratedMessage {
     ..a<$core.double>(4, _omitFieldNames ? '' : 'accountBalance', $pb.PbFieldType.OD)
     ..a<$core.int>(5, _omitFieldNames ? '' : 'auditorId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$0.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $0.Account.create)
-    ..aOM<$1.Employee>(11, _omitFieldNames ? '' : 'employee', subBuilder: $1.Employee.create)
-    ..aOM<$2.Timestamp>(12, _omitFieldNames ? '' : 'auditTime', subBuilder: $2.Timestamp.create)
+    ..aOM<$6.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
+    ..aOM<$5.Employee>(11, _omitFieldNames ? '' : 'employee', subBuilder: $5.Employee.create)
+    ..aOM<$32.Timestamp>(12, _omitFieldNames ? '' : 'auditTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -138,37 +138,37 @@ class AccountAudit extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $0.Account get account => $_getN(5);
+  $6.Account get account => $_getN(5);
   @$pb.TagNumber(9)
-  set account($0.Account v) { setField(9, v); }
+  set account($6.Account v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasAccount() => $_has(5);
   @$pb.TagNumber(9)
   void clearAccount() => clearField(9);
   @$pb.TagNumber(9)
-  $0.Account ensureAccount() => $_ensure(5);
+  $6.Account ensureAccount() => $_ensure(5);
 
   @$pb.TagNumber(11)
-  $1.Employee get employee => $_getN(6);
+  $5.Employee get employee => $_getN(6);
   @$pb.TagNumber(11)
-  set employee($1.Employee v) { setField(11, v); }
+  set employee($5.Employee v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasEmployee() => $_has(6);
   @$pb.TagNumber(11)
   void clearEmployee() => clearField(11);
   @$pb.TagNumber(11)
-  $1.Employee ensureEmployee() => $_ensure(6);
+  $5.Employee ensureEmployee() => $_ensure(6);
 
   @$pb.TagNumber(12)
-  $2.Timestamp get auditTime => $_getN(7);
+  $32.Timestamp get auditTime => $_getN(7);
   @$pb.TagNumber(12)
-  set auditTime($2.Timestamp v) { setField(12, v); }
+  set auditTime($32.Timestamp v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasAuditTime() => $_has(7);
   @$pb.TagNumber(12)
   void clearAuditTime() => clearField(12);
   @$pb.TagNumber(12)
-  $2.Timestamp ensureAuditTime() => $_ensure(7);
+  $32.Timestamp ensureAuditTime() => $_ensure(7);
 }
 
 

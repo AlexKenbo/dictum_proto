@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment.pb.dart' as $0;
-import 'entity.pb.dart' as $1;
+import 'attachment.pb.dart' as $16;
+import 'entity.pb.dart' as $2;
 
 class EntityAttachment extends $pb.GeneratedMessage {
   factory EntityAttachment({
     $core.int? entityAttachmentId,
     $core.int? attachmentId,
     $core.int? entityId,
-    $0.Attachment? attachment,
-    $1.Entity? entity,
+    $16.Attachment? attachment,
+    $2.Entity? entity,
   }) {
     final $result = create();
     if (entityAttachmentId != null) {
@@ -50,8 +50,8 @@ class EntityAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'entityAttachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$0.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $0.Attachment.create)
-    ..aOM<$1.Entity>(6, _omitFieldNames ? '' : 'entity', subBuilder: $1.Entity.create)
+    ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
+    ..aOM<$2.Entity>(6, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,26 +104,26 @@ class EntityAttachment extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $0.Attachment get attachment => $_getN(3);
+  $16.Attachment get attachment => $_getN(3);
   @$pb.TagNumber(4)
-  set attachment($0.Attachment v) { setField(4, v); }
+  set attachment($16.Attachment v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAttachment() => $_has(3);
   @$pb.TagNumber(4)
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Attachment ensureAttachment() => $_ensure(3);
+  $16.Attachment ensureAttachment() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $1.Entity get entity => $_getN(4);
+  $2.Entity get entity => $_getN(4);
   @$pb.TagNumber(6)
-  set entity($1.Entity v) { setField(6, v); }
+  set entity($2.Entity v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasEntity() => $_has(4);
   @$pb.TagNumber(6)
   void clearEntity() => clearField(6);
   @$pb.TagNumber(6)
-  $1.Entity ensureEntity() => $_ensure(4);
+  $2.Entity ensureEntity() => $_ensure(4);
 }
 
 

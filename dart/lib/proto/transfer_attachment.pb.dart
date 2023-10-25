@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment.pb.dart' as $0;
-import 'transfer.pb.dart' as $1;
+import 'attachment.pb.dart' as $16;
+import 'transfer.pb.dart' as $22;
 
 class TransferAttachment extends $pb.GeneratedMessage {
   factory TransferAttachment({
     $core.int? eventAttachmentId,
     $core.int? attachmentId,
     $core.int? eventId,
-    $0.Attachment? attachment,
-    $1.Transfer? transfer,
+    $16.Attachment? attachment,
+    $22.Transfer? transfer,
   }) {
     final $result = create();
     if (eventAttachmentId != null) {
@@ -50,8 +50,8 @@ class TransferAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'eventAttachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
-    ..aOM<$0.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $0.Attachment.create)
-    ..aOM<$1.Transfer>(6, _omitFieldNames ? '' : 'transfer', subBuilder: $1.Transfer.create)
+    ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
+    ..aOM<$22.Transfer>(6, _omitFieldNames ? '' : 'transfer', subBuilder: $22.Transfer.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,26 +104,26 @@ class TransferAttachment extends $pb.GeneratedMessage {
   void clearEventId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $0.Attachment get attachment => $_getN(3);
+  $16.Attachment get attachment => $_getN(3);
   @$pb.TagNumber(4)
-  set attachment($0.Attachment v) { setField(4, v); }
+  set attachment($16.Attachment v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAttachment() => $_has(3);
   @$pb.TagNumber(4)
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Attachment ensureAttachment() => $_ensure(3);
+  $16.Attachment ensureAttachment() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $1.Transfer get transfer => $_getN(4);
+  $22.Transfer get transfer => $_getN(4);
   @$pb.TagNumber(6)
-  set transfer($1.Transfer v) { setField(6, v); }
+  set transfer($22.Transfer v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTransfer() => $_has(4);
   @$pb.TagNumber(6)
   void clearTransfer() => clearField(6);
   @$pb.TagNumber(6)
-  $1.Transfer ensureTransfer() => $_ensure(4);
+  $22.Transfer ensureTransfer() => $_ensure(4);
 }
 
 

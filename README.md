@@ -36,7 +36,7 @@ Protocol Buffers - буффер между протоколами бекенда
 2. Запустите компиляцию из корня:
 
    ```bash
-      protoc -I . -I ./google --dart_out=grpc:dart $(find . -name "*.proto")
+      protoc -I . -I ./google --dart_out=grpc:dart/lib $(find . -name "*.proto")
    ```
 
    ```powershell
