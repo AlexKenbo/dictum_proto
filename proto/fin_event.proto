@@ -174,7 +174,7 @@ service FinEvent {
         };
     };
 
-    rpc DeleteArticle(DeleteRequest) returns (Article) {
+    rpc DeleteArticle(DeleteRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
             delete:  "/v1/{resource_name=articles/*}"
             body: "article"
