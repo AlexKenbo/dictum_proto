@@ -114,6 +114,10 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/UpdateArticle',
       ($27.Article value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $27.Article.fromBuffer(value));
+  static final _$deleteArticle = $grpc.ClientMethod<$0.DeleteRequest, $27.Article>(
+      '/FinEvent/DeleteArticle',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $27.Article.fromBuffer(value));
   static final _$listAllocations = $grpc.ClientMethod<$0.ListRequest, $21.ListAllocationsResponse>(
       '/FinEvent/ListAllocations',
       ($0.ListRequest value) => value.writeToBuffer(),
@@ -211,6 +215,10 @@ class FinEventClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$27.Article> updateArticle($27.Article request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateArticle, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$27.Article> deleteArticle($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteArticle, request, options: options);
   }
 
   $grpc.ResponseFuture<$21.ListAllocationsResponse> listAllocations($0.ListRequest request, {$grpc.CallOptions? options}) {
@@ -374,6 +382,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $27.Article.fromBuffer(value),
         ($27.Article value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $27.Article>(
+        'DeleteArticle',
+        deleteArticle_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($27.Article value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $21.ListAllocationsResponse>(
         'ListAllocations',
         listAllocations_Pre,
@@ -474,6 +489,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return updateArticle(call, await request);
   }
 
+  $async.Future<$27.Article> deleteArticle_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteArticle(call, await request);
+  }
+
   $async.Future<$21.ListAllocationsResponse> listAllocations_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listAllocations(call, await request);
   }
@@ -503,6 +522,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$27.Article> getArticle($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$27.Article> createArticle($grpc.ServiceCall call, $27.Article request);
   $async.Future<$27.Article> updateArticle($grpc.ServiceCall call, $27.Article request);
+  $async.Future<$27.Article> deleteArticle($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$21.ListAllocationsResponse> listAllocations($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$28.Allocation> createAllocation($grpc.ServiceCall call, $28.Allocation request);
 }
