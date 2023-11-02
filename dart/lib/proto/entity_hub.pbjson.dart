@@ -48,15 +48,13 @@ const BatchInsertCurrencyRatesRequest$json = {
   '1': 'BatchInsertCurrencyRatesRequest',
   '2': [
     {'1': 'currency_rates', '3': 1, '4': 3, '5': 11, '6': '.CurrencyRate', '10': 'currencyRates'},
-    {'1': 'service_id', '3': 2, '4': 1, '5': 5, '10': 'serviceId'},
   ],
 };
 
 /// Descriptor for `BatchInsertCurrencyRatesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchInsertCurrencyRatesRequestDescriptor = $convert.base64Decode(
     'Ch9CYXRjaEluc2VydEN1cnJlbmN5UmF0ZXNSZXF1ZXN0EjQKDmN1cnJlbmN5X3JhdGVzGAEgAy'
-    'gLMg0uQ3VycmVuY3lSYXRlUg1jdXJyZW5jeVJhdGVzEh0KCnNlcnZpY2VfaWQYAiABKAVSCXNl'
-    'cnZpY2VJZA==');
+    'gLMg0uQ3VycmVuY3lSYXRlUg1jdXJyZW5jeVJhdGVz');
 
 @$core.Deprecated('Use listEmployeesResponseDescriptor instead')
 const ListEmployeesResponse$json = {
@@ -146,6 +144,21 @@ const BatchInsertAccountsResponse$json = {
 final $typed_data.Uint8List batchInsertAccountsResponseDescriptor = $convert.base64Decode(
     'ChtCYXRjaEluc2VydEFjY291bnRzUmVzcG9uc2USJAoIYWNjb3VudHMYASADKAsyCC5BY2NvdW'
     '50UghhY2NvdW50cw==');
+
+@$core.Deprecated('Use listCurrencyRatesResponseDescriptor instead')
+const ListCurrencyRatesResponse$json = {
+  '1': 'ListCurrencyRatesResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'currency_rates', '3': 2, '4': 3, '5': 11, '6': '.CurrencyRate', '10': 'currencyRates'},
+  ],
+};
+
+/// Descriptor for `ListCurrencyRatesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listCurrencyRatesResponseDescriptor = $convert.base64Decode(
+    'ChlMaXN0Q3VycmVuY3lSYXRlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc2'
+    '91cmNlTmFtZRI0Cg5jdXJyZW5jeV9yYXRlcxgCIAMoCzINLkN1cnJlbmN5UmF0ZVINY3VycmVu'
+    'Y3lSYXRlcw==');
 
 @$core.Deprecated('Use listCurrenciesResponseDescriptor instead')
 const ListCurrenciesResponse$json = {

@@ -200,7 +200,6 @@ message BatchInsertEntitiesRequest {
 
 message BatchInsertCurrencyRatesRequest {
     repeated CurrencyRate currency_rates = 1;
-    int32 service_id = 2;
 }
 
 message ListEmployeesResponse {

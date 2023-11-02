@@ -155,14 +155,10 @@ class BatchInsertEntitiesRequest extends $pb.GeneratedMessage {
 class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   factory BatchInsertCurrencyRatesRequest({
     $core.Iterable<$56.CurrencyRate>? currencyRates,
-    $core.int? serviceId,
   }) {
     final $result = create();
     if (currencyRates != null) {
       $result.currencyRates.addAll(currencyRates);
-    }
-    if (serviceId != null) {
-      $result.serviceId = serviceId;
     }
     return $result;
   }
@@ -172,7 +168,6 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertCurrencyRatesRequest', createEmptyInstance: create)
     ..pc<$56.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $56.CurrencyRate.create)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -199,15 +194,6 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$56.CurrencyRate> get currencyRates => $_getList(0);
-
-  @$pb.TagNumber(2)
-  $core.int get serviceId => $_getIZ(1);
-  @$pb.TagNumber(2)
-  set serviceId($core.int v) { $_setSignedInt32(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasServiceId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearServiceId() => clearField(2);
 }
 
 class ListEmployeesResponse extends $pb.GeneratedMessage {
@@ -584,6 +570,64 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$6.Account> get accounts => $_getList(0);
+}
+
+class ListCurrencyRatesResponse extends $pb.GeneratedMessage {
+  factory ListCurrencyRatesResponse({
+    $core.String? resourceName,
+    $core.Iterable<$56.CurrencyRate>? currencyRates,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (currencyRates != null) {
+      $result.currencyRates.addAll(currencyRates);
+    }
+    return $result;
+  }
+  ListCurrencyRatesResponse._() : super();
+  factory ListCurrencyRatesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListCurrencyRatesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCurrencyRatesResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$56.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $56.CurrencyRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListCurrencyRatesResponse clone() => ListCurrencyRatesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListCurrencyRatesResponse copyWith(void Function(ListCurrencyRatesResponse) updates) => super.copyWith((message) => updates(message as ListCurrencyRatesResponse)) as ListCurrencyRatesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListCurrencyRatesResponse create() => ListCurrencyRatesResponse._();
+  ListCurrencyRatesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListCurrencyRatesResponse> createRepeated() => $pb.PbList<ListCurrencyRatesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListCurrencyRatesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListCurrencyRatesResponse>(create);
+  static ListCurrencyRatesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$56.CurrencyRate> get currencyRates => $_getList(1);
 }
 
 class ListCurrenciesResponse extends $pb.GeneratedMessage {
