@@ -17,6 +17,7 @@ import 'account.pb.dart' as $6;
 import 'account_detail.pb.dart' as $7;
 import 'country.pb.dart' as $34;
 import 'currency.pb.dart' as $42;
+import 'currency_rate.pb.dart' as $56;
 import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
 import 'fi.pb.dart' as $43;
@@ -140,6 +141,64 @@ class BatchInsertEntitiesRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $core.List<$2.Entity> get entities => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.int get serviceId => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set serviceId($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasServiceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearServiceId() => clearField(2);
+}
+
+class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
+  factory BatchInsertCurrencyRatesRequest({
+    $core.Iterable<$56.CurrencyRate>? currencyRates,
+    $core.int? serviceId,
+  }) {
+    final $result = create();
+    if (currencyRates != null) {
+      $result.currencyRates.addAll(currencyRates);
+    }
+    if (serviceId != null) {
+      $result.serviceId = serviceId;
+    }
+    return $result;
+  }
+  BatchInsertCurrencyRatesRequest._() : super();
+  factory BatchInsertCurrencyRatesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory BatchInsertCurrencyRatesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertCurrencyRatesRequest', createEmptyInstance: create)
+    ..pc<$56.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $56.CurrencyRate.create)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  BatchInsertCurrencyRatesRequest clone() => BatchInsertCurrencyRatesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  BatchInsertCurrencyRatesRequest copyWith(void Function(BatchInsertCurrencyRatesRequest) updates) => super.copyWith((message) => updates(message as BatchInsertCurrencyRatesRequest)) as BatchInsertCurrencyRatesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BatchInsertCurrencyRatesRequest create() => BatchInsertCurrencyRatesRequest._();
+  BatchInsertCurrencyRatesRequest createEmptyInstance() => create();
+  static $pb.PbList<BatchInsertCurrencyRatesRequest> createRepeated() => $pb.PbList<BatchInsertCurrencyRatesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static BatchInsertCurrencyRatesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BatchInsertCurrencyRatesRequest>(create);
+  static BatchInsertCurrencyRatesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$56.CurrencyRate> get currencyRates => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get serviceId => $_getIZ(1);
