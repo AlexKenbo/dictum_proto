@@ -169,7 +169,7 @@ service EntityHub {
         };
     }
 
-    rpc BatchInsertCurrencyRates (BatchInsertCurrencyRatesRequest) returns (ListCurrenciesResponse) {
+    rpc BatchInsertCurrencyRates (BatchInsertCurrencyRatesRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
             post: "/v1/batch-currencies"
             body: "batch_currencies"
