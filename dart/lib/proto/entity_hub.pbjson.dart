@@ -56,6 +56,19 @@ final $typed_data.Uint8List batchInsertCurrencyRatesRequestDescriptor = $convert
     'Ch9CYXRjaEluc2VydEN1cnJlbmN5UmF0ZXNSZXF1ZXN0EjQKDmN1cnJlbmN5X3JhdGVzGAEgAy'
     'gLMg0uQ3VycmVuY3lSYXRlUg1jdXJyZW5jeVJhdGVz');
 
+@$core.Deprecated('Use listActualCurrencyRatesRequestDescriptor instead')
+const ListActualCurrencyRatesRequest$json = {
+  '1': 'ListActualCurrencyRatesRequest',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  ],
+};
+
+/// Descriptor for `ListActualCurrencyRatesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listActualCurrencyRatesRequestDescriptor = $convert.base64Decode(
+    'Ch5MaXN0QWN0dWFsQ3VycmVuY3lSYXRlc1JlcXVlc3QSIwoNcmVzb3VyY2VfbmFtZRgBIAEoCV'
+    'IMcmVzb3VyY2VOYW1l');
+
 @$core.Deprecated('Use listEmployeesResponseDescriptor instead')
 const ListEmployeesResponse$json = {
   '1': 'ListEmployeesResponse',

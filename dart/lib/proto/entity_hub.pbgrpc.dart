@@ -108,9 +108,9 @@ class EntityHubClient extends $grpc.Client {
       '/EntityHub/ListCurrencies',
       ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ListCurrenciesResponse.fromBuffer(value));
-  static final _$listActualCurrencyRates = $grpc.ClientMethod<$0.ListRequest, $1.ListCurrencyRatesResponse>(
+  static final _$listActualCurrencyRates = $grpc.ClientMethod<$1.ListActualCurrencyRatesRequest, $1.ListCurrencyRatesResponse>(
       '/EntityHub/ListActualCurrencyRates',
-      ($0.ListRequest value) => value.writeToBuffer(),
+      ($1.ListActualCurrencyRatesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ListCurrencyRatesResponse.fromBuffer(value));
   static final _$batchInsertCurrencyRates = $grpc.ClientMethod<$1.BatchInsertCurrencyRatesRequest, $1.ListCurrenciesResponse>(
       '/EntityHub/BatchInsertCurrencyRates',
@@ -207,7 +207,7 @@ class EntityHubClient extends $grpc.Client {
     return $createUnaryCall(_$listCurrencies, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.ListCurrencyRatesResponse> listActualCurrencyRates($0.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ListCurrencyRatesResponse> listActualCurrencyRates($1.ListActualCurrencyRatesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listActualCurrencyRates, request, options: options);
   }
 
@@ -365,12 +365,12 @@ abstract class EntityHubServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
         ($1.ListCurrenciesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.ListRequest, $1.ListCurrencyRatesResponse>(
+    $addMethod($grpc.ServiceMethod<$1.ListActualCurrencyRatesRequest, $1.ListCurrencyRatesResponse>(
         'ListActualCurrencyRates',
         listActualCurrencyRates_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $1.ListActualCurrencyRatesRequest.fromBuffer(value),
         ($1.ListCurrencyRatesResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.BatchInsertCurrencyRatesRequest, $1.ListCurrenciesResponse>(
         'BatchInsertCurrencyRates',
@@ -468,7 +468,7 @@ abstract class EntityHubServiceBase extends $grpc.Service {
     return listCurrencies(call, await request);
   }
 
-  $async.Future<$1.ListCurrencyRatesResponse> listActualCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+  $async.Future<$1.ListCurrencyRatesResponse> listActualCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$1.ListActualCurrencyRatesRequest> request) async {
     return listActualCurrencyRates(call, await request);
   }
 
@@ -500,7 +500,7 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $async.Future<$7.AccountDetail> updateAccountDetails($grpc.ServiceCall call, $7.AccountDetail request);
   $async.Future<$3.Empty> deleteAccount($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$1.ListCurrenciesResponse> listCurrencies($grpc.ServiceCall call, $0.ListRequest request);
-  $async.Future<$1.ListCurrencyRatesResponse> listActualCurrencyRates($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$1.ListCurrencyRatesResponse> listActualCurrencyRates($grpc.ServiceCall call, $1.ListActualCurrencyRatesRequest request);
   $async.Future<$1.ListCurrenciesResponse> batchInsertCurrencyRates($grpc.ServiceCall call, $1.BatchInsertCurrencyRatesRequest request);
   $async.Future<$1.ListFisResponse> listFis($grpc.ServiceCall call, $0.ListRequest request);
 }

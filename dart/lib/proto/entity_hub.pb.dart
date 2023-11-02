@@ -196,6 +196,56 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   $core.List<$56.CurrencyRate> get currencyRates => $_getList(0);
 }
 
+class ListActualCurrencyRatesRequest extends $pb.GeneratedMessage {
+  factory ListActualCurrencyRatesRequest({
+    $core.String? resourceName,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    return $result;
+  }
+  ListActualCurrencyRatesRequest._() : super();
+  factory ListActualCurrencyRatesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListActualCurrencyRatesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActualCurrencyRatesRequest', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListActualCurrencyRatesRequest clone() => ListActualCurrencyRatesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListActualCurrencyRatesRequest copyWith(void Function(ListActualCurrencyRatesRequest) updates) => super.copyWith((message) => updates(message as ListActualCurrencyRatesRequest)) as ListActualCurrencyRatesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListActualCurrencyRatesRequest create() => ListActualCurrencyRatesRequest._();
+  ListActualCurrencyRatesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListActualCurrencyRatesRequest> createRepeated() => $pb.PbList<ListActualCurrencyRatesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListActualCurrencyRatesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListActualCurrencyRatesRequest>(create);
+  static ListActualCurrencyRatesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+}
+
 class ListEmployeesResponse extends $pb.GeneratedMessage {
   factory ListEmployeesResponse({
     $core.String? resourceName,
