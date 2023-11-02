@@ -158,20 +158,20 @@ final $typed_data.Uint8List batchInsertAccountsResponseDescriptor = $convert.bas
     'ChtCYXRjaEluc2VydEFjY291bnRzUmVzcG9uc2USJAoIYWNjb3VudHMYASADKAsyCC5BY2NvdW'
     '50UghhY2NvdW50cw==');
 
-@$core.Deprecated('Use listCurrencyRatesResponseDescriptor instead')
-const ListCurrencyRatesResponse$json = {
-  '1': 'ListCurrencyRatesResponse',
+@$core.Deprecated('Use listActualCurrencyRatesResponseDescriptor instead')
+const ListActualCurrencyRatesResponse$json = {
+  '1': 'ListActualCurrencyRatesResponse',
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'currency_rates', '3': 2, '4': 3, '5': 11, '6': '.CurrencyRate', '10': 'currencyRates'},
   ],
 };
 
-/// Descriptor for `ListCurrencyRatesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listCurrencyRatesResponseDescriptor = $convert.base64Decode(
-    'ChlMaXN0Q3VycmVuY3lSYXRlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc2'
-    '91cmNlTmFtZRI0Cg5jdXJyZW5jeV9yYXRlcxgCIAMoCzINLkN1cnJlbmN5UmF0ZVINY3VycmVu'
-    'Y3lSYXRlcw==');
+/// Descriptor for `ListActualCurrencyRatesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listActualCurrencyRatesResponseDescriptor = $convert.base64Decode(
+    'Ch9MaXN0QWN0dWFsQ3VycmVuY3lSYXRlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKA'
+    'lSDHJlc291cmNlTmFtZRI0Cg5jdXJyZW5jeV9yYXRlcxgCIAMoCzINLkN1cnJlbmN5UmF0ZVIN'
+    'Y3VycmVuY3lSYXRlcw==');
 
 @$core.Deprecated('Use listCurrenciesResponseDescriptor instead')
 const ListCurrenciesResponse$json = {

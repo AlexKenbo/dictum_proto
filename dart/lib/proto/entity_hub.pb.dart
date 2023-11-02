@@ -622,8 +622,8 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
   $core.List<$6.Account> get accounts => $_getList(0);
 }
 
-class ListCurrencyRatesResponse extends $pb.GeneratedMessage {
-  factory ListCurrencyRatesResponse({
+class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
+  factory ListActualCurrencyRatesResponse({
     $core.String? resourceName,
     $core.Iterable<$56.CurrencyRate>? currencyRates,
   }) {
@@ -636,11 +636,11 @@ class ListCurrencyRatesResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  ListCurrencyRatesResponse._() : super();
-  factory ListCurrencyRatesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListCurrencyRatesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  ListActualCurrencyRatesResponse._() : super();
+  factory ListActualCurrencyRatesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListActualCurrencyRatesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCurrencyRatesResponse', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActualCurrencyRatesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
     ..pc<$56.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $56.CurrencyRate.create)
     ..hasRequiredFields = false
@@ -650,22 +650,22 @@ class ListCurrencyRatesResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  ListCurrencyRatesResponse clone() => ListCurrencyRatesResponse()..mergeFromMessage(this);
+  ListActualCurrencyRatesResponse clone() => ListActualCurrencyRatesResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ListCurrencyRatesResponse copyWith(void Function(ListCurrencyRatesResponse) updates) => super.copyWith((message) => updates(message as ListCurrencyRatesResponse)) as ListCurrencyRatesResponse;
+  ListActualCurrencyRatesResponse copyWith(void Function(ListActualCurrencyRatesResponse) updates) => super.copyWith((message) => updates(message as ListActualCurrencyRatesResponse)) as ListActualCurrencyRatesResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static ListCurrencyRatesResponse create() => ListCurrencyRatesResponse._();
-  ListCurrencyRatesResponse createEmptyInstance() => create();
-  static $pb.PbList<ListCurrencyRatesResponse> createRepeated() => $pb.PbList<ListCurrencyRatesResponse>();
+  static ListActualCurrencyRatesResponse create() => ListActualCurrencyRatesResponse._();
+  ListActualCurrencyRatesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListActualCurrencyRatesResponse> createRepeated() => $pb.PbList<ListActualCurrencyRatesResponse>();
   @$core.pragma('dart2js:noInline')
-  static ListCurrencyRatesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListCurrencyRatesResponse>(create);
-  static ListCurrencyRatesResponse? _defaultInstance;
+  static ListActualCurrencyRatesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListActualCurrencyRatesResponse>(create);
+  static ListActualCurrencyRatesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get resourceName => $_getSZ(0);

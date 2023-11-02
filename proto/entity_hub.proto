@@ -163,7 +163,7 @@ service EntityHub {
         };
     }
 
-    rpc ListActualCurrencyRates (ListActualCurrencyRatesRequest) returns (ListCurrencyRatesResponse) {
+    rpc ListActualCurrencyRates (ListActualCurrencyRatesRequest) returns (ListActualCurrencyRatesResponse) {
         option (google.api.http) = {
             get: "/v1/{resource_name=currencies/*}/actual-rates"
         };
@@ -238,7 +238,7 @@ message BatchInsertAccountsResponse {
     repeated Account accounts = 1;
 }
 
-message ListCurrencyRatesResponse {
+message ListActualCurrencyRatesResponse {
     string resource_name = 1;
     repeated CurrencyRate currency_rates = 2;
 }
