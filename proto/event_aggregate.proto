@@ -9,13 +9,13 @@ message EventAggregate
   int32 count = 1;
   double total = 2;
 
-  double income_count = 3;
+  int32 income_count = 3;
   double income_total = 4;
 
-  double outcome_count = 5;
+  int32 outcome_count = 5;
   double outcome_total = 6;
   
-  double exchange_count = 7;
+  int32 exchange_count = 7;
   double exchange_total = 8;
 
 }

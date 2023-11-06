@@ -17,11 +17,11 @@ class EventAggregate extends $pb.GeneratedMessage {
   factory EventAggregate({
     $core.int? count,
     $core.double? total,
-    $core.double? incomeCount,
+    $core.int? incomeCount,
     $core.double? incomeTotal,
-    $core.double? outcomeCount,
+    $core.int? outcomeCount,
     $core.double? outcomeTotal,
-    $core.double? exchangeCount,
+    $core.int? exchangeCount,
     $core.double? exchangeTotal,
   }) {
     final $result = create();
@@ -58,11 +58,11 @@ class EventAggregate extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EventAggregate', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'count', $pb.PbFieldType.O3)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'incomeCount', $pb.PbFieldType.OD)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'incomeCount', $pb.PbFieldType.O3)
     ..a<$core.double>(4, _omitFieldNames ? '' : 'incomeTotal', $pb.PbFieldType.OD)
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'outcomeCount', $pb.PbFieldType.OD)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'outcomeCount', $pb.PbFieldType.O3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'outcomeTotal', $pb.PbFieldType.OD)
-    ..a<$core.double>(7, _omitFieldNames ? '' : 'exchangeCount', $pb.PbFieldType.OD)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'exchangeCount', $pb.PbFieldType.O3)
     ..a<$core.double>(8, _omitFieldNames ? '' : 'exchangeTotal', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
@@ -107,9 +107,9 @@ class EventAggregate extends $pb.GeneratedMessage {
   void clearTotal() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get incomeCount => $_getN(2);
+  $core.int get incomeCount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set incomeCount($core.double v) { $_setDouble(2, v); }
+  set incomeCount($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasIncomeCount() => $_has(2);
   @$pb.TagNumber(3)
@@ -125,9 +125,9 @@ class EventAggregate extends $pb.GeneratedMessage {
   void clearIncomeTotal() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.double get outcomeCount => $_getN(4);
+  $core.int get outcomeCount => $_getIZ(4);
   @$pb.TagNumber(5)
-  set outcomeCount($core.double v) { $_setDouble(4, v); }
+  set outcomeCount($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasOutcomeCount() => $_has(4);
   @$pb.TagNumber(5)
@@ -143,9 +143,9 @@ class EventAggregate extends $pb.GeneratedMessage {
   void clearOutcomeTotal() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.double get exchangeCount => $_getN(6);
+  $core.int get exchangeCount => $_getIZ(6);
   @$pb.TagNumber(7)
-  set exchangeCount($core.double v) { $_setDouble(6, v); }
+  set exchangeCount($core.int v) { $_setSignedInt32(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasExchangeCount() => $_has(6);
   @$pb.TagNumber(7)
