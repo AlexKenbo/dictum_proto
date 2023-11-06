@@ -6,8 +6,7 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "proto/requests.proto";
-import "proto/accruals_aggregate.proto";
-import "proto/transfers_aggregate.proto";
+import "proto/event_aggregate.proto";
 import "proto/accrual.proto";
 import "proto/position.proto";
 import "proto/product.proto";
@@ -51,7 +50,7 @@ service FinEvent {
         };
     };
 
-    rpc AggregateTransfers(AggregateRequest) returns (TransfersAggregate) {
+    rpc AggregateTransfers(AggregateRequest) returns (EventAggregate) {
         option (google.api.http) = {
             get: "/v1/transfers/-/aggregate"
         };
@@ -88,7 +87,7 @@ service FinEvent {
         };
     };
 
-    rpc AggregateAccruals(AggregateRequest) returns (AccrualsAggregate) {
+    rpc AggregateAccruals(AggregateRequest) returns (EventAggregate) {
         option (google.api.http) = {
             get: "/v1/accruals/-/aggregate"
             additional_bindings {
