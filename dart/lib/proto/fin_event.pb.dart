@@ -20,6 +20,56 @@ import 'position.pb.dart' as $25;
 import 'product.pb.dart' as $56;
 import 'transfer.pb.dart' as $22;
 
+class ListArticlesRequest extends $pb.GeneratedMessage {
+  factory ListArticlesRequest({
+    $core.String? filter,
+  }) {
+    final $result = create();
+    if (filter != null) {
+      $result.filter = filter;
+    }
+    return $result;
+  }
+  ListArticlesRequest._() : super();
+  factory ListArticlesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListArticlesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListArticlesRequest', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListArticlesRequest clone() => ListArticlesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListArticlesRequest copyWith(void Function(ListArticlesRequest) updates) => super.copyWith((message) => updates(message as ListArticlesRequest)) as ListArticlesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListArticlesRequest create() => ListArticlesRequest._();
+  ListArticlesRequest createEmptyInstance() => create();
+  static $pb.PbList<ListArticlesRequest> createRepeated() => $pb.PbList<ListArticlesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListArticlesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListArticlesRequest>(create);
+  static ListArticlesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get filter => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set filter($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFilter() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFilter() => clearField(1);
+}
+
 class ListTransfersResponse extends $pb.GeneratedMessage {
   factory ListTransfersResponse({
     $core.String? resourceName,

@@ -13,6 +13,18 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listArticlesRequestDescriptor instead')
+const ListArticlesRequest$json = {
+  '1': 'ListArticlesRequest',
+  '2': [
+    {'1': 'filter', '3': 1, '4': 1, '5': 9, '10': 'filter'},
+  ],
+};
+
+/// Descriptor for `ListArticlesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listArticlesRequestDescriptor = $convert.base64Decode(
+    'ChNMaXN0QXJ0aWNsZXNSZXF1ZXN0EhYKBmZpbHRlchgBIAEoCVIGZmlsdGVy');
+
 @$core.Deprecated('Use listTransfersResponseDescriptor instead')
 const ListTransfersResponse$json = {
   '1': 'ListTransfersResponse',

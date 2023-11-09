@@ -97,9 +97,9 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/BatchInsertPostions',
       ($21.BatchInsertPositionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
-  static final _$listArticles = $grpc.ClientMethod<$3.Empty, $21.ListArticlesResponse>(
+  static final _$listArticles = $grpc.ClientMethod<$21.ListArticlesRequest, $21.ListArticlesResponse>(
       '/FinEvent/ListArticles',
-      ($3.Empty value) => value.writeToBuffer(),
+      ($21.ListArticlesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $21.ListArticlesResponse.fromBuffer(value));
   static final _$getArticle = $grpc.ClientMethod<$0.GetRequest, $26.Article>(
       '/FinEvent/GetArticle',
@@ -200,7 +200,7 @@ class FinEventClient extends $grpc.Client {
     return $createUnaryCall(_$batchInsertPostions, request, options: options);
   }
 
-  $grpc.ResponseFuture<$21.ListArticlesResponse> listArticles($3.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$21.ListArticlesResponse> listArticles($21.ListArticlesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listArticles, request, options: options);
   }
 
@@ -353,12 +353,12 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $21.BatchInsertPositionsRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.Empty, $21.ListArticlesResponse>(
+    $addMethod($grpc.ServiceMethod<$21.ListArticlesRequest, $21.ListArticlesResponse>(
         'ListArticles',
         listArticles_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $3.Empty.fromBuffer(value),
+        ($core.List<$core.int> value) => $21.ListArticlesRequest.fromBuffer(value),
         ($21.ListArticlesResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetRequest, $26.Article>(
         'GetArticle',
@@ -472,7 +472,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return batchInsertPostions(call, await request);
   }
 
-  $async.Future<$21.ListArticlesResponse> listArticles_Pre($grpc.ServiceCall call, $async.Future<$3.Empty> request) async {
+  $async.Future<$21.ListArticlesResponse> listArticles_Pre($grpc.ServiceCall call, $async.Future<$21.ListArticlesRequest> request) async {
     return listArticles(call, await request);
   }
 
@@ -517,7 +517,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$21.ListPositionsResponse> listPositions($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$25.Position> updatePosition($grpc.ServiceCall call, $25.Position request);
   $async.Future<$3.Empty> batchInsertPostions($grpc.ServiceCall call, $21.BatchInsertPositionsRequest request);
-  $async.Future<$21.ListArticlesResponse> listArticles($grpc.ServiceCall call, $3.Empty request);
+  $async.Future<$21.ListArticlesResponse> listArticles($grpc.ServiceCall call, $21.ListArticlesRequest request);
   $async.Future<$26.Article> getArticle($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$26.Article> createArticle($grpc.ServiceCall call, $26.Article request);
   $async.Future<$26.Article> updateArticle($grpc.ServiceCall call, $26.Article request);
