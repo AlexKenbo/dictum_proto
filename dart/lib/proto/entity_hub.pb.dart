@@ -16,11 +16,11 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'account.pb.dart' as $6;
 import 'account_detail.pb.dart' as $7;
 import 'country.pb.dart' as $33;
-import 'currency.pb.dart' as $41;
+import 'currency.pb.dart' as $40;
 import 'currency_rate.pb.dart' as $55;
 import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
-import 'fi.pb.dart' as $42;
+import 'fi.pb.dart' as $41;
 
 class ListEntitiesResponse extends $pb.GeneratedMessage {
   factory ListEntitiesResponse({
@@ -683,7 +683,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
 class ListCurrenciesResponse extends $pb.GeneratedMessage {
   factory ListCurrenciesResponse({
     $core.String? resourceName,
-    $core.Iterable<$41.Currency>? currencies,
+    $core.Iterable<$40.Currency>? currencies,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -704,7 +704,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCurrenciesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$41.Currency>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $41.Currency.create)
+    ..pc<$40.Currency>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $40.Currency.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -740,7 +740,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$41.Currency> get currencies => $_getList(1);
+  $core.List<$40.Currency> get currencies => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -755,7 +755,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
 class ListFisResponse extends $pb.GeneratedMessage {
   factory ListFisResponse({
     $core.String? resourceName,
-    $core.Iterable<$42.Fi>? fis,
+    $core.Iterable<$41.Fi>? fis,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -776,7 +776,7 @@ class ListFisResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListFisResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$42.Fi>(2, _omitFieldNames ? '' : 'fis', $pb.PbFieldType.PM, subBuilder: $42.Fi.create)
+    ..pc<$41.Fi>(2, _omitFieldNames ? '' : 'fis', $pb.PbFieldType.PM, subBuilder: $41.Fi.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -812,7 +812,7 @@ class ListFisResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$42.Fi> get fis => $_getList(1);
+  $core.List<$41.Fi> get fis => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);

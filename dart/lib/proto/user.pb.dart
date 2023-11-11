@@ -13,9 +13,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $32;
-import 'entity_role.pb.dart' as $38;
-import 'telegram_user.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $31;
+import 'employee.pb.dart' as $5;
+import 'entity_role.pb.dart' as $43;
+import 'telegram_user.pb.dart' as $32;
 
 class User extends $pb.GeneratedMessage {
   factory User({
@@ -26,9 +27,10 @@ class User extends $pb.GeneratedMessage {
     $core.int? telegramUserId,
     $core.String? refKey,
     $core.String? resourceName,
-    $core.Iterable<$38.EntityRole>? entityRoles,
-    $33.TelegramUser? telegramUser,
-    $32.Timestamp? createTime,
+    $core.Iterable<$43.EntityRole>? entityRoles,
+    $32.TelegramUser? employees,
+    $core.Iterable<$5.Employee>? telegramUser,
+    $31.Timestamp? createTime,
   }) {
     final $result = create();
     if (userId != null) {
@@ -55,8 +57,11 @@ class User extends $pb.GeneratedMessage {
     if (entityRoles != null) {
       $result.entityRoles.addAll(entityRoles);
     }
+    if (employees != null) {
+      $result.employees = employees;
+    }
     if (telegramUser != null) {
-      $result.telegramUser = telegramUser;
+      $result.telegramUser.addAll(telegramUser);
     }
     if (createTime != null) {
       $result.createTime = createTime;
@@ -75,9 +80,10 @@ class User extends $pb.GeneratedMessage {
     ..a<$core.int>(7, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$38.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $38.EntityRole.create)
-    ..aOM<$33.TelegramUser>(15, _omitFieldNames ? '' : 'telegramUser', subBuilder: $33.TelegramUser.create)
-    ..aOM<$32.Timestamp>(16, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
+    ..pc<$43.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $43.EntityRole.create)
+    ..aOM<$32.TelegramUser>(15, _omitFieldNames ? '' : 'employees', subBuilder: $32.TelegramUser.create)
+    ..pc<$5.Employee>(16, _omitFieldNames ? '' : 'telegramUser', $pb.PbFieldType.PM, subBuilder: $5.Employee.create)
+    ..aOM<$31.Timestamp>(17, _omitFieldNames ? '' : 'createTime', subBuilder: $31.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -166,29 +172,32 @@ class User extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(11);
 
   @$pb.TagNumber(13)
-  $core.List<$38.EntityRole> get entityRoles => $_getList(7);
+  $core.List<$43.EntityRole> get entityRoles => $_getList(7);
 
   @$pb.TagNumber(15)
-  $33.TelegramUser get telegramUser => $_getN(8);
+  $32.TelegramUser get employees => $_getN(8);
   @$pb.TagNumber(15)
-  set telegramUser($33.TelegramUser v) { setField(15, v); }
+  set employees($32.TelegramUser v) { setField(15, v); }
   @$pb.TagNumber(15)
-  $core.bool hasTelegramUser() => $_has(8);
+  $core.bool hasEmployees() => $_has(8);
   @$pb.TagNumber(15)
-  void clearTelegramUser() => clearField(15);
+  void clearEmployees() => clearField(15);
   @$pb.TagNumber(15)
-  $33.TelegramUser ensureTelegramUser() => $_ensure(8);
+  $32.TelegramUser ensureEmployees() => $_ensure(8);
 
   @$pb.TagNumber(16)
-  $32.Timestamp get createTime => $_getN(9);
-  @$pb.TagNumber(16)
-  set createTime($32.Timestamp v) { setField(16, v); }
-  @$pb.TagNumber(16)
-  $core.bool hasCreateTime() => $_has(9);
-  @$pb.TagNumber(16)
-  void clearCreateTime() => clearField(16);
-  @$pb.TagNumber(16)
-  $32.Timestamp ensureCreateTime() => $_ensure(9);
+  $core.List<$5.Employee> get telegramUser => $_getList(9);
+
+  @$pb.TagNumber(17)
+  $31.Timestamp get createTime => $_getN(10);
+  @$pb.TagNumber(17)
+  set createTime($31.Timestamp v) { setField(17, v); }
+  @$pb.TagNumber(17)
+  $core.bool hasCreateTime() => $_has(10);
+  @$pb.TagNumber(17)
+  void clearCreateTime() => clearField(17);
+  @$pb.TagNumber(17)
+  $31.Timestamp ensureCreateTime() => $_ensure(10);
 }
 
 

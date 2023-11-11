@@ -22,7 +22,6 @@ const Employee$json = {
     {'1': 'role', '3': 4, '4': 1, '5': 14, '6': '.Role', '10': 'role'},
     {'1': 'personal_document_number', '3': 7, '4': 1, '5': 9, '10': 'personalDocumentNumber'},
     {'1': 'personal_document_country_code', '3': 9, '4': 1, '5': 9, '10': 'personalDocumentCountryCode'},
-    {'1': 'user', '3': 11, '4': 1, '5': 11, '6': '.User', '10': 'user'},
     {'1': 'entity', '3': 13, '4': 1, '5': 11, '6': '.Entity', '10': 'entity'},
     {'1': 'country', '3': 15, '4': 1, '5': 11, '6': '.Country', '10': 'country'},
     {'1': 'hire_time', '3': 16, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'hireTime'},
@@ -35,9 +34,9 @@ final $typed_data.Uint8List employeeDescriptor = $convert.base64Decode(
     'CghFbXBsb3llZRIXCgd1c2VyX2lkGAEgASgFUgZ1c2VySWQSGwoJZW50aXR5X2lkGAIgASgFUg'
     'hlbnRpdHlJZBIZCgRyb2xlGAQgASgOMgUuUm9sZVIEcm9sZRI4ChhwZXJzb25hbF9kb2N1bWVu'
     'dF9udW1iZXIYByABKAlSFnBlcnNvbmFsRG9jdW1lbnROdW1iZXISQwoecGVyc29uYWxfZG9jdW'
-    '1lbnRfY291bnRyeV9jb2RlGAkgASgJUhtwZXJzb25hbERvY3VtZW50Q291bnRyeUNvZGUSGQoE'
-    'dXNlchgLIAEoCzIFLlVzZXJSBHVzZXISHwoGZW50aXR5GA0gASgLMgcuRW50aXR5UgZlbnRpdH'
-    'kSIgoHY291bnRyeRgPIAEoCzIILkNvdW50cnlSB2NvdW50cnkSNwoJaGlyZV90aW1lGBAgASgL'
-    'MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIIaGlyZVRpbWUSOwoLdW5oaXJlX3RpbWUYES'
-    'ABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgp1bmhpcmVUaW1l');
+    '1lbnRfY291bnRyeV9jb2RlGAkgASgJUhtwZXJzb25hbERvY3VtZW50Q291bnRyeUNvZGUSHwoG'
+    'ZW50aXR5GA0gASgLMgcuRW50aXR5UgZlbnRpdHkSIgoHY291bnRyeRgPIAEoCzIILkNvdW50cn'
+    'lSB2NvdW50cnkSNwoJaGlyZV90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt'
+    'cFIIaGlyZVRpbWUSOwoLdW5oaXJlX3RpbWUYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZX'
+    'N0YW1wUgp1bmhpcmVUaW1l');
 

@@ -86,20 +86,7 @@ service EntityHub {
         };
     }
 
-    rpc UpdateEmployee(Employee) returns (Employee) {
-        option (google.api.http) = {
-            patch: "/v1/{employee.resource_name=employees/*}"
-            body: "employee"
-        };
-    }
     
-    rpc GetEmployee(GetRequest) returns (Employee) {
-        option (google.api.http) = {
-            get: "/v1/{resource_name=employees/*}"
-        };
-    }
-
-
     //--
     rpc ListCountries(ListRequest) returns (ListCountriesResponse) {
         option (google.api.http) = {

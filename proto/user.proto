@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 
 import "proto/entity_role.proto";
 import "proto/telegram_user.proto";
+import "proto/employee.proto";
 
 message User
 {
@@ -18,6 +19,7 @@ message User
   string ref_key = 9;
   string resource_name = 11;
   repeated EntityRole entity_roles = 13;
-  TelegramUser telegram_user = 15;
-  google.protobuf.Timestamp create_time = 16;
+  repeated Employee telegram_user = 16;
+  TelegramUser employees = 15;
+  google.protobuf.Timestamp create_time = 17;
 }
