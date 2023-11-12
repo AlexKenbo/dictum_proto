@@ -81,7 +81,7 @@ service EntityHub {
 
     rpc DeleteEmployee(DeleteRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
-            delete: "/v1/{resource_name=employees/*}"
+        delete: "/v1/{resource_name=entities/*/employees/*}"
             body: "employee"
         };
     }
