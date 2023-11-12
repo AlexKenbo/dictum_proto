@@ -19,7 +19,7 @@ message User
   string ref_key = 9;
   string resource_name = 11;
   repeated EntityRole entity_roles = 13;
-  repeated Employee telegram_user = 16;
-  TelegramUser employees = 15;
+  repeated Employee employees = 15;
+  TelegramUser telegram_user = 16;
   google.protobuf.Timestamp create_time = 17;
 }

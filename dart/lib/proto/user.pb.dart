@@ -28,8 +28,8 @@ class User extends $pb.GeneratedMessage {
     $core.String? refKey,
     $core.String? resourceName,
     $core.Iterable<$43.EntityRole>? entityRoles,
-    $32.TelegramUser? employees,
-    $core.Iterable<$5.Employee>? telegramUser,
+    $core.Iterable<$5.Employee>? employees,
+    $32.TelegramUser? telegramUser,
     $31.Timestamp? createTime,
   }) {
     final $result = create();
@@ -58,10 +58,10 @@ class User extends $pb.GeneratedMessage {
       $result.entityRoles.addAll(entityRoles);
     }
     if (employees != null) {
-      $result.employees = employees;
+      $result.employees.addAll(employees);
     }
     if (telegramUser != null) {
-      $result.telegramUser.addAll(telegramUser);
+      $result.telegramUser = telegramUser;
     }
     if (createTime != null) {
       $result.createTime = createTime;
@@ -81,8 +81,8 @@ class User extends $pb.GeneratedMessage {
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
     ..pc<$43.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $43.EntityRole.create)
-    ..aOM<$32.TelegramUser>(15, _omitFieldNames ? '' : 'employees', subBuilder: $32.TelegramUser.create)
-    ..pc<$5.Employee>(16, _omitFieldNames ? '' : 'telegramUser', $pb.PbFieldType.PM, subBuilder: $5.Employee.create)
+    ..pc<$5.Employee>(15, _omitFieldNames ? '' : 'employees', $pb.PbFieldType.PM, subBuilder: $5.Employee.create)
+    ..aOM<$32.TelegramUser>(16, _omitFieldNames ? '' : 'telegramUser', subBuilder: $32.TelegramUser.create)
     ..aOM<$31.Timestamp>(17, _omitFieldNames ? '' : 'createTime', subBuilder: $31.Timestamp.create)
     ..hasRequiredFields = false
   ;
@@ -175,18 +175,18 @@ class User extends $pb.GeneratedMessage {
   $core.List<$43.EntityRole> get entityRoles => $_getList(7);
 
   @$pb.TagNumber(15)
-  $32.TelegramUser get employees => $_getN(8);
-  @$pb.TagNumber(15)
-  set employees($32.TelegramUser v) { setField(15, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasEmployees() => $_has(8);
-  @$pb.TagNumber(15)
-  void clearEmployees() => clearField(15);
-  @$pb.TagNumber(15)
-  $32.TelegramUser ensureEmployees() => $_ensure(8);
+  $core.List<$5.Employee> get employees => $_getList(8);
 
   @$pb.TagNumber(16)
-  $core.List<$5.Employee> get telegramUser => $_getList(9);
+  $32.TelegramUser get telegramUser => $_getN(9);
+  @$pb.TagNumber(16)
+  set telegramUser($32.TelegramUser v) { setField(16, v); }
+  @$pb.TagNumber(16)
+  $core.bool hasTelegramUser() => $_has(9);
+  @$pb.TagNumber(16)
+  void clearTelegramUser() => clearField(16);
+  @$pb.TagNumber(16)
+  $32.TelegramUser ensureTelegramUser() => $_ensure(9);
 
   @$pb.TagNumber(17)
   $31.Timestamp get createTime => $_getN(10);
