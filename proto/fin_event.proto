@@ -8,6 +8,7 @@ import "google/protobuf/empty.proto";
 import "proto/requests.proto";
 import "proto/event_aggregate.proto";
 import "proto/accrual.proto";
+import "proto/attachment.proto";
 import "proto/position.proto";
 import "proto/product.proto";
 import "proto/transfer.proto";
@@ -108,6 +109,14 @@ service FinEvent {
             get: "/v1/{accrual.resource_name=accruals/*}/generate-pdf"
         };
     };
+
+    //--
+
+    rpc UploadInvoice(UploadInvoiceRequest) returns (Attachment) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=accruals/*}/invoice"
+        };
+    }
 
     //--
     rpc ListProducts(ListRequest) returns (ListProductsResponse) {
