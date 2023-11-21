@@ -18,7 +18,7 @@ import 'account.pb.dart' as $6;
 import 'accrual_type.pbenum.dart' as $52;
 import 'article.pb.dart' as $26;
 import 'color.pbenum.dart' as $46;
-import 'currency.pb.dart' as $41;
+import 'currency.pb.dart' as $40;
 import 'entity.pb.dart' as $2;
 import 'operation.pb.dart' as $51;
 import 'payment_type.pbenum.dart' as $53;
@@ -51,7 +51,7 @@ class Accrual extends $pb.GeneratedMessage {
     $13.User? payerUser,
     $13.User? approver,
     $51.Operation? operation,
-    $41.Currency? currency,
+    $40.Currency? currency,
     $6.Account? recipientAccount,
     $6.Account? payerAccount,
     $26.Article? article,
@@ -248,7 +248,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$13.User>(43, _omitFieldNames ? '' : 'payerUser', subBuilder: $13.User.create)
     ..aOM<$13.User>(45, _omitFieldNames ? '' : 'approver', subBuilder: $13.User.create)
     ..aOM<$51.Operation>(49, _omitFieldNames ? '' : 'operation', subBuilder: $51.Operation.create)
-    ..aOM<$41.Currency>(51, _omitFieldNames ? '' : 'currency', subBuilder: $41.Currency.create)
+    ..aOM<$40.Currency>(51, _omitFieldNames ? '' : 'currency', subBuilder: $40.Currency.create)
     ..aOM<$6.Account>(53, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $6.Account.create)
     ..aOM<$6.Account>(55, _omitFieldNames ? '' : 'payerAccount', subBuilder: $6.Account.create)
     ..aOM<$26.Article>(57, _omitFieldNames ? '' : 'article', subBuilder: $26.Article.create)
@@ -511,15 +511,15 @@ class Accrual extends $pb.GeneratedMessage {
   $51.Operation ensureOperation() => $_ensure(22);
 
   @$pb.TagNumber(51)
-  $41.Currency get currency => $_getN(23);
+  $40.Currency get currency => $_getN(23);
   @$pb.TagNumber(51)
-  set currency($41.Currency v) { setField(51, v); }
+  set currency($40.Currency v) { setField(51, v); }
   @$pb.TagNumber(51)
   $core.bool hasCurrency() => $_has(23);
   @$pb.TagNumber(51)
   void clearCurrency() => clearField(51);
   @$pb.TagNumber(51)
-  $41.Currency ensureCurrency() => $_ensure(23);
+  $40.Currency ensureCurrency() => $_ensure(23);
 
   @$pb.TagNumber(53)
   $6.Account get recipientAccount => $_getN(24);

@@ -16,17 +16,15 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/timestamp.pb.dart' as $31;
 import 'country.pb.dart' as $33;
 import 'entity.pb.dart' as $2;
-import 'role.pbenum.dart' as $38;
-import 'user.pb.dart' as $13;
+import 'role.pbenum.dart' as $37;
 
 class Employee extends $pb.GeneratedMessage {
   factory Employee({
     $core.int? userId,
     $core.int? entityId,
-    $38.Role? role,
+    $37.Role? role,
     $core.String? personalDocumentNumber,
     $core.String? personalDocumentCountryCode,
-    $13.User? user,
     $2.Entity? entity,
     $33.Country? country,
     $31.Timestamp? hireTime,
@@ -47,9 +45,6 @@ class Employee extends $pb.GeneratedMessage {
     }
     if (personalDocumentCountryCode != null) {
       $result.personalDocumentCountryCode = personalDocumentCountryCode;
-    }
-    if (user != null) {
-      $result.user = user;
     }
     if (entity != null) {
       $result.entity = entity;
@@ -72,10 +67,9 @@ class Employee extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Employee', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..e<$38.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $38.Role.ROLE_UNKNOWN, valueOf: $38.Role.valueOf, enumValues: $38.Role.values)
+    ..e<$37.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $37.Role.ROLE_UNKNOWN, valueOf: $37.Role.valueOf, enumValues: $37.Role.values)
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
-    ..aOM<$13.User>(11, _omitFieldNames ? '' : 'user', subBuilder: $13.User.create)
     ..aOM<$2.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..aOM<$33.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $33.Country.create)
     ..aOM<$31.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $31.Timestamp.create)
@@ -123,9 +117,9 @@ class Employee extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(2);
 
   @$pb.TagNumber(4)
-  $38.Role get role => $_getN(2);
+  $37.Role get role => $_getN(2);
   @$pb.TagNumber(4)
-  set role($38.Role v) { setField(4, v); }
+  set role($37.Role v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRole() => $_has(2);
   @$pb.TagNumber(4)
@@ -149,60 +143,49 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearPersonalDocumentCountryCode() => clearField(9);
 
-  @$pb.TagNumber(11)
-  $13.User get user => $_getN(5);
-  @$pb.TagNumber(11)
-  set user($13.User v) { setField(11, v); }
-  @$pb.TagNumber(11)
-  $core.bool hasUser() => $_has(5);
-  @$pb.TagNumber(11)
-  void clearUser() => clearField(11);
-  @$pb.TagNumber(11)
-  $13.User ensureUser() => $_ensure(5);
-
   @$pb.TagNumber(13)
-  $2.Entity get entity => $_getN(6);
+  $2.Entity get entity => $_getN(5);
   @$pb.TagNumber(13)
   set entity($2.Entity v) { setField(13, v); }
   @$pb.TagNumber(13)
-  $core.bool hasEntity() => $_has(6);
+  $core.bool hasEntity() => $_has(5);
   @$pb.TagNumber(13)
   void clearEntity() => clearField(13);
   @$pb.TagNumber(13)
-  $2.Entity ensureEntity() => $_ensure(6);
+  $2.Entity ensureEntity() => $_ensure(5);
 
   @$pb.TagNumber(15)
-  $33.Country get country => $_getN(7);
+  $33.Country get country => $_getN(6);
   @$pb.TagNumber(15)
   set country($33.Country v) { setField(15, v); }
   @$pb.TagNumber(15)
-  $core.bool hasCountry() => $_has(7);
+  $core.bool hasCountry() => $_has(6);
   @$pb.TagNumber(15)
   void clearCountry() => clearField(15);
   @$pb.TagNumber(15)
-  $33.Country ensureCountry() => $_ensure(7);
+  $33.Country ensureCountry() => $_ensure(6);
 
   @$pb.TagNumber(16)
-  $31.Timestamp get hireTime => $_getN(8);
+  $31.Timestamp get hireTime => $_getN(7);
   @$pb.TagNumber(16)
   set hireTime($31.Timestamp v) { setField(16, v); }
   @$pb.TagNumber(16)
-  $core.bool hasHireTime() => $_has(8);
+  $core.bool hasHireTime() => $_has(7);
   @$pb.TagNumber(16)
   void clearHireTime() => clearField(16);
   @$pb.TagNumber(16)
-  $31.Timestamp ensureHireTime() => $_ensure(8);
+  $31.Timestamp ensureHireTime() => $_ensure(7);
 
   @$pb.TagNumber(17)
-  $31.Timestamp get unhireTime => $_getN(9);
+  $31.Timestamp get unhireTime => $_getN(8);
   @$pb.TagNumber(17)
   set unhireTime($31.Timestamp v) { setField(17, v); }
   @$pb.TagNumber(17)
-  $core.bool hasUnhireTime() => $_has(9);
+  $core.bool hasUnhireTime() => $_has(8);
   @$pb.TagNumber(17)
   void clearUnhireTime() => clearField(17);
   @$pb.TagNumber(17)
-  $31.Timestamp ensureUnhireTime() => $_ensure(9);
+  $31.Timestamp ensureUnhireTime() => $_ensure(8);
 }
 
 

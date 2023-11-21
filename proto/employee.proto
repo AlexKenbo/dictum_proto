@@ -5,7 +5,6 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 import "google/protobuf/timestamp.proto";      
 
 import "proto/role.proto";
-import "proto/user.proto";
 import "proto/entity.proto";
 import "proto/country.proto";
   
@@ -16,7 +15,6 @@ message Employee
   Role role = 4;
   string personal_document_number = 7;
   string personal_document_country_code = 9;
-  User user = 11;
   Entity entity = 13;
   Country country = 15;
   google.protobuf.Timestamp hire_time = 16;

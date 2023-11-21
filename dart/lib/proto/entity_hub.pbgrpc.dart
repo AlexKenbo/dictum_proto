@@ -60,6 +60,10 @@ class EntityHubClient extends $grpc.Client {
       '/EntityHub/CreateEmployee',
       ($5.Employee value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $5.Employee.fromBuffer(value));
+  static final _$deleteEmployee = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
+      '/EntityHub/DeleteEmployee',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$listCountries = $grpc.ClientMethod<$0.ListRequest, $1.ListCountriesResponse>(
       '/EntityHub/ListCountries',
       ($0.ListRequest value) => value.writeToBuffer(),
@@ -157,6 +161,10 @@ class EntityHubClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$5.Employee> createEmployee($5.Employee request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createEmployee, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteEmployee($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEmployee, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.ListCountriesResponse> listCountries($0.ListRequest request, {$grpc.CallOptions? options}) {
@@ -281,6 +289,13 @@ abstract class EntityHubServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $5.Employee.fromBuffer(value),
         ($5.Employee value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
+        'DeleteEmployee',
+        deleteEmployee_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $1.ListCountriesResponse>(
         'ListCountries',
         listCountries_Pre,
@@ -420,6 +435,10 @@ abstract class EntityHubServiceBase extends $grpc.Service {
     return createEmployee(call, await request);
   }
 
+  $async.Future<$3.Empty> deleteEmployee_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteEmployee(call, await request);
+  }
+
   $async.Future<$1.ListCountriesResponse> listCountries_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listCountries(call, await request);
   }
@@ -488,6 +507,7 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $async.Future<$4.EntityAggregate> aggregateEntity($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$1.ListEmployeesResponse> listEmployees($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$5.Employee> createEmployee($grpc.ServiceCall call, $5.Employee request);
+  $async.Future<$3.Empty> deleteEmployee($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$1.ListCountriesResponse> listCountries($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$1.ListAccountsResponse> listAccounts($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$1.ListAccountDetailsResponse> listAccountDetails($grpc.ServiceCall call, $0.ListRequest request);
