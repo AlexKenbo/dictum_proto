@@ -270,6 +270,84 @@ class DeleteRequest extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 }
 
+class UploadInvoiceRequest extends $pb.GeneratedMessage {
+  factory UploadInvoiceRequest({
+    $core.String? resourceName,
+    $core.String? number,
+    $core.List<$core.int>? file,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (number != null) {
+      $result.number = number;
+    }
+    if (file != null) {
+      $result.file = file;
+    }
+    return $result;
+  }
+  UploadInvoiceRequest._() : super();
+  factory UploadInvoiceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UploadInvoiceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UploadInvoiceRequest', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..aOS(2, _omitFieldNames ? '' : 'number')
+    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'file', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UploadInvoiceRequest clone() => UploadInvoiceRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UploadInvoiceRequest copyWith(void Function(UploadInvoiceRequest) updates) => super.copyWith((message) => updates(message as UploadInvoiceRequest)) as UploadInvoiceRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UploadInvoiceRequest create() => UploadInvoiceRequest._();
+  UploadInvoiceRequest createEmptyInstance() => create();
+  static $pb.PbList<UploadInvoiceRequest> createRepeated() => $pb.PbList<UploadInvoiceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UploadInvoiceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadInvoiceRequest>(create);
+  static UploadInvoiceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get number => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set number($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNumber() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNumber() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.int> get file => $_getN(2);
+  @$pb.TagNumber(3)
+  set file($core.List<$core.int> v) { $_setBytes(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFile() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFile() => clearField(3);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

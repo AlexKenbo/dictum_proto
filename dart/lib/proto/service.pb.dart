@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $32;
+import '../google/protobuf/timestamp.pb.dart' as $31;
 import 'account.pb.dart' as $6;
 import 'entity.pb.dart' as $2;
 import 'plugin.pb.dart' as $58;
@@ -32,7 +32,7 @@ class Service extends $pb.GeneratedMessage {
     $58.Plugin? plugin,
     $2.Entity? entity,
     $6.Account? account,
-    $32.Timestamp? syncTime,
+    $31.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -89,7 +89,7 @@ class Service extends $pb.GeneratedMessage {
     ..aOM<$58.Plugin>(14, _omitFieldNames ? '' : 'plugin', subBuilder: $58.Plugin.create)
     ..aOM<$2.Entity>(16, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..aOM<$6.Account>(18, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
-    ..aOM<$32.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $32.Timestamp.create)
+    ..aOM<$31.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $31.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -220,15 +220,15 @@ class Service extends $pb.GeneratedMessage {
   $6.Account ensureAccount() => $_ensure(10);
 
   @$pb.TagNumber(19)
-  $32.Timestamp get syncTime => $_getN(11);
+  $31.Timestamp get syncTime => $_getN(11);
   @$pb.TagNumber(19)
-  set syncTime($32.Timestamp v) { setField(19, v); }
+  set syncTime($31.Timestamp v) { setField(19, v); }
   @$pb.TagNumber(19)
   $core.bool hasSyncTime() => $_has(11);
   @$pb.TagNumber(19)
   void clearSyncTime() => clearField(19);
   @$pb.TagNumber(19)
-  $32.Timestamp ensureSyncTime() => $_ensure(11);
+  $31.Timestamp ensureSyncTime() => $_ensure(11);
 }
 
 

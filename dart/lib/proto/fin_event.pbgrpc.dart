@@ -19,6 +19,7 @@ import '../google/protobuf/empty.pb.dart' as $3;
 import 'accrual.pb.dart' as $24;
 import 'allocation.pb.dart' as $27;
 import 'article.pb.dart' as $26;
+import 'attachment.pb.dart' as $16;
 import 'event_aggregate.pb.dart' as $23;
 import 'fin_event.pb.dart' as $21;
 import 'position.pb.dart' as $25;
@@ -81,6 +82,10 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/GenerateAccrualPDF',
       ($0.GetRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $21.FileResponse.fromBuffer(value));
+  static final _$uploadInvoice = $grpc.ClientMethod<$0.UploadInvoiceRequest, $16.Attachment>(
+      '/FinEvent/UploadInvoice',
+      ($0.UploadInvoiceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $16.Attachment.fromBuffer(value));
   static final _$listProducts = $grpc.ClientMethod<$0.ListRequest, $21.ListProductsResponse>(
       '/FinEvent/ListProducts',
       ($0.ListRequest value) => value.writeToBuffer(),
@@ -182,6 +187,10 @@ class FinEventClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$21.FileResponse> generateAccrualPDF($0.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$generateAccrualPDF, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$16.Attachment> uploadInvoice($0.UploadInvoiceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$uploadInvoice, request, options: options);
   }
 
   $grpc.ResponseFuture<$21.ListProductsResponse> listProducts($0.ListRequest request, {$grpc.CallOptions? options}) {
@@ -325,6 +334,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetRequest.fromBuffer(value),
         ($21.FileResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UploadInvoiceRequest, $16.Attachment>(
+        'UploadInvoice',
+        uploadInvoice_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.UploadInvoiceRequest.fromBuffer(value),
+        ($16.Attachment value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $21.ListProductsResponse>(
         'ListProducts',
         listProducts_Pre,
@@ -456,6 +472,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return generateAccrualPDF(call, await request);
   }
 
+  $async.Future<$16.Attachment> uploadInvoice_Pre($grpc.ServiceCall call, $async.Future<$0.UploadInvoiceRequest> request) async {
+    return uploadInvoice(call, await request);
+  }
+
   $async.Future<$21.ListProductsResponse> listProducts_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listProducts(call, await request);
   }
@@ -513,6 +533,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$23.EventAggregate> aggregateAccruals($grpc.ServiceCall call, $0.AggregateRequest request);
   $async.Future<$3.Empty> batchInsertAccruals($grpc.ServiceCall call, $21.BatchInsertAccrualsRequest request);
   $async.Future<$21.FileResponse> generateAccrualPDF($grpc.ServiceCall call, $0.GetRequest request);
+  $async.Future<$16.Attachment> uploadInvoice($grpc.ServiceCall call, $0.UploadInvoiceRequest request);
   $async.Future<$21.ListProductsResponse> listProducts($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$21.ListPositionsResponse> listPositions($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$25.Position> updatePosition($grpc.ServiceCall call, $25.Position request);

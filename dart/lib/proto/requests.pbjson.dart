@@ -68,3 +68,18 @@ const DeleteRequest$json = {
 final $typed_data.Uint8List deleteRequestDescriptor = $convert.base64Decode(
     'Cg1EZWxldGVSZXF1ZXN0EiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc291cmNlTmFtZQ==');
 
+@$core.Deprecated('Use uploadInvoiceRequestDescriptor instead')
+const UploadInvoiceRequest$json = {
+  '1': 'UploadInvoiceRequest',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'number', '3': 2, '4': 1, '5': 9, '10': 'number'},
+    {'1': 'file', '3': 3, '4': 1, '5': 12, '10': 'file'},
+  ],
+};
+
+/// Descriptor for `UploadInvoiceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadInvoiceRequestDescriptor = $convert.base64Decode(
+    'ChRVcGxvYWRJbnZvaWNlUmVxdWVzdBIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdXJjZU'
+    '5hbWUSFgoGbnVtYmVyGAIgASgJUgZudW1iZXISEgoEZmlsZRgDIAEoDFIEZmlsZQ==');
+
