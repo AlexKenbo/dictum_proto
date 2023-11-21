@@ -4,7 +4,7 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
 import "proto/attachment.proto";
-import "proto/accrual.proto";
+// import "proto/accrual.proto";
 
 message AccrualAttachment
 {
@@ -12,6 +12,6 @@ message AccrualAttachment
   int32 attachment_id = 2;
   int32 event_id = 3;
   Attachment attachment = 4;
-  Accrual accrual = 6;
+  // Accrual accrual = 6;
 
 } 

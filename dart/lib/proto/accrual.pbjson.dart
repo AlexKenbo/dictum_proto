@@ -64,6 +64,7 @@ const Accrual$json = {
     {'1': 'pay_time', '3': 79, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'payTime'},
     {'1': 'create_time', '3': 80, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
     {'1': 'status', '3': 81, '4': 1, '5': 14, '6': '.Status', '10': 'status'},
+    {'1': 'accrual_attachments', '3': 82, '4': 3, '5': 11, '6': '.AccrualAttachment', '10': 'accrualAttachments'},
   ],
 };
 
@@ -103,5 +104,6 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'RvYnVmLlRpbWVzdGFtcFIKcGF5b3V0RGF0ZRI1CghwYXlfdGltZRhPIAEoCzIaLmdvb2dsZS5w'
     'cm90b2J1Zi5UaW1lc3RhbXBSB3BheVRpbWUSOwoLY3JlYXRlX3RpbWUYUCABKAsyGi5nb29nbG'
     'UucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdGVUaW1lEh8KBnN0YXR1cxhRIAEoDjIHLlN0YXR1'
-    'c1IGc3RhdHVz');
+    'c1IGc3RhdHVzEkMKE2FjY3J1YWxfYXR0YWNobWVudHMYUiADKAsyEi5BY2NydWFsQXR0YWNobW'
+    'VudFISYWNjcnVhbEF0dGFjaG1lbnRz');
 

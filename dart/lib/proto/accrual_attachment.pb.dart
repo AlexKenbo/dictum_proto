@@ -13,7 +13,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $24;
 import 'attachment.pb.dart' as $16;
 
 class AccrualAttachment extends $pb.GeneratedMessage {
@@ -22,7 +21,6 @@ class AccrualAttachment extends $pb.GeneratedMessage {
     $core.int? attachmentId,
     $core.int? eventId,
     $16.Attachment? attachment,
-    $24.Accrual? accrual,
   }) {
     final $result = create();
     if (eventAttachmentId != null) {
@@ -37,9 +35,6 @@ class AccrualAttachment extends $pb.GeneratedMessage {
     if (attachment != null) {
       $result.attachment = attachment;
     }
-    if (accrual != null) {
-      $result.accrual = accrual;
-    }
     return $result;
   }
   AccrualAttachment._() : super();
@@ -51,7 +46,6 @@ class AccrualAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
     ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
-    ..aOM<$24.Accrual>(6, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -113,17 +107,6 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
   $16.Attachment ensureAttachment() => $_ensure(3);
-
-  @$pb.TagNumber(6)
-  $24.Accrual get accrual => $_getN(4);
-  @$pb.TagNumber(6)
-  set accrual($24.Accrual v) { setField(6, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasAccrual() => $_has(4);
-  @$pb.TagNumber(6)
-  void clearAccrual() => clearField(6);
-  @$pb.TagNumber(6)
-  $24.Accrual ensureAccrual() => $_ensure(4);
 }
 
 

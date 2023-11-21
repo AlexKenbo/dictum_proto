@@ -21,7 +21,6 @@ const AccrualAttachment$json = {
     {'1': 'attachment_id', '3': 2, '4': 1, '5': 5, '10': 'attachmentId'},
     {'1': 'event_id', '3': 3, '4': 1, '5': 5, '10': 'eventId'},
     {'1': 'attachment', '3': 4, '4': 1, '5': 11, '6': '.Attachment', '10': 'attachment'},
-    {'1': 'accrual', '3': 6, '4': 1, '5': 11, '6': '.Accrual', '10': 'accrual'},
   ],
 };
 
@@ -30,5 +29,5 @@ final $typed_data.Uint8List accrualAttachmentDescriptor = $convert.base64Decode(
     'ChFBY2NydWFsQXR0YWNobWVudBIuChNldmVudF9hdHRhY2htZW50X2lkGAEgASgFUhFldmVudE'
     'F0dGFjaG1lbnRJZBIjCg1hdHRhY2htZW50X2lkGAIgASgFUgxhdHRhY2htZW50SWQSGQoIZXZl'
     'bnRfaWQYAyABKAVSB2V2ZW50SWQSKwoKYXR0YWNobWVudBgEIAEoCzILLkF0dGFjaG1lbnRSCm'
-    'F0dGFjaG1lbnQSIgoHYWNjcnVhbBgGIAEoCzIILkFjY3J1YWxSB2FjY3J1YWw=');
+    'F0dGFjaG1lbnQ=');
 
