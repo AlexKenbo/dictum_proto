@@ -8,7 +8,7 @@ import "google/protobuf/empty.proto";
 import "proto/requests.proto";
 import "proto/event_aggregate.proto";
 import "proto/accrual.proto";
-import "proto/attachment.proto";
+import "proto/accrual_attachment.proto";
 import "proto/position.proto";
 import "proto/product.proto";
 import "proto/transfer.proto";
@@ -112,7 +112,7 @@ service FinEvent {
 
     //--
 
-    rpc UploadInvoice(UploadInvoiceRequest) returns (Attachment) {
+    rpc UploadInvoice(UploadInvoiceRequest) returns (AccrualAttachment) {
         option (google.api.http) = {
             post: "/v1/{resource_name=accruals/*}/invoice"
         };
