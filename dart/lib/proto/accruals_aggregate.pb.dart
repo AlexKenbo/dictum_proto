@@ -16,26 +16,46 @@ import 'package:protobuf/protobuf.dart' as $pb;
 class AccrualsAggregate extends $pb.GeneratedMessage {
   factory AccrualsAggregate({
     $core.int? count,
-    $core.double? paidIncomeTotal,
-    $core.double? unpaidIncomeTotal,
-    $core.double? paidOutcomeTotal,
-    $core.double? unpaidOutcomeTotal,
+    $core.double? total,
+    $core.int? incomeCount,
+    $core.double? incomeTotal,
+    $core.int? outcomeCount,
+    $core.double? outcomeTotal,
+    $core.int? exchangeCount,
+    $core.double? exchangeTotal,
+    $core.int? debtCount,
+    $core.int? debtTotal,
   }) {
     final $result = create();
     if (count != null) {
       $result.count = count;
     }
-    if (paidIncomeTotal != null) {
-      $result.paidIncomeTotal = paidIncomeTotal;
+    if (total != null) {
+      $result.total = total;
     }
-    if (unpaidIncomeTotal != null) {
-      $result.unpaidIncomeTotal = unpaidIncomeTotal;
+    if (incomeCount != null) {
+      $result.incomeCount = incomeCount;
     }
-    if (paidOutcomeTotal != null) {
-      $result.paidOutcomeTotal = paidOutcomeTotal;
+    if (incomeTotal != null) {
+      $result.incomeTotal = incomeTotal;
     }
-    if (unpaidOutcomeTotal != null) {
-      $result.unpaidOutcomeTotal = unpaidOutcomeTotal;
+    if (outcomeCount != null) {
+      $result.outcomeCount = outcomeCount;
+    }
+    if (outcomeTotal != null) {
+      $result.outcomeTotal = outcomeTotal;
+    }
+    if (exchangeCount != null) {
+      $result.exchangeCount = exchangeCount;
+    }
+    if (exchangeTotal != null) {
+      $result.exchangeTotal = exchangeTotal;
+    }
+    if (debtCount != null) {
+      $result.debtCount = debtCount;
+    }
+    if (debtTotal != null) {
+      $result.debtTotal = debtTotal;
     }
     return $result;
   }
@@ -45,10 +65,15 @@ class AccrualsAggregate extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualsAggregate', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'count', $pb.PbFieldType.O3)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'paidIncomeTotal', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'unpaidIncomeTotal', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'paidOutcomeTotal', $pb.PbFieldType.OD)
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'unpaidOutcomeTotal', $pb.PbFieldType.OD)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'incomeCount', $pb.PbFieldType.O3)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'incomeTotal', $pb.PbFieldType.OD)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'outcomeCount', $pb.PbFieldType.O3)
+    ..a<$core.double>(6, _omitFieldNames ? '' : 'outcomeTotal', $pb.PbFieldType.OD)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'exchangeCount', $pb.PbFieldType.O3)
+    ..a<$core.double>(8, _omitFieldNames ? '' : 'exchangeTotal', $pb.PbFieldType.OD)
+    ..a<$core.int>(9, _omitFieldNames ? '' : 'debtCount', $pb.PbFieldType.O3)
+    ..a<$core.int>(10, _omitFieldNames ? '' : 'debtTotal', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -83,40 +108,85 @@ class AccrualsAggregate extends $pb.GeneratedMessage {
   void clearCount() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.double get paidIncomeTotal => $_getN(1);
+  $core.double get total => $_getN(1);
   @$pb.TagNumber(2)
-  set paidIncomeTotal($core.double v) { $_setDouble(1, v); }
+  set total($core.double v) { $_setDouble(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasPaidIncomeTotal() => $_has(1);
+  $core.bool hasTotal() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPaidIncomeTotal() => clearField(2);
+  void clearTotal() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get unpaidIncomeTotal => $_getN(2);
+  $core.int get incomeCount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set unpaidIncomeTotal($core.double v) { $_setDouble(2, v); }
+  set incomeCount($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasUnpaidIncomeTotal() => $_has(2);
+  $core.bool hasIncomeCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUnpaidIncomeTotal() => clearField(3);
+  void clearIncomeCount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.double get paidOutcomeTotal => $_getN(3);
+  $core.double get incomeTotal => $_getN(3);
   @$pb.TagNumber(4)
-  set paidOutcomeTotal($core.double v) { $_setDouble(3, v); }
+  set incomeTotal($core.double v) { $_setDouble(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasPaidOutcomeTotal() => $_has(3);
+  $core.bool hasIncomeTotal() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPaidOutcomeTotal() => clearField(4);
+  void clearIncomeTotal() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.double get unpaidOutcomeTotal => $_getN(4);
+  $core.int get outcomeCount => $_getIZ(4);
   @$pb.TagNumber(5)
-  set unpaidOutcomeTotal($core.double v) { $_setDouble(4, v); }
+  set outcomeCount($core.int v) { $_setSignedInt32(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasUnpaidOutcomeTotal() => $_has(4);
+  $core.bool hasOutcomeCount() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUnpaidOutcomeTotal() => clearField(5);
+  void clearOutcomeCount() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get outcomeTotal => $_getN(5);
+  @$pb.TagNumber(6)
+  set outcomeTotal($core.double v) { $_setDouble(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasOutcomeTotal() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearOutcomeTotal() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get exchangeCount => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set exchangeCount($core.int v) { $_setSignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasExchangeCount() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearExchangeCount() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.double get exchangeTotal => $_getN(7);
+  @$pb.TagNumber(8)
+  set exchangeTotal($core.double v) { $_setDouble(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasExchangeTotal() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearExchangeTotal() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.int get debtCount => $_getIZ(8);
+  @$pb.TagNumber(9)
+  set debtCount($core.int v) { $_setSignedInt32(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDebtCount() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDebtCount() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.int get debtTotal => $_getIZ(9);
+  @$pb.TagNumber(10)
+  set debtTotal($core.int v) { $_setSignedInt32(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasDebtTotal() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDebtTotal() => clearField(10);
 }
 
 

@@ -7,6 +7,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "proto/requests.proto";
 import "proto/event_aggregate.proto";
+import "proto/accruals_aggregate.proto";
 import "proto/accrual.proto";
 import "proto/accrual_attachment.proto";
 import "proto/position.proto";
@@ -88,7 +89,7 @@ service FinEvent {
         };
     };
 
-    rpc AggregateAccruals(AggregateRequest) returns (EventAggregate) {
+    rpc AggregateAccruals(AggregateRequest) returns (AccrualsAggregate) {
         option (google.api.http) = {
             get: "/v1/accruals/-/aggregate"
             additional_bindings {

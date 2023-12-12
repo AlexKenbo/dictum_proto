@@ -18,18 +18,25 @@ const AccrualsAggregate$json = {
   '1': 'AccrualsAggregate',
   '2': [
     {'1': 'count', '3': 1, '4': 1, '5': 5, '10': 'count'},
-    {'1': 'paid_income_total', '3': 2, '4': 1, '5': 1, '10': 'paidIncomeTotal'},
-    {'1': 'unpaid_income_total', '3': 3, '4': 1, '5': 1, '10': 'unpaidIncomeTotal'},
-    {'1': 'paid_outcome_total', '3': 4, '4': 1, '5': 1, '10': 'paidOutcomeTotal'},
-    {'1': 'unpaid_outcome_total', '3': 5, '4': 1, '5': 1, '10': 'unpaidOutcomeTotal'},
+    {'1': 'total', '3': 2, '4': 1, '5': 1, '10': 'total'},
+    {'1': 'income_count', '3': 3, '4': 1, '5': 5, '10': 'incomeCount'},
+    {'1': 'income_total', '3': 4, '4': 1, '5': 1, '10': 'incomeTotal'},
+    {'1': 'outcome_count', '3': 5, '4': 1, '5': 5, '10': 'outcomeCount'},
+    {'1': 'outcome_total', '3': 6, '4': 1, '5': 1, '10': 'outcomeTotal'},
+    {'1': 'exchange_count', '3': 7, '4': 1, '5': 5, '10': 'exchangeCount'},
+    {'1': 'exchange_total', '3': 8, '4': 1, '5': 1, '10': 'exchangeTotal'},
+    {'1': 'debt_count', '3': 9, '4': 1, '5': 5, '10': 'debtCount'},
+    {'1': 'debt_total', '3': 10, '4': 1, '5': 5, '10': 'debtTotal'},
   ],
 };
 
 /// Descriptor for `AccrualsAggregate`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accrualsAggregateDescriptor = $convert.base64Decode(
-    'ChFBY2NydWFsc0FnZ3JlZ2F0ZRIUCgVjb3VudBgBIAEoBVIFY291bnQSKgoRcGFpZF9pbmNvbW'
-    'VfdG90YWwYAiABKAFSD3BhaWRJbmNvbWVUb3RhbBIuChN1bnBhaWRfaW5jb21lX3RvdGFsGAMg'
-    'ASgBUhF1bnBhaWRJbmNvbWVUb3RhbBIsChJwYWlkX291dGNvbWVfdG90YWwYBCABKAFSEHBhaW'
-    'RPdXRjb21lVG90YWwSMAoUdW5wYWlkX291dGNvbWVfdG90YWwYBSABKAFSEnVucGFpZE91dGNv'
-    'bWVUb3RhbA==');
+    'ChFBY2NydWFsc0FnZ3JlZ2F0ZRIUCgVjb3VudBgBIAEoBVIFY291bnQSFAoFdG90YWwYAiABKA'
+    'FSBXRvdGFsEiEKDGluY29tZV9jb3VudBgDIAEoBVILaW5jb21lQ291bnQSIQoMaW5jb21lX3Rv'
+    'dGFsGAQgASgBUgtpbmNvbWVUb3RhbBIjCg1vdXRjb21lX2NvdW50GAUgASgFUgxvdXRjb21lQ2'
+    '91bnQSIwoNb3V0Y29tZV90b3RhbBgGIAEoAVIMb3V0Y29tZVRvdGFsEiUKDmV4Y2hhbmdlX2Nv'
+    'dW50GAcgASgFUg1leGNoYW5nZUNvdW50EiUKDmV4Y2hhbmdlX3RvdGFsGAggASgBUg1leGNoYW'
+    '5nZVRvdGFsEh0KCmRlYnRfY291bnQYCSABKAVSCWRlYnRDb3VudBIdCgpkZWJ0X3RvdGFsGAog'
+    'ASgFUglkZWJ0VG90YWw=');
 
