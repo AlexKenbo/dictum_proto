@@ -19,5 +19,5 @@ message AccrualsAggregate
   double exchange_total = 8;
 
   int32 debt_count = 9;
-  int32 debt_total = 10;
+  double debt_total = 10;
 }

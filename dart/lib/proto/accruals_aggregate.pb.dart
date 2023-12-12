@@ -24,7 +24,7 @@ class AccrualsAggregate extends $pb.GeneratedMessage {
     $core.int? exchangeCount,
     $core.double? exchangeTotal,
     $core.int? debtCount,
-    $core.int? debtTotal,
+    $core.double? debtTotal,
   }) {
     final $result = create();
     if (count != null) {
@@ -73,7 +73,7 @@ class AccrualsAggregate extends $pb.GeneratedMessage {
     ..a<$core.int>(7, _omitFieldNames ? '' : 'exchangeCount', $pb.PbFieldType.O3)
     ..a<$core.double>(8, _omitFieldNames ? '' : 'exchangeTotal', $pb.PbFieldType.OD)
     ..a<$core.int>(9, _omitFieldNames ? '' : 'debtCount', $pb.PbFieldType.O3)
-    ..a<$core.int>(10, _omitFieldNames ? '' : 'debtTotal', $pb.PbFieldType.O3)
+    ..a<$core.double>(10, _omitFieldNames ? '' : 'debtTotal', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -180,9 +180,9 @@ class AccrualsAggregate extends $pb.GeneratedMessage {
   void clearDebtCount() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.int get debtTotal => $_getIZ(9);
+  $core.double get debtTotal => $_getN(9);
   @$pb.TagNumber(10)
-  set debtTotal($core.int v) { $_setSignedInt32(9, v); }
+  set debtTotal($core.double v) { $_setDouble(9, v); }
   @$pb.TagNumber(10)
   $core.bool hasDebtTotal() => $_has(9);
   @$pb.TagNumber(10)
