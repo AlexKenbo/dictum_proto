@@ -43,6 +43,10 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/CreateTransfer',
       ($22.Transfer value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $22.Transfer.fromBuffer(value));
+  static final _$allocateTransfer = $grpc.ClientMethod<$21.AllocateTransferRequest, $22.Transfer>(
+      '/FinEvent/AllocateTransfer',
+      ($21.AllocateTransferRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $22.Transfer.fromBuffer(value));
   static final _$batchInsertTransfers = $grpc.ClientMethod<$21.BatchInsertTransfersRequest, $3.Empty>(
       '/FinEvent/BatchInsertTransfers',
       ($21.BatchInsertTransfersRequest value) => value.writeToBuffer(),
@@ -148,6 +152,10 @@ class FinEventClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$22.Transfer> createTransfer($22.Transfer request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createTransfer, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$22.Transfer> allocateTransfer($21.AllocateTransferRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$allocateTransfer, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Empty> batchInsertTransfers($21.BatchInsertTransfersRequest request, {$grpc.CallOptions? options}) {
@@ -264,6 +272,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         false,
         ($core.List<$core.int> value) => $22.Transfer.fromBuffer(value),
+        ($22.Transfer value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$21.AllocateTransferRequest, $22.Transfer>(
+        'AllocateTransfer',
+        allocateTransfer_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $21.AllocateTransferRequest.fromBuffer(value),
         ($22.Transfer value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$21.BatchInsertTransfersRequest, $3.Empty>(
         'BatchInsertTransfers',
@@ -433,6 +448,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return createTransfer(call, await request);
   }
 
+  $async.Future<$22.Transfer> allocateTransfer_Pre($grpc.ServiceCall call, $async.Future<$21.AllocateTransferRequest> request) async {
+    return allocateTransfer(call, await request);
+  }
+
   $async.Future<$3.Empty> batchInsertTransfers_Pre($grpc.ServiceCall call, $async.Future<$21.BatchInsertTransfersRequest> request) async {
     return batchInsertTransfers(call, await request);
   }
@@ -524,6 +543,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$21.ListTransfersResponse> listTransfers($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$22.Transfer> getTransfer($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$22.Transfer> createTransfer($grpc.ServiceCall call, $22.Transfer request);
+  $async.Future<$22.Transfer> allocateTransfer($grpc.ServiceCall call, $21.AllocateTransferRequest request);
   $async.Future<$3.Empty> batchInsertTransfers($grpc.ServiceCall call, $21.BatchInsertTransfersRequest request);
   $async.Future<$22.Transfer> updateTransfer($grpc.ServiceCall call, $22.Transfer request);
   $async.Future<$23.EventAggregate> aggregateTransfers($grpc.ServiceCall call, $0.AggregateRequest request);

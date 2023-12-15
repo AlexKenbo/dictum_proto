@@ -388,6 +388,56 @@ class BatchInsertPositionsRequest extends $pb.GeneratedMessage {
   $core.List<$27.Position> get positions => $_getList(1);
 }
 
+class AllocateTransferRequest extends $pb.GeneratedMessage {
+  factory AllocateTransferRequest({
+    $core.String? resourceName,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    return $result;
+  }
+  AllocateTransferRequest._() : super();
+  factory AllocateTransferRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AllocateTransferRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AllocateTransferRequest', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AllocateTransferRequest clone() => AllocateTransferRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AllocateTransferRequest copyWith(void Function(AllocateTransferRequest) updates) => super.copyWith((message) => updates(message as AllocateTransferRequest)) as AllocateTransferRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AllocateTransferRequest create() => AllocateTransferRequest._();
+  AllocateTransferRequest createEmptyInstance() => create();
+  static $pb.PbList<AllocateTransferRequest> createRepeated() => $pb.PbList<AllocateTransferRequest>();
+  @$core.pragma('dart2js:noInline')
+  static AllocateTransferRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AllocateTransferRequest>(create);
+  static AllocateTransferRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+}
+
 class ListProductsResponse extends $pb.GeneratedMessage {
   factory ListProductsResponse({
     $core.String? resourceName,
