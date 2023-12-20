@@ -5,10 +5,9 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 enum Status
 {
   STATUS_UNSPECIFIED = 0;
-  PROCESSING = 1;
-  SENT = 2;
-  DELIVERED = 3;
-  CANCEL = 4;
+  STATUS_COMPLETED = 1;
+  STATUS_PENDING = 2;
+  STATUS_CANCELLED = 3;
 }
      
 
