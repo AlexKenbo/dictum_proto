@@ -38,7 +38,7 @@ service FinEvent {
         };
     };
 
-    rpc AllocateTransfer(AllocateTransferRequest) returns (Transfer) {
+    rpc AllocateTransfer(AllocateTransferRequest) returns (Allocation) {
         option (google.api.http) = {
             post: "/v1/{resource_name=transfers/*}/allocate"
             body: "transfer"
