@@ -7,6 +7,7 @@ import "google/api/annotations.proto";
 import "proto/object_source.proto";
 import "proto/service.proto";
 import "proto/service_run.proto";
+import "proto/requests.proto";
 
 service PluginService {
     // * Sources
@@ -83,7 +84,7 @@ service PluginService {
         };
     }
 
-    rpc ListServiceRuns(ListServiceRunsRequest) returns (ListServiceRunsResponse) {
+    rpc ListServiceRuns(ListRequest) returns (ListServiceRunsResponse) {
         option (google.api.http) = {
             get: "/v1/{parent=services/*}/runs"
         };
@@ -128,12 +129,7 @@ message ListServicesResponse {
 message GetServiceRunRequest {
     string resourceName = 1;
 }
-message ListServiceRunsRequest {
-    string parent = 1;
-    string filter = 2;
-    int32 page_size = 3;
-    string next_page_token = 4;
-}
+
 message ListServiceRunsResponse {
     string resourceName = 1;
     repeated ServiceRun serviceRuns = 2;
