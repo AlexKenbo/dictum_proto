@@ -111,15 +111,17 @@ final $typed_data.Uint8List getServiceRunRequestDescriptor = $convert.base64Deco
 const ListServiceRunsResponse$json = {
   '1': 'ListServiceRunsResponse',
   '2': [
-    {'1': 'resourceName', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
-    {'1': 'serviceRuns', '3': 2, '4': 3, '5': 11, '6': '.ServiceRun', '10': 'serviceRuns'},
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'service_runs', '3': 2, '4': 3, '5': 11, '6': '.ServiceRun', '10': 'serviceRuns'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 /// Descriptor for `ListServiceRunsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listServiceRunsResponseDescriptor = $convert.base64Decode(
-    'ChdMaXN0U2VydmljZVJ1bnNSZXNwb25zZRIiCgxyZXNvdXJjZU5hbWUYASABKAlSDHJlc291cm'
-    'NlTmFtZRItCgtzZXJ2aWNlUnVucxgCIAMoCzILLlNlcnZpY2VSdW5SC3NlcnZpY2VSdW5z');
+    'ChdMaXN0U2VydmljZVJ1bnNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdX'
+    'JjZU5hbWUSLgoMc2VydmljZV9ydW5zGAIgAygLMgsuU2VydmljZVJ1blILc2VydmljZVJ1bnMS'
+    'JgoPbmV4dF9wYWdlX3Rva2VuGAMgASgJUg1uZXh0UGFnZVRva2Vu');
 
 @$core.Deprecated('Use runServiceRequestDescriptor instead')
 const RunServiceRequest$json = {

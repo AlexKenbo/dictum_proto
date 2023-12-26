@@ -87,6 +87,9 @@ service PluginService {
     rpc ListServiceRuns(ListRequest) returns (ListServiceRunsResponse) {
         option (google.api.http) = {
             get: "/v1/{parent=services/*}/runs"
+            additional_bindings {
+                get: "/v1/{parent=services/-}/runs"
+            }
         };
     }
 
@@ -131,8 +134,9 @@ message GetServiceRunRequest {
 }
 
 message ListServiceRunsResponse {
-    string resourceName = 1;
-    repeated ServiceRun serviceRuns = 2;
+    string resource_name = 1;
+    repeated ServiceRun service_runs = 2;
+    string next_page_token = 3;
 }
 
 message RunServiceRequest {
