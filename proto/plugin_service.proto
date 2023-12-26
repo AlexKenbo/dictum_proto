@@ -131,6 +131,7 @@ message GetServiceRunRequest {
 message ListServiceRunsRequest {
     string parent = 1;
     string filter = 2;
+    string page_size = 3;
 }
 message ListServiceRunsResponse {
     string resourceName = 1;

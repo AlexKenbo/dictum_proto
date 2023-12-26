@@ -417,6 +417,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   factory ListServiceRunsRequest({
     $core.String? parent,
     $core.String? filter,
+    $core.String? pageSize,
   }) {
     final $result = create();
     if (parent != null) {
@@ -424,6 +425,9 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
     }
     if (filter != null) {
       $result.filter = filter;
+    }
+    if (pageSize != null) {
+      $result.pageSize = pageSize;
     }
     return $result;
   }
@@ -434,6 +438,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServiceRunsRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
+    ..aOS(3, _omitFieldNames ? '' : 'pageSize')
     ..hasRequiredFields = false
   ;
 
@@ -475,6 +480,15 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(1);
   @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get pageSize => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set pageSize($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPageSize() => clearField(3);
 }
 
 class ListServiceRunsResponse extends $pb.GeneratedMessage {
