@@ -417,7 +417,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   factory ListServiceRunsRequest({
     $core.String? parent,
     $core.String? filter,
-    $core.String? pageSize,
+    $core.int? pageSize,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -442,7 +442,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServiceRunsRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
-    ..aOS(3, _omitFieldNames ? '' : 'pageSize')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -487,9 +487,9 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get pageSize => $_getSZ(2);
+  $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
-  set pageSize($core.String v) { $_setString(2, v); }
+  set pageSize($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
   @$pb.TagNumber(3)
