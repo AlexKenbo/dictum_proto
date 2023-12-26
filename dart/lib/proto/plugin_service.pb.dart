@@ -418,6 +418,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
     $core.String? parent,
     $core.String? filter,
     $core.String? pageSize,
+    $core.String? nextPageToken,
   }) {
     final $result = create();
     if (parent != null) {
@@ -429,6 +430,9 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
     if (pageSize != null) {
       $result.pageSize = pageSize;
     }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
     return $result;
   }
   ListServiceRunsRequest._() : super();
@@ -439,6 +443,7 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'parent')
     ..aOS(2, _omitFieldNames ? '' : 'filter')
     ..aOS(3, _omitFieldNames ? '' : 'pageSize')
+    ..aOS(4, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -489,6 +494,15 @@ class ListServiceRunsRequest extends $pb.GeneratedMessage {
   $core.bool hasPageSize() => $_has(2);
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get nextPageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set nextPageToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNextPageToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNextPageToken() => clearField(4);
 }
 
 class ListServiceRunsResponse extends $pb.GeneratedMessage {

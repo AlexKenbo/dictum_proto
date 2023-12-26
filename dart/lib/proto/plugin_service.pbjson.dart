@@ -114,13 +114,15 @@ const ListServiceRunsRequest$json = {
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
     {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
     {'1': 'page_size', '3': 3, '4': 1, '5': 9, '10': 'pageSize'},
+    {'1': 'next_page_token', '3': 4, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 /// Descriptor for `ListServiceRunsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listServiceRunsRequestDescriptor = $convert.base64Decode(
     'ChZMaXN0U2VydmljZVJ1bnNSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhYKBmZpbH'
-    'RlchgCIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgDIAEoCVIIcGFnZVNpemU=');
+    'RlchgCIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgDIAEoCVIIcGFnZVNpemUSJgoPbmV4dF9w'
+    'YWdlX3Rva2VuGAQgASgJUg1uZXh0UGFnZVRva2Vu');
 
 @$core.Deprecated('Use listServiceRunsResponseDescriptor instead')
 const ListServiceRunsResponse$json = {

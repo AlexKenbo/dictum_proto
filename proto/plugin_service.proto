@@ -132,6 +132,7 @@ message ListServiceRunsRequest {
     string parent = 1;
     string filter = 2;
     string page_size = 3;
+    string next_page_token = 4;
 }
 message ListServiceRunsResponse {
     string resourceName = 1;
