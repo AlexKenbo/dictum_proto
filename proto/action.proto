@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+message Action {
+  int32 action_id = 1;
+  string name = 2;
+  string scope_name = 3;
+  string description = 4;
+}

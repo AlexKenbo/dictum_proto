@@ -5,67 +5,87 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 import "google/protobuf/timestamp.proto";
 
 import "proto/account.proto";
-import "proto/accrual_type.proto";
 import "proto/accrual_attachment.proto";
+import "proto/accrual_type.proto";
 import "proto/article.proto";
 import "proto/color.proto";
+import "proto/comment.proto";
 import "proto/currency.proto";
 import "proto/entity.proto";
 import "proto/operation.proto";
 import "proto/payment_type.proto";
+import "proto/signature.proto";
 import "proto/source.proto";
 import "proto/status.proto";
 import "proto/user.proto";
 
-message Accrual
-{
+message Accrual {
   int32 event_id = 1;
   int32 conglomerate_id = 2;
   bool one_transfer_pay = 3;
-  int32 operation_id = 4;
+  int32 operation_id = 4; // @deprecated
   string currency_code = 5;
   AccrualType type = 6;
-  int32 article_id = 7;
+  int32 article_id = 7; // @deprecated migrates to payer's/recipient's
   string sys_period = 8;
   string invoice_number = 9;
-  int32 project_id = 17;  
-  int32 recipient_account_id = 19;
-  int32 payer_account_id = 21;
-  bool is_initial = 23;
-  PaymentType payment_type = 27;
-  bool has_other_money_recipient = 29;
-  int32 approver_id = 31;
-  int32 payer_user_id = 33;
-  bool allow_payout = 35;
-  string resource_name = 39;
-  string source_key = 41;
-  User payer_user = 43;
-  User approver = 45;
-  // Event event = 47;
-  Operation operation = 49;
-  Currency currency = 51;
-  Account recipient_account = 53;
-  Account payer_account = 55;
-  Article article = 57;
-  int32 payer_id = 58;             
-  int32 recipient_id = 59;         
-  double amount = 60;              
-  double allocated_amount = 61;    
-  string payout_proof = 65;        
-  string note = 66;    
-  double taxAmount = 68;              
-  double taxPercent = 69;              
-  bool taxInclusive = 70;              
-  Source datasource = 71;          
-  Color color = 72;   
-  google.protobuf.Timestamp full_allocation_time = 73;  
-  Entity payer = 74;
-  Entity recipient = 75;
-  google.protobuf.Timestamp perform_time = 76;
-  google.protobuf.Timestamp payment_due_time = 77;
-  google.protobuf.Timestamp payout_date = 78;
-  google.protobuf.Timestamp pay_time = 79;
-  google.protobuf.Timestamp create_time = 80;
-  Status status = 81;
-  repeated AccrualAttachment accrual_attachments = 82;
+  int32 project_id = 10; // not in use
+  int32 recipient_account_id = 11;
+  int32 payer_account_id = 12;
+  bool is_initial = 13; // @deprecated
+  PaymentType payment_type = 14;
+  bool has_other_money_recipient = 15;
+  int32 approver_id = 16;
+  int32 payer_user_id = 17;
+  bool allow_payout = 18;
+  string resource_name = 19;
+  string source_key = 20;
+  User payer_user = 21;
+  User approver = 22;
+  Operation operation = 23; // @deprecated
+  Currency currency = 24;
+  Account recipient_account = 25;
+  Account payer_account = 26;
+  Article article = 27; // @deprecated migrates to payer's/recipient's
+  int32 payer_id = 28;             
+  int32 recipient_id = 29;         
+  double amount = 30;              
+  double allocated_amount = 31;    
+  string payout_proof = 32;        
+  string note = 33;    
+  double taxAmount = 34;              
+  double taxPercent = 35;              
+  bool taxInclusive = 36;              
+  Source datasource = 37;          
+  Color color = 38;   
+  google.protobuf.Timestamp full_allocation_time = 39;  
+  Entity payer = 40;
+  Entity recipient = 41;
+  google.protobuf.Timestamp perform_time = 42;
+  google.protobuf.Timestamp payment_due_time = 43;
+  google.protobuf.Timestamp payout_date = 44;
+  google.protobuf.Timestamp pay_time = 45;
+  google.protobuf.Timestamp create_time = 46;
+  Status status = 47;
+  repeated AccrualAttachment accrual_attachments = 48;
+
+  // Invoicing new fields
+  int32 initiator_id = 49;
+  int32 author_id = 50;
+  int32 consignee_id = 51;
+  bool published = 52;
+  bool audited = 53;
+  bool require_primary_document = 54;
+  int32 payer_article_id = 55;
+  int32 consignee_article_id = 56;
+  int32 recipient_article_id = 57;
+  // 
+  Article payerArticle = 58; 
+  Article consigneeArticle = 59; 
+  Article recipientArticle = 60; 
+  repeated Comment comments = 61;
+  User author = 62;
+  Entity initiator = 63;
+  Entity consignee = 64;
+  repeated Signature signatures = 65;
 }

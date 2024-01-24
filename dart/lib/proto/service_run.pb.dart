@@ -13,17 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $31;
+import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'service.pb.dart' as $19;
-import 'service_run_state.pbenum.dart' as $62;
+import 'service_run_state.pbenum.dart' as $68;
 
 class ServiceRun extends $pb.GeneratedMessage {
   factory ServiceRun({
     $core.int? serviceId,
-    $62.ServiceRunState? state,
+    $68.ServiceRunState? state,
     $core.String? message,
     $19.Service? service,
-    $31.Timestamp? syncTime,
+    $33.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -49,10 +49,10 @@ class ServiceRun extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ServiceRun', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
-    ..e<$62.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $62.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $62.ServiceRunState.valueOf, enumValues: $62.ServiceRunState.values)
+    ..e<$68.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $68.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $68.ServiceRunState.valueOf, enumValues: $68.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
     ..aOM<$19.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $19.Service.create)
-    ..aOM<$31.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $31.Timestamp.create)
+    ..aOM<$33.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $33.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -87,9 +87,9 @@ class ServiceRun extends $pb.GeneratedMessage {
   void clearServiceId() => clearField(1);
 
   @$pb.TagNumber(3)
-  $62.ServiceRunState get state => $_getN(1);
+  $68.ServiceRunState get state => $_getN(1);
   @$pb.TagNumber(3)
-  set state($62.ServiceRunState v) { setField(3, v); }
+  set state($68.ServiceRunState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(3)
@@ -116,15 +116,15 @@ class ServiceRun extends $pb.GeneratedMessage {
   $19.Service ensureService() => $_ensure(3);
 
   @$pb.TagNumber(7)
-  $31.Timestamp get syncTime => $_getN(4);
+  $33.Timestamp get syncTime => $_getN(4);
   @$pb.TagNumber(7)
-  set syncTime($31.Timestamp v) { setField(7, v); }
+  set syncTime($33.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSyncTime() => $_has(4);
   @$pb.TagNumber(7)
   void clearSyncTime() => clearField(7);
   @$pb.TagNumber(7)
-  $31.Timestamp ensureSyncTime() => $_ensure(4);
+  $33.Timestamp ensureSyncTime() => $_ensure(4);
 }
 
 

@@ -26,6 +26,7 @@ const Employee$json = {
     {'1': 'country', '3': 15, '4': 1, '5': 11, '6': '.Country', '10': 'country'},
     {'1': 'hire_time', '3': 16, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'hireTime'},
     {'1': 'unhire_time', '3': 17, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'unhireTime'},
+    {'1': 'permissions', '3': 18, '4': 3, '5': 11, '6': '.Permission', '10': 'permissions'},
   ],
 };
 
@@ -38,5 +39,6 @@ final $typed_data.Uint8List employeeDescriptor = $convert.base64Decode(
     'ZW50aXR5GA0gASgLMgcuRW50aXR5UgZlbnRpdHkSIgoHY291bnRyeRgPIAEoCzIILkNvdW50cn'
     'lSB2NvdW50cnkSNwoJaGlyZV90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt'
     'cFIIaGlyZVRpbWUSOwoLdW5oaXJlX3RpbWUYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZX'
-    'N0YW1wUgp1bmhpcmVUaW1l');
+    'N0YW1wUgp1bmhpcmVUaW1lEi0KC3Blcm1pc3Npb25zGBIgAygLMgsuUGVybWlzc2lvblILcGVy'
+    'bWlzc2lvbnM=');
 
