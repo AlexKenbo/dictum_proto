@@ -31,6 +31,7 @@ class Article extends $pb.GeneratedMessage {
     $core.int? parentArticleId,
     Article? parentArticle,
     $54.FundFlow? fundFlow,
+    $core.int? entityId,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -69,6 +70,9 @@ class Article extends $pb.GeneratedMessage {
     if (fundFlow != null) {
       $result.fundFlow = fundFlow;
     }
+    if (entityId != null) {
+      $result.entityId = entityId;
+    }
     return $result;
   }
   Article._() : super();
@@ -88,6 +92,7 @@ class Article extends $pb.GeneratedMessage {
     ..a<$core.int>(10, _omitFieldNames ? '' : 'parentArticleId', $pb.PbFieldType.O3)
     ..aOM<Article>(11, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
     ..e<$54.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $54.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $54.FundFlow.valueOf, enumValues: $54.FundFlow.values)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -221,6 +226,15 @@ class Article extends $pb.GeneratedMessage {
   $core.bool hasFundFlow() => $_has(11);
   @$pb.TagNumber(12)
   void clearFundFlow() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.int get entityId => $_getIZ(12);
+  @$pb.TagNumber(13)
+  set entityId($core.int v) { $_setSignedInt32(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasEntityId() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearEntityId() => clearField(13);
 }
 
 

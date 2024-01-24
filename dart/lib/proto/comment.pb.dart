@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $33;
+import 'user.pb.dart' as $13;
 
 class Comment extends $pb.GeneratedMessage {
   factory Comment({
@@ -21,6 +22,7 @@ class Comment extends $pb.GeneratedMessage {
     $core.String? text,
     $core.int? creatorId,
     $33.Timestamp? createTime,
+    $13.User? creator,
   }) {
     final $result = create();
     if (commentId != null) {
@@ -35,6 +37,9 @@ class Comment extends $pb.GeneratedMessage {
     if (createTime != null) {
       $result.createTime = createTime;
     }
+    if (creator != null) {
+      $result.creator = creator;
+    }
     return $result;
   }
   Comment._() : super();
@@ -46,6 +51,7 @@ class Comment extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'text')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'creatorId', $pb.PbFieldType.O3)
     ..aOM<$33.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$13.User>(5, _omitFieldNames ? '' : 'creator', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -107,6 +113,17 @@ class Comment extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
   $33.Timestamp ensureCreateTime() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  $13.User get creator => $_getN(4);
+  @$pb.TagNumber(5)
+  set creator($13.User v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasCreator() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCreator() => clearField(5);
+  @$pb.TagNumber(5)
+  $13.User ensureCreator() => $_ensure(4);
 }
 
 
