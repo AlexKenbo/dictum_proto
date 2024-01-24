@@ -1,9 +1,9 @@
 name: dictum_proto
-version: '2.2.0-alpha'
+version: '0.0.1-alpha'
 description: Dictum protocol buffer.
 
 environment:
-  sdk: '>=3.2.0 <3.3.0' 
+  sdk: '>=3.2.0 <3.3.0'
 
 dependencies:
   protobuf: ^3.1.0
