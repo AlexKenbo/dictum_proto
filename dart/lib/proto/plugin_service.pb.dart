@@ -413,74 +413,11 @@ class GetServiceRunRequest extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 }
 
-class ListServiceRunsRequest extends $pb.GeneratedMessage {
-  factory ListServiceRunsRequest({
-    $core.String? parent,
-    $core.String? filter,
-  }) {
-    final $result = create();
-    if (parent != null) {
-      $result.parent = parent;
-    }
-    if (filter != null) {
-      $result.filter = filter;
-    }
-    return $result;
-  }
-  ListServiceRunsRequest._() : super();
-  factory ListServiceRunsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ListServiceRunsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServiceRunsRequest', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..aOS(2, _omitFieldNames ? '' : 'filter')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ListServiceRunsRequest clone() => ListServiceRunsRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ListServiceRunsRequest copyWith(void Function(ListServiceRunsRequest) updates) => super.copyWith((message) => updates(message as ListServiceRunsRequest)) as ListServiceRunsRequest;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static ListServiceRunsRequest create() => ListServiceRunsRequest._();
-  ListServiceRunsRequest createEmptyInstance() => create();
-  static $pb.PbList<ListServiceRunsRequest> createRepeated() => $pb.PbList<ListServiceRunsRequest>();
-  @$core.pragma('dart2js:noInline')
-  static ListServiceRunsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListServiceRunsRequest>(create);
-  static ListServiceRunsRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get parent => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set parent($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasParent() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearParent() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get filter => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set filter($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasFilter() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearFilter() => clearField(2);
-}
-
 class ListServiceRunsResponse extends $pb.GeneratedMessage {
   factory ListServiceRunsResponse({
     $core.String? resourceName,
     $core.Iterable<$20.ServiceRun>? serviceRuns,
+    $core.String? nextPageToken,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -489,6 +426,9 @@ class ListServiceRunsResponse extends $pb.GeneratedMessage {
     if (serviceRuns != null) {
       $result.serviceRuns.addAll(serviceRuns);
     }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
     return $result;
   }
   ListServiceRunsResponse._() : super();
@@ -496,8 +436,9 @@ class ListServiceRunsResponse extends $pb.GeneratedMessage {
   factory ListServiceRunsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServiceRunsResponse', createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'resourceName', protoName: 'resourceName')
-    ..pc<$20.ServiceRun>(2, _omitFieldNames ? '' : 'serviceRuns', $pb.PbFieldType.PM, protoName: 'serviceRuns', subBuilder: $20.ServiceRun.create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$20.ServiceRun>(2, _omitFieldNames ? '' : 'serviceRuns', $pb.PbFieldType.PM, subBuilder: $20.ServiceRun.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -533,6 +474,15 @@ class ListServiceRunsResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<$20.ServiceRun> get serviceRuns => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
 }
 
 class RunServiceRequest extends $pb.GeneratedMessage {

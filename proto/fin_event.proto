@@ -22,6 +22,9 @@ service FinEvent {
     rpc ListTransfers(ListRequest) returns (ListTransfersResponse) {
         option (google.api.http) = {
             get: "/v1/transfers"
+            additional_bindings {
+                get: "/v1/{parent=accounts/*}/transfers"
+            }
         };
     }
     
