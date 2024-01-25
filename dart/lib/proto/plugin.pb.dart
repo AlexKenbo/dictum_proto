@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'plugin_owner_type.pbenum.dart' as $57;
+import 'plugin_owner_type.pbenum.dart' as $59;
 
 class Plugin extends $pb.GeneratedMessage {
   factory Plugin({
     $core.int? pluginId,
     $core.String? name,
-    $57.PluginOwnerType? ownerType,
+    $59.PluginOwnerType? ownerType,
     $core.String? scopes,
   }) {
     final $result = create();
@@ -44,7 +44,7 @@ class Plugin extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Plugin', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'pluginId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..e<$57.PluginOwnerType>(3, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE, defaultOrMaker: $57.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN, valueOf: $57.PluginOwnerType.valueOf, enumValues: $57.PluginOwnerType.values)
+    ..e<$59.PluginOwnerType>(3, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE, defaultOrMaker: $59.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN, valueOf: $59.PluginOwnerType.valueOf, enumValues: $59.PluginOwnerType.values)
     ..aOS(4, _omitFieldNames ? '' : 'scopes')
     ..hasRequiredFields = false
   ;
@@ -89,9 +89,9 @@ class Plugin extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $57.PluginOwnerType get ownerType => $_getN(2);
+  $59.PluginOwnerType get ownerType => $_getN(2);
   @$pb.TagNumber(3)
-  set ownerType($57.PluginOwnerType v) { setField(3, v); }
+  set ownerType($59.PluginOwnerType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOwnerType() => $_has(2);
   @$pb.TagNumber(3)

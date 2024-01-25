@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action_type.pbenum.dart' as $30;
+import 'action_type.pbenum.dart' as $32;
 
 class Subscription extends $pb.GeneratedMessage {
   factory Subscription({
     $core.int? subscriptionId,
-    $30.ActionType? actionType,
+    $32.ActionType? actionType,
     $core.String? table,
     $core.String? fields,
     $core.String? webhookUrl,
@@ -51,7 +51,7 @@ class Subscription extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Subscription', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'subscriptionId', $pb.PbFieldType.O3)
-    ..e<$30.ActionType>(3, _omitFieldNames ? '' : 'actionType', $pb.PbFieldType.OE, defaultOrMaker: $30.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $30.ActionType.valueOf, enumValues: $30.ActionType.values)
+    ..e<$32.ActionType>(3, _omitFieldNames ? '' : 'actionType', $pb.PbFieldType.OE, defaultOrMaker: $32.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $32.ActionType.valueOf, enumValues: $32.ActionType.values)
     ..aOS(4, _omitFieldNames ? '' : 'table')
     ..aOS(5, _omitFieldNames ? '' : 'fields')
     ..aOS(6, _omitFieldNames ? '' : 'webhookUrl')
@@ -90,9 +90,9 @@ class Subscription extends $pb.GeneratedMessage {
   void clearSubscriptionId() => clearField(1);
 
   @$pb.TagNumber(3)
-  $30.ActionType get actionType => $_getN(1);
+  $32.ActionType get actionType => $_getN(1);
   @$pb.TagNumber(3)
-  set actionType($30.ActionType v) { setField(3, v); }
+  set actionType($32.ActionType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasActionType() => $_has(1);
   @$pb.TagNumber(3)
