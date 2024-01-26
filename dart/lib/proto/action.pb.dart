@@ -21,6 +21,7 @@ class Action extends $pb.GeneratedMessage {
     $39.ActionType? type,
     $core.String? scopeName,
     $core.String? description,
+    $core.String? resourceName,
   }) {
     final $result = create();
     if (actionId != null) {
@@ -35,6 +36,9 @@ class Action extends $pb.GeneratedMessage {
     if (description != null) {
       $result.description = description;
     }
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
     return $result;
   }
   Action._() : super();
@@ -46,6 +50,7 @@ class Action extends $pb.GeneratedMessage {
     ..e<$39.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $39.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $39.ActionType.valueOf, enumValues: $39.ActionType.values)
     ..aOS(3, _omitFieldNames ? '' : 'scopeName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
+    ..aOS(5, _omitFieldNames ? '' : 'resourceName')
     ..hasRequiredFields = false
   ;
 
@@ -105,6 +110,15 @@ class Action extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
   void clearDescription() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get resourceName => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set resourceName($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasResourceName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearResourceName() => clearField(5);
 }
 
 

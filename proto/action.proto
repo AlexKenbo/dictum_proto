@@ -9,4 +9,5 @@ message Action {
   ActionType type = 2;
   string scope_name = 3;
   string description = 4;
+  string resource_name = 5;
 }
