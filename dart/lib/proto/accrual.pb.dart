@@ -16,7 +16,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'account.pb.dart' as $6;
 import 'accrual_type.pbenum.dart' as $54;
-import 'article.pb.dart' as $27;
+import 'article.pb.dart' as $28;
 import 'attachment.pb.dart' as $15;
 import 'color.pbenum.dart' as $57;
 import 'comment.pb.dart' as $52;
@@ -57,7 +57,7 @@ class Accrual extends $pb.GeneratedMessage {
     $43.Currency? currency,
     $6.Account? recipientAccount,
     $6.Account? payerAccount,
-    $27.Article? article,
+    $28.Article? article,
     $core.int? payerId,
     $core.int? recipientId,
     $core.double? amount,
@@ -88,9 +88,9 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? payerArticleId,
     $core.int? consigneeArticleId,
     $core.int? recipientArticleId,
-    $27.Article? payerArticle,
-    $27.Article? consigneeArticle,
-    $27.Article? recipientArticle,
+    $28.Article? payerArticle,
+    $28.Article? consigneeArticle,
+    $28.Article? recipientArticle,
     $core.Iterable<$52.Comment>? comments,
     $13.User? author,
     $2.Entity? initiator,
@@ -326,7 +326,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$43.Currency>(24, _omitFieldNames ? '' : 'currency', subBuilder: $43.Currency.create)
     ..aOM<$6.Account>(25, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $6.Account.create)
     ..aOM<$6.Account>(26, _omitFieldNames ? '' : 'payerAccount', subBuilder: $6.Account.create)
-    ..aOM<$27.Article>(27, _omitFieldNames ? '' : 'article', subBuilder: $27.Article.create)
+    ..aOM<$28.Article>(27, _omitFieldNames ? '' : 'article', subBuilder: $28.Article.create)
     ..a<$core.int>(28, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(29, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
     ..a<$core.double>(30, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
@@ -357,9 +357,9 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(55, _omitFieldNames ? '' : 'payerArticleId', $pb.PbFieldType.O3)
     ..a<$core.int>(56, _omitFieldNames ? '' : 'consigneeArticleId', $pb.PbFieldType.O3)
     ..a<$core.int>(57, _omitFieldNames ? '' : 'recipientArticleId', $pb.PbFieldType.O3)
-    ..aOM<$27.Article>(58, _omitFieldNames ? '' : 'payerArticle', protoName: 'payerArticle', subBuilder: $27.Article.create)
-    ..aOM<$27.Article>(59, _omitFieldNames ? '' : 'consigneeArticle', protoName: 'consigneeArticle', subBuilder: $27.Article.create)
-    ..aOM<$27.Article>(60, _omitFieldNames ? '' : 'recipientArticle', protoName: 'recipientArticle', subBuilder: $27.Article.create)
+    ..aOM<$28.Article>(58, _omitFieldNames ? '' : 'payerArticle', protoName: 'payerArticle', subBuilder: $28.Article.create)
+    ..aOM<$28.Article>(59, _omitFieldNames ? '' : 'consigneeArticle', protoName: 'consigneeArticle', subBuilder: $28.Article.create)
+    ..aOM<$28.Article>(60, _omitFieldNames ? '' : 'recipientArticle', protoName: 'recipientArticle', subBuilder: $28.Article.create)
     ..pc<$52.Comment>(61, _omitFieldNames ? '' : 'comments', $pb.PbFieldType.PM, subBuilder: $52.Comment.create)
     ..aOM<$13.User>(62, _omitFieldNames ? '' : 'author', subBuilder: $13.User.create)
     ..aOM<$2.Entity>(63, _omitFieldNames ? '' : 'initiator', subBuilder: $2.Entity.create)
@@ -636,15 +636,15 @@ class Accrual extends $pb.GeneratedMessage {
   $6.Account ensurePayerAccount() => $_ensure(25);
 
   @$pb.TagNumber(27)
-  $27.Article get article => $_getN(26);
+  $28.Article get article => $_getN(26);
   @$pb.TagNumber(27)
-  set article($27.Article v) { setField(27, v); }
+  set article($28.Article v) { setField(27, v); }
   @$pb.TagNumber(27)
   $core.bool hasArticle() => $_has(26);
   @$pb.TagNumber(27)
   void clearArticle() => clearField(27);
   @$pb.TagNumber(27)
-  $27.Article ensureArticle() => $_ensure(26);
+  $28.Article ensureArticle() => $_ensure(26);
 
   @$pb.TagNumber(28)
   $core.int get payerId => $_getIZ(27);
@@ -928,37 +928,37 @@ class Accrual extends $pb.GeneratedMessage {
   void clearRecipientArticleId() => clearField(57);
 
   @$pb.TagNumber(58)
-  $27.Article get payerArticle => $_getN(57);
+  $28.Article get payerArticle => $_getN(57);
   @$pb.TagNumber(58)
-  set payerArticle($27.Article v) { setField(58, v); }
+  set payerArticle($28.Article v) { setField(58, v); }
   @$pb.TagNumber(58)
   $core.bool hasPayerArticle() => $_has(57);
   @$pb.TagNumber(58)
   void clearPayerArticle() => clearField(58);
   @$pb.TagNumber(58)
-  $27.Article ensurePayerArticle() => $_ensure(57);
+  $28.Article ensurePayerArticle() => $_ensure(57);
 
   @$pb.TagNumber(59)
-  $27.Article get consigneeArticle => $_getN(58);
+  $28.Article get consigneeArticle => $_getN(58);
   @$pb.TagNumber(59)
-  set consigneeArticle($27.Article v) { setField(59, v); }
+  set consigneeArticle($28.Article v) { setField(59, v); }
   @$pb.TagNumber(59)
   $core.bool hasConsigneeArticle() => $_has(58);
   @$pb.TagNumber(59)
   void clearConsigneeArticle() => clearField(59);
   @$pb.TagNumber(59)
-  $27.Article ensureConsigneeArticle() => $_ensure(58);
+  $28.Article ensureConsigneeArticle() => $_ensure(58);
 
   @$pb.TagNumber(60)
-  $27.Article get recipientArticle => $_getN(59);
+  $28.Article get recipientArticle => $_getN(59);
   @$pb.TagNumber(60)
-  set recipientArticle($27.Article v) { setField(60, v); }
+  set recipientArticle($28.Article v) { setField(60, v); }
   @$pb.TagNumber(60)
   $core.bool hasRecipientArticle() => $_has(59);
   @$pb.TagNumber(60)
   void clearRecipientArticle() => clearField(60);
   @$pb.TagNumber(60)
-  $27.Article ensureRecipientArticle() => $_ensure(59);
+  $28.Article ensureRecipientArticle() => $_ensure(59);
 
   @$pb.TagNumber(61)
   $core.List<$52.Comment> get comments => $_getList(60);

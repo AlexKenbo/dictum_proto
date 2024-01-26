@@ -41,6 +41,13 @@ service FinEvent {
         };
     };
 
+    rpc AllocateTransfer(AllocateTransferRequest) returns (Allocation) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=transfers/*}/allocate"
+            body: "transfer"
+        };
+    };
+
     rpc BatchInsertTransfers(BatchInsertTransfersRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
             post: "/v1/batch-transfers"
@@ -246,6 +253,10 @@ message BatchInsertAccrualsRequest {
 message BatchInsertPositionsRequest {
     string resource_name = 1;
     repeated Position positions = 2;
+}
+
+message AllocateTransferRequest {
+    string resource_name = 1;
 }
 
 message ListProductsResponse {

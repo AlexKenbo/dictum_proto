@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $32;
-import 'accrual.pb.dart' as $23;
+import 'accrual.pb.dart' as $24;
 import 'transfer.pb.dart' as $21;
 
 class Allocation extends $pb.GeneratedMessage {
@@ -27,7 +27,7 @@ class Allocation extends $pb.GeneratedMessage {
     $core.double? transferAllocatedAmount,
     $core.String? transferCurrencyCode,
     $core.String? resourceName,
-    $23.Accrual? accrual,
+    $24.Accrual? accrual,
     $21.Transfer? transfer,
     $32.Timestamp? createTime,
   }) {
@@ -80,7 +80,7 @@ class Allocation extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'transferAllocatedAmount', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'transferCurrencyCode')
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$23.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $23.Accrual.create)
+    ..aOM<$24.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
     ..aOM<$21.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $21.Transfer.create)
     ..aOM<$32.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
@@ -180,15 +180,15 @@ class Allocation extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(9);
 
   @$pb.TagNumber(11)
-  $23.Accrual get accrual => $_getN(8);
+  $24.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(11)
-  set accrual($23.Accrual v) { setField(11, v); }
+  set accrual($24.Accrual v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(11)
   void clearAccrual() => clearField(11);
   @$pb.TagNumber(11)
-  $23.Accrual ensureAccrual() => $_ensure(8);
+  $24.Accrual ensureAccrual() => $_ensure(8);
 
   @$pb.TagNumber(13)
   $21.Transfer get transfer => $_getN(9);
