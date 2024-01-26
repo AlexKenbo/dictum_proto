@@ -21,7 +21,8 @@ const Comment$json = {
     {'1': 'text', '3': 2, '4': 1, '5': 9, '10': 'text'},
     {'1': 'creator_id', '3': 3, '4': 1, '5': 5, '10': 'creatorId'},
     {'1': 'create_time', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
-    {'1': 'creator', '3': 5, '4': 1, '5': 11, '6': '.User', '10': 'creator'},
+    {'1': 'resource_name', '3': 5, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'creator', '3': 6, '4': 1, '5': 11, '6': '.User', '10': 'creator'},
   ],
 };
 
@@ -29,6 +30,6 @@ const Comment$json = {
 final $typed_data.Uint8List commentDescriptor = $convert.base64Decode(
     'CgdDb21tZW50Eh0KCmNvbW1lbnRfaWQYASABKAVSCWNvbW1lbnRJZBISCgR0ZXh0GAIgASgJUg'
     'R0ZXh0Eh0KCmNyZWF0b3JfaWQYAyABKAVSCWNyZWF0b3JJZBI7CgtjcmVhdGVfdGltZRgEIAEo'
-    'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSHwoHY3JlYXRvchgFIA'
-    'EoCzIFLlVzZXJSB2NyZWF0b3I=');
+    'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSIwoNcmVzb3VyY2Vfbm'
+    'FtZRgFIAEoCVIMcmVzb3VyY2VOYW1lEh8KB2NyZWF0b3IYBiABKAsyBS5Vc2VyUgdjcmVhdG9y');
 

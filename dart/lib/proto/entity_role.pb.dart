@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'entity.pb.dart' as $2;
 
 class EntityRole extends $pb.GeneratedMessage {
@@ -21,7 +21,7 @@ class EntityRole extends $pb.GeneratedMessage {
     $core.int? userId,
     $2.Entity? entity,
     $core.String? role,
-    $33.Timestamp? hireTime,
+    $32.Timestamp? hireTime,
   }) {
     final $result = create();
     if (userId != null) {
@@ -46,7 +46,7 @@ class EntityRole extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..aOM<$2.Entity>(2, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..aOS(3, _omitFieldNames ? '' : 'role')
-    ..aOM<$33.Timestamp>(5, _omitFieldNames ? '' : 'hireTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$32.Timestamp>(5, _omitFieldNames ? '' : 'hireTime', subBuilder: $32.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -101,15 +101,15 @@ class EntityRole extends $pb.GeneratedMessage {
   void clearRole() => clearField(3);
 
   @$pb.TagNumber(5)
-  $33.Timestamp get hireTime => $_getN(3);
+  $32.Timestamp get hireTime => $_getN(3);
   @$pb.TagNumber(5)
-  set hireTime($33.Timestamp v) { setField(5, v); }
+  set hireTime($32.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasHireTime() => $_has(3);
   @$pb.TagNumber(5)
   void clearHireTime() => clearField(5);
   @$pb.TagNumber(5)
-  $33.Timestamp ensureHireTime() => $_ensure(3);
+  $32.Timestamp ensureHireTime() => $_ensure(3);
 }
 
 

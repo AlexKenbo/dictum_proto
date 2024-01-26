@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $32;
 import 'user.pb.dart' as $13;
 
 class Comment extends $pb.GeneratedMessage {
@@ -21,7 +21,8 @@ class Comment extends $pb.GeneratedMessage {
     $core.int? commentId,
     $core.String? text,
     $core.int? creatorId,
-    $33.Timestamp? createTime,
+    $32.Timestamp? createTime,
+    $core.String? resourceName,
     $13.User? creator,
   }) {
     final $result = create();
@@ -37,6 +38,9 @@ class Comment extends $pb.GeneratedMessage {
     if (createTime != null) {
       $result.createTime = createTime;
     }
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
     if (creator != null) {
       $result.creator = creator;
     }
@@ -50,8 +54,9 @@ class Comment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'commentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'text')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'creatorId', $pb.PbFieldType.O3)
-    ..aOM<$33.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
-    ..aOM<$13.User>(5, _omitFieldNames ? '' : 'creator', subBuilder: $13.User.create)
+    ..aOM<$32.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
+    ..aOS(5, _omitFieldNames ? '' : 'resourceName')
+    ..aOM<$13.User>(6, _omitFieldNames ? '' : 'creator', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,26 +109,35 @@ class Comment extends $pb.GeneratedMessage {
   void clearCreatorId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $33.Timestamp get createTime => $_getN(3);
+  $32.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
-  set createTime($33.Timestamp v) { setField(4, v); }
+  set createTime($32.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
-  $33.Timestamp ensureCreateTime() => $_ensure(3);
+  $32.Timestamp ensureCreateTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $13.User get creator => $_getN(4);
+  $core.String get resourceName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set creator($13.User v) { setField(5, v); }
+  set resourceName($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasCreator() => $_has(4);
+  $core.bool hasResourceName() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCreator() => clearField(5);
-  @$pb.TagNumber(5)
-  $13.User ensureCreator() => $_ensure(4);
+  void clearResourceName() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $13.User get creator => $_getN(5);
+  @$pb.TagNumber(6)
+  set creator($13.User v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasCreator() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearCreator() => clearField(6);
+  @$pb.TagNumber(6)
+  $13.User ensureCreator() => $_ensure(5);
 }
 
 

@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
-import 'country.pb.dart' as $35;
+import '../google/protobuf/timestamp.pb.dart' as $32;
+import 'country.pb.dart' as $34;
 import 'entity.pb.dart' as $2;
 import 'permission.pb.dart' as $41;
 import 'role.pbenum.dart' as $42;
@@ -27,9 +27,9 @@ class Employee extends $pb.GeneratedMessage {
     $core.String? personalDocumentNumber,
     $core.String? personalDocumentCountryCode,
     $2.Entity? entity,
-    $35.Country? country,
-    $33.Timestamp? hireTime,
-    $33.Timestamp? unhireTime,
+    $34.Country? country,
+    $32.Timestamp? hireTime,
+    $32.Timestamp? unhireTime,
     $core.Iterable<$41.Permission>? permissions,
   }) {
     final $result = create();
@@ -76,9 +76,9 @@ class Employee extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
     ..aOM<$2.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
-    ..aOM<$35.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $35.Country.create)
-    ..aOM<$33.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $33.Timestamp.create)
-    ..aOM<$33.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$34.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $34.Country.create)
+    ..aOM<$32.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $32.Timestamp.create)
+    ..aOM<$32.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime', subBuilder: $32.Timestamp.create)
     ..pc<$41.Permission>(18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $41.Permission.create)
     ..hasRequiredFields = false
   ;
@@ -161,37 +161,37 @@ class Employee extends $pb.GeneratedMessage {
   $2.Entity ensureEntity() => $_ensure(5);
 
   @$pb.TagNumber(15)
-  $35.Country get country => $_getN(6);
+  $34.Country get country => $_getN(6);
   @$pb.TagNumber(15)
-  set country($35.Country v) { setField(15, v); }
+  set country($34.Country v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasCountry() => $_has(6);
   @$pb.TagNumber(15)
   void clearCountry() => clearField(15);
   @$pb.TagNumber(15)
-  $35.Country ensureCountry() => $_ensure(6);
+  $34.Country ensureCountry() => $_ensure(6);
 
   @$pb.TagNumber(16)
-  $33.Timestamp get hireTime => $_getN(7);
+  $32.Timestamp get hireTime => $_getN(7);
   @$pb.TagNumber(16)
-  set hireTime($33.Timestamp v) { setField(16, v); }
+  set hireTime($32.Timestamp v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasHireTime() => $_has(7);
   @$pb.TagNumber(16)
   void clearHireTime() => clearField(16);
   @$pb.TagNumber(16)
-  $33.Timestamp ensureHireTime() => $_ensure(7);
+  $32.Timestamp ensureHireTime() => $_ensure(7);
 
   @$pb.TagNumber(17)
-  $33.Timestamp get unhireTime => $_getN(8);
+  $32.Timestamp get unhireTime => $_getN(8);
   @$pb.TagNumber(17)
-  set unhireTime($33.Timestamp v) { setField(17, v); }
+  set unhireTime($32.Timestamp v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasUnhireTime() => $_has(8);
   @$pb.TagNumber(17)
   void clearUnhireTime() => clearField(17);
   @$pb.TagNumber(17)
-  $33.Timestamp ensureUnhireTime() => $_ensure(8);
+  $32.Timestamp ensureUnhireTime() => $_ensure(8);
 
   /// New invoicing
   @$pb.TagNumber(18)

@@ -116,6 +116,7 @@ service FinEvent {
 
     //--
 
+    // @deprecated
     rpc UploadInvoice(UploadInvoiceRequest) returns (AccrualAttachment) {
         option (google.api.http) = {
             post: "/v1/{resource_name=accruals/*}/invoice"

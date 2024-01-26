@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "proto/attachment_type.proto";
 
 message ListRequest {
     int32 page_size = 1;
@@ -29,4 +30,14 @@ message UploadInvoiceRequest {
     string resource_name = 1;
     string number = 2;
     bytes file = 3;
+}
+
+message UploadAttachmentRequest {
+    string resource_name = 1;
+    bytes file = 2;
+    string mime_type = 3;
+    AttachmentType type = 4;
+    string name = 5;
+    int32 uploader_id = 6;
+    string external_number = 8;
 }

@@ -3,7 +3,8 @@ syntax = "proto3";
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/protobuf/timestamp.proto";
-      
+
+import "proto/attachment.proto";
 import "proto/transfer_type.proto";
 import "proto/account.proto";
 import "proto/color.proto";
@@ -23,28 +24,29 @@ message Transfer
   string number = 20;
   TransferType type = 22;
   User verifier = 28;
-  int32 payer_id = 31;                   
-  int32 payer_account_id = 32;           
+  int32 payer_id = 31; 
+  int32 payer_account_id = 32;  
   string payer_transfer_key = 33;        
   int32 recipient_id = 34;               
   int32 recipient_account_id = 35;       
   string recipient_transfer_key = 36;    
-  double amount = 37;                    
-  double allocated_amount = 38;          
-  int32 parent_id = 40;                  
+  double amount = 37;  
+  double allocated_amount = 38; 
+  int32 parent_id = 40;
   Source datasource = 42;
-  Color color = 43;                     
-  string note = 44;   
+  Color color = 43;
+  string note = 44;
   Account payer_account = 47;
   Account recipient_account = 48;
   Entity payer = 49;
   Entity recipient = 50;
   google.protobuf.Timestamp create_time = 52;
-  google.protobuf.Timestamp full_allocation_time = 53;    
+  google.protobuf.Timestamp full_allocation_time = 53; 
   google.protobuf.Timestamp payment_time = 54;
   google.protobuf.Timestamp verify_time = 55;
   Transfer parent = 56;
   string recipient_currency_code = 57;
+  repeated Attachment attachments = 58;
   
   string payer_account_number = 59;
   string recipient_account_number = 60;
@@ -53,4 +55,4 @@ message Transfer
   string payer_currency_code = 63;
   string external_url = 64;
   Status status = 65;
-}   
+}

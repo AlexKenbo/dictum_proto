@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment_type.pbenum.dart' as $43;
+import 'attachment_type.pbenum.dart' as $46;
 import 'employee.pb.dart' as $5;
 
 class Attachment extends $pb.GeneratedMessage {
@@ -21,11 +21,12 @@ class Attachment extends $pb.GeneratedMessage {
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $43.AttachmentType? type,
+    $46.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
     $5.Employee? uploader,
+    $core.String? externalNumber,
   }) {
     final $result = create();
     if (attachmentId != null) {
@@ -52,6 +53,9 @@ class Attachment extends $pb.GeneratedMessage {
     if (uploader != null) {
       $result.uploader = uploader;
     }
+    if (externalNumber != null) {
+      $result.externalNumber = externalNumber;
+    }
     return $result;
   }
   Attachment._() : super();
@@ -62,11 +66,12 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$43.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $43.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $43.AttachmentType.valueOf, enumValues: $43.AttachmentType.values)
+    ..e<$46.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $46.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $46.AttachmentType.valueOf, enumValues: $46.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
-    ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$5.Employee>(11, _omitFieldNames ? '' : 'uploader', subBuilder: $5.Employee.create)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'resourceName')
+    ..aOM<$5.Employee>(8, _omitFieldNames ? '' : 'uploader', subBuilder: $5.Employee.create)
+    ..aOS(9, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
   ;
 
@@ -119,9 +124,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $43.AttachmentType get type => $_getN(3);
+  $46.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($43.AttachmentType v) { setField(4, v); }
+  set type($46.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -136,34 +141,44 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearName() => clearField(5);
 
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   $core.int get uploaderId => $_getIZ(5);
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   set uploaderId($core.int v) { $_setSignedInt32(5, v); }
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   $core.bool hasUploaderId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUploaderId() => clearField(6);
+
   @$pb.TagNumber(7)
-  void clearUploaderId() => clearField(7);
-
-  @$pb.TagNumber(9)
   $core.String get resourceName => $_getSZ(6);
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(7)
   set resourceName($core.String v) { $_setString(6, v); }
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(7)
   $core.bool hasResourceName() => $_has(6);
-  @$pb.TagNumber(9)
-  void clearResourceName() => clearField(9);
+  @$pb.TagNumber(7)
+  void clearResourceName() => clearField(7);
 
-  @$pb.TagNumber(11)
+  @$pb.TagNumber(8)
   $5.Employee get uploader => $_getN(7);
-  @$pb.TagNumber(11)
-  set uploader($5.Employee v) { setField(11, v); }
-  @$pb.TagNumber(11)
+  @$pb.TagNumber(8)
+  set uploader($5.Employee v) { setField(8, v); }
+  @$pb.TagNumber(8)
   $core.bool hasUploader() => $_has(7);
-  @$pb.TagNumber(11)
-  void clearUploader() => clearField(11);
-  @$pb.TagNumber(11)
+  @$pb.TagNumber(8)
+  void clearUploader() => clearField(8);
+  @$pb.TagNumber(8)
   $5.Employee ensureUploader() => $_ensure(7);
+
+  /// new fields
+  @$pb.TagNumber(9)
+  $core.String get externalNumber => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set externalNumber($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasExternalNumber() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearExternalNumber() => clearField(9);
 }
 
 

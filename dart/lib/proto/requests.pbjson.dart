@@ -83,3 +83,25 @@ final $typed_data.Uint8List uploadInvoiceRequestDescriptor = $convert.base64Deco
     'ChRVcGxvYWRJbnZvaWNlUmVxdWVzdBIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdXJjZU'
     '5hbWUSFgoGbnVtYmVyGAIgASgJUgZudW1iZXISEgoEZmlsZRgDIAEoDFIEZmlsZQ==');
 
+@$core.Deprecated('Use uploadAttachmentRequestDescriptor instead')
+const UploadAttachmentRequest$json = {
+  '1': 'UploadAttachmentRequest',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'file', '3': 2, '4': 1, '5': 12, '10': 'file'},
+    {'1': 'mime_type', '3': 3, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.AttachmentType', '10': 'type'},
+    {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'uploader_id', '3': 6, '4': 1, '5': 5, '10': 'uploaderId'},
+    {'1': 'external_number', '3': 8, '4': 1, '5': 9, '10': 'externalNumber'},
+  ],
+};
+
+/// Descriptor for `UploadAttachmentRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List uploadAttachmentRequestDescriptor = $convert.base64Decode(
+    'ChdVcGxvYWRBdHRhY2htZW50UmVxdWVzdBIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdX'
+    'JjZU5hbWUSEgoEZmlsZRgCIAEoDFIEZmlsZRIbCgltaW1lX3R5cGUYAyABKAlSCG1pbWVUeXBl'
+    'EiMKBHR5cGUYBCABKA4yDy5BdHRhY2htZW50VHlwZVIEdHlwZRISCgRuYW1lGAUgASgJUgRuYW'
+    '1lEh8KC3VwbG9hZGVyX2lkGAYgASgFUgp1cGxvYWRlcklkEicKD2V4dGVybmFsX251bWJlchgI'
+    'IAEoCVIOZXh0ZXJuYWxOdW1iZXI=');
+
