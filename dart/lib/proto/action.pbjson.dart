@@ -18,7 +18,7 @@ const Action$json = {
   '1': 'Action',
   '2': [
     {'1': 'action_id', '3': 1, '4': 1, '5': 5, '10': 'actionId'},
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.ActionType', '10': 'type'},
     {'1': 'scope_name', '3': 3, '4': 1, '5': 9, '10': 'scopeName'},
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
   ],
@@ -26,7 +26,7 @@ const Action$json = {
 
 /// Descriptor for `Action`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List actionDescriptor = $convert.base64Decode(
-    'CgZBY3Rpb24SGwoJYWN0aW9uX2lkGAEgASgFUghhY3Rpb25JZBISCgRuYW1lGAIgASgJUgRuYW'
-    '1lEh0KCnNjb3BlX25hbWUYAyABKAlSCXNjb3BlTmFtZRIgCgtkZXNjcmlwdGlvbhgEIAEoCVIL'
-    'ZGVzY3JpcHRpb24=');
+    'CgZBY3Rpb24SGwoJYWN0aW9uX2lkGAEgASgFUghhY3Rpb25JZBIfCgR0eXBlGAIgASgOMgsuQW'
+    'N0aW9uVHlwZVIEdHlwZRIdCgpzY29wZV9uYW1lGAMgASgJUglzY29wZU5hbWUSIAoLZGVzY3Jp'
+    'cHRpb24YBCABKAlSC2Rlc2NyaXB0aW9u');
 

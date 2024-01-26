@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'comment.pb.dart' as $56;
+import 'comment.pb.dart' as $57;
 
 class AccrualComment extends $pb.GeneratedMessage {
   factory AccrualComment({
     $core.int? commentId,
     $core.int? accrualId,
-    $56.Comment? comment,
+    $57.Comment? comment,
   }) {
     final $result = create();
     if (commentId != null) {
@@ -40,7 +40,7 @@ class AccrualComment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualComment', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'commentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
-    ..aOM<$56.Comment>(3, _omitFieldNames ? '' : 'comment', subBuilder: $56.Comment.create)
+    ..aOM<$57.Comment>(3, _omitFieldNames ? '' : 'comment', subBuilder: $57.Comment.create)
     ..hasRequiredFields = false
   ;
 
@@ -84,15 +84,15 @@ class AccrualComment extends $pb.GeneratedMessage {
   void clearAccrualId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $56.Comment get comment => $_getN(2);
+  $57.Comment get comment => $_getN(2);
   @$pb.TagNumber(3)
-  set comment($56.Comment v) { setField(3, v); }
+  set comment($57.Comment v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasComment() => $_has(2);
   @$pb.TagNumber(3)
   void clearComment() => clearField(3);
   @$pb.TagNumber(3)
-  $56.Comment ensureComment() => $_ensure(2);
+  $57.Comment ensureComment() => $_ensure(2);
 }
 
 

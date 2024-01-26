@@ -15,7 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'employee.pb.dart' as $5;
-import 'entity_role.pb.dart' as $47;
+import 'entity_role.pb.dart' as $48;
 import 'telegram_user.pb.dart' as $34;
 
 class User extends $pb.GeneratedMessage {
@@ -27,7 +27,7 @@ class User extends $pb.GeneratedMessage {
     $core.int? telegramUserId,
     $core.String? refKey,
     $core.String? resourceName,
-    $core.Iterable<$47.EntityRole>? entityRoles,
+    $core.Iterable<$48.EntityRole>? entityRoles,
     $core.Iterable<$5.Employee>? employees,
     $34.TelegramUser? telegramUser,
     $33.Timestamp? createTime,
@@ -80,7 +80,7 @@ class User extends $pb.GeneratedMessage {
     ..a<$core.int>(7, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$47.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $47.EntityRole.create)
+    ..pc<$48.EntityRole>(13, _omitFieldNames ? '' : 'entityRoles', $pb.PbFieldType.PM, subBuilder: $48.EntityRole.create)
     ..pc<$5.Employee>(15, _omitFieldNames ? '' : 'employees', $pb.PbFieldType.PM, subBuilder: $5.Employee.create)
     ..aOM<$34.TelegramUser>(16, _omitFieldNames ? '' : 'telegramUser', subBuilder: $34.TelegramUser.create)
     ..aOM<$33.Timestamp>(17, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
@@ -172,7 +172,7 @@ class User extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(11);
 
   @$pb.TagNumber(13)
-  $core.List<$47.EntityRole> get entityRoles => $_getList(7);
+  $core.List<$48.EntityRole> get entityRoles => $_getList(7);
 
   @$pb.TagNumber(15)
   $core.List<$5.Employee> get employees => $_getList(8);

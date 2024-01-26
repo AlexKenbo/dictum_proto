@@ -13,10 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'action_type.pbenum.dart' as $39;
+
 class Action extends $pb.GeneratedMessage {
   factory Action({
     $core.int? actionId,
-    $core.String? name,
+    $39.ActionType? type,
     $core.String? scopeName,
     $core.String? description,
   }) {
@@ -24,8 +26,8 @@ class Action extends $pb.GeneratedMessage {
     if (actionId != null) {
       $result.actionId = actionId;
     }
-    if (name != null) {
-      $result.name = name;
+    if (type != null) {
+      $result.type = type;
     }
     if (scopeName != null) {
       $result.scopeName = scopeName;
@@ -41,7 +43,7 @@ class Action extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Action', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
-    ..aOS(2, _omitFieldNames ? '' : 'name')
+    ..e<$39.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $39.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $39.ActionType.valueOf, enumValues: $39.ActionType.values)
     ..aOS(3, _omitFieldNames ? '' : 'scopeName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false
@@ -78,13 +80,13 @@ class Action extends $pb.GeneratedMessage {
   void clearActionId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get name => $_getSZ(1);
+  $39.ActionType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set name($core.String v) { $_setString(1, v); }
+  set type($39.ActionType v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasName() => $_has(1);
+  $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearType() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get scopeName => $_getSZ(2);

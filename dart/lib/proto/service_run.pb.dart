@@ -15,12 +15,12 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'service.pb.dart' as $19;
-import 'service_run_state.pbenum.dart' as $68;
+import 'service_run_state.pbenum.dart' as $69;
 
 class ServiceRun extends $pb.GeneratedMessage {
   factory ServiceRun({
     $core.int? serviceId,
-    $68.ServiceRunState? state,
+    $69.ServiceRunState? state,
     $core.String? message,
     $19.Service? service,
     $33.Timestamp? syncTime,
@@ -49,7 +49,7 @@ class ServiceRun extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ServiceRun', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
-    ..e<$68.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $68.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $68.ServiceRunState.valueOf, enumValues: $68.ServiceRunState.values)
+    ..e<$69.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $69.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $69.ServiceRunState.valueOf, enumValues: $69.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
     ..aOM<$19.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $19.Service.create)
     ..aOM<$33.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $33.Timestamp.create)
@@ -87,9 +87,9 @@ class ServiceRun extends $pb.GeneratedMessage {
   void clearServiceId() => clearField(1);
 
   @$pb.TagNumber(3)
-  $68.ServiceRunState get state => $_getN(1);
+  $69.ServiceRunState get state => $_getN(1);
   @$pb.TagNumber(3)
-  set state($68.ServiceRunState v) { setField(3, v); }
+  set state($69.ServiceRunState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(3)

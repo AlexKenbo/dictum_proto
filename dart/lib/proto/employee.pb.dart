@@ -16,21 +16,21 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'country.pb.dart' as $35;
 import 'entity.pb.dart' as $2;
-import 'permission.pb.dart' as $40;
-import 'role.pbenum.dart' as $41;
+import 'permission.pb.dart' as $41;
+import 'role.pbenum.dart' as $42;
 
 class Employee extends $pb.GeneratedMessage {
   factory Employee({
     $core.int? userId,
     $core.int? entityId,
-    $41.Role? role,
+    $42.Role? role,
     $core.String? personalDocumentNumber,
     $core.String? personalDocumentCountryCode,
     $2.Entity? entity,
     $35.Country? country,
     $33.Timestamp? hireTime,
     $33.Timestamp? unhireTime,
-    $core.Iterable<$40.Permission>? permissions,
+    $core.Iterable<$41.Permission>? permissions,
   }) {
     final $result = create();
     if (userId != null) {
@@ -72,14 +72,14 @@ class Employee extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Employee', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..e<$41.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $41.Role.ROLE_UNKNOWN, valueOf: $41.Role.valueOf, enumValues: $41.Role.values)
+    ..e<$42.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $42.Role.ROLE_UNKNOWN, valueOf: $42.Role.valueOf, enumValues: $42.Role.values)
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
     ..aOM<$2.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..aOM<$35.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $35.Country.create)
     ..aOM<$33.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $33.Timestamp.create)
     ..aOM<$33.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime', subBuilder: $33.Timestamp.create)
-    ..pc<$40.Permission>(18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $40.Permission.create)
+    ..pc<$41.Permission>(18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $41.Permission.create)
     ..hasRequiredFields = false
   ;
 
@@ -123,9 +123,9 @@ class Employee extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(2);
 
   @$pb.TagNumber(4)
-  $41.Role get role => $_getN(2);
+  $42.Role get role => $_getN(2);
   @$pb.TagNumber(4)
-  set role($41.Role v) { setField(4, v); }
+  set role($42.Role v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRole() => $_has(2);
   @$pb.TagNumber(4)
@@ -195,7 +195,7 @@ class Employee extends $pb.GeneratedMessage {
 
   /// New invoicing
   @$pb.TagNumber(18)
-  $core.List<$40.Permission> get permissions => $_getList(9);
+  $core.List<$41.Permission> get permissions => $_getList(9);
 }
 
 

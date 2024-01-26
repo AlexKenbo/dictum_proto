@@ -2,11 +2,11 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
-
 enum ActionType
 {
   ACTION_TYPE_UNKNOWN = 0;
-  ACTION_TYPE_INSERT = 1;
-  ACTION_TYPE_UPDATE = 2;
-  ACTION_TYPE_DELETE = 3;
+  ACTION_TYPE_PUBLISH = 1;
+  ACTION_TYPE_MARK_PAID = 2;
+  ACTION_TYPE_AUDIT = 3;
+  ACTION_TYPE_PAYOUT = 4;
 }

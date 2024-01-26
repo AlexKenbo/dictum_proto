@@ -15,7 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account_audit.pb.dart' as $9;
 import 'account_balance.pb.dart' as $10;
-import 'accrual_status_transition.pb.dart' as $66;
+import 'accrual_status_transition.pb.dart' as $67;
 import 'tag.pb.dart' as $11;
 
 class ListAccrualHistoryRequest extends $pb.GeneratedMessage {
@@ -879,7 +879,7 @@ class ListTagsResponse extends $pb.GeneratedMessage {
 class ListAccrualStatusTransitionsResponse extends $pb.GeneratedMessage {
   factory ListAccrualStatusTransitionsResponse({
     $core.String? resourceName,
-    $core.Iterable<$66.AccrualStatusTransition>? accrualStatusTransitions,
+    $core.Iterable<$67.AccrualStatusTransition>? accrualStatusTransitions,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -896,7 +896,7 @@ class ListAccrualStatusTransitionsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAccrualStatusTransitionsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$66.AccrualStatusTransition>(2, _omitFieldNames ? '' : 'accrualStatusTransitions', $pb.PbFieldType.PM, subBuilder: $66.AccrualStatusTransition.create)
+    ..pc<$67.AccrualStatusTransition>(2, _omitFieldNames ? '' : 'accrualStatusTransitions', $pb.PbFieldType.PM, subBuilder: $67.AccrualStatusTransition.create)
     ..hasRequiredFields = false
   ;
 
@@ -931,7 +931,7 @@ class ListAccrualStatusTransitionsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$66.AccrualStatusTransition> get accrualStatusTransitions => $_getList(1);
+  $core.List<$67.AccrualStatusTransition> get accrualStatusTransitions => $_getList(1);
 }
 
 

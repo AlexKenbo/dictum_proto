@@ -18,14 +18,16 @@ const ActionType$json = {
   '1': 'ActionType',
   '2': [
     {'1': 'ACTION_TYPE_UNKNOWN', '2': 0},
-    {'1': 'ACTION_TYPE_INSERT', '2': 1},
-    {'1': 'ACTION_TYPE_UPDATE', '2': 2},
-    {'1': 'ACTION_TYPE_DELETE', '2': 3},
+    {'1': 'ACTION_TYPE_PUBLISH', '2': 1},
+    {'1': 'ACTION_TYPE_MARK_PAID', '2': 2},
+    {'1': 'ACTION_TYPE_AUDIT', '2': 3},
+    {'1': 'ACTION_TYPE_PAYOUT', '2': 4},
   ],
 };
 
 /// Descriptor for `ActionType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List actionTypeDescriptor = $convert.base64Decode(
-    'CgpBY3Rpb25UeXBlEhcKE0FDVElPTl9UWVBFX1VOS05PV04QABIWChJBQ1RJT05fVFlQRV9JTl'
-    'NFUlQQARIWChJBQ1RJT05fVFlQRV9VUERBVEUQAhIWChJBQ1RJT05fVFlQRV9ERUxFVEUQAw==');
+    'CgpBY3Rpb25UeXBlEhcKE0FDVElPTl9UWVBFX1VOS05PV04QABIXChNBQ1RJT05fVFlQRV9QVU'
+    'JMSVNIEAESGQoVQUNUSU9OX1RZUEVfTUFSS19QQUlEEAISFQoRQUNUSU9OX1RZUEVfQVVESVQQ'
+    'AxIWChJBQ1RJT05fVFlQRV9QQVlPVVQQBA==');
 
