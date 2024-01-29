@@ -14,11 +14,70 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'accrual.pb.dart' as $24;
+import 'action.pb.dart' as $40;
 import 'allocation.pb.dart' as $22;
 import 'article.pb.dart' as $28;
 import 'position.pb.dart' as $27;
 import 'product.pb.dart' as $61;
 import 'transfer.pb.dart' as $21;
+
+class ListActionsResponse extends $pb.GeneratedMessage {
+  factory ListActionsResponse({
+    $core.String? resourceName,
+    $core.Iterable<$40.Action>? actions,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (actions != null) {
+      $result.actions.addAll(actions);
+    }
+    return $result;
+  }
+  ListActionsResponse._() : super();
+  factory ListActionsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListActionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActionsResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$40.Action>(2, _omitFieldNames ? '' : 'actions', $pb.PbFieldType.PM, subBuilder: $40.Action.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListActionsResponse clone() => ListActionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListActionsResponse copyWith(void Function(ListActionsResponse) updates) => super.copyWith((message) => updates(message as ListActionsResponse)) as ListActionsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListActionsResponse create() => ListActionsResponse._();
+  ListActionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListActionsResponse> createRepeated() => $pb.PbList<ListActionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListActionsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListActionsResponse>(create);
+  static ListActionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$40.Action> get actions => $_getList(1);
+}
 
 class ListArticlesRequest extends $pb.GeneratedMessage {
   factory ListArticlesRequest({

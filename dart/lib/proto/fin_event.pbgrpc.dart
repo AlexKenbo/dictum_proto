@@ -31,6 +31,10 @@ export 'fin_event.pb.dart';
 
 @$pb.GrpcServiceName('FinEvent')
 class FinEventClient extends $grpc.Client {
+  static final _$listActions = $grpc.ClientMethod<$3.Empty, $20.ListActionsResponse>(
+      '/FinEvent/ListActions',
+      ($3.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $20.ListActionsResponse.fromBuffer(value));
   static final _$listTransfers = $grpc.ClientMethod<$0.ListRequest, $20.ListTransfersResponse>(
       '/FinEvent/ListTransfers',
       ($0.ListRequest value) => value.writeToBuffer(),
@@ -142,6 +146,10 @@ class FinEventClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
+  $grpc.ResponseFuture<$20.ListActionsResponse> listActions($3.Empty request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listActions, request, options: options);
+  }
+
   $grpc.ResponseFuture<$20.ListTransfersResponse> listTransfers($0.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listTransfers, request, options: options);
   }
@@ -252,6 +260,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $core.String get $name => 'FinEvent';
 
   FinEventServiceBase() {
+    $addMethod($grpc.ServiceMethod<$3.Empty, $20.ListActionsResponse>(
+        'ListActions',
+        listActions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $3.Empty.fromBuffer(value),
+        ($20.ListActionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $20.ListTransfersResponse>(
         'ListTransfers',
         listTransfers_Pre,
@@ -436,6 +451,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
         ($22.Allocation value) => value.writeToBuffer()));
   }
 
+  $async.Future<$20.ListActionsResponse> listActions_Pre($grpc.ServiceCall call, $async.Future<$3.Empty> request) async {
+    return listActions(call, await request);
+  }
+
   $async.Future<$20.ListTransfersResponse> listTransfers_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listTransfers(call, await request);
   }
@@ -540,6 +559,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return createAllocation(call, await request);
   }
 
+  $async.Future<$20.ListActionsResponse> listActions($grpc.ServiceCall call, $3.Empty request);
   $async.Future<$20.ListTransfersResponse> listTransfers($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$21.Transfer> getTransfer($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$21.Transfer> createTransfer($grpc.ServiceCall call, $21.Transfer request);

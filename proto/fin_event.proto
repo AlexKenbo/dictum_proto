@@ -5,20 +5,30 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "proto/requests.proto";
-import "proto/event_aggregate.proto";
-import "proto/accruals_aggregate.proto";
-import "proto/accrual.proto";
 import "proto/accrual_attachment.proto";
-import "proto/position.proto";
-import "proto/product.proto";
-import "proto/transfer.proto";
+import "proto/accrual.proto";
+import "proto/accruals_aggregate.proto";
+import "proto/action.proto";
 import "proto/allocation.proto";
 import "proto/article.proto";
+import "proto/event_aggregate.proto";
+import "proto/position.proto";
+import "proto/product.proto";
+import "proto/requests.proto";
+import "proto/transfer.proto";
 
 //Репы - Трансферы, Перевод, Продукт
 service FinEvent {
     //--
+    rpc ListActions(google.protobuf.Empty) returns (ListActionsResponse) {
+        option (google.api.http) = {
+            get: "/v1/actions"
+            additional_bindings {
+                get: "/v1/actions"
+            }
+        };
+    }
+
     rpc ListTransfers(ListRequest) returns (ListTransfersResponse) {
         option (google.api.http) = {
             get: "/v1/transfers"
@@ -222,6 +232,11 @@ service FinEvent {
     }
 
 
+}
+
+message ListActionsResponse {
+    string resource_name = 1;
+    repeated Action actions = 2;
 }
 
 message ListArticlesRequest {
