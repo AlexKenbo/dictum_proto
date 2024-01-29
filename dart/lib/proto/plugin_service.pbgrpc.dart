@@ -17,6 +17,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'object_source.pb.dart' as $18;
 import 'plugin_service.pb.dart' as $17;
+import 'requests.pb.dart' as $0;
 import 'service.pb.dart' as $19;
 import 'service_run.pb.dart' as $20;
 
@@ -64,9 +65,9 @@ class PluginServiceClient extends $grpc.Client {
       '/PluginService/GetServiceRun',
       ($17.GetServiceRunRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $20.ServiceRun.fromBuffer(value));
-  static final _$listServiceRuns = $grpc.ClientMethod<$17.ListServiceRunsRequest, $17.ListServiceRunsResponse>(
+  static final _$listServiceRuns = $grpc.ClientMethod<$0.ListRequest, $17.ListServiceRunsResponse>(
       '/PluginService/ListServiceRuns',
-      ($17.ListServiceRunsRequest value) => value.writeToBuffer(),
+      ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $17.ListServiceRunsResponse.fromBuffer(value));
   static final _$runService = $grpc.ClientMethod<$17.RunServiceRequest, $20.ServiceRun>(
       '/PluginService/RunService',
@@ -119,7 +120,7 @@ class PluginServiceClient extends $grpc.Client {
     return $createUnaryCall(_$getServiceRun, request, options: options);
   }
 
-  $grpc.ResponseFuture<$17.ListServiceRunsResponse> listServiceRuns($17.ListServiceRunsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.ListServiceRunsResponse> listServiceRuns($0.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listServiceRuns, request, options: options);
   }
 
@@ -203,12 +204,12 @@ abstract class PluginServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $17.GetServiceRunRequest.fromBuffer(value),
         ($20.ServiceRun value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$17.ListServiceRunsRequest, $17.ListServiceRunsResponse>(
+    $addMethod($grpc.ServiceMethod<$0.ListRequest, $17.ListServiceRunsResponse>(
         'ListServiceRuns',
         listServiceRuns_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $17.ListServiceRunsRequest.fromBuffer(value),
+        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
         ($17.ListServiceRunsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$17.RunServiceRequest, $20.ServiceRun>(
         'RunService',
@@ -259,7 +260,7 @@ abstract class PluginServiceBase extends $grpc.Service {
     return getServiceRun(call, await request);
   }
 
-  $async.Future<$17.ListServiceRunsResponse> listServiceRuns_Pre($grpc.ServiceCall call, $async.Future<$17.ListServiceRunsRequest> request) async {
+  $async.Future<$17.ListServiceRunsResponse> listServiceRuns_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
     return listServiceRuns(call, await request);
   }
 
@@ -277,6 +278,6 @@ abstract class PluginServiceBase extends $grpc.Service {
   $async.Future<$20.ServiceRun> createServiceRun($grpc.ServiceCall call, $20.ServiceRun request);
   $async.Future<$20.ServiceRun> updateServiceRun($grpc.ServiceCall call, $20.ServiceRun request);
   $async.Future<$20.ServiceRun> getServiceRun($grpc.ServiceCall call, $17.GetServiceRunRequest request);
-  $async.Future<$17.ListServiceRunsResponse> listServiceRuns($grpc.ServiceCall call, $17.ListServiceRunsRequest request);
+  $async.Future<$17.ListServiceRunsResponse> listServiceRuns($grpc.ServiceCall call, $0.ListRequest request);
   $async.Stream<$20.ServiceRun> runService($grpc.ServiceCall call, $17.RunServiceRequest request);
 }

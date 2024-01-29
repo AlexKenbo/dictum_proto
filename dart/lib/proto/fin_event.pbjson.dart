@@ -99,6 +99,19 @@ final $typed_data.Uint8List batchInsertPositionsRequestDescriptor = $convert.bas
     'ChtCYXRjaEluc2VydFBvc2l0aW9uc1JlcXVlc3QSIwoNcmVzb3VyY2VfbmFtZRgBIAEoCVIMcm'
     'Vzb3VyY2VOYW1lEicKCXBvc2l0aW9ucxgCIAMoCzIJLlBvc2l0aW9uUglwb3NpdGlvbnM=');
 
+@$core.Deprecated('Use allocateTransferRequestDescriptor instead')
+const AllocateTransferRequest$json = {
+  '1': 'AllocateTransferRequest',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+  ],
+};
+
+/// Descriptor for `AllocateTransferRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List allocateTransferRequestDescriptor = $convert.base64Decode(
+    'ChdBbGxvY2F0ZVRyYW5zZmVyUmVxdWVzdBIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdX'
+    'JjZU5hbWU=');
+
 @$core.Deprecated('Use listProductsResponseDescriptor instead')
 const ListProductsResponse$json = {
   '1': 'ListProductsResponse',

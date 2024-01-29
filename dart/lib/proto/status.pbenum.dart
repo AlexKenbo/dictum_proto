@@ -15,17 +15,15 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class Status extends $pb.ProtobufEnum {
   static const Status STATUS_UNSPECIFIED = Status._(0, _omitEnumNames ? '' : 'STATUS_UNSPECIFIED');
-  static const Status PROCESSING = Status._(1, _omitEnumNames ? '' : 'PROCESSING');
-  static const Status SENT = Status._(2, _omitEnumNames ? '' : 'SENT');
-  static const Status DELIVERED = Status._(3, _omitEnumNames ? '' : 'DELIVERED');
-  static const Status CANCEL = Status._(4, _omitEnumNames ? '' : 'CANCEL');
+  static const Status STATUS_COMPLETED = Status._(1, _omitEnumNames ? '' : 'STATUS_COMPLETED');
+  static const Status STATUS_PENDING = Status._(2, _omitEnumNames ? '' : 'STATUS_PENDING');
+  static const Status STATUS_CANCELLED = Status._(3, _omitEnumNames ? '' : 'STATUS_CANCELLED');
 
   static const $core.List<Status> values = <Status> [
     STATUS_UNSPECIFIED,
-    PROCESSING,
-    SENT,
-    DELIVERED,
-    CANCEL,
+    STATUS_COMPLETED,
+    STATUS_PENDING,
+    STATUS_CANCELLED,
   ];
 
   static final $core.Map<$core.int, Status> _byValue = $pb.ProtobufEnum.initByValue(values);

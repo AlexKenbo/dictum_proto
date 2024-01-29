@@ -7,7 +7,9 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "proto/requests.proto";
 import "proto/event_aggregate.proto";
+import "proto/accruals_aggregate.proto";
 import "proto/accrual.proto";
+import "proto/accrual_attachment.proto";
 import "proto/position.proto";
 import "proto/product.proto";
 import "proto/transfer.proto";
@@ -20,6 +22,9 @@ service FinEvent {
     rpc ListTransfers(ListRequest) returns (ListTransfersResponse) {
         option (google.api.http) = {
             get: "/v1/transfers"
+            additional_bindings {
+                get: "/v1/{parent=accounts/*}/transfers"
+            }
         };
     }
     
@@ -32,6 +37,13 @@ service FinEvent {
     rpc CreateTransfer(Transfer) returns (Transfer) {
         option (google.api.http) = {
             post: "/v1/transfers"
+            body: "transfer"
+        };
+    };
+
+    rpc AllocateTransfer(AllocateTransferRequest) returns (Allocation) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=transfers/*}/allocate"
             body: "transfer"
         };
     };
@@ -87,7 +99,7 @@ service FinEvent {
         };
     };
 
-    rpc AggregateAccruals(AggregateRequest) returns (EventAggregate) {
+    rpc AggregateAccruals(AggregateRequest) returns (AccrualsAggregate) {
         option (google.api.http) = {
             get: "/v1/accruals/-/aggregate"
             additional_bindings {
@@ -108,6 +120,14 @@ service FinEvent {
             get: "/v1/{accrual.resource_name=accruals/*}/generate-pdf"
         };
     };
+
+    //--
+
+    rpc UploadInvoice(UploadInvoiceRequest) returns (AccrualAttachment) {
+        option (google.api.http) = {
+            post: "/v1/{resource_name=accruals/*}/invoice"
+        };
+    }
 
     //--
     rpc ListProducts(ListRequest) returns (ListProductsResponse) {
@@ -232,6 +252,10 @@ message BatchInsertAccrualsRequest {
 message BatchInsertPositionsRequest {
     string resource_name = 1;
     repeated Position positions = 2;
+}
+
+message AllocateTransferRequest {
+    string resource_name = 1;
 }
 
 message ListProductsResponse {

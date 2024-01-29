@@ -13,32 +13,27 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $24;
 import 'attachment.pb.dart' as $16;
 
 class AccrualAttachment extends $pb.GeneratedMessage {
   factory AccrualAttachment({
-    $core.int? eventAttachmentId,
+    $core.int? accrualAttachmentId,
     $core.int? attachmentId,
-    $core.int? eventId,
+    $core.int? accrualId,
     $16.Attachment? attachment,
-    $24.Accrual? accrual,
   }) {
     final $result = create();
-    if (eventAttachmentId != null) {
-      $result.eventAttachmentId = eventAttachmentId;
+    if (accrualAttachmentId != null) {
+      $result.accrualAttachmentId = accrualAttachmentId;
     }
     if (attachmentId != null) {
       $result.attachmentId = attachmentId;
     }
-    if (eventId != null) {
-      $result.eventId = eventId;
+    if (accrualId != null) {
+      $result.accrualId = accrualId;
     }
     if (attachment != null) {
       $result.attachment = attachment;
-    }
-    if (accrual != null) {
-      $result.accrual = accrual;
     }
     return $result;
   }
@@ -47,11 +42,10 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   factory AccrualAttachment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualAttachment', createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'eventAttachmentId', $pb.PbFieldType.O3)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'accrualAttachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'eventId', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
     ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
-    ..aOM<$24.Accrual>(6, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -77,13 +71,13 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   static AccrualAttachment? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.int get eventAttachmentId => $_getIZ(0);
+  $core.int get accrualAttachmentId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set eventAttachmentId($core.int v) { $_setSignedInt32(0, v); }
+  set accrualAttachmentId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasEventAttachmentId() => $_has(0);
+  $core.bool hasAccrualAttachmentId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEventAttachmentId() => clearField(1);
+  void clearAccrualAttachmentId() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get attachmentId => $_getIZ(1);
@@ -95,13 +89,13 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   void clearAttachmentId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.int get eventId => $_getIZ(2);
+  $core.int get accrualId => $_getIZ(2);
   @$pb.TagNumber(3)
-  set eventId($core.int v) { $_setSignedInt32(2, v); }
+  set accrualId($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasEventId() => $_has(2);
+  $core.bool hasAccrualId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearEventId() => clearField(3);
+  void clearAccrualId() => clearField(3);
 
   @$pb.TagNumber(4)
   $16.Attachment get attachment => $_getN(3);
@@ -113,17 +107,6 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
   $16.Attachment ensureAttachment() => $_ensure(3);
-
-  @$pb.TagNumber(6)
-  $24.Accrual get accrual => $_getN(4);
-  @$pb.TagNumber(6)
-  set accrual($24.Accrual v) { setField(6, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasAccrual() => $_has(4);
-  @$pb.TagNumber(6)
-  void clearAccrual() => clearField(6);
-  @$pb.TagNumber(6)
-  $24.Accrual ensureAccrual() => $_ensure(4);
 }
 
 

@@ -6,6 +6,7 @@ import "google/protobuf/timestamp.proto";
 
 import "proto/account.proto";
 import "proto/accrual_type.proto";
+import "proto/accrual_attachment.proto";
 import "proto/article.proto";
 import "proto/color.proto";
 import "proto/currency.proto";
@@ -66,4 +67,5 @@ message Accrual
   google.protobuf.Timestamp pay_time = 79;
   google.protobuf.Timestamp create_time = 80;
   Status status = 81;
+  repeated AccrualAttachment accrual_attachments = 82;
 }

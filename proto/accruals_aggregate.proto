@@ -7,9 +7,17 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 message AccrualsAggregate
 {
   int32 count = 1;
-  double paid_income_total = 2;
-  double unpaid_income_total = 3;
-  double paid_outcome_total = 4;
-  double unpaid_outcome_total = 5;
+  double total = 2;
 
+  int32 income_count = 3;
+  double income_total = 4;
+
+  int32 outcome_count = 5;
+  double outcome_total = 6;
+  
+  int32 exchange_count = 7;
+  double exchange_total = 8;
+
+  int32 debt_count = 9;
+  double debt_total = 10;
 }

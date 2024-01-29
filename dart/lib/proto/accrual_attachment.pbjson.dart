@@ -17,18 +17,17 @@ import 'dart:typed_data' as $typed_data;
 const AccrualAttachment$json = {
   '1': 'AccrualAttachment',
   '2': [
-    {'1': 'event_attachment_id', '3': 1, '4': 1, '5': 5, '10': 'eventAttachmentId'},
+    {'1': 'accrual_attachment_id', '3': 1, '4': 1, '5': 5, '10': 'accrualAttachmentId'},
     {'1': 'attachment_id', '3': 2, '4': 1, '5': 5, '10': 'attachmentId'},
-    {'1': 'event_id', '3': 3, '4': 1, '5': 5, '10': 'eventId'},
+    {'1': 'accrual_id', '3': 3, '4': 1, '5': 5, '10': 'accrualId'},
     {'1': 'attachment', '3': 4, '4': 1, '5': 11, '6': '.Attachment', '10': 'attachment'},
-    {'1': 'accrual', '3': 6, '4': 1, '5': 11, '6': '.Accrual', '10': 'accrual'},
   ],
 };
 
 /// Descriptor for `AccrualAttachment`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accrualAttachmentDescriptor = $convert.base64Decode(
-    'ChFBY2NydWFsQXR0YWNobWVudBIuChNldmVudF9hdHRhY2htZW50X2lkGAEgASgFUhFldmVudE'
-    'F0dGFjaG1lbnRJZBIjCg1hdHRhY2htZW50X2lkGAIgASgFUgxhdHRhY2htZW50SWQSGQoIZXZl'
-    'bnRfaWQYAyABKAVSB2V2ZW50SWQSKwoKYXR0YWNobWVudBgEIAEoCzILLkF0dGFjaG1lbnRSCm'
-    'F0dGFjaG1lbnQSIgoHYWNjcnVhbBgGIAEoCzIILkFjY3J1YWxSB2FjY3J1YWw=');
+    'ChFBY2NydWFsQXR0YWNobWVudBIyChVhY2NydWFsX2F0dGFjaG1lbnRfaWQYASABKAVSE2FjY3'
+    'J1YWxBdHRhY2htZW50SWQSIwoNYXR0YWNobWVudF9pZBgCIAEoBVIMYXR0YWNobWVudElkEh0K'
+    'CmFjY3J1YWxfaWQYAyABKAVSCWFjY3J1YWxJZBIrCgphdHRhY2htZW50GAQgASgLMgsuQXR0YW'
+    'NobWVudFIKYXR0YWNobWVudA==');
 
