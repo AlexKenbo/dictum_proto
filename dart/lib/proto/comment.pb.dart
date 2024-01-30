@@ -19,7 +19,7 @@ import 'user.pb.dart' as $13;
 class Comment extends $pb.GeneratedMessage {
   factory Comment({
     $core.int? commentId,
-    $core.String? text,
+    $core.String? message,
     $core.int? creatorId,
     $33.Timestamp? createTime,
     $core.String? resourceName,
@@ -29,8 +29,8 @@ class Comment extends $pb.GeneratedMessage {
     if (commentId != null) {
       $result.commentId = commentId;
     }
-    if (text != null) {
-      $result.text = text;
+    if (message != null) {
+      $result.message = message;
     }
     if (creatorId != null) {
       $result.creatorId = creatorId;
@@ -52,7 +52,7 @@ class Comment extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Comment', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'commentId', $pb.PbFieldType.O3)
-    ..aOS(2, _omitFieldNames ? '' : 'text')
+    ..aOS(2, _omitFieldNames ? '' : 'message')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'creatorId', $pb.PbFieldType.O3)
     ..aOM<$33.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
     ..aOS(5, _omitFieldNames ? '' : 'resourceName')
@@ -91,13 +91,13 @@ class Comment extends $pb.GeneratedMessage {
   void clearCommentId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get text => $_getSZ(1);
+  $core.String get message => $_getSZ(1);
   @$pb.TagNumber(2)
-  set text($core.String v) { $_setString(1, v); }
+  set message($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasText() => $_has(1);
+  $core.bool hasMessage() => $_has(1);
   @$pb.TagNumber(2)
-  void clearText() => clearField(2);
+  void clearMessage() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get creatorId => $_getIZ(2);
