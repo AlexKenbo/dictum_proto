@@ -284,11 +284,13 @@ service FinEvent {
 message ListSignaturesResponse {
     string resource_name = 1;
     repeated Signature signatures = 2;
+    string next_page_token = 3;
 }
 
 message ListCommentsResponse {
     string resource_name = 1;
     repeated Comment comments = 2;
+    string next_page_token = 3;
 }
 
 message ListActionsResponse {

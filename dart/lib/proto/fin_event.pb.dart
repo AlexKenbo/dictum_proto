@@ -27,6 +27,7 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
   factory ListSignaturesResponse({
     $core.String? resourceName,
     $core.Iterable<$52.Signature>? signatures,
+    $core.String? nextPageToken,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -34,6 +35,9 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
     }
     if (signatures != null) {
       $result.signatures.addAll(signatures);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
     }
     return $result;
   }
@@ -44,6 +48,7 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListSignaturesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
     ..pc<$52.Signature>(2, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $52.Signature.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -79,12 +84,22 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<$52.Signature> get signatures => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
 }
 
 class ListCommentsResponse extends $pb.GeneratedMessage {
   factory ListCommentsResponse({
     $core.String? resourceName,
     $core.Iterable<$21.Comment>? comments,
+    $core.String? nextPageToken,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -92,6 +107,9 @@ class ListCommentsResponse extends $pb.GeneratedMessage {
     }
     if (comments != null) {
       $result.comments.addAll(comments);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
     }
     return $result;
   }
@@ -102,6 +120,7 @@ class ListCommentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCommentsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
     ..pc<$21.Comment>(2, _omitFieldNames ? '' : 'comments', $pb.PbFieldType.PM, subBuilder: $21.Comment.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
 
@@ -137,6 +156,15 @@ class ListCommentsResponse extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<$21.Comment> get comments => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
 }
 
 class ListActionsResponse extends $pb.GeneratedMessage {

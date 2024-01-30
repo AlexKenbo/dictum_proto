@@ -19,13 +19,15 @@ const ListSignaturesResponse$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'signatures', '3': 2, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 /// Descriptor for `ListSignaturesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listSignaturesResponseDescriptor = $convert.base64Decode(
     'ChZMaXN0U2lnbmF0dXJlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc291cm'
-    'NlTmFtZRIqCgpzaWduYXR1cmVzGAIgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+    'NlTmFtZRIqCgpzaWduYXR1cmVzGAIgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVzEiYKD25l'
+    'eHRfcGFnZV90b2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbg==');
 
 @$core.Deprecated('Use listCommentsResponseDescriptor instead')
 const ListCommentsResponse$json = {
@@ -33,13 +35,15 @@ const ListCommentsResponse$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'comments', '3': 2, '4': 3, '5': 11, '6': '.Comment', '10': 'comments'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 /// Descriptor for `ListCommentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listCommentsResponseDescriptor = $convert.base64Decode(
     'ChRMaXN0Q29tbWVudHNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdXJjZU'
-    '5hbWUSJAoIY29tbWVudHMYAiADKAsyCC5Db21tZW50Ughjb21tZW50cw==');
+    '5hbWUSJAoIY29tbWVudHMYAiADKAsyCC5Db21tZW50Ughjb21tZW50cxImCg9uZXh0X3BhZ2Vf'
+    'dG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
 
 @$core.Deprecated('Use listActionsResponseDescriptor instead')
 const ListActionsResponse$json = {
