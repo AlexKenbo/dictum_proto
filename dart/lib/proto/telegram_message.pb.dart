@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $24;
-import 'transfer.pb.dart' as $21;
+import 'accrual.pb.dart' as $25;
+import 'transfer.pb.dart' as $22;
 
 class TelegramMessage extends $pb.GeneratedMessage {
   factory TelegramMessage({
@@ -22,8 +22,8 @@ class TelegramMessage extends $pb.GeneratedMessage {
     $core.int? chatSourceKey,
     $core.int? transferId,
     $core.int? accrualId,
-    $21.Transfer? transfer,
-    $24.Accrual? accrual,
+    $22.Transfer? transfer,
+    $25.Accrual? accrual,
   }) {
     final $result = create();
     if (telegramMessageId != null) {
@@ -55,8 +55,8 @@ class TelegramMessage extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'chatSourceKey', $pb.PbFieldType.O3)
     ..a<$core.int>(5, _omitFieldNames ? '' : 'transferId', $pb.PbFieldType.O3)
     ..a<$core.int>(6, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
-    ..aOM<$21.Transfer>(7, _omitFieldNames ? '' : 'transfer', subBuilder: $21.Transfer.create)
-    ..aOM<$24.Accrual>(8, _omitFieldNames ? '' : 'accrual', subBuilder: $24.Accrual.create)
+    ..aOM<$22.Transfer>(7, _omitFieldNames ? '' : 'transfer', subBuilder: $22.Transfer.create)
+    ..aOM<$25.Accrual>(8, _omitFieldNames ? '' : 'accrual', subBuilder: $25.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -118,26 +118,26 @@ class TelegramMessage extends $pb.GeneratedMessage {
   void clearAccrualId() => clearField(6);
 
   @$pb.TagNumber(7)
-  $21.Transfer get transfer => $_getN(4);
+  $22.Transfer get transfer => $_getN(4);
   @$pb.TagNumber(7)
-  set transfer($21.Transfer v) { setField(7, v); }
+  set transfer($22.Transfer v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTransfer() => $_has(4);
   @$pb.TagNumber(7)
   void clearTransfer() => clearField(7);
   @$pb.TagNumber(7)
-  $21.Transfer ensureTransfer() => $_ensure(4);
+  $22.Transfer ensureTransfer() => $_ensure(4);
 
   @$pb.TagNumber(8)
-  $24.Accrual get accrual => $_getN(5);
+  $25.Accrual get accrual => $_getN(5);
   @$pb.TagNumber(8)
-  set accrual($24.Accrual v) { setField(8, v); }
+  set accrual($25.Accrual v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasAccrual() => $_has(5);
   @$pb.TagNumber(8)
   void clearAccrual() => clearField(8);
   @$pb.TagNumber(8)
-  $24.Accrual ensureAccrual() => $_ensure(5);
+  $25.Accrual ensureAccrual() => $_ensure(5);
 }
 
 

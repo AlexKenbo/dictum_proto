@@ -12,6 +12,7 @@ import "proto/action.proto";
 import "proto/allocation.proto";
 import "proto/article.proto";
 import "proto/event_aggregate.proto";
+import "proto/permission.proto";
 import "proto/position.proto";
 import "proto/product.proto";
 import "proto/requests.proto";
@@ -19,7 +20,19 @@ import "proto/transfer.proto";
 
 //Репы - Трансферы, Перевод, Продукт
 service FinEvent {
-    //--
+    rpc CreatePermission(Permission) returns (Permission) {
+        option (google.api.http) = {
+        post: "/v1/{permission.resource_name=entities/*/employees/*/actions/*}/permissions"
+            body: "permission"
+        };
+    };
+
+    rpc DeletePermission(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete:  "/v1/{resource_name=entities/*/employees/*/actions/*}"
+        };
+    };
+
     rpc ListActions(google.protobuf.Empty) returns (ListActionsResponse) {
         option (google.api.http) = {
             get: "/v1/actions"

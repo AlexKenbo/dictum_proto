@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $24;
+import 'accrual.pb.dart' as $25;
 import 'accrual_mirror_state.pb.dart' as $70;
 
 class AccrualMirror extends $pb.GeneratedMessage {
@@ -21,8 +21,8 @@ class AccrualMirror extends $pb.GeneratedMessage {
     $core.int? outcomeAccrualId,
     $core.int? incomeAccrualId,
     $core.int? accrualMirrorStateId,
-    $24.Accrual? outcomeAccrual,
-    $24.Accrual? incomeAccrual,
+    $25.Accrual? outcomeAccrual,
+    $25.Accrual? incomeAccrual,
     $70.AccrualMirrorState? accrualMirrorState,
   }) {
     final $result = create();
@@ -54,8 +54,8 @@ class AccrualMirror extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'outcomeAccrualId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'incomeAccrualId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'accrualMirrorStateId', $pb.PbFieldType.O3)
-    ..aOM<$24.Accrual>(5, _omitFieldNames ? '' : 'outcomeAccrual', subBuilder: $24.Accrual.create)
-    ..aOM<$24.Accrual>(7, _omitFieldNames ? '' : 'incomeAccrual', subBuilder: $24.Accrual.create)
+    ..aOM<$25.Accrual>(5, _omitFieldNames ? '' : 'outcomeAccrual', subBuilder: $25.Accrual.create)
+    ..aOM<$25.Accrual>(7, _omitFieldNames ? '' : 'incomeAccrual', subBuilder: $25.Accrual.create)
     ..aOM<$70.AccrualMirrorState>(9, _omitFieldNames ? '' : 'accrualMirrorState', subBuilder: $70.AccrualMirrorState.create)
     ..hasRequiredFields = false
   ;
@@ -109,26 +109,26 @@ class AccrualMirror extends $pb.GeneratedMessage {
   void clearAccrualMirrorStateId() => clearField(3);
 
   @$pb.TagNumber(5)
-  $24.Accrual get outcomeAccrual => $_getN(3);
+  $25.Accrual get outcomeAccrual => $_getN(3);
   @$pb.TagNumber(5)
-  set outcomeAccrual($24.Accrual v) { setField(5, v); }
+  set outcomeAccrual($25.Accrual v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasOutcomeAccrual() => $_has(3);
   @$pb.TagNumber(5)
   void clearOutcomeAccrual() => clearField(5);
   @$pb.TagNumber(5)
-  $24.Accrual ensureOutcomeAccrual() => $_ensure(3);
+  $25.Accrual ensureOutcomeAccrual() => $_ensure(3);
 
   @$pb.TagNumber(7)
-  $24.Accrual get incomeAccrual => $_getN(4);
+  $25.Accrual get incomeAccrual => $_getN(4);
   @$pb.TagNumber(7)
-  set incomeAccrual($24.Accrual v) { setField(7, v); }
+  set incomeAccrual($25.Accrual v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasIncomeAccrual() => $_has(4);
   @$pb.TagNumber(7)
   void clearIncomeAccrual() => clearField(7);
   @$pb.TagNumber(7)
-  $24.Accrual ensureIncomeAccrual() => $_ensure(4);
+  $25.Accrual ensureIncomeAccrual() => $_ensure(4);
 
   @$pb.TagNumber(9)
   $70.AccrualMirrorState get accrualMirrorState => $_getN(5);

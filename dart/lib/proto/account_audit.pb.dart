@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $32;
+import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'account.pb.dart' as $6;
 import 'employee.pb.dart' as $5;
 
@@ -26,7 +26,7 @@ class AccountAudit extends $pb.GeneratedMessage {
     $core.String? resourceName,
     $6.Account? account,
     $5.Employee? employee,
-    $32.Timestamp? auditTime,
+    $33.Timestamp? auditTime,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -67,7 +67,7 @@ class AccountAudit extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$6.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..aOM<$5.Employee>(11, _omitFieldNames ? '' : 'employee', subBuilder: $5.Employee.create)
-    ..aOM<$32.Timestamp>(12, _omitFieldNames ? '' : 'auditTime', subBuilder: $32.Timestamp.create)
+    ..aOM<$33.Timestamp>(12, _omitFieldNames ? '' : 'auditTime', subBuilder: $33.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -160,15 +160,15 @@ class AccountAudit extends $pb.GeneratedMessage {
   $5.Employee ensureEmployee() => $_ensure(6);
 
   @$pb.TagNumber(12)
-  $32.Timestamp get auditTime => $_getN(7);
+  $33.Timestamp get auditTime => $_getN(7);
   @$pb.TagNumber(12)
-  set auditTime($32.Timestamp v) { setField(12, v); }
+  set auditTime($33.Timestamp v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasAuditTime() => $_has(7);
   @$pb.TagNumber(12)
   void clearAuditTime() => clearField(12);
   @$pb.TagNumber(12)
-  $32.Timestamp ensureAuditTime() => $_ensure(7);
+  $33.Timestamp ensureAuditTime() => $_ensure(7);
 }
 
 

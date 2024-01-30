@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $32;
+import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'account.pb.dart' as $6;
 import 'attachment.pb.dart' as $15;
 import 'color.pbenum.dart' as $57;
@@ -50,10 +50,10 @@ class Transfer extends $pb.GeneratedMessage {
     $6.Account? recipientAccount,
     $2.Entity? payer,
     $2.Entity? recipient,
-    $32.Timestamp? createTime,
-    $32.Timestamp? fullAllocationTime,
-    $32.Timestamp? paymentTime,
-    $32.Timestamp? verifyTime,
+    $33.Timestamp? createTime,
+    $33.Timestamp? fullAllocationTime,
+    $33.Timestamp? paymentTime,
+    $33.Timestamp? verifyTime,
     Transfer? parent,
     $core.String? recipientCurrencyCode,
     $core.Iterable<$15.Attachment>? attachments,
@@ -215,10 +215,10 @@ class Transfer extends $pb.GeneratedMessage {
     ..aOM<$6.Account>(48, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $6.Account.create)
     ..aOM<$2.Entity>(49, _omitFieldNames ? '' : 'payer', subBuilder: $2.Entity.create)
     ..aOM<$2.Entity>(50, _omitFieldNames ? '' : 'recipient', subBuilder: $2.Entity.create)
-    ..aOM<$32.Timestamp>(52, _omitFieldNames ? '' : 'createTime', subBuilder: $32.Timestamp.create)
-    ..aOM<$32.Timestamp>(53, _omitFieldNames ? '' : 'fullAllocationTime', subBuilder: $32.Timestamp.create)
-    ..aOM<$32.Timestamp>(54, _omitFieldNames ? '' : 'paymentTime', subBuilder: $32.Timestamp.create)
-    ..aOM<$32.Timestamp>(55, _omitFieldNames ? '' : 'verifyTime', subBuilder: $32.Timestamp.create)
+    ..aOM<$33.Timestamp>(52, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$33.Timestamp>(53, _omitFieldNames ? '' : 'fullAllocationTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$33.Timestamp>(54, _omitFieldNames ? '' : 'paymentTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$33.Timestamp>(55, _omitFieldNames ? '' : 'verifyTime', subBuilder: $33.Timestamp.create)
     ..aOM<Transfer>(56, _omitFieldNames ? '' : 'parent', subBuilder: Transfer.create)
     ..aOS(57, _omitFieldNames ? '' : 'recipientCurrencyCode')
     ..pc<$15.Attachment>(58, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $15.Attachment.create)
@@ -489,48 +489,48 @@ class Transfer extends $pb.GeneratedMessage {
   $2.Entity ensureRecipient() => $_ensure(24);
 
   @$pb.TagNumber(52)
-  $32.Timestamp get createTime => $_getN(25);
+  $33.Timestamp get createTime => $_getN(25);
   @$pb.TagNumber(52)
-  set createTime($32.Timestamp v) { setField(52, v); }
+  set createTime($33.Timestamp v) { setField(52, v); }
   @$pb.TagNumber(52)
   $core.bool hasCreateTime() => $_has(25);
   @$pb.TagNumber(52)
   void clearCreateTime() => clearField(52);
   @$pb.TagNumber(52)
-  $32.Timestamp ensureCreateTime() => $_ensure(25);
+  $33.Timestamp ensureCreateTime() => $_ensure(25);
 
   @$pb.TagNumber(53)
-  $32.Timestamp get fullAllocationTime => $_getN(26);
+  $33.Timestamp get fullAllocationTime => $_getN(26);
   @$pb.TagNumber(53)
-  set fullAllocationTime($32.Timestamp v) { setField(53, v); }
+  set fullAllocationTime($33.Timestamp v) { setField(53, v); }
   @$pb.TagNumber(53)
   $core.bool hasFullAllocationTime() => $_has(26);
   @$pb.TagNumber(53)
   void clearFullAllocationTime() => clearField(53);
   @$pb.TagNumber(53)
-  $32.Timestamp ensureFullAllocationTime() => $_ensure(26);
+  $33.Timestamp ensureFullAllocationTime() => $_ensure(26);
 
   @$pb.TagNumber(54)
-  $32.Timestamp get paymentTime => $_getN(27);
+  $33.Timestamp get paymentTime => $_getN(27);
   @$pb.TagNumber(54)
-  set paymentTime($32.Timestamp v) { setField(54, v); }
+  set paymentTime($33.Timestamp v) { setField(54, v); }
   @$pb.TagNumber(54)
   $core.bool hasPaymentTime() => $_has(27);
   @$pb.TagNumber(54)
   void clearPaymentTime() => clearField(54);
   @$pb.TagNumber(54)
-  $32.Timestamp ensurePaymentTime() => $_ensure(27);
+  $33.Timestamp ensurePaymentTime() => $_ensure(27);
 
   @$pb.TagNumber(55)
-  $32.Timestamp get verifyTime => $_getN(28);
+  $33.Timestamp get verifyTime => $_getN(28);
   @$pb.TagNumber(55)
-  set verifyTime($32.Timestamp v) { setField(55, v); }
+  set verifyTime($33.Timestamp v) { setField(55, v); }
   @$pb.TagNumber(55)
   $core.bool hasVerifyTime() => $_has(28);
   @$pb.TagNumber(55)
   void clearVerifyTime() => clearField(55);
   @$pb.TagNumber(55)
-  $32.Timestamp ensureVerifyTime() => $_ensure(28);
+  $33.Timestamp ensureVerifyTime() => $_ensure(28);
 
   @$pb.TagNumber(56)
   Transfer get parent => $_getN(29);

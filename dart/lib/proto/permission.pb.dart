@@ -13,14 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action.pb.dart' as $40;
+import 'action.pb.dart' as $41;
 
 class Permission extends $pb.GeneratedMessage {
   factory Permission({
     $core.int? userId,
     $core.int? entityId,
     $core.int? actionId,
-    $40.Action? action,
+    $core.String? resourceName,
+    $41.Action? action,
   }) {
     final $result = create();
     if (userId != null) {
@@ -31,6 +32,9 @@ class Permission extends $pb.GeneratedMessage {
     }
     if (actionId != null) {
       $result.actionId = actionId;
+    }
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
     }
     if (action != null) {
       $result.action = action;
@@ -45,7 +49,8 @@ class Permission extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
-    ..aOM<$40.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $40.Action.create)
+    ..aOS(4, _omitFieldNames ? '' : 'resourceName')
+    ..aOM<$41.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $41.Action.create)
     ..hasRequiredFields = false
   ;
 
@@ -97,16 +102,25 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearActionId() => clearField(3);
 
+  @$pb.TagNumber(4)
+  $core.String get resourceName => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set resourceName($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasResourceName() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearResourceName() => clearField(4);
+
   @$pb.TagNumber(5)
-  $40.Action get action => $_getN(3);
+  $41.Action get action => $_getN(4);
   @$pb.TagNumber(5)
-  set action($40.Action v) { setField(5, v); }
+  set action($41.Action v) { setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasAction() => $_has(3);
+  $core.bool hasAction() => $_has(4);
   @$pb.TagNumber(5)
   void clearAction() => clearField(5);
   @$pb.TagNumber(5)
-  $40.Action ensureAction() => $_ensure(3);
+  $41.Action ensureAction() => $_ensure(4);
 }
 
 

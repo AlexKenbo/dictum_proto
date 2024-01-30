@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action.pb.dart' as $40;
+import 'action.pb.dart' as $41;
 import 'user.pb.dart' as $13;
 
 class Signature extends $pb.GeneratedMessage {
@@ -23,7 +23,7 @@ class Signature extends $pb.GeneratedMessage {
     $core.int? signerId,
     $core.int? entityId,
     $core.String? createTime,
-    $40.Action? action,
+    $41.Action? action,
     $13.User? signer,
   }) {
     final $result = create();
@@ -60,7 +60,7 @@ class Signature extends $pb.GeneratedMessage {
     ..a<$core.int>(3, _omitFieldNames ? '' : 'signerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aOS(5, _omitFieldNames ? '' : 'createTime')
-    ..aOM<$40.Action>(6, _omitFieldNames ? '' : 'action', subBuilder: $40.Action.create)
+    ..aOM<$41.Action>(6, _omitFieldNames ? '' : 'action', subBuilder: $41.Action.create)
     ..aOM<$13.User>(7, _omitFieldNames ? '' : 'signer', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
@@ -132,15 +132,15 @@ class Signature extends $pb.GeneratedMessage {
   void clearCreateTime() => clearField(5);
 
   @$pb.TagNumber(6)
-  $40.Action get action => $_getN(5);
+  $41.Action get action => $_getN(5);
   @$pb.TagNumber(6)
-  set action($40.Action v) { setField(6, v); }
+  set action($41.Action v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasAction() => $_has(5);
   @$pb.TagNumber(6)
   void clearAction() => clearField(6);
   @$pb.TagNumber(6)
-  $40.Action ensureAction() => $_ensure(5);
+  $41.Action ensureAction() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $13.User get signer => $_getN(6);

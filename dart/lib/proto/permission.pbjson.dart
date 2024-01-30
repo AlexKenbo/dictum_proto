@@ -20,6 +20,7 @@ const Permission$json = {
     {'1': 'user_id', '3': 1, '4': 1, '5': 5, '10': 'userId'},
     {'1': 'entity_id', '3': 2, '4': 1, '5': 5, '10': 'entityId'},
     {'1': 'action_id', '3': 3, '4': 1, '5': 5, '10': 'actionId'},
+    {'1': 'resource_name', '3': 4, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'action', '3': 5, '4': 1, '5': 11, '6': '.Action', '10': 'action'},
   ],
 };
@@ -27,6 +28,6 @@ const Permission$json = {
 /// Descriptor for `Permission`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List permissionDescriptor = $convert.base64Decode(
     'CgpQZXJtaXNzaW9uEhcKB3VzZXJfaWQYASABKAVSBnVzZXJJZBIbCgllbnRpdHlfaWQYAiABKA'
-    'VSCGVudGl0eUlkEhsKCWFjdGlvbl9pZBgDIAEoBVIIYWN0aW9uSWQSHwoGYWN0aW9uGAUgASgL'
-    'MgcuQWN0aW9uUgZhY3Rpb24=');
+    'VSCGVudGl0eUlkEhsKCWFjdGlvbl9pZBgDIAEoBVIIYWN0aW9uSWQSIwoNcmVzb3VyY2VfbmFt'
+    'ZRgEIAEoCVIMcmVzb3VyY2VOYW1lEh8KBmFjdGlvbhgFIAEoCzIHLkFjdGlvblIGYWN0aW9u');
 

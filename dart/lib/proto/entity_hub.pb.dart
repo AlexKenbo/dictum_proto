@@ -15,7 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account.pb.dart' as $6;
 import 'account_detail.pb.dart' as $7;
-import 'country.pb.dart' as $34;
+import 'country.pb.dart' as $35;
 import 'currency.pb.dart' as $43;
 import 'currency_rate.pb.dart' as $60;
 import 'employee.pb.dart' as $5;
@@ -321,7 +321,7 @@ class ListEmployeesResponse extends $pb.GeneratedMessage {
 class ListCountriesResponse extends $pb.GeneratedMessage {
   factory ListCountriesResponse({
     $core.String? resourceName,
-    $core.Iterable<$34.Country>? countries,
+    $core.Iterable<$35.Country>? countries,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -338,7 +338,7 @@ class ListCountriesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCountriesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$34.Country>(2, _omitFieldNames ? '' : 'countries', $pb.PbFieldType.PM, subBuilder: $34.Country.create)
+    ..pc<$35.Country>(2, _omitFieldNames ? '' : 'countries', $pb.PbFieldType.PM, subBuilder: $35.Country.create)
     ..hasRequiredFields = false
   ;
 
@@ -373,7 +373,7 @@ class ListCountriesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$34.Country> get countries => $_getList(1);
+  $core.List<$35.Country> get countries => $_getList(1);
 }
 
 class ListAccountsResponse extends $pb.GeneratedMessage {

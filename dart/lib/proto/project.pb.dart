@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $32;
+import '../google/protobuf/timestamp.pb.dart' as $33;
 
 class Project extends $pb.GeneratedMessage {
   factory Project({
     $core.int? projectId,
     $core.String? title,
-    $32.Timestamp? startTime,
-    $32.Timestamp? endTime,
+    $33.Timestamp? startTime,
+    $33.Timestamp? endTime,
   }) {
     final $result = create();
     if (projectId != null) {
@@ -44,8 +44,8 @@ class Project extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Project', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'projectId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'title')
-    ..aOM<$32.Timestamp>(5, _omitFieldNames ? '' : 'startTime', subBuilder: $32.Timestamp.create)
-    ..aOM<$32.Timestamp>(6, _omitFieldNames ? '' : 'endTime', subBuilder: $32.Timestamp.create)
+    ..aOM<$33.Timestamp>(5, _omitFieldNames ? '' : 'startTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$33.Timestamp>(6, _omitFieldNames ? '' : 'endTime', subBuilder: $33.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -89,26 +89,26 @@ class Project extends $pb.GeneratedMessage {
   void clearTitle() => clearField(2);
 
   @$pb.TagNumber(5)
-  $32.Timestamp get startTime => $_getN(2);
+  $33.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(5)
-  set startTime($32.Timestamp v) { setField(5, v); }
+  set startTime($33.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasStartTime() => $_has(2);
   @$pb.TagNumber(5)
   void clearStartTime() => clearField(5);
   @$pb.TagNumber(5)
-  $32.Timestamp ensureStartTime() => $_ensure(2);
+  $33.Timestamp ensureStartTime() => $_ensure(2);
 
   @$pb.TagNumber(6)
-  $32.Timestamp get endTime => $_getN(3);
+  $33.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(6)
-  set endTime($32.Timestamp v) { setField(6, v); }
+  set endTime($33.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasEndTime() => $_has(3);
   @$pb.TagNumber(6)
   void clearEndTime() => clearField(6);
   @$pb.TagNumber(6)
-  $32.Timestamp ensureEndTime() => $_ensure(3);
+  $33.Timestamp ensureEndTime() => $_ensure(3);
 }
 
 
