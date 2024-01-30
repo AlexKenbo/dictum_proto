@@ -13,6 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'attachment_type.pbenum.dart' as $47;
 import 'user.pb.dart' as $13;
 
@@ -25,6 +26,7 @@ class Attachment extends $pb.GeneratedMessage {
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
+    $33.Timestamp? createTime,
     $13.User? uploader,
     $core.String? externalNumber,
   }) {
@@ -50,6 +52,9 @@ class Attachment extends $pb.GeneratedMessage {
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     if (uploader != null) {
       $result.uploader = uploader;
     }
@@ -70,8 +75,9 @@ class Attachment extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$13.User>(8, _omitFieldNames ? '' : 'uploader', subBuilder: $13.User.create)
-    ..aOS(9, _omitFieldNames ? '' : 'externalNumber')
+    ..aOM<$33.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$13.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $13.User.create)
+    ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
   ;
 
@@ -160,25 +166,36 @@ class Attachment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $13.User get uploader => $_getN(7);
+  $33.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set uploader($13.User v) { setField(8, v); }
+  set createTime($33.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasUploader() => $_has(7);
+  $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
-  void clearUploader() => clearField(8);
+  void clearCreateTime() => clearField(8);
   @$pb.TagNumber(8)
-  $13.User ensureUploader() => $_ensure(7);
+  $33.Timestamp ensureCreateTime() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $13.User get uploader => $_getN(8);
+  @$pb.TagNumber(9)
+  set uploader($13.User v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasUploader() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUploader() => clearField(9);
+  @$pb.TagNumber(9)
+  $13.User ensureUploader() => $_ensure(8);
 
   /// new fields
-  @$pb.TagNumber(9)
-  $core.String get externalNumber => $_getSZ(8);
-  @$pb.TagNumber(9)
-  set externalNumber($core.String v) { $_setString(8, v); }
-  @$pb.TagNumber(9)
-  $core.bool hasExternalNumber() => $_has(8);
-  @$pb.TagNumber(9)
-  void clearExternalNumber() => clearField(9);
+  @$pb.TagNumber(10)
+  $core.String get externalNumber => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set externalNumber($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasExternalNumber() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearExternalNumber() => clearField(10);
 }
 
 

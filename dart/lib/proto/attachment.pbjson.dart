@@ -24,8 +24,9 @@ const Attachment$json = {
     {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
     {'1': 'uploader_id', '3': 6, '4': 1, '5': 5, '10': 'uploaderId'},
     {'1': 'resource_name', '3': 7, '4': 1, '5': 9, '10': 'resourceName'},
-    {'1': 'uploader', '3': 8, '4': 1, '5': 11, '6': '.User', '10': 'uploader'},
-    {'1': 'external_number', '3': 9, '4': 1, '5': 9, '10': 'externalNumber'},
+    {'1': 'create_time', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
+    {'1': 'uploader', '3': 9, '4': 1, '5': 11, '6': '.User', '10': 'uploader'},
+    {'1': 'external_number', '3': 10, '4': 1, '5': 9, '10': 'externalNumber'},
   ],
 };
 
@@ -35,6 +36,7 @@ final $typed_data.Uint8List attachmentDescriptor = $convert.base64Decode(
     'dfdXJsGAIgASgJUgZyYXdVcmwSGwoJbWltZV90eXBlGAMgASgJUghtaW1lVHlwZRIjCgR0eXBl'
     'GAQgASgOMg8uQXR0YWNobWVudFR5cGVSBHR5cGUSEgoEbmFtZRgFIAEoCVIEbmFtZRIfCgt1cG'
     'xvYWRlcl9pZBgGIAEoBVIKdXBsb2FkZXJJZBIjCg1yZXNvdXJjZV9uYW1lGAcgASgJUgxyZXNv'
-    'dXJjZU5hbWUSIQoIdXBsb2FkZXIYCCABKAsyBS5Vc2VyUgh1cGxvYWRlchInCg9leHRlcm5hbF'
-    '9udW1iZXIYCSABKAlSDmV4dGVybmFsTnVtYmVy');
+    'dXJjZU5hbWUSOwoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW'
+    '1wUgpjcmVhdGVUaW1lEiEKCHVwbG9hZGVyGAkgASgLMgUuVXNlclIIdXBsb2FkZXISJwoPZXh0'
+    'ZXJuYWxfbnVtYmVyGAogASgJUg5leHRlcm5hbE51bWJlcg==');
 

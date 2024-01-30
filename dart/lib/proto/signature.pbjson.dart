@@ -21,7 +21,7 @@ const Signature$json = {
     {'1': 'action_id', '3': 2, '4': 1, '5': 5, '10': 'actionId'},
     {'1': 'signer_id', '3': 3, '4': 1, '5': 5, '10': 'signerId'},
     {'1': 'entity_id', '3': 4, '4': 1, '5': 5, '10': 'entityId'},
-    {'1': 'create_time', '3': 5, '4': 1, '5': 9, '10': 'createTime'},
+    {'1': 'create_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
     {'1': 'action', '3': 6, '4': 1, '5': 11, '6': '.Action', '10': 'action'},
     {'1': 'signer', '3': 7, '4': 1, '5': 11, '6': '.User', '10': 'signer'},
   ],
@@ -31,7 +31,7 @@ const Signature$json = {
 final $typed_data.Uint8List signatureDescriptor = $convert.base64Decode(
     'CglTaWduYXR1cmUSIQoMc2lnbmF0dXJlX2lkGAEgASgFUgtzaWduYXR1cmVJZBIbCglhY3Rpb2'
     '5faWQYAiABKAVSCGFjdGlvbklkEhsKCXNpZ25lcl9pZBgDIAEoBVIIc2lnbmVySWQSGwoJZW50'
-    'aXR5X2lkGAQgASgFUghlbnRpdHlJZBIfCgtjcmVhdGVfdGltZRgFIAEoCVIKY3JlYXRlVGltZR'
-    'IfCgZhY3Rpb24YBiABKAsyBy5BY3Rpb25SBmFjdGlvbhIdCgZzaWduZXIYByABKAsyBS5Vc2Vy'
-    'UgZzaWduZXI=');
+    'aXR5X2lkGAQgASgFUghlbnRpdHlJZBI7CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm'
+    '90b2J1Zi5UaW1lc3RhbXBSCmNyZWF0ZVRpbWUSHwoGYWN0aW9uGAYgASgLMgcuQWN0aW9uUgZh'
+    'Y3Rpb24SHQoGc2lnbmVyGAcgASgLMgUuVXNlclIGc2lnbmVy');
 
