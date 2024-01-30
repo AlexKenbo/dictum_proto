@@ -127,7 +127,7 @@ service FinEvent {
 
 
     //--
-    rpc Accruals(ListRequest) returns (ListAccrualsResponse) {
+    rpc ListAccruals(ListRequest) returns (ListAccrualsResponse) {
         option (google.api.http) = {
             get: "/v1/accruals"
             additional_bindings {

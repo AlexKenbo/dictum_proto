@@ -93,8 +93,8 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/AggregateTransfers',
       ($0.AggregateRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $25.EventAggregate.fromBuffer(value));
-  static final _$accruals = $grpc.ClientMethod<$0.ListRequest, $20.ListAccrualsResponse>(
-      '/FinEvent/Accruals',
+  static final _$listAccruals = $grpc.ClientMethod<$0.ListRequest, $20.ListAccrualsResponse>(
+      '/FinEvent/ListAccruals',
       ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $20.ListAccrualsResponse.fromBuffer(value));
   static final _$getAccrual = $grpc.ClientMethod<$0.GetRequest, $26.Accrual>(
@@ -236,8 +236,8 @@ class FinEventClient extends $grpc.Client {
     return $createUnaryCall(_$aggregateTransfers, request, options: options);
   }
 
-  $grpc.ResponseFuture<$20.ListAccrualsResponse> accruals($0.ListRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$accruals, request, options: options);
+  $grpc.ResponseFuture<$20.ListAccrualsResponse> listAccruals($0.ListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAccruals, request, options: options);
   }
 
   $grpc.ResponseFuture<$26.Accrual> getAccrual($0.GetRequest request, {$grpc.CallOptions? options}) {
@@ -424,8 +424,8 @@ abstract class FinEventServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) => $0.AggregateRequest.fromBuffer(value),
         ($25.EventAggregate value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.ListRequest, $20.ListAccrualsResponse>(
-        'Accruals',
-        accruals_Pre,
+        'ListAccruals',
+        listAccruals_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
@@ -618,8 +618,8 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return aggregateTransfers(call, await request);
   }
 
-  $async.Future<$20.ListAccrualsResponse> accruals_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
-    return accruals(call, await request);
+  $async.Future<$20.ListAccrualsResponse> listAccruals_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+    return listAccruals(call, await request);
   }
 
   $async.Future<$26.Accrual> getAccrual_Pre($grpc.ServiceCall call, $async.Future<$0.GetRequest> request) async {
@@ -709,7 +709,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$3.Empty> batchInsertTransfers($grpc.ServiceCall call, $20.BatchInsertTransfersRequest request);
   $async.Future<$23.Transfer> updateTransfer($grpc.ServiceCall call, $23.Transfer request);
   $async.Future<$25.EventAggregate> aggregateTransfers($grpc.ServiceCall call, $0.AggregateRequest request);
-  $async.Future<$20.ListAccrualsResponse> accruals($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$20.ListAccrualsResponse> listAccruals($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$26.Accrual> getAccrual($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$26.Accrual> createAccrual($grpc.ServiceCall call, $26.Accrual request);
   $async.Future<$26.Accrual> updateAccrual($grpc.ServiceCall call, $26.Accrual request);
