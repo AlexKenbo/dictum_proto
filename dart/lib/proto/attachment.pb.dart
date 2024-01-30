@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $34;
 import 'attachment_type.pbenum.dart' as $47;
 import 'user.pb.dart' as $13;
 
@@ -26,7 +26,7 @@ class Attachment extends $pb.GeneratedMessage {
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
-    $33.Timestamp? createTime,
+    $34.Timestamp? createTime,
     $13.User? uploader,
     $core.String? externalNumber,
   }) {
@@ -75,7 +75,7 @@ class Attachment extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$33.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$34.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $34.Timestamp.create)
     ..aOM<$13.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $13.User.create)
     ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
@@ -166,15 +166,15 @@ class Attachment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $33.Timestamp get createTime => $_getN(7);
+  $34.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set createTime($33.Timestamp v) { setField(8, v); }
+  set createTime($34.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
   void clearCreateTime() => clearField(8);
   @$pb.TagNumber(8)
-  $33.Timestamp ensureCreateTime() => $_ensure(7);
+  $34.Timestamp ensureCreateTime() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $13.User get uploader => $_getN(8);

@@ -11,15 +11,49 @@ import "proto/accruals_aggregate.proto";
 import "proto/action.proto";
 import "proto/allocation.proto";
 import "proto/article.proto";
+import "proto/comment.proto";
 import "proto/event_aggregate.proto";
 import "proto/permission.proto";
 import "proto/position.proto";
 import "proto/product.proto";
 import "proto/requests.proto";
+import "proto/signature.proto";
 import "proto/transfer.proto";
 
 //Репы - Трансферы, Перевод, Продукт
 service FinEvent {
+    rpc ListSignatures(ListRequest) returns (ListSignaturesResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=accruals/*}/signatures"
+        };
+    }
+
+    rpc ListComments(ListRequest) returns (ListCommentsResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=accruals/*}/comments"
+        };
+    }
+
+    rpc CreateComment(Comment) returns (Comment) {
+        option (google.api.http) = {
+            post: "/v1/{comment.resource_name=comments/*}"
+            body: "comment"
+        };
+    }
+
+    rpc UpdateComment(Comment) returns (Comment) {
+        option (google.api.http) = {
+            patch: "/v1/{comment.resource_name=comments/*}"
+            body: "comment"
+        };
+    }
+
+    rpc DeleteComment(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete: "/v1/{resource_name=comments/*}"
+        };
+    }
+
     rpc CreatePermission(Permission) returns (Permission) {
         option (google.api.http) = {
         post: "/v1/{permission.resource_name=entities/*/employees/*/actions/*}/permissions"
@@ -93,7 +127,7 @@ service FinEvent {
 
 
     //--
-    rpc ListAccruals(ListRequest) returns (ListAccrualsResponse) {
+    rpc Accruals(ListRequest) returns (ListAccrualsResponse) {
         option (google.api.http) = {
             get: "/v1/accruals"
             additional_bindings {
@@ -245,6 +279,16 @@ service FinEvent {
     }
 
 
+}
+
+message ListSignaturesResponse {
+    string resource_name = 1;
+    repeated Signature signatures = 2;
+}
+
+message ListCommentsResponse {
+    string resource_name = 1;
+    repeated Comment comments = 2;
 }
 
 message ListActionsResponse {

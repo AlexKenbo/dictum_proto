@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $34;
 import 'account_detail.pb.dart' as $7;
-import 'account_type.pbenum.dart' as $45;
-import 'currency.pb.dart' as $43;
+import 'account_type.pbenum.dart' as $46;
+import 'currency.pb.dart' as $44;
 import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
-import 'fi.pb.dart' as $44;
+import 'fi.pb.dart' as $45;
 
 class Account extends $pb.GeneratedMessage {
   factory Account({
@@ -28,18 +28,18 @@ class Account extends $pb.GeneratedMessage {
     $core.String? currencyCode,
     $core.int? entityId,
     $core.String? number,
-    $45.AccountType? type,
+    $46.AccountType? type,
     $core.bool? isDefault,
     $core.String? fiName,
     $core.String? title,
     $core.int? cashierId,
     $core.String? resourceName,
     $2.Entity? entity,
-    $43.Currency? currency,
-    $44.Fi? fi,
+    $44.Currency? currency,
+    $45.Fi? fi,
     $5.Employee? cashier,
     $7.AccountDetail? accountDetail,
-    $33.Timestamp? createTime,
+    $34.Timestamp? createTime,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -105,18 +105,18 @@ class Account extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'currencyCode')
     ..a<$core.int>(4, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aOS(5, _omitFieldNames ? '' : 'number')
-    ..e<$45.AccountType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $45.AccountType.ACCOUNT_TYPE_UNKNOWN, valueOf: $45.AccountType.valueOf, enumValues: $45.AccountType.values)
+    ..e<$46.AccountType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $46.AccountType.ACCOUNT_TYPE_UNKNOWN, valueOf: $46.AccountType.valueOf, enumValues: $46.AccountType.values)
     ..aOB(7, _omitFieldNames ? '' : 'isDefault')
     ..aOS(8, _omitFieldNames ? '' : 'fiName')
     ..aOS(9, _omitFieldNames ? '' : 'title')
     ..a<$core.int>(11, _omitFieldNames ? '' : 'cashierId', $pb.PbFieldType.O3)
     ..aOS(13, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$2.Entity>(15, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
-    ..aOM<$43.Currency>(17, _omitFieldNames ? '' : 'currency', subBuilder: $43.Currency.create)
-    ..aOM<$44.Fi>(19, _omitFieldNames ? '' : 'fi', subBuilder: $44.Fi.create)
+    ..aOM<$44.Currency>(17, _omitFieldNames ? '' : 'currency', subBuilder: $44.Currency.create)
+    ..aOM<$45.Fi>(19, _omitFieldNames ? '' : 'fi', subBuilder: $45.Fi.create)
     ..aOM<$5.Employee>(21, _omitFieldNames ? '' : 'cashier', subBuilder: $5.Employee.create)
     ..aOM<$7.AccountDetail>(23, _omitFieldNames ? '' : 'accountDetail', subBuilder: $7.AccountDetail.create)
-    ..aOM<$33.Timestamp>(24, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$34.Timestamp>(24, _omitFieldNames ? '' : 'createTime', subBuilder: $34.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -187,9 +187,9 @@ class Account extends $pb.GeneratedMessage {
   void clearNumber() => clearField(5);
 
   @$pb.TagNumber(6)
-  $45.AccountType get type => $_getN(5);
+  $46.AccountType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type($45.AccountType v) { setField(6, v); }
+  set type($46.AccountType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)
@@ -252,26 +252,26 @@ class Account extends $pb.GeneratedMessage {
   $2.Entity ensureEntity() => $_ensure(11);
 
   @$pb.TagNumber(17)
-  $43.Currency get currency => $_getN(12);
+  $44.Currency get currency => $_getN(12);
   @$pb.TagNumber(17)
-  set currency($43.Currency v) { setField(17, v); }
+  set currency($44.Currency v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasCurrency() => $_has(12);
   @$pb.TagNumber(17)
   void clearCurrency() => clearField(17);
   @$pb.TagNumber(17)
-  $43.Currency ensureCurrency() => $_ensure(12);
+  $44.Currency ensureCurrency() => $_ensure(12);
 
   @$pb.TagNumber(19)
-  $44.Fi get fi => $_getN(13);
+  $45.Fi get fi => $_getN(13);
   @$pb.TagNumber(19)
-  set fi($44.Fi v) { setField(19, v); }
+  set fi($45.Fi v) { setField(19, v); }
   @$pb.TagNumber(19)
   $core.bool hasFi() => $_has(13);
   @$pb.TagNumber(19)
   void clearFi() => clearField(19);
   @$pb.TagNumber(19)
-  $44.Fi ensureFi() => $_ensure(13);
+  $45.Fi ensureFi() => $_ensure(13);
 
   @$pb.TagNumber(21)
   $5.Employee get cashier => $_getN(14);
@@ -296,15 +296,15 @@ class Account extends $pb.GeneratedMessage {
   $7.AccountDetail ensureAccountDetail() => $_ensure(15);
 
   @$pb.TagNumber(24)
-  $33.Timestamp get createTime => $_getN(16);
+  $34.Timestamp get createTime => $_getN(16);
   @$pb.TagNumber(24)
-  set createTime($33.Timestamp v) { setField(24, v); }
+  set createTime($34.Timestamp v) { setField(24, v); }
   @$pb.TagNumber(24)
   $core.bool hasCreateTime() => $_has(16);
   @$pb.TagNumber(24)
   void clearCreateTime() => clearField(24);
   @$pb.TagNumber(24)
-  $33.Timestamp ensureCreateTime() => $_ensure(16);
+  $34.Timestamp ensureCreateTime() => $_ensure(16);
 }
 
 

@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'currency.pb.dart' as $72;
-import 'exchange.pb.dart' as $73;
+import 'currency.pb.dart' as $71;
+import 'exchange.pb.dart' as $72;
 
 class ListCurrenciesResponse extends $pb.GeneratedMessage {
   factory ListCurrenciesResponse({
     $core.String? resourceName,
-    $core.Iterable<$72.CurrencyResponse>? currencies,
+    $core.Iterable<$71.CurrencyResponse>? currencies,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -36,7 +36,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCurrenciesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'coincat'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$72.CurrencyResponse>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $72.CurrencyResponse.create)
+    ..pc<$71.CurrencyResponse>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $71.CurrencyResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -71,13 +71,13 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$72.CurrencyResponse> get currencies => $_getList(1);
+  $core.List<$71.CurrencyResponse> get currencies => $_getList(1);
 }
 
 class ListExchangesResponse extends $pb.GeneratedMessage {
   factory ListExchangesResponse({
     $core.String? resourceName,
-    $core.Iterable<$73.ExchangeResponse>? exchanges,
+    $core.Iterable<$72.ExchangeResponse>? exchanges,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -94,7 +94,7 @@ class ListExchangesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListExchangesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'coincat'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$73.ExchangeResponse>(2, _omitFieldNames ? '' : 'exchanges', $pb.PbFieldType.PM, subBuilder: $73.ExchangeResponse.create)
+    ..pc<$72.ExchangeResponse>(2, _omitFieldNames ? '' : 'exchanges', $pb.PbFieldType.PM, subBuilder: $72.ExchangeResponse.create)
     ..hasRequiredFields = false
   ;
 
@@ -129,7 +129,7 @@ class ListExchangesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$73.ExchangeResponse> get exchanges => $_getList(1);
+  $core.List<$72.ExchangeResponse> get exchanges => $_getList(1);
 }
 
 class GetOrderStatusRequest extends $pb.GeneratedMessage {

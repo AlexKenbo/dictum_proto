@@ -13,7 +13,8 @@ message Signature {
   int32 signer_id = 3;
   int32 entity_id = 4;
   google.protobuf.Timestamp create_time = 5;
+  string resource_name = 6;
   // 
-  Action action = 6;
-  User signer = 7;
+  Action action = 7;
+  User signer = 8;
 }

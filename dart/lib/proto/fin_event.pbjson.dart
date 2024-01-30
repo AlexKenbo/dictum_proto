@@ -13,6 +13,34 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listSignaturesResponseDescriptor instead')
+const ListSignaturesResponse$json = {
+  '1': 'ListSignaturesResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'signatures', '3': 2, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
+  ],
+};
+
+/// Descriptor for `ListSignaturesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSignaturesResponseDescriptor = $convert.base64Decode(
+    'ChZMaXN0U2lnbmF0dXJlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc291cm'
+    'NlTmFtZRIqCgpzaWduYXR1cmVzGAIgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+
+@$core.Deprecated('Use listCommentsResponseDescriptor instead')
+const ListCommentsResponse$json = {
+  '1': 'ListCommentsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'comments', '3': 2, '4': 3, '5': 11, '6': '.Comment', '10': 'comments'},
+  ],
+};
+
+/// Descriptor for `ListCommentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listCommentsResponseDescriptor = $convert.base64Decode(
+    'ChRMaXN0Q29tbWVudHNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdXJjZU'
+    '5hbWUSJAoIY29tbWVudHMYAiADKAsyCC5Db21tZW50Ughjb21tZW50cw==');
+
 @$core.Deprecated('Use listActionsResponseDescriptor instead')
 const ListActionsResponse$json = {
   '1': 'ListActionsResponse',
