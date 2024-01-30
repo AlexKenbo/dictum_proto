@@ -21,6 +21,7 @@ class Signature extends $pb.GeneratedMessage {
     $core.int? signatureId,
     $core.int? actionId,
     $core.int? signerId,
+    $core.int? entityId,
     $core.String? createTime,
     $40.Action? action,
     $13.User? signer,
@@ -34,6 +35,9 @@ class Signature extends $pb.GeneratedMessage {
     }
     if (signerId != null) {
       $result.signerId = signerId;
+    }
+    if (entityId != null) {
+      $result.entityId = entityId;
     }
     if (createTime != null) {
       $result.createTime = createTime;
@@ -54,9 +58,10 @@ class Signature extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'signatureId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'signerId', $pb.PbFieldType.O3)
-    ..aOS(4, _omitFieldNames ? '' : 'createTime')
-    ..aOM<$40.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $40.Action.create)
-    ..aOM<$13.User>(6, _omitFieldNames ? '' : 'signer', subBuilder: $13.User.create)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
+    ..aOS(5, _omitFieldNames ? '' : 'createTime')
+    ..aOM<$40.Action>(6, _omitFieldNames ? '' : 'action', subBuilder: $40.Action.create)
+    ..aOM<$13.User>(7, _omitFieldNames ? '' : 'signer', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -109,35 +114,44 @@ class Signature extends $pb.GeneratedMessage {
   void clearSignerId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get createTime => $_getSZ(3);
+  $core.int get entityId => $_getIZ(3);
   @$pb.TagNumber(4)
-  set createTime($core.String v) { $_setString(3, v); }
+  set entityId($core.int v) { $_setSignedInt32(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasCreateTime() => $_has(3);
+  $core.bool hasEntityId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCreateTime() => clearField(4);
+  void clearEntityId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $40.Action get action => $_getN(4);
+  $core.String get createTime => $_getSZ(4);
   @$pb.TagNumber(5)
-  set action($40.Action v) { setField(5, v); }
+  set createTime($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasAction() => $_has(4);
+  $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAction() => clearField(5);
-  @$pb.TagNumber(5)
-  $40.Action ensureAction() => $_ensure(4);
+  void clearCreateTime() => clearField(5);
 
   @$pb.TagNumber(6)
-  $13.User get signer => $_getN(5);
+  $40.Action get action => $_getN(5);
   @$pb.TagNumber(6)
-  set signer($13.User v) { setField(6, v); }
+  set action($40.Action v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasSigner() => $_has(5);
+  $core.bool hasAction() => $_has(5);
   @$pb.TagNumber(6)
-  void clearSigner() => clearField(6);
+  void clearAction() => clearField(6);
   @$pb.TagNumber(6)
-  $13.User ensureSigner() => $_ensure(5);
+  $40.Action ensureAction() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $13.User get signer => $_getN(6);
+  @$pb.TagNumber(7)
+  set signer($13.User v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasSigner() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSigner() => clearField(7);
+  @$pb.TagNumber(7)
+  $13.User ensureSigner() => $_ensure(6);
 }
 
 

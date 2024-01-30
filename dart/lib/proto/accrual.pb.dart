@@ -88,6 +88,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? payerArticleId,
     $core.int? consigneeArticleId,
     $core.int? recipientArticleId,
+    $core.int? primaryId,
     $28.Article? payerArticle,
     $28.Article? consigneeArticle,
     $28.Article? recipientArticle,
@@ -269,6 +270,9 @@ class Accrual extends $pb.GeneratedMessage {
     if (recipientArticleId != null) {
       $result.recipientArticleId = recipientArticleId;
     }
+    if (primaryId != null) {
+      $result.primaryId = primaryId;
+    }
     if (payerArticle != null) {
       $result.payerArticle = payerArticle;
     }
@@ -357,14 +361,15 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(55, _omitFieldNames ? '' : 'payerArticleId', $pb.PbFieldType.O3)
     ..a<$core.int>(56, _omitFieldNames ? '' : 'consigneeArticleId', $pb.PbFieldType.O3)
     ..a<$core.int>(57, _omitFieldNames ? '' : 'recipientArticleId', $pb.PbFieldType.O3)
-    ..aOM<$28.Article>(58, _omitFieldNames ? '' : 'payerArticle', protoName: 'payerArticle', subBuilder: $28.Article.create)
-    ..aOM<$28.Article>(59, _omitFieldNames ? '' : 'consigneeArticle', protoName: 'consigneeArticle', subBuilder: $28.Article.create)
-    ..aOM<$28.Article>(60, _omitFieldNames ? '' : 'recipientArticle', protoName: 'recipientArticle', subBuilder: $28.Article.create)
-    ..pc<$52.Comment>(61, _omitFieldNames ? '' : 'comments', $pb.PbFieldType.PM, subBuilder: $52.Comment.create)
-    ..aOM<$13.User>(62, _omitFieldNames ? '' : 'author', subBuilder: $13.User.create)
-    ..aOM<$2.Entity>(63, _omitFieldNames ? '' : 'initiator', subBuilder: $2.Entity.create)
-    ..aOM<$2.Entity>(64, _omitFieldNames ? '' : 'consignee', subBuilder: $2.Entity.create)
-    ..pc<$53.Signature>(65, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $53.Signature.create)
+    ..a<$core.int>(58, _omitFieldNames ? '' : 'primaryId', $pb.PbFieldType.O3)
+    ..aOM<$28.Article>(59, _omitFieldNames ? '' : 'payerArticle', protoName: 'payerArticle', subBuilder: $28.Article.create)
+    ..aOM<$28.Article>(60, _omitFieldNames ? '' : 'consigneeArticle', protoName: 'consigneeArticle', subBuilder: $28.Article.create)
+    ..aOM<$28.Article>(61, _omitFieldNames ? '' : 'recipientArticle', protoName: 'recipientArticle', subBuilder: $28.Article.create)
+    ..pc<$52.Comment>(62, _omitFieldNames ? '' : 'comments', $pb.PbFieldType.PM, subBuilder: $52.Comment.create)
+    ..aOM<$13.User>(63, _omitFieldNames ? '' : 'author', subBuilder: $13.User.create)
+    ..aOM<$2.Entity>(64, _omitFieldNames ? '' : 'initiator', subBuilder: $2.Entity.create)
+    ..aOM<$2.Entity>(65, _omitFieldNames ? '' : 'consignee', subBuilder: $2.Entity.create)
+    ..pc<$53.Signature>(66, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $53.Signature.create)
     ..hasRequiredFields = false
   ;
 
@@ -928,76 +933,85 @@ class Accrual extends $pb.GeneratedMessage {
   void clearRecipientArticleId() => clearField(57);
 
   @$pb.TagNumber(58)
-  $28.Article get payerArticle => $_getN(57);
+  $core.int get primaryId => $_getIZ(57);
   @$pb.TagNumber(58)
-  set payerArticle($28.Article v) { setField(58, v); }
+  set primaryId($core.int v) { $_setSignedInt32(57, v); }
   @$pb.TagNumber(58)
-  $core.bool hasPayerArticle() => $_has(57);
+  $core.bool hasPrimaryId() => $_has(57);
   @$pb.TagNumber(58)
-  void clearPayerArticle() => clearField(58);
-  @$pb.TagNumber(58)
-  $28.Article ensurePayerArticle() => $_ensure(57);
+  void clearPrimaryId() => clearField(58);
 
   @$pb.TagNumber(59)
-  $28.Article get consigneeArticle => $_getN(58);
+  $28.Article get payerArticle => $_getN(58);
   @$pb.TagNumber(59)
-  set consigneeArticle($28.Article v) { setField(59, v); }
+  set payerArticle($28.Article v) { setField(59, v); }
   @$pb.TagNumber(59)
-  $core.bool hasConsigneeArticle() => $_has(58);
+  $core.bool hasPayerArticle() => $_has(58);
   @$pb.TagNumber(59)
-  void clearConsigneeArticle() => clearField(59);
+  void clearPayerArticle() => clearField(59);
   @$pb.TagNumber(59)
-  $28.Article ensureConsigneeArticle() => $_ensure(58);
+  $28.Article ensurePayerArticle() => $_ensure(58);
 
   @$pb.TagNumber(60)
-  $28.Article get recipientArticle => $_getN(59);
+  $28.Article get consigneeArticle => $_getN(59);
   @$pb.TagNumber(60)
-  set recipientArticle($28.Article v) { setField(60, v); }
+  set consigneeArticle($28.Article v) { setField(60, v); }
   @$pb.TagNumber(60)
-  $core.bool hasRecipientArticle() => $_has(59);
+  $core.bool hasConsigneeArticle() => $_has(59);
   @$pb.TagNumber(60)
-  void clearRecipientArticle() => clearField(60);
+  void clearConsigneeArticle() => clearField(60);
   @$pb.TagNumber(60)
-  $28.Article ensureRecipientArticle() => $_ensure(59);
+  $28.Article ensureConsigneeArticle() => $_ensure(59);
 
   @$pb.TagNumber(61)
-  $core.List<$52.Comment> get comments => $_getList(60);
+  $28.Article get recipientArticle => $_getN(60);
+  @$pb.TagNumber(61)
+  set recipientArticle($28.Article v) { setField(61, v); }
+  @$pb.TagNumber(61)
+  $core.bool hasRecipientArticle() => $_has(60);
+  @$pb.TagNumber(61)
+  void clearRecipientArticle() => clearField(61);
+  @$pb.TagNumber(61)
+  $28.Article ensureRecipientArticle() => $_ensure(60);
 
   @$pb.TagNumber(62)
-  $13.User get author => $_getN(61);
-  @$pb.TagNumber(62)
-  set author($13.User v) { setField(62, v); }
-  @$pb.TagNumber(62)
-  $core.bool hasAuthor() => $_has(61);
-  @$pb.TagNumber(62)
-  void clearAuthor() => clearField(62);
-  @$pb.TagNumber(62)
-  $13.User ensureAuthor() => $_ensure(61);
+  $core.List<$52.Comment> get comments => $_getList(61);
 
   @$pb.TagNumber(63)
-  $2.Entity get initiator => $_getN(62);
+  $13.User get author => $_getN(62);
   @$pb.TagNumber(63)
-  set initiator($2.Entity v) { setField(63, v); }
+  set author($13.User v) { setField(63, v); }
   @$pb.TagNumber(63)
-  $core.bool hasInitiator() => $_has(62);
+  $core.bool hasAuthor() => $_has(62);
   @$pb.TagNumber(63)
-  void clearInitiator() => clearField(63);
+  void clearAuthor() => clearField(63);
   @$pb.TagNumber(63)
-  $2.Entity ensureInitiator() => $_ensure(62);
+  $13.User ensureAuthor() => $_ensure(62);
 
   @$pb.TagNumber(64)
-  $2.Entity get consignee => $_getN(63);
+  $2.Entity get initiator => $_getN(63);
   @$pb.TagNumber(64)
-  set consignee($2.Entity v) { setField(64, v); }
+  set initiator($2.Entity v) { setField(64, v); }
   @$pb.TagNumber(64)
-  $core.bool hasConsignee() => $_has(63);
+  $core.bool hasInitiator() => $_has(63);
   @$pb.TagNumber(64)
-  void clearConsignee() => clearField(64);
+  void clearInitiator() => clearField(64);
   @$pb.TagNumber(64)
-  $2.Entity ensureConsignee() => $_ensure(63);
+  $2.Entity ensureInitiator() => $_ensure(63);
 
   @$pb.TagNumber(65)
-  $core.List<$53.Signature> get signatures => $_getList(64);
+  $2.Entity get consignee => $_getN(64);
+  @$pb.TagNumber(65)
+  set consignee($2.Entity v) { setField(65, v); }
+  @$pb.TagNumber(65)
+  $core.bool hasConsignee() => $_has(64);
+  @$pb.TagNumber(65)
+  void clearConsignee() => clearField(65);
+  @$pb.TagNumber(65)
+  $2.Entity ensureConsignee() => $_ensure(64);
+
+  @$pb.TagNumber(66)
+  $core.List<$53.Signature> get signatures => $_getList(65);
 }
 
 

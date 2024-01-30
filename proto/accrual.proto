@@ -79,13 +79,14 @@ message Accrual {
   int32 payer_article_id = 55;
   int32 consignee_article_id = 56;
   int32 recipient_article_id = 57;
+  int32 primary_id = 58;
   // 
-  Article payerArticle = 58; 
-  Article consigneeArticle = 59; 
-  Article recipientArticle = 60; 
-  repeated Comment comments = 61;
-  User author = 62;
-  Entity initiator = 63;
-  Entity consignee = 64;
-  repeated Signature signatures = 65;
+  Article payerArticle = 59; 
+  Article consigneeArticle = 60; 
+  Article recipientArticle = 61; 
+  repeated Comment comments = 62;
+  User author = 63;
+  Entity initiator = 64;
+  Entity consignee = 65;
+  repeated Signature signatures = 66;
 }

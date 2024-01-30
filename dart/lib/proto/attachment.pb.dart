@@ -13,19 +13,19 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment_type.pbenum.dart' as $46;
-import 'employee.pb.dart' as $5;
+import 'attachment_type.pbenum.dart' as $47;
+import 'user.pb.dart' as $13;
 
 class Attachment extends $pb.GeneratedMessage {
   factory Attachment({
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $46.AttachmentType? type,
+    $47.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
-    $5.Employee? uploader,
+    $13.User? uploader,
     $core.String? externalNumber,
   }) {
     final $result = create();
@@ -66,11 +66,11 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$46.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $46.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $46.AttachmentType.valueOf, enumValues: $46.AttachmentType.values)
+    ..e<$47.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $47.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $47.AttachmentType.valueOf, enumValues: $47.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$5.Employee>(8, _omitFieldNames ? '' : 'uploader', subBuilder: $5.Employee.create)
+    ..aOM<$13.User>(8, _omitFieldNames ? '' : 'uploader', subBuilder: $13.User.create)
     ..aOS(9, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
   ;
@@ -124,9 +124,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $46.AttachmentType get type => $_getN(3);
+  $47.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($46.AttachmentType v) { setField(4, v); }
+  set type($47.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -160,15 +160,15 @@ class Attachment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $5.Employee get uploader => $_getN(7);
+  $13.User get uploader => $_getN(7);
   @$pb.TagNumber(8)
-  set uploader($5.Employee v) { setField(8, v); }
+  set uploader($13.User v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasUploader() => $_has(7);
   @$pb.TagNumber(8)
   void clearUploader() => clearField(8);
   @$pb.TagNumber(8)
-  $5.Employee ensureUploader() => $_ensure(7);
+  $13.User ensureUploader() => $_ensure(7);
 
   /// new fields
   @$pb.TagNumber(9)

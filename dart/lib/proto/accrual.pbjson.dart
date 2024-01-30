@@ -74,14 +74,15 @@ const Accrual$json = {
     {'1': 'payer_article_id', '3': 55, '4': 1, '5': 5, '10': 'payerArticleId'},
     {'1': 'consignee_article_id', '3': 56, '4': 1, '5': 5, '10': 'consigneeArticleId'},
     {'1': 'recipient_article_id', '3': 57, '4': 1, '5': 5, '10': 'recipientArticleId'},
-    {'1': 'payerArticle', '3': 58, '4': 1, '5': 11, '6': '.Article', '10': 'payerArticle'},
-    {'1': 'consigneeArticle', '3': 59, '4': 1, '5': 11, '6': '.Article', '10': 'consigneeArticle'},
-    {'1': 'recipientArticle', '3': 60, '4': 1, '5': 11, '6': '.Article', '10': 'recipientArticle'},
-    {'1': 'comments', '3': 61, '4': 3, '5': 11, '6': '.Comment', '10': 'comments'},
-    {'1': 'author', '3': 62, '4': 1, '5': 11, '6': '.User', '10': 'author'},
-    {'1': 'initiator', '3': 63, '4': 1, '5': 11, '6': '.Entity', '10': 'initiator'},
-    {'1': 'consignee', '3': 64, '4': 1, '5': 11, '6': '.Entity', '10': 'consignee'},
-    {'1': 'signatures', '3': 65, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
+    {'1': 'primary_id', '3': 58, '4': 1, '5': 5, '10': 'primaryId'},
+    {'1': 'payerArticle', '3': 59, '4': 1, '5': 11, '6': '.Article', '10': 'payerArticle'},
+    {'1': 'consigneeArticle', '3': 60, '4': 1, '5': 11, '6': '.Article', '10': 'consigneeArticle'},
+    {'1': 'recipientArticle', '3': 61, '4': 1, '5': 11, '6': '.Article', '10': 'recipientArticle'},
+    {'1': 'comments', '3': 62, '4': 3, '5': 11, '6': '.Comment', '10': 'comments'},
+    {'1': 'author', '3': 63, '4': 1, '5': 11, '6': '.User', '10': 'author'},
+    {'1': 'initiator', '3': 64, '4': 1, '5': 11, '6': '.Entity', '10': 'initiator'},
+    {'1': 'consignee', '3': 65, '4': 1, '5': 11, '6': '.Entity', '10': 'consignee'},
+    {'1': 'signatures', '3': 66, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
   ],
 };
 
@@ -128,11 +129,12 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'X3ByaW1hcnlfZG9jdW1lbnQYNiABKAhSFnJlcXVpcmVQcmltYXJ5RG9jdW1lbnQSKAoQcGF5ZX'
     'JfYXJ0aWNsZV9pZBg3IAEoBVIOcGF5ZXJBcnRpY2xlSWQSMAoUY29uc2lnbmVlX2FydGljbGVf'
     'aWQYOCABKAVSEmNvbnNpZ25lZUFydGljbGVJZBIwChRyZWNpcGllbnRfYXJ0aWNsZV9pZBg5IA'
-    'EoBVIScmVjaXBpZW50QXJ0aWNsZUlkEiwKDHBheWVyQXJ0aWNsZRg6IAEoCzIILkFydGljbGVS'
-    'DHBheWVyQXJ0aWNsZRI0ChBjb25zaWduZWVBcnRpY2xlGDsgASgLMgguQXJ0aWNsZVIQY29uc2'
-    'lnbmVlQXJ0aWNsZRI0ChByZWNpcGllbnRBcnRpY2xlGDwgASgLMgguQXJ0aWNsZVIQcmVjaXBp'
-    'ZW50QXJ0aWNsZRIkCghjb21tZW50cxg9IAMoCzIILkNvbW1lbnRSCGNvbW1lbnRzEh0KBmF1dG'
-    'hvchg+IAEoCzIFLlVzZXJSBmF1dGhvchIlCglpbml0aWF0b3IYPyABKAsyBy5FbnRpdHlSCWlu'
-    'aXRpYXRvchIlCgljb25zaWduZWUYQCABKAsyBy5FbnRpdHlSCWNvbnNpZ25lZRIqCgpzaWduYX'
-    'R1cmVzGEEgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+    'EoBVIScmVjaXBpZW50QXJ0aWNsZUlkEh0KCnByaW1hcnlfaWQYOiABKAVSCXByaW1hcnlJZBIs'
+    'CgxwYXllckFydGljbGUYOyABKAsyCC5BcnRpY2xlUgxwYXllckFydGljbGUSNAoQY29uc2lnbm'
+    'VlQXJ0aWNsZRg8IAEoCzIILkFydGljbGVSEGNvbnNpZ25lZUFydGljbGUSNAoQcmVjaXBpZW50'
+    'QXJ0aWNsZRg9IAEoCzIILkFydGljbGVSEHJlY2lwaWVudEFydGljbGUSJAoIY29tbWVudHMYPi'
+    'ADKAsyCC5Db21tZW50Ughjb21tZW50cxIdCgZhdXRob3IYPyABKAsyBS5Vc2VyUgZhdXRob3IS'
+    'JQoJaW5pdGlhdG9yGEAgASgLMgcuRW50aXR5Uglpbml0aWF0b3ISJQoJY29uc2lnbmVlGEEgAS'
+    'gLMgcuRW50aXR5Ugljb25zaWduZWUSKgoKc2lnbmF0dXJlcxhCIAMoCzIKLlNpZ25hdHVyZVIK'
+    'c2lnbmF0dXJlcw==');
 

@@ -1,5 +1,5 @@
 name: dictum_proto
-version: '0.1.4-alpha'
+version: '0.1.5-alpha'
 description: Dictum protocol buffer.
 
 environment:
