@@ -19,6 +19,7 @@ class ActionType extends $pb.ProtobufEnum {
   static const ActionType ACTION_TYPE_MARK_PAID = ActionType._(2, _omitEnumNames ? '' : 'ACTION_TYPE_MARK_PAID');
   static const ActionType ACTION_TYPE_AUDIT = ActionType._(3, _omitEnumNames ? '' : 'ACTION_TYPE_AUDIT');
   static const ActionType ACTION_TYPE_PAYOUT = ActionType._(4, _omitEnumNames ? '' : 'ACTION_TYPE_PAYOUT');
+  static const ActionType ACTION_TYPE_ALLOW_PAYOUT = ActionType._(5, _omitEnumNames ? '' : 'ACTION_TYPE_ALLOW_PAYOUT');
 
   static const $core.List<ActionType> values = <ActionType> [
     ACTION_TYPE_UNKNOWN,
@@ -26,6 +27,7 @@ class ActionType extends $pb.ProtobufEnum {
     ACTION_TYPE_MARK_PAID,
     ACTION_TYPE_AUDIT,
     ACTION_TYPE_PAYOUT,
+    ACTION_TYPE_ALLOW_PAYOUT,
   ];
 
   static final $core.Map<$core.int, ActionType> _byValue = $pb.ProtobufEnum.initByValue(values);

@@ -22,6 +22,7 @@ const ActionType$json = {
     {'1': 'ACTION_TYPE_MARK_PAID', '2': 2},
     {'1': 'ACTION_TYPE_AUDIT', '2': 3},
     {'1': 'ACTION_TYPE_PAYOUT', '2': 4},
+    {'1': 'ACTION_TYPE_ALLOW_PAYOUT', '2': 5},
   ],
 };
 
@@ -29,5 +30,6 @@ const ActionType$json = {
 final $typed_data.Uint8List actionTypeDescriptor = $convert.base64Decode(
     'CgpBY3Rpb25UeXBlEhcKE0FDVElPTl9UWVBFX1VOS05PV04QABIXChNBQ1RJT05fVFlQRV9QVU'
     'JMSVNIEAESGQoVQUNUSU9OX1RZUEVfTUFSS19QQUlEEAISFQoRQUNUSU9OX1RZUEVfQVVESVQQ'
-    'AxIWChJBQ1RJT05fVFlQRV9QQVlPVVQQBA==');
+    'AxIWChJBQ1RJT05fVFlQRV9QQVlPVVQQBBIcChhBQ1RJT05fVFlQRV9BTExPV19QQVlPVVQQBQ'
+    '==');
 
