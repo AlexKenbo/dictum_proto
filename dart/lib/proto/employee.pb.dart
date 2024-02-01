@@ -18,7 +18,6 @@ import 'country.pb.dart' as $36;
 import 'entity.pb.dart' as $2;
 import 'permission.pb.dart' as $22;
 import 'role.pbenum.dart' as $43;
-import 'user.pb.dart' as $13;
 
 class Employee extends $pb.GeneratedMessage {
   factory Employee({
@@ -32,8 +31,6 @@ class Employee extends $pb.GeneratedMessage {
     $34.Timestamp? hireTime,
     $34.Timestamp? unhireTime,
     $core.Iterable<$22.Permission>? permissions,
-    $core.String? resourceName,
-    $13.User? user,
   }) {
     final $result = create();
     if (userId != null) {
@@ -66,12 +63,6 @@ class Employee extends $pb.GeneratedMessage {
     if (permissions != null) {
       $result.permissions.addAll(permissions);
     }
-    if (resourceName != null) {
-      $result.resourceName = resourceName;
-    }
-    if (user != null) {
-      $result.user = user;
-    }
     return $result;
   }
   Employee._() : super();
@@ -89,8 +80,6 @@ class Employee extends $pb.GeneratedMessage {
     ..aOM<$34.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $34.Timestamp.create)
     ..aOM<$34.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime', subBuilder: $34.Timestamp.create)
     ..pc<$22.Permission>(18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $22.Permission.create)
-    ..aOS(19, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$13.User>(20, _omitFieldNames ? '' : 'user', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -207,26 +196,6 @@ class Employee extends $pb.GeneratedMessage {
   /// New invoicing
   @$pb.TagNumber(18)
   $core.List<$22.Permission> get permissions => $_getList(9);
-
-  @$pb.TagNumber(19)
-  $core.String get resourceName => $_getSZ(10);
-  @$pb.TagNumber(19)
-  set resourceName($core.String v) { $_setString(10, v); }
-  @$pb.TagNumber(19)
-  $core.bool hasResourceName() => $_has(10);
-  @$pb.TagNumber(19)
-  void clearResourceName() => clearField(19);
-
-  @$pb.TagNumber(20)
-  $13.User get user => $_getN(11);
-  @$pb.TagNumber(20)
-  set user($13.User v) { setField(20, v); }
-  @$pb.TagNumber(20)
-  $core.bool hasUser() => $_has(11);
-  @$pb.TagNumber(20)
-  void clearUser() => clearField(20);
-  @$pb.TagNumber(20)
-  $13.User ensureUser() => $_ensure(11);
 }
 
 
