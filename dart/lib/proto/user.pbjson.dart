@@ -24,7 +24,6 @@ const User$json = {
     {'1': 'telegram_user_id', '3': 7, '4': 1, '5': 5, '10': 'telegramUserId'},
     {'1': 'ref_key', '3': 9, '4': 1, '5': 9, '10': 'refKey'},
     {'1': 'resource_name', '3': 11, '4': 1, '5': 9, '10': 'resourceName'},
-    {'1': 'employees', '3': 15, '4': 3, '5': 11, '6': '.Employee', '10': 'employees'},
     {'1': 'telegram_user', '3': 16, '4': 1, '5': 11, '6': '.TelegramUser', '10': 'telegramUser'},
     {'1': 'create_time', '3': 17, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
   ],
@@ -35,8 +34,7 @@ final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     'CgRVc2VyEhcKB3VzZXJfaWQYASABKAVSBnVzZXJJZBIUCgVlbWFpbBgCIAEoCVIFZW1haWwSGw'
     'oJdXNlcl9uYW1lGAMgASgJUgh1c2VyTmFtZRIbCglmdWxsX25hbWUYBSABKAlSCGZ1bGxOYW1l'
     'EigKEHRlbGVncmFtX3VzZXJfaWQYByABKAVSDnRlbGVncmFtVXNlcklkEhcKB3JlZl9rZXkYCS'
-    'ABKAlSBnJlZktleRIjCg1yZXNvdXJjZV9uYW1lGAsgASgJUgxyZXNvdXJjZU5hbWUSJwoJZW1w'
-    'bG95ZWVzGA8gAygLMgkuRW1wbG95ZWVSCWVtcGxveWVlcxIyCg10ZWxlZ3JhbV91c2VyGBAgAS'
-    'gLMg0uVGVsZWdyYW1Vc2VyUgx0ZWxlZ3JhbVVzZXISOwoLY3JlYXRlX3RpbWUYESABKAsyGi5n'
-    'b29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpjcmVhdGVUaW1l');
+    'ABKAlSBnJlZktleRIjCg1yZXNvdXJjZV9uYW1lGAsgASgJUgxyZXNvdXJjZU5hbWUSMgoNdGVs'
+    'ZWdyYW1fdXNlchgQIAEoCzINLlRlbGVncmFtVXNlclIMdGVsZWdyYW1Vc2VyEjsKC2NyZWF0ZV'
+    '90aW1lGBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZQ==');
 

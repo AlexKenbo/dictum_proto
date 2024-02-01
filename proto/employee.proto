@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 import "proto/country.proto";
 import "proto/entity.proto";
 import "proto/permission.proto";
+import "proto/user.proto";
 import "proto/role.proto";
   
 message Employee
@@ -23,4 +24,8 @@ message Employee
 
   // New invoicing
   repeated Permission permissions = 18;
+
+  string resource_name = 19;
+
+  User user = 20;
 }
