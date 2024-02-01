@@ -36,7 +36,7 @@ service FinEvent {
 
     rpc CreateComment(Comment) returns (Comment) {
         option (google.api.http) = {
-            post: "/v1/{comment.resource_name=comments/*}"
+            post: "/v1/{comment.resource_name=accruals/*}/comments"
             body: "comment"
         };
     }
