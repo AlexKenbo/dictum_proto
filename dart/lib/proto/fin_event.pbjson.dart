@@ -13,6 +13,22 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listPermissionsResponseDescriptor instead')
+const ListPermissionsResponse$json = {
+  '1': 'ListPermissionsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'permissions', '3': 2, '4': 3, '5': 11, '6': '.Permission', '10': 'permissions'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListPermissionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPermissionsResponseDescriptor = $convert.base64Decode(
+    'ChdMaXN0UGVybWlzc2lvbnNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdX'
+    'JjZU5hbWUSLQoLcGVybWlzc2lvbnMYAiADKAsyCy5QZXJtaXNzaW9uUgtwZXJtaXNzaW9ucxIm'
+    'Cg9uZXh0X3BhZ2VfdG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
+
 @$core.Deprecated('Use listSignaturesResponseDescriptor instead')
 const ListSignaturesResponse$json = {
   '1': 'ListSignaturesResponse',

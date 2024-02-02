@@ -57,6 +57,10 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/CreatePermission',
       ($22.Permission value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $22.Permission.fromBuffer(value));
+  static final _$listPermissions = $grpc.ClientMethod<$0.ListRequest, $20.ListPermissionsResponse>(
+      '/FinEvent/ListPermissions',
+      ($0.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $20.ListPermissionsResponse.fromBuffer(value));
   static final _$deletePermission = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
       '/FinEvent/DeletePermission',
       ($0.DeleteRequest value) => value.writeToBuffer(),
@@ -198,6 +202,10 @@ class FinEventClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$22.Permission> createPermission($22.Permission request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createPermission, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$20.ListPermissionsResponse> listPermissions($0.ListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listPermissions, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Empty> deletePermission($0.DeleteRequest request, {$grpc.CallOptions? options}) {
@@ -360,6 +368,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $22.Permission.fromBuffer(value),
         ($22.Permission value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRequest, $20.ListPermissionsResponse>(
+        'ListPermissions',
+        listPermissions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
+        ($20.ListPermissionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
         'DeletePermission',
         deletePermission_Pre,
@@ -582,6 +597,10 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return createPermission(call, await request);
   }
 
+  $async.Future<$20.ListPermissionsResponse> listPermissions_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+    return listPermissions(call, await request);
+  }
+
   $async.Future<$3.Empty> deletePermission_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
     return deletePermission(call, await request);
   }
@@ -700,6 +719,7 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$21.Comment> updateComment($grpc.ServiceCall call, $21.Comment request);
   $async.Future<$3.Empty> deleteComment($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$22.Permission> createPermission($grpc.ServiceCall call, $22.Permission request);
+  $async.Future<$20.ListPermissionsResponse> listPermissions($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$3.Empty> deletePermission($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$20.ListActionsResponse> listActions($grpc.ServiceCall call, $3.Empty request);
   $async.Future<$20.ListTransfersResponse> listTransfers($grpc.ServiceCall call, $0.ListRequest request);
