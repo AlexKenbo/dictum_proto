@@ -80,6 +80,7 @@ message Accrual {
   int32 consignee_article_id = 56;
   int32 recipient_article_id = 57;
   int32 primary_id = 58;
+  bool confirm = 67;
   // 
   Article payerArticle = 59; 
   Article consigneeArticle = 60; 
