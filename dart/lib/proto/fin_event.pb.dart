@@ -18,10 +18,83 @@ import 'action.pb.dart' as $42;
 import 'allocation.pb.dart' as $24;
 import 'article.pb.dart' as $30;
 import 'comment.pb.dart' as $21;
+import 'permission.pb.dart' as $22;
 import 'position.pb.dart' as $29;
 import 'product.pb.dart' as $60;
 import 'signature.pb.dart' as $52;
 import 'transfer.pb.dart' as $23;
+
+class ListPermissionsResponse extends $pb.GeneratedMessage {
+  factory ListPermissionsResponse({
+    $core.String? resourceName,
+    $core.Iterable<$22.Permission>? permissions,
+    $core.String? nextPageToken,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (permissions != null) {
+      $result.permissions.addAll(permissions);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
+    return $result;
+  }
+  ListPermissionsResponse._() : super();
+  factory ListPermissionsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListPermissionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListPermissionsResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$22.Permission>(2, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $22.Permission.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListPermissionsResponse clone() => ListPermissionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListPermissionsResponse copyWith(void Function(ListPermissionsResponse) updates) => super.copyWith((message) => updates(message as ListPermissionsResponse)) as ListPermissionsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListPermissionsResponse create() => ListPermissionsResponse._();
+  ListPermissionsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListPermissionsResponse> createRepeated() => $pb.PbList<ListPermissionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListPermissionsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListPermissionsResponse>(create);
+  static ListPermissionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$22.Permission> get permissions => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+}
 
 class ListSignaturesResponse extends $pb.GeneratedMessage {
   factory ListSignaturesResponse({
