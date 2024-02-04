@@ -75,7 +75,7 @@ const Accrual$json = {
     {'1': 'consignee_article_id', '3': 56, '4': 1, '5': 5, '10': 'consigneeArticleId'},
     {'1': 'recipient_article_id', '3': 57, '4': 1, '5': 5, '10': 'recipientArticleId'},
     {'1': 'primary_id', '3': 58, '4': 1, '5': 5, '10': 'primaryId'},
-    {'1': 'confirm', '3': 67, '4': 1, '5': 8, '10': 'confirm'},
+    {'1': 'confirmed', '3': 67, '4': 1, '5': 8, '10': 'confirmed'},
     {'1': 'payerArticle', '3': 59, '4': 1, '5': 11, '6': '.Article', '10': 'payerArticle'},
     {'1': 'consigneeArticle', '3': 60, '4': 1, '5': 11, '6': '.Article', '10': 'consigneeArticle'},
     {'1': 'recipientArticle', '3': 61, '4': 1, '5': 11, '6': '.Article', '10': 'recipientArticle'},
@@ -130,12 +130,12 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'X3ByaW1hcnlfZG9jdW1lbnQYNiABKAhSFnJlcXVpcmVQcmltYXJ5RG9jdW1lbnQSKAoQcGF5ZX'
     'JfYXJ0aWNsZV9pZBg3IAEoBVIOcGF5ZXJBcnRpY2xlSWQSMAoUY29uc2lnbmVlX2FydGljbGVf'
     'aWQYOCABKAVSEmNvbnNpZ25lZUFydGljbGVJZBIwChRyZWNpcGllbnRfYXJ0aWNsZV9pZBg5IA'
-    'EoBVIScmVjaXBpZW50QXJ0aWNsZUlkEh0KCnByaW1hcnlfaWQYOiABKAVSCXByaW1hcnlJZBIY'
-    'Cgdjb25maXJtGEMgASgIUgdjb25maXJtEiwKDHBheWVyQXJ0aWNsZRg7IAEoCzIILkFydGljbG'
-    'VSDHBheWVyQXJ0aWNsZRI0ChBjb25zaWduZWVBcnRpY2xlGDwgASgLMgguQXJ0aWNsZVIQY29u'
-    'c2lnbmVlQXJ0aWNsZRI0ChByZWNpcGllbnRBcnRpY2xlGD0gASgLMgguQXJ0aWNsZVIQcmVjaX'
-    'BpZW50QXJ0aWNsZRIkCghjb21tZW50cxg+IAMoCzIILkNvbW1lbnRSCGNvbW1lbnRzEh0KBmF1'
-    'dGhvchg/IAEoCzIFLlVzZXJSBmF1dGhvchIlCglpbml0aWF0b3IYQCABKAsyBy5FbnRpdHlSCW'
-    'luaXRpYXRvchIlCgljb25zaWduZWUYQSABKAsyBy5FbnRpdHlSCWNvbnNpZ25lZRIqCgpzaWdu'
-    'YXR1cmVzGEIgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVz');
+    'EoBVIScmVjaXBpZW50QXJ0aWNsZUlkEh0KCnByaW1hcnlfaWQYOiABKAVSCXByaW1hcnlJZBIc'
+    'Cgljb25maXJtZWQYQyABKAhSCWNvbmZpcm1lZBIsCgxwYXllckFydGljbGUYOyABKAsyCC5Bcn'
+    'RpY2xlUgxwYXllckFydGljbGUSNAoQY29uc2lnbmVlQXJ0aWNsZRg8IAEoCzIILkFydGljbGVS'
+    'EGNvbnNpZ25lZUFydGljbGUSNAoQcmVjaXBpZW50QXJ0aWNsZRg9IAEoCzIILkFydGljbGVSEH'
+    'JlY2lwaWVudEFydGljbGUSJAoIY29tbWVudHMYPiADKAsyCC5Db21tZW50Ughjb21tZW50cxId'
+    'CgZhdXRob3IYPyABKAsyBS5Vc2VyUgZhdXRob3ISJQoJaW5pdGlhdG9yGEAgASgLMgcuRW50aX'
+    'R5Uglpbml0aWF0b3ISJQoJY29uc2lnbmVlGEEgASgLMgcuRW50aXR5Ugljb25zaWduZWUSKgoK'
+    'c2lnbmF0dXJlcxhCIAMoCzIKLlNpZ25hdHVyZVIKc2lnbmF0dXJlcw==');
 

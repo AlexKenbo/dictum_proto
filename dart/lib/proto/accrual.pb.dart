@@ -97,7 +97,7 @@ class Accrual extends $pb.GeneratedMessage {
     $2.Entity? initiator,
     $2.Entity? consignee,
     $core.Iterable<$52.Signature>? signatures,
-    $core.bool? confirm,
+    $core.bool? confirmed,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -298,8 +298,8 @@ class Accrual extends $pb.GeneratedMessage {
     if (signatures != null) {
       $result.signatures.addAll(signatures);
     }
-    if (confirm != null) {
-      $result.confirm = confirm;
+    if (confirmed != null) {
+      $result.confirmed = confirmed;
     }
     return $result;
   }
@@ -374,7 +374,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$2.Entity>(64, _omitFieldNames ? '' : 'initiator', subBuilder: $2.Entity.create)
     ..aOM<$2.Entity>(65, _omitFieldNames ? '' : 'consignee', subBuilder: $2.Entity.create)
     ..pc<$52.Signature>(66, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $52.Signature.create)
-    ..aOB(67, _omitFieldNames ? '' : 'confirm')
+    ..aOB(67, _omitFieldNames ? '' : 'confirmed')
     ..hasRequiredFields = false
   ;
 
@@ -1019,13 +1019,13 @@ class Accrual extends $pb.GeneratedMessage {
   $core.List<$52.Signature> get signatures => $_getList(65);
 
   @$pb.TagNumber(67)
-  $core.bool get confirm => $_getBF(66);
+  $core.bool get confirmed => $_getBF(66);
   @$pb.TagNumber(67)
-  set confirm($core.bool v) { $_setBool(66, v); }
+  set confirmed($core.bool v) { $_setBool(66, v); }
   @$pb.TagNumber(67)
-  $core.bool hasConfirm() => $_has(66);
+  $core.bool hasConfirmed() => $_has(66);
   @$pb.TagNumber(67)
-  void clearConfirm() => clearField(67);
+  void clearConfirmed() => clearField(67);
 }
 
 
