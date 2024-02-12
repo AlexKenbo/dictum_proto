@@ -28,7 +28,7 @@ class Entity extends $pb.GeneratedMessage {
     $core.String? title,
     $39.EntityType? type,
     $core.bool? isAgent,
-    $core.bool? isEmployeeOfNullable,
+    $core.bool? isEmployeeOf,
     $core.String? email,
     $core.String? phone,
     $core.String? address,
@@ -59,8 +59,8 @@ class Entity extends $pb.GeneratedMessage {
     if (isAgent != null) {
       $result.isAgent = isAgent;
     }
-    if (isEmployeeOfNullable != null) {
-      $result.isEmployeeOfNullable = isEmployeeOfNullable;
+    if (isEmployeeOf != null) {
+      $result.isEmployeeOf = isEmployeeOf;
     }
     if (email != null) {
       $result.email = email;
@@ -113,7 +113,7 @@ class Entity extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'title')
     ..e<$39.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $39.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $39.EntityType.valueOf, enumValues: $39.EntityType.values)
     ..aOB(5, _omitFieldNames ? '' : 'isAgent')
-    ..aOB(6, _omitFieldNames ? '' : 'isEmployeeOfNullable')
+    ..aOB(6, _omitFieldNames ? '' : 'isEmployeeOf')
     ..aOS(9, _omitFieldNames ? '' : 'email')
     ..aOS(11, _omitFieldNames ? '' : 'phone')
     ..aOS(13, _omitFieldNames ? '' : 'address')
@@ -197,13 +197,13 @@ class Entity extends $pb.GeneratedMessage {
   void clearIsAgent() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.bool get isEmployeeOfNullable => $_getBF(5);
+  $core.bool get isEmployeeOf => $_getBF(5);
   @$pb.TagNumber(6)
-  set isEmployeeOfNullable($core.bool v) { $_setBool(5, v); }
+  set isEmployeeOf($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasIsEmployeeOfNullable() => $_has(5);
+  $core.bool hasIsEmployeeOf() => $_has(5);
   @$pb.TagNumber(6)
-  void clearIsEmployeeOfNullable() => clearField(6);
+  void clearIsEmployeeOf() => clearField(6);
 
   @$pb.TagNumber(9)
   $core.String get email => $_getSZ(6);

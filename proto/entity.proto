@@ -18,7 +18,7 @@ message Entity
   string title = 3;
   EntityType type = 4;
   bool is_agent = 5;
-  bool is_employee_of_nullable = 6;
+  bool is_employee_of = 6;
   string email = 9;
   string phone = 11;
   string address = 13;
