@@ -5,7 +5,6 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "proto/accrual_attachment.proto";
 import "proto/accrual.proto";
 import "proto/accruals_aggregate.proto";
 import "proto/action.proto";
@@ -186,15 +185,6 @@ service FinEvent {
             get: "/v1/{accrual.resource_name=accruals/*}/generate-pdf"
         };
     };
-
-    //--
-
-    // @deprecated
-    rpc UploadInvoice(UploadInvoiceRequest) returns (AccrualAttachment) {
-        option (google.api.http) = {
-            post: "/v1/{resource_name=accruals/*}/invoice"
-        };
-    }
 
     //--
     rpc ListProducts(ListRequest) returns (ListProductsResponse) {

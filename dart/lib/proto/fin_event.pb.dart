@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'accrual.pb.dart' as $26;
-import 'action.pb.dart' as $42;
+import 'action.pb.dart' as $41;
 import 'allocation.pb.dart' as $24;
-import 'article.pb.dart' as $30;
+import 'article.pb.dart' as $29;
 import 'comment.pb.dart' as $21;
 import 'permission.pb.dart' as $22;
-import 'position.pb.dart' as $29;
-import 'product.pb.dart' as $60;
-import 'signature.pb.dart' as $52;
+import 'position.pb.dart' as $28;
+import 'product.pb.dart' as $59;
+import 'signature.pb.dart' as $51;
 import 'transfer.pb.dart' as $23;
 
 class ListPermissionsResponse extends $pb.GeneratedMessage {
@@ -99,7 +99,7 @@ class ListPermissionsResponse extends $pb.GeneratedMessage {
 class ListSignaturesResponse extends $pb.GeneratedMessage {
   factory ListSignaturesResponse({
     $core.String? resourceName,
-    $core.Iterable<$52.Signature>? signatures,
+    $core.Iterable<$51.Signature>? signatures,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -120,7 +120,7 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListSignaturesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$52.Signature>(2, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $52.Signature.create)
+    ..pc<$51.Signature>(2, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $51.Signature.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -156,7 +156,7 @@ class ListSignaturesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$52.Signature> get signatures => $_getList(1);
+  $core.List<$51.Signature> get signatures => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -243,7 +243,7 @@ class ListCommentsResponse extends $pb.GeneratedMessage {
 class ListActionsResponse extends $pb.GeneratedMessage {
   factory ListActionsResponse({
     $core.String? resourceName,
-    $core.Iterable<$42.Action>? actions,
+    $core.Iterable<$41.Action>? actions,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -260,7 +260,7 @@ class ListActionsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActionsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$42.Action>(2, _omitFieldNames ? '' : 'actions', $pb.PbFieldType.PM, subBuilder: $42.Action.create)
+    ..pc<$41.Action>(2, _omitFieldNames ? '' : 'actions', $pb.PbFieldType.PM, subBuilder: $41.Action.create)
     ..hasRequiredFields = false
   ;
 
@@ -295,7 +295,7 @@ class ListActionsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$42.Action> get actions => $_getList(1);
+  $core.List<$41.Action> get actions => $_getList(1);
 }
 
 class ListArticlesRequest extends $pb.GeneratedMessage {
@@ -611,7 +611,7 @@ class BatchInsertAccrualsRequest extends $pb.GeneratedMessage {
 class BatchInsertPositionsRequest extends $pb.GeneratedMessage {
   factory BatchInsertPositionsRequest({
     $core.String? resourceName,
-    $core.Iterable<$29.Position>? positions,
+    $core.Iterable<$28.Position>? positions,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -628,7 +628,7 @@ class BatchInsertPositionsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertPositionsRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$29.Position>(2, _omitFieldNames ? '' : 'positions', $pb.PbFieldType.PM, subBuilder: $29.Position.create)
+    ..pc<$28.Position>(2, _omitFieldNames ? '' : 'positions', $pb.PbFieldType.PM, subBuilder: $28.Position.create)
     ..hasRequiredFields = false
   ;
 
@@ -663,7 +663,7 @@ class BatchInsertPositionsRequest extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$29.Position> get positions => $_getList(1);
+  $core.List<$28.Position> get positions => $_getList(1);
 }
 
 class AllocateTransferRequest extends $pb.GeneratedMessage {
@@ -719,7 +719,7 @@ class AllocateTransferRequest extends $pb.GeneratedMessage {
 class ListProductsResponse extends $pb.GeneratedMessage {
   factory ListProductsResponse({
     $core.String? resourceName,
-    $core.Iterable<$60.Product>? products,
+    $core.Iterable<$59.Product>? products,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -740,7 +740,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListProductsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$60.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $60.Product.create)
+    ..pc<$59.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $59.Product.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -776,7 +776,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$60.Product> get products => $_getList(1);
+  $core.List<$59.Product> get products => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -791,7 +791,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
 class ListPositionsResponse extends $pb.GeneratedMessage {
   factory ListPositionsResponse({
     $core.String? resourceName,
-    $core.Iterable<$29.Position>? positions,
+    $core.Iterable<$28.Position>? positions,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -812,7 +812,7 @@ class ListPositionsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListPositionsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$29.Position>(2, _omitFieldNames ? '' : 'positions', $pb.PbFieldType.PM, subBuilder: $29.Position.create)
+    ..pc<$28.Position>(2, _omitFieldNames ? '' : 'positions', $pb.PbFieldType.PM, subBuilder: $28.Position.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -848,7 +848,7 @@ class ListPositionsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$29.Position> get positions => $_getList(1);
+  $core.List<$28.Position> get positions => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -863,7 +863,7 @@ class ListPositionsResponse extends $pb.GeneratedMessage {
 class ListArticlesResponse extends $pb.GeneratedMessage {
   factory ListArticlesResponse({
     $core.String? resourceName,
-    $core.Iterable<$30.Article>? articles,
+    $core.Iterable<$29.Article>? articles,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -880,7 +880,7 @@ class ListArticlesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListArticlesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$30.Article>(2, _omitFieldNames ? '' : 'articles', $pb.PbFieldType.PM, subBuilder: $30.Article.create)
+    ..pc<$29.Article>(2, _omitFieldNames ? '' : 'articles', $pb.PbFieldType.PM, subBuilder: $29.Article.create)
     ..hasRequiredFields = false
   ;
 
@@ -915,7 +915,7 @@ class ListArticlesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$30.Article> get articles => $_getList(1);
+  $core.List<$29.Article> get articles => $_getList(1);
 }
 
 class ListAllocationsResponse extends $pb.GeneratedMessage {
