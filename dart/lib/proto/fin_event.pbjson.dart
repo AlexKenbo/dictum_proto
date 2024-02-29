@@ -13,6 +13,68 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listPermissionsResponseDescriptor instead')
+const ListPermissionsResponse$json = {
+  '1': 'ListPermissionsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'permissions', '3': 2, '4': 3, '5': 11, '6': '.Permission', '10': 'permissions'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListPermissionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listPermissionsResponseDescriptor = $convert.base64Decode(
+    'ChdMaXN0UGVybWlzc2lvbnNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdX'
+    'JjZU5hbWUSLQoLcGVybWlzc2lvbnMYAiADKAsyCy5QZXJtaXNzaW9uUgtwZXJtaXNzaW9ucxIm'
+    'Cg9uZXh0X3BhZ2VfdG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
+
+@$core.Deprecated('Use listSignaturesResponseDescriptor instead')
+const ListSignaturesResponse$json = {
+  '1': 'ListSignaturesResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'signatures', '3': 2, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListSignaturesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSignaturesResponseDescriptor = $convert.base64Decode(
+    'ChZMaXN0U2lnbmF0dXJlc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc291cm'
+    'NlTmFtZRIqCgpzaWduYXR1cmVzGAIgAygLMgouU2lnbmF0dXJlUgpzaWduYXR1cmVzEiYKD25l'
+    'eHRfcGFnZV90b2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+
+@$core.Deprecated('Use listCommentsResponseDescriptor instead')
+const ListCommentsResponse$json = {
+  '1': 'ListCommentsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'comments', '3': 2, '4': 3, '5': 11, '6': '.Comment', '10': 'comments'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListCommentsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listCommentsResponseDescriptor = $convert.base64Decode(
+    'ChRMaXN0Q29tbWVudHNSZXNwb25zZRIjCg1yZXNvdXJjZV9uYW1lGAEgASgJUgxyZXNvdXJjZU'
+    '5hbWUSJAoIY29tbWVudHMYAiADKAsyCC5Db21tZW50Ughjb21tZW50cxImCg9uZXh0X3BhZ2Vf'
+    'dG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
+
+@$core.Deprecated('Use listActionsResponseDescriptor instead')
+const ListActionsResponse$json = {
+  '1': 'ListActionsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'actions', '3': 2, '4': 3, '5': 11, '6': '.Action', '10': 'actions'},
+  ],
+};
+
+/// Descriptor for `ListActionsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listActionsResponseDescriptor = $convert.base64Decode(
+    'ChNMaXN0QWN0aW9uc1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc291cmNlTm'
+    'FtZRIhCgdhY3Rpb25zGAIgAygLMgcuQWN0aW9uUgdhY3Rpb25z');
+
 @$core.Deprecated('Use listArticlesRequestDescriptor instead')
 const ListArticlesRequest$json = {
   '1': 'ListArticlesRequest',

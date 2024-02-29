@@ -18,7 +18,7 @@ const Subscription$json = {
   '1': 'Subscription',
   '2': [
     {'1': 'subscription_id', '3': 1, '4': 1, '5': 5, '10': 'subscriptionId'},
-    {'1': 'action_type', '3': 3, '4': 1, '5': 14, '6': '.ActionType', '10': 'actionType'},
+    {'1': 'operation_type', '3': 3, '4': 1, '5': 14, '6': '.OperationType', '10': 'operationType'},
     {'1': 'table', '3': 4, '4': 1, '5': 9, '10': 'table'},
     {'1': 'fields', '3': 5, '4': 1, '5': 9, '10': 'fields'},
     {'1': 'webhook_url', '3': 6, '4': 1, '5': 9, '10': 'webhookUrl'},
@@ -29,7 +29,8 @@ const Subscription$json = {
 /// Descriptor for `Subscription`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List subscriptionDescriptor = $convert.base64Decode(
     'CgxTdWJzY3JpcHRpb24SJwoPc3Vic2NyaXB0aW9uX2lkGAEgASgFUg5zdWJzY3JpcHRpb25JZB'
-    'IsCgthY3Rpb25fdHlwZRgDIAEoDjILLkFjdGlvblR5cGVSCmFjdGlvblR5cGUSFAoFdGFibGUY'
-    'BCABKAlSBXRhYmxlEhYKBmZpZWxkcxgFIAEoCVIGZmllbGRzEh8KC3dlYmhvb2tfdXJsGAYgAS'
-    'gJUgp3ZWJob29rVXJsEiAKC2NyZWRlbnRpYWxzGAcgASgJUgtjcmVkZW50aWFscw==');
+    'I1Cg5vcGVyYXRpb25fdHlwZRgDIAEoDjIOLk9wZXJhdGlvblR5cGVSDW9wZXJhdGlvblR5cGUS'
+    'FAoFdGFibGUYBCABKAlSBXRhYmxlEhYKBmZpZWxkcxgFIAEoCVIGZmllbGRzEh8KC3dlYmhvb2'
+    'tfdXJsGAYgASgJUgp3ZWJob29rVXJsEiAKC2NyZWRlbnRpYWxzGAcgASgJUgtjcmVkZW50aWFs'
+    'cw==');
 

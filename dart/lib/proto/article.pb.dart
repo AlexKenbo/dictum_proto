@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article_group.pbenum.dart' as $50;
-import 'direction.pbenum.dart' as $51;
-import 'fund_flow.pbenum.dart' as $52;
+import 'article_group.pbenum.dart' as $48;
+import 'direction.pbenum.dart' as $49;
+import 'fund_flow.pbenum.dart' as $50;
 
 class Article extends $pb.GeneratedMessage {
   factory Article({
@@ -26,11 +26,12 @@ class Article extends $pb.GeneratedMessage {
     $core.bool? allowSubarticles,
     $core.bool? allowLinking,
     $core.int? conglomerateId,
-    $50.ArticleGroup? articleGroup,
-    $51.Direction? direction,
+    $48.ArticleGroup? articleGroup,
+    $49.Direction? direction,
     $core.int? parentArticleId,
     Article? parentArticle,
-    $52.FundFlow? fundFlow,
+    $50.FundFlow? fundFlow,
+    $core.int? entityId,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -69,6 +70,9 @@ class Article extends $pb.GeneratedMessage {
     if (fundFlow != null) {
       $result.fundFlow = fundFlow;
     }
+    if (entityId != null) {
+      $result.entityId = entityId;
+    }
     return $result;
   }
   Article._() : super();
@@ -83,11 +87,12 @@ class Article extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'allowSubarticles')
     ..aOB(6, _omitFieldNames ? '' : 'allowLinking')
     ..a<$core.int>(7, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
-    ..e<$50.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $50.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $50.ArticleGroup.valueOf, enumValues: $50.ArticleGroup.values)
-    ..e<$51.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $51.Direction.DIRECTION_UNKNOWN, valueOf: $51.Direction.valueOf, enumValues: $51.Direction.values)
+    ..e<$48.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $48.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $48.ArticleGroup.valueOf, enumValues: $48.ArticleGroup.values)
+    ..e<$49.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $49.Direction.DIRECTION_UNKNOWN, valueOf: $49.Direction.valueOf, enumValues: $49.Direction.values)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'parentArticleId', $pb.PbFieldType.O3)
     ..aOM<Article>(11, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
-    ..e<$52.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $52.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $52.FundFlow.valueOf, enumValues: $52.FundFlow.values)
+    ..e<$50.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $50.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $50.FundFlow.valueOf, enumValues: $50.FundFlow.values)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -176,18 +181,18 @@ class Article extends $pb.GeneratedMessage {
   void clearConglomerateId() => clearField(7);
 
   @$pb.TagNumber(8)
-  $50.ArticleGroup get articleGroup => $_getN(7);
+  $48.ArticleGroup get articleGroup => $_getN(7);
   @$pb.TagNumber(8)
-  set articleGroup($50.ArticleGroup v) { setField(8, v); }
+  set articleGroup($48.ArticleGroup v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasArticleGroup() => $_has(7);
   @$pb.TagNumber(8)
   void clearArticleGroup() => clearField(8);
 
   @$pb.TagNumber(9)
-  $51.Direction get direction => $_getN(8);
+  $49.Direction get direction => $_getN(8);
   @$pb.TagNumber(9)
-  set direction($51.Direction v) { setField(9, v); }
+  set direction($49.Direction v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDirection() => $_has(8);
   @$pb.TagNumber(9)
@@ -214,13 +219,22 @@ class Article extends $pb.GeneratedMessage {
   Article ensureParentArticle() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $52.FundFlow get fundFlow => $_getN(11);
+  $50.FundFlow get fundFlow => $_getN(11);
   @$pb.TagNumber(12)
-  set fundFlow($52.FundFlow v) { setField(12, v); }
+  set fundFlow($50.FundFlow v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasFundFlow() => $_has(11);
   @$pb.TagNumber(12)
   void clearFundFlow() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.int get entityId => $_getIZ(12);
+  @$pb.TagNumber(13)
+  set entityId($core.int v) { $_setSignedInt32(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasEntityId() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearEntityId() => clearField(13);
 }
 
 

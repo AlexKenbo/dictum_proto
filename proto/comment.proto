@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+import "google/protobuf/timestamp.proto";
+
+import "proto/user.proto";
+
+message Comment {
+  int32 comment_id = 1;
+  string message = 2;
+  int32 creator_id = 3;
+  google.protobuf.Timestamp create_time = 4;
+  string resource_name = 5;
+  // 
+  User creator = 6;
+}

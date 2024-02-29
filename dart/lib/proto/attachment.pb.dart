@@ -13,19 +13,22 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment_type.pbenum.dart' as $40;
-import 'employee.pb.dart' as $5;
+import '../google/protobuf/timestamp.pb.dart' as $34;
+import 'attachment_type.pbenum.dart' as $47;
+import 'user.pb.dart' as $13;
 
 class Attachment extends $pb.GeneratedMessage {
   factory Attachment({
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $40.AttachmentType? type,
+    $47.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
-    $5.Employee? uploader,
+    $34.Timestamp? createTime,
+    $13.User? uploader,
+    $core.String? externalNumber,
   }) {
     final $result = create();
     if (attachmentId != null) {
@@ -49,8 +52,14 @@ class Attachment extends $pb.GeneratedMessage {
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
     if (uploader != null) {
       $result.uploader = uploader;
+    }
+    if (externalNumber != null) {
+      $result.externalNumber = externalNumber;
     }
     return $result;
   }
@@ -62,11 +71,13 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$40.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $40.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $40.AttachmentType.valueOf, enumValues: $40.AttachmentType.values)
+    ..e<$47.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $47.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $47.AttachmentType.valueOf, enumValues: $47.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
-    ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$5.Employee>(11, _omitFieldNames ? '' : 'uploader', subBuilder: $5.Employee.create)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'resourceName')
+    ..aOM<$34.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $34.Timestamp.create)
+    ..aOM<$13.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $13.User.create)
+    ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
   ;
 
@@ -119,9 +130,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $40.AttachmentType get type => $_getN(3);
+  $47.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($40.AttachmentType v) { setField(4, v); }
+  set type($47.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -136,34 +147,55 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearName() => clearField(5);
 
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   $core.int get uploaderId => $_getIZ(5);
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   set uploaderId($core.int v) { $_setSignedInt32(5, v); }
-  @$pb.TagNumber(7)
+  @$pb.TagNumber(6)
   $core.bool hasUploaderId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUploaderId() => clearField(6);
+
   @$pb.TagNumber(7)
-  void clearUploaderId() => clearField(7);
-
-  @$pb.TagNumber(9)
   $core.String get resourceName => $_getSZ(6);
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(7)
   set resourceName($core.String v) { $_setString(6, v); }
-  @$pb.TagNumber(9)
+  @$pb.TagNumber(7)
   $core.bool hasResourceName() => $_has(6);
-  @$pb.TagNumber(9)
-  void clearResourceName() => clearField(9);
+  @$pb.TagNumber(7)
+  void clearResourceName() => clearField(7);
 
-  @$pb.TagNumber(11)
-  $5.Employee get uploader => $_getN(7);
-  @$pb.TagNumber(11)
-  set uploader($5.Employee v) { setField(11, v); }
-  @$pb.TagNumber(11)
-  $core.bool hasUploader() => $_has(7);
-  @$pb.TagNumber(11)
-  void clearUploader() => clearField(11);
-  @$pb.TagNumber(11)
-  $5.Employee ensureUploader() => $_ensure(7);
+  @$pb.TagNumber(8)
+  $34.Timestamp get createTime => $_getN(7);
+  @$pb.TagNumber(8)
+  set createTime($34.Timestamp v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasCreateTime() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearCreateTime() => clearField(8);
+  @$pb.TagNumber(8)
+  $34.Timestamp ensureCreateTime() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  $13.User get uploader => $_getN(8);
+  @$pb.TagNumber(9)
+  set uploader($13.User v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasUploader() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUploader() => clearField(9);
+  @$pb.TagNumber(9)
+  $13.User ensureUploader() => $_ensure(8);
+
+  /// new fields
+  @$pb.TagNumber(10)
+  $core.String get externalNumber => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set externalNumber($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasExternalNumber() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearExternalNumber() => clearField(10);
 }
 
 

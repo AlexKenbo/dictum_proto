@@ -10,42 +10,22 @@ import "proto/attachment.proto";
 
 //Репо - Attachment
 service Storage {
-    rpc ListAttachments(ListRequest) returns (ListAttachmentsResponse) {
+    rpc UploadAttachment(UploadAttachmentRequest) returns (Attachment) {
         option (google.api.http) = {
-            get: "/v1/{parent=events/*}/attachments"
-            additional_bindings {
-                get: "/v1/{parent=entities/*}/attachments"
-            }
-        };
-    }
-
-    rpc CreateAttachment(Attachment) returns (Attachment) {
-        option (google.api.http) = {
-            post: "/v1/{attachment.resource_name=events/*}/attachments"
+            post: "/v1/{attachment.resource_name=accruals/*}/attachments"
             body: "attachment"
             additional_bindings {
-                post: "/v1/{attachment.resource_name=entities/*}/attachments"
+                post: "/v1/{attachment.resource_name=transfers/*}/attachments"
                 body: "attachment"
-            }
-        };
-    };
-
-    rpc BatchInsertAttachments(BatchInsertAttachmentsRequest) returns (ListAttachmentsResponse) {
-        option (google.api.http) = {
-            post: "/v1/{resource_name=entities/*}/batch-attachments"
-            body: "batch_attachments"
-            additional_bindings {
-                post: "/v1/{resource_name=events/*}/attachments"
-                body: "batch_attachments"
             }
         };
     };
 
     rpc DeleteAttachment(DeleteRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
-            delete: "/v1/{resource_name=entities/*/attachments/*}"
+            delete: "/v1/{resource_name=accruals/*/attachments/*}"
             additional_bindings {
-                delete: "/v1/{resource_name=events/*/attachments/*}"
+                delete: "/v1/{resource_name=transfers/*/attachments/*}"
             }
         };
     };

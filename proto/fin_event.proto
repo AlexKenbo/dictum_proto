@@ -5,20 +5,85 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "proto/requests.proto";
-import "proto/event_aggregate.proto";
-import "proto/accruals_aggregate.proto";
 import "proto/accrual.proto";
-import "proto/accrual_attachment.proto";
-import "proto/position.proto";
-import "proto/product.proto";
-import "proto/transfer.proto";
+import "proto/accruals_aggregate.proto";
+import "proto/action.proto";
 import "proto/allocation.proto";
 import "proto/article.proto";
+import "proto/comment.proto";
+import "proto/event_aggregate.proto";
+import "proto/permission.proto";
+import "proto/position.proto";
+import "proto/product.proto";
+import "proto/requests.proto";
+import "proto/signature.proto";
+import "proto/transfer.proto";
 
 //Репы - Трансферы, Перевод, Продукт
 service FinEvent {
-    //--
+    rpc ListSignatures(ListRequest) returns (ListSignaturesResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=accruals/*}/signatures"
+        };
+    }
+
+    rpc ListComments(ListRequest) returns (ListCommentsResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=accruals/*}/comments"
+        };
+    }
+
+    rpc CreateComment(Comment) returns (Comment) {
+        option (google.api.http) = {
+            post: "/v1/{comment.resource_name=accruals/*}/comments"
+            body: "comment"
+        };
+    }
+
+    rpc UpdateComment(Comment) returns (Comment) {
+        option (google.api.http) = {
+            patch: "/v1/{comment.resource_name=comments/*}"
+            body: "comment"
+        };
+    }
+
+    rpc DeleteComment(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete: "/v1/{resource_name=comments/*}"
+        };
+    }
+
+    rpc CreatePermission(Permission) returns (Permission) {
+        option (google.api.http) = {
+        post: "/v1/{permission.resource_name=entities/*/employees/*/actions/*}/permissions"
+            body: "permission"
+        };
+    };
+
+    rpc ListPermissions(ListRequest) returns (ListPermissionsResponse) {
+        option (google.api.http) = {
+            get: "/v1/permissions"
+            additional_bindings {
+                get: "/v1/permissions"
+            }
+        };
+    }
+
+    rpc DeletePermission(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete:  "/v1/{resource_name=entities/*/employees/*/actions/*}"
+        };
+    };
+
+    rpc ListActions(google.protobuf.Empty) returns (ListActionsResponse) {
+        option (google.api.http) = {
+            get: "/v1/actions"
+            additional_bindings {
+                get: "/v1/actions"
+            }
+        };
+    }
+
     rpc ListTransfers(ListRequest) returns (ListTransfersResponse) {
         option (google.api.http) = {
             get: "/v1/transfers"
@@ -122,14 +187,6 @@ service FinEvent {
     };
 
     //--
-
-    rpc UploadInvoice(UploadInvoiceRequest) returns (AccrualAttachment) {
-        option (google.api.http) = {
-            post: "/v1/{resource_name=accruals/*}/invoice"
-        };
-    }
-
-    //--
     rpc ListProducts(ListRequest) returns (ListProductsResponse) {
         option (google.api.http) = {
             get: "/v1/products"
@@ -221,6 +278,29 @@ service FinEvent {
     }
 
 
+}
+
+message ListPermissionsResponse {
+    string resource_name = 1;
+    repeated Permission permissions = 2;
+    string next_page_token = 3;
+}
+
+message ListSignaturesResponse {
+    string resource_name = 1;
+    repeated Signature signatures = 2;
+    string next_page_token = 3;
+}
+
+message ListCommentsResponse {
+    string resource_name = 1;
+    repeated Comment comments = 2;
+    string next_page_token = 3;
+}
+
+message ListActionsResponse {
+    string resource_name = 1;
+    repeated Action actions = 2;
 }
 
 message ListArticlesRequest {

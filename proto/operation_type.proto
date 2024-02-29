@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+
+enum OperationType
+{
+  OPERATION_TYPE_UNKNOWN = 0;
+  OPERATION_TYPE_INSERT = 1;
+  OPERATION_TYPE_UPDATE = 2;
+  OPERATION_TYPE_DELETE = 3;
+}

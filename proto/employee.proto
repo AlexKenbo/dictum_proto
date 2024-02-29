@@ -4,9 +4,10 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/protobuf/timestamp.proto";      
 
-import "proto/role.proto";
-import "proto/entity.proto";
 import "proto/country.proto";
+import "proto/entity.proto";
+import "proto/permission.proto";
+import "proto/role.proto";
   
 message Employee
 {
@@ -19,4 +20,7 @@ message Employee
   Country country = 15;
   google.protobuf.Timestamp hire_time = 16;
   google.protobuf.Timestamp unhire_time = 17;
+
+  // New invoicing
+  repeated Permission permissions = 18;
 }
