@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article.pb.dart' as $30;
-import 'language.pb.dart' as $68;
+import 'article.pb.dart' as $29;
+import 'language.pb.dart' as $67;
 
 class ArticleTranslation extends $pb.GeneratedMessage {
   factory ArticleTranslation({
     $core.int? articleId,
     $core.String? languageCode,
     $core.String? translation,
-    $30.Article? article,
-    $68.Language? language,
+    $29.Article? article,
+    $67.Language? language,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -50,8 +50,8 @@ class ArticleTranslation extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'articleId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'languageCode')
     ..aOS(3, _omitFieldNames ? '' : 'translation')
-    ..aOM<$30.Article>(4, _omitFieldNames ? '' : 'article', subBuilder: $30.Article.create)
-    ..aOM<$68.Language>(6, _omitFieldNames ? '' : 'language', subBuilder: $68.Language.create)
+    ..aOM<$29.Article>(4, _omitFieldNames ? '' : 'article', subBuilder: $29.Article.create)
+    ..aOM<$67.Language>(6, _omitFieldNames ? '' : 'language', subBuilder: $67.Language.create)
     ..hasRequiredFields = false
   ;
 
@@ -104,26 +104,26 @@ class ArticleTranslation extends $pb.GeneratedMessage {
   void clearTranslation() => clearField(3);
 
   @$pb.TagNumber(4)
-  $30.Article get article => $_getN(3);
+  $29.Article get article => $_getN(3);
   @$pb.TagNumber(4)
-  set article($30.Article v) { setField(4, v); }
+  set article($29.Article v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasArticle() => $_has(3);
   @$pb.TagNumber(4)
   void clearArticle() => clearField(4);
   @$pb.TagNumber(4)
-  $30.Article ensureArticle() => $_ensure(3);
+  $29.Article ensureArticle() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $68.Language get language => $_getN(4);
+  $67.Language get language => $_getN(4);
   @$pb.TagNumber(6)
-  set language($68.Language v) { setField(6, v); }
+  set language($67.Language v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasLanguage() => $_has(4);
   @$pb.TagNumber(6)
   void clearLanguage() => clearField(6);
   @$pb.TagNumber(6)
-  $68.Language ensureLanguage() => $_ensure(4);
+  $67.Language ensureLanguage() => $_ensure(4);
 }
 
 

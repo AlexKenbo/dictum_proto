@@ -124,8 +124,8 @@ class PluginServiceClient extends $grpc.Client {
     return $createUnaryCall(_$listServiceRuns, request, options: options);
   }
 
-  $grpc.ResponseStream<$19.ServiceRun> runService($16.RunServiceRequest request, {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$runService, $async.Stream.fromIterable([request]), options: options);
+  $grpc.ResponseFuture<$19.ServiceRun> runService($16.RunServiceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$runService, request, options: options);
   }
 }
 
@@ -215,7 +215,7 @@ abstract class PluginServiceBase extends $grpc.Service {
         'RunService',
         runService_Pre,
         false,
-        true,
+        false,
         ($core.List<$core.int> value) => $16.RunServiceRequest.fromBuffer(value),
         ($19.ServiceRun value) => value.writeToBuffer()));
   }
@@ -264,8 +264,8 @@ abstract class PluginServiceBase extends $grpc.Service {
     return listServiceRuns(call, await request);
   }
 
-  $async.Stream<$19.ServiceRun> runService_Pre($grpc.ServiceCall call, $async.Future<$16.RunServiceRequest> request) async* {
-    yield* runService(call, await request);
+  $async.Future<$19.ServiceRun> runService_Pre($grpc.ServiceCall call, $async.Future<$16.RunServiceRequest> request) async {
+    return runService(call, await request);
   }
 
   $async.Future<$16.ListObjectSourcesResponse> listObjectSources($grpc.ServiceCall call, $16.ListObjectSourcesRequest request);
@@ -279,5 +279,5 @@ abstract class PluginServiceBase extends $grpc.Service {
   $async.Future<$19.ServiceRun> updateServiceRun($grpc.ServiceCall call, $19.ServiceRun request);
   $async.Future<$19.ServiceRun> getServiceRun($grpc.ServiceCall call, $16.GetServiceRunRequest request);
   $async.Future<$16.ListServiceRunsResponse> listServiceRuns($grpc.ServiceCall call, $0.ListRequest request);
-  $async.Stream<$19.ServiceRun> runService($grpc.ServiceCall call, $16.RunServiceRequest request);
+  $async.Future<$19.ServiceRun> runService($grpc.ServiceCall call, $16.RunServiceRequest request);
 }

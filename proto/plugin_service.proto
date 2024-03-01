@@ -93,7 +93,7 @@ service PluginService {
         };
     }
 
-    rpc RunService(RunServiceRequest) returns (stream ServiceRun) {
+    rpc RunService(RunServiceRequest) returns (ServiceRun) {
         option (google.api.http) = {
             get: "/v1/{resource_name=services/*}:run"
         };

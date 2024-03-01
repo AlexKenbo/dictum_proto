@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article.pb.dart' as $30;
+import 'article.pb.dart' as $29;
 import 'entity.pb.dart' as $2;
 
 class EntityArticle extends $pb.GeneratedMessage {
   factory EntityArticle({
     $core.int? articleId,
     $core.int? entityId,
-    $30.Article? article,
+    $29.Article? article,
     $2.Entity? entity,
   }) {
     final $result = create();
@@ -45,7 +45,7 @@ class EntityArticle extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EntityArticle', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'articleId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$30.Article>(3, _omitFieldNames ? '' : 'article', subBuilder: $30.Article.create)
+    ..aOM<$29.Article>(3, _omitFieldNames ? '' : 'article', subBuilder: $29.Article.create)
     ..aOM<$2.Entity>(5, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..hasRequiredFields = false
   ;
@@ -90,15 +90,15 @@ class EntityArticle extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $30.Article get article => $_getN(2);
+  $29.Article get article => $_getN(2);
   @$pb.TagNumber(3)
-  set article($30.Article v) { setField(3, v); }
+  set article($29.Article v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasArticle() => $_has(2);
   @$pb.TagNumber(3)
   void clearArticle() => clearField(3);
   @$pb.TagNumber(3)
-  $30.Article ensureArticle() => $_ensure(2);
+  $29.Article ensureArticle() => $_ensure(2);
 
   @$pb.TagNumber(5)
   $2.Entity get entity => $_getN(3);
