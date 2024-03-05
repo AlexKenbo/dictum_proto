@@ -2,9 +2,10 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
 import "proto/attachment_type.proto";
-import "proto/employee.proto";
+import "proto/user.proto";
   
 message Attachment
 {
@@ -13,8 +14,11 @@ message Attachment
   string mime_type = 3;
   AttachmentType type = 4;
   string name = 5;
-  int32 uploader_id = 7;
-  string resource_name = 9;
-  Employee uploader = 11;
+  int32 uploader_id = 6;
+  string resource_name = 7;
+  google.protobuf.Timestamp create_time = 8;
+  User uploader = 9;
 
+  // new fields
+  string external_number = 10;
 }

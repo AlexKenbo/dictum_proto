@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+import "google/protobuf/timestamp.proto";
+
+import "proto/action.proto";
+import "proto/user.proto";
+
+message Signature {
+  int32 signature_id = 1;
+  int32 action_id = 2;
+  int32 signer_id = 3;
+  int32 entity_id = 4;
+  google.protobuf.Timestamp create_time = 5;
+  string resource_name = 6;
+  // 
+  Action action = 7;
+  User signer = 8;
+}

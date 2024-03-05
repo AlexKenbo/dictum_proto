@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $25;
-import 'allocation.pb.dart' as $23;
+import 'accrual.pb.dart' as $26;
+import 'allocation.pb.dart' as $24;
 
 class AccrualAllocations extends $pb.GeneratedMessage {
   factory AccrualAllocations({
-    $25.Accrual? accrual,
-    $core.Iterable<$23.Allocation>? allocations,
+    $26.Accrual? accrual,
+    $core.Iterable<$24.Allocation>? allocations,
   }) {
     final $result = create();
     if (accrual != null) {
@@ -35,8 +35,8 @@ class AccrualAllocations extends $pb.GeneratedMessage {
   factory AccrualAllocations.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualAllocations', createEmptyInstance: create)
-    ..aOM<$25.Accrual>(1, _omitFieldNames ? '' : 'accrual', subBuilder: $25.Accrual.create)
-    ..pc<$23.Allocation>(2, _omitFieldNames ? '' : 'allocations', $pb.PbFieldType.PM, subBuilder: $23.Allocation.create)
+    ..aOM<$26.Accrual>(1, _omitFieldNames ? '' : 'accrual', subBuilder: $26.Accrual.create)
+    ..pc<$24.Allocation>(2, _omitFieldNames ? '' : 'allocations', $pb.PbFieldType.PM, subBuilder: $24.Allocation.create)
     ..hasRequiredFields = false
   ;
 
@@ -62,18 +62,18 @@ class AccrualAllocations extends $pb.GeneratedMessage {
   static AccrualAllocations? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $25.Accrual get accrual => $_getN(0);
+  $26.Accrual get accrual => $_getN(0);
   @$pb.TagNumber(1)
-  set accrual($25.Accrual v) { setField(1, v); }
+  set accrual($26.Accrual v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccrual() => $_has(0);
   @$pb.TagNumber(1)
   void clearAccrual() => clearField(1);
   @$pb.TagNumber(1)
-  $25.Accrual ensureAccrual() => $_ensure(0);
+  $26.Accrual ensureAccrual() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$23.Allocation> get allocations => $_getList(1);
+  $core.List<$24.Allocation> get allocations => $_getList(1);
 }
 
 

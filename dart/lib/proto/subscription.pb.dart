@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action_type.pbenum.dart' as $32;
+import 'operation_type.pbenum.dart' as $32;
 
 class Subscription extends $pb.GeneratedMessage {
   factory Subscription({
     $core.int? subscriptionId,
-    $32.ActionType? actionType,
+    $32.OperationType? operationType,
     $core.String? table,
     $core.String? fields,
     $core.String? webhookUrl,
@@ -28,8 +28,8 @@ class Subscription extends $pb.GeneratedMessage {
     if (subscriptionId != null) {
       $result.subscriptionId = subscriptionId;
     }
-    if (actionType != null) {
-      $result.actionType = actionType;
+    if (operationType != null) {
+      $result.operationType = operationType;
     }
     if (table != null) {
       $result.table = table;
@@ -51,7 +51,7 @@ class Subscription extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Subscription', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'subscriptionId', $pb.PbFieldType.O3)
-    ..e<$32.ActionType>(3, _omitFieldNames ? '' : 'actionType', $pb.PbFieldType.OE, defaultOrMaker: $32.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $32.ActionType.valueOf, enumValues: $32.ActionType.values)
+    ..e<$32.OperationType>(3, _omitFieldNames ? '' : 'operationType', $pb.PbFieldType.OE, defaultOrMaker: $32.OperationType.OPERATION_TYPE_UNKNOWN, valueOf: $32.OperationType.valueOf, enumValues: $32.OperationType.values)
     ..aOS(4, _omitFieldNames ? '' : 'table')
     ..aOS(5, _omitFieldNames ? '' : 'fields')
     ..aOS(6, _omitFieldNames ? '' : 'webhookUrl')
@@ -90,13 +90,13 @@ class Subscription extends $pb.GeneratedMessage {
   void clearSubscriptionId() => clearField(1);
 
   @$pb.TagNumber(3)
-  $32.ActionType get actionType => $_getN(1);
+  $32.OperationType get operationType => $_getN(1);
   @$pb.TagNumber(3)
-  set actionType($32.ActionType v) { setField(3, v); }
+  set operationType($32.OperationType v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasActionType() => $_has(1);
+  $core.bool hasOperationType() => $_has(1);
   @$pb.TagNumber(3)
-  void clearActionType() => clearField(3);
+  void clearOperationType() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get table => $_getSZ(2);

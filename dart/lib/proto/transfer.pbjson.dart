@@ -48,6 +48,7 @@ const Transfer$json = {
     {'1': 'verify_time', '3': 55, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'verifyTime'},
     {'1': 'parent', '3': 56, '4': 1, '5': 11, '6': '.Transfer', '10': 'parent'},
     {'1': 'recipient_currency_code', '3': 57, '4': 1, '5': 9, '10': 'recipientCurrencyCode'},
+    {'1': 'attachments', '3': 58, '4': 3, '5': 11, '6': '.Attachment', '10': 'attachments'},
     {'1': 'payer_account_number', '3': 59, '4': 1, '5': 9, '10': 'payerAccountNumber'},
     {'1': 'recipient_account_number', '3': 60, '4': 1, '5': 9, '10': 'recipientAccountNumber'},
     {'1': 'payer_amount', '3': 61, '4': 1, '5': 1, '10': 'payerAmount'},
@@ -83,10 +84,11 @@ final $typed_data.Uint8List transferDescriptor = $convert.base64Decode(
     'ZXN0YW1wUgtwYXltZW50VGltZRI7Cgt2ZXJpZnlfdGltZRg3IAEoCzIaLmdvb2dsZS5wcm90b2'
     'J1Zi5UaW1lc3RhbXBSCnZlcmlmeVRpbWUSIQoGcGFyZW50GDggASgLMgkuVHJhbnNmZXJSBnBh'
     'cmVudBI2ChdyZWNpcGllbnRfY3VycmVuY3lfY29kZRg5IAEoCVIVcmVjaXBpZW50Q3VycmVuY3'
-    'lDb2RlEjAKFHBheWVyX2FjY291bnRfbnVtYmVyGDsgASgJUhJwYXllckFjY291bnROdW1iZXIS'
-    'OAoYcmVjaXBpZW50X2FjY291bnRfbnVtYmVyGDwgASgJUhZyZWNpcGllbnRBY2NvdW50TnVtYm'
-    'VyEiEKDHBheWVyX2Ftb3VudBg9IAEoAVILcGF5ZXJBbW91bnQSKQoQcmVjaXBpZW50X2Ftb3Vu'
-    'dBg+IAEoAVIPcmVjaXBpZW50QW1vdW50Ei4KE3BheWVyX2N1cnJlbmN5X2NvZGUYPyABKAlSEX'
-    'BheWVyQ3VycmVuY3lDb2RlEiEKDGV4dGVybmFsX3VybBhAIAEoCVILZXh0ZXJuYWxVcmwSHwoG'
-    'c3RhdHVzGEEgASgOMgcuU3RhdHVzUgZzdGF0dXM=');
+    'lDb2RlEi0KC2F0dGFjaG1lbnRzGDogAygLMgsuQXR0YWNobWVudFILYXR0YWNobWVudHMSMAoU'
+    'cGF5ZXJfYWNjb3VudF9udW1iZXIYOyABKAlSEnBheWVyQWNjb3VudE51bWJlchI4ChhyZWNpcG'
+    'llbnRfYWNjb3VudF9udW1iZXIYPCABKAlSFnJlY2lwaWVudEFjY291bnROdW1iZXISIQoMcGF5'
+    'ZXJfYW1vdW50GD0gASgBUgtwYXllckFtb3VudBIpChByZWNpcGllbnRfYW1vdW50GD4gASgBUg'
+    '9yZWNpcGllbnRBbW91bnQSLgoTcGF5ZXJfY3VycmVuY3lfY29kZRg/IAEoCVIRcGF5ZXJDdXJy'
+    'ZW5jeUNvZGUSIQoMZXh0ZXJuYWxfdXJsGEAgASgJUgtleHRlcm5hbFVybBIfCgZzdGF0dXMYQS'
+    'ABKA4yBy5TdGF0dXNSBnN0YXR1cw==');
 

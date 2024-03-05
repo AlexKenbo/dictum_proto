@@ -13,6 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'attachment_type.pbenum.dart' as $46;
+
 class ListRequest extends $pb.GeneratedMessage {
   factory ListRequest({
     $core.int? pageSize,
@@ -346,6 +348,140 @@ class UploadInvoiceRequest extends $pb.GeneratedMessage {
   $core.bool hasFile() => $_has(2);
   @$pb.TagNumber(3)
   void clearFile() => clearField(3);
+}
+
+class UploadAttachmentRequest extends $pb.GeneratedMessage {
+  factory UploadAttachmentRequest({
+    $core.String? resourceName,
+    $core.List<$core.int>? file,
+    $core.String? mimeType,
+    $46.AttachmentType? type,
+    $core.String? name,
+    $core.int? uploaderId,
+    $core.String? externalNumber,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (file != null) {
+      $result.file = file;
+    }
+    if (mimeType != null) {
+      $result.mimeType = mimeType;
+    }
+    if (type != null) {
+      $result.type = type;
+    }
+    if (name != null) {
+      $result.name = name;
+    }
+    if (uploaderId != null) {
+      $result.uploaderId = uploaderId;
+    }
+    if (externalNumber != null) {
+      $result.externalNumber = externalNumber;
+    }
+    return $result;
+  }
+  UploadAttachmentRequest._() : super();
+  factory UploadAttachmentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UploadAttachmentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UploadAttachmentRequest', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'file', $pb.PbFieldType.OY)
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..e<$46.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $46.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $46.AttachmentType.valueOf, enumValues: $46.AttachmentType.values)
+    ..aOS(5, _omitFieldNames ? '' : 'name')
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
+    ..aOS(8, _omitFieldNames ? '' : 'externalNumber')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UploadAttachmentRequest clone() => UploadAttachmentRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UploadAttachmentRequest copyWith(void Function(UploadAttachmentRequest) updates) => super.copyWith((message) => updates(message as UploadAttachmentRequest)) as UploadAttachmentRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UploadAttachmentRequest create() => UploadAttachmentRequest._();
+  UploadAttachmentRequest createEmptyInstance() => create();
+  static $pb.PbList<UploadAttachmentRequest> createRepeated() => $pb.PbList<UploadAttachmentRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UploadAttachmentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UploadAttachmentRequest>(create);
+  static UploadAttachmentRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get file => $_getN(1);
+  @$pb.TagNumber(2)
+  set file($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFile() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFile() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set mimeType($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMimeType() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $46.AttachmentType get type => $_getN(3);
+  @$pb.TagNumber(4)
+  set type($46.AttachmentType v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasType() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearType() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get name => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set name($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasName() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearName() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.int get uploaderId => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set uploaderId($core.int v) { $_setSignedInt32(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUploaderId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUploaderId() => clearField(6);
+
+  @$pb.TagNumber(8)
+  $core.String get externalNumber => $_getSZ(6);
+  @$pb.TagNumber(8)
+  set externalNumber($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasExternalNumber() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearExternalNumber() => clearField(8);
 }
 
 

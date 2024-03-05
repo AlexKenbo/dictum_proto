@@ -65,10 +65,15 @@ service EntityHub {
     }
 
     
-    //--
     rpc ListEmployees(ListRequest) returns (ListEmployeesResponse) {
         option (google.api.http) = {
           get: "/v1/employees"
+        };
+    }
+
+    rpc GetEmployee(GetRequest) returns (Employee) {
+        option (google.api.http) = {
+          get: "/v1/{resource_name=entities/*/employees/*}"
         };
     }
 
