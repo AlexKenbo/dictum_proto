@@ -10,13 +10,11 @@ import "proto/user.proto";
 
 message AccountAudit
 {
-  reserved 12, 11;
-  reserved "audit_time", "employee";
+  reserved 12, 11, 3, 4;
+  reserved "audit_time", "employee", "actual_balance", "account_balance";
 
   int32 account_id = 1;
   int32 audit_id = 2;
-  double actual_balance = 3;
-  double account_balance = 4;
   int32 auditor_id = 5;
   double current_balance = 6;
   string resource_name = 7;
@@ -27,5 +25,4 @@ message AccountAudit
   google.protobuf.Timestamp create_time = 14;
 
   User auditor = 15;
-
 }

@@ -19,8 +19,6 @@ const AccountAudit$json = {
   '2': [
     {'1': 'account_id', '3': 1, '4': 1, '5': 5, '10': 'accountId'},
     {'1': 'audit_id', '3': 2, '4': 1, '5': 5, '10': 'auditId'},
-    {'1': 'actual_balance', '3': 3, '4': 1, '5': 1, '10': 'actualBalance'},
-    {'1': 'account_balance', '3': 4, '4': 1, '5': 1, '10': 'accountBalance'},
     {'1': 'auditor_id', '3': 5, '4': 1, '5': 5, '10': 'auditorId'},
     {'1': 'current_balance', '3': 6, '4': 1, '5': 1, '10': 'currentBalance'},
     {'1': 'resource_name', '3': 7, '4': 1, '5': 9, '10': 'resourceName'},
@@ -34,20 +32,22 @@ const AccountAudit$json = {
   '9': [
     {'1': 12, '2': 13},
     {'1': 11, '2': 12},
+    {'1': 3, '2': 4},
+    {'1': 4, '2': 5},
   ],
-  '10': ['audit_time', 'employee'],
+  '10': ['audit_time', 'employee', 'actual_balance', 'account_balance'],
 };
 
 /// Descriptor for `AccountAudit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List accountAuditDescriptor = $convert.base64Decode(
     'CgxBY2NvdW50QXVkaXQSHQoKYWNjb3VudF9pZBgBIAEoBVIJYWNjb3VudElkEhkKCGF1ZGl0X2'
-    'lkGAIgASgFUgdhdWRpdElkEiUKDmFjdHVhbF9iYWxhbmNlGAMgASgBUg1hY3R1YWxCYWxhbmNl'
-    'EicKD2FjY291bnRfYmFsYW5jZRgEIAEoAVIOYWNjb3VudEJhbGFuY2USHQoKYXVkaXRvcl9pZB'
-    'gFIAEoBVIJYXVkaXRvcklkEicKD2N1cnJlbnRfYmFsYW5jZRgGIAEoAVIOY3VycmVudEJhbGFu'
-    'Y2USIwoNcmVzb3VyY2VfbmFtZRgHIAEoCVIMcmVzb3VyY2VOYW1lEi0KEnVudmVyaWZpZWRfYm'
-    'FsYW5jZRgIIAEoAVIRdW52ZXJpZmllZEJhbGFuY2USIgoHYWNjb3VudBgJIAEoCzIILkFjY291'
-    'bnRSB2FjY291bnQSIQoMYmFua19iYWxhbmNlGAogASgBUgtiYW5rQmFsYW5jZRInCg9iYWxhbm'
-    'NlX2NvcnJlY3QYDSABKAhSDmJhbGFuY2VDb3JyZWN0EjsKC2NyZWF0ZV90aW1lGA4gASgLMhou'
-    'Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRIfCgdhdWRpdG9yGA8gASgLMg'
-    'UuVXNlclIHYXVkaXRvckoECAwQDUoECAsQDFIKYXVkaXRfdGltZVIIZW1wbG95ZWU=');
+    'lkGAIgASgFUgdhdWRpdElkEh0KCmF1ZGl0b3JfaWQYBSABKAVSCWF1ZGl0b3JJZBInCg9jdXJy'
+    'ZW50X2JhbGFuY2UYBiABKAFSDmN1cnJlbnRCYWxhbmNlEiMKDXJlc291cmNlX25hbWUYByABKA'
+    'lSDHJlc291cmNlTmFtZRItChJ1bnZlcmlmaWVkX2JhbGFuY2UYCCABKAFSEXVudmVyaWZpZWRC'
+    'YWxhbmNlEiIKB2FjY291bnQYCSABKAsyCC5BY2NvdW50UgdhY2NvdW50EiEKDGJhbmtfYmFsYW'
+    '5jZRgKIAEoAVILYmFua0JhbGFuY2USJwoPYmFsYW5jZV9jb3JyZWN0GA0gASgIUg5iYWxhbmNl'
+    'Q29ycmVjdBI7CgtjcmVhdGVfdGltZRgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbX'
+    'BSCmNyZWF0ZVRpbWUSHwoHYXVkaXRvchgPIAEoCzIFLlVzZXJSB2F1ZGl0b3JKBAgMEA1KBAgL'
+    'EAxKBAgDEARKBAgEEAVSCmF1ZGl0X3RpbWVSCGVtcGxveWVlUg5hY3R1YWxfYmFsYW5jZVIPYW'
+    'Njb3VudF9iYWxhbmNl');
 
