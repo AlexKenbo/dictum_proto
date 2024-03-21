@@ -22,11 +22,16 @@ const AccountBalance$json = {
     {'1': 'unverified_receipts_amount', '3': 3, '4': 1, '5': 1, '10': 'unverifiedReceiptsAmount'},
     {'1': 'payouts_amount', '3': 4, '4': 1, '5': 1, '10': 'payoutsAmount'},
     {'1': 'unverified_payouts_amount', '3': 5, '4': 1, '5': 1, '10': 'unverifiedPayoutsAmount'},
-    {'1': 'incomes_amount', '3': 6, '4': 1, '5': 1, '10': 'incomesAmount'},
-    {'1': 'expenses_amount', '3': 7, '4': 1, '5': 1, '10': 'expensesAmount'},
     {'1': 'resource_name', '3': 8, '4': 1, '5': 9, '10': 'resourceName'},
     {'1': 'account', '3': 10, '4': 1, '5': 11, '6': '.Account', '10': 'account'},
+    {'1': 'balance', '3': 11, '4': 1, '5': 1, '10': 'balance'},
+    {'1': 'unverified_balance', '3': 12, '4': 1, '5': 1, '10': 'unverifiedBalance'},
   ],
+  '9': [
+    {'1': 6, '2': 7},
+    {'1': 7, '2': 8},
+  ],
+  '10': ['incomes_amount', 'expenses_amount'],
 };
 
 /// Descriptor for `AccountBalance`. Decode as a `google.protobuf.DescriptorProto`.
@@ -35,8 +40,8 @@ final $typed_data.Uint8List accountBalanceDescriptor = $convert.base64Decode(
     'lwdHNfYW1vdW50GAIgASgBUg5yZWNlaXB0c0Ftb3VudBI8Chp1bnZlcmlmaWVkX3JlY2VpcHRz'
     'X2Ftb3VudBgDIAEoAVIYdW52ZXJpZmllZFJlY2VpcHRzQW1vdW50EiUKDnBheW91dHNfYW1vdW'
     '50GAQgASgBUg1wYXlvdXRzQW1vdW50EjoKGXVudmVyaWZpZWRfcGF5b3V0c19hbW91bnQYBSAB'
-    'KAFSF3VudmVyaWZpZWRQYXlvdXRzQW1vdW50EiUKDmluY29tZXNfYW1vdW50GAYgASgBUg1pbm'
-    'NvbWVzQW1vdW50EicKD2V4cGVuc2VzX2Ftb3VudBgHIAEoAVIOZXhwZW5zZXNBbW91bnQSIwoN'
-    'cmVzb3VyY2VfbmFtZRgIIAEoCVIMcmVzb3VyY2VOYW1lEiIKB2FjY291bnQYCiABKAsyCC5BY2'
-    'NvdW50UgdhY2NvdW50');
+    'KAFSF3VudmVyaWZpZWRQYXlvdXRzQW1vdW50EiMKDXJlc291cmNlX25hbWUYCCABKAlSDHJlc2'
+    '91cmNlTmFtZRIiCgdhY2NvdW50GAogASgLMgguQWNjb3VudFIHYWNjb3VudBIYCgdiYWxhbmNl'
+    'GAsgASgBUgdiYWxhbmNlEi0KEnVudmVyaWZpZWRfYmFsYW5jZRgMIAEoAVIRdW52ZXJpZmllZE'
+    'JhbGFuY2VKBAgGEAdKBAgHEAhSDmluY29tZXNfYW1vdW50Ug9leHBlbnNlc19hbW91bnQ=');
 

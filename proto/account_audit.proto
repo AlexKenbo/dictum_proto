@@ -5,18 +5,27 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/protobuf/timestamp.proto";
 
-import "proto/employee.proto";
 import "proto/account.proto";
+import "proto/user.proto";
 
 message AccountAudit
 {
+  reserved 12, 11;
+  reserved "audit_time", "employee";
+
   int32 account_id = 1;
+  int32 audit_id = 2;
   double actual_balance = 3;
   double account_balance = 4;
   int32 auditor_id = 5;
+  double current_balance = 6;
   string resource_name = 7;
+  double unverified_balance = 8;
   Account account = 9;
-  Employee employee = 11;
-  google.protobuf.Timestamp audit_time = 12;
+  double bank_balance = 10;
+  bool balance_correct = 13;
+  google.protobuf.Timestamp create_time = 14;
+
+  User auditor = 15;
 
 }

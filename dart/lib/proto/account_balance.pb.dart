@@ -22,10 +22,10 @@ class AccountBalance extends $pb.GeneratedMessage {
     $core.double? unverifiedReceiptsAmount,
     $core.double? payoutsAmount,
     $core.double? unverifiedPayoutsAmount,
-    $core.double? incomesAmount,
-    $core.double? expensesAmount,
     $core.String? resourceName,
     $6.Account? account,
+    $core.double? balance,
+    $core.double? unverifiedBalance,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -43,17 +43,17 @@ class AccountBalance extends $pb.GeneratedMessage {
     if (unverifiedPayoutsAmount != null) {
       $result.unverifiedPayoutsAmount = unverifiedPayoutsAmount;
     }
-    if (incomesAmount != null) {
-      $result.incomesAmount = incomesAmount;
-    }
-    if (expensesAmount != null) {
-      $result.expensesAmount = expensesAmount;
-    }
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
     if (account != null) {
       $result.account = account;
+    }
+    if (balance != null) {
+      $result.balance = balance;
+    }
+    if (unverifiedBalance != null) {
+      $result.unverifiedBalance = unverifiedBalance;
     }
     return $result;
   }
@@ -67,10 +67,10 @@ class AccountBalance extends $pb.GeneratedMessage {
     ..a<$core.double>(3, _omitFieldNames ? '' : 'unverifiedReceiptsAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(4, _omitFieldNames ? '' : 'payoutsAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'unverifiedPayoutsAmount', $pb.PbFieldType.OD)
-    ..a<$core.double>(6, _omitFieldNames ? '' : 'incomesAmount', $pb.PbFieldType.OD)
-    ..a<$core.double>(7, _omitFieldNames ? '' : 'expensesAmount', $pb.PbFieldType.OD)
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$6.Account>(10, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
+    ..a<$core.double>(11, _omitFieldNames ? '' : 'balance', $pb.PbFieldType.OD)
+    ..a<$core.double>(12, _omitFieldNames ? '' : 'unverifiedBalance', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -140,43 +140,43 @@ class AccountBalance extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearUnverifiedPayoutsAmount() => clearField(5);
 
-  @$pb.TagNumber(6)
-  $core.double get incomesAmount => $_getN(5);
-  @$pb.TagNumber(6)
-  set incomesAmount($core.double v) { $_setDouble(5, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasIncomesAmount() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearIncomesAmount() => clearField(6);
-
-  @$pb.TagNumber(7)
-  $core.double get expensesAmount => $_getN(6);
-  @$pb.TagNumber(7)
-  set expensesAmount($core.double v) { $_setDouble(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasExpensesAmount() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearExpensesAmount() => clearField(7);
-
   @$pb.TagNumber(8)
-  $core.String get resourceName => $_getSZ(7);
+  $core.String get resourceName => $_getSZ(5);
   @$pb.TagNumber(8)
-  set resourceName($core.String v) { $_setString(7, v); }
+  set resourceName($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(8)
-  $core.bool hasResourceName() => $_has(7);
+  $core.bool hasResourceName() => $_has(5);
   @$pb.TagNumber(8)
   void clearResourceName() => clearField(8);
 
   @$pb.TagNumber(10)
-  $6.Account get account => $_getN(8);
+  $6.Account get account => $_getN(6);
   @$pb.TagNumber(10)
   set account($6.Account v) { setField(10, v); }
   @$pb.TagNumber(10)
-  $core.bool hasAccount() => $_has(8);
+  $core.bool hasAccount() => $_has(6);
   @$pb.TagNumber(10)
   void clearAccount() => clearField(10);
   @$pb.TagNumber(10)
-  $6.Account ensureAccount() => $_ensure(8);
+  $6.Account ensureAccount() => $_ensure(6);
+
+  @$pb.TagNumber(11)
+  $core.double get balance => $_getN(7);
+  @$pb.TagNumber(11)
+  set balance($core.double v) { $_setDouble(7, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasBalance() => $_has(7);
+  @$pb.TagNumber(11)
+  void clearBalance() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.double get unverifiedBalance => $_getN(8);
+  @$pb.TagNumber(12)
+  set unverifiedBalance($core.double v) { $_setDouble(8, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasUnverifiedBalance() => $_has(8);
+  @$pb.TagNumber(12)
+  void clearUnverifiedBalance() => clearField(12);
 }
 
 
