@@ -15,6 +15,7 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/empty.pb.dart' as $3;
 import 'object_source.pb.dart' as $17;
 import 'plugin_service.pb.dart' as $16;
 import 'requests.pb.dart' as $0;
@@ -37,6 +38,10 @@ class PluginServiceClient extends $grpc.Client {
       '/PluginService/CreateObjectSource',
       ($17.ObjectSource value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $17.ObjectSource.fromBuffer(value));
+  static final _$deleteObjectSource = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
+      '/PluginService/DeleteObjectSource',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$createService = $grpc.ClientMethod<$18.Service, $18.Service>(
       '/PluginService/CreateService',
       ($18.Service value) => value.writeToBuffer(),
@@ -90,6 +95,10 @@ class PluginServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$17.ObjectSource> createObjectSource($17.ObjectSource request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createObjectSource, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteObjectSource($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteObjectSource, request, options: options);
   }
 
   $grpc.ResponseFuture<$18.Service> createService($18.Service request, {$grpc.CallOptions? options}) {
@@ -155,6 +164,13 @@ abstract class PluginServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $17.ObjectSource.fromBuffer(value),
         ($17.ObjectSource value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
+        'DeleteObjectSource',
+        deleteObjectSource_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$18.Service, $18.Service>(
         'CreateService',
         createService_Pre,
@@ -232,6 +248,10 @@ abstract class PluginServiceBase extends $grpc.Service {
     return createObjectSource(call, await request);
   }
 
+  $async.Future<$3.Empty> deleteObjectSource_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteObjectSource(call, await request);
+  }
+
   $async.Future<$18.Service> createService_Pre($grpc.ServiceCall call, $async.Future<$18.Service> request) async {
     return createService(call, await request);
   }
@@ -271,6 +291,7 @@ abstract class PluginServiceBase extends $grpc.Service {
   $async.Future<$16.ListObjectSourcesResponse> listObjectSources($grpc.ServiceCall call, $16.ListObjectSourcesRequest request);
   $async.Future<$17.ObjectSource> getLatestSource($grpc.ServiceCall call, $16.GetLatestSourceRequest request);
   $async.Future<$17.ObjectSource> createObjectSource($grpc.ServiceCall call, $17.ObjectSource request);
+  $async.Future<$3.Empty> deleteObjectSource($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$18.Service> createService($grpc.ServiceCall call, $18.Service request);
   $async.Future<$16.ListServicesResponse> listServices($grpc.ServiceCall call, $16.ListServicesRequest request);
   $async.Future<$18.Service> getService($grpc.ServiceCall call, $16.GetServiceRequest request);

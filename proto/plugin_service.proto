@@ -4,6 +4,7 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 
 import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
 import "proto/object_source.proto";
 import "proto/service.proto";
 import "proto/service_run.proto";
@@ -37,6 +38,12 @@ service PluginService {
             additional_bindings {
                 post: "/v1/transfers/sources"
             }
+        };
+    }
+
+    rpc DeleteObjectSource(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete: "/v1/{resource_name=services/*/accruals/*/sources/*}"
         };
     }
 
