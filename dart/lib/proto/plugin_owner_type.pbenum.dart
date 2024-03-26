@@ -17,15 +17,11 @@ class PluginOwnerType extends $pb.ProtobufEnum {
   static const PluginOwnerType PLUGIN_OWNER_TYPE_UNKNOWN = PluginOwnerType._(0, _omitEnumNames ? '' : 'PLUGIN_OWNER_TYPE_UNKNOWN');
   static const PluginOwnerType PLUGIN_OWNER_TYPE_ACCOUNT = PluginOwnerType._(1, _omitEnumNames ? '' : 'PLUGIN_OWNER_TYPE_ACCOUNT');
   static const PluginOwnerType PLUGIN_OWNER_TYPE_AGENT = PluginOwnerType._(2, _omitEnumNames ? '' : 'PLUGIN_OWNER_TYPE_AGENT');
-  static const PluginOwnerType PLUGIN_OWNER_TYPE_ACCRUALS = PluginOwnerType._(3, _omitEnumNames ? '' : 'PLUGIN_OWNER_TYPE_ACCRUALS');
-  static const PluginOwnerType PLUGIN_OWNER_TYPE_TRANSFERS = PluginOwnerType._(4, _omitEnumNames ? '' : 'PLUGIN_OWNER_TYPE_TRANSFERS');
 
   static const $core.List<PluginOwnerType> values = <PluginOwnerType> [
     PLUGIN_OWNER_TYPE_UNKNOWN,
     PLUGIN_OWNER_TYPE_ACCOUNT,
     PLUGIN_OWNER_TYPE_AGENT,
-    PLUGIN_OWNER_TYPE_ACCRUALS,
-    PLUGIN_OWNER_TYPE_TRANSFERS,
   ];
 
   static final $core.Map<$core.int, PluginOwnerType> _byValue = $pb.ProtobufEnum.initByValue(values);
