@@ -204,10 +204,10 @@ service EntityHub {
     }
 
     rpc GetAccountAudit(GetRequest) returns (AccountAudit) {
-            option (google.api.http) = {
-            get: "/v1/{parent=accounts/*}/audits"
-            };
-        }
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}/audits"
+        };
+    }
 
     rpc GetAccountBalance(GetRequest) returns (AccountBalance) {
         option (google.api.http) = {
