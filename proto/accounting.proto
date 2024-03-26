@@ -16,11 +16,11 @@ service Accounting {
         };
     }
 
-    rpc ListAccountAudits(ListAccountAuditsRequest) returns (ListAccountAuditsResponse) {
-        option (google.api.http) = {
-          get: "/v1/{parent=accounts/*}/audits"
-        };
-    }
+    // rpc ListAccountAudits(ListAccountAuditsRequest) returns (ListAccountAuditsResponse) {
+    //     option (google.api.http) = {
+    //       get: "/v1/{parent=accounts/*}/audits"
+    //     };
+    // }
 
     rpc GetAccountAudit(GetAccountAuditRequest) returns (AccountAudit) {
         option (google.api.http) = {
@@ -40,12 +40,12 @@ service Accounting {
             body: "account_balance"
         };
     };
-    rpc CreateAccountAudit(CreateAccountAuditRequest) returns (AccountAudit) {
-        option (google.api.http) = {
-            post: "/v1/{account_audit.resource_name=accounts/*}/audits"
-            body: "account_audit"
-        };
-    };
+    // rpc CreateAccountAudit(CreateAccountAuditRequest) returns (AccountAudit) {
+    //     option (google.api.http) = {
+    //         post: "/v1/{account_audit.resource_name=accounts/*}/audits"
+    //         body: "account_audit"
+    //     };
+    // };
 
 
     //--
@@ -139,11 +139,11 @@ message ListAccountBalancesResponse {
     repeated AccountBalance account_balances = 2;
     string next_page_token = 3;
 }
-message ListAccountAuditsResponse {
-    string resource_name = 1;
-    repeated AccountAudit account_audits = 2;
-    string next_page_token = 3;
-}
+// message ListAccountAuditsResponse {
+//     string resource_name = 1;
+//     repeated AccountAudit account_audits = 2;
+//     string next_page_token = 3;
+// }
 
 message ListTagsResponse {
     string resource_name = 1;

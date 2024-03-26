@@ -13,6 +13,22 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use listAccountAuditsResponseDescriptor instead')
+const ListAccountAuditsResponse$json = {
+  '1': 'ListAccountAuditsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'account_audits', '3': 2, '4': 3, '5': 11, '6': '.AccountAudit', '10': 'accountAudits'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListAccountAuditsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listAccountAuditsResponseDescriptor = $convert.base64Decode(
+    'ChlMaXN0QWNjb3VudEF1ZGl0c1Jlc3BvbnNlEiMKDXJlc291cmNlX25hbWUYASABKAlSDHJlc2'
+    '91cmNlTmFtZRI0Cg5hY2NvdW50X2F1ZGl0cxgCIAMoCzINLkFjY291bnRBdWRpdFINYWNjb3Vu'
+    'dEF1ZGl0cxImCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAlSDW5leHRQYWdlVG9rZW4=');
+
 @$core.Deprecated('Use listEntitiesResponseDescriptor instead')
 const ListEntitiesResponse$json = {
   '1': 'ListEntitiesResponse',
