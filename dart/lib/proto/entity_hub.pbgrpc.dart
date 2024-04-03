@@ -150,6 +150,10 @@ class EntityHubClient extends $grpc.Client {
       '/EntityHub/ListEntityAccesses',
       ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ListEntityAccessesResponse.fromBuffer(value));
+  static final _$deleteEntityAccess = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
+      '/EntityHub/DeleteEntityAccess',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
 
   EntityHubClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -275,6 +279,10 @@ class EntityHubClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.ListEntityAccessesResponse> listEntityAccesses($0.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listEntityAccesses, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteEntityAccess($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEntityAccess, request, options: options);
   }
 }
 
@@ -493,6 +501,13 @@ abstract class EntityHubServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
         ($1.ListEntityAccessesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
+        'DeleteEntityAccess',
+        deleteEntityAccess_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.ListEntitiesResponse> listEntities_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
@@ -615,6 +630,10 @@ abstract class EntityHubServiceBase extends $grpc.Service {
     return listEntityAccesses(call, await request);
   }
 
+  $async.Future<$3.Empty> deleteEntityAccess_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteEntityAccess(call, await request);
+  }
+
   $async.Future<$1.ListEntitiesResponse> listEntities($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$2.Entity> getEntity($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$2.Entity> createEntity($grpc.ServiceCall call, $2.Entity request);
@@ -645,4 +664,5 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $async.Future<$9.AccountBalance> getAccountBalance($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$8.AccountAudit> createAccountAudit($grpc.ServiceCall call, $8.AccountAudit request);
   $async.Future<$1.ListEntityAccessesResponse> listEntityAccesses($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$3.Empty> deleteEntityAccess($grpc.ServiceCall call, $0.DeleteRequest request);
 }

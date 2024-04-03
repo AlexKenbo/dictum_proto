@@ -229,6 +229,12 @@ service EntityHub {
             get: "/v1/{parent=entities/*}/accesses"
         };
     }
+
+    rpc DeleteEntityAccess(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete: "/v1/{resource_name=entities/*/accesses/*}"
+        };
+    }
 }
 
 message ListEntityAccessesResponse {
