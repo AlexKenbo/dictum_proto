@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'article.pb.dart' as $29;
-import 'language.pb.dart' as $67;
+import 'language.pb.dart' as $68;
 
 class ArticleTranslation extends $pb.GeneratedMessage {
   factory ArticleTranslation({
@@ -22,7 +22,7 @@ class ArticleTranslation extends $pb.GeneratedMessage {
     $core.String? languageCode,
     $core.String? translation,
     $29.Article? article,
-    $67.Language? language,
+    $68.Language? language,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -51,7 +51,7 @@ class ArticleTranslation extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'languageCode')
     ..aOS(3, _omitFieldNames ? '' : 'translation')
     ..aOM<$29.Article>(4, _omitFieldNames ? '' : 'article', subBuilder: $29.Article.create)
-    ..aOM<$67.Language>(6, _omitFieldNames ? '' : 'language', subBuilder: $67.Language.create)
+    ..aOM<$68.Language>(6, _omitFieldNames ? '' : 'language', subBuilder: $68.Language.create)
     ..hasRequiredFields = false
   ;
 
@@ -115,15 +115,15 @@ class ArticleTranslation extends $pb.GeneratedMessage {
   $29.Article ensureArticle() => $_ensure(3);
 
   @$pb.TagNumber(6)
-  $67.Language get language => $_getN(4);
+  $68.Language get language => $_getN(4);
   @$pb.TagNumber(6)
-  set language($67.Language v) { setField(6, v); }
+  set language($68.Language v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasLanguage() => $_has(4);
   @$pb.TagNumber(6)
   void clearLanguage() => clearField(6);
   @$pb.TagNumber(6)
-  $67.Language ensureLanguage() => $_ensure(4);
+  $68.Language ensureLanguage() => $_ensure(4);
 }
 
 
