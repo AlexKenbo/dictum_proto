@@ -14,13 +14,159 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'account.pb.dart' as $6;
+import 'account_audit.pb.dart' as $8;
 import 'account_detail.pb.dart' as $7;
 import 'country.pb.dart' as $35;
 import 'currency.pb.dart' as $43;
-import 'currency_rate.pb.dart' as $58;
+import 'currency_rate.pb.dart' as $59;
 import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
+import 'entity_access.pb.dart' as $58;
 import 'fi.pb.dart' as $44;
+
+class ListEntityAccessesResponse extends $pb.GeneratedMessage {
+  factory ListEntityAccessesResponse({
+    $core.String? resourceName,
+    $core.Iterable<$58.EntityAccess>? entityAccesses,
+    $core.String? nextPageToken,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (entityAccesses != null) {
+      $result.entityAccesses.addAll(entityAccesses);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
+    return $result;
+  }
+  ListEntityAccessesResponse._() : super();
+  factory ListEntityAccessesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListEntityAccessesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListEntityAccessesResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$58.EntityAccess>(2, _omitFieldNames ? '' : 'entityAccesses', $pb.PbFieldType.PM, subBuilder: $58.EntityAccess.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListEntityAccessesResponse clone() => ListEntityAccessesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListEntityAccessesResponse copyWith(void Function(ListEntityAccessesResponse) updates) => super.copyWith((message) => updates(message as ListEntityAccessesResponse)) as ListEntityAccessesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListEntityAccessesResponse create() => ListEntityAccessesResponse._();
+  ListEntityAccessesResponse createEmptyInstance() => create();
+  static $pb.PbList<ListEntityAccessesResponse> createRepeated() => $pb.PbList<ListEntityAccessesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListEntityAccessesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListEntityAccessesResponse>(create);
+  static ListEntityAccessesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$58.EntityAccess> get entityAccesses => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+}
+
+class ListAccountAuditsResponse extends $pb.GeneratedMessage {
+  factory ListAccountAuditsResponse({
+    $core.String? resourceName,
+    $core.Iterable<$8.AccountAudit>? accountAudits,
+    $core.String? nextPageToken,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (accountAudits != null) {
+      $result.accountAudits.addAll(accountAudits);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
+    return $result;
+  }
+  ListAccountAuditsResponse._() : super();
+  factory ListAccountAuditsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListAccountAuditsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAccountAuditsResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$8.AccountAudit>(2, _omitFieldNames ? '' : 'accountAudits', $pb.PbFieldType.PM, subBuilder: $8.AccountAudit.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListAccountAuditsResponse clone() => ListAccountAuditsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListAccountAuditsResponse copyWith(void Function(ListAccountAuditsResponse) updates) => super.copyWith((message) => updates(message as ListAccountAuditsResponse)) as ListAccountAuditsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListAccountAuditsResponse create() => ListAccountAuditsResponse._();
+  ListAccountAuditsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListAccountAuditsResponse> createRepeated() => $pb.PbList<ListAccountAuditsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListAccountAuditsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListAccountAuditsResponse>(create);
+  static ListAccountAuditsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$8.AccountAudit> get accountAudits => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+}
 
 class ListEntitiesResponse extends $pb.GeneratedMessage {
   factory ListEntitiesResponse({
@@ -154,7 +300,7 @@ class BatchInsertEntitiesRequest extends $pb.GeneratedMessage {
 
 class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   factory BatchInsertCurrencyRatesRequest({
-    $core.Iterable<$58.CurrencyRate>? currencyRates,
+    $core.Iterable<$59.CurrencyRate>? currencyRates,
   }) {
     final $result = create();
     if (currencyRates != null) {
@@ -167,7 +313,7 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   factory BatchInsertCurrencyRatesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertCurrencyRatesRequest', createEmptyInstance: create)
-    ..pc<$58.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $58.CurrencyRate.create)
+    ..pc<$59.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $59.CurrencyRate.create)
     ..hasRequiredFields = false
   ;
 
@@ -193,7 +339,7 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   static BatchInsertCurrencyRatesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$58.CurrencyRate> get currencyRates => $_getList(0);
+  $core.List<$59.CurrencyRate> get currencyRates => $_getList(0);
 }
 
 class ListActualCurrencyRatesRequest extends $pb.GeneratedMessage {
@@ -625,7 +771,7 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
 class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
   factory ListActualCurrencyRatesResponse({
     $core.String? resourceName,
-    $core.Iterable<$58.CurrencyRate>? currencyRates,
+    $core.Iterable<$59.CurrencyRate>? currencyRates,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -642,7 +788,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActualCurrencyRatesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$58.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $58.CurrencyRate.create)
+    ..pc<$59.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $59.CurrencyRate.create)
     ..hasRequiredFields = false
   ;
 
@@ -677,7 +823,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$58.CurrencyRate> get currencyRates => $_getList(1);
+  $core.List<$59.CurrencyRate> get currencyRates => $_getList(1);
 }
 
 class ListCurrenciesResponse extends $pb.GeneratedMessage {

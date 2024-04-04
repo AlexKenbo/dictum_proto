@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+message EntityAccess {
+  int32 issuer_id = 1;
+  int32 subject_id = 2;
+  string resource_name = 3;
+}

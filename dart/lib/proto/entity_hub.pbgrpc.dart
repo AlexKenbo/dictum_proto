@@ -17,6 +17,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/empty.pb.dart' as $3;
 import 'account.pb.dart' as $6;
+import 'account_audit.pb.dart' as $8;
+import 'account_balance.pb.dart' as $9;
 import 'account_detail.pb.dart' as $7;
 import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
@@ -128,6 +130,30 @@ class EntityHubClient extends $grpc.Client {
       '/EntityHub/ListFis',
       ($0.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.ListFisResponse.fromBuffer(value));
+  static final _$listAccountAudits = $grpc.ClientMethod<$0.ListRequest, $1.ListAccountAuditsResponse>(
+      '/EntityHub/ListAccountAudits',
+      ($0.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListAccountAuditsResponse.fromBuffer(value));
+  static final _$getAccountAudit = $grpc.ClientMethod<$0.GetRequest, $8.AccountAudit>(
+      '/EntityHub/GetAccountAudit',
+      ($0.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.AccountAudit.fromBuffer(value));
+  static final _$getAccountBalance = $grpc.ClientMethod<$0.GetRequest, $9.AccountBalance>(
+      '/EntityHub/GetAccountBalance',
+      ($0.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $9.AccountBalance.fromBuffer(value));
+  static final _$createAccountAudit = $grpc.ClientMethod<$8.AccountAudit, $8.AccountAudit>(
+      '/EntityHub/CreateAccountAudit',
+      ($8.AccountAudit value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.AccountAudit.fromBuffer(value));
+  static final _$listEntityAccesses = $grpc.ClientMethod<$0.ListRequest, $1.ListEntityAccessesResponse>(
+      '/EntityHub/ListEntityAccesses',
+      ($0.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListEntityAccessesResponse.fromBuffer(value));
+  static final _$deleteEntityAccess = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
+      '/EntityHub/DeleteEntityAccess',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
 
   EntityHubClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -233,6 +259,30 @@ class EntityHubClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.ListFisResponse> listFis($0.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listFis, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ListAccountAuditsResponse> listAccountAudits($0.ListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAccountAudits, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$8.AccountAudit> getAccountAudit($0.GetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountAudit, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$9.AccountBalance> getAccountBalance($0.GetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountBalance, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$8.AccountAudit> createAccountAudit($8.AccountAudit request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAccountAudit, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ListEntityAccessesResponse> listEntityAccesses($0.ListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listEntityAccesses, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteEntityAccess($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEntityAccess, request, options: options);
   }
 }
 
@@ -416,6 +466,48 @@ abstract class EntityHubServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
         ($1.ListFisResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRequest, $1.ListAccountAuditsResponse>(
+        'ListAccountAudits',
+        listAccountAudits_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
+        ($1.ListAccountAuditsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetRequest, $8.AccountAudit>(
+        'GetAccountAudit',
+        getAccountAudit_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetRequest.fromBuffer(value),
+        ($8.AccountAudit value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetRequest, $9.AccountBalance>(
+        'GetAccountBalance',
+        getAccountBalance_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetRequest.fromBuffer(value),
+        ($9.AccountBalance value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.AccountAudit, $8.AccountAudit>(
+        'CreateAccountAudit',
+        createAccountAudit_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $8.AccountAudit.fromBuffer(value),
+        ($8.AccountAudit value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRequest, $1.ListEntityAccessesResponse>(
+        'ListEntityAccesses',
+        listEntityAccesses_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
+        ($1.ListEntityAccessesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
+        'DeleteEntityAccess',
+        deleteEntityAccess_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.ListEntitiesResponse> listEntities_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
@@ -518,6 +610,30 @@ abstract class EntityHubServiceBase extends $grpc.Service {
     return listFis(call, await request);
   }
 
+  $async.Future<$1.ListAccountAuditsResponse> listAccountAudits_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+    return listAccountAudits(call, await request);
+  }
+
+  $async.Future<$8.AccountAudit> getAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$0.GetRequest> request) async {
+    return getAccountAudit(call, await request);
+  }
+
+  $async.Future<$9.AccountBalance> getAccountBalance_Pre($grpc.ServiceCall call, $async.Future<$0.GetRequest> request) async {
+    return getAccountBalance(call, await request);
+  }
+
+  $async.Future<$8.AccountAudit> createAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$8.AccountAudit> request) async {
+    return createAccountAudit(call, await request);
+  }
+
+  $async.Future<$1.ListEntityAccessesResponse> listEntityAccesses_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+    return listEntityAccesses(call, await request);
+  }
+
+  $async.Future<$3.Empty> deleteEntityAccess_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteEntityAccess(call, await request);
+  }
+
   $async.Future<$1.ListEntitiesResponse> listEntities($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$2.Entity> getEntity($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$2.Entity> createEntity($grpc.ServiceCall call, $2.Entity request);
@@ -543,4 +659,10 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $async.Future<$1.ListActualCurrencyRatesResponse> listActualCurrencyRates($grpc.ServiceCall call, $1.ListActualCurrencyRatesRequest request);
   $async.Future<$3.Empty> batchInsertCurrencyRates($grpc.ServiceCall call, $1.BatchInsertCurrencyRatesRequest request);
   $async.Future<$1.ListFisResponse> listFis($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$1.ListAccountAuditsResponse> listAccountAudits($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$8.AccountAudit> getAccountAudit($grpc.ServiceCall call, $0.GetRequest request);
+  $async.Future<$9.AccountBalance> getAccountBalance($grpc.ServiceCall call, $0.GetRequest request);
+  $async.Future<$8.AccountAudit> createAccountAudit($grpc.ServiceCall call, $8.AccountAudit request);
+  $async.Future<$1.ListEntityAccessesResponse> listEntityAccesses($grpc.ServiceCall call, $0.ListRequest request);
+  $async.Future<$3.Empty> deleteEntityAccess($grpc.ServiceCall call, $0.DeleteRequest request);
 }

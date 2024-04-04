@@ -20,7 +20,7 @@ import 'color.pbenum.dart' as $55;
 import 'entity.pb.dart' as $2;
 import 'source.pbenum.dart' as $54;
 import 'status.pbenum.dart' as $56;
-import 'transfer_type.pbenum.dart' as $60;
+import 'transfer_type.pbenum.dart' as $61;
 import 'user.pb.dart' as $13;
 
 class Transfer extends $pb.GeneratedMessage {
@@ -32,7 +32,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.int? verifierId,
     $core.String? resourceName,
     $core.String? number,
-    $60.TransferType? type,
+    $61.TransferType? type,
     $13.User? verifier,
     $core.int? payerId,
     $core.int? payerAccountId,
@@ -197,7 +197,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.int>(14, _omitFieldNames ? '' : 'verifierId', $pb.PbFieldType.O3)
     ..aOS(18, _omitFieldNames ? '' : 'resourceName')
     ..aOS(20, _omitFieldNames ? '' : 'number')
-    ..e<$60.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $60.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $60.TransferType.valueOf, enumValues: $60.TransferType.values)
+    ..e<$61.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $61.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $61.TransferType.valueOf, enumValues: $61.TransferType.values)
     ..aOM<$13.User>(28, _omitFieldNames ? '' : 'verifier', subBuilder: $13.User.create)
     ..a<$core.int>(31, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(32, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
@@ -317,9 +317,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearNumber() => clearField(20);
 
   @$pb.TagNumber(22)
-  $60.TransferType get type => $_getN(7);
+  $61.TransferType get type => $_getN(7);
   @$pb.TagNumber(22)
-  set type($60.TransferType v) { setField(22, v); }
+  set type($61.TransferType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasType() => $_has(7);
   @$pb.TagNumber(22)

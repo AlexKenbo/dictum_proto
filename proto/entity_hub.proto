@@ -5,16 +5,19 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "proto/requests.proto";
-import "proto/entity.proto";
-import "proto/employee.proto";
+import "proto/account_audit.proto";
+import "proto/account_balance.proto";
 import "proto/account_detail.proto";
 import "proto/account.proto";
 import "proto/country.proto";
-import "proto/entity_aggregate.proto";
-import "proto/currency.proto";
-import "proto/fi.proto";
 import "proto/currency_rate.proto";
+import "proto/currency.proto";
+import "proto/employee.proto";
+import "proto/entity_aggregate.proto";
+import "proto/entity.proto";
+import "proto/fi.proto";
+import "proto/requests.proto";
+import "proto/entity_access.proto";
 
 //Репо - Entity, Account
 service EntityHub {
@@ -195,7 +198,55 @@ service EntityHub {
         };
     }
 
+    rpc ListAccountAudits(ListRequest) returns (ListAccountAuditsResponse) {
+        option (google.api.http) = {
+          get: "/v1/{parent=accounts/*}/audits"
+        };
+    }
 
+    rpc GetAccountAudit(GetRequest) returns (AccountAudit) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}/audits"
+        };
+    }
+
+    rpc GetAccountBalance(GetRequest) returns (AccountBalance) {
+        option (google.api.http) = {
+            get: "/v1/{resource_name=accounts/*}/balance"
+        };
+    }
+
+    rpc CreateAccountAudit(AccountAudit) returns (AccountAudit) {
+            option (google.api.http) = {
+                post: "/v1/{account_audit.resource_name=accounts/*}/audits"
+                body: "account_audit"
+            };
+        };
+
+    //--
+    rpc ListEntityAccesses(ListRequest) returns (ListEntityAccessesResponse) {
+        option (google.api.http) = {
+            get: "/v1/{parent=entities/*}/accesses"
+        };
+    }
+
+    rpc DeleteEntityAccess(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            delete: "/v1/{resource_name=entities/*/accesses/*}"
+        };
+    }
+}
+
+message ListEntityAccessesResponse {
+    string resource_name = 1;
+    repeated EntityAccess entity_accesses = 2;
+    string next_page_token = 3;
+}
+
+message ListAccountAuditsResponse {
+    string resource_name = 1;
+    repeated AccountAudit account_audits = 2;
+    string next_page_token = 3;
 }
 
 message ListEntitiesResponse {

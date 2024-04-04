@@ -16,20 +16,20 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/timestamp.pb.dart' as $33;
 import 'account.pb.dart' as $6;
 import 'entity.pb.dart' as $2;
-import 'plugin.pb.dart' as $62;
-import 'plugin_owner_type.pbenum.dart' as $61;
+import 'plugin.pb.dart' as $63;
+import 'plugin_owner_type.pbenum.dart' as $62;
 
 class Service extends $pb.GeneratedMessage {
   factory Service({
     $core.int? serviceId,
     $core.int? pluginId,
     $core.String? clientId,
-    $61.PluginOwnerType? ownerType,
+    $62.PluginOwnerType? ownerType,
     $core.int? entityId,
     $core.int? accountId,
     $core.String? credentialsStorageKey,
     $core.String? cron,
-    $62.Plugin? plugin,
+    $63.Plugin? plugin,
     $2.Entity? entity,
     $6.Account? account,
     $33.Timestamp? syncTime,
@@ -81,12 +81,12 @@ class Service extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'pluginId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'clientId')
-    ..e<$61.PluginOwnerType>(4, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE, defaultOrMaker: $61.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN, valueOf: $61.PluginOwnerType.valueOf, enumValues: $61.PluginOwnerType.values)
+    ..e<$62.PluginOwnerType>(4, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE, defaultOrMaker: $62.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN, valueOf: $62.PluginOwnerType.valueOf, enumValues: $62.PluginOwnerType.values)
     ..a<$core.int>(6, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'accountId', $pb.PbFieldType.O3)
     ..aOS(10, _omitFieldNames ? '' : 'credentialsStorageKey')
     ..aOS(12, _omitFieldNames ? '' : 'cron')
-    ..aOM<$62.Plugin>(14, _omitFieldNames ? '' : 'plugin', subBuilder: $62.Plugin.create)
+    ..aOM<$63.Plugin>(14, _omitFieldNames ? '' : 'plugin', subBuilder: $63.Plugin.create)
     ..aOM<$2.Entity>(16, _omitFieldNames ? '' : 'entity', subBuilder: $2.Entity.create)
     ..aOM<$6.Account>(18, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..aOM<$33.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $33.Timestamp.create)
@@ -142,9 +142,9 @@ class Service extends $pb.GeneratedMessage {
   void clearClientId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $61.PluginOwnerType get ownerType => $_getN(3);
+  $62.PluginOwnerType get ownerType => $_getN(3);
   @$pb.TagNumber(4)
-  set ownerType($61.PluginOwnerType v) { setField(4, v); }
+  set ownerType($62.PluginOwnerType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasOwnerType() => $_has(3);
   @$pb.TagNumber(4)
@@ -187,15 +187,15 @@ class Service extends $pb.GeneratedMessage {
   void clearCron() => clearField(12);
 
   @$pb.TagNumber(14)
-  $62.Plugin get plugin => $_getN(8);
+  $63.Plugin get plugin => $_getN(8);
   @$pb.TagNumber(14)
-  set plugin($62.Plugin v) { setField(14, v); }
+  set plugin($63.Plugin v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasPlugin() => $_has(8);
   @$pb.TagNumber(14)
   void clearPlugin() => clearField(14);
   @$pb.TagNumber(14)
-  $62.Plugin ensurePlugin() => $_ensure(8);
+  $63.Plugin ensurePlugin() => $_ensure(8);
 
   @$pb.TagNumber(16)
   $2.Entity get entity => $_getN(9);
