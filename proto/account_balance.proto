@@ -17,6 +17,8 @@ message AccountBalance
   double unverified_payouts_amount = 5;
   string resource_name = 8;
   Account account = 10;
+
+  // Вычисляемые значения
   double balance = 11;
   double unverified_balance = 12;
 
