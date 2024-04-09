@@ -217,11 +217,25 @@ service EntityHub {
     }
 
     rpc CreateAccountAudit(AccountAudit) returns (AccountAudit) {
-            option (google.api.http) = {
-                post: "/v1/{account_audit.resource_name=accounts/*}/audits"
-                body: "account_audit"
-            };
+        option (google.api.http) = {
+            post: "/v1/{account_audit.resource_name=accounts/*}/audits"
+            body: "account_audit"
         };
+    };
+
+    rpc RequestEmployee(RequestEmployeeRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/{parent=entities/*}/employees:request"
+            body: "*"
+        };
+    };
+
+    rpc RequestPartnership(RequestPartnershipRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/{parent=entities/*}/accesses:request"
+            body: "*"
+        };
+    };
 
     //--
     rpc ListEntityAccesses(ListRequest) returns (ListEntityAccessesResponse) {
@@ -255,6 +269,16 @@ message ListEntitiesResponse {
     string next_page_token = 3;
 }
 
+message RequestEmployeeRequest {
+    string parent = 1;
+    string role = 2;
+    string email = 3;
+}
+
+message RequestPartnershipRequest {
+    string parent = 1;
+    string email = 2;
+}
 
 message BatchInsertEntitiesRequest {
     repeated Entity entities = 1;

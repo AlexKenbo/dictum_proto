@@ -18,6 +18,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/empty.pb.dart' as $3;
 import 'attachment.pb.dart' as $15;
 import 'requests.pb.dart' as $0;
+import 'storage.pb.dart' as $16;
 
 export 'storage.pb.dart';
 
@@ -31,6 +32,10 @@ class StorageClient extends $grpc.Client {
       '/Storage/DeleteAttachment',
       ($0.DeleteRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
+  static final _$listAttachments = $grpc.ClientMethod<$0.ListRequest, $16.ListAttachmentsResponse>(
+      '/Storage/ListAttachments',
+      ($0.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $16.ListAttachmentsResponse.fromBuffer(value));
 
   StorageClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -44,6 +49,10 @@ class StorageClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$3.Empty> deleteAttachment($0.DeleteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteAttachment, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$16.ListAttachmentsResponse> listAttachments($0.ListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listAttachments, request, options: options);
   }
 }
 
@@ -66,6 +75,13 @@ abstract class StorageServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
         ($3.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.ListRequest, $16.ListAttachmentsResponse>(
+        'ListAttachments',
+        listAttachments_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.ListRequest.fromBuffer(value),
+        ($16.ListAttachmentsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$15.Attachment> uploadAttachment_Pre($grpc.ServiceCall call, $async.Future<$0.UploadAttachmentRequest> request) async {
@@ -76,6 +92,11 @@ abstract class StorageServiceBase extends $grpc.Service {
     return deleteAttachment(call, await request);
   }
 
+  $async.Future<$16.ListAttachmentsResponse> listAttachments_Pre($grpc.ServiceCall call, $async.Future<$0.ListRequest> request) async {
+    return listAttachments(call, await request);
+  }
+
   $async.Future<$15.Attachment> uploadAttachment($grpc.ServiceCall call, $0.UploadAttachmentRequest request);
   $async.Future<$3.Empty> deleteAttachment($grpc.ServiceCall call, $0.DeleteRequest request);
+  $async.Future<$16.ListAttachmentsResponse> listAttachments($grpc.ServiceCall call, $0.ListRequest request);
 }

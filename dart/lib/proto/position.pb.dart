@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $26;
-import 'product.pb.dart' as $60;
+import 'accrual.pb.dart' as $27;
+import 'product.pb.dart' as $61;
 
 class Position extends $pb.GeneratedMessage {
   factory Position({
@@ -25,8 +25,8 @@ class Position extends $pb.GeneratedMessage {
     $core.int? quantity,
     $core.double? sum,
     $core.String? resourceName,
-    $60.Product? product,
-    $26.Accrual? accrual,
+    $61.Product? product,
+    $27.Accrual? accrual,
   }) {
     final $result = create();
     if (positionId != null) {
@@ -70,8 +70,8 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'quantity', $pb.PbFieldType.O3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'sum', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$60.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $60.Product.create)
-    ..aOM<$26.Accrual>(12, _omitFieldNames ? '' : 'accrual', subBuilder: $26.Accrual.create)
+    ..aOM<$61.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $61.Product.create)
+    ..aOM<$27.Accrual>(12, _omitFieldNames ? '' : 'accrual', subBuilder: $27.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -160,26 +160,26 @@ class Position extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $60.Product get product => $_getN(7);
+  $61.Product get product => $_getN(7);
   @$pb.TagNumber(9)
-  set product($60.Product v) { setField(9, v); }
+  set product($61.Product v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasProduct() => $_has(7);
   @$pb.TagNumber(9)
   void clearProduct() => clearField(9);
   @$pb.TagNumber(9)
-  $60.Product ensureProduct() => $_ensure(7);
+  $61.Product ensureProduct() => $_ensure(7);
 
   @$pb.TagNumber(12)
-  $26.Accrual get accrual => $_getN(8);
+  $27.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(12)
-  set accrual($26.Accrual v) { setField(12, v); }
+  set accrual($27.Accrual v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(12)
   void clearAccrual() => clearField(12);
   @$pb.TagNumber(12)
-  $26.Accrual ensureAccrual() => $_ensure(8);
+  $27.Accrual ensureAccrual() => $_ensure(8);
 }
 
 

@@ -2,22 +2,16 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
-      
-import "proto/account.proto";
-  
-message AccountBalance
-{
-  reserved 6, 7;
-  reserved "incomes_amount", "expenses_amount";
+message AccountBalance {
+  reserved 6, 7, 10;
+  reserved "incomes_amount", "expenses_amount", "account";
   
   int32 account_id = 1;
   double receipts_amount = 2;
   double unverified_receipts_amount = 3;
   double payouts_amount = 4;
   double unverified_payouts_amount = 5;
-  string resource_name = 8;
-  Account account = 10;
   double balance = 11;
   double unverified_balance = 12;
-
+  string resource_name = 8;
 }
