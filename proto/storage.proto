@@ -18,6 +18,10 @@ service Storage {
                 post: "/v1/{attachment.resource_name=transfers/*}/attachments"
                 body: "attachment"
             }
+            additional_bindings {
+                post: "/v1/{attachment.resource_name=entities/*}/attachments"
+                body: "attachment"
+            }
         };
     };
 
