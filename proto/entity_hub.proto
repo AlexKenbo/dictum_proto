@@ -18,6 +18,7 @@ import "proto/entity.proto";
 import "proto/fi.proto";
 import "proto/requests.proto";
 import "proto/entity_access.proto";
+import "proto/role.proto";
 
 //Репо - Entity, Account
 service EntityHub {
@@ -200,7 +201,10 @@ service EntityHub {
 
     rpc ListAccountAudits(ListRequest) returns (ListAccountAuditsResponse) {
         option (google.api.http) = {
-          get: "/v1/{parent=accounts/*}/audits"
+            get: "/v1/accounts/-/audits"
+            additional_bindings {
+                get: "/v1/{parent=accounts/*}/audits"
+            }
         };
     }
 
@@ -212,7 +216,7 @@ service EntityHub {
 
     rpc GetAccountBalance(GetRequest) returns (AccountBalance) {
         option (google.api.http) = {
-            get: "/v1/{resource_name=accounts/*}/balance"
+            get: "/v1/{resource_name=accounts/*}/balances"
         };
     }
 
@@ -271,7 +275,7 @@ message ListEntitiesResponse {
 
 message RequestEmployeeRequest {
     string parent = 1;
-    string role = 2;
+    Role role = 2;
     string email = 3;
 }
 

@@ -23,6 +23,7 @@ import 'employee.pb.dart' as $5;
 import 'entity.pb.dart' as $2;
 import 'entity_access.pb.dart' as $59;
 import 'fi.pb.dart' as $45;
+import 'role.pbenum.dart' as $43;
 
 class ListEntityAccessesResponse extends $pb.GeneratedMessage {
   factory ListEntityAccessesResponse({
@@ -243,7 +244,7 @@ class ListEntitiesResponse extends $pb.GeneratedMessage {
 class RequestEmployeeRequest extends $pb.GeneratedMessage {
   factory RequestEmployeeRequest({
     $core.String? parent,
-    $core.String? role,
+    $43.Role? role,
     $core.String? email,
   }) {
     final $result = create();
@@ -264,7 +265,7 @@ class RequestEmployeeRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestEmployeeRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..aOS(2, _omitFieldNames ? '' : 'role')
+    ..e<$43.Role>(2, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $43.Role.ROLE_UNKNOWN, valueOf: $43.Role.valueOf, enumValues: $43.Role.values)
     ..aOS(3, _omitFieldNames ? '' : 'email')
     ..hasRequiredFields = false
   ;
@@ -300,9 +301,9 @@ class RequestEmployeeRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get role => $_getSZ(1);
+  $43.Role get role => $_getN(1);
   @$pb.TagNumber(2)
-  set role($core.String v) { $_setString(1, v); }
+  set role($43.Role v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRole() => $_has(1);
   @$pb.TagNumber(2)

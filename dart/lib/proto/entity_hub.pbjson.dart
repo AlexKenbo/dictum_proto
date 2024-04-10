@@ -66,15 +66,15 @@ const RequestEmployeeRequest$json = {
   '1': 'RequestEmployeeRequest',
   '2': [
     {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'role', '3': 2, '4': 1, '5': 9, '10': 'role'},
+    {'1': 'role', '3': 2, '4': 1, '5': 14, '6': '.Role', '10': 'role'},
     {'1': 'email', '3': 3, '4': 1, '5': 9, '10': 'email'},
   ],
 };
 
 /// Descriptor for `RequestEmployeeRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List requestEmployeeRequestDescriptor = $convert.base64Decode(
-    'ChZSZXF1ZXN0RW1wbG95ZWVSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhIKBHJvbG'
-    'UYAiABKAlSBHJvbGUSFAoFZW1haWwYAyABKAlSBWVtYWls');
+    'ChZSZXF1ZXN0RW1wbG95ZWVSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhkKBHJvbG'
+    'UYAiABKA4yBS5Sb2xlUgRyb2xlEhQKBWVtYWlsGAMgASgJUgVlbWFpbA==');
 
 @$core.Deprecated('Use requestPartnershipRequestDescriptor instead')
 const RequestPartnershipRequest$json = {
