@@ -210,7 +210,7 @@ service EntityHub {
 
     rpc GetAccountAudit(GetRequest) returns (AccountAudit) {
         option (google.api.http) = {
-            get: "/v1/{resource_name=accounts/*}/audits"
+            get: "/v1/{resource_name=accounts/*/audits/*}"
         };
     }
 
