@@ -90,4 +90,7 @@ message Accrual {
   Entity initiator = 64;
   Entity consignee = 65;
   repeated Signature signatures = 66;
+
+  //
+  double total = 68;
 }

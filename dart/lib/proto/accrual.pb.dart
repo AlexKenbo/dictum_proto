@@ -98,6 +98,7 @@ class Accrual extends $pb.GeneratedMessage {
     $2.Entity? consignee,
     $core.Iterable<$52.Signature>? signatures,
     $core.bool? confirmed,
+    $core.double? total,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -301,6 +302,9 @@ class Accrual extends $pb.GeneratedMessage {
     if (confirmed != null) {
       $result.confirmed = confirmed;
     }
+    if (total != null) {
+      $result.total = total;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -375,6 +379,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$2.Entity>(65, _omitFieldNames ? '' : 'consignee', subBuilder: $2.Entity.create)
     ..pc<$52.Signature>(66, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $52.Signature.create)
     ..aOB(67, _omitFieldNames ? '' : 'confirmed')
+    ..a<$core.double>(68, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -1026,6 +1031,15 @@ class Accrual extends $pb.GeneratedMessage {
   $core.bool hasConfirmed() => $_has(66);
   @$pb.TagNumber(67)
   void clearConfirmed() => clearField(67);
+
+  @$pb.TagNumber(68)
+  $core.double get total => $_getN(67);
+  @$pb.TagNumber(68)
+  set total($core.double v) { $_setDouble(67, v); }
+  @$pb.TagNumber(68)
+  $core.bool hasTotal() => $_has(67);
+  @$pb.TagNumber(68)
+  void clearTotal() => clearField(68);
 }
 
 
