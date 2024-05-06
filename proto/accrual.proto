@@ -69,7 +69,7 @@ message Accrual {
   Status status = 47;
   repeated Attachment attachments = 48;
 
-  // Invoicing new fields
+  // Invoicing fields
   int32 initiator_id = 49;
   int32 author_id = 50;
   int32 consignee_id = 51;
@@ -93,4 +93,7 @@ message Accrual {
 
   //
   double total = 68;
+
+  // 
+  bool cancel_mark_paid = 69;
 }

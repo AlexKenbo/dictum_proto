@@ -99,6 +99,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.Iterable<$52.Signature>? signatures,
     $core.bool? confirmed,
     $core.double? total,
+    $core.bool? cancelMarkPaid,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -305,6 +306,9 @@ class Accrual extends $pb.GeneratedMessage {
     if (total != null) {
       $result.total = total;
     }
+    if (cancelMarkPaid != null) {
+      $result.cancelMarkPaid = cancelMarkPaid;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -380,6 +384,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..pc<$52.Signature>(66, _omitFieldNames ? '' : 'signatures', $pb.PbFieldType.PM, subBuilder: $52.Signature.create)
     ..aOB(67, _omitFieldNames ? '' : 'confirmed')
     ..a<$core.double>(68, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
+    ..aOB(69, _omitFieldNames ? '' : 'cancelMarkPaid')
     ..hasRequiredFields = false
   ;
 
@@ -860,7 +865,7 @@ class Accrual extends $pb.GeneratedMessage {
   @$pb.TagNumber(48)
   $core.List<$15.Attachment> get attachments => $_getList(47);
 
-  /// Invoicing new fields
+  /// Invoicing fields
   @$pb.TagNumber(49)
   $core.int get initiatorId => $_getIZ(48);
   @$pb.TagNumber(49)
@@ -1040,6 +1045,15 @@ class Accrual extends $pb.GeneratedMessage {
   $core.bool hasTotal() => $_has(67);
   @$pb.TagNumber(68)
   void clearTotal() => clearField(68);
+
+  @$pb.TagNumber(69)
+  $core.bool get cancelMarkPaid => $_getBF(68);
+  @$pb.TagNumber(69)
+  set cancelMarkPaid($core.bool v) { $_setBool(68, v); }
+  @$pb.TagNumber(69)
+  $core.bool hasCancelMarkPaid() => $_has(68);
+  @$pb.TagNumber(69)
+  void clearCancelMarkPaid() => clearField(69);
 }
 
 
