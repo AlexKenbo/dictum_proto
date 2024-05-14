@@ -32,6 +32,8 @@ class Article extends $pb.GeneratedMessage {
     Article? parentArticle,
     $50.FundFlow? fundFlow,
     $core.int? entityId,
+    $core.int? sortPosition,
+    $core.String? description,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -73,6 +75,12 @@ class Article extends $pb.GeneratedMessage {
     if (entityId != null) {
       $result.entityId = entityId;
     }
+    if (sortPosition != null) {
+      $result.sortPosition = sortPosition;
+    }
+    if (description != null) {
+      $result.description = description;
+    }
     return $result;
   }
   Article._() : super();
@@ -93,6 +101,8 @@ class Article extends $pb.GeneratedMessage {
     ..aOM<Article>(11, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
     ..e<$50.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $50.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $50.FundFlow.valueOf, enumValues: $50.FundFlow.values)
     ..a<$core.int>(13, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'sortPosition', $pb.PbFieldType.O3)
+    ..aOS(15, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false
   ;
 
@@ -235,6 +245,24 @@ class Article extends $pb.GeneratedMessage {
   $core.bool hasEntityId() => $_has(12);
   @$pb.TagNumber(13)
   void clearEntityId() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get sortPosition => $_getIZ(13);
+  @$pb.TagNumber(14)
+  set sortPosition($core.int v) { $_setSignedInt32(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasSortPosition() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearSortPosition() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.String get description => $_getSZ(14);
+  @$pb.TagNumber(15)
+  set description($core.String v) { $_setString(14, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasDescription() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearDescription() => clearField(15);
 }
 
 
