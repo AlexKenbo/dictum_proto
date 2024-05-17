@@ -17,12 +17,14 @@ class Direction extends $pb.ProtobufEnum {
   static const Direction DIRECTION_UNKNOWN = Direction._(0, _omitEnumNames ? '' : 'DIRECTION_UNKNOWN');
   static const Direction DIRECTION_INCOME = Direction._(1, _omitEnumNames ? '' : 'DIRECTION_INCOME');
   static const Direction DIRECTION_EXPENSE = Direction._(2, _omitEnumNames ? '' : 'DIRECTION_EXPENSE');
+  static const Direction DIRECTION_OUTCOME = Direction._(4, _omitEnumNames ? '' : 'DIRECTION_OUTCOME');
   static const Direction DIRECTION_ANY = Direction._(3, _omitEnumNames ? '' : 'DIRECTION_ANY');
 
   static const $core.List<Direction> values = <Direction> [
     DIRECTION_UNKNOWN,
     DIRECTION_INCOME,
     DIRECTION_EXPENSE,
+    DIRECTION_OUTCOME,
     DIRECTION_ANY,
   ];
 

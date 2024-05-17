@@ -20,6 +20,7 @@ const Direction$json = {
     {'1': 'DIRECTION_UNKNOWN', '2': 0},
     {'1': 'DIRECTION_INCOME', '2': 1},
     {'1': 'DIRECTION_EXPENSE', '2': 2},
+    {'1': 'DIRECTION_OUTCOME', '2': 4},
     {'1': 'DIRECTION_ANY', '2': 3},
   ],
 };
@@ -27,5 +28,6 @@ const Direction$json = {
 /// Descriptor for `Direction`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List directionDescriptor = $convert.base64Decode(
     'CglEaXJlY3Rpb24SFQoRRElSRUNUSU9OX1VOS05PV04QABIUChBESVJFQ1RJT05fSU5DT01FEA'
-    'ESFQoRRElSRUNUSU9OX0VYUEVOU0UQAhIRCg1ESVJFQ1RJT05fQU5ZEAM=');
+    'ESFQoRRElSRUNUSU9OX0VYUEVOU0UQAhIVChFESVJFQ1RJT05fT1VUQ09NRRAEEhEKDURJUkVD'
+    'VElPTl9BTlkQAw==');
 

@@ -5,8 +5,11 @@ option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 enum Direction
 {
+  reserved 2;
+  reserved 'DIRECTION_EXPENSE';
+  
   DIRECTION_UNKNOWN = 0;
   DIRECTION_INCOME = 1;
-  DIRECTION_EXPENSE = 2;
+  DIRECTION_OUTCOME = 4;
   DIRECTION_ANY = 3;
 }
