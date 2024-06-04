@@ -62,21 +62,8 @@ Powershell:
 
 2. Запустите компиляцию из корня:
 
-Bash:
-
    ```bash
-      protoc -I . -I ./google --python_out=python/gen $(find . -name "*.proto")
-   ```
-
-Powershell:
-
-   ```powershell
-      $base_dir = Get-Location
-      $proto_files = Get-ChildItem -Recurse -Filter "*.proto"
-      foreach ($proto_file in $proto_files) {
-          $relative_path = $proto_file.FullName.Replace("$base_dir\", ".\")
-          protoc -I . -I .\google --python_out=python/gen $relative_path
-      }
+      python3 -m grpc_tools.protoc -I . -I ./google --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $(find . -name "*.proto")
    ```
 
 ## 3. Разработка proto, go и dart. Git-теги для версионирования
