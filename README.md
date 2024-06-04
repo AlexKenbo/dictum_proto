@@ -7,7 +7,9 @@ Protocol Buffers - буффер между протоколами бекенда
 
 Для начала работы с Protocol Buffers необходимо установить компилятор `protoc`. Вы можете скачать его с [официального сайта Protocol Buffers](https://github.com/protocolbuffers/protobuf/releases).
 
-## 2. Компиляция для Go
+## 2. Компиляция
+
+### Go
 
 Чтобы компилировать `.proto` файлы для Go:
 
@@ -27,7 +29,7 @@ Protocol Buffers - буффер между протоколами бекенда
       $(find . -name "*.proto")
    ```
 
-## 3. Компиляция для Dart
+### Dart
 
 Чтобы компилировать `.proto` файлы для Dart:
 
@@ -35,9 +37,13 @@ Protocol Buffers - буффер между протоколами бекенда
 
 2. Запустите компиляцию из корня:
 
+Bash:
+
    ```bash
       protoc -I . -I ./google --dart_out=grpc:dart/lib $(find . -name "*.proto")
    ```
+
+Powershell:
 
    ```powershell
       $base_dir = Get-Location
@@ -48,7 +54,32 @@ Protocol Buffers - буффер между протоколами бекенда
       }
    ```
 
-## 4. Разработка proto, go и dart. Git-теги для версионирования
+### Python
+
+Чтобы компилировать `.proto` файлы для Dart:
+
+1. Установите Dart плагин для protoc. Следуйте инструкциям на [официальной странице пакета](https://pub.dev/packages/protoc_plugin).
+
+2. Запустите компиляцию из корня:
+
+Bash:
+
+   ```bash
+      protoc -I . -I ./google --python_out=python/gen $(find . -name "*.proto")
+   ```
+
+Powershell:
+
+   ```powershell
+      $base_dir = Get-Location
+      $proto_files = Get-ChildItem -Recurse -Filter "*.proto"
+      foreach ($proto_file in $proto_files) {
+          $relative_path = $proto_file.FullName.Replace("$base_dir\", ".\")
+          protoc -I . -I .\google --python_out=python/gen $relative_path
+      }
+   ```
+
+## 3. Разработка proto, go и dart. Git-теги для версионирования
 
 ### Формат
 
@@ -85,14 +116,14 @@ Protocol Buffers - буффер между протоколами бекенда
    ```bash
    git tag v[new_version]
    ```
- 
+
 3. Отправьте тег в удаленный репозиторий:
 
    ```bash
    git push origin v[new_version]
    ```
 
-## 5. Подключение модуля go в проект
+## 4. Подключение модуля go в проект
 
 Чтобы использовать ваш приватный модуль Go в другом проекте:
 
@@ -104,7 +135,7 @@ Protocol Buffers - буффер между протоколами бекенда
 
 2. Теперь вы можете импортировать пакет Go в вашем коде.
 
-## 6. Подключение пакета dart в проект
+## 5. Подключение пакета dart в проект
 
 Для подключения вашего Dart пакета из приватного репозитория:
 
@@ -127,7 +158,7 @@ Protocol Buffers - буффер между протоколами бекенда
 
 Конечно, дополним инструкцию:
 
-## 7. Как делали настройку текущего модуля Go (для справки)
+## 6. Как делали настройку текущего модуля Go (для справки)
 
 1. Перейдите в папку `go`:
 
@@ -147,7 +178,7 @@ Protocol Buffers - буффер между протоколами бекенда
    go mod tidy
    ```
 
-## 8. Как делали настройку текущего пакета Dart (для справки)
+## 7. Как делали настройку текущего пакета Dart (для справки)
 
 1. В папке `dart`, создайте или отредактируйте файл `pubspec.yaml`:
 
