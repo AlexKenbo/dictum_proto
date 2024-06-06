@@ -9,4 +9,9 @@ setup(
         'grpcio',
         'grpcio-tools',
     ],
+    url='https://github.com/AlexKenbo/dictum_proto',
+    author='loopnyapy',
+    author_email='da.eto.deniska@gmail.com',
+    description='Protobuf api for Dictum'
+
 )
