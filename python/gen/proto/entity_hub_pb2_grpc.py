@@ -64,6 +64,11 @@ class EntityHubStub(object):
                 request_serializer=proto_dot_entity__pb2.Entity.SerializeToString,
                 response_deserializer=proto_dot_entity__pb2.Entity.FromString,
                 _registered_method=True)
+        self.DeleteEntity = channel.unary_unary(
+                '/EntityHub/DeleteEntity',
+                request_serializer=proto_dot_requests__pb2.DeleteRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                _registered_method=True)
         self.BatchInsertEntities = channel.unary_unary(
                 '/EntityHub/BatchInsertEntities',
                 request_serializer=proto_dot_entity__hub__pb2.BatchInsertEntitiesRequest.SerializeToString,
@@ -234,6 +239,12 @@ class EntityHubServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def CreateEntity(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteEntity(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -441,6 +452,11 @@ def add_EntityHubServicer_to_server(servicer, server):
                     servicer.CreateEntity,
                     request_deserializer=proto_dot_entity__pb2.Entity.FromString,
                     response_serializer=proto_dot_entity__pb2.Entity.SerializeToString,
+            ),
+            'DeleteEntity': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteEntity,
+                    request_deserializer=proto_dot_requests__pb2.DeleteRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'BatchInsertEntities': grpc.unary_unary_rpc_method_handler(
                     servicer.BatchInsertEntities,
@@ -675,6 +691,33 @@ class EntityHub(object):
             '/EntityHub/CreateEntity',
             proto_dot_entity__pb2.Entity.SerializeToString,
             proto_dot_entity__pb2.Entity.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def DeleteEntity(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/EntityHub/DeleteEntity',
+            proto_dot_requests__pb2.DeleteRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options,
             channel_credentials,
             insecure,

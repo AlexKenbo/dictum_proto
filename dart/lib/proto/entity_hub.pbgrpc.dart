@@ -42,6 +42,10 @@ class EntityHubClient extends $grpc.Client {
       '/EntityHub/CreateEntity',
       ($2.Entity value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.Entity.fromBuffer(value));
+  static final _$deleteEntity = $grpc.ClientMethod<$0.DeleteRequest, $3.Empty>(
+      '/EntityHub/DeleteEntity',
+      ($0.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.Empty.fromBuffer(value));
   static final _$batchInsertEntities = $grpc.ClientMethod<$1.BatchInsertEntitiesRequest, $3.Empty>(
       '/EntityHub/BatchInsertEntities',
       ($1.BatchInsertEntitiesRequest value) => value.writeToBuffer(),
@@ -179,6 +183,10 @@ class EntityHubClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$2.Entity> createEntity($2.Entity request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createEntity, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.Empty> deleteEntity($0.DeleteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteEntity, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Empty> batchInsertEntities($1.BatchInsertEntitiesRequest request, {$grpc.CallOptions? options}) {
@@ -328,6 +336,13 @@ abstract class EntityHubServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.Entity.fromBuffer(value),
         ($2.Entity value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteRequest, $3.Empty>(
+        'DeleteEntity',
+        deleteEntity_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteRequest.fromBuffer(value),
+        ($3.Empty value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.BatchInsertEntitiesRequest, $3.Empty>(
         'BatchInsertEntities',
         batchInsertEntities_Pre,
@@ -552,6 +567,10 @@ abstract class EntityHubServiceBase extends $grpc.Service {
     return createEntity(call, await request);
   }
 
+  $async.Future<$3.Empty> deleteEntity_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteRequest> request) async {
+    return deleteEntity(call, await request);
+  }
+
   $async.Future<$3.Empty> batchInsertEntities_Pre($grpc.ServiceCall call, $async.Future<$1.BatchInsertEntitiesRequest> request) async {
     return batchInsertEntities(call, await request);
   }
@@ -675,6 +694,7 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $async.Future<$1.ListEntitiesResponse> listEntities($grpc.ServiceCall call, $0.ListRequest request);
   $async.Future<$2.Entity> getEntity($grpc.ServiceCall call, $0.GetRequest request);
   $async.Future<$2.Entity> createEntity($grpc.ServiceCall call, $2.Entity request);
+  $async.Future<$3.Empty> deleteEntity($grpc.ServiceCall call, $0.DeleteRequest request);
   $async.Future<$3.Empty> batchInsertEntities($grpc.ServiceCall call, $1.BatchInsertEntitiesRequest request);
   $async.Future<$2.Entity> updateEntity($grpc.ServiceCall call, $2.Entity request);
   $async.Future<$4.EntityAggregate> aggregateEntity($grpc.ServiceCall call, $0.GetRequest request);

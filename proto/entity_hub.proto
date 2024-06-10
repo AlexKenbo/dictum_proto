@@ -48,6 +48,14 @@ service EntityHub {
         };
     };
 
+
+    rpc DeleteEntity(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+        delete: "/v1/{resource_name=entities/*}"
+            body: "entity"
+        };
+    }
+
     rpc BatchInsertEntities(BatchInsertEntitiesRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
             post: "/v1/batch-entities"
