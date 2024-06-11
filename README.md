@@ -106,8 +106,16 @@ Powershell:
 
 3. Отправьте тег в удаленный репозиторий:
 
+Для отправки в main:
+
    ```bash
    git push origin v[new_version]
+   ```
+
+Для отправки в другие ветки:
+
+   ```bash
+   git push origin v[new_version] stage
    ```
 
 ## 4. Подключение модуля go в проект
