@@ -96,4 +96,7 @@ message Accrual {
 
   // 
   bool cancel_mark_paid = 69;
+
+  //
+  bool has_comments = 70;
 }
