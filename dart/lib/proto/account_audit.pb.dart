@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $34;
 import 'account.pb.dart' as $6;
 import 'user.pb.dart' as $13;
 
@@ -28,7 +28,7 @@ class AccountAudit extends $pb.GeneratedMessage {
     $6.Account? account,
     $core.double? bankBalance,
     $core.bool? balanceCorrect,
-    $33.Timestamp? createTime,
+    $34.Timestamp? createTime,
     $13.User? auditor,
   }) {
     final $result = create();
@@ -81,7 +81,7 @@ class AccountAudit extends $pb.GeneratedMessage {
     ..aOM<$6.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..a<$core.double>(10, _omitFieldNames ? '' : 'bankBalance', $pb.PbFieldType.OD)
     ..aOB(13, _omitFieldNames ? '' : 'balanceCorrect')
-    ..aOM<$33.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $33.Timestamp.create)
+    ..aOM<$34.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $34.Timestamp.create)
     ..aOM<$13.User>(15, _omitFieldNames ? '' : 'auditor', subBuilder: $13.User.create)
     ..hasRequiredFields = false
   ;
@@ -191,15 +191,15 @@ class AccountAudit extends $pb.GeneratedMessage {
   void clearBalanceCorrect() => clearField(13);
 
   @$pb.TagNumber(14)
-  $33.Timestamp get createTime => $_getN(9);
+  $34.Timestamp get createTime => $_getN(9);
   @$pb.TagNumber(14)
-  set createTime($33.Timestamp v) { setField(14, v); }
+  set createTime($34.Timestamp v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCreateTime() => $_has(9);
   @$pb.TagNumber(14)
   void clearCreateTime() => clearField(14);
   @$pb.TagNumber(14)
-  $33.Timestamp ensureCreateTime() => $_ensure(9);
+  $34.Timestamp ensureCreateTime() => $_ensure(9);
 
   @$pb.TagNumber(15)
   $13.User get auditor => $_getN(10);

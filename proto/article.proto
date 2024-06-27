@@ -23,4 +23,7 @@ message Article
   FundFlow fundFlow = 12;
   // 
   int32 entity_id = 13;
+
+  int32 sort_position = 14;
+  string description = 15;
 } 

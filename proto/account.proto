@@ -10,6 +10,7 @@ import "proto/currency.proto";
 import "proto/fi.proto";
 import "proto/employee.proto";
 import "proto/account_detail.proto";
+import "proto/account_balance.proto";
 
 message Account
 {
@@ -30,4 +31,6 @@ message Account
   Employee cashier = 21;
   AccountDetail account_detail = 23;
   google.protobuf.Timestamp create_time = 24;
+
+  AccountBalance account_balance = 25;
 }

@@ -13,8 +13,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'account.pb.dart' as $6;
-
 class AccountBalance extends $pb.GeneratedMessage {
   factory AccountBalance({
     $core.int? accountId,
@@ -23,7 +21,6 @@ class AccountBalance extends $pb.GeneratedMessage {
     $core.double? payoutsAmount,
     $core.double? unverifiedPayoutsAmount,
     $core.String? resourceName,
-    $6.Account? account,
     $core.double? balance,
     $core.double? unverifiedBalance,
   }) {
@@ -46,9 +43,6 @@ class AccountBalance extends $pb.GeneratedMessage {
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
-    if (account != null) {
-      $result.account = account;
-    }
     if (balance != null) {
       $result.balance = balance;
     }
@@ -68,7 +62,6 @@ class AccountBalance extends $pb.GeneratedMessage {
     ..a<$core.double>(4, _omitFieldNames ? '' : 'payoutsAmount', $pb.PbFieldType.OD)
     ..a<$core.double>(5, _omitFieldNames ? '' : 'unverifiedPayoutsAmount', $pb.PbFieldType.OD)
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$6.Account>(10, _omitFieldNames ? '' : 'account', subBuilder: $6.Account.create)
     ..a<$core.double>(11, _omitFieldNames ? '' : 'balance', $pb.PbFieldType.OD)
     ..a<$core.double>(12, _omitFieldNames ? '' : 'unverifiedBalance', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
@@ -149,32 +142,21 @@ class AccountBalance extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearResourceName() => clearField(8);
 
-  @$pb.TagNumber(10)
-  $6.Account get account => $_getN(6);
-  @$pb.TagNumber(10)
-  set account($6.Account v) { setField(10, v); }
-  @$pb.TagNumber(10)
-  $core.bool hasAccount() => $_has(6);
-  @$pb.TagNumber(10)
-  void clearAccount() => clearField(10);
-  @$pb.TagNumber(10)
-  $6.Account ensureAccount() => $_ensure(6);
-
   @$pb.TagNumber(11)
-  $core.double get balance => $_getN(7);
+  $core.double get balance => $_getN(6);
   @$pb.TagNumber(11)
-  set balance($core.double v) { $_setDouble(7, v); }
+  set balance($core.double v) { $_setDouble(6, v); }
   @$pb.TagNumber(11)
-  $core.bool hasBalance() => $_has(7);
+  $core.bool hasBalance() => $_has(6);
   @$pb.TagNumber(11)
   void clearBalance() => clearField(11);
 
   @$pb.TagNumber(12)
-  $core.double get unverifiedBalance => $_getN(8);
+  $core.double get unverifiedBalance => $_getN(7);
   @$pb.TagNumber(12)
-  set unverifiedBalance($core.double v) { $_setDouble(8, v); }
+  set unverifiedBalance($core.double v) { $_setDouble(7, v); }
   @$pb.TagNumber(12)
-  $core.bool hasUnverifiedBalance() => $_has(8);
+  $core.bool hasUnverifiedBalance() => $_has(7);
   @$pb.TagNumber(12)
   void clearUnverifiedBalance() => clearField(12);
 }

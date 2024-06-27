@@ -84,6 +84,8 @@ const Accrual$json = {
     {'1': 'initiator', '3': 64, '4': 1, '5': 11, '6': '.Entity', '10': 'initiator'},
     {'1': 'consignee', '3': 65, '4': 1, '5': 11, '6': '.Entity', '10': 'consignee'},
     {'1': 'signatures', '3': 66, '4': 3, '5': 11, '6': '.Signature', '10': 'signatures'},
+    {'1': 'total', '3': 68, '4': 1, '5': 1, '10': 'total'},
+    {'1': 'cancel_mark_paid', '3': 69, '4': 1, '5': 8, '10': 'cancelMarkPaid'},
   ],
 };
 
@@ -137,5 +139,6 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'JlY2lwaWVudEFydGljbGUSJAoIY29tbWVudHMYPiADKAsyCC5Db21tZW50Ughjb21tZW50cxId'
     'CgZhdXRob3IYPyABKAsyBS5Vc2VyUgZhdXRob3ISJQoJaW5pdGlhdG9yGEAgASgLMgcuRW50aX'
     'R5Uglpbml0aWF0b3ISJQoJY29uc2lnbmVlGEEgASgLMgcuRW50aXR5Ugljb25zaWduZWUSKgoK'
-    'c2lnbmF0dXJlcxhCIAMoCzIKLlNpZ25hdHVyZVIKc2lnbmF0dXJlcw==');
+    'c2lnbmF0dXJlcxhCIAMoCzIKLlNpZ25hdHVyZVIKc2lnbmF0dXJlcxIUCgV0b3RhbBhEIAEoAV'
+    'IFdG90YWwSKAoQY2FuY2VsX21hcmtfcGFpZBhFIAEoCFIOY2FuY2VsTWFya1BhaWQ=');
 

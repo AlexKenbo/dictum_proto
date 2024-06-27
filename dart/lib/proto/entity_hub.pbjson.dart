@@ -61,6 +61,35 @@ final $typed_data.Uint8List listEntitiesResponseDescriptor = $convert.base64Deco
     '5hbWUSIwoIZW50aXRpZXMYAiADKAsyBy5FbnRpdHlSCGVudGl0aWVzEiYKD25leHRfcGFnZV90'
     'b2tlbhgDIAEoCVINbmV4dFBhZ2VUb2tlbg==');
 
+@$core.Deprecated('Use requestEmployeeRequestDescriptor instead')
+const RequestEmployeeRequest$json = {
+  '1': 'RequestEmployeeRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'role', '3': 2, '4': 1, '5': 14, '6': '.Role', '10': 'role'},
+    {'1': 'email', '3': 3, '4': 1, '5': 9, '10': 'email'},
+  ],
+};
+
+/// Descriptor for `RequestEmployeeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List requestEmployeeRequestDescriptor = $convert.base64Decode(
+    'ChZSZXF1ZXN0RW1wbG95ZWVSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhkKBHJvbG'
+    'UYAiABKA4yBS5Sb2xlUgRyb2xlEhQKBWVtYWlsGAMgASgJUgVlbWFpbA==');
+
+@$core.Deprecated('Use requestPartnershipRequestDescriptor instead')
+const RequestPartnershipRequest$json = {
+  '1': 'RequestPartnershipRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'email', '3': 2, '4': 1, '5': 9, '10': 'email'},
+  ],
+};
+
+/// Descriptor for `RequestPartnershipRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List requestPartnershipRequestDescriptor = $convert.base64Decode(
+    'ChlSZXF1ZXN0UGFydG5lcnNoaXBSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhQKBW'
+    'VtYWlsGAIgASgJUgVlbWFpbA==');
+
 @$core.Deprecated('Use batchInsertEntitiesRequestDescriptor instead')
 const BatchInsertEntitiesRequest$json = {
   '1': 'BatchInsertEntitiesRequest',

@@ -18,6 +18,7 @@ import "proto/entity.proto";
 import "proto/fi.proto";
 import "proto/requests.proto";
 import "proto/entity_access.proto";
+import "proto/role.proto";
 
 //Репо - Entity, Account
 service EntityHub {
@@ -46,6 +47,14 @@ service EntityHub {
             body: "entity"
         };
     };
+
+
+    rpc DeleteEntity(DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+        delete: "/v1/{resource_name=entities/*}"
+            body: "entity"
+        };
+    }
 
     rpc BatchInsertEntities(BatchInsertEntitiesRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
@@ -200,28 +209,45 @@ service EntityHub {
 
     rpc ListAccountAudits(ListRequest) returns (ListAccountAuditsResponse) {
         option (google.api.http) = {
-          get: "/v1/{parent=accounts/*}/audits"
+            get: "/v1/accounts/-/audits"
+            additional_bindings {
+                get: "/v1/{parent=accounts/*}/audits"
+            }
         };
     }
 
     rpc GetAccountAudit(GetRequest) returns (AccountAudit) {
         option (google.api.http) = {
-            get: "/v1/{resource_name=accounts/*}/audits"
+            get: "/v1/{resource_name=accounts/*/audits/*}"
         };
     }
 
     rpc GetAccountBalance(GetRequest) returns (AccountBalance) {
         option (google.api.http) = {
-            get: "/v1/{resource_name=accounts/*}/balance"
+            get: "/v1/{resource_name=accounts/*}/balances"
         };
     }
 
     rpc CreateAccountAudit(AccountAudit) returns (AccountAudit) {
-            option (google.api.http) = {
-                post: "/v1/{account_audit.resource_name=accounts/*}/audits"
-                body: "account_audit"
-            };
+        option (google.api.http) = {
+            post: "/v1/{account_audit.resource_name=accounts/*}/audits"
+            body: "account_audit"
         };
+    };
+
+    rpc RequestEmployee(RequestEmployeeRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/{parent=entities/*}/employees:request"
+            body: "*"
+        };
+    };
+
+    rpc RequestPartnership(RequestPartnershipRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/v1/{parent=entities/*}/accesses:request"
+            body: "*"
+        };
+    };
 
     //--
     rpc ListEntityAccesses(ListRequest) returns (ListEntityAccessesResponse) {
@@ -255,6 +281,16 @@ message ListEntitiesResponse {
     string next_page_token = 3;
 }
 
+message RequestEmployeeRequest {
+    string parent = 1;
+    Role role = 2;
+    string email = 3;
+}
+
+message RequestPartnershipRequest {
+    string parent = 1;
+    string email = 2;
+}
 
 message BatchInsertEntitiesRequest {
     repeated Entity entities = 1;

@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/any.pb.dart' as $70;
+import '../google/protobuf/any.pb.dart' as $71;
 import 'order.pbenum.dart';
 
 export 'order.pbenum.dart';
@@ -146,11 +146,11 @@ class OrderResponse extends $pb.GeneratedMessage {
     $core.String? price,
     $core.String? paymentLink,
     $core.String? paymentLinkBill,
-    $70.Any? depositTransaction,
+    $71.Any? depositTransaction,
     $core.int? requiredConfirmations,
     $core.int? estimatedFee,
     $core.int? estimatedProcessingTime,
-    $70.Any? withdrawalExtensions,
+    $71.Any? withdrawalExtensions,
     $core.String? currencyFrom,
     $core.String? currencyTo,
     $core.String? partnerAddress,
@@ -259,11 +259,11 @@ class OrderResponse extends $pb.GeneratedMessage {
     ..aOS(15, _omitFieldNames ? '' : 'price')
     ..aOS(16, _omitFieldNames ? '' : 'paymentLink')
     ..aOS(17, _omitFieldNames ? '' : 'paymentLinkBill')
-    ..aOM<$70.Any>(19, _omitFieldNames ? '' : 'depositTransaction', subBuilder: $70.Any.create)
+    ..aOM<$71.Any>(19, _omitFieldNames ? '' : 'depositTransaction', subBuilder: $71.Any.create)
     ..a<$core.int>(20, _omitFieldNames ? '' : 'requiredConfirmations', $pb.PbFieldType.O3)
     ..a<$core.int>(21, _omitFieldNames ? '' : 'estimatedFee', $pb.PbFieldType.O3)
     ..a<$core.int>(22, _omitFieldNames ? '' : 'estimatedProcessingTime', $pb.PbFieldType.O3)
-    ..aOM<$70.Any>(23, _omitFieldNames ? '' : 'withdrawalExtensions', subBuilder: $70.Any.create)
+    ..aOM<$71.Any>(23, _omitFieldNames ? '' : 'withdrawalExtensions', subBuilder: $71.Any.create)
     ..aOS(24, _omitFieldNames ? '' : 'currencyFrom')
     ..aOS(25, _omitFieldNames ? '' : 'currencyTo')
     ..aOS(26, _omitFieldNames ? '' : 'partnerAddress')
@@ -448,15 +448,15 @@ class OrderResponse extends $pb.GeneratedMessage {
   /// TODO(Denis): пока закомментировал, сложно мапить этот тип
   /// repeated google.protobuf.Any withdrawal_transactions = 18;
   @$pb.TagNumber(19)
-  $70.Any get depositTransaction => $_getN(17);
+  $71.Any get depositTransaction => $_getN(17);
   @$pb.TagNumber(19)
-  set depositTransaction($70.Any v) { setField(19, v); }
+  set depositTransaction($71.Any v) { setField(19, v); }
   @$pb.TagNumber(19)
   $core.bool hasDepositTransaction() => $_has(17);
   @$pb.TagNumber(19)
   void clearDepositTransaction() => clearField(19);
   @$pb.TagNumber(19)
-  $70.Any ensureDepositTransaction() => $_ensure(17);
+  $71.Any ensureDepositTransaction() => $_ensure(17);
 
   @$pb.TagNumber(20)
   $core.int get requiredConfirmations => $_getIZ(18);
@@ -486,15 +486,15 @@ class OrderResponse extends $pb.GeneratedMessage {
   void clearEstimatedProcessingTime() => clearField(22);
 
   @$pb.TagNumber(23)
-  $70.Any get withdrawalExtensions => $_getN(21);
+  $71.Any get withdrawalExtensions => $_getN(21);
   @$pb.TagNumber(23)
-  set withdrawalExtensions($70.Any v) { setField(23, v); }
+  set withdrawalExtensions($71.Any v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasWithdrawalExtensions() => $_has(21);
   @$pb.TagNumber(23)
   void clearWithdrawalExtensions() => clearField(23);
   @$pb.TagNumber(23)
-  $70.Any ensureWithdrawalExtensions() => $_ensure(21);
+  $71.Any ensureWithdrawalExtensions() => $_ensure(21);
 
   @$pb.TagNumber(24)
   $core.String get currencyFrom => $_getSZ(22);

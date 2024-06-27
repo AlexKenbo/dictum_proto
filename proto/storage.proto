@@ -18,6 +18,10 @@ service Storage {
                 post: "/v1/{attachment.resource_name=transfers/*}/attachments"
                 body: "attachment"
             }
+            additional_bindings {
+                post: "/v1/{attachment.resource_name=entities/*}/attachments"
+                body: "attachment"
+            }
         };
     };
 
@@ -27,9 +31,23 @@ service Storage {
             additional_bindings {
                 delete: "/v1/{resource_name=transfers/*/attachments/*}"
             }
+            additional_bindings {
+                delete: "/v1/{resource_name=entities/*/attachments/*}"
+            }
         };
     };
-   
+
+    rpc ListAttachments(ListRequest) returns (ListAttachmentsResponse) {
+        option (google.api.http) = {
+            delete: "/v1/{parent=accruals/*}/attachments"
+            additional_bindings {
+                delete: "/v1/{parent=transfers/*}/attachments"
+            }
+            additional_bindings {
+                delete: "/v1/{parent=entities/*}/attachments"
+            }
+        };
+    };
 }
 
 message ListAttachmentsResponse {
