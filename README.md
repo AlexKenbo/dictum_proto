@@ -34,8 +34,19 @@ Protocol Buffers - буффер между протоколами бекенда
 Чтобы компилировать `.proto` файлы для Dart:
 
 1. Установите Dart плагин для protoc. Следуйте инструкциям на [официальной странице пакета](https://pub.dev/packages/protoc_plugin).
+2. Активируйте плагин:
 
-2. Запустите компиляцию из корня:
+   ```bash
+      dart pub global activate protoc_plugin
+   ```
+
+3. Настройте переменную окружения:
+
+   ```bash
+      export PATH="$PATH:$HOME/.pub-cache/bin"
+   ```
+
+4. Запустите компиляцию из корня:
 
 Bash:
 
