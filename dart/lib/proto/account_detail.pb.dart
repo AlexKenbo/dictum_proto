@@ -33,6 +33,9 @@ class AccountDetail extends $pb.GeneratedMessage {
     $core.String? blockchainNetwork,
     $core.String? tokenStandard,
     $core.String? resourceName,
+    $core.String? telephone,
+    $core.String? website,
+    $core.String? email,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -89,6 +92,15 @@ class AccountDetail extends $pb.GeneratedMessage {
     if (resourceName != null) {
       $result.resourceName = resourceName;
     }
+    if (telephone != null) {
+      $result.telephone = telephone;
+    }
+    if (website != null) {
+      $result.website = website;
+    }
+    if (email != null) {
+      $result.email = email;
+    }
     return $result;
   }
   AccountDetail._() : super();
@@ -114,6 +126,9 @@ class AccountDetail extends $pb.GeneratedMessage {
     ..aOS(30, _omitFieldNames ? '' : 'blockchainNetwork')
     ..aOS(32, _omitFieldNames ? '' : 'tokenStandard')
     ..aOS(34, _omitFieldNames ? '' : 'resourceName')
+    ..aOS(35, _omitFieldNames ? '' : 'telephone')
+    ..aOS(36, _omitFieldNames ? '' : 'website')
+    ..aOS(37, _omitFieldNames ? '' : 'email')
     ..hasRequiredFields = false
   ;
 
@@ -299,6 +314,33 @@ class AccountDetail extends $pb.GeneratedMessage {
   $core.bool hasResourceName() => $_has(17);
   @$pb.TagNumber(34)
   void clearResourceName() => clearField(34);
+
+  @$pb.TagNumber(35)
+  $core.String get telephone => $_getSZ(18);
+  @$pb.TagNumber(35)
+  set telephone($core.String v) { $_setString(18, v); }
+  @$pb.TagNumber(35)
+  $core.bool hasTelephone() => $_has(18);
+  @$pb.TagNumber(35)
+  void clearTelephone() => clearField(35);
+
+  @$pb.TagNumber(36)
+  $core.String get website => $_getSZ(19);
+  @$pb.TagNumber(36)
+  set website($core.String v) { $_setString(19, v); }
+  @$pb.TagNumber(36)
+  $core.bool hasWebsite() => $_has(19);
+  @$pb.TagNumber(36)
+  void clearWebsite() => clearField(36);
+
+  @$pb.TagNumber(37)
+  $core.String get email => $_getSZ(20);
+  @$pb.TagNumber(37)
+  set email($core.String v) { $_setString(20, v); }
+  @$pb.TagNumber(37)
+  $core.bool hasEmail() => $_has(20);
+  @$pb.TagNumber(37)
+  void clearEmail() => clearField(37);
 }
 
 

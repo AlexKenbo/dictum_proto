@@ -5,7 +5,7 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class AccountDetail(_message.Message):
-    __slots__ = ("account_id", "beneficiary_name", "beneficiary_address", "vat_number", "fi_code", "fi_address", "correspondent_account_number", "correspondent_code", "correspondent_address", "correspondent_fi_name", "intermediary_account_number", "intermediary_code", "intermediary_address", "intermediary_fi_name", "routing_number", "blockchain_network", "token_standard", "resource_name")
+    __slots__ = ("account_id", "beneficiary_name", "beneficiary_address", "vat_number", "fi_code", "fi_address", "correspondent_account_number", "correspondent_code", "correspondent_address", "correspondent_fi_name", "intermediary_account_number", "intermediary_code", "intermediary_address", "intermediary_fi_name", "routing_number", "blockchain_network", "token_standard", "resource_name", "telephone", "website", "email")
     ACCOUNT_ID_FIELD_NUMBER: _ClassVar[int]
     BENEFICIARY_NAME_FIELD_NUMBER: _ClassVar[int]
     BENEFICIARY_ADDRESS_FIELD_NUMBER: _ClassVar[int]
@@ -24,6 +24,9 @@ class AccountDetail(_message.Message):
     BLOCKCHAIN_NETWORK_FIELD_NUMBER: _ClassVar[int]
     TOKEN_STANDARD_FIELD_NUMBER: _ClassVar[int]
     RESOURCE_NAME_FIELD_NUMBER: _ClassVar[int]
+    TELEPHONE_FIELD_NUMBER: _ClassVar[int]
+    WEBSITE_FIELD_NUMBER: _ClassVar[int]
+    EMAIL_FIELD_NUMBER: _ClassVar[int]
     account_id: int
     beneficiary_name: str
     beneficiary_address: str
@@ -42,4 +45,7 @@ class AccountDetail(_message.Message):
     blockchain_network: str
     token_standard: str
     resource_name: str
-    def __init__(self, account_id: _Optional[int] = ..., beneficiary_name: _Optional[str] = ..., beneficiary_address: _Optional[str] = ..., vat_number: _Optional[str] = ..., fi_code: _Optional[str] = ..., fi_address: _Optional[str] = ..., correspondent_account_number: _Optional[str] = ..., correspondent_code: _Optional[str] = ..., correspondent_address: _Optional[str] = ..., correspondent_fi_name: _Optional[str] = ..., intermediary_account_number: _Optional[str] = ..., intermediary_code: _Optional[str] = ..., intermediary_address: _Optional[str] = ..., intermediary_fi_name: _Optional[str] = ..., routing_number: _Optional[str] = ..., blockchain_network: _Optional[str] = ..., token_standard: _Optional[str] = ..., resource_name: _Optional[str] = ...) -> None: ...
+    telephone: str
+    website: str
+    email: str
+    def __init__(self, account_id: _Optional[int] = ..., beneficiary_name: _Optional[str] = ..., beneficiary_address: _Optional[str] = ..., vat_number: _Optional[str] = ..., fi_code: _Optional[str] = ..., fi_address: _Optional[str] = ..., correspondent_account_number: _Optional[str] = ..., correspondent_code: _Optional[str] = ..., correspondent_address: _Optional[str] = ..., correspondent_fi_name: _Optional[str] = ..., intermediary_account_number: _Optional[str] = ..., intermediary_code: _Optional[str] = ..., intermediary_address: _Optional[str] = ..., intermediary_fi_name: _Optional[str] = ..., routing_number: _Optional[str] = ..., blockchain_network: _Optional[str] = ..., token_standard: _Optional[str] = ..., resource_name: _Optional[str] = ..., telephone: _Optional[str] = ..., website: _Optional[str] = ..., email: _Optional[str] = ...) -> None: ...
