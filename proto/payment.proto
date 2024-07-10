@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package payment;
+
+import "proto/accrual.proto";
+
+import "google/protobuf/timestamp.proto";
+
+// Dictum Payment Service
+service PaymentService {
+  // Process a single payment
+  rpc ProcessPayment(ProcessPaymentRequest) returns (ProcessPaymentResponse);
+  
+  // Process a batch of payments
+  rpc BatchProcessPayment(BatchProcessPaymentRequest) returns (stream ProcessPaymentResponse);
+  
+  // Check the status of a transaction on the Tron network
+  rpc CheckTransactionStatus(CheckTransactionStatusRequest) returns (CheckTransactionStatusResponse);
+  
+  // Check the estimated energy required for a transaction
+  rpc EstimateEnergy(EstimateEnergyRequest) returns (EstimateEnergyResponse);
+  
+  // Wait for transaction confirmation
+  rpc WaitTransactionConfirmation(WaitTransactionConfirmationRequest) returns (WaitTransactionConfirmationResponse);
+}
+
+message ProcessPaymentRequest {
+  string signed_transaction = 1;  // Signed transaction
+  string uuid = 2;  // Unique transaction identifier
+  Accrual accrual = 3;  // Accrual object
+}
+
+message ProcessPaymentResponse {
+  string uuid = 1;  // Unique transaction identifier
+  string txid = 2; // Transaction ID on the Tron network
+  string status = 3;
+  string error = 4;
+}  
+
+message BatchProcessPaymentRequest {
+  repeated ProcessPaymentRequest payments = 1;  // List of payments (maximum N payments per request)
+}
+
+message CheckTransactionStatusRequest {
+  string txid = 1;  // Transaction ID on the Tron network
+}
+
+message CheckTransactionStatusResponse {
+  string txid = 1;
+  string status = 2;
+  string error = 3;
+  double fee = 4;
+  google.protobuf.Timestamp confirm_time = 5;
+}  
+
+message EstimateEnergyRequest {
+  string from_address = 1;  // Sender's address
+  string to_address = 2;  // Recipient's address
+  double amount = 3;  // Transaction amount
+}
+
+message EstimateEnergyResponse {
+  double estimated_energy = 1;  // Estimated required energy
+  double fee = 2;  // Estimated fee in TRX
+  string error = 3;  // Estimated fee in TRX
+}
+
+message WaitTransactionConfirmationRequest {
+  string txid = 1;  // Transaction ID
+}
+
+message WaitTransactionConfirmationResponse {
+  string txid = 1;  // Transaction ID
+  string status = 2;  // Transaction status (e.g., "pending", "success", "failed")
+  double fee = 3;  // Transaction fee
+  string error = 4;  // Error message (if any)
+  google.protobuf.Timestamp confirm_time = 5;  // Transaction confirmation time
+}
