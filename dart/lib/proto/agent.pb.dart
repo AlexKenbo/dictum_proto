@@ -18,6 +18,7 @@ class Agent extends $pb.GeneratedMessage {
     $core.int? entityId,
     $core.String? iconUrl,
     $core.String? timeZone,
+    $core.String? invoiceLogoUrl,
   }) {
     final $result = create();
     if (entityId != null) {
@@ -29,6 +30,9 @@ class Agent extends $pb.GeneratedMessage {
     if (timeZone != null) {
       $result.timeZone = timeZone;
     }
+    if (invoiceLogoUrl != null) {
+      $result.invoiceLogoUrl = invoiceLogoUrl;
+    }
     return $result;
   }
   Agent._() : super();
@@ -39,6 +43,7 @@ class Agent extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'iconUrl')
     ..aOS(3, _omitFieldNames ? '' : 'timeZone')
+    ..aOS(4, _omitFieldNames ? '' : 'invoiceLogoUrl')
     ..hasRequiredFields = false
   ;
 
@@ -89,6 +94,15 @@ class Agent extends $pb.GeneratedMessage {
   $core.bool hasTimeZone() => $_has(2);
   @$pb.TagNumber(3)
   void clearTimeZone() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get invoiceLogoUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set invoiceLogoUrl($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasInvoiceLogoUrl() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearInvoiceLogoUrl() => clearField(4);
 }
 
 
