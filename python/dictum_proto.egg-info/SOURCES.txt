@@ -1,0 +1,7 @@
+setup.py
+dictum_proto.egg-info/PKG-INFO
+dictum_proto.egg-info/SOURCES.txt
+dictum_proto.egg-info/dependency_links.txt
+dictum_proto.egg-info/requires.txt
+dictum_proto.egg-info/top_level.txt
+gen/__init__.py

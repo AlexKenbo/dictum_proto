@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dictum-proto
+Version: 0.3.0a11
+Summary: Protobuf api for Dictum
+Home-page: https://github.com/AlexKenbo/dictum_proto
+Author: loopnyapy
+Author-email: da.eto.deniska@gmail.com
