@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
 package payment;
 
 import "proto/accrual.proto";

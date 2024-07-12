@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment_type.pbenum.dart' as $47;
+import 'attachment_type.pbenum.dart' as $48;
 
 class ListRequest extends $pb.GeneratedMessage {
   factory ListRequest({
@@ -355,7 +355,7 @@ class UploadAttachmentRequest extends $pb.GeneratedMessage {
     $core.String? resourceName,
     $core.List<$core.int>? file,
     $core.String? mimeType,
-    $47.AttachmentType? type,
+    $48.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? externalNumber,
@@ -392,7 +392,7 @@ class UploadAttachmentRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'file', $pb.PbFieldType.OY)
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$47.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $47.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $47.AttachmentType.valueOf, enumValues: $47.AttachmentType.values)
+    ..e<$48.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $48.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $48.AttachmentType.valueOf, enumValues: $48.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(8, _omitFieldNames ? '' : 'externalNumber')
@@ -448,9 +448,9 @@ class UploadAttachmentRequest extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $47.AttachmentType get type => $_getN(3);
+  $48.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($47.AttachmentType v) { setField(4, v); }
+  set type($48.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)

@@ -13,17 +13,17 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $34;
-import 'user.pb.dart' as $13;
+import '../google/protobuf/timestamp.pb.dart' as $35;
+import 'user.pb.dart' as $14;
 
 class Comment extends $pb.GeneratedMessage {
   factory Comment({
     $core.int? commentId,
     $core.String? message,
     $core.int? creatorId,
-    $34.Timestamp? createTime,
+    $35.Timestamp? createTime,
     $core.String? resourceName,
-    $13.User? creator,
+    $14.User? creator,
   }) {
     final $result = create();
     if (commentId != null) {
@@ -54,9 +54,9 @@ class Comment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'commentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'message')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'creatorId', $pb.PbFieldType.O3)
-    ..aOM<$34.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $34.Timestamp.create)
+    ..aOM<$35.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $35.Timestamp.create)
     ..aOS(5, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$13.User>(6, _omitFieldNames ? '' : 'creator', subBuilder: $13.User.create)
+    ..aOM<$14.User>(6, _omitFieldNames ? '' : 'creator', subBuilder: $14.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -109,15 +109,15 @@ class Comment extends $pb.GeneratedMessage {
   void clearCreatorId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $34.Timestamp get createTime => $_getN(3);
+  $35.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
-  set createTime($34.Timestamp v) { setField(4, v); }
+  set createTime($35.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
-  $34.Timestamp ensureCreateTime() => $_ensure(3);
+  $35.Timestamp ensureCreateTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get resourceName => $_getSZ(4);
@@ -129,15 +129,15 @@ class Comment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(5);
 
   @$pb.TagNumber(6)
-  $13.User get creator => $_getN(5);
+  $14.User get creator => $_getN(5);
   @$pb.TagNumber(6)
-  set creator($13.User v) { setField(6, v); }
+  set creator($14.User v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasCreator() => $_has(5);
   @$pb.TagNumber(6)
   void clearCreator() => clearField(6);
   @$pb.TagNumber(6)
-  $13.User ensureCreator() => $_ensure(5);
+  $14.User ensureCreator() => $_ensure(5);
 }
 
 
