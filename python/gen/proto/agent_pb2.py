@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/agent.proto\"?\n\x05\x41gent\x12\x11\n\tentity_id\x18\x01 \x01(\x05\x12\x10\n\x08icon_url\x18\x02 \x01(\t\x12\x11\n\ttime_zone\x18\x03 \x01(\tB&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/agent.proto\"Y\n\x05\x41gent\x12\x11\n\tentity_id\x18\x01 \x01(\x05\x12\x10\n\x08icon_url\x18\x02 \x01(\t\x12\x11\n\ttime_zone\x18\x03 \x01(\t\x12\x18\n\x10invoice_logo_url\x18\x04 \x01(\tB&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -23,5 +23,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z$github.com/AlexKenbo/dictum_proto/go'
   _globals['_AGENT']._serialized_start=21
-  _globals['_AGENT']._serialized_end=84
+  _globals['_AGENT']._serialized_end=110
 # @@protoc_insertion_point(module_scope)

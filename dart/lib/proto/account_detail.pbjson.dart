@@ -35,6 +35,9 @@ const AccountDetail$json = {
     {'1': 'blockchain_network', '3': 30, '4': 1, '5': 9, '10': 'blockchainNetwork'},
     {'1': 'token_standard', '3': 32, '4': 1, '5': 9, '10': 'tokenStandard'},
     {'1': 'resource_name', '3': 34, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'telephone', '3': 35, '4': 1, '5': 9, '10': 'telephone'},
+    {'1': 'website', '3': 36, '4': 1, '5': 9, '10': 'website'},
+    {'1': 'email', '3': 37, '4': 1, '5': 9, '10': 'email'},
   ],
 };
 
@@ -54,5 +57,7 @@ final $typed_data.Uint8List accountDetailDescriptor = $convert.base64Decode(
     'VybWVkaWFyeV9maV9uYW1lGBogASgJUhJpbnRlcm1lZGlhcnlGaU5hbWUSJQoOcm91dGluZ19u'
     'dW1iZXIYHCABKAlSDXJvdXRpbmdOdW1iZXISLQoSYmxvY2tjaGFpbl9uZXR3b3JrGB4gASgJUh'
     'FibG9ja2NoYWluTmV0d29yaxIlCg50b2tlbl9zdGFuZGFyZBggIAEoCVINdG9rZW5TdGFuZGFy'
-    'ZBIjCg1yZXNvdXJjZV9uYW1lGCIgASgJUgxyZXNvdXJjZU5hbWU=');
+    'ZBIjCg1yZXNvdXJjZV9uYW1lGCIgASgJUgxyZXNvdXJjZU5hbWUSHAoJdGVsZXBob25lGCMgAS'
+    'gJUgl0ZWxlcGhvbmUSGAoHd2Vic2l0ZRgkIAEoCVIHd2Vic2l0ZRIUCgVlbWFpbBglIAEoCVIF'
+    'ZW1haWw=');
 

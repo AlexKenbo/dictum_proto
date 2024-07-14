@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment.pb.dart' as $15;
+import 'attachment.pb.dart' as $16;
 
 /// @deprecated
 class AccrualAttachment extends $pb.GeneratedMessage {
@@ -21,7 +21,7 @@ class AccrualAttachment extends $pb.GeneratedMessage {
     $core.int? accrualAttachmentId,
     $core.int? attachmentId,
     $core.int? accrualId,
-    $15.Attachment? attachment,
+    $16.Attachment? attachment,
   }) {
     final $result = create();
     if (accrualAttachmentId != null) {
@@ -46,7 +46,7 @@ class AccrualAttachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'accrualAttachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
-    ..aOM<$15.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $15.Attachment.create)
+    ..aOM<$16.Attachment>(4, _omitFieldNames ? '' : 'attachment', subBuilder: $16.Attachment.create)
     ..hasRequiredFields = false
   ;
 
@@ -99,15 +99,15 @@ class AccrualAttachment extends $pb.GeneratedMessage {
   void clearAccrualId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $15.Attachment get attachment => $_getN(3);
+  $16.Attachment get attachment => $_getN(3);
   @$pb.TagNumber(4)
-  set attachment($15.Attachment v) { setField(4, v); }
+  set attachment($16.Attachment v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAttachment() => $_has(3);
   @$pb.TagNumber(4)
   void clearAttachment() => clearField(4);
   @$pb.TagNumber(4)
-  $15.Attachment ensureAttachment() => $_ensure(3);
+  $16.Attachment ensureAttachment() => $_ensure(3);
 }
 
 

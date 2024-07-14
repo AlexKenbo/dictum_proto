@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'attachment.pb.dart' as $15;
+import 'attachment.pb.dart' as $16;
 
 class ListAttachmentsResponse extends $pb.GeneratedMessage {
   factory ListAttachmentsResponse({
     $core.String? resourceName,
-    $core.Iterable<$15.Attachment>? attachments,
+    $core.Iterable<$16.Attachment>? attachments,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -35,7 +35,7 @@ class ListAttachmentsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAttachmentsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$15.Attachment>(2, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $15.Attachment.create)
+    ..pc<$16.Attachment>(2, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $16.Attachment.create)
     ..hasRequiredFields = false
   ;
 
@@ -70,13 +70,13 @@ class ListAttachmentsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$15.Attachment> get attachments => $_getList(1);
+  $core.List<$16.Attachment> get attachments => $_getList(1);
 }
 
 class BatchInsertAttachmentsRequest extends $pb.GeneratedMessage {
   factory BatchInsertAttachmentsRequest({
     $core.String? resourceName,
-    $core.Iterable<$15.Attachment>? attachments,
+    $core.Iterable<$16.Attachment>? attachments,
     $core.int? serviceId,
   }) {
     final $result = create();
@@ -97,7 +97,7 @@ class BatchInsertAttachmentsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertAttachmentsRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$15.Attachment>(2, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $15.Attachment.create)
+    ..pc<$16.Attachment>(2, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $16.Attachment.create)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
@@ -133,7 +133,7 @@ class BatchInsertAttachmentsRequest extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$15.Attachment> get attachments => $_getList(1);
+  $core.List<$16.Attachment> get attachments => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.int get serviceId => $_getIZ(2);

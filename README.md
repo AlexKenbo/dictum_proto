@@ -34,8 +34,19 @@ Protocol Buffers - буффер между протоколами бекенда
 Чтобы компилировать `.proto` файлы для Dart:
 
 1. Установите Dart плагин для protoc. Следуйте инструкциям на [официальной странице пакета](https://pub.dev/packages/protoc_plugin).
+2. Активируйте плагин:
 
-2. Запустите компиляцию из корня:
+   ```bash
+      dart pub global activate protoc_plugin
+   ```
+
+3. Настройте переменную окружения:
+
+   ```bash
+      export PATH="$PATH:$HOME/.pub-cache/bin"
+   ```
+
+4. Запустите компиляцию из корня:
 
 Bash:
 
@@ -64,6 +75,28 @@ Powershell:
 
    ```bash
       python3 -m grpc_tools.protoc -I . -I ./google --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $(find . -name "*.proto")
+   ```
+
+   ```powershell
+      $baseDir = "D:\Projects\D\dictum_proto"
+      Set-Location $baseDir
+      
+      # Получаем все пути к .proto файлам
+      $protoFiles = Get-ChildItem -Recurse -Filter *.proto | ForEach-Object { $_.FullName }
+      
+      # Создаем аргументы для включения директорий с абсолютными путями
+      $includeDirs = @("$baseDir", "$baseDir\google", "$baseDir\coincat", "$baseDir\proto")
+      $includeDirsArgs = ""
+      foreach ($dir in $includeDirs) {
+          $includeDirsArgs += "-I$dir "
+      }
+      
+      # Собираем пути к файлам в одну строку
+      $protoPathsArgs = $protoFiles -join " "
+      
+      # Формируем и запускаем команду protoc
+      $command = "python -m grpc_tools.protoc $includeDirsArgs --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $protoPathsArgs"
+      Invoke-Expression $command
    ```
 
 ## 3. Разработка proto, go и dart. Git-теги для версионирования

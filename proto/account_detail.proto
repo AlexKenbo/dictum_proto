@@ -25,4 +25,8 @@ message AccountDetail
   string token_standard = 32;
   string resource_name = 34;
 
+  string telephone = 35;
+  string website = 36;
+  string email = 37;
+
 }

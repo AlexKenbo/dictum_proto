@@ -8,5 +8,6 @@ message Agent
   int32 entity_id = 1;
   string icon_url = 2;
   string time_zone = 3;
+  string invoice_logo_url = 4;
 
 }
