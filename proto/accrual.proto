@@ -99,4 +99,5 @@ message Accrual {
 
   //
   bool has_comments = 70;
+  bool confirmation_canceled = 71;
 }

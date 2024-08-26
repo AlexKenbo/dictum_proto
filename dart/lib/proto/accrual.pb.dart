@@ -101,6 +101,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.double? total,
     $core.bool? cancelMarkPaid,
     $core.bool? hasComments,
+    $core.bool? confirmationCanceled,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -313,6 +314,9 @@ class Accrual extends $pb.GeneratedMessage {
     if (hasComments != null) {
       $result.hasComments = hasComments;
     }
+    if (confirmationCanceled != null) {
+      $result.confirmationCanceled = confirmationCanceled;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -390,6 +394,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.double>(68, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
     ..aOB(69, _omitFieldNames ? '' : 'cancelMarkPaid')
     ..aOB(70, _omitFieldNames ? '' : 'hasComments')
+    ..aOB(71, _omitFieldNames ? '' : 'confirmationCanceled')
     ..hasRequiredFields = false
   ;
 
@@ -1068,6 +1073,15 @@ class Accrual extends $pb.GeneratedMessage {
   $core.bool hasHasComments() => $_has(69);
   @$pb.TagNumber(70)
   void clearHasComments() => clearField(70);
+
+  @$pb.TagNumber(71)
+  $core.bool get confirmationCanceled => $_getBF(70);
+  @$pb.TagNumber(71)
+  set confirmationCanceled($core.bool v) { $_setBool(70, v); }
+  @$pb.TagNumber(71)
+  $core.bool hasConfirmationCanceled() => $_has(70);
+  @$pb.TagNumber(71)
+  void clearConfirmationCanceled() => clearField(71);
 }
 
 
