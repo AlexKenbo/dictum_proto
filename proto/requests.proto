@@ -9,6 +9,23 @@ message ListRequest {
     string page_token = 2;
     string parent = 3;
     string filter = 4;
+    repeated Sorting sortings = 5;
+}
+
+message Sorting {
+    string field_name = 1;
+    optional SortingMode mode = 2;
+
+}
+
+enum SortingMode {
+    SORTING_MODE_NONE = 0;
+    SORTING_MODE_ASC = 1;
+    SORTING_MODE_DESC = 2;
+    SORTING_MODE_ASC_NULLS_FIRST = 3;
+    SORTING_MODE_DESC_NULLS_FIRST = 4;
+    SORTING_MODE_ASC_NULLS_LAST = 5;
+    SORTING_MODE_DESC_NULLS_LAST = 6;
 }
 
 message GetRequest {

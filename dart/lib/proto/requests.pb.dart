@@ -14,6 +14,9 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'attachment_type.pbenum.dart' as $48;
+import 'requests.pbenum.dart';
+
+export 'requests.pbenum.dart';
 
 class ListRequest extends $pb.GeneratedMessage {
   factory ListRequest({
@@ -21,6 +24,7 @@ class ListRequest extends $pb.GeneratedMessage {
     $core.String? pageToken,
     $core.String? parent,
     $core.String? filter,
+    $core.Iterable<Sorting>? sortings,
   }) {
     final $result = create();
     if (pageSize != null) {
@@ -35,6 +39,9 @@ class ListRequest extends $pb.GeneratedMessage {
     if (filter != null) {
       $result.filter = filter;
     }
+    if (sortings != null) {
+      $result.sortings.addAll(sortings);
+    }
     return $result;
   }
   ListRequest._() : super();
@@ -46,6 +53,7 @@ class ListRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'pageToken')
     ..aOS(3, _omitFieldNames ? '' : 'parent')
     ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..pc<Sorting>(5, _omitFieldNames ? '' : 'sortings', $pb.PbFieldType.PM, subBuilder: Sorting.create)
     ..hasRequiredFields = false
   ;
 
@@ -105,6 +113,73 @@ class ListRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(3);
   @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.List<Sorting> get sortings => $_getList(4);
+}
+
+class Sorting extends $pb.GeneratedMessage {
+  factory Sorting({
+    $core.String? fieldName,
+    SortingMode? mode,
+  }) {
+    final $result = create();
+    if (fieldName != null) {
+      $result.fieldName = fieldName;
+    }
+    if (mode != null) {
+      $result.mode = mode;
+    }
+    return $result;
+  }
+  Sorting._() : super();
+  factory Sorting.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Sorting.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Sorting', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fieldName')
+    ..e<SortingMode>(2, _omitFieldNames ? '' : 'mode', $pb.PbFieldType.OE, defaultOrMaker: SortingMode.SORTING_MODE_NONE, valueOf: SortingMode.valueOf, enumValues: SortingMode.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Sorting clone() => Sorting()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Sorting copyWith(void Function(Sorting) updates) => super.copyWith((message) => updates(message as Sorting)) as Sorting;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Sorting create() => Sorting._();
+  Sorting createEmptyInstance() => create();
+  static $pb.PbList<Sorting> createRepeated() => $pb.PbList<Sorting>();
+  @$core.pragma('dart2js:noInline')
+  static Sorting getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Sorting>(create);
+  static Sorting? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get fieldName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set fieldName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFieldName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFieldName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  SortingMode get mode => $_getN(1);
+  @$pb.TagNumber(2)
+  set mode(SortingMode v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMode() => clearField(2);
 }
 
 class GetRequest extends $pb.GeneratedMessage {
