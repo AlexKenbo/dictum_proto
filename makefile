@@ -26,6 +26,18 @@ help: ## This help dialog.
 		printf "%-30s %s\n" $$help_command $$help_info ; \
 	done
 
+version: ## Get current version
+	@dart_version=$$(grep '^version:' $(VERSION_FILE_DART) | awk '{print $$2}'); \
+	python_version=$$(grep 'version=' $(VERSION_FILE_PYTHON) | sed -E 's/.*version=["'\'']([0-9]+\.[0-9]+\.[0-9]+.*)["'\''],/\1/'); \
+	if [ "$$dart_version" = "$$python_version" ]; then \
+		echo "Current version: $$dart_version"; \
+	else \
+		echo "$(RED)Version mismatch!$(RESET)"; \
+		echo "Version in $(VERSION_FILE_DART): $(YELLOW)$$dart_version$(RESET)"; \
+		echo "Version in $(VERSION_FILE_PYTHON): $(YELLOW)$$python_version$(RESET)"; \
+		exit 1; \
+	fi
+
 # Правило для обновления версий
 # Пример использования: `make update_version v0.5.0-alpha.2`, `make update_version v1.2.0`
 update_version: ## Update version of package in corresponding dependency files
