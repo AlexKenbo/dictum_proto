@@ -102,7 +102,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.double? total,
     $core.bool? cancelMarkPaid,
     $core.bool? hasComments,
-    $core.bool? contractId,
+    $core.int? contractId,
     $54.Contract? contract,
   }) {
     final $result = create();
@@ -399,7 +399,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.double>(68, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
     ..aOB(69, _omitFieldNames ? '' : 'cancelMarkPaid')
     ..aOB(70, _omitFieldNames ? '' : 'hasComments')
-    ..aOB(71, _omitFieldNames ? '' : 'contractId')
+    ..a<$core.int>(71, _omitFieldNames ? '' : 'contractId', $pb.PbFieldType.O3)
     ..aOM<$54.Contract>(72, _omitFieldNames ? '' : 'contract', subBuilder: $54.Contract.create)
     ..hasRequiredFields = false
   ;
@@ -1081,9 +1081,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearHasComments() => clearField(70);
 
   @$pb.TagNumber(71)
-  $core.bool get contractId => $_getBF(70);
+  $core.int get contractId => $_getIZ(70);
   @$pb.TagNumber(71)
-  set contractId($core.bool v) { $_setBool(70, v); }
+  set contractId($core.int v) { $_setSignedInt32(70, v); }
   @$pb.TagNumber(71)
   $core.bool hasContractId() => $_has(70);
   @$pb.TagNumber(71)

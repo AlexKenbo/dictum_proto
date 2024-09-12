@@ -101,6 +101,6 @@ message Accrual {
   //
   bool has_comments = 70;
   // 
-  bool contract_id = 71;
+  int32 contract_id = 71;
   Contract contract = 72;
 }
