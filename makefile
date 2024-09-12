@@ -15,9 +15,20 @@ VERSION_FILE_PYTHON=python/setup.py
 # Используем первый аргумент как версию
 VERSION=$(filter-out $@, $(MAKECMDGOALS))
 
+help: ## This help dialog.
+	@IFS=$$'\n' ; \
+	help_lines=(`fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//'`); \
+	for help_line in $${help_lines[@]}; do \
+		IFS=$$'#' ; \
+		help_split=($$help_line) ; \
+		help_command=`echo $${help_split[0]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
+		help_info=`echo $${help_split[2]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
+		printf "%-30s %s\n" $$help_command $$help_info ; \
+	done
+
 # Правило для обновления версий
 # Пример использования: `make update_version v0.5.0-alpha.2`, `make update_version v1.2.0`
-update_version:
+update_version: ## Update version of package in corresponding dependency files
 	@echo "Updating version to $(VERSION)"
 	# Обновляем версию в dart/pubspec.yaml
 	sed -i '' 's/^version:.*/version: $(VERSION)/' $(VERSION_FILE_DART)
@@ -25,11 +36,11 @@ update_version:
 	sed -i '' 's/version=.*,/version="$(VERSION)",/' $(VERSION_FILE_PYTHON)
 	@echo "Version updated to $(VERSION) in both files."
 
-# Генерация во все языки
-build: build_go build_dart build_py
+build: ## Generation to Python, Dart and Go
+	build_go build_dart build_py
 
 # TODO: add build go command for windows, current command for mac
-build_go:
+build_go: ## Generation to Go
 	@echo "\n$(BLUE)===== Starting Go Build =====$(RESET)\n"
 	@echo "Installing protoc-gen-go..."
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
@@ -43,7 +54,7 @@ build_go:
 	
 	@echo "$(GREEN)Go build completed succesfully!$(RESET)\n"
 	
-build_dart:
+build_dart: ## Generation to Dart
 	@echo "\n$(BLUE)===== Starting Dart Build =====$(RESET)\n"
 	@echo "Installing protoc-plugin..."
 	dart pub global activate protoc_plugin
@@ -75,7 +86,7 @@ endif
 
 	@echo "$(GREEN)Dart build completed succesfully!$(RESET)\n"
 
-build_py:
+build_py: ## Generation to Python
 	@echo "\n$(BLUE)===== Starting Python Build =====$(RESET)\n"
 	@echo "Installing python dependencies..."
 	pip install -r python/requirements.txt 
