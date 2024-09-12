@@ -43,9 +43,9 @@ version: ## Get current version
 # Usage example: `make update_version v0.5.0-alpha.2`, `make update_version v1.2.0`
 update_version: ## Update version of package in corresponding dependency files
 	@echo "Updating version to $(VERSION)"
-	# Обновляем версию в dart/pubspec.yaml
+	@echo "Updating in $(VERSION_FILE_DART)..."
 	@sed -i '' 's/^version:.*/version: $(VERSION)/' $(VERSION_FILE_DART)
-	# Обновляем версию в python/setup.py
+	@echo "Updating in $(VERSION_FILE_PYTHON)..."
 	@sed -i '' 's/version=.*,/version="$(VERSION)",/' $(VERSION_FILE_PYTHON)
 	@echo "Version updated to $(VERSION) in both files."
 
@@ -54,6 +54,7 @@ build: ## Generation to Python, Dart and Go
 	@$(MAKE) build_go
 	@$(MAKE) build_dart
 	@$(MAKE) build_py
+	@echo "\n"
 
 # TODO: add build go command for windows, current command for mac
 build_go: ## Generation to Go
@@ -68,7 +69,7 @@ build_go: ## Generation to Go
       --go-grpc_out=go --go-grpc_opt=paths=source_relative \
       $(shell find . -name "*.proto")
 	
-	@echo "$(GREEN)Go build completed succesfully!$(RESET)\n"
+	@echo "$(GREEN)Go build completed succesfully!$(RESET)"
 	
 build_dart: ## Generation to Dart
 	@echo "\n$(BLUE)===== Starting Dart Build =====$(RESET)\n"
@@ -100,7 +101,7 @@ ifeq ($(OS), Windows_NT)
 			}"
 endif
 
-	@echo "$(GREEN)Dart build completed succesfully!$(RESET)\n"
+	@echo "$(GREEN)Dart build completed succesfully!$(RESET)"
 
 build_py: ## Generation to Python
 	@echo "\n$(BLUE)===== Starting Python Build =====$(RESET)\n"
@@ -136,7 +137,7 @@ ifeq ($(OS), Windows_NT)
 		Invoke-Expression $command
 endif
 
-	@echo "$(GREEN)Python build completed succesfully!$(RESET)\n"
+	@echo "$(GREEN)Python build completed succesfully!$(RESET)"
 
 # Aborting make in case the version is interpreted as a target
 %:

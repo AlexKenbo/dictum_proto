@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $35;
+import '../google/protobuf/timestamp.pb.dart' as $36;
 
 class Fi extends $pb.GeneratedMessage {
   factory Fi({
     $core.String? name,
-    $35.Timestamp? createTime,
+    $36.Timestamp? createTime,
   }) {
     final $result = create();
     if (name != null) {
@@ -35,7 +35,7 @@ class Fi extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Fi', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$35.Timestamp>(3, _omitFieldNames ? '' : 'createTime', subBuilder: $35.Timestamp.create)
+    ..aOM<$36.Timestamp>(3, _omitFieldNames ? '' : 'createTime', subBuilder: $36.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -70,15 +70,15 @@ class Fi extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 
   @$pb.TagNumber(3)
-  $35.Timestamp get createTime => $_getN(1);
+  $36.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(3)
-  set createTime($35.Timestamp v) { setField(3, v); }
+  set createTime($36.Timestamp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(1);
   @$pb.TagNumber(3)
   void clearCreateTime() => clearField(3);
   @$pb.TagNumber(3)
-  $35.Timestamp ensureCreateTime() => $_ensure(1);
+  $36.Timestamp ensureCreateTime() => $_ensure(1);
 }
 
 

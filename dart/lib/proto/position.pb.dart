@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual.pb.dart' as $28;
+import 'accrual.pb.dart' as $29;
 import 'product.pb.dart' as $63;
 
 class Position extends $pb.GeneratedMessage {
@@ -26,7 +26,7 @@ class Position extends $pb.GeneratedMessage {
     $core.double? sum,
     $core.String? resourceName,
     $63.Product? product,
-    $28.Accrual? accrual,
+    $29.Accrual? accrual,
   }) {
     final $result = create();
     if (positionId != null) {
@@ -71,7 +71,7 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'sum', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$63.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $63.Product.create)
-    ..aOM<$28.Accrual>(12, _omitFieldNames ? '' : 'accrual', subBuilder: $28.Accrual.create)
+    ..aOM<$29.Accrual>(12, _omitFieldNames ? '' : 'accrual', subBuilder: $29.Accrual.create)
     ..hasRequiredFields = false
   ;
 
@@ -171,15 +171,15 @@ class Position extends $pb.GeneratedMessage {
   $63.Product ensureProduct() => $_ensure(7);
 
   @$pb.TagNumber(12)
-  $28.Accrual get accrual => $_getN(8);
+  $29.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(12)
-  set accrual($28.Accrual v) { setField(12, v); }
+  set accrual($29.Accrual v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(12)
   void clearAccrual() => clearField(12);
   @$pb.TagNumber(12)
-  $28.Accrual ensureAccrual() => $_ensure(8);
+  $29.Accrual ensureAccrual() => $_ensure(8);
 }
 
 

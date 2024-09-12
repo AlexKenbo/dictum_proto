@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'telegram_user.pb.dart' as $36;
+import 'telegram_user.pb.dart' as $37;
 
 class TelegramUserChat extends $pb.GeneratedMessage {
   factory TelegramUserChat({
     $core.int? telegramUserChatId,
     $core.int? chatSourceKey,
     $core.int? telegramUserId,
-    $36.TelegramUser? telegramUser,
+    $37.TelegramUser? telegramUser,
   }) {
     final $result = create();
     if (telegramUserChatId != null) {
@@ -45,7 +45,7 @@ class TelegramUserChat extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'telegramUserChatId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'chatSourceKey', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
-    ..aOM<$36.TelegramUser>(4, _omitFieldNames ? '' : 'telegramUser', subBuilder: $36.TelegramUser.create)
+    ..aOM<$37.TelegramUser>(4, _omitFieldNames ? '' : 'telegramUser', subBuilder: $37.TelegramUser.create)
     ..hasRequiredFields = false
   ;
 
@@ -98,15 +98,15 @@ class TelegramUserChat extends $pb.GeneratedMessage {
   void clearTelegramUserId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $36.TelegramUser get telegramUser => $_getN(3);
+  $37.TelegramUser get telegramUser => $_getN(3);
   @$pb.TagNumber(4)
-  set telegramUser($36.TelegramUser v) { setField(4, v); }
+  set telegramUser($37.TelegramUser v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTelegramUser() => $_has(3);
   @$pb.TagNumber(4)
   void clearTelegramUser() => clearField(4);
   @$pb.TagNumber(4)
-  $36.TelegramUser ensureTelegramUser() => $_ensure(3);
+  $37.TelegramUser ensureTelegramUser() => $_ensure(3);
 }
 
 

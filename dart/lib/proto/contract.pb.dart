@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $35;
+import '../google/protobuf/timestamp.pb.dart' as $36;
 
 class Contract extends $pb.GeneratedMessage {
   factory Contract({
@@ -21,7 +21,7 @@ class Contract extends $pb.GeneratedMessage {
     $core.String? number,
     $core.int? payerId,
     $core.int? recipientId,
-    $35.Timestamp? createTime,
+    $36.Timestamp? createTime,
   }) {
     final $result = create();
     if (contractId != null) {
@@ -50,7 +50,7 @@ class Contract extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'number')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
-    ..aOM<$35.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $35.Timestamp.create)
+    ..aOM<$36.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $36.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,15 +112,15 @@ class Contract extends $pb.GeneratedMessage {
   void clearRecipientId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $35.Timestamp get createTime => $_getN(4);
+  $36.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($35.Timestamp v) { setField(5, v); }
+  set createTime($36.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $35.Timestamp ensureCreateTime() => $_ensure(4);
+  $36.Timestamp ensureCreateTime() => $_ensure(4);
 }
 
 

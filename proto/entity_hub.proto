@@ -9,15 +9,16 @@ import "proto/account_audit.proto";
 import "proto/account_balance.proto";
 import "proto/account_detail.proto";
 import "proto/account.proto";
+import "proto/contract.proto";
 import "proto/country.proto";
 import "proto/currency_rate.proto";
 import "proto/currency.proto";
 import "proto/employee.proto";
+import "proto/entity_access.proto";
 import "proto/entity_aggregate.proto";
 import "proto/entity.proto";
 import "proto/fi.proto";
 import "proto/requests.proto";
-import "proto/entity_access.proto";
 import "proto/role.proto";
 
 //Репо - Entity, Account
@@ -76,7 +77,19 @@ service EntityHub {
         };
     }
 
-    
+    rpc CreateContract(Contract) returns (Contract) {
+        option (google.api.http) = {
+            post: "/v1/contracts"
+            body: "contracts"
+        };
+    }
+
+    rpc ListContracts(ListRequest) returns (ListContractsResponse) {
+        option (google.api.http) = {
+          get: "/v1/contracts"
+        };
+    }
+
     rpc ListEmployees(ListRequest) returns (ListEmployeesResponse) {
         option (google.api.http) = {
           get: "/v1/employees"
@@ -88,6 +101,7 @@ service EntityHub {
           get: "/v1/{resource_name=entities/*/employees/*}"
         };
     }
+    
 
     rpc CreateEmployee(Employee) returns (Employee) {
         option (google.api.http) = {
@@ -303,6 +317,12 @@ message BatchInsertCurrencyRatesRequest {
 
 message ListActualCurrencyRatesRequest {
     string resource_name = 1;
+}
+
+message ListContractsResponse {
+    string resource_name = 1;
+    repeated Contract contracts = 2;
+    string next_page_token = 3;
 }
 
 message ListEmployeesResponse {

@@ -13,17 +13,18 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'account.pb.dart' as $7;
-import 'account_audit.pb.dart' as $9;
-import 'account_detail.pb.dart' as $8;
-import 'country.pb.dart' as $37;
-import 'currency.pb.dart' as $45;
+import 'account.pb.dart' as $8;
+import 'account_audit.pb.dart' as $10;
+import 'account_detail.pb.dart' as $9;
+import 'contract.pb.dart' as $6;
+import 'country.pb.dart' as $38;
+import 'currency.pb.dart' as $46;
 import 'currency_rate.pb.dart' as $62;
-import 'employee.pb.dart' as $6;
+import 'employee.pb.dart' as $7;
 import 'entity.pb.dart' as $3;
 import 'entity_access.pb.dart' as $61;
-import 'fi.pb.dart' as $46;
-import 'role.pbenum.dart' as $44;
+import 'fi.pb.dart' as $47;
+import 'role.pbenum.dart' as $45;
 
 class ListEntityAccessesResponse extends $pb.GeneratedMessage {
   factory ListEntityAccessesResponse({
@@ -100,7 +101,7 @@ class ListEntityAccessesResponse extends $pb.GeneratedMessage {
 class ListAccountAuditsResponse extends $pb.GeneratedMessage {
   factory ListAccountAuditsResponse({
     $core.String? resourceName,
-    $core.Iterable<$9.AccountAudit>? accountAudits,
+    $core.Iterable<$10.AccountAudit>? accountAudits,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -121,7 +122,7 @@ class ListAccountAuditsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAccountAuditsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$9.AccountAudit>(2, _omitFieldNames ? '' : 'accountAudits', $pb.PbFieldType.PM, subBuilder: $9.AccountAudit.create)
+    ..pc<$10.AccountAudit>(2, _omitFieldNames ? '' : 'accountAudits', $pb.PbFieldType.PM, subBuilder: $10.AccountAudit.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -157,7 +158,7 @@ class ListAccountAuditsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$9.AccountAudit> get accountAudits => $_getList(1);
+  $core.List<$10.AccountAudit> get accountAudits => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -244,7 +245,7 @@ class ListEntitiesResponse extends $pb.GeneratedMessage {
 class RequestEmployeeRequest extends $pb.GeneratedMessage {
   factory RequestEmployeeRequest({
     $core.String? parent,
-    $44.Role? role,
+    $45.Role? role,
     $core.String? email,
   }) {
     final $result = create();
@@ -265,7 +266,7 @@ class RequestEmployeeRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RequestEmployeeRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parent')
-    ..e<$44.Role>(2, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $44.Role.ROLE_UNKNOWN, valueOf: $44.Role.valueOf, enumValues: $44.Role.values)
+    ..e<$45.Role>(2, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $45.Role.ROLE_UNKNOWN, valueOf: $45.Role.valueOf, enumValues: $45.Role.values)
     ..aOS(3, _omitFieldNames ? '' : 'email')
     ..hasRequiredFields = false
   ;
@@ -301,9 +302,9 @@ class RequestEmployeeRequest extends $pb.GeneratedMessage {
   void clearParent() => clearField(1);
 
   @$pb.TagNumber(2)
-  $44.Role get role => $_getN(1);
+  $45.Role get role => $_getN(1);
   @$pb.TagNumber(2)
-  set role($44.Role v) { setField(2, v); }
+  set role($45.Role v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRole() => $_has(1);
   @$pb.TagNumber(2)
@@ -535,10 +536,82 @@ class ListActualCurrencyRatesRequest extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 }
 
+class ListContractsResponse extends $pb.GeneratedMessage {
+  factory ListContractsResponse({
+    $core.String? resourceName,
+    $core.Iterable<$6.Contract>? contracts,
+    $core.String? nextPageToken,
+  }) {
+    final $result = create();
+    if (resourceName != null) {
+      $result.resourceName = resourceName;
+    }
+    if (contracts != null) {
+      $result.contracts.addAll(contracts);
+    }
+    if (nextPageToken != null) {
+      $result.nextPageToken = nextPageToken;
+    }
+    return $result;
+  }
+  ListContractsResponse._() : super();
+  factory ListContractsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListContractsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListContractsResponse', createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'resourceName')
+    ..pc<$6.Contract>(2, _omitFieldNames ? '' : 'contracts', $pb.PbFieldType.PM, subBuilder: $6.Contract.create)
+    ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListContractsResponse clone() => ListContractsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListContractsResponse copyWith(void Function(ListContractsResponse) updates) => super.copyWith((message) => updates(message as ListContractsResponse)) as ListContractsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListContractsResponse create() => ListContractsResponse._();
+  ListContractsResponse createEmptyInstance() => create();
+  static $pb.PbList<ListContractsResponse> createRepeated() => $pb.PbList<ListContractsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static ListContractsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListContractsResponse>(create);
+  static ListContractsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set resourceName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearResourceName() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$6.Contract> get contracts => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set nextPageToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNextPageToken() => clearField(3);
+}
+
 class ListEmployeesResponse extends $pb.GeneratedMessage {
   factory ListEmployeesResponse({
     $core.String? resourceName,
-    $core.Iterable<$6.Employee>? employees,
+    $core.Iterable<$7.Employee>? employees,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -559,7 +632,7 @@ class ListEmployeesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListEmployeesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$6.Employee>(2, _omitFieldNames ? '' : 'employees', $pb.PbFieldType.PM, subBuilder: $6.Employee.create)
+    ..pc<$7.Employee>(2, _omitFieldNames ? '' : 'employees', $pb.PbFieldType.PM, subBuilder: $7.Employee.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -595,7 +668,7 @@ class ListEmployeesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$6.Employee> get employees => $_getList(1);
+  $core.List<$7.Employee> get employees => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -610,7 +683,7 @@ class ListEmployeesResponse extends $pb.GeneratedMessage {
 class ListCountriesResponse extends $pb.GeneratedMessage {
   factory ListCountriesResponse({
     $core.String? resourceName,
-    $core.Iterable<$37.Country>? countries,
+    $core.Iterable<$38.Country>? countries,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -627,7 +700,7 @@ class ListCountriesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCountriesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$37.Country>(2, _omitFieldNames ? '' : 'countries', $pb.PbFieldType.PM, subBuilder: $37.Country.create)
+    ..pc<$38.Country>(2, _omitFieldNames ? '' : 'countries', $pb.PbFieldType.PM, subBuilder: $38.Country.create)
     ..hasRequiredFields = false
   ;
 
@@ -662,13 +735,13 @@ class ListCountriesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$37.Country> get countries => $_getList(1);
+  $core.List<$38.Country> get countries => $_getList(1);
 }
 
 class ListAccountsResponse extends $pb.GeneratedMessage {
   factory ListAccountsResponse({
     $core.String? resourceName,
-    $core.Iterable<$7.Account>? accounts,
+    $core.Iterable<$8.Account>? accounts,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -689,7 +762,7 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAccountsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$7.Account>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $7.Account.create)
+    ..pc<$8.Account>(2, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $8.Account.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -725,7 +798,7 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$7.Account> get accounts => $_getList(1);
+  $core.List<$8.Account> get accounts => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -740,7 +813,7 @@ class ListAccountsResponse extends $pb.GeneratedMessage {
 class ListAccountDetailsResponse extends $pb.GeneratedMessage {
   factory ListAccountDetailsResponse({
     $core.String? resourceName,
-    $core.Iterable<$8.AccountDetail>? accountDetails,
+    $core.Iterable<$9.AccountDetail>? accountDetails,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -761,7 +834,7 @@ class ListAccountDetailsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListAccountDetailsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$8.AccountDetail>(2, _omitFieldNames ? '' : 'accountDetails', $pb.PbFieldType.PM, subBuilder: $8.AccountDetail.create)
+    ..pc<$9.AccountDetail>(2, _omitFieldNames ? '' : 'accountDetails', $pb.PbFieldType.PM, subBuilder: $9.AccountDetail.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -797,7 +870,7 @@ class ListAccountDetailsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$8.AccountDetail> get accountDetails => $_getList(1);
+  $core.List<$9.AccountDetail> get accountDetails => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -811,7 +884,7 @@ class ListAccountDetailsResponse extends $pb.GeneratedMessage {
 
 class BatchInsertAccountsRequest extends $pb.GeneratedMessage {
   factory BatchInsertAccountsRequest({
-    $core.Iterable<$7.Account>? accounts,
+    $core.Iterable<$8.Account>? accounts,
     $core.int? serviceId,
   }) {
     final $result = create();
@@ -828,7 +901,7 @@ class BatchInsertAccountsRequest extends $pb.GeneratedMessage {
   factory BatchInsertAccountsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertAccountsRequest', createEmptyInstance: create)
-    ..pc<$7.Account>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $7.Account.create)
+    ..pc<$8.Account>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $8.Account.create)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
@@ -855,7 +928,7 @@ class BatchInsertAccountsRequest extends $pb.GeneratedMessage {
   static BatchInsertAccountsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$7.Account> get accounts => $_getList(0);
+  $core.List<$8.Account> get accounts => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get serviceId => $_getIZ(1);
@@ -869,7 +942,7 @@ class BatchInsertAccountsRequest extends $pb.GeneratedMessage {
 
 class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
   factory BatchInsertAccountsResponse({
-    $core.Iterable<$7.Account>? accounts,
+    $core.Iterable<$8.Account>? accounts,
   }) {
     final $result = create();
     if (accounts != null) {
@@ -882,7 +955,7 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
   factory BatchInsertAccountsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertAccountsResponse', createEmptyInstance: create)
-    ..pc<$7.Account>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $7.Account.create)
+    ..pc<$8.Account>(1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM, subBuilder: $8.Account.create)
     ..hasRequiredFields = false
   ;
 
@@ -908,7 +981,7 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
   static BatchInsertAccountsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$7.Account> get accounts => $_getList(0);
+  $core.List<$8.Account> get accounts => $_getList(0);
 }
 
 class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
@@ -972,7 +1045,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
 class ListCurrenciesResponse extends $pb.GeneratedMessage {
   factory ListCurrenciesResponse({
     $core.String? resourceName,
-    $core.Iterable<$45.Currency>? currencies,
+    $core.Iterable<$46.Currency>? currencies,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -993,7 +1066,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListCurrenciesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$45.Currency>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $45.Currency.create)
+    ..pc<$46.Currency>(2, _omitFieldNames ? '' : 'currencies', $pb.PbFieldType.PM, subBuilder: $46.Currency.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -1029,7 +1102,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$45.Currency> get currencies => $_getList(1);
+  $core.List<$46.Currency> get currencies => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -1044,7 +1117,7 @@ class ListCurrenciesResponse extends $pb.GeneratedMessage {
 class ListFisResponse extends $pb.GeneratedMessage {
   factory ListFisResponse({
     $core.String? resourceName,
-    $core.Iterable<$46.Fi>? fis,
+    $core.Iterable<$47.Fi>? fis,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -1065,7 +1138,7 @@ class ListFisResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListFisResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$46.Fi>(2, _omitFieldNames ? '' : 'fis', $pb.PbFieldType.PM, subBuilder: $46.Fi.create)
+    ..pc<$47.Fi>(2, _omitFieldNames ? '' : 'fis', $pb.PbFieldType.PM, subBuilder: $47.Fi.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -1101,7 +1174,7 @@ class ListFisResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$46.Fi> get fis => $_getList(1);
+  $core.List<$47.Fi> get fis => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
