@@ -44,9 +44,9 @@ version: ## Get current version
 update_version: ## Update version of package in corresponding dependency files
 	@echo "Updating version to $(VERSION)"
 	# Обновляем версию в dart/pubspec.yaml
-	sed -i '' 's/^version:.*/version: $(VERSION)/' $(VERSION_FILE_DART)
+	@sed -i '' 's/^version:.*/version: $(VERSION)/' $(VERSION_FILE_DART)
 	# Обновляем версию в python/setup.py
-	sed -i '' 's/version=.*,/version="$(VERSION)",/' $(VERSION_FILE_PYTHON)
+	@sed -i '' 's/version=.*,/version="$(VERSION)",/' $(VERSION_FILE_PYTHON)
 	@echo "Version updated to $(VERSION) in both files."
 
 build: ## Generation to Python, Dart and Go
