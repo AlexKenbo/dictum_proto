@@ -18,6 +18,7 @@ import "proto/signature.proto";
 import "proto/source.proto";
 import "proto/status.proto";
 import "proto/user.proto";
+import "proto/contract.proto";
 
 message Accrual {
   int32 event_id = 1;
@@ -99,4 +100,7 @@ message Accrual {
 
   //
   bool has_comments = 70;
+  // 
+  bool contract_id = 71;
+  Contract contract = 72;
 }

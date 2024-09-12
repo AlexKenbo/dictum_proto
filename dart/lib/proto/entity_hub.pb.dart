@@ -18,17 +18,17 @@ import 'account_audit.pb.dart' as $9;
 import 'account_detail.pb.dart' as $8;
 import 'country.pb.dart' as $37;
 import 'currency.pb.dart' as $45;
-import 'currency_rate.pb.dart' as $61;
+import 'currency_rate.pb.dart' as $62;
 import 'employee.pb.dart' as $6;
 import 'entity.pb.dart' as $3;
-import 'entity_access.pb.dart' as $60;
+import 'entity_access.pb.dart' as $61;
 import 'fi.pb.dart' as $46;
 import 'role.pbenum.dart' as $44;
 
 class ListEntityAccessesResponse extends $pb.GeneratedMessage {
   factory ListEntityAccessesResponse({
     $core.String? resourceName,
-    $core.Iterable<$60.EntityAccess>? entityAccesses,
+    $core.Iterable<$61.EntityAccess>? entityAccesses,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -49,7 +49,7 @@ class ListEntityAccessesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListEntityAccessesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$60.EntityAccess>(2, _omitFieldNames ? '' : 'entityAccesses', $pb.PbFieldType.PM, subBuilder: $60.EntityAccess.create)
+    ..pc<$61.EntityAccess>(2, _omitFieldNames ? '' : 'entityAccesses', $pb.PbFieldType.PM, subBuilder: $61.EntityAccess.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -85,7 +85,7 @@ class ListEntityAccessesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$60.EntityAccess> get entityAccesses => $_getList(1);
+  $core.List<$61.EntityAccess> get entityAccesses => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
@@ -443,7 +443,7 @@ class BatchInsertEntitiesRequest extends $pb.GeneratedMessage {
 
 class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   factory BatchInsertCurrencyRatesRequest({
-    $core.Iterable<$61.CurrencyRate>? currencyRates,
+    $core.Iterable<$62.CurrencyRate>? currencyRates,
   }) {
     final $result = create();
     if (currencyRates != null) {
@@ -456,7 +456,7 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   factory BatchInsertCurrencyRatesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchInsertCurrencyRatesRequest', createEmptyInstance: create)
-    ..pc<$61.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $61.CurrencyRate.create)
+    ..pc<$62.CurrencyRate>(1, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $62.CurrencyRate.create)
     ..hasRequiredFields = false
   ;
 
@@ -482,7 +482,7 @@ class BatchInsertCurrencyRatesRequest extends $pb.GeneratedMessage {
   static BatchInsertCurrencyRatesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$61.CurrencyRate> get currencyRates => $_getList(0);
+  $core.List<$62.CurrencyRate> get currencyRates => $_getList(0);
 }
 
 class ListActualCurrencyRatesRequest extends $pb.GeneratedMessage {
@@ -914,7 +914,7 @@ class BatchInsertAccountsResponse extends $pb.GeneratedMessage {
 class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
   factory ListActualCurrencyRatesResponse({
     $core.String? resourceName,
-    $core.Iterable<$61.CurrencyRate>? currencyRates,
+    $core.Iterable<$62.CurrencyRate>? currencyRates,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -931,7 +931,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListActualCurrencyRatesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$61.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $61.CurrencyRate.create)
+    ..pc<$62.CurrencyRate>(2, _omitFieldNames ? '' : 'currencyRates', $pb.PbFieldType.PM, subBuilder: $62.CurrencyRate.create)
     ..hasRequiredFields = false
   ;
 
@@ -966,7 +966,7 @@ class ListActualCurrencyRatesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$61.CurrencyRate> get currencyRates => $_getList(1);
+  $core.List<$62.CurrencyRate> get currencyRates => $_getList(1);
 }
 
 class ListCurrenciesResponse extends $pb.GeneratedMessage {

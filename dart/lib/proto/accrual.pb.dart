@@ -15,18 +15,19 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $35;
 import 'account.pb.dart' as $7;
-import 'accrual_type.pbenum.dart' as $54;
+import 'accrual_type.pbenum.dart' as $55;
 import 'article.pb.dart' as $31;
 import 'attachment.pb.dart' as $16;
-import 'color.pbenum.dart' as $57;
+import 'color.pbenum.dart' as $58;
 import 'comment.pb.dart' as $23;
+import 'contract.pb.dart' as $54;
 import 'currency.pb.dart' as $45;
 import 'entity.pb.dart' as $3;
 import 'operation.pb.dart' as $52;
-import 'payment_type.pbenum.dart' as $55;
+import 'payment_type.pbenum.dart' as $56;
 import 'signature.pb.dart' as $53;
-import 'source.pbenum.dart' as $56;
-import 'status.pbenum.dart' as $58;
+import 'source.pbenum.dart' as $57;
+import 'status.pbenum.dart' as $59;
 import 'user.pb.dart' as $14;
 
 class Accrual extends $pb.GeneratedMessage {
@@ -36,7 +37,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.bool? oneTransferPay,
     $core.int? operationId,
     $core.String? currencyCode,
-    $54.AccrualType? type,
+    $55.AccrualType? type,
     $core.int? articleId,
     $core.String? sysPeriod,
     $core.String? invoiceNumber,
@@ -44,7 +45,7 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? recipientAccountId,
     $core.int? payerAccountId,
     $core.bool? isInitial,
-    $55.PaymentType? paymentType,
+    $56.PaymentType? paymentType,
     $core.bool? hasOtherMoneyRecipient,
     $core.int? approverId,
     $core.int? payerUserId,
@@ -67,8 +68,8 @@ class Accrual extends $pb.GeneratedMessage {
     $core.double? taxAmount,
     $core.double? taxPercent,
     $core.bool? taxInclusive,
-    $56.Source? datasource,
-    $57.Color? color,
+    $57.Source? datasource,
+    $58.Color? color,
     $35.Timestamp? fullAllocationTime,
     $3.Entity? payer,
     $3.Entity? recipient,
@@ -77,7 +78,7 @@ class Accrual extends $pb.GeneratedMessage {
     $35.Timestamp? payoutDate,
     $35.Timestamp? payTime,
     $35.Timestamp? createTime,
-    $58.Status? status,
+    $59.Status? status,
     $core.Iterable<$16.Attachment>? attachments,
     $core.int? initiatorId,
     $core.int? authorId,
@@ -101,6 +102,8 @@ class Accrual extends $pb.GeneratedMessage {
     $core.double? total,
     $core.bool? cancelMarkPaid,
     $core.bool? hasComments,
+    $core.bool? contractId,
+    $54.Contract? contract,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -313,6 +316,12 @@ class Accrual extends $pb.GeneratedMessage {
     if (hasComments != null) {
       $result.hasComments = hasComments;
     }
+    if (contractId != null) {
+      $result.contractId = contractId;
+    }
+    if (contract != null) {
+      $result.contract = contract;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -325,7 +334,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOB(3, _omitFieldNames ? '' : 'oneTransferPay')
     ..a<$core.int>(4, _omitFieldNames ? '' : 'operationId', $pb.PbFieldType.O3)
     ..aOS(5, _omitFieldNames ? '' : 'currencyCode')
-    ..e<$54.AccrualType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $54.AccrualType.ACCRUAL_TYPE_UNKNOWN, valueOf: $54.AccrualType.valueOf, enumValues: $54.AccrualType.values)
+    ..e<$55.AccrualType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $55.AccrualType.ACCRUAL_TYPE_UNKNOWN, valueOf: $55.AccrualType.valueOf, enumValues: $55.AccrualType.values)
     ..a<$core.int>(7, _omitFieldNames ? '' : 'articleId', $pb.PbFieldType.O3)
     ..aOS(8, _omitFieldNames ? '' : 'sysPeriod')
     ..aOS(9, _omitFieldNames ? '' : 'invoiceNumber')
@@ -333,7 +342,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(11, _omitFieldNames ? '' : 'recipientAccountId', $pb.PbFieldType.O3)
     ..a<$core.int>(12, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
     ..aOB(13, _omitFieldNames ? '' : 'isInitial')
-    ..e<$55.PaymentType>(14, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $55.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $55.PaymentType.valueOf, enumValues: $55.PaymentType.values)
+    ..e<$56.PaymentType>(14, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $56.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $56.PaymentType.valueOf, enumValues: $56.PaymentType.values)
     ..aOB(15, _omitFieldNames ? '' : 'hasOtherMoneyRecipient')
     ..a<$core.int>(16, _omitFieldNames ? '' : 'approverId', $pb.PbFieldType.O3)
     ..a<$core.int>(17, _omitFieldNames ? '' : 'payerUserId', $pb.PbFieldType.O3)
@@ -356,8 +365,8 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.double>(34, _omitFieldNames ? '' : 'taxAmount', $pb.PbFieldType.OD, protoName: 'taxAmount')
     ..a<$core.double>(35, _omitFieldNames ? '' : 'taxPercent', $pb.PbFieldType.OD, protoName: 'taxPercent')
     ..aOB(36, _omitFieldNames ? '' : 'taxInclusive', protoName: 'taxInclusive')
-    ..e<$56.Source>(37, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $56.Source.SOURCE_UNKNOWN, valueOf: $56.Source.valueOf, enumValues: $56.Source.values)
-    ..e<$57.Color>(38, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $57.Color.COLOR_UNKNOWN, valueOf: $57.Color.valueOf, enumValues: $57.Color.values)
+    ..e<$57.Source>(37, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $57.Source.SOURCE_UNKNOWN, valueOf: $57.Source.valueOf, enumValues: $57.Source.values)
+    ..e<$58.Color>(38, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $58.Color.COLOR_UNKNOWN, valueOf: $58.Color.valueOf, enumValues: $58.Color.values)
     ..aOM<$35.Timestamp>(39, _omitFieldNames ? '' : 'fullAllocationTime', subBuilder: $35.Timestamp.create)
     ..aOM<$3.Entity>(40, _omitFieldNames ? '' : 'payer', subBuilder: $3.Entity.create)
     ..aOM<$3.Entity>(41, _omitFieldNames ? '' : 'recipient', subBuilder: $3.Entity.create)
@@ -366,7 +375,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$35.Timestamp>(44, _omitFieldNames ? '' : 'payoutDate', subBuilder: $35.Timestamp.create)
     ..aOM<$35.Timestamp>(45, _omitFieldNames ? '' : 'payTime', subBuilder: $35.Timestamp.create)
     ..aOM<$35.Timestamp>(46, _omitFieldNames ? '' : 'createTime', subBuilder: $35.Timestamp.create)
-    ..e<$58.Status>(47, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $58.Status.STATUS_UNSPECIFIED, valueOf: $58.Status.valueOf, enumValues: $58.Status.values)
+    ..e<$59.Status>(47, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $59.Status.STATUS_UNSPECIFIED, valueOf: $59.Status.valueOf, enumValues: $59.Status.values)
     ..pc<$16.Attachment>(48, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $16.Attachment.create)
     ..a<$core.int>(49, _omitFieldNames ? '' : 'initiatorId', $pb.PbFieldType.O3)
     ..a<$core.int>(50, _omitFieldNames ? '' : 'authorId', $pb.PbFieldType.O3)
@@ -390,6 +399,8 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.double>(68, _omitFieldNames ? '' : 'total', $pb.PbFieldType.OD)
     ..aOB(69, _omitFieldNames ? '' : 'cancelMarkPaid')
     ..aOB(70, _omitFieldNames ? '' : 'hasComments')
+    ..aOB(71, _omitFieldNames ? '' : 'contractId')
+    ..aOM<$54.Contract>(72, _omitFieldNames ? '' : 'contract', subBuilder: $54.Contract.create)
     ..hasRequiredFields = false
   ;
 
@@ -460,9 +471,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearCurrencyCode() => clearField(5);
 
   @$pb.TagNumber(6)
-  $54.AccrualType get type => $_getN(5);
+  $55.AccrualType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type($54.AccrualType v) { setField(6, v); }
+  set type($55.AccrualType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)
@@ -532,9 +543,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearIsInitial() => clearField(13);
 
   @$pb.TagNumber(14)
-  $55.PaymentType get paymentType => $_getN(13);
+  $56.PaymentType get paymentType => $_getN(13);
   @$pb.TagNumber(14)
-  set paymentType($55.PaymentType v) { setField(14, v); }
+  set paymentType($56.PaymentType v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasPaymentType() => $_has(13);
   @$pb.TagNumber(14)
@@ -753,18 +764,18 @@ class Accrual extends $pb.GeneratedMessage {
   void clearTaxInclusive() => clearField(36);
 
   @$pb.TagNumber(37)
-  $56.Source get datasource => $_getN(36);
+  $57.Source get datasource => $_getN(36);
   @$pb.TagNumber(37)
-  set datasource($56.Source v) { setField(37, v); }
+  set datasource($57.Source v) { setField(37, v); }
   @$pb.TagNumber(37)
   $core.bool hasDatasource() => $_has(36);
   @$pb.TagNumber(37)
   void clearDatasource() => clearField(37);
 
   @$pb.TagNumber(38)
-  $57.Color get color => $_getN(37);
+  $58.Color get color => $_getN(37);
   @$pb.TagNumber(38)
-  set color($57.Color v) { setField(38, v); }
+  set color($58.Color v) { setField(38, v); }
   @$pb.TagNumber(38)
   $core.bool hasColor() => $_has(37);
   @$pb.TagNumber(38)
@@ -859,9 +870,9 @@ class Accrual extends $pb.GeneratedMessage {
   $35.Timestamp ensureCreateTime() => $_ensure(45);
 
   @$pb.TagNumber(47)
-  $58.Status get status => $_getN(46);
+  $59.Status get status => $_getN(46);
   @$pb.TagNumber(47)
-  set status($58.Status v) { setField(47, v); }
+  set status($59.Status v) { setField(47, v); }
   @$pb.TagNumber(47)
   $core.bool hasStatus() => $_has(46);
   @$pb.TagNumber(47)
@@ -1068,6 +1079,26 @@ class Accrual extends $pb.GeneratedMessage {
   $core.bool hasHasComments() => $_has(69);
   @$pb.TagNumber(70)
   void clearHasComments() => clearField(70);
+
+  @$pb.TagNumber(71)
+  $core.bool get contractId => $_getBF(70);
+  @$pb.TagNumber(71)
+  set contractId($core.bool v) { $_setBool(70, v); }
+  @$pb.TagNumber(71)
+  $core.bool hasContractId() => $_has(70);
+  @$pb.TagNumber(71)
+  void clearContractId() => clearField(71);
+
+  @$pb.TagNumber(72)
+  $54.Contract get contract => $_getN(71);
+  @$pb.TagNumber(72)
+  set contract($54.Contract v) { setField(72, v); }
+  @$pb.TagNumber(72)
+  $core.bool hasContract() => $_has(71);
+  @$pb.TagNumber(72)
+  void clearContract() => clearField(72);
+  @$pb.TagNumber(72)
+  $54.Contract ensureContract() => $_ensure(71);
 }
 
 

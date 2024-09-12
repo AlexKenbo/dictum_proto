@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'accrual.pb.dart' as $28;
-import 'accrual_mirror_state.pb.dart' as $71;
+import 'accrual_mirror_state.pb.dart' as $72;
 
 class AccrualMirror extends $pb.GeneratedMessage {
   factory AccrualMirror({
@@ -23,7 +23,7 @@ class AccrualMirror extends $pb.GeneratedMessage {
     $core.int? accrualMirrorStateId,
     $28.Accrual? outcomeAccrual,
     $28.Accrual? incomeAccrual,
-    $71.AccrualMirrorState? accrualMirrorState,
+    $72.AccrualMirrorState? accrualMirrorState,
   }) {
     final $result = create();
     if (outcomeAccrualId != null) {
@@ -56,7 +56,7 @@ class AccrualMirror extends $pb.GeneratedMessage {
     ..a<$core.int>(3, _omitFieldNames ? '' : 'accrualMirrorStateId', $pb.PbFieldType.O3)
     ..aOM<$28.Accrual>(5, _omitFieldNames ? '' : 'outcomeAccrual', subBuilder: $28.Accrual.create)
     ..aOM<$28.Accrual>(7, _omitFieldNames ? '' : 'incomeAccrual', subBuilder: $28.Accrual.create)
-    ..aOM<$71.AccrualMirrorState>(9, _omitFieldNames ? '' : 'accrualMirrorState', subBuilder: $71.AccrualMirrorState.create)
+    ..aOM<$72.AccrualMirrorState>(9, _omitFieldNames ? '' : 'accrualMirrorState', subBuilder: $72.AccrualMirrorState.create)
     ..hasRequiredFields = false
   ;
 
@@ -131,15 +131,15 @@ class AccrualMirror extends $pb.GeneratedMessage {
   $28.Accrual ensureIncomeAccrual() => $_ensure(4);
 
   @$pb.TagNumber(9)
-  $71.AccrualMirrorState get accrualMirrorState => $_getN(5);
+  $72.AccrualMirrorState get accrualMirrorState => $_getN(5);
   @$pb.TagNumber(9)
-  set accrualMirrorState($71.AccrualMirrorState v) { setField(9, v); }
+  set accrualMirrorState($72.AccrualMirrorState v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasAccrualMirrorState() => $_has(5);
   @$pb.TagNumber(9)
   void clearAccrualMirrorState() => clearField(9);
   @$pb.TagNumber(9)
-  $71.AccrualMirrorState ensureAccrualMirrorState() => $_ensure(5);
+  $72.AccrualMirrorState ensureAccrualMirrorState() => $_ensure(5);
 }
 
 

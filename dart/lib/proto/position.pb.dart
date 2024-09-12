@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'accrual.pb.dart' as $28;
-import 'product.pb.dart' as $62;
+import 'product.pb.dart' as $63;
 
 class Position extends $pb.GeneratedMessage {
   factory Position({
@@ -25,7 +25,7 @@ class Position extends $pb.GeneratedMessage {
     $core.int? quantity,
     $core.double? sum,
     $core.String? resourceName,
-    $62.Product? product,
+    $63.Product? product,
     $28.Accrual? accrual,
   }) {
     final $result = create();
@@ -70,7 +70,7 @@ class Position extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'quantity', $pb.PbFieldType.O3)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'sum', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$62.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $62.Product.create)
+    ..aOM<$63.Product>(9, _omitFieldNames ? '' : 'product', subBuilder: $63.Product.create)
     ..aOM<$28.Accrual>(12, _omitFieldNames ? '' : 'accrual', subBuilder: $28.Accrual.create)
     ..hasRequiredFields = false
   ;
@@ -160,15 +160,15 @@ class Position extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(9)
-  $62.Product get product => $_getN(7);
+  $63.Product get product => $_getN(7);
   @$pb.TagNumber(9)
-  set product($62.Product v) { setField(9, v); }
+  set product($63.Product v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasProduct() => $_has(7);
   @$pb.TagNumber(9)
   void clearProduct() => clearField(9);
   @$pb.TagNumber(9)
-  $62.Product ensureProduct() => $_ensure(7);
+  $63.Product ensureProduct() => $_ensure(7);
 
   @$pb.TagNumber(12)
   $28.Accrual get accrual => $_getN(8);

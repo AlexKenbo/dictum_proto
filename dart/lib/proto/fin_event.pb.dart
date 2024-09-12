@@ -20,7 +20,7 @@ import 'article.pb.dart' as $31;
 import 'comment.pb.dart' as $23;
 import 'permission.pb.dart' as $24;
 import 'position.pb.dart' as $30;
-import 'product.pb.dart' as $62;
+import 'product.pb.dart' as $63;
 import 'signature.pb.dart' as $53;
 import 'transfer.pb.dart' as $25;
 
@@ -719,7 +719,7 @@ class AllocateTransferRequest extends $pb.GeneratedMessage {
 class ListProductsResponse extends $pb.GeneratedMessage {
   factory ListProductsResponse({
     $core.String? resourceName,
-    $core.Iterable<$62.Product>? products,
+    $core.Iterable<$63.Product>? products,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -740,7 +740,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListProductsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$62.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $62.Product.create)
+    ..pc<$63.Product>(2, _omitFieldNames ? '' : 'products', $pb.PbFieldType.PM, subBuilder: $63.Product.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -776,7 +776,7 @@ class ListProductsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$62.Product> get products => $_getList(1);
+  $core.List<$63.Product> get products => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);
