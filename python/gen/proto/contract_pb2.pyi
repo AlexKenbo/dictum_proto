@@ -1,4 +1,5 @@
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
+from proto import entity_pb2 as _entity_pb2
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
@@ -6,15 +7,19 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Contract(_message.Message):
-    __slots__ = ("contract_id", "number", "payer_id", "recipient_id", "create_time")
+    __slots__ = ("contract_id", "number", "payer_id", "recipient_id", "create_time", "payer", "recipient")
     CONTRACT_ID_FIELD_NUMBER: _ClassVar[int]
     NUMBER_FIELD_NUMBER: _ClassVar[int]
     PAYER_ID_FIELD_NUMBER: _ClassVar[int]
     RECIPIENT_ID_FIELD_NUMBER: _ClassVar[int]
     CREATE_TIME_FIELD_NUMBER: _ClassVar[int]
+    PAYER_FIELD_NUMBER: _ClassVar[int]
+    RECIPIENT_FIELD_NUMBER: _ClassVar[int]
     contract_id: int
     number: str
     payer_id: int
     recipient_id: int
     create_time: _timestamp_pb2.Timestamp
-    def __init__(self, contract_id: _Optional[int] = ..., number: _Optional[str] = ..., payer_id: _Optional[int] = ..., recipient_id: _Optional[int] = ..., create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    payer: _entity_pb2.Entity
+    recipient: _entity_pb2.Entity
+    def __init__(self, contract_id: _Optional[int] = ..., number: _Optional[str] = ..., payer_id: _Optional[int] = ..., recipient_id: _Optional[int] = ..., create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., payer: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ..., recipient: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ...) -> None: ...
