@@ -154,8 +154,6 @@ Powershell:
       Invoke-Expression $command
    ```
 
-Обновлённый раздел:
-
 ### 3. Разработка proto, go и dart. Git-теги для версионирования
 
 #### Формат
