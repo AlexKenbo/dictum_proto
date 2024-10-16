@@ -5,9 +5,9 @@ setup(
     version="0.6.0-alpha.2",
     packages=find_packages(),
     install_requires=[
-        'protobuf',
-        'grpcio',
-        'grpcio-tools',
+        'protobuf==5.28.2',
+        'grpcio==1.67.0',
+        'grpcio-tools==1.67.0',
     ],
     url='https://github.com/AlexKenbo/dictum_proto',
     author='loopnyapy,skyfet',

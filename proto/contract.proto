@@ -12,7 +12,9 @@ message Contract
   int32 payer_id = 3;
   int32 recipient_id = 4;
   google.protobuf.Timestamp create_time = 5;
-
+  
   Entity payer = 6;
   Entity recipient = 7;
+
+  int32 payer_account_id = 8;
 }

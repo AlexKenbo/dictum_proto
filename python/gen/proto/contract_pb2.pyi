@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Contract(_message.Message):
-    __slots__ = ("contract_id", "number", "payer_id", "recipient_id", "create_time", "payer", "recipient")
+    __slots__ = ("contract_id", "number", "payer_id", "recipient_id", "create_time", "payer", "recipient", "payer_account_id")
     CONTRACT_ID_FIELD_NUMBER: _ClassVar[int]
     NUMBER_FIELD_NUMBER: _ClassVar[int]
     PAYER_ID_FIELD_NUMBER: _ClassVar[int]
@@ -15,6 +15,7 @@ class Contract(_message.Message):
     CREATE_TIME_FIELD_NUMBER: _ClassVar[int]
     PAYER_FIELD_NUMBER: _ClassVar[int]
     RECIPIENT_FIELD_NUMBER: _ClassVar[int]
+    PAYER_ACCOUNT_ID_FIELD_NUMBER: _ClassVar[int]
     contract_id: int
     number: str
     payer_id: int
@@ -22,4 +23,5 @@ class Contract(_message.Message):
     create_time: _timestamp_pb2.Timestamp
     payer: _entity_pb2.Entity
     recipient: _entity_pb2.Entity
-    def __init__(self, contract_id: _Optional[int] = ..., number: _Optional[str] = ..., payer_id: _Optional[int] = ..., recipient_id: _Optional[int] = ..., create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., payer: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ..., recipient: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ...) -> None: ...
+    payer_account_id: int
+    def __init__(self, contract_id: _Optional[int] = ..., number: _Optional[str] = ..., payer_id: _Optional[int] = ..., recipient_id: _Optional[int] = ..., create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., payer: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ..., recipient: _Optional[_Union[_entity_pb2.Entity, _Mapping]] = ..., payer_account_id: _Optional[int] = ...) -> None: ...
