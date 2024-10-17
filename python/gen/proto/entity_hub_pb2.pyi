@@ -4,15 +4,16 @@ from proto import account_audit_pb2 as _account_audit_pb2
 from proto import account_balance_pb2 as _account_balance_pb2
 from proto import account_detail_pb2 as _account_detail_pb2
 from proto import account_pb2 as _account_pb2
+from proto import contract_pb2 as _contract_pb2
 from proto import country_pb2 as _country_pb2
 from proto import currency_rate_pb2 as _currency_rate_pb2
 from proto import currency_pb2 as _currency_pb2
 from proto import employee_pb2 as _employee_pb2
+from proto import entity_access_pb2 as _entity_access_pb2
 from proto import entity_aggregate_pb2 as _entity_aggregate_pb2
 from proto import entity_pb2 as _entity_pb2
 from proto import fi_pb2 as _fi_pb2
 from proto import requests_pb2 as _requests_pb2
-from proto import entity_access_pb2 as _entity_access_pb2
 from proto import role_pb2 as _role_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
@@ -88,6 +89,16 @@ class ListActualCurrencyRatesRequest(_message.Message):
     RESOURCE_NAME_FIELD_NUMBER: _ClassVar[int]
     resource_name: str
     def __init__(self, resource_name: _Optional[str] = ...) -> None: ...
+
+class ListContractsResponse(_message.Message):
+    __slots__ = ("resource_name", "contracts", "next_page_token")
+    RESOURCE_NAME_FIELD_NUMBER: _ClassVar[int]
+    CONTRACTS_FIELD_NUMBER: _ClassVar[int]
+    NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    resource_name: str
+    contracts: _containers.RepeatedCompositeFieldContainer[_contract_pb2.Contract]
+    next_page_token: str
+    def __init__(self, resource_name: _Optional[str] = ..., contracts: _Optional[_Iterable[_Union[_contract_pb2.Contract, _Mapping]]] = ..., next_page_token: _Optional[str] = ...) -> None: ...
 
 class ListEmployeesResponse(_message.Message):
     __slots__ = ("resource_name", "employees", "next_page_token")

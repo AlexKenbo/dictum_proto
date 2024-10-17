@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/AlexKenbo/dictum_proto/go";
+
+import "google/protobuf/timestamp.proto";
+import "proto/entity.proto";
+
+message Contract
+{
+  int32 contract_id = 1;
+  string number = 2;
+  int32 payer_id = 3;
+  int32 recipient_id = 4;
+  google.protobuf.Timestamp create_time = 5;
+
+  Entity payer = 6;
+  Entity recipient = 7;
+}

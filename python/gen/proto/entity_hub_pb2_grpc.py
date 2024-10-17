@@ -8,6 +8,7 @@ from proto import account_audit_pb2 as proto_dot_account__audit__pb2
 from proto import account_balance_pb2 as proto_dot_account__balance__pb2
 from proto import account_detail_pb2 as proto_dot_account__detail__pb2
 from proto import account_pb2 as proto_dot_account__pb2
+from proto import contract_pb2 as proto_dot_contract__pb2
 from proto import employee_pb2 as proto_dot_employee__pb2
 from proto import entity_aggregate_pb2 as proto_dot_entity__aggregate__pb2
 from proto import entity_hub_pb2 as proto_dot_entity__hub__pb2
@@ -83,6 +84,16 @@ class EntityHubStub(object):
                 '/EntityHub/AggregateEntity',
                 request_serializer=proto_dot_requests__pb2.GetRequest.SerializeToString,
                 response_deserializer=proto_dot_entity__aggregate__pb2.EntityAggregate.FromString,
+                _registered_method=True)
+        self.CreateContract = channel.unary_unary(
+                '/EntityHub/CreateContract',
+                request_serializer=proto_dot_contract__pb2.Contract.SerializeToString,
+                response_deserializer=proto_dot_contract__pb2.Contract.FromString,
+                _registered_method=True)
+        self.ListContracts = channel.unary_unary(
+                '/EntityHub/ListContracts',
+                request_serializer=proto_dot_requests__pb2.ListRequest.SerializeToString,
+                response_deserializer=proto_dot_entity__hub__pb2.ListContractsResponse.FromString,
                 _registered_method=True)
         self.ListEmployees = channel.unary_unary(
                 '/EntityHub/ListEmployees',
@@ -263,6 +274,18 @@ class EntityHubServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def AggregateEntity(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateContract(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ListContracts(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -472,6 +495,16 @@ def add_EntityHubServicer_to_server(servicer, server):
                     servicer.AggregateEntity,
                     request_deserializer=proto_dot_requests__pb2.GetRequest.FromString,
                     response_serializer=proto_dot_entity__aggregate__pb2.EntityAggregate.SerializeToString,
+            ),
+            'CreateContract': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateContract,
+                    request_deserializer=proto_dot_contract__pb2.Contract.FromString,
+                    response_serializer=proto_dot_contract__pb2.Contract.SerializeToString,
+            ),
+            'ListContracts': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListContracts,
+                    request_deserializer=proto_dot_requests__pb2.ListRequest.FromString,
+                    response_serializer=proto_dot_entity__hub__pb2.ListContractsResponse.SerializeToString,
             ),
             'ListEmployees': grpc.unary_unary_rpc_method_handler(
                     servicer.ListEmployees,
@@ -799,6 +832,60 @@ class EntityHub(object):
             '/EntityHub/AggregateEntity',
             proto_dot_requests__pb2.GetRequest.SerializeToString,
             proto_dot_entity__aggregate__pb2.EntityAggregate.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateContract(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/EntityHub/CreateContract',
+            proto_dot_contract__pb2.Contract.SerializeToString,
+            proto_dot_contract__pb2.Contract.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ListContracts(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/EntityHub/ListContracts',
+            proto_dot_requests__pb2.ListRequest.SerializeToString,
+            proto_dot_entity__hub__pb2.ListContractsResponse.FromString,
             options,
             channel_credentials,
             insecure,

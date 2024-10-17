@@ -14,14 +14,14 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'entity.pb.dart' as $3;
-import 'tag.pb.dart' as $12;
+import 'tag.pb.dart' as $13;
 
 class EntityTag extends $pb.GeneratedMessage {
   factory EntityTag({
     $core.int? tagId,
     $core.int? entityId,
     $3.Entity? entity,
-    $12.Tag? tag,
+    $13.Tag? tag,
   }) {
     final $result = create();
     if (tagId != null) {
@@ -46,7 +46,7 @@ class EntityTag extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'tagId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aOM<$3.Entity>(3, _omitFieldNames ? '' : 'entity', subBuilder: $3.Entity.create)
-    ..aOM<$12.Tag>(5, _omitFieldNames ? '' : 'tag', subBuilder: $12.Tag.create)
+    ..aOM<$13.Tag>(5, _omitFieldNames ? '' : 'tag', subBuilder: $13.Tag.create)
     ..hasRequiredFields = false
   ;
 
@@ -101,15 +101,15 @@ class EntityTag extends $pb.GeneratedMessage {
   $3.Entity ensureEntity() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $12.Tag get tag => $_getN(3);
+  $13.Tag get tag => $_getN(3);
   @$pb.TagNumber(5)
-  set tag($12.Tag v) { setField(5, v); }
+  set tag($13.Tag v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTag() => $_has(3);
   @$pb.TagNumber(5)
   void clearTag() => clearField(5);
   @$pb.TagNumber(5)
-  $12.Tag ensureTag() => $_ensure(3);
+  $13.Tag ensureTag() => $_ensure(3);
 }
 
 

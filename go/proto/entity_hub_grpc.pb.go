@@ -27,6 +27,8 @@ const (
 	EntityHub_BatchInsertEntities_FullMethodName      = "/EntityHub/BatchInsertEntities"
 	EntityHub_UpdateEntity_FullMethodName             = "/EntityHub/UpdateEntity"
 	EntityHub_AggregateEntity_FullMethodName          = "/EntityHub/AggregateEntity"
+	EntityHub_CreateContract_FullMethodName           = "/EntityHub/CreateContract"
+	EntityHub_ListContracts_FullMethodName            = "/EntityHub/ListContracts"
 	EntityHub_ListEmployees_FullMethodName            = "/EntityHub/ListEmployees"
 	EntityHub_GetEmployee_FullMethodName              = "/EntityHub/GetEmployee"
 	EntityHub_CreateEmployee_FullMethodName           = "/EntityHub/CreateEmployee"
@@ -70,6 +72,8 @@ type EntityHubClient interface {
 	BatchInsertEntities(ctx context.Context, in *BatchInsertEntitiesRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	UpdateEntity(ctx context.Context, in *Entity, opts ...grpc.CallOption) (*Entity, error)
 	AggregateEntity(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*EntityAggregate, error)
+	CreateContract(ctx context.Context, in *Contract, opts ...grpc.CallOption) (*Contract, error)
+	ListContracts(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListContractsResponse, error)
 	ListEmployees(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListEmployeesResponse, error)
 	GetEmployee(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*Employee, error)
 	CreateEmployee(ctx context.Context, in *Employee, opts ...grpc.CallOption) (*Employee, error)
@@ -176,6 +180,26 @@ func (c *entityHubClient) AggregateEntity(ctx context.Context, in *GetRequest, o
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(EntityAggregate)
 	err := c.cc.Invoke(ctx, EntityHub_AggregateEntity_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *entityHubClient) CreateContract(ctx context.Context, in *Contract, opts ...grpc.CallOption) (*Contract, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(Contract)
+	err := c.cc.Invoke(ctx, EntityHub_CreateContract_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *entityHubClient) ListContracts(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListContractsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListContractsResponse)
+	err := c.cc.Invoke(ctx, EntityHub_ListContracts_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -466,6 +490,8 @@ type EntityHubServer interface {
 	BatchInsertEntities(context.Context, *BatchInsertEntitiesRequest) (*emptypb.Empty, error)
 	UpdateEntity(context.Context, *Entity) (*Entity, error)
 	AggregateEntity(context.Context, *GetRequest) (*EntityAggregate, error)
+	CreateContract(context.Context, *Contract) (*Contract, error)
+	ListContracts(context.Context, *ListRequest) (*ListContractsResponse, error)
 	ListEmployees(context.Context, *ListRequest) (*ListEmployeesResponse, error)
 	GetEmployee(context.Context, *GetRequest) (*Employee, error)
 	CreateEmployee(context.Context, *Employee) (*Employee, error)
@@ -525,6 +551,12 @@ func (UnimplementedEntityHubServer) UpdateEntity(context.Context, *Entity) (*Ent
 }
 func (UnimplementedEntityHubServer) AggregateEntity(context.Context, *GetRequest) (*EntityAggregate, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AggregateEntity not implemented")
+}
+func (UnimplementedEntityHubServer) CreateContract(context.Context, *Contract) (*Contract, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateContract not implemented")
+}
+func (UnimplementedEntityHubServer) ListContracts(context.Context, *ListRequest) (*ListContractsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListContracts not implemented")
 }
 func (UnimplementedEntityHubServer) ListEmployees(context.Context, *ListRequest) (*ListEmployeesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListEmployees not implemented")
@@ -742,6 +774,42 @@ func _EntityHub_AggregateEntity_Handler(srv interface{}, ctx context.Context, de
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(EntityHubServer).AggregateEntity(ctx, req.(*GetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _EntityHub_CreateContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Contract)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EntityHubServer).CreateContract(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: EntityHub_CreateContract_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EntityHubServer).CreateContract(ctx, req.(*Contract))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _EntityHub_ListContracts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EntityHubServer).ListContracts(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: EntityHub_ListContracts_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EntityHubServer).ListContracts(ctx, req.(*ListRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1266,6 +1334,14 @@ var EntityHub_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AggregateEntity",
 			Handler:    _EntityHub_AggregateEntity_Handler,
+		},
+		{
+			MethodName: "CreateContract",
+			Handler:    _EntityHub_CreateContract_Handler,
+		},
+		{
+			MethodName: "ListContracts",
+			Handler:    _EntityHub_ListContracts_Handler,
 		},
 		{
 			MethodName: "ListEmployees",

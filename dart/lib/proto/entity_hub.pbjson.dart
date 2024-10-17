@@ -130,6 +130,22 @@ final $typed_data.Uint8List listActualCurrencyRatesRequestDescriptor = $convert.
     'Ch5MaXN0QWN0dWFsQ3VycmVuY3lSYXRlc1JlcXVlc3QSIwoNcmVzb3VyY2VfbmFtZRgBIAEoCV'
     'IMcmVzb3VyY2VOYW1l');
 
+@$core.Deprecated('Use listContractsResponseDescriptor instead')
+const ListContractsResponse$json = {
+  '1': 'ListContractsResponse',
+  '2': [
+    {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
+    {'1': 'contracts', '3': 2, '4': 3, '5': 11, '6': '.Contract', '10': 'contracts'},
+    {'1': 'next_page_token', '3': 3, '4': 1, '5': 9, '10': 'nextPageToken'},
+  ],
+};
+
+/// Descriptor for `ListContractsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listContractsResponseDescriptor = $convert.base64Decode(
+    'ChVMaXN0Q29udHJhY3RzUmVzcG9uc2USIwoNcmVzb3VyY2VfbmFtZRgBIAEoCVIMcmVzb3VyY2'
+    'VOYW1lEicKCWNvbnRyYWN0cxgCIAMoCzIJLkNvbnRyYWN0Ugljb250cmFjdHMSJgoPbmV4dF9w'
+    'YWdlX3Rva2VuGAMgASgJUg1uZXh0UGFnZVRva2Vu');
+
 @$core.Deprecated('Use listEmployeesResponseDescriptor instead')
 const ListEmployeesResponse$json = {
   '1': 'ListEmployeesResponse',
