@@ -5,7 +5,7 @@ setup(
     version="0.6.0-alpha.2",
     packages=find_packages(),
     install_requires=[
-        'protobuf==5.28.2',
+        'protobuf==5.27.2',
         'grpcio==1.67.0',
         'grpcio-tools==1.67.0',
     ],
