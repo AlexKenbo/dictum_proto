@@ -53,7 +53,6 @@ build: ## Generation to Python, Dart and Go
 	@echo "\n$(BLUE)===== Starting All Build =====$(RESET)\n"
 	@$(MAKE) build_go
 	@$(MAKE) build_dart
-	@$(MAKE) build_py
 	@echo "\n"
 
 # TODO: add build go command for windows, current command for mac
@@ -105,38 +104,12 @@ endif
 
 build_py: ## Generation to Python
 	@echo "\n$(BLUE)===== Starting Python Build =====$(RESET)\n"
-	@echo "Installing python dependencies..."
-	pip install -r python/requirements.txt 
 
-ifeq ($(UNAME_S), Linux)
-		@echo "Building on Linux..."
-		python3 -m grpc_tools.protoc -I . -I ./google --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $(shell find . -name "*.proto")
-endif
+	@echo "Building Docker..."
+	docker build -t dictum_proto_generator -f python/Dockerfile .
 
-ifeq ($(UNAME_S), Darwin)
-		@echo "Building on macOS..."
-		python3 -m grpc_tools.protoc -I . -I ./google --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $(shell find . -name "*.proto")
-endif
-
-ifeq ($(OS), Windows_NT)
-		@echo "Building on Windows..."
-		$baseDir = "D:\Projects\D\dictum_proto"
-		Set-Location $baseDir
-		
-		$protoFiles = Get-ChildItem -Recurse -Filter *.proto | ForEach-Object { $_.FullName }
-		
-		$includeDirs = @("$baseDir", "$baseDir\google", "$baseDir\coincat", "$baseDir\proto")
-		$includeDirsArgs = ""
-		foreach ($dir in $includeDirs) {
-				$includeDirsArgs += "-I$dir "
-		}
-		
-		$protoPathsArgs = $protoFiles -join " "
-		
-		$command = "python -m grpc_tools.protoc $includeDirsArgs --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $protoPathsArgs"
-		Invoke-Expression $command
-endif
-
+	@echo "Running Docker..."
+	docker run --rm -v $(pwd)/python/dictum_proto:/python/dictum_proto dictum_proto_generator
 	@echo "$(GREEN)Python build completed succesfully!$(RESET)"
 
 # Aborting make in case the version is interpreted as a target

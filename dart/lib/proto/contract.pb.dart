@@ -26,6 +26,7 @@ class Contract extends $pb.GeneratedMessage {
     $3.Entity? payer,
     $3.Entity? recipient,
     $core.int? payerAccountId,
+    $36.Timestamp? dateFrom,
   }) {
     final $result = create();
     if (contractId != null) {
@@ -52,6 +53,9 @@ class Contract extends $pb.GeneratedMessage {
     if (payerAccountId != null) {
       $result.payerAccountId = payerAccountId;
     }
+    if (dateFrom != null) {
+      $result.dateFrom = dateFrom;
+    }
     return $result;
   }
   Contract._() : super();
@@ -67,6 +71,7 @@ class Contract extends $pb.GeneratedMessage {
     ..aOM<$3.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $3.Entity.create)
     ..aOM<$3.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $3.Entity.create)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
+    ..aOM<$36.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $36.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -168,6 +173,17 @@ class Contract extends $pb.GeneratedMessage {
   $core.bool hasPayerAccountId() => $_has(7);
   @$pb.TagNumber(8)
   void clearPayerAccountId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $36.Timestamp get dateFrom => $_getN(8);
+  @$pb.TagNumber(9)
+  set dateFrom($36.Timestamp v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDateFrom() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDateFrom() => clearField(9);
+  @$pb.TagNumber(9)
+  $36.Timestamp ensureDateFrom() => $_ensure(8);
 }
 
 

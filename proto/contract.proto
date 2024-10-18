@@ -17,4 +17,5 @@ message Contract
   Entity recipient = 7;
 
   int32 payer_account_id = 8;
+  google.protobuf.Timestamp date_from = 9;
 }

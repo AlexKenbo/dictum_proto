@@ -25,6 +25,7 @@ const Contract$json = {
     {'1': 'payer', '3': 6, '4': 1, '5': 11, '6': '.Entity', '10': 'payer'},
     {'1': 'recipient', '3': 7, '4': 1, '5': 11, '6': '.Entity', '10': 'recipient'},
     {'1': 'payer_account_id', '3': 8, '4': 1, '5': 5, '10': 'payerAccountId'},
+    {'1': 'date_from', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'dateFrom'},
   ],
 };
 
@@ -35,5 +36,6 @@ final $typed_data.Uint8List contractDescriptor = $convert.base64Decode(
     'BCABKAVSC3JlY2lwaWVudElkEjsKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYn'
     'VmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRIdCgVwYXllchgGIAEoCzIHLkVudGl0eVIFcGF5ZXIS'
     'JQoJcmVjaXBpZW50GAcgASgLMgcuRW50aXR5UglyZWNpcGllbnQSKAoQcGF5ZXJfYWNjb3VudF'
-    '9pZBgIIAEoBVIOcGF5ZXJBY2NvdW50SWQ=');
+    '9pZBgIIAEoBVIOcGF5ZXJBY2NvdW50SWQSNwoJZGF0ZV9mcm9tGAkgASgLMhouZ29vZ2xlLnBy'
+    'b3RvYnVmLlRpbWVzdGFtcFIIZGF0ZUZyb20=');
 

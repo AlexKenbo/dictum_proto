@@ -8,9 +8,9 @@ WORKDIR /app
 
 # Копируем необходимые папки proto, google/api и coincat в контейнер
 COPY ../proto /app/proto
-COPY ../google/api /app/google/api
+COPY ../google /app/google
 COPY ../coincat /app/coincat
-COPY main.py /app
+COPY python/main.py /app
 
 # Создаем директорию для сгенерированных файлов Python
 RUN mkdir -p /app/dictum_proto
