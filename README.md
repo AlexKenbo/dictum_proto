@@ -257,7 +257,7 @@ Powershell:
        git:
          url: git@github.com:AlexKenbo/dictum_proto.git
          path: dart
-         ref: your_tag_version
+         ref: vYOUR.TAG.VERSION
    ```
 
 2. Выполните команду для получения зависимостей:
