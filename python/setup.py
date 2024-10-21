@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='dictum-proto',
-    version="0.6.0",
+    version="0.6.1",
     packages=find_packages(),
     install_requires=[
-        'protobuf',
-        'grpcio',
-        'grpcio-tools',
+        'protobuf==5.27.2',
+        'grpcio==1.67.0',
+        'grpcio-tools==1.67.0',
     ],
     url='https://github.com/AlexKenbo/dictum_proto',
     author='loopnyapy,skyfet',

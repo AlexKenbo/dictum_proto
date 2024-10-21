@@ -8,9 +8,9 @@ Makefile предоставляет несколько удобных коман
 
 ### Основные команды
 
-1. **Сборка проекта во всех языках:**
+1. **Сборка проекта в языках Dart и Go:**
 
-   Команда запускает генерацию gRPC-кода для Go, Dart и Python.
+   Команда запускает генерацию gRPC-кода для Go, Dart.
 
    ```bash
    make build
@@ -32,7 +32,7 @@ Makefile предоставляет несколько удобных коман
    make build_dart
    ```
 
-4. **Сборка только для Python:**
+4. **Сборка только для Python:**(временно не работает, см. [Python](#python))
 
    Генерирует gRPC-код для Python.
 
@@ -126,9 +126,25 @@ Powershell:
 
 #### Python
 
-Чтобы компилировать `.proto` файлы для Python, запустите компиляцию из корня:
+Чтобы компилировать `.proto` файлы для Python, запустите Docker из корня:
 
-   ```bash
+```bash
+   docker build -t dictum_proto_generator -f python/Dockerfile .
+```
+
+После запустите контейнер:
+
+```bash
+   docker run --rm -v $(pwd)/python/dictum_proto:/python/dictum_proto dictum_proto_generator
+```
+
+Если после генерации на LINUX нет прав на редактирования сгенерированных файлов:
+
+```bash
+   sudo chmod -R 777 $(pwd)/python
+```
+
+   <!-- ```bash
       python3 -m grpc_tools.protoc -I . -I ./google --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $(find . -name "*.proto")
    ```
 
@@ -152,7 +168,7 @@ Powershell:
       # Формируем и запускаем команду protoc
       $command = "python -m grpc_tools.protoc $includeDirsArgs --python_out=python/gen --pyi_out=python/gen --grpc_python_out=python/gen $protoPathsArgs"
       Invoke-Expression $command
-   ```
+   ``` -->
 
 ### 3. Разработка proto, go и dart. Git-теги для версионирования
 
@@ -241,7 +257,7 @@ Powershell:
        git:
          url: git@github.com:AlexKenbo/dictum_proto.git
          path: dart
-         ref: your_tag_version
+         ref: vYOUR.TAG.VERSION
    ```
 
 2. Выполните команду для получения зависимостей:
