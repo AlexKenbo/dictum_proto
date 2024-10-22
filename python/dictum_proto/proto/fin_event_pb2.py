@@ -22,7 +22,7 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
-from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from dictum_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from dictum_proto.proto import accrual_pb2 as proto_dot_accrual__pb2
 from dictum_proto.proto import accruals_aggregate_pb2 as proto_dot_accruals__aggregate__pb2

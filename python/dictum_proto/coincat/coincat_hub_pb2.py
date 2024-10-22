@@ -23,7 +23,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from dictum_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from dictum_proto.coincat import exchange_pb2 as coincat_dot_exchange__pb2
 from dictum_proto.coincat import currency_pb2 as coincat_dot_currency__pb2
 from dictum_proto.coincat import order_pb2 as coincat_dot_order__pb2

@@ -10,7 +10,7 @@ DIR = JSON_PATH
 PATTERNS = [
     (r'from coincat import', r'from dictum_proto.coincat import'),
     (r'from proto import', r'from dictum_proto.proto import'),
-    # (r'from google.api', r'from dictum_proto.google.api')
+    (r'from google.api', r'from dictum_proto.google.api')
 ]
 
 
