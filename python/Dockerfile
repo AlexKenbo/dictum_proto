@@ -29,6 +29,6 @@ RUN ["python", "main.py"]
 # CMD ["cp", "-r", "/app/dictum_proto", "/python/dictum_proto"]
 CMD ["sh", "-c", "cd /app && find dictum_proto -name '*.py' -exec cp --parents {} /python \\;"]
 
-# docker build -t dictum_proto_generator .
+# docker build -t dictum_proto_generator -f python/Dockerfile .
 # docker run --rm -v $(pwd)/python/dictum_proto:/python/dictum_proto dictum_proto_generator
 # sudo chmod -R 777 $(pwd)/python/dictum_proto
