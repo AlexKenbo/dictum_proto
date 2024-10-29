@@ -103,4 +103,5 @@ message Accrual {
   // 
   int32 contract_id = 71;
   Contract contract = 72;
+  int32 parent_id = 73;
 }

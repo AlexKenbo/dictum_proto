@@ -19,12 +19,13 @@ import '../google/protobuf/empty.pb.dart' as $0;
 import 'accrual.pb.dart' as $19;
 import 'accruals_aggregate.pb.dart' as $20;
 import 'allocation.pb.dart' as $17;
-import 'article.pb.dart' as $22;
+import 'article.pb.dart' as $23;
 import 'comment.pb.dart' as $14;
 import 'event_aggregate.pb.dart' as $18;
 import 'fin_event.pb.dart' as $13;
 import 'permission.pb.dart' as $15;
-import 'position.pb.dart' as $21;
+import 'position.pb.dart' as $22;
+import 'product.pb.dart' as $21;
 import 'requests.pb.dart' as $3;
 import 'transfer.pb.dart' as $16;
 
@@ -128,14 +129,18 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/ListProducts',
       ($3.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $13.ListProductsResponse.fromBuffer(value));
+  static final _$createProduct = $grpc.ClientMethod<$21.Product, $21.Product>(
+      '/FinEvent/CreateProduct',
+      ($21.Product value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $21.Product.fromBuffer(value));
   static final _$listPositions = $grpc.ClientMethod<$3.ListRequest, $13.ListPositionsResponse>(
       '/FinEvent/ListPositions',
       ($3.ListRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $13.ListPositionsResponse.fromBuffer(value));
-  static final _$updatePosition = $grpc.ClientMethod<$21.Position, $21.Position>(
+  static final _$updatePosition = $grpc.ClientMethod<$22.Position, $22.Position>(
       '/FinEvent/UpdatePosition',
-      ($21.Position value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $21.Position.fromBuffer(value));
+      ($22.Position value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $22.Position.fromBuffer(value));
   static final _$batchInsertPositions = $grpc.ClientMethod<$13.BatchInsertPositionsRequest, $0.Empty>(
       '/FinEvent/BatchInsertPositions',
       ($13.BatchInsertPositionsRequest value) => value.writeToBuffer(),
@@ -144,18 +149,18 @@ class FinEventClient extends $grpc.Client {
       '/FinEvent/ListArticles',
       ($13.ListArticlesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $13.ListArticlesResponse.fromBuffer(value));
-  static final _$getArticle = $grpc.ClientMethod<$3.GetRequest, $22.Article>(
+  static final _$getArticle = $grpc.ClientMethod<$3.GetRequest, $23.Article>(
       '/FinEvent/GetArticle',
       ($3.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $22.Article.fromBuffer(value));
-  static final _$createArticle = $grpc.ClientMethod<$22.Article, $22.Article>(
+      ($core.List<$core.int> value) => $23.Article.fromBuffer(value));
+  static final _$createArticle = $grpc.ClientMethod<$23.Article, $23.Article>(
       '/FinEvent/CreateArticle',
-      ($22.Article value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $22.Article.fromBuffer(value));
-  static final _$updateArticle = $grpc.ClientMethod<$22.Article, $22.Article>(
+      ($23.Article value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $23.Article.fromBuffer(value));
+  static final _$updateArticle = $grpc.ClientMethod<$23.Article, $23.Article>(
       '/FinEvent/UpdateArticle',
-      ($22.Article value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $22.Article.fromBuffer(value));
+      ($23.Article value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $23.Article.fromBuffer(value));
   static final _$deleteArticle = $grpc.ClientMethod<$3.DeleteRequest, $0.Empty>(
       '/FinEvent/DeleteArticle',
       ($3.DeleteRequest value) => value.writeToBuffer(),
@@ -271,11 +276,15 @@ class FinEventClient extends $grpc.Client {
     return $createUnaryCall(_$listProducts, request, options: options);
   }
 
+  $grpc.ResponseFuture<$21.Product> createProduct($21.Product request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createProduct, request, options: options);
+  }
+
   $grpc.ResponseFuture<$13.ListPositionsResponse> listPositions($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listPositions, request, options: options);
   }
 
-  $grpc.ResponseFuture<$21.Position> updatePosition($21.Position request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$22.Position> updatePosition($22.Position request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updatePosition, request, options: options);
   }
 
@@ -287,15 +296,15 @@ class FinEventClient extends $grpc.Client {
     return $createUnaryCall(_$listArticles, request, options: options);
   }
 
-  $grpc.ResponseFuture<$22.Article> getArticle($3.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$23.Article> getArticle($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getArticle, request, options: options);
   }
 
-  $grpc.ResponseFuture<$22.Article> createArticle($22.Article request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$23.Article> createArticle($23.Article request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createArticle, request, options: options);
   }
 
-  $grpc.ResponseFuture<$22.Article> updateArticle($22.Article request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$23.Article> updateArticle($23.Article request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateArticle, request, options: options);
   }
 
@@ -485,6 +494,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
         ($13.ListProductsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$21.Product, $21.Product>(
+        'CreateProduct',
+        createProduct_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $21.Product.fromBuffer(value),
+        ($21.Product value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListPositionsResponse>(
         'ListPositions',
         listPositions_Pre,
@@ -492,13 +508,13 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
         ($13.ListPositionsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$21.Position, $21.Position>(
+    $addMethod($grpc.ServiceMethod<$22.Position, $22.Position>(
         'UpdatePosition',
         updatePosition_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $21.Position.fromBuffer(value),
-        ($21.Position value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $22.Position.fromBuffer(value),
+        ($22.Position value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$13.BatchInsertPositionsRequest, $0.Empty>(
         'BatchInsertPositions',
         batchInsertPositions_Pre,
@@ -513,27 +529,27 @@ abstract class FinEventServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $13.ListArticlesRequest.fromBuffer(value),
         ($13.ListArticlesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetRequest, $22.Article>(
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $23.Article>(
         'GetArticle',
         getArticle_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
-        ($22.Article value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$22.Article, $22.Article>(
+        ($23.Article value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$23.Article, $23.Article>(
         'CreateArticle',
         createArticle_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $22.Article.fromBuffer(value),
-        ($22.Article value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$22.Article, $22.Article>(
+        ($core.List<$core.int> value) => $23.Article.fromBuffer(value),
+        ($23.Article value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$23.Article, $23.Article>(
         'UpdateArticle',
         updateArticle_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $22.Article.fromBuffer(value),
-        ($22.Article value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $23.Article.fromBuffer(value),
+        ($23.Article value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.DeleteRequest, $0.Empty>(
         'DeleteArticle',
         deleteArticle_Pre,
@@ -653,11 +669,15 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return listProducts(call, await request);
   }
 
+  $async.Future<$21.Product> createProduct_Pre($grpc.ServiceCall call, $async.Future<$21.Product> request) async {
+    return createProduct(call, await request);
+  }
+
   $async.Future<$13.ListPositionsResponse> listPositions_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listPositions(call, await request);
   }
 
-  $async.Future<$21.Position> updatePosition_Pre($grpc.ServiceCall call, $async.Future<$21.Position> request) async {
+  $async.Future<$22.Position> updatePosition_Pre($grpc.ServiceCall call, $async.Future<$22.Position> request) async {
     return updatePosition(call, await request);
   }
 
@@ -669,15 +689,15 @@ abstract class FinEventServiceBase extends $grpc.Service {
     return listArticles(call, await request);
   }
 
-  $async.Future<$22.Article> getArticle_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
+  $async.Future<$23.Article> getArticle_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getArticle(call, await request);
   }
 
-  $async.Future<$22.Article> createArticle_Pre($grpc.ServiceCall call, $async.Future<$22.Article> request) async {
+  $async.Future<$23.Article> createArticle_Pre($grpc.ServiceCall call, $async.Future<$23.Article> request) async {
     return createArticle(call, await request);
   }
 
-  $async.Future<$22.Article> updateArticle_Pre($grpc.ServiceCall call, $async.Future<$22.Article> request) async {
+  $async.Future<$23.Article> updateArticle_Pre($grpc.ServiceCall call, $async.Future<$23.Article> request) async {
     return updateArticle(call, await request);
   }
 
@@ -717,13 +737,14 @@ abstract class FinEventServiceBase extends $grpc.Service {
   $async.Future<$0.Empty> batchInsertAccruals($grpc.ServiceCall call, $13.BatchInsertAccrualsRequest request);
   $async.Future<$13.FileResponse> generateAccrualPDF($grpc.ServiceCall call, $3.GetRequest request);
   $async.Future<$13.ListProductsResponse> listProducts($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$21.Product> createProduct($grpc.ServiceCall call, $21.Product request);
   $async.Future<$13.ListPositionsResponse> listPositions($grpc.ServiceCall call, $3.ListRequest request);
-  $async.Future<$21.Position> updatePosition($grpc.ServiceCall call, $21.Position request);
+  $async.Future<$22.Position> updatePosition($grpc.ServiceCall call, $22.Position request);
   $async.Future<$0.Empty> batchInsertPositions($grpc.ServiceCall call, $13.BatchInsertPositionsRequest request);
   $async.Future<$13.ListArticlesResponse> listArticles($grpc.ServiceCall call, $13.ListArticlesRequest request);
-  $async.Future<$22.Article> getArticle($grpc.ServiceCall call, $3.GetRequest request);
-  $async.Future<$22.Article> createArticle($grpc.ServiceCall call, $22.Article request);
-  $async.Future<$22.Article> updateArticle($grpc.ServiceCall call, $22.Article request);
+  $async.Future<$23.Article> getArticle($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$23.Article> createArticle($grpc.ServiceCall call, $23.Article request);
+  $async.Future<$23.Article> updateArticle($grpc.ServiceCall call, $23.Article request);
   $async.Future<$0.Empty> deleteArticle($grpc.ServiceCall call, $3.DeleteRequest request);
   $async.Future<$13.ListAllocationsResponse> listAllocations($grpc.ServiceCall call, $3.ListRequest request);
   $async.Future<$17.Allocation> createAllocation($grpc.ServiceCall call, $17.Allocation request);

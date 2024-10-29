@@ -195,6 +195,12 @@ service FinEvent {
             }
         };
     }
+    rpc CreateProduct(Product) returns (Product) {
+        option (google.api.http) = {
+            post: "/v1/products"
+            body: "product"
+        };
+    }
 
     rpc ListPositions(ListRequest) returns (ListPositionsResponse) {
         option (google.api.http) = {

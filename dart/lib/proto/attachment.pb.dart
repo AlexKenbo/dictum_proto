@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'attachment_type.pbenum.dart' as $52;
+import '../google/protobuf/timestamp.pb.dart' as $40;
+import 'attachment_type.pbenum.dart' as $53;
 import 'user.pb.dart' as $7;
 
 class Attachment extends $pb.GeneratedMessage {
@@ -22,11 +22,11 @@ class Attachment extends $pb.GeneratedMessage {
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $52.AttachmentType? type,
+    $53.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
-    $39.Timestamp? createTime,
+    $40.Timestamp? createTime,
     $7.User? uploader,
     $core.String? externalNumber,
   }) {
@@ -71,11 +71,11 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$52.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $52.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $52.AttachmentType.valueOf, enumValues: $52.AttachmentType.values)
+    ..e<$53.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $53.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $53.AttachmentType.valueOf, enumValues: $53.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$39.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $40.Timestamp.create)
     ..aOM<$7.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $7.User.create)
     ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
@@ -130,9 +130,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $52.AttachmentType get type => $_getN(3);
+  $53.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($52.AttachmentType v) { setField(4, v); }
+  set type($53.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -166,15 +166,15 @@ class Attachment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $39.Timestamp get createTime => $_getN(7);
+  $40.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set createTime($39.Timestamp v) { setField(8, v); }
+  set createTime($40.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
   void clearCreateTime() => clearField(8);
   @$pb.TagNumber(8)
-  $39.Timestamp ensureCreateTime() => $_ensure(7);
+  $40.Timestamp ensureCreateTime() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $7.User get uploader => $_getN(8);

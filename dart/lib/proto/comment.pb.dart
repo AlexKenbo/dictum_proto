@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
+import '../google/protobuf/timestamp.pb.dart' as $40;
 import 'user.pb.dart' as $7;
 
 class Comment extends $pb.GeneratedMessage {
@@ -21,7 +21,7 @@ class Comment extends $pb.GeneratedMessage {
     $core.int? commentId,
     $core.String? message,
     $core.int? creatorId,
-    $39.Timestamp? createTime,
+    $40.Timestamp? createTime,
     $core.String? resourceName,
     $7.User? creator,
   }) {
@@ -54,7 +54,7 @@ class Comment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'commentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'message')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'creatorId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $40.Timestamp.create)
     ..aOS(5, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$7.User>(6, _omitFieldNames ? '' : 'creator', subBuilder: $7.User.create)
     ..hasRequiredFields = false
@@ -109,15 +109,15 @@ class Comment extends $pb.GeneratedMessage {
   void clearCreatorId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $39.Timestamp get createTime => $_getN(3);
+  $40.Timestamp get createTime => $_getN(3);
   @$pb.TagNumber(4)
-  set createTime($39.Timestamp v) { setField(4, v); }
+  set createTime($40.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearCreateTime() => clearField(4);
   @$pb.TagNumber(4)
-  $39.Timestamp ensureCreateTime() => $_ensure(3);
+  $40.Timestamp ensureCreateTime() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get resourceName => $_getSZ(4);

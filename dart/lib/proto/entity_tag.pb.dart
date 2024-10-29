@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart' as $24;
-import 'tag.pb.dart' as $34;
+import 'entity.pb.dart' as $25;
+import 'tag.pb.dart' as $35;
 
 class EntityTag extends $pb.GeneratedMessage {
   factory EntityTag({
     $core.int? tagId,
     $core.int? entityId,
-    $24.Entity? entity,
-    $34.Tag? tag,
+    $25.Entity? entity,
+    $35.Tag? tag,
   }) {
     final $result = create();
     if (tagId != null) {
@@ -45,8 +45,8 @@ class EntityTag extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EntityTag', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'tagId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$24.Entity>(3, _omitFieldNames ? '' : 'entity', subBuilder: $24.Entity.create)
-    ..aOM<$34.Tag>(5, _omitFieldNames ? '' : 'tag', subBuilder: $34.Tag.create)
+    ..aOM<$25.Entity>(3, _omitFieldNames ? '' : 'entity', subBuilder: $25.Entity.create)
+    ..aOM<$35.Tag>(5, _omitFieldNames ? '' : 'tag', subBuilder: $35.Tag.create)
     ..hasRequiredFields = false
   ;
 
@@ -90,26 +90,26 @@ class EntityTag extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $24.Entity get entity => $_getN(2);
+  $25.Entity get entity => $_getN(2);
   @$pb.TagNumber(3)
-  set entity($24.Entity v) { setField(3, v); }
+  set entity($25.Entity v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasEntity() => $_has(2);
   @$pb.TagNumber(3)
   void clearEntity() => clearField(3);
   @$pb.TagNumber(3)
-  $24.Entity ensureEntity() => $_ensure(2);
+  $25.Entity ensureEntity() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $34.Tag get tag => $_getN(3);
+  $35.Tag get tag => $_getN(3);
   @$pb.TagNumber(5)
-  set tag($34.Tag v) { setField(5, v); }
+  set tag($35.Tag v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTag() => $_has(3);
   @$pb.TagNumber(5)
   void clearTag() => clearField(5);
   @$pb.TagNumber(5)
-  $34.Tag ensureTag() => $_ensure(3);
+  $35.Tag ensureTag() => $_ensure(3);
 }
 
 

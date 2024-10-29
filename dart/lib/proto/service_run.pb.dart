@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
+import '../google/protobuf/timestamp.pb.dart' as $40;
 import 'service.pb.dart' as $11;
 import 'service_run_state.pbenum.dart' as $67;
 
@@ -23,7 +23,7 @@ class ServiceRun extends $pb.GeneratedMessage {
     $67.ServiceRunState? state,
     $core.String? message,
     $11.Service? service,
-    $39.Timestamp? syncTime,
+    $40.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -52,7 +52,7 @@ class ServiceRun extends $pb.GeneratedMessage {
     ..e<$67.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $67.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $67.ServiceRunState.valueOf, enumValues: $67.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
     ..aOM<$11.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $11.Service.create)
-    ..aOM<$39.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $40.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -116,15 +116,15 @@ class ServiceRun extends $pb.GeneratedMessage {
   $11.Service ensureService() => $_ensure(3);
 
   @$pb.TagNumber(7)
-  $39.Timestamp get syncTime => $_getN(4);
+  $40.Timestamp get syncTime => $_getN(4);
   @$pb.TagNumber(7)
-  set syncTime($39.Timestamp v) { setField(7, v); }
+  set syncTime($40.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSyncTime() => $_has(4);
   @$pb.TagNumber(7)
   void clearSyncTime() => clearField(7);
   @$pb.TagNumber(7)
-  $39.Timestamp ensureSyncTime() => $_ensure(4);
+  $40.Timestamp ensureSyncTime() => $_ensure(4);
 }
 
 

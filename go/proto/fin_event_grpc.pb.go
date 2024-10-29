@@ -44,6 +44,7 @@ const (
 	FinEvent_BatchInsertAccruals_FullMethodName  = "/FinEvent/BatchInsertAccruals"
 	FinEvent_GenerateAccrualPDF_FullMethodName   = "/FinEvent/GenerateAccrualPDF"
 	FinEvent_ListProducts_FullMethodName         = "/FinEvent/ListProducts"
+	FinEvent_CreateProduct_FullMethodName        = "/FinEvent/CreateProduct"
 	FinEvent_ListPositions_FullMethodName        = "/FinEvent/ListPositions"
 	FinEvent_UpdatePosition_FullMethodName       = "/FinEvent/UpdatePosition"
 	FinEvent_BatchInsertPositions_FullMethodName = "/FinEvent/BatchInsertPositions"
@@ -88,6 +89,7 @@ type FinEventClient interface {
 	GenerateAccrualPDF(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*FileResponse, error)
 	// --
 	ListProducts(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListProductsResponse, error)
+	CreateProduct(ctx context.Context, in *Product, opts ...grpc.CallOption) (*Product, error)
 	ListPositions(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListPositionsResponse, error)
 	UpdatePosition(ctx context.Context, in *Position, opts ...grpc.CallOption) (*Position, error)
 	BatchInsertPositions(ctx context.Context, in *BatchInsertPositionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
@@ -350,6 +352,16 @@ func (c *finEventClient) ListProducts(ctx context.Context, in *ListRequest, opts
 	return out, nil
 }
 
+func (c *finEventClient) CreateProduct(ctx context.Context, in *Product, opts ...grpc.CallOption) (*Product, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(Product)
+	err := c.cc.Invoke(ctx, FinEvent_CreateProduct_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *finEventClient) ListPositions(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListPositionsResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(ListPositionsResponse)
@@ -482,6 +494,7 @@ type FinEventServer interface {
 	GenerateAccrualPDF(context.Context, *GetRequest) (*FileResponse, error)
 	// --
 	ListProducts(context.Context, *ListRequest) (*ListProductsResponse, error)
+	CreateProduct(context.Context, *Product) (*Product, error)
 	ListPositions(context.Context, *ListRequest) (*ListPositionsResponse, error)
 	UpdatePosition(context.Context, *Position) (*Position, error)
 	BatchInsertPositions(context.Context, *BatchInsertPositionsRequest) (*emptypb.Empty, error)
@@ -575,6 +588,9 @@ func (UnimplementedFinEventServer) GenerateAccrualPDF(context.Context, *GetReque
 }
 func (UnimplementedFinEventServer) ListProducts(context.Context, *ListRequest) (*ListProductsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListProducts not implemented")
+}
+func (UnimplementedFinEventServer) CreateProduct(context.Context, *Product) (*Product, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateProduct not implemented")
 }
 func (UnimplementedFinEventServer) ListPositions(context.Context, *ListRequest) (*ListPositionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListPositions not implemented")
@@ -1059,6 +1075,24 @@ func _FinEvent_ListProducts_Handler(srv interface{}, ctx context.Context, dec fu
 	return interceptor(ctx, in, info, handler)
 }
 
+func _FinEvent_CreateProduct_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Product)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(FinEventServer).CreateProduct(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: FinEvent_CreateProduct_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(FinEventServer).CreateProduct(ctx, req.(*Product))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _FinEvent_ListPositions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ListRequest)
 	if err := dec(in); err != nil {
@@ -1341,6 +1375,10 @@ var FinEvent_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ListProducts",
 			Handler:    _FinEvent_ListProducts_Handler,
+		},
+		{
+			MethodName: "CreateProduct",
+			Handler:    _FinEvent_CreateProduct_Handler,
 		},
 		{
 			MethodName: "ListPositions",

@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
+import '../google/protobuf/timestamp.pb.dart' as $40;
 import 'accrual.pb.dart' as $19;
 
 class ProcessPaymentRequest extends $pb.GeneratedMessage {
@@ -288,7 +288,7 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
     $core.String? status,
     $core.String? error,
     $core.double? fee,
-    $39.Timestamp? confirmTime,
+    $40.Timestamp? confirmTime,
   }) {
     final $result = create();
     if (txid != null) {
@@ -317,7 +317,7 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'status')
     ..aOS(3, _omitFieldNames ? '' : 'error')
     ..a<$core.double>(4, _omitFieldNames ? '' : 'fee', $pb.PbFieldType.OD)
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $40.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -379,15 +379,15 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
   void clearFee() => clearField(4);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get confirmTime => $_getN(4);
+  $40.Timestamp get confirmTime => $_getN(4);
   @$pb.TagNumber(5)
-  set confirmTime($39.Timestamp v) { setField(5, v); }
+  set confirmTime($40.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasConfirmTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearConfirmTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureConfirmTime() => $_ensure(4);
+  $40.Timestamp ensureConfirmTime() => $_ensure(4);
 }
 
 class EstimateEnergyRequest extends $pb.GeneratedMessage {
@@ -602,7 +602,7 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
     $core.String? status,
     $core.double? fee,
     $core.String? error,
-    $39.Timestamp? confirmTime,
+    $40.Timestamp? confirmTime,
   }) {
     final $result = create();
     if (txid != null) {
@@ -631,7 +631,7 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'status')
     ..a<$core.double>(3, _omitFieldNames ? '' : 'fee', $pb.PbFieldType.OD)
     ..aOS(4, _omitFieldNames ? '' : 'error')
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $40.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -693,15 +693,15 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   void clearError() => clearField(4);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get confirmTime => $_getN(4);
+  $40.Timestamp get confirmTime => $_getN(4);
   @$pb.TagNumber(5)
-  set confirmTime($39.Timestamp v) { setField(5, v); }
+  set confirmTime($40.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasConfirmTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearConfirmTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureConfirmTime() => $_ensure(4);
+  $40.Timestamp ensureConfirmTime() => $_ensure(4);
 }
 
 

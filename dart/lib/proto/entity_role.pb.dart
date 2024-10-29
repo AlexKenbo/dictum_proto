@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'entity.pb.dart' as $24;
+import '../google/protobuf/timestamp.pb.dart' as $40;
+import 'entity.pb.dart' as $25;
 
 class EntityRole extends $pb.GeneratedMessage {
   factory EntityRole({
     $core.int? userId,
-    $24.Entity? entity,
+    $25.Entity? entity,
     $core.String? role,
-    $39.Timestamp? hireTime,
+    $40.Timestamp? hireTime,
   }) {
     final $result = create();
     if (userId != null) {
@@ -44,9 +44,9 @@ class EntityRole extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EntityRole', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
-    ..aOM<$24.Entity>(2, _omitFieldNames ? '' : 'entity', subBuilder: $24.Entity.create)
+    ..aOM<$25.Entity>(2, _omitFieldNames ? '' : 'entity', subBuilder: $25.Entity.create)
     ..aOS(3, _omitFieldNames ? '' : 'role')
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'hireTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(5, _omitFieldNames ? '' : 'hireTime', subBuilder: $40.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -81,15 +81,15 @@ class EntityRole extends $pb.GeneratedMessage {
   void clearUserId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $24.Entity get entity => $_getN(1);
+  $25.Entity get entity => $_getN(1);
   @$pb.TagNumber(2)
-  set entity($24.Entity v) { setField(2, v); }
+  set entity($25.Entity v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasEntity() => $_has(1);
   @$pb.TagNumber(2)
   void clearEntity() => clearField(2);
   @$pb.TagNumber(2)
-  $24.Entity ensureEntity() => $_ensure(1);
+  $25.Entity ensureEntity() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get role => $_getSZ(2);
@@ -101,15 +101,15 @@ class EntityRole extends $pb.GeneratedMessage {
   void clearRole() => clearField(3);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get hireTime => $_getN(3);
+  $40.Timestamp get hireTime => $_getN(3);
   @$pb.TagNumber(5)
-  set hireTime($39.Timestamp v) { setField(5, v); }
+  set hireTime($40.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasHireTime() => $_has(3);
   @$pb.TagNumber(5)
   void clearHireTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureHireTime() => $_ensure(3);
+  $40.Timestamp ensureHireTime() => $_ensure(3);
 }
 
 

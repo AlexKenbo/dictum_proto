@@ -15,32 +15,32 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'payment.pb.dart' as $32;
+import 'payment.pb.dart' as $33;
 
 export 'payment.pb.dart';
 
 @$pb.GrpcServiceName('payment.PaymentService')
 class PaymentServiceClient extends $grpc.Client {
-  static final _$processPayment = $grpc.ClientMethod<$32.ProcessPaymentRequest, $32.ProcessPaymentResponse>(
+  static final _$processPayment = $grpc.ClientMethod<$33.ProcessPaymentRequest, $33.ProcessPaymentResponse>(
       '/payment.PaymentService/ProcessPayment',
-      ($32.ProcessPaymentRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $32.ProcessPaymentResponse.fromBuffer(value));
-  static final _$batchProcessPayment = $grpc.ClientMethod<$32.BatchProcessPaymentRequest, $32.ProcessPaymentResponse>(
+      ($33.ProcessPaymentRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.ProcessPaymentResponse.fromBuffer(value));
+  static final _$batchProcessPayment = $grpc.ClientMethod<$33.BatchProcessPaymentRequest, $33.ProcessPaymentResponse>(
       '/payment.PaymentService/BatchProcessPayment',
-      ($32.BatchProcessPaymentRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $32.ProcessPaymentResponse.fromBuffer(value));
-  static final _$checkTransactionStatus = $grpc.ClientMethod<$32.CheckTransactionStatusRequest, $32.CheckTransactionStatusResponse>(
+      ($33.BatchProcessPaymentRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.ProcessPaymentResponse.fromBuffer(value));
+  static final _$checkTransactionStatus = $grpc.ClientMethod<$33.CheckTransactionStatusRequest, $33.CheckTransactionStatusResponse>(
       '/payment.PaymentService/CheckTransactionStatus',
-      ($32.CheckTransactionStatusRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $32.CheckTransactionStatusResponse.fromBuffer(value));
-  static final _$estimateEnergy = $grpc.ClientMethod<$32.EstimateEnergyRequest, $32.EstimateEnergyResponse>(
+      ($33.CheckTransactionStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.CheckTransactionStatusResponse.fromBuffer(value));
+  static final _$estimateEnergy = $grpc.ClientMethod<$33.EstimateEnergyRequest, $33.EstimateEnergyResponse>(
       '/payment.PaymentService/EstimateEnergy',
-      ($32.EstimateEnergyRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $32.EstimateEnergyResponse.fromBuffer(value));
-  static final _$waitTransactionConfirmation = $grpc.ClientMethod<$32.WaitTransactionConfirmationRequest, $32.WaitTransactionConfirmationResponse>(
+      ($33.EstimateEnergyRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.EstimateEnergyResponse.fromBuffer(value));
+  static final _$waitTransactionConfirmation = $grpc.ClientMethod<$33.WaitTransactionConfirmationRequest, $33.WaitTransactionConfirmationResponse>(
       '/payment.PaymentService/WaitTransactionConfirmation',
-      ($32.WaitTransactionConfirmationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $32.WaitTransactionConfirmationResponse.fromBuffer(value));
+      ($33.WaitTransactionConfirmationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $33.WaitTransactionConfirmationResponse.fromBuffer(value));
 
   PaymentServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -48,23 +48,23 @@ class PaymentServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$32.ProcessPaymentResponse> processPayment($32.ProcessPaymentRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$33.ProcessPaymentResponse> processPayment($33.ProcessPaymentRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$processPayment, request, options: options);
   }
 
-  $grpc.ResponseStream<$32.ProcessPaymentResponse> batchProcessPayment($32.BatchProcessPaymentRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$33.ProcessPaymentResponse> batchProcessPayment($33.BatchProcessPaymentRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$batchProcessPayment, $async.Stream.fromIterable([request]), options: options);
   }
 
-  $grpc.ResponseFuture<$32.CheckTransactionStatusResponse> checkTransactionStatus($32.CheckTransactionStatusRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$33.CheckTransactionStatusResponse> checkTransactionStatus($33.CheckTransactionStatusRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$checkTransactionStatus, request, options: options);
   }
 
-  $grpc.ResponseFuture<$32.EstimateEnergyResponse> estimateEnergy($32.EstimateEnergyRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$33.EstimateEnergyResponse> estimateEnergy($33.EstimateEnergyRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$estimateEnergy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$32.WaitTransactionConfirmationResponse> waitTransactionConfirmation($32.WaitTransactionConfirmationRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$33.WaitTransactionConfirmationResponse> waitTransactionConfirmation($33.WaitTransactionConfirmationRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$waitTransactionConfirmation, request, options: options);
   }
 }
@@ -74,66 +74,66 @@ abstract class PaymentServiceBase extends $grpc.Service {
   $core.String get $name => 'payment.PaymentService';
 
   PaymentServiceBase() {
-    $addMethod($grpc.ServiceMethod<$32.ProcessPaymentRequest, $32.ProcessPaymentResponse>(
+    $addMethod($grpc.ServiceMethod<$33.ProcessPaymentRequest, $33.ProcessPaymentResponse>(
         'ProcessPayment',
         processPayment_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $32.ProcessPaymentRequest.fromBuffer(value),
-        ($32.ProcessPaymentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$32.BatchProcessPaymentRequest, $32.ProcessPaymentResponse>(
+        ($core.List<$core.int> value) => $33.ProcessPaymentRequest.fromBuffer(value),
+        ($33.ProcessPaymentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$33.BatchProcessPaymentRequest, $33.ProcessPaymentResponse>(
         'BatchProcessPayment',
         batchProcessPayment_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $32.BatchProcessPaymentRequest.fromBuffer(value),
-        ($32.ProcessPaymentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$32.CheckTransactionStatusRequest, $32.CheckTransactionStatusResponse>(
+        ($core.List<$core.int> value) => $33.BatchProcessPaymentRequest.fromBuffer(value),
+        ($33.ProcessPaymentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$33.CheckTransactionStatusRequest, $33.CheckTransactionStatusResponse>(
         'CheckTransactionStatus',
         checkTransactionStatus_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $32.CheckTransactionStatusRequest.fromBuffer(value),
-        ($32.CheckTransactionStatusResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$32.EstimateEnergyRequest, $32.EstimateEnergyResponse>(
+        ($core.List<$core.int> value) => $33.CheckTransactionStatusRequest.fromBuffer(value),
+        ($33.CheckTransactionStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$33.EstimateEnergyRequest, $33.EstimateEnergyResponse>(
         'EstimateEnergy',
         estimateEnergy_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $32.EstimateEnergyRequest.fromBuffer(value),
-        ($32.EstimateEnergyResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$32.WaitTransactionConfirmationRequest, $32.WaitTransactionConfirmationResponse>(
+        ($core.List<$core.int> value) => $33.EstimateEnergyRequest.fromBuffer(value),
+        ($33.EstimateEnergyResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$33.WaitTransactionConfirmationRequest, $33.WaitTransactionConfirmationResponse>(
         'WaitTransactionConfirmation',
         waitTransactionConfirmation_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $32.WaitTransactionConfirmationRequest.fromBuffer(value),
-        ($32.WaitTransactionConfirmationResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $33.WaitTransactionConfirmationRequest.fromBuffer(value),
+        ($33.WaitTransactionConfirmationResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$32.ProcessPaymentResponse> processPayment_Pre($grpc.ServiceCall call, $async.Future<$32.ProcessPaymentRequest> request) async {
+  $async.Future<$33.ProcessPaymentResponse> processPayment_Pre($grpc.ServiceCall call, $async.Future<$33.ProcessPaymentRequest> request) async {
     return processPayment(call, await request);
   }
 
-  $async.Stream<$32.ProcessPaymentResponse> batchProcessPayment_Pre($grpc.ServiceCall call, $async.Future<$32.BatchProcessPaymentRequest> request) async* {
+  $async.Stream<$33.ProcessPaymentResponse> batchProcessPayment_Pre($grpc.ServiceCall call, $async.Future<$33.BatchProcessPaymentRequest> request) async* {
     yield* batchProcessPayment(call, await request);
   }
 
-  $async.Future<$32.CheckTransactionStatusResponse> checkTransactionStatus_Pre($grpc.ServiceCall call, $async.Future<$32.CheckTransactionStatusRequest> request) async {
+  $async.Future<$33.CheckTransactionStatusResponse> checkTransactionStatus_Pre($grpc.ServiceCall call, $async.Future<$33.CheckTransactionStatusRequest> request) async {
     return checkTransactionStatus(call, await request);
   }
 
-  $async.Future<$32.EstimateEnergyResponse> estimateEnergy_Pre($grpc.ServiceCall call, $async.Future<$32.EstimateEnergyRequest> request) async {
+  $async.Future<$33.EstimateEnergyResponse> estimateEnergy_Pre($grpc.ServiceCall call, $async.Future<$33.EstimateEnergyRequest> request) async {
     return estimateEnergy(call, await request);
   }
 
-  $async.Future<$32.WaitTransactionConfirmationResponse> waitTransactionConfirmation_Pre($grpc.ServiceCall call, $async.Future<$32.WaitTransactionConfirmationRequest> request) async {
+  $async.Future<$33.WaitTransactionConfirmationResponse> waitTransactionConfirmation_Pre($grpc.ServiceCall call, $async.Future<$33.WaitTransactionConfirmationRequest> request) async {
     return waitTransactionConfirmation(call, await request);
   }
 
-  $async.Future<$32.ProcessPaymentResponse> processPayment($grpc.ServiceCall call, $32.ProcessPaymentRequest request);
-  $async.Stream<$32.ProcessPaymentResponse> batchProcessPayment($grpc.ServiceCall call, $32.BatchProcessPaymentRequest request);
-  $async.Future<$32.CheckTransactionStatusResponse> checkTransactionStatus($grpc.ServiceCall call, $32.CheckTransactionStatusRequest request);
-  $async.Future<$32.EstimateEnergyResponse> estimateEnergy($grpc.ServiceCall call, $32.EstimateEnergyRequest request);
-  $async.Future<$32.WaitTransactionConfirmationResponse> waitTransactionConfirmation($grpc.ServiceCall call, $32.WaitTransactionConfirmationRequest request);
+  $async.Future<$33.ProcessPaymentResponse> processPayment($grpc.ServiceCall call, $33.ProcessPaymentRequest request);
+  $async.Stream<$33.ProcessPaymentResponse> batchProcessPayment($grpc.ServiceCall call, $33.BatchProcessPaymentRequest request);
+  $async.Future<$33.CheckTransactionStatusResponse> checkTransactionStatus($grpc.ServiceCall call, $33.CheckTransactionStatusRequest request);
+  $async.Future<$33.EstimateEnergyResponse> estimateEnergy($grpc.ServiceCall call, $33.EstimateEnergyRequest request);
+  $async.Future<$33.WaitTransactionConfirmationResponse> waitTransactionConfirmation($grpc.ServiceCall call, $33.WaitTransactionConfirmationRequest request);
 }

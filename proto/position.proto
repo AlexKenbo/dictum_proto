@@ -17,5 +17,4 @@ message Position
   string resource_name = 7;
   Product product = 9;
   Accrual accrual = 12;
-
 }   

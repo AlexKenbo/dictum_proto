@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'entity.pb.dart' as $24;
+import '../google/protobuf/timestamp.pb.dart' as $40;
+import 'entity.pb.dart' as $25;
 
 class Contract extends $pb.GeneratedMessage {
   factory Contract({
@@ -22,11 +22,13 @@ class Contract extends $pb.GeneratedMessage {
     $core.String? number,
     $core.int? payerId,
     $core.int? recipientId,
-    $39.Timestamp? createTime,
-    $24.Entity? payer,
-    $24.Entity? recipient,
+    $40.Timestamp? createTime,
+    $25.Entity? payer,
+    $25.Entity? recipient,
     $core.int? payerAccountId,
-    $39.Timestamp? dateFrom,
+    $40.Timestamp? dateFrom,
+    $core.String? additionalNote,
+    $core.String? explanations,
   }) {
     final $result = create();
     if (contractId != null) {
@@ -56,6 +58,12 @@ class Contract extends $pb.GeneratedMessage {
     if (dateFrom != null) {
       $result.dateFrom = dateFrom;
     }
+    if (additionalNote != null) {
+      $result.additionalNote = additionalNote;
+    }
+    if (explanations != null) {
+      $result.explanations = explanations;
+    }
     return $result;
   }
   Contract._() : super();
@@ -67,11 +75,13 @@ class Contract extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'number')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
-    ..aOM<$24.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $24.Entity.create)
-    ..aOM<$24.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $24.Entity.create)
+    ..aOM<$40.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $40.Timestamp.create)
+    ..aOM<$25.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $25.Entity.create)
+    ..aOM<$25.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $25.Entity.create)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $39.Timestamp.create)
+    ..aOM<$40.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $40.Timestamp.create)
+    ..aOS(10, _omitFieldNames ? '' : 'additionalNote')
+    ..aOS(11, _omitFieldNames ? '' : 'explanations')
     ..hasRequiredFields = false
   ;
 
@@ -133,37 +143,37 @@ class Contract extends $pb.GeneratedMessage {
   void clearRecipientId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get createTime => $_getN(4);
+  $40.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($39.Timestamp v) { setField(5, v); }
+  set createTime($40.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureCreateTime() => $_ensure(4);
+  $40.Timestamp ensureCreateTime() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $24.Entity get payer => $_getN(5);
+  $25.Entity get payer => $_getN(5);
   @$pb.TagNumber(6)
-  set payer($24.Entity v) { setField(6, v); }
+  set payer($25.Entity v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPayer() => $_has(5);
   @$pb.TagNumber(6)
   void clearPayer() => clearField(6);
   @$pb.TagNumber(6)
-  $24.Entity ensurePayer() => $_ensure(5);
+  $25.Entity ensurePayer() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $24.Entity get recipient => $_getN(6);
+  $25.Entity get recipient => $_getN(6);
   @$pb.TagNumber(7)
-  set recipient($24.Entity v) { setField(7, v); }
+  set recipient($25.Entity v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasRecipient() => $_has(6);
   @$pb.TagNumber(7)
   void clearRecipient() => clearField(7);
   @$pb.TagNumber(7)
-  $24.Entity ensureRecipient() => $_ensure(6);
+  $25.Entity ensureRecipient() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.int get payerAccountId => $_getIZ(7);
@@ -175,15 +185,33 @@ class Contract extends $pb.GeneratedMessage {
   void clearPayerAccountId() => clearField(8);
 
   @$pb.TagNumber(9)
-  $39.Timestamp get dateFrom => $_getN(8);
+  $40.Timestamp get dateFrom => $_getN(8);
   @$pb.TagNumber(9)
-  set dateFrom($39.Timestamp v) { setField(9, v); }
+  set dateFrom($40.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDateFrom() => $_has(8);
   @$pb.TagNumber(9)
   void clearDateFrom() => clearField(9);
   @$pb.TagNumber(9)
-  $39.Timestamp ensureDateFrom() => $_ensure(8);
+  $40.Timestamp ensureDateFrom() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $core.String get additionalNote => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set additionalNote($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasAdditionalNote() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearAdditionalNote() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get explanations => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set explanations($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasExplanations() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearExplanations() => clearField(11);
 }
 
 
