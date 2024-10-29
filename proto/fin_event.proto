@@ -212,7 +212,7 @@ service FinEvent {
         };
     }
 
-    rpc BatchInsertPostions(BatchInsertPositionsRequest) returns (google.protobuf.Empty) {
+    rpc BatchInsertPosition(BatchInsertPositionsRequest) returns (google.protobuf.Empty) {
         option (google.api.http) = {
             post: "/v1/positions"
             body: "batch_positions"

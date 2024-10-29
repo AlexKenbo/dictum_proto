@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'user.pb.dart' as $15;
+import 'user.pb.dart' as $7;
 
 class AuthProvider extends $pb.GeneratedMessage {
   factory AuthProvider({
@@ -21,7 +21,7 @@ class AuthProvider extends $pb.GeneratedMessage {
     $core.String? providerName,
     $core.String? refKey,
     $core.String? resourceName,
-    $15.User? user,
+    $7.User? user,
   }) {
     final $result = create();
     if (userId != null) {
@@ -50,7 +50,7 @@ class AuthProvider extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'providerName')
     ..aOS(3, _omitFieldNames ? '' : 'refKey')
     ..aOS(4, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$15.User>(6, _omitFieldNames ? '' : 'user', subBuilder: $15.User.create)
+    ..aOM<$7.User>(6, _omitFieldNames ? '' : 'user', subBuilder: $7.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,15 +112,15 @@ class AuthProvider extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(4);
 
   @$pb.TagNumber(6)
-  $15.User get user => $_getN(4);
+  $7.User get user => $_getN(4);
   @$pb.TagNumber(6)
-  set user($15.User v) { setField(6, v); }
+  set user($7.User v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasUser() => $_has(4);
   @$pb.TagNumber(6)
   void clearUser() => clearField(6);
   @$pb.TagNumber(6)
-  $15.User ensureUser() => $_ensure(4);
+  $7.User ensureUser() => $_ensure(4);
 }
 
 

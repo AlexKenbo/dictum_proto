@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'object_source.pb.dart' as $20;
-import 'service.pb.dart' as $21;
-import 'service_run.pb.dart' as $22;
+import 'object_source.pb.dart' as $10;
+import 'service.pb.dart' as $11;
+import 'service_run.pb.dart' as $12;
 
 class GetLatestSourceRequest extends $pb.GeneratedMessage {
   factory GetLatestSourceRequest({
@@ -148,7 +148,7 @@ class ListObjectSourcesRequest extends $pb.GeneratedMessage {
 class ListObjectSourcesResponse extends $pb.GeneratedMessage {
   factory ListObjectSourcesResponse({
     $core.String? resourceName,
-    $core.Iterable<$20.ObjectSource>? sources,
+    $core.Iterable<$10.ObjectSource>? sources,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -165,7 +165,7 @@ class ListObjectSourcesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListObjectSourcesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName', protoName: 'resourceName')
-    ..pc<$20.ObjectSource>(2, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $20.ObjectSource.create)
+    ..pc<$10.ObjectSource>(2, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $10.ObjectSource.create)
     ..hasRequiredFields = false
   ;
 
@@ -200,7 +200,7 @@ class ListObjectSourcesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$20.ObjectSource> get sources => $_getList(1);
+  $core.List<$10.ObjectSource> get sources => $_getList(1);
 }
 
 /// * Service
@@ -307,7 +307,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
 class ListServicesResponse extends $pb.GeneratedMessage {
   factory ListServicesResponse({
     $core.String? resourceName,
-    $core.Iterable<$21.Service>? services,
+    $core.Iterable<$11.Service>? services,
   }) {
     final $result = create();
     if (resourceName != null) {
@@ -324,7 +324,7 @@ class ListServicesResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServicesResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName', protoName: 'resourceName')
-    ..pc<$21.Service>(2, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM, subBuilder: $21.Service.create)
+    ..pc<$11.Service>(2, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM, subBuilder: $11.Service.create)
     ..hasRequiredFields = false
   ;
 
@@ -359,7 +359,7 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$21.Service> get services => $_getList(1);
+  $core.List<$11.Service> get services => $_getList(1);
 }
 
 /// * Service Runs
@@ -416,7 +416,7 @@ class GetServiceRunRequest extends $pb.GeneratedMessage {
 class ListServiceRunsResponse extends $pb.GeneratedMessage {
   factory ListServiceRunsResponse({
     $core.String? resourceName,
-    $core.Iterable<$22.ServiceRun>? serviceRuns,
+    $core.Iterable<$12.ServiceRun>? serviceRuns,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -437,7 +437,7 @@ class ListServiceRunsResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListServiceRunsResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$22.ServiceRun>(2, _omitFieldNames ? '' : 'serviceRuns', $pb.PbFieldType.PM, subBuilder: $22.ServiceRun.create)
+    ..pc<$12.ServiceRun>(2, _omitFieldNames ? '' : 'serviceRuns', $pb.PbFieldType.PM, subBuilder: $12.ServiceRun.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -473,7 +473,7 @@ class ListServiceRunsResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$22.ServiceRun> get serviceRuns => $_getList(1);
+  $core.List<$12.ServiceRun> get serviceRuns => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);

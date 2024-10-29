@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $36;
-import 'service.pb.dart' as $21;
+import '../google/protobuf/timestamp.pb.dart' as $39;
+import 'service.pb.dart' as $11;
 
 class ObjectSource extends $pb.GeneratedMessage {
   factory ObjectSource({
@@ -22,8 +22,8 @@ class ObjectSource extends $pb.GeneratedMessage {
     $core.String? sourceKey,
     $core.String? objectType,
     $core.String? objectId,
-    $21.Service? service,
-    $36.Timestamp? createTime,
+    $11.Service? service,
+    $39.Timestamp? createTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -55,8 +55,8 @@ class ObjectSource extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'sourceKey')
     ..aOS(3, _omitFieldNames ? '' : 'objectType')
     ..aOS(4, _omitFieldNames ? '' : 'objectId')
-    ..aOM<$21.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $21.Service.create)
-    ..aOM<$36.Timestamp>(7, _omitFieldNames ? '' : 'createTime', subBuilder: $36.Timestamp.create)
+    ..aOM<$11.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $11.Service.create)
+    ..aOM<$39.Timestamp>(7, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -118,26 +118,26 @@ class ObjectSource extends $pb.GeneratedMessage {
   void clearObjectId() => clearField(4);
 
   @$pb.TagNumber(6)
-  $21.Service get service => $_getN(4);
+  $11.Service get service => $_getN(4);
   @$pb.TagNumber(6)
-  set service($21.Service v) { setField(6, v); }
+  set service($11.Service v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasService() => $_has(4);
   @$pb.TagNumber(6)
   void clearService() => clearField(6);
   @$pb.TagNumber(6)
-  $21.Service ensureService() => $_ensure(4);
+  $11.Service ensureService() => $_ensure(4);
 
   @$pb.TagNumber(7)
-  $36.Timestamp get createTime => $_getN(5);
+  $39.Timestamp get createTime => $_getN(5);
   @$pb.TagNumber(7)
-  set createTime($36.Timestamp v) { setField(7, v); }
+  set createTime($39.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasCreateTime() => $_has(5);
   @$pb.TagNumber(7)
   void clearCreateTime() => clearField(7);
   @$pb.TagNumber(7)
-  $36.Timestamp ensureCreateTime() => $_ensure(5);
+  $39.Timestamp ensureCreateTime() => $_ensure(5);
 }
 
 

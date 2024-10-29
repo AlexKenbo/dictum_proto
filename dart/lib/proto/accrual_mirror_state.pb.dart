@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'payment_type.pbenum.dart' as $56;
+import 'payment_type.pbenum.dart' as $59;
 
 class AccrualMirrorState extends $pb.GeneratedMessage {
   factory AccrualMirrorState({
     $core.int? accrualMirrorStateId,
-    $56.PaymentType? paymentType,
+    $59.PaymentType? paymentType,
     $core.String? buyerStatus,
     $core.String? sellerStatus,
     $core.bool? isSync,
@@ -55,7 +55,7 @@ class AccrualMirrorState extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualMirrorState', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'accrualMirrorStateId', $pb.PbFieldType.O3)
-    ..e<$56.PaymentType>(2, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $56.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $56.PaymentType.valueOf, enumValues: $56.PaymentType.values)
+    ..e<$59.PaymentType>(2, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $59.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $59.PaymentType.valueOf, enumValues: $59.PaymentType.values)
     ..aOS(3, _omitFieldNames ? '' : 'buyerStatus')
     ..aOS(4, _omitFieldNames ? '' : 'sellerStatus')
     ..aOB(5, _omitFieldNames ? '' : 'isSync')
@@ -95,9 +95,9 @@ class AccrualMirrorState extends $pb.GeneratedMessage {
   void clearAccrualMirrorStateId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $56.PaymentType get paymentType => $_getN(1);
+  $59.PaymentType get paymentType => $_getN(1);
   @$pb.TagNumber(2)
-  set paymentType($56.PaymentType v) { setField(2, v); }
+  set paymentType($59.PaymentType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPaymentType() => $_has(1);
   @$pb.TagNumber(2)

@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'entity.pb.dart' as $3;
+import 'entity.pb.dart' as $24;
 
 class Product extends $pb.GeneratedMessage {
   factory Product({
     $core.int? productId,
     $core.int? entityId,
     $core.String? name,
-    $3.Entity? entity,
+    $24.Entity? entity,
   }) {
     final $result = create();
     if (productId != null) {
@@ -45,7 +45,7 @@ class Product extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'productId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'name')
-    ..aOM<$3.Entity>(4, _omitFieldNames ? '' : 'entity', subBuilder: $3.Entity.create)
+    ..aOM<$24.Entity>(4, _omitFieldNames ? '' : 'entity', subBuilder: $24.Entity.create)
     ..hasRequiredFields = false
   ;
 
@@ -98,15 +98,15 @@ class Product extends $pb.GeneratedMessage {
   void clearName() => clearField(3);
 
   @$pb.TagNumber(4)
-  $3.Entity get entity => $_getN(3);
+  $24.Entity get entity => $_getN(3);
   @$pb.TagNumber(4)
-  set entity($3.Entity v) { setField(4, v); }
+  set entity($24.Entity v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasEntity() => $_has(3);
   @$pb.TagNumber(4)
   void clearEntity() => clearField(4);
   @$pb.TagNumber(4)
-  $3.Entity ensureEntity() => $_ensure(3);
+  $24.Entity ensureEntity() => $_ensure(3);
 }
 
 
