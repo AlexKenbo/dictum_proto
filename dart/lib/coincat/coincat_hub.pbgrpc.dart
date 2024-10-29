@@ -15,34 +15,34 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/empty.pb.dart' as $4;
-import 'coincat_hub.pb.dart' as $33;
-import 'order.pb.dart' as $34;
+import '../google/protobuf/empty.pb.dart' as $0;
+import 'coincat_hub.pb.dart' as $1;
+import 'order.pb.dart' as $2;
 
 export 'coincat_hub.pb.dart';
 
 @$pb.GrpcServiceName('coincat.CoincatHub')
 class CoincatHubClient extends $grpc.Client {
-  static final _$listExchanges = $grpc.ClientMethod<$4.Empty, $33.ListExchangesResponse>(
+  static final _$listExchanges = $grpc.ClientMethod<$0.Empty, $1.ListExchangesResponse>(
       '/coincat.CoincatHub/ListExchanges',
-      ($4.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $33.ListExchangesResponse.fromBuffer(value));
-  static final _$listCurrencies = $grpc.ClientMethod<$4.Empty, $33.ListCurrenciesResponse>(
+      ($0.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListExchangesResponse.fromBuffer(value));
+  static final _$listCurrencies = $grpc.ClientMethod<$0.Empty, $1.ListCurrenciesResponse>(
       '/coincat.CoincatHub/ListCurrencies',
-      ($4.Empty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $33.ListCurrenciesResponse.fromBuffer(value));
-  static final _$getOrderStatus = $grpc.ClientMethod<$33.GetOrderStatusRequest, $34.OrderResponse>(
+      ($0.Empty value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ListCurrenciesResponse.fromBuffer(value));
+  static final _$getOrderStatus = $grpc.ClientMethod<$1.GetOrderStatusRequest, $2.OrderResponse>(
       '/coincat.CoincatHub/GetOrderStatus',
-      ($33.GetOrderStatusRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $34.OrderResponse.fromBuffer(value));
-  static final _$rescheduleOrder = $grpc.ClientMethod<$33.RescheduleOrderRequest, $34.OrderResponse>(
+      ($1.GetOrderStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.OrderResponse.fromBuffer(value));
+  static final _$rescheduleOrder = $grpc.ClientMethod<$1.RescheduleOrderRequest, $2.OrderResponse>(
       '/coincat.CoincatHub/RescheduleOrder',
-      ($33.RescheduleOrderRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $34.OrderResponse.fromBuffer(value));
-  static final _$createExchangeOrder = $grpc.ClientMethod<$34.OrderRequest, $34.OrderResponse>(
+      ($1.RescheduleOrderRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.OrderResponse.fromBuffer(value));
+  static final _$createExchangeOrder = $grpc.ClientMethod<$2.OrderRequest, $2.OrderResponse>(
       '/coincat.CoincatHub/CreateExchangeOrder',
-      ($34.OrderRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $34.OrderResponse.fromBuffer(value));
+      ($2.OrderRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.OrderResponse.fromBuffer(value));
 
   CoincatHubClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -50,23 +50,23 @@ class CoincatHubClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$33.ListExchangesResponse> listExchanges($4.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ListExchangesResponse> listExchanges($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listExchanges, request, options: options);
   }
 
-  $grpc.ResponseFuture<$33.ListCurrenciesResponse> listCurrencies($4.Empty request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$1.ListCurrenciesResponse> listCurrencies($0.Empty request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listCurrencies, request, options: options);
   }
 
-  $grpc.ResponseFuture<$34.OrderResponse> getOrderStatus($33.GetOrderStatusRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.OrderResponse> getOrderStatus($1.GetOrderStatusRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getOrderStatus, request, options: options);
   }
 
-  $grpc.ResponseFuture<$34.OrderResponse> rescheduleOrder($33.RescheduleOrderRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.OrderResponse> rescheduleOrder($1.RescheduleOrderRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$rescheduleOrder, request, options: options);
   }
 
-  $grpc.ResponseFuture<$34.OrderResponse> createExchangeOrder($34.OrderRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.OrderResponse> createExchangeOrder($2.OrderRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createExchangeOrder, request, options: options);
   }
 }
@@ -76,66 +76,66 @@ abstract class CoincatHubServiceBase extends $grpc.Service {
   $core.String get $name => 'coincat.CoincatHub';
 
   CoincatHubServiceBase() {
-    $addMethod($grpc.ServiceMethod<$4.Empty, $33.ListExchangesResponse>(
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.ListExchangesResponse>(
         'ListExchanges',
         listExchanges_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.Empty.fromBuffer(value),
-        ($33.ListExchangesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$4.Empty, $33.ListCurrenciesResponse>(
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($1.ListExchangesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Empty, $1.ListCurrenciesResponse>(
         'ListCurrencies',
         listCurrencies_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $4.Empty.fromBuffer(value),
-        ($33.ListCurrenciesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$33.GetOrderStatusRequest, $34.OrderResponse>(
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($1.ListCurrenciesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetOrderStatusRequest, $2.OrderResponse>(
         'GetOrderStatus',
         getOrderStatus_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $33.GetOrderStatusRequest.fromBuffer(value),
-        ($34.OrderResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$33.RescheduleOrderRequest, $34.OrderResponse>(
+        ($core.List<$core.int> value) => $1.GetOrderStatusRequest.fromBuffer(value),
+        ($2.OrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.RescheduleOrderRequest, $2.OrderResponse>(
         'RescheduleOrder',
         rescheduleOrder_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $33.RescheduleOrderRequest.fromBuffer(value),
-        ($34.OrderResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$34.OrderRequest, $34.OrderResponse>(
+        ($core.List<$core.int> value) => $1.RescheduleOrderRequest.fromBuffer(value),
+        ($2.OrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.OrderRequest, $2.OrderResponse>(
         'CreateExchangeOrder',
         createExchangeOrder_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $34.OrderRequest.fromBuffer(value),
-        ($34.OrderResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.OrderRequest.fromBuffer(value),
+        ($2.OrderResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$33.ListExchangesResponse> listExchanges_Pre($grpc.ServiceCall call, $async.Future<$4.Empty> request) async {
+  $async.Future<$1.ListExchangesResponse> listExchanges_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return listExchanges(call, await request);
   }
 
-  $async.Future<$33.ListCurrenciesResponse> listCurrencies_Pre($grpc.ServiceCall call, $async.Future<$4.Empty> request) async {
+  $async.Future<$1.ListCurrenciesResponse> listCurrencies_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
     return listCurrencies(call, await request);
   }
 
-  $async.Future<$34.OrderResponse> getOrderStatus_Pre($grpc.ServiceCall call, $async.Future<$33.GetOrderStatusRequest> request) async {
+  $async.Future<$2.OrderResponse> getOrderStatus_Pre($grpc.ServiceCall call, $async.Future<$1.GetOrderStatusRequest> request) async {
     return getOrderStatus(call, await request);
   }
 
-  $async.Future<$34.OrderResponse> rescheduleOrder_Pre($grpc.ServiceCall call, $async.Future<$33.RescheduleOrderRequest> request) async {
+  $async.Future<$2.OrderResponse> rescheduleOrder_Pre($grpc.ServiceCall call, $async.Future<$1.RescheduleOrderRequest> request) async {
     return rescheduleOrder(call, await request);
   }
 
-  $async.Future<$34.OrderResponse> createExchangeOrder_Pre($grpc.ServiceCall call, $async.Future<$34.OrderRequest> request) async {
+  $async.Future<$2.OrderResponse> createExchangeOrder_Pre($grpc.ServiceCall call, $async.Future<$2.OrderRequest> request) async {
     return createExchangeOrder(call, await request);
   }
 
-  $async.Future<$33.ListExchangesResponse> listExchanges($grpc.ServiceCall call, $4.Empty request);
-  $async.Future<$33.ListCurrenciesResponse> listCurrencies($grpc.ServiceCall call, $4.Empty request);
-  $async.Future<$34.OrderResponse> getOrderStatus($grpc.ServiceCall call, $33.GetOrderStatusRequest request);
-  $async.Future<$34.OrderResponse> rescheduleOrder($grpc.ServiceCall call, $33.RescheduleOrderRequest request);
-  $async.Future<$34.OrderResponse> createExchangeOrder($grpc.ServiceCall call, $34.OrderRequest request);
+  $async.Future<$1.ListExchangesResponse> listExchanges($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$1.ListCurrenciesResponse> listCurrencies($grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$2.OrderResponse> getOrderStatus($grpc.ServiceCall call, $1.GetOrderStatusRequest request);
+  $async.Future<$2.OrderResponse> rescheduleOrder($grpc.ServiceCall call, $1.RescheduleOrderRequest request);
+  $async.Future<$2.OrderResponse> createExchangeOrder($grpc.ServiceCall call, $2.OrderRequest request);
 }

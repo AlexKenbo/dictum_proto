@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $36;
-import 'accrual.pb.dart' as $29;
-import 'transfer.pb.dart' as $26;
+import '../google/protobuf/timestamp.pb.dart' as $39;
+import 'accrual.pb.dart' as $19;
+import 'transfer.pb.dart' as $16;
 
 class Allocation extends $pb.GeneratedMessage {
   factory Allocation({
@@ -27,9 +27,9 @@ class Allocation extends $pb.GeneratedMessage {
     $core.double? transferAllocatedAmount,
     $core.String? transferCurrencyCode,
     $core.String? resourceName,
-    $29.Accrual? accrual,
-    $26.Transfer? transfer,
-    $36.Timestamp? createTime,
+    $19.Accrual? accrual,
+    $16.Transfer? transfer,
+    $39.Timestamp? createTime,
   }) {
     final $result = create();
     if (accrualId != null) {
@@ -80,9 +80,9 @@ class Allocation extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'transferAllocatedAmount', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'transferCurrencyCode')
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$29.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $29.Accrual.create)
-    ..aOM<$26.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $26.Transfer.create)
-    ..aOM<$36.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $36.Timestamp.create)
+    ..aOM<$19.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $19.Accrual.create)
+    ..aOM<$16.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $16.Transfer.create)
+    ..aOM<$39.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -180,37 +180,37 @@ class Allocation extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(9);
 
   @$pb.TagNumber(11)
-  $29.Accrual get accrual => $_getN(8);
+  $19.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(11)
-  set accrual($29.Accrual v) { setField(11, v); }
+  set accrual($19.Accrual v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(11)
   void clearAccrual() => clearField(11);
   @$pb.TagNumber(11)
-  $29.Accrual ensureAccrual() => $_ensure(8);
+  $19.Accrual ensureAccrual() => $_ensure(8);
 
   @$pb.TagNumber(13)
-  $26.Transfer get transfer => $_getN(9);
+  $16.Transfer get transfer => $_getN(9);
   @$pb.TagNumber(13)
-  set transfer($26.Transfer v) { setField(13, v); }
+  set transfer($16.Transfer v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasTransfer() => $_has(9);
   @$pb.TagNumber(13)
   void clearTransfer() => clearField(13);
   @$pb.TagNumber(13)
-  $26.Transfer ensureTransfer() => $_ensure(9);
+  $16.Transfer ensureTransfer() => $_ensure(9);
 
   @$pb.TagNumber(14)
-  $36.Timestamp get createTime => $_getN(10);
+  $39.Timestamp get createTime => $_getN(10);
   @$pb.TagNumber(14)
-  set createTime($36.Timestamp v) { setField(14, v); }
+  set createTime($39.Timestamp v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCreateTime() => $_has(10);
   @$pb.TagNumber(14)
   void clearCreateTime() => clearField(14);
   @$pb.TagNumber(14)
-  $36.Timestamp ensureCreateTime() => $_ensure(10);
+  $39.Timestamp ensureCreateTime() => $_ensure(10);
 }
 
 

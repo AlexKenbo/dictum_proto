@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $36;
-import 'account.pb.dart' as $8;
-import 'entity.pb.dart' as $3;
+import '../google/protobuf/timestamp.pb.dart' as $39;
+import 'account.pb.dart' as $28;
+import 'entity.pb.dart' as $24;
 import 'plugin.pb.dart' as $66;
 import 'plugin_owner_type.pbenum.dart' as $65;
 
@@ -30,9 +30,9 @@ class Service extends $pb.GeneratedMessage {
     $core.String? credentialsStorageKey,
     $core.String? cron,
     $66.Plugin? plugin,
-    $3.Entity? entity,
-    $8.Account? account,
-    $36.Timestamp? syncTime,
+    $24.Entity? entity,
+    $28.Account? account,
+    $39.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -87,9 +87,9 @@ class Service extends $pb.GeneratedMessage {
     ..aOS(10, _omitFieldNames ? '' : 'credentialsStorageKey')
     ..aOS(12, _omitFieldNames ? '' : 'cron')
     ..aOM<$66.Plugin>(14, _omitFieldNames ? '' : 'plugin', subBuilder: $66.Plugin.create)
-    ..aOM<$3.Entity>(16, _omitFieldNames ? '' : 'entity', subBuilder: $3.Entity.create)
-    ..aOM<$8.Account>(18, _omitFieldNames ? '' : 'account', subBuilder: $8.Account.create)
-    ..aOM<$36.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $36.Timestamp.create)
+    ..aOM<$24.Entity>(16, _omitFieldNames ? '' : 'entity', subBuilder: $24.Entity.create)
+    ..aOM<$28.Account>(18, _omitFieldNames ? '' : 'account', subBuilder: $28.Account.create)
+    ..aOM<$39.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $39.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -198,37 +198,37 @@ class Service extends $pb.GeneratedMessage {
   $66.Plugin ensurePlugin() => $_ensure(8);
 
   @$pb.TagNumber(16)
-  $3.Entity get entity => $_getN(9);
+  $24.Entity get entity => $_getN(9);
   @$pb.TagNumber(16)
-  set entity($3.Entity v) { setField(16, v); }
+  set entity($24.Entity v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasEntity() => $_has(9);
   @$pb.TagNumber(16)
   void clearEntity() => clearField(16);
   @$pb.TagNumber(16)
-  $3.Entity ensureEntity() => $_ensure(9);
+  $24.Entity ensureEntity() => $_ensure(9);
 
   @$pb.TagNumber(18)
-  $8.Account get account => $_getN(10);
+  $28.Account get account => $_getN(10);
   @$pb.TagNumber(18)
-  set account($8.Account v) { setField(18, v); }
+  set account($28.Account v) { setField(18, v); }
   @$pb.TagNumber(18)
   $core.bool hasAccount() => $_has(10);
   @$pb.TagNumber(18)
   void clearAccount() => clearField(18);
   @$pb.TagNumber(18)
-  $8.Account ensureAccount() => $_ensure(10);
+  $28.Account ensureAccount() => $_ensure(10);
 
   @$pb.TagNumber(19)
-  $36.Timestamp get syncTime => $_getN(11);
+  $39.Timestamp get syncTime => $_getN(11);
   @$pb.TagNumber(19)
-  set syncTime($36.Timestamp v) { setField(19, v); }
+  set syncTime($39.Timestamp v) { setField(19, v); }
   @$pb.TagNumber(19)
   $core.bool hasSyncTime() => $_has(11);
   @$pb.TagNumber(19)
   void clearSyncTime() => clearField(19);
   @$pb.TagNumber(19)
-  $36.Timestamp ensureSyncTime() => $_ensure(11);
+  $39.Timestamp ensureSyncTime() => $_ensure(11);
 }
 
 

@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $36;
+import '../google/protobuf/timestamp.pb.dart' as $39;
 
 class Operation extends $pb.GeneratedMessage {
   factory Operation({
@@ -23,7 +23,7 @@ class Operation extends $pb.GeneratedMessage {
     $core.bool? isMulticurrency,
     $core.String? alias,
     $core.String? resourceName,
-    $36.Timestamp? createTime,
+    $39.Timestamp? createTime,
   }) {
     final $result = create();
     if (operationId != null) {
@@ -60,7 +60,7 @@ class Operation extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'isMulticurrency')
     ..aOS(6, _omitFieldNames ? '' : 'alias')
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$36.Timestamp>(9, _omitFieldNames ? '' : 'createTime', subBuilder: $36.Timestamp.create)
+    ..aOM<$39.Timestamp>(9, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -140,15 +140,15 @@ class Operation extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(8);
 
   @$pb.TagNumber(9)
-  $36.Timestamp get createTime => $_getN(6);
+  $39.Timestamp get createTime => $_getN(6);
   @$pb.TagNumber(9)
-  set createTime($36.Timestamp v) { setField(9, v); }
+  set createTime($39.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(6);
   @$pb.TagNumber(9)
   void clearCreateTime() => clearField(9);
   @$pb.TagNumber(9)
-  $36.Timestamp ensureCreateTime() => $_ensure(6);
+  $39.Timestamp ensureCreateTime() => $_ensure(6);
 }
 
 
