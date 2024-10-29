@@ -46,7 +46,7 @@ const (
 	FinEvent_ListProducts_FullMethodName         = "/FinEvent/ListProducts"
 	FinEvent_ListPositions_FullMethodName        = "/FinEvent/ListPositions"
 	FinEvent_UpdatePosition_FullMethodName       = "/FinEvent/UpdatePosition"
-	FinEvent_BatchInsertPosition_FullMethodName  = "/FinEvent/BatchInsertPosition"
+	FinEvent_BatchInsertPositions_FullMethodName = "/FinEvent/BatchInsertPositions"
 	FinEvent_ListArticles_FullMethodName         = "/FinEvent/ListArticles"
 	FinEvent_GetArticle_FullMethodName           = "/FinEvent/GetArticle"
 	FinEvent_CreateArticle_FullMethodName        = "/FinEvent/CreateArticle"
@@ -90,7 +90,7 @@ type FinEventClient interface {
 	ListProducts(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListProductsResponse, error)
 	ListPositions(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListPositionsResponse, error)
 	UpdatePosition(ctx context.Context, in *Position, opts ...grpc.CallOption) (*Position, error)
-	BatchInsertPosition(ctx context.Context, in *BatchInsertPositionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	BatchInsertPositions(ctx context.Context, in *BatchInsertPositionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	// --
 	ListArticles(ctx context.Context, in *ListArticlesRequest, opts ...grpc.CallOption) (*ListArticlesResponse, error)
 	GetArticle(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*Article, error)
@@ -370,10 +370,10 @@ func (c *finEventClient) UpdatePosition(ctx context.Context, in *Position, opts 
 	return out, nil
 }
 
-func (c *finEventClient) BatchInsertPosition(ctx context.Context, in *BatchInsertPositionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *finEventClient) BatchInsertPositions(ctx context.Context, in *BatchInsertPositionsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, FinEvent_BatchInsertPosition_FullMethodName, in, out, cOpts...)
+	err := c.cc.Invoke(ctx, FinEvent_BatchInsertPositions_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -484,7 +484,7 @@ type FinEventServer interface {
 	ListProducts(context.Context, *ListRequest) (*ListProductsResponse, error)
 	ListPositions(context.Context, *ListRequest) (*ListPositionsResponse, error)
 	UpdatePosition(context.Context, *Position) (*Position, error)
-	BatchInsertPosition(context.Context, *BatchInsertPositionsRequest) (*emptypb.Empty, error)
+	BatchInsertPositions(context.Context, *BatchInsertPositionsRequest) (*emptypb.Empty, error)
 	// --
 	ListArticles(context.Context, *ListArticlesRequest) (*ListArticlesResponse, error)
 	GetArticle(context.Context, *GetRequest) (*Article, error)
@@ -582,8 +582,8 @@ func (UnimplementedFinEventServer) ListPositions(context.Context, *ListRequest) 
 func (UnimplementedFinEventServer) UpdatePosition(context.Context, *Position) (*Position, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdatePosition not implemented")
 }
-func (UnimplementedFinEventServer) BatchInsertPosition(context.Context, *BatchInsertPositionsRequest) (*emptypb.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method BatchInsertPosition not implemented")
+func (UnimplementedFinEventServer) BatchInsertPositions(context.Context, *BatchInsertPositionsRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BatchInsertPositions not implemented")
 }
 func (UnimplementedFinEventServer) ListArticles(context.Context, *ListArticlesRequest) (*ListArticlesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListArticles not implemented")
@@ -1095,20 +1095,20 @@ func _FinEvent_UpdatePosition_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _FinEvent_BatchInsertPosition_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _FinEvent_BatchInsertPositions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BatchInsertPositionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(FinEventServer).BatchInsertPosition(ctx, in)
+		return srv.(FinEventServer).BatchInsertPositions(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: FinEvent_BatchInsertPosition_FullMethodName,
+		FullMethod: FinEvent_BatchInsertPositions_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(FinEventServer).BatchInsertPosition(ctx, req.(*BatchInsertPositionsRequest))
+		return srv.(FinEventServer).BatchInsertPositions(ctx, req.(*BatchInsertPositionsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1351,8 +1351,8 @@ var FinEvent_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _FinEvent_UpdatePosition_Handler,
 		},
 		{
-			MethodName: "BatchInsertPosition",
-			Handler:    _FinEvent_BatchInsertPosition_Handler,
+			MethodName: "BatchInsertPositions",
+			Handler:    _FinEvent_BatchInsertPositions_Handler,
 		},
 		{
 			MethodName: "ListArticles",

@@ -176,8 +176,8 @@ class FinEventStub(object):
                 request_serializer=proto_dot_position__pb2.Position.SerializeToString,
                 response_deserializer=proto_dot_position__pb2.Position.FromString,
                 _registered_method=True)
-        self.BatchInsertPosition = channel.unary_unary(
-                '/FinEvent/BatchInsertPosition',
+        self.BatchInsertPositions = channel.unary_unary(
+                '/FinEvent/BatchInsertPositions',
                 request_serializer=proto_dot_fin__event__pb2.BatchInsertPositionsRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 _registered_method=True)
@@ -380,7 +380,7 @@ class FinEventServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def BatchInsertPosition(self, request, context):
+    def BatchInsertPositions(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -563,8 +563,8 @@ def add_FinEventServicer_to_server(servicer, server):
                     request_deserializer=proto_dot_position__pb2.Position.FromString,
                     response_serializer=proto_dot_position__pb2.Position.SerializeToString,
             ),
-            'BatchInsertPosition': grpc.unary_unary_rpc_method_handler(
-                    servicer.BatchInsertPosition,
+            'BatchInsertPositions': grpc.unary_unary_rpc_method_handler(
+                    servicer.BatchInsertPositions,
                     request_deserializer=proto_dot_fin__event__pb2.BatchInsertPositionsRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
@@ -1318,7 +1318,7 @@ class FinEvent(object):
             _registered_method=True)
 
     @staticmethod
-    def BatchInsertPosition(request,
+    def BatchInsertPositions(request,
             target,
             options=(),
             channel_credentials=None,
@@ -1331,7 +1331,7 @@ class FinEvent(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/FinEvent/BatchInsertPosition',
+            '/FinEvent/BatchInsertPositions',
             proto_dot_fin__event__pb2.BatchInsertPositionsRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options,
