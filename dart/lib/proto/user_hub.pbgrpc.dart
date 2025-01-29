@@ -15,35 +15,35 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'auth_provider.pb.dart' as $8;
+import 'auth_provider.pb.dart' as $12;
 import 'requests.pb.dart' as $3;
-import 'user.pb.dart' as $7;
-import 'user_hub.pb.dart' as $6;
+import 'user.pb.dart' as $11;
+import 'user_hub.pb.dart' as $10;
 
 export 'user_hub.pb.dart';
 
 @$pb.GrpcServiceName('UserHub')
 class UserHubClient extends $grpc.Client {
-  static final _$listUsers = $grpc.ClientMethod<$3.ListRequest, $6.ListUsersResponse>(
+  static final _$listUsers = $grpc.ClientMethod<$3.ListRequest, $10.ListUsersResponse>(
       '/UserHub/ListUsers',
       ($3.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.ListUsersResponse.fromBuffer(value));
-  static final _$getUser = $grpc.ClientMethod<$3.GetRequest, $7.User>(
+      ($core.List<$core.int> value) => $10.ListUsersResponse.fromBuffer(value));
+  static final _$getUser = $grpc.ClientMethod<$3.GetRequest, $11.User>(
       '/UserHub/GetUser',
       ($3.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.User.fromBuffer(value));
-  static final _$createUser = $grpc.ClientMethod<$7.User, $7.User>(
+      ($core.List<$core.int> value) => $11.User.fromBuffer(value));
+  static final _$createUser = $grpc.ClientMethod<$11.User, $11.User>(
       '/UserHub/CreateUser',
-      ($7.User value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.User.fromBuffer(value));
-  static final _$updateUser = $grpc.ClientMethod<$7.User, $7.User>(
+      ($11.User value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $11.User.fromBuffer(value));
+  static final _$updateUser = $grpc.ClientMethod<$11.User, $11.User>(
       '/UserHub/UpdateUser',
-      ($7.User value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.User.fromBuffer(value));
-  static final _$createUserProvider = $grpc.ClientMethod<$8.AuthProvider, $8.AuthProvider>(
+      ($11.User value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $11.User.fromBuffer(value));
+  static final _$createUserProvider = $grpc.ClientMethod<$12.AuthProvider, $12.AuthProvider>(
       '/UserHub/CreateUserProvider',
-      ($8.AuthProvider value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.AuthProvider.fromBuffer(value));
+      ($12.AuthProvider value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $12.AuthProvider.fromBuffer(value));
 
   UserHubClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -51,23 +51,23 @@ class UserHubClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$6.ListUsersResponse> listUsers($3.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$10.ListUsersResponse> listUsers($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listUsers, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.User> getUser($3.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$11.User> getUser($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getUser, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.User> createUser($7.User request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$11.User> createUser($11.User request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createUser, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.User> updateUser($7.User request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$11.User> updateUser($11.User request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateUser, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.AuthProvider> createUserProvider($8.AuthProvider request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$12.AuthProvider> createUserProvider($12.AuthProvider request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createUserProvider, request, options: options);
   }
 }
@@ -77,66 +77,66 @@ abstract class UserHubServiceBase extends $grpc.Service {
   $core.String get $name => 'UserHub';
 
   UserHubServiceBase() {
-    $addMethod($grpc.ServiceMethod<$3.ListRequest, $6.ListUsersResponse>(
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $10.ListUsersResponse>(
         'ListUsers',
         listUsers_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
-        ($6.ListUsersResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.GetRequest, $7.User>(
+        ($10.ListUsersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $11.User>(
         'GetUser',
         getUser_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
-        ($7.User value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.User, $7.User>(
+        ($11.User value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$11.User, $11.User>(
         'CreateUser',
         createUser_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $7.User.fromBuffer(value),
-        ($7.User value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.User, $7.User>(
+        ($core.List<$core.int> value) => $11.User.fromBuffer(value),
+        ($11.User value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$11.User, $11.User>(
         'UpdateUser',
         updateUser_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $7.User.fromBuffer(value),
-        ($7.User value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.AuthProvider, $8.AuthProvider>(
+        ($core.List<$core.int> value) => $11.User.fromBuffer(value),
+        ($11.User value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$12.AuthProvider, $12.AuthProvider>(
         'CreateUserProvider',
         createUserProvider_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.AuthProvider.fromBuffer(value),
-        ($8.AuthProvider value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $12.AuthProvider.fromBuffer(value),
+        ($12.AuthProvider value) => value.writeToBuffer()));
   }
 
-  $async.Future<$6.ListUsersResponse> listUsers_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
+  $async.Future<$10.ListUsersResponse> listUsers_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listUsers(call, await request);
   }
 
-  $async.Future<$7.User> getUser_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
+  $async.Future<$11.User> getUser_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getUser(call, await request);
   }
 
-  $async.Future<$7.User> createUser_Pre($grpc.ServiceCall call, $async.Future<$7.User> request) async {
+  $async.Future<$11.User> createUser_Pre($grpc.ServiceCall call, $async.Future<$11.User> request) async {
     return createUser(call, await request);
   }
 
-  $async.Future<$7.User> updateUser_Pre($grpc.ServiceCall call, $async.Future<$7.User> request) async {
+  $async.Future<$11.User> updateUser_Pre($grpc.ServiceCall call, $async.Future<$11.User> request) async {
     return updateUser(call, await request);
   }
 
-  $async.Future<$8.AuthProvider> createUserProvider_Pre($grpc.ServiceCall call, $async.Future<$8.AuthProvider> request) async {
+  $async.Future<$12.AuthProvider> createUserProvider_Pre($grpc.ServiceCall call, $async.Future<$12.AuthProvider> request) async {
     return createUserProvider(call, await request);
   }
 
-  $async.Future<$6.ListUsersResponse> listUsers($grpc.ServiceCall call, $3.ListRequest request);
-  $async.Future<$7.User> getUser($grpc.ServiceCall call, $3.GetRequest request);
-  $async.Future<$7.User> createUser($grpc.ServiceCall call, $7.User request);
-  $async.Future<$7.User> updateUser($grpc.ServiceCall call, $7.User request);
-  $async.Future<$8.AuthProvider> createUserProvider($grpc.ServiceCall call, $8.AuthProvider request);
+  $async.Future<$10.ListUsersResponse> listUsers($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$11.User> getUser($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$11.User> createUser($grpc.ServiceCall call, $11.User request);
+  $async.Future<$11.User> updateUser($grpc.ServiceCall call, $11.User request);
+  $async.Future<$12.AuthProvider> createUserProvider($grpc.ServiceCall call, $12.AuthProvider request);
 }

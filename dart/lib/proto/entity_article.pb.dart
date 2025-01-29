@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article.pb.dart' as $23;
-import 'entity.pb.dart' as $25;
+import 'article.pb.dart' as $31;
+import 'entity.pb.dart' as $14;
 
 class EntityArticle extends $pb.GeneratedMessage {
   factory EntityArticle({
     $core.int? articleId,
     $core.int? entityId,
-    $23.Article? article,
-    $25.Entity? entity,
+    $31.Article? article,
+    $14.Entity? entity,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -45,8 +45,8 @@ class EntityArticle extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EntityArticle', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'articleId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$23.Article>(3, _omitFieldNames ? '' : 'article', subBuilder: $23.Article.create)
-    ..aOM<$25.Entity>(5, _omitFieldNames ? '' : 'entity', subBuilder: $25.Entity.create)
+    ..aOM<$31.Article>(3, _omitFieldNames ? '' : 'article', subBuilder: $31.Article.create)
+    ..aOM<$14.Entity>(5, _omitFieldNames ? '' : 'entity', subBuilder: $14.Entity.create)
     ..hasRequiredFields = false
   ;
 
@@ -90,26 +90,26 @@ class EntityArticle extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $23.Article get article => $_getN(2);
+  $31.Article get article => $_getN(2);
   @$pb.TagNumber(3)
-  set article($23.Article v) { setField(3, v); }
+  set article($31.Article v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasArticle() => $_has(2);
   @$pb.TagNumber(3)
   void clearArticle() => clearField(3);
   @$pb.TagNumber(3)
-  $23.Article ensureArticle() => $_ensure(2);
+  $31.Article ensureArticle() => $_ensure(2);
 
   @$pb.TagNumber(5)
-  $25.Entity get entity => $_getN(3);
+  $14.Entity get entity => $_getN(3);
   @$pb.TagNumber(5)
-  set entity($25.Entity v) { setField(5, v); }
+  set entity($14.Entity v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasEntity() => $_has(3);
   @$pb.TagNumber(5)
   void clearEntity() => clearField(5);
   @$pb.TagNumber(5)
-  $25.Entity ensureEntity() => $_ensure(3);
+  $14.Entity ensureEntity() => $_ensure(3);
 }
 
 
