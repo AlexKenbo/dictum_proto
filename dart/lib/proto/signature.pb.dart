@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'action.pb.dart' as $47;
-import 'user.pb.dart' as $7;
+import '../google/protobuf/timestamp.pb.dart' as $42;
+import 'action.pb.dart' as $49;
+import 'user.pb.dart' as $11;
 
 class Signature extends $pb.GeneratedMessage {
   factory Signature({
@@ -23,10 +23,10 @@ class Signature extends $pb.GeneratedMessage {
     $core.int? actionId,
     $core.int? signerId,
     $core.int? entityId,
-    $39.Timestamp? createTime,
+    $42.Timestamp? createTime,
     $core.String? resourceName,
-    $47.Action? action,
-    $7.User? signer,
+    $49.Action? action,
+    $11.User? signer,
   }) {
     final $result = create();
     if (signatureId != null) {
@@ -64,10 +64,10 @@ class Signature extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'signerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
+    ..aOM<$42.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
     ..aOS(6, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$47.Action>(7, _omitFieldNames ? '' : 'action', subBuilder: $47.Action.create)
-    ..aOM<$7.User>(8, _omitFieldNames ? '' : 'signer', subBuilder: $7.User.create)
+    ..aOM<$49.Action>(7, _omitFieldNames ? '' : 'action', subBuilder: $49.Action.create)
+    ..aOM<$11.User>(8, _omitFieldNames ? '' : 'signer', subBuilder: $11.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -129,15 +129,15 @@ class Signature extends $pb.GeneratedMessage {
   void clearEntityId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get createTime => $_getN(4);
+  $42.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($39.Timestamp v) { setField(5, v); }
+  set createTime($42.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureCreateTime() => $_ensure(4);
+  $42.Timestamp ensureCreateTime() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get resourceName => $_getSZ(5);
@@ -149,26 +149,26 @@ class Signature extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(6);
 
   @$pb.TagNumber(7)
-  $47.Action get action => $_getN(6);
+  $49.Action get action => $_getN(6);
   @$pb.TagNumber(7)
-  set action($47.Action v) { setField(7, v); }
+  set action($49.Action v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasAction() => $_has(6);
   @$pb.TagNumber(7)
   void clearAction() => clearField(7);
   @$pb.TagNumber(7)
-  $47.Action ensureAction() => $_ensure(6);
+  $49.Action ensureAction() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $7.User get signer => $_getN(7);
+  $11.User get signer => $_getN(7);
   @$pb.TagNumber(8)
-  set signer($7.User v) { setField(8, v); }
+  set signer($11.User v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasSigner() => $_has(7);
   @$pb.TagNumber(8)
   void clearSigner() => clearField(8);
   @$pb.TagNumber(8)
-  $7.User ensureSigner() => $_ensure(7);
+  $11.User ensureSigner() => $_ensure(7);
 }
 
 

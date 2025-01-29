@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'entity.pb.dart' as $24;
+import '../google/protobuf/timestamp.pb.dart' as $42;
+import 'entity.pb.dart' as $14;
 
 class Contract extends $pb.GeneratedMessage {
   factory Contract({
@@ -22,11 +22,11 @@ class Contract extends $pb.GeneratedMessage {
     $core.String? number,
     $core.int? payerId,
     $core.int? recipientId,
-    $39.Timestamp? createTime,
-    $24.Entity? payer,
-    $24.Entity? recipient,
+    $42.Timestamp? createTime,
+    $14.Entity? payer,
+    $14.Entity? recipient,
     $core.int? payerAccountId,
-    $39.Timestamp? dateFrom,
+    $42.Timestamp? dateFrom,
   }) {
     final $result = create();
     if (contractId != null) {
@@ -67,11 +67,11 @@ class Contract extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'number')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
-    ..aOM<$24.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $24.Entity.create)
-    ..aOM<$24.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $24.Entity.create)
+    ..aOM<$42.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$14.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $14.Entity.create)
+    ..aOM<$14.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $14.Entity.create)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
-    ..aOM<$39.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $39.Timestamp.create)
+    ..aOM<$42.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $42.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -133,37 +133,37 @@ class Contract extends $pb.GeneratedMessage {
   void clearRecipientId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $39.Timestamp get createTime => $_getN(4);
+  $42.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($39.Timestamp v) { setField(5, v); }
+  set createTime($42.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $39.Timestamp ensureCreateTime() => $_ensure(4);
+  $42.Timestamp ensureCreateTime() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $24.Entity get payer => $_getN(5);
+  $14.Entity get payer => $_getN(5);
   @$pb.TagNumber(6)
-  set payer($24.Entity v) { setField(6, v); }
+  set payer($14.Entity v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPayer() => $_has(5);
   @$pb.TagNumber(6)
   void clearPayer() => clearField(6);
   @$pb.TagNumber(6)
-  $24.Entity ensurePayer() => $_ensure(5);
+  $14.Entity ensurePayer() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $24.Entity get recipient => $_getN(6);
+  $14.Entity get recipient => $_getN(6);
   @$pb.TagNumber(7)
-  set recipient($24.Entity v) { setField(7, v); }
+  set recipient($14.Entity v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasRecipient() => $_has(6);
   @$pb.TagNumber(7)
   void clearRecipient() => clearField(7);
   @$pb.TagNumber(7)
-  $24.Entity ensureRecipient() => $_ensure(6);
+  $14.Entity ensureRecipient() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.int get payerAccountId => $_getIZ(7);
@@ -175,15 +175,15 @@ class Contract extends $pb.GeneratedMessage {
   void clearPayerAccountId() => clearField(8);
 
   @$pb.TagNumber(9)
-  $39.Timestamp get dateFrom => $_getN(8);
+  $42.Timestamp get dateFrom => $_getN(8);
   @$pb.TagNumber(9)
-  set dateFrom($39.Timestamp v) { setField(9, v); }
+  set dateFrom($42.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDateFrom() => $_has(8);
   @$pb.TagNumber(9)
   void clearDateFrom() => clearField(9);
   @$pb.TagNumber(9)
-  $39.Timestamp ensureDateFrom() => $_ensure(8);
+  $42.Timestamp ensureDateFrom() => $_ensure(8);
 }
 
 

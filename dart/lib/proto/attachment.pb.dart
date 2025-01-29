@@ -13,21 +13,21 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'attachment_type.pbenum.dart' as $52;
-import 'user.pb.dart' as $7;
+import '../google/protobuf/timestamp.pb.dart' as $42;
+import 'attachment_type.pbenum.dart' as $41;
+import 'user.pb.dart' as $11;
 
 class Attachment extends $pb.GeneratedMessage {
   factory Attachment({
     $core.int? attachmentId,
     $core.String? rawUrl,
     $core.String? mimeType,
-    $52.AttachmentType? type,
+    $41.AttachmentType? type,
     $core.String? name,
     $core.int? uploaderId,
     $core.String? resourceName,
-    $39.Timestamp? createTime,
-    $7.User? uploader,
+    $42.Timestamp? createTime,
+    $11.User? uploader,
     $core.String? externalNumber,
   }) {
     final $result = create();
@@ -71,12 +71,12 @@ class Attachment extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$52.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $52.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $52.AttachmentType.valueOf, enumValues: $52.AttachmentType.values)
+    ..e<$41.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $41.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $41.AttachmentType.valueOf, enumValues: $41.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$39.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
-    ..aOM<$7.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $7.User.create)
+    ..aOM<$42.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$11.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $11.User.create)
     ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
     ..hasRequiredFields = false
   ;
@@ -130,9 +130,9 @@ class Attachment extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 
   @$pb.TagNumber(4)
-  $52.AttachmentType get type => $_getN(3);
+  $41.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($52.AttachmentType v) { setField(4, v); }
+  set type($41.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -166,26 +166,26 @@ class Attachment extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(7);
 
   @$pb.TagNumber(8)
-  $39.Timestamp get createTime => $_getN(7);
+  $42.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set createTime($39.Timestamp v) { setField(8, v); }
+  set createTime($42.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
   void clearCreateTime() => clearField(8);
   @$pb.TagNumber(8)
-  $39.Timestamp ensureCreateTime() => $_ensure(7);
+  $42.Timestamp ensureCreateTime() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $7.User get uploader => $_getN(8);
+  $11.User get uploader => $_getN(8);
   @$pb.TagNumber(9)
-  set uploader($7.User v) { setField(9, v); }
+  set uploader($11.User v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasUploader() => $_has(8);
   @$pb.TagNumber(9)
   void clearUploader() => clearField(9);
   @$pb.TagNumber(9)
-  $7.User ensureUploader() => $_ensure(8);
+  $11.User ensureUploader() => $_ensure(8);
 
   /// new fields
   @$pb.TagNumber(10)

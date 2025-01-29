@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $39;
-import 'account.pb.dart' as $28;
-import 'user.pb.dart' as $7;
+import '../google/protobuf/timestamp.pb.dart' as $42;
+import 'account.pb.dart' as $18;
+import 'user.pb.dart' as $11;
 
 class AccountAudit extends $pb.GeneratedMessage {
   factory AccountAudit({
@@ -25,11 +25,11 @@ class AccountAudit extends $pb.GeneratedMessage {
     $core.double? currentBalance,
     $core.String? resourceName,
     $core.double? unverifiedBalance,
-    $28.Account? account,
+    $18.Account? account,
     $core.double? bankBalance,
     $core.bool? balanceCorrect,
-    $39.Timestamp? createTime,
-    $7.User? auditor,
+    $42.Timestamp? createTime,
+    $11.User? auditor,
   }) {
     final $result = create();
     if (accountId != null) {
@@ -78,11 +78,11 @@ class AccountAudit extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'currentBalance', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
     ..a<$core.double>(8, _omitFieldNames ? '' : 'unverifiedBalance', $pb.PbFieldType.OD)
-    ..aOM<$28.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $28.Account.create)
+    ..aOM<$18.Account>(9, _omitFieldNames ? '' : 'account', subBuilder: $18.Account.create)
     ..a<$core.double>(10, _omitFieldNames ? '' : 'bankBalance', $pb.PbFieldType.OD)
     ..aOB(13, _omitFieldNames ? '' : 'balanceCorrect')
-    ..aOM<$39.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $39.Timestamp.create)
-    ..aOM<$7.User>(15, _omitFieldNames ? '' : 'auditor', subBuilder: $7.User.create)
+    ..aOM<$42.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$11.User>(15, _omitFieldNames ? '' : 'auditor', subBuilder: $11.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -162,15 +162,15 @@ class AccountAudit extends $pb.GeneratedMessage {
   void clearUnverifiedBalance() => clearField(8);
 
   @$pb.TagNumber(9)
-  $28.Account get account => $_getN(6);
+  $18.Account get account => $_getN(6);
   @$pb.TagNumber(9)
-  set account($28.Account v) { setField(9, v); }
+  set account($18.Account v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasAccount() => $_has(6);
   @$pb.TagNumber(9)
   void clearAccount() => clearField(9);
   @$pb.TagNumber(9)
-  $28.Account ensureAccount() => $_ensure(6);
+  $18.Account ensureAccount() => $_ensure(6);
 
   @$pb.TagNumber(10)
   $core.double get bankBalance => $_getN(7);
@@ -191,26 +191,26 @@ class AccountAudit extends $pb.GeneratedMessage {
   void clearBalanceCorrect() => clearField(13);
 
   @$pb.TagNumber(14)
-  $39.Timestamp get createTime => $_getN(9);
+  $42.Timestamp get createTime => $_getN(9);
   @$pb.TagNumber(14)
-  set createTime($39.Timestamp v) { setField(14, v); }
+  set createTime($42.Timestamp v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCreateTime() => $_has(9);
   @$pb.TagNumber(14)
   void clearCreateTime() => clearField(14);
   @$pb.TagNumber(14)
-  $39.Timestamp ensureCreateTime() => $_ensure(9);
+  $42.Timestamp ensureCreateTime() => $_ensure(9);
 
   @$pb.TagNumber(15)
-  $7.User get auditor => $_getN(10);
+  $11.User get auditor => $_getN(10);
   @$pb.TagNumber(15)
-  set auditor($7.User v) { setField(15, v); }
+  set auditor($11.User v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasAuditor() => $_has(10);
   @$pb.TagNumber(15)
   void clearAuditor() => clearField(15);
   @$pb.TagNumber(15)
-  $7.User ensureAuditor() => $_ensure(10);
+  $11.User ensureAuditor() => $_ensure(10);
 }
 
 

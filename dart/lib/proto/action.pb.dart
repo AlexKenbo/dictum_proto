@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action_type.pbenum.dart' as $46;
+import 'action_type.pbenum.dart' as $48;
 
 class Action extends $pb.GeneratedMessage {
   factory Action({
     $core.int? actionId,
-    $46.ActionType? type,
+    $48.ActionType? type,
     $core.String? scopeName,
     $core.String? description,
     $core.String? resourceName,
@@ -47,7 +47,7 @@ class Action extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Action', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
-    ..e<$46.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $46.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $46.ActionType.valueOf, enumValues: $46.ActionType.values)
+    ..e<$48.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $48.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $48.ActionType.valueOf, enumValues: $48.ActionType.values)
     ..aOS(3, _omitFieldNames ? '' : 'scopeName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'resourceName')
@@ -85,9 +85,9 @@ class Action extends $pb.GeneratedMessage {
   void clearActionId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $46.ActionType get type => $_getN(1);
+  $48.ActionType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type($46.ActionType v) { setField(2, v); }
+  set type($48.ActionType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
