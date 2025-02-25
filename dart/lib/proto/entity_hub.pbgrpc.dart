@@ -15,166 +15,166 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/empty.pb.dart' as $4;
-import 'account.pb.dart' as $8;
-import 'account_audit.pb.dart' as $10;
-import 'account_balance.pb.dart' as $11;
-import 'account_detail.pb.dart' as $9;
-import 'contract.pb.dart' as $6;
-import 'employee.pb.dart' as $7;
-import 'entity.pb.dart' as $3;
-import 'entity_aggregate.pb.dart' as $5;
-import 'entity_hub.pb.dart' as $2;
-import 'requests.pb.dart' as $1;
+import '../google/protobuf/empty.pb.dart' as $0;
+import 'account.pb.dart' as $18;
+import 'account_audit.pb.dart' as $7;
+import 'account_balance.pb.dart' as $8;
+import 'account_detail.pb.dart' as $19;
+import 'contract.pb.dart' as $16;
+import 'employee.pb.dart' as $17;
+import 'entity.pb.dart' as $14;
+import 'entity_aggregate.pb.dart' as $15;
+import 'entity_hub.pb.dart' as $13;
+import 'requests.pb.dart' as $3;
 
 export 'entity_hub.pb.dart';
 
 @$pb.GrpcServiceName('EntityHub')
 class EntityHubClient extends $grpc.Client {
-  static final _$listEntities = $grpc.ClientMethod<$1.ListRequest, $2.ListEntitiesResponse>(
+  static final _$listEntities = $grpc.ClientMethod<$3.ListRequest, $13.ListEntitiesResponse>(
       '/EntityHub/ListEntities',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListEntitiesResponse.fromBuffer(value));
-  static final _$getEntity = $grpc.ClientMethod<$1.GetRequest, $3.Entity>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListEntitiesResponse.fromBuffer(value));
+  static final _$getEntity = $grpc.ClientMethod<$3.GetRequest, $14.Entity>(
       '/EntityHub/GetEntity',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $3.Entity.fromBuffer(value));
-  static final _$createEntity = $grpc.ClientMethod<$3.Entity, $3.Entity>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $14.Entity.fromBuffer(value));
+  static final _$createEntity = $grpc.ClientMethod<$14.Entity, $14.Entity>(
       '/EntityHub/CreateEntity',
-      ($3.Entity value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $3.Entity.fromBuffer(value));
-  static final _$deleteEntity = $grpc.ClientMethod<$1.DeleteRequest, $4.Empty>(
+      ($14.Entity value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $14.Entity.fromBuffer(value));
+  static final _$deleteEntity = $grpc.ClientMethod<$3.DeleteRequest, $0.Empty>(
       '/EntityHub/DeleteEntity',
-      ($1.DeleteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$batchInsertEntities = $grpc.ClientMethod<$2.BatchInsertEntitiesRequest, $4.Empty>(
+      ($3.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$batchInsertEntities = $grpc.ClientMethod<$13.BatchInsertEntitiesRequest, $0.Empty>(
       '/EntityHub/BatchInsertEntities',
-      ($2.BatchInsertEntitiesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$updateEntity = $grpc.ClientMethod<$3.Entity, $3.Entity>(
+      ($13.BatchInsertEntitiesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$updateEntity = $grpc.ClientMethod<$14.Entity, $14.Entity>(
       '/EntityHub/UpdateEntity',
-      ($3.Entity value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $3.Entity.fromBuffer(value));
-  static final _$aggregateEntity = $grpc.ClientMethod<$1.GetRequest, $5.EntityAggregate>(
+      ($14.Entity value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $14.Entity.fromBuffer(value));
+  static final _$aggregateEntity = $grpc.ClientMethod<$3.GetRequest, $15.EntityAggregate>(
       '/EntityHub/AggregateEntity',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $5.EntityAggregate.fromBuffer(value));
-  static final _$createContract = $grpc.ClientMethod<$6.Contract, $6.Contract>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $15.EntityAggregate.fromBuffer(value));
+  static final _$createContract = $grpc.ClientMethod<$16.Contract, $16.Contract>(
       '/EntityHub/CreateContract',
-      ($6.Contract value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $6.Contract.fromBuffer(value));
-  static final _$listContracts = $grpc.ClientMethod<$1.ListRequest, $2.ListContractsResponse>(
+      ($16.Contract value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $16.Contract.fromBuffer(value));
+  static final _$listContracts = $grpc.ClientMethod<$3.ListRequest, $13.ListContractsResponse>(
       '/EntityHub/ListContracts',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListContractsResponse.fromBuffer(value));
-  static final _$listEmployees = $grpc.ClientMethod<$1.ListRequest, $2.ListEmployeesResponse>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListContractsResponse.fromBuffer(value));
+  static final _$listEmployees = $grpc.ClientMethod<$3.ListRequest, $13.ListEmployeesResponse>(
       '/EntityHub/ListEmployees',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListEmployeesResponse.fromBuffer(value));
-  static final _$getEmployee = $grpc.ClientMethod<$1.GetRequest, $7.Employee>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListEmployeesResponse.fromBuffer(value));
+  static final _$getEmployee = $grpc.ClientMethod<$3.GetRequest, $17.Employee>(
       '/EntityHub/GetEmployee',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.Employee.fromBuffer(value));
-  static final _$createEmployee = $grpc.ClientMethod<$7.Employee, $7.Employee>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.Employee.fromBuffer(value));
+  static final _$createEmployee = $grpc.ClientMethod<$17.Employee, $17.Employee>(
       '/EntityHub/CreateEmployee',
-      ($7.Employee value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $7.Employee.fromBuffer(value));
-  static final _$deleteEmployee = $grpc.ClientMethod<$1.DeleteRequest, $4.Empty>(
+      ($17.Employee value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $17.Employee.fromBuffer(value));
+  static final _$deleteEmployee = $grpc.ClientMethod<$3.DeleteRequest, $0.Empty>(
       '/EntityHub/DeleteEmployee',
-      ($1.DeleteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$listCountries = $grpc.ClientMethod<$1.ListRequest, $2.ListCountriesResponse>(
+      ($3.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$listCountries = $grpc.ClientMethod<$3.ListRequest, $13.ListCountriesResponse>(
       '/EntityHub/ListCountries',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListCountriesResponse.fromBuffer(value));
-  static final _$listAccounts = $grpc.ClientMethod<$1.ListRequest, $2.ListAccountsResponse>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListCountriesResponse.fromBuffer(value));
+  static final _$listAccounts = $grpc.ClientMethod<$3.ListRequest, $13.ListAccountsResponse>(
       '/EntityHub/ListAccounts',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListAccountsResponse.fromBuffer(value));
-  static final _$listAccountDetails = $grpc.ClientMethod<$1.ListRequest, $2.ListAccountDetailsResponse>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListAccountsResponse.fromBuffer(value));
+  static final _$listAccountDetails = $grpc.ClientMethod<$3.ListRequest, $13.ListAccountDetailsResponse>(
       '/EntityHub/ListAccountDetails',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListAccountDetailsResponse.fromBuffer(value));
-  static final _$getAccount = $grpc.ClientMethod<$1.GetRequest, $8.Account>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListAccountDetailsResponse.fromBuffer(value));
+  static final _$getAccount = $grpc.ClientMethod<$3.GetRequest, $18.Account>(
       '/EntityHub/GetAccount',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.Account.fromBuffer(value));
-  static final _$getAccountDetail = $grpc.ClientMethod<$1.GetRequest, $9.AccountDetail>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.Account.fromBuffer(value));
+  static final _$getAccountDetail = $grpc.ClientMethod<$3.GetRequest, $19.AccountDetail>(
       '/EntityHub/GetAccountDetail',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $9.AccountDetail.fromBuffer(value));
-  static final _$createAccount = $grpc.ClientMethod<$8.Account, $8.Account>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $19.AccountDetail.fromBuffer(value));
+  static final _$createAccount = $grpc.ClientMethod<$18.Account, $18.Account>(
       '/EntityHub/CreateAccount',
-      ($8.Account value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.Account.fromBuffer(value));
-  static final _$createAccountDetails = $grpc.ClientMethod<$9.AccountDetail, $9.AccountDetail>(
+      ($18.Account value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.Account.fromBuffer(value));
+  static final _$createAccountDetails = $grpc.ClientMethod<$19.AccountDetail, $19.AccountDetail>(
       '/EntityHub/CreateAccountDetails',
-      ($9.AccountDetail value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $9.AccountDetail.fromBuffer(value));
-  static final _$batchInsertAccounts = $grpc.ClientMethod<$2.BatchInsertAccountsRequest, $2.BatchInsertAccountsResponse>(
+      ($19.AccountDetail value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $19.AccountDetail.fromBuffer(value));
+  static final _$batchInsertAccounts = $grpc.ClientMethod<$13.BatchInsertAccountsRequest, $13.BatchInsertAccountsResponse>(
       '/EntityHub/BatchInsertAccounts',
-      ($2.BatchInsertAccountsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.BatchInsertAccountsResponse.fromBuffer(value));
-  static final _$updateAccount = $grpc.ClientMethod<$8.Account, $8.Account>(
+      ($13.BatchInsertAccountsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.BatchInsertAccountsResponse.fromBuffer(value));
+  static final _$updateAccount = $grpc.ClientMethod<$18.Account, $18.Account>(
       '/EntityHub/UpdateAccount',
-      ($8.Account value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $8.Account.fromBuffer(value));
-  static final _$updateAccountDetails = $grpc.ClientMethod<$9.AccountDetail, $9.AccountDetail>(
+      ($18.Account value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $18.Account.fromBuffer(value));
+  static final _$updateAccountDetails = $grpc.ClientMethod<$19.AccountDetail, $19.AccountDetail>(
       '/EntityHub/UpdateAccountDetails',
-      ($9.AccountDetail value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $9.AccountDetail.fromBuffer(value));
-  static final _$deleteAccount = $grpc.ClientMethod<$1.DeleteRequest, $4.Empty>(
+      ($19.AccountDetail value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $19.AccountDetail.fromBuffer(value));
+  static final _$deleteAccount = $grpc.ClientMethod<$3.DeleteRequest, $0.Empty>(
       '/EntityHub/DeleteAccount',
-      ($1.DeleteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$listCurrencies = $grpc.ClientMethod<$1.ListRequest, $2.ListCurrenciesResponse>(
+      ($3.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$listCurrencies = $grpc.ClientMethod<$3.ListRequest, $13.ListCurrenciesResponse>(
       '/EntityHub/ListCurrencies',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListCurrenciesResponse.fromBuffer(value));
-  static final _$listActualCurrencyRates = $grpc.ClientMethod<$2.ListActualCurrencyRatesRequest, $2.ListActualCurrencyRatesResponse>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListCurrenciesResponse.fromBuffer(value));
+  static final _$listActualCurrencyRates = $grpc.ClientMethod<$13.ListActualCurrencyRatesRequest, $13.ListActualCurrencyRatesResponse>(
       '/EntityHub/ListActualCurrencyRates',
-      ($2.ListActualCurrencyRatesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListActualCurrencyRatesResponse.fromBuffer(value));
-  static final _$batchInsertCurrencyRates = $grpc.ClientMethod<$2.BatchInsertCurrencyRatesRequest, $4.Empty>(
+      ($13.ListActualCurrencyRatesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListActualCurrencyRatesResponse.fromBuffer(value));
+  static final _$batchInsertCurrencyRates = $grpc.ClientMethod<$13.BatchInsertCurrencyRatesRequest, $0.Empty>(
       '/EntityHub/BatchInsertCurrencyRates',
-      ($2.BatchInsertCurrencyRatesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$listFis = $grpc.ClientMethod<$1.ListRequest, $2.ListFisResponse>(
+      ($13.BatchInsertCurrencyRatesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$listFis = $grpc.ClientMethod<$3.ListRequest, $13.ListFisResponse>(
       '/EntityHub/ListFis',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListFisResponse.fromBuffer(value));
-  static final _$listAccountAudits = $grpc.ClientMethod<$1.ListRequest, $2.ListAccountAuditsResponse>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListFisResponse.fromBuffer(value));
+  static final _$listAccountAudits = $grpc.ClientMethod<$3.ListRequest, $13.ListAccountAuditsResponse>(
       '/EntityHub/ListAccountAudits',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListAccountAuditsResponse.fromBuffer(value));
-  static final _$getAccountAudit = $grpc.ClientMethod<$1.GetRequest, $10.AccountAudit>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListAccountAuditsResponse.fromBuffer(value));
+  static final _$getAccountAudit = $grpc.ClientMethod<$3.GetRequest, $7.AccountAudit>(
       '/EntityHub/GetAccountAudit',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $10.AccountAudit.fromBuffer(value));
-  static final _$getAccountBalance = $grpc.ClientMethod<$1.GetRequest, $11.AccountBalance>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.AccountAudit.fromBuffer(value));
+  static final _$getAccountBalance = $grpc.ClientMethod<$3.GetRequest, $8.AccountBalance>(
       '/EntityHub/GetAccountBalance',
-      ($1.GetRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $11.AccountBalance.fromBuffer(value));
-  static final _$createAccountAudit = $grpc.ClientMethod<$10.AccountAudit, $10.AccountAudit>(
+      ($3.GetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $8.AccountBalance.fromBuffer(value));
+  static final _$createAccountAudit = $grpc.ClientMethod<$7.AccountAudit, $7.AccountAudit>(
       '/EntityHub/CreateAccountAudit',
-      ($10.AccountAudit value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $10.AccountAudit.fromBuffer(value));
-  static final _$requestEmployee = $grpc.ClientMethod<$2.RequestEmployeeRequest, $4.Empty>(
+      ($7.AccountAudit value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $7.AccountAudit.fromBuffer(value));
+  static final _$requestEmployee = $grpc.ClientMethod<$13.RequestEmployeeRequest, $0.Empty>(
       '/EntityHub/RequestEmployee',
-      ($2.RequestEmployeeRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$requestPartnership = $grpc.ClientMethod<$2.RequestPartnershipRequest, $4.Empty>(
+      ($13.RequestEmployeeRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$requestPartnership = $grpc.ClientMethod<$13.RequestPartnershipRequest, $0.Empty>(
       '/EntityHub/RequestPartnership',
-      ($2.RequestPartnershipRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
-  static final _$listEntityAccesses = $grpc.ClientMethod<$1.ListRequest, $2.ListEntityAccessesResponse>(
+      ($13.RequestPartnershipRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
+  static final _$listEntityAccesses = $grpc.ClientMethod<$3.ListRequest, $13.ListEntityAccessesResponse>(
       '/EntityHub/ListEntityAccesses',
-      ($1.ListRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.ListEntityAccessesResponse.fromBuffer(value));
-  static final _$deleteEntityAccess = $grpc.ClientMethod<$1.DeleteRequest, $4.Empty>(
+      ($3.ListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $13.ListEntityAccessesResponse.fromBuffer(value));
+  static final _$deleteEntityAccess = $grpc.ClientMethod<$3.DeleteRequest, $0.Empty>(
       '/EntityHub/DeleteEntityAccess',
-      ($1.DeleteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $4.Empty.fromBuffer(value));
+      ($3.DeleteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
 
   EntityHubClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -182,147 +182,147 @@ class EntityHubClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$2.ListEntitiesResponse> listEntities($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListEntitiesResponse> listEntities($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listEntities, request, options: options);
   }
 
-  $grpc.ResponseFuture<$3.Entity> getEntity($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$14.Entity> getEntity($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getEntity, request, options: options);
   }
 
-  $grpc.ResponseFuture<$3.Entity> createEntity($3.Entity request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$14.Entity> createEntity($14.Entity request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createEntity, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> deleteEntity($1.DeleteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> deleteEntity($3.DeleteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteEntity, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> batchInsertEntities($2.BatchInsertEntitiesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> batchInsertEntities($13.BatchInsertEntitiesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchInsertEntities, request, options: options);
   }
 
-  $grpc.ResponseFuture<$3.Entity> updateEntity($3.Entity request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$14.Entity> updateEntity($14.Entity request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateEntity, request, options: options);
   }
 
-  $grpc.ResponseFuture<$5.EntityAggregate> aggregateEntity($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$15.EntityAggregate> aggregateEntity($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$aggregateEntity, request, options: options);
   }
 
-  $grpc.ResponseFuture<$6.Contract> createContract($6.Contract request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$16.Contract> createContract($16.Contract request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createContract, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListContractsResponse> listContracts($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListContractsResponse> listContracts($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listContracts, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListEmployeesResponse> listEmployees($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListEmployeesResponse> listEmployees($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listEmployees, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.Employee> getEmployee($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.Employee> getEmployee($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getEmployee, request, options: options);
   }
 
-  $grpc.ResponseFuture<$7.Employee> createEmployee($7.Employee request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$17.Employee> createEmployee($17.Employee request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createEmployee, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> deleteEmployee($1.DeleteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> deleteEmployee($3.DeleteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteEmployee, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListCountriesResponse> listCountries($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListCountriesResponse> listCountries($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listCountries, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListAccountsResponse> listAccounts($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListAccountsResponse> listAccounts($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listAccounts, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListAccountDetailsResponse> listAccountDetails($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListAccountDetailsResponse> listAccountDetails($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listAccountDetails, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.Account> getAccount($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.Account> getAccount($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccount, request, options: options);
   }
 
-  $grpc.ResponseFuture<$9.AccountDetail> getAccountDetail($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$19.AccountDetail> getAccountDetail($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccountDetail, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.Account> createAccount($8.Account request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.Account> createAccount($18.Account request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createAccount, request, options: options);
   }
 
-  $grpc.ResponseFuture<$9.AccountDetail> createAccountDetails($9.AccountDetail request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$19.AccountDetail> createAccountDetails($19.AccountDetail request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createAccountDetails, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.BatchInsertAccountsResponse> batchInsertAccounts($2.BatchInsertAccountsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.BatchInsertAccountsResponse> batchInsertAccounts($13.BatchInsertAccountsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchInsertAccounts, request, options: options);
   }
 
-  $grpc.ResponseFuture<$8.Account> updateAccount($8.Account request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$18.Account> updateAccount($18.Account request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateAccount, request, options: options);
   }
 
-  $grpc.ResponseFuture<$9.AccountDetail> updateAccountDetails($9.AccountDetail request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$19.AccountDetail> updateAccountDetails($19.AccountDetail request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateAccountDetails, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> deleteAccount($1.DeleteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> deleteAccount($3.DeleteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteAccount, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListCurrenciesResponse> listCurrencies($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListCurrenciesResponse> listCurrencies($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listCurrencies, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListActualCurrencyRatesResponse> listActualCurrencyRates($2.ListActualCurrencyRatesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListActualCurrencyRatesResponse> listActualCurrencyRates($13.ListActualCurrencyRatesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listActualCurrencyRates, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> batchInsertCurrencyRates($2.BatchInsertCurrencyRatesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> batchInsertCurrencyRates($13.BatchInsertCurrencyRatesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$batchInsertCurrencyRates, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListFisResponse> listFis($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListFisResponse> listFis($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listFis, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListAccountAuditsResponse> listAccountAudits($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListAccountAuditsResponse> listAccountAudits($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listAccountAudits, request, options: options);
   }
 
-  $grpc.ResponseFuture<$10.AccountAudit> getAccountAudit($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.AccountAudit> getAccountAudit($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccountAudit, request, options: options);
   }
 
-  $grpc.ResponseFuture<$11.AccountBalance> getAccountBalance($1.GetRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$8.AccountBalance> getAccountBalance($3.GetRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccountBalance, request, options: options);
   }
 
-  $grpc.ResponseFuture<$10.AccountAudit> createAccountAudit($10.AccountAudit request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$7.AccountAudit> createAccountAudit($7.AccountAudit request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createAccountAudit, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> requestEmployee($2.RequestEmployeeRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> requestEmployee($13.RequestEmployeeRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$requestEmployee, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> requestPartnership($2.RequestPartnershipRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> requestPartnership($13.RequestPartnershipRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$requestPartnership, request, options: options);
   }
 
-  $grpc.ResponseFuture<$2.ListEntityAccessesResponse> listEntityAccesses($1.ListRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$13.ListEntityAccessesResponse> listEntityAccesses($3.ListRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$listEntityAccesses, request, options: options);
   }
 
-  $grpc.ResponseFuture<$4.Empty> deleteEntityAccess($1.DeleteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.Empty> deleteEntityAccess($3.DeleteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteEntityAccess, request, options: options);
   }
 }
@@ -332,438 +332,438 @@ abstract class EntityHubServiceBase extends $grpc.Service {
   $core.String get $name => 'EntityHub';
 
   EntityHubServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListEntitiesResponse>(
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListEntitiesResponse>(
         'ListEntities',
         listEntities_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListEntitiesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $3.Entity>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListEntitiesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $14.Entity>(
         'GetEntity',
         getEntity_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($3.Entity value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.Entity, $3.Entity>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($14.Entity value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$14.Entity, $14.Entity>(
         'CreateEntity',
         createEntity_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $3.Entity.fromBuffer(value),
-        ($3.Entity value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.DeleteRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $14.Entity.fromBuffer(value),
+        ($14.Entity value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.DeleteRequest, $0.Empty>(
         'DeleteEntity',
         deleteEntity_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.DeleteRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.BatchInsertEntitiesRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $3.DeleteRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.BatchInsertEntitiesRequest, $0.Empty>(
         'BatchInsertEntities',
         batchInsertEntities_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.BatchInsertEntitiesRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$3.Entity, $3.Entity>(
+        ($core.List<$core.int> value) => $13.BatchInsertEntitiesRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$14.Entity, $14.Entity>(
         'UpdateEntity',
         updateEntity_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $3.Entity.fromBuffer(value),
-        ($3.Entity value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $5.EntityAggregate>(
+        ($core.List<$core.int> value) => $14.Entity.fromBuffer(value),
+        ($14.Entity value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $15.EntityAggregate>(
         'AggregateEntity',
         aggregateEntity_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($5.EntityAggregate value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$6.Contract, $6.Contract>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($15.EntityAggregate value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$16.Contract, $16.Contract>(
         'CreateContract',
         createContract_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $6.Contract.fromBuffer(value),
-        ($6.Contract value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListContractsResponse>(
+        ($core.List<$core.int> value) => $16.Contract.fromBuffer(value),
+        ($16.Contract value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListContractsResponse>(
         'ListContracts',
         listContracts_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListContractsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListEmployeesResponse>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListContractsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListEmployeesResponse>(
         'ListEmployees',
         listEmployees_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListEmployeesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $7.Employee>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListEmployeesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $17.Employee>(
         'GetEmployee',
         getEmployee_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($7.Employee value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.Employee, $7.Employee>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($17.Employee value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$17.Employee, $17.Employee>(
         'CreateEmployee',
         createEmployee_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $7.Employee.fromBuffer(value),
-        ($7.Employee value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.DeleteRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $17.Employee.fromBuffer(value),
+        ($17.Employee value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.DeleteRequest, $0.Empty>(
         'DeleteEmployee',
         deleteEmployee_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.DeleteRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListCountriesResponse>(
+        ($core.List<$core.int> value) => $3.DeleteRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListCountriesResponse>(
         'ListCountries',
         listCountries_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListCountriesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListAccountsResponse>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListCountriesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListAccountsResponse>(
         'ListAccounts',
         listAccounts_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListAccountsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListAccountDetailsResponse>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListAccountsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListAccountDetailsResponse>(
         'ListAccountDetails',
         listAccountDetails_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListAccountDetailsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $8.Account>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListAccountDetailsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $18.Account>(
         'GetAccount',
         getAccount_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($8.Account value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $9.AccountDetail>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($18.Account value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $19.AccountDetail>(
         'GetAccountDetail',
         getAccountDetail_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($9.AccountDetail value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.Account, $8.Account>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($19.AccountDetail value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.Account, $18.Account>(
         'CreateAccount',
         createAccount_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.Account.fromBuffer(value),
-        ($8.Account value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$9.AccountDetail, $9.AccountDetail>(
+        ($core.List<$core.int> value) => $18.Account.fromBuffer(value),
+        ($18.Account value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$19.AccountDetail, $19.AccountDetail>(
         'CreateAccountDetails',
         createAccountDetails_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $9.AccountDetail.fromBuffer(value),
-        ($9.AccountDetail value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.BatchInsertAccountsRequest, $2.BatchInsertAccountsResponse>(
+        ($core.List<$core.int> value) => $19.AccountDetail.fromBuffer(value),
+        ($19.AccountDetail value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.BatchInsertAccountsRequest, $13.BatchInsertAccountsResponse>(
         'BatchInsertAccounts',
         batchInsertAccounts_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.BatchInsertAccountsRequest.fromBuffer(value),
-        ($2.BatchInsertAccountsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$8.Account, $8.Account>(
+        ($core.List<$core.int> value) => $13.BatchInsertAccountsRequest.fromBuffer(value),
+        ($13.BatchInsertAccountsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$18.Account, $18.Account>(
         'UpdateAccount',
         updateAccount_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $8.Account.fromBuffer(value),
-        ($8.Account value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$9.AccountDetail, $9.AccountDetail>(
+        ($core.List<$core.int> value) => $18.Account.fromBuffer(value),
+        ($18.Account value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$19.AccountDetail, $19.AccountDetail>(
         'UpdateAccountDetails',
         updateAccountDetails_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $9.AccountDetail.fromBuffer(value),
-        ($9.AccountDetail value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.DeleteRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $19.AccountDetail.fromBuffer(value),
+        ($19.AccountDetail value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.DeleteRequest, $0.Empty>(
         'DeleteAccount',
         deleteAccount_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.DeleteRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListCurrenciesResponse>(
+        ($core.List<$core.int> value) => $3.DeleteRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListCurrenciesResponse>(
         'ListCurrencies',
         listCurrencies_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListCurrenciesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.ListActualCurrencyRatesRequest, $2.ListActualCurrencyRatesResponse>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListCurrenciesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.ListActualCurrencyRatesRequest, $13.ListActualCurrencyRatesResponse>(
         'ListActualCurrencyRates',
         listActualCurrencyRates_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.ListActualCurrencyRatesRequest.fromBuffer(value),
-        ($2.ListActualCurrencyRatesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.BatchInsertCurrencyRatesRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $13.ListActualCurrencyRatesRequest.fromBuffer(value),
+        ($13.ListActualCurrencyRatesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.BatchInsertCurrencyRatesRequest, $0.Empty>(
         'BatchInsertCurrencyRates',
         batchInsertCurrencyRates_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.BatchInsertCurrencyRatesRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListFisResponse>(
+        ($core.List<$core.int> value) => $13.BatchInsertCurrencyRatesRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListFisResponse>(
         'ListFis',
         listFis_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListFisResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListAccountAuditsResponse>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListFisResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListAccountAuditsResponse>(
         'ListAccountAudits',
         listAccountAudits_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListAccountAuditsResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $10.AccountAudit>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListAccountAuditsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $7.AccountAudit>(
         'GetAccountAudit',
         getAccountAudit_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($10.AccountAudit value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetRequest, $11.AccountBalance>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($7.AccountAudit value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.GetRequest, $8.AccountBalance>(
         'GetAccountBalance',
         getAccountBalance_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetRequest.fromBuffer(value),
-        ($11.AccountBalance value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$10.AccountAudit, $10.AccountAudit>(
+        ($core.List<$core.int> value) => $3.GetRequest.fromBuffer(value),
+        ($8.AccountBalance value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$7.AccountAudit, $7.AccountAudit>(
         'CreateAccountAudit',
         createAccountAudit_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $10.AccountAudit.fromBuffer(value),
-        ($10.AccountAudit value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RequestEmployeeRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $7.AccountAudit.fromBuffer(value),
+        ($7.AccountAudit value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.RequestEmployeeRequest, $0.Empty>(
         'RequestEmployee',
         requestEmployee_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.RequestEmployeeRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.RequestPartnershipRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $13.RequestEmployeeRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$13.RequestPartnershipRequest, $0.Empty>(
         'RequestPartnership',
         requestPartnership_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $2.RequestPartnershipRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.ListRequest, $2.ListEntityAccessesResponse>(
+        ($core.List<$core.int> value) => $13.RequestPartnershipRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.ListRequest, $13.ListEntityAccessesResponse>(
         'ListEntityAccesses',
         listEntityAccesses_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.ListRequest.fromBuffer(value),
-        ($2.ListEntityAccessesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.DeleteRequest, $4.Empty>(
+        ($core.List<$core.int> value) => $3.ListRequest.fromBuffer(value),
+        ($13.ListEntityAccessesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.DeleteRequest, $0.Empty>(
         'DeleteEntityAccess',
         deleteEntityAccess_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.DeleteRequest.fromBuffer(value),
-        ($4.Empty value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $3.DeleteRequest.fromBuffer(value),
+        ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$2.ListEntitiesResponse> listEntities_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListEntitiesResponse> listEntities_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listEntities(call, await request);
   }
 
-  $async.Future<$3.Entity> getEntity_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$14.Entity> getEntity_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getEntity(call, await request);
   }
 
-  $async.Future<$3.Entity> createEntity_Pre($grpc.ServiceCall call, $async.Future<$3.Entity> request) async {
+  $async.Future<$14.Entity> createEntity_Pre($grpc.ServiceCall call, $async.Future<$14.Entity> request) async {
     return createEntity(call, await request);
   }
 
-  $async.Future<$4.Empty> deleteEntity_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteRequest> request) async {
+  $async.Future<$0.Empty> deleteEntity_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteRequest> request) async {
     return deleteEntity(call, await request);
   }
 
-  $async.Future<$4.Empty> batchInsertEntities_Pre($grpc.ServiceCall call, $async.Future<$2.BatchInsertEntitiesRequest> request) async {
+  $async.Future<$0.Empty> batchInsertEntities_Pre($grpc.ServiceCall call, $async.Future<$13.BatchInsertEntitiesRequest> request) async {
     return batchInsertEntities(call, await request);
   }
 
-  $async.Future<$3.Entity> updateEntity_Pre($grpc.ServiceCall call, $async.Future<$3.Entity> request) async {
+  $async.Future<$14.Entity> updateEntity_Pre($grpc.ServiceCall call, $async.Future<$14.Entity> request) async {
     return updateEntity(call, await request);
   }
 
-  $async.Future<$5.EntityAggregate> aggregateEntity_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$15.EntityAggregate> aggregateEntity_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return aggregateEntity(call, await request);
   }
 
-  $async.Future<$6.Contract> createContract_Pre($grpc.ServiceCall call, $async.Future<$6.Contract> request) async {
+  $async.Future<$16.Contract> createContract_Pre($grpc.ServiceCall call, $async.Future<$16.Contract> request) async {
     return createContract(call, await request);
   }
 
-  $async.Future<$2.ListContractsResponse> listContracts_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListContractsResponse> listContracts_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listContracts(call, await request);
   }
 
-  $async.Future<$2.ListEmployeesResponse> listEmployees_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListEmployeesResponse> listEmployees_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listEmployees(call, await request);
   }
 
-  $async.Future<$7.Employee> getEmployee_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$17.Employee> getEmployee_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getEmployee(call, await request);
   }
 
-  $async.Future<$7.Employee> createEmployee_Pre($grpc.ServiceCall call, $async.Future<$7.Employee> request) async {
+  $async.Future<$17.Employee> createEmployee_Pre($grpc.ServiceCall call, $async.Future<$17.Employee> request) async {
     return createEmployee(call, await request);
   }
 
-  $async.Future<$4.Empty> deleteEmployee_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteRequest> request) async {
+  $async.Future<$0.Empty> deleteEmployee_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteRequest> request) async {
     return deleteEmployee(call, await request);
   }
 
-  $async.Future<$2.ListCountriesResponse> listCountries_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListCountriesResponse> listCountries_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listCountries(call, await request);
   }
 
-  $async.Future<$2.ListAccountsResponse> listAccounts_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListAccountsResponse> listAccounts_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listAccounts(call, await request);
   }
 
-  $async.Future<$2.ListAccountDetailsResponse> listAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListAccountDetailsResponse> listAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listAccountDetails(call, await request);
   }
 
-  $async.Future<$8.Account> getAccount_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$18.Account> getAccount_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getAccount(call, await request);
   }
 
-  $async.Future<$9.AccountDetail> getAccountDetail_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$19.AccountDetail> getAccountDetail_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getAccountDetail(call, await request);
   }
 
-  $async.Future<$8.Account> createAccount_Pre($grpc.ServiceCall call, $async.Future<$8.Account> request) async {
+  $async.Future<$18.Account> createAccount_Pre($grpc.ServiceCall call, $async.Future<$18.Account> request) async {
     return createAccount(call, await request);
   }
 
-  $async.Future<$9.AccountDetail> createAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$9.AccountDetail> request) async {
+  $async.Future<$19.AccountDetail> createAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$19.AccountDetail> request) async {
     return createAccountDetails(call, await request);
   }
 
-  $async.Future<$2.BatchInsertAccountsResponse> batchInsertAccounts_Pre($grpc.ServiceCall call, $async.Future<$2.BatchInsertAccountsRequest> request) async {
+  $async.Future<$13.BatchInsertAccountsResponse> batchInsertAccounts_Pre($grpc.ServiceCall call, $async.Future<$13.BatchInsertAccountsRequest> request) async {
     return batchInsertAccounts(call, await request);
   }
 
-  $async.Future<$8.Account> updateAccount_Pre($grpc.ServiceCall call, $async.Future<$8.Account> request) async {
+  $async.Future<$18.Account> updateAccount_Pre($grpc.ServiceCall call, $async.Future<$18.Account> request) async {
     return updateAccount(call, await request);
   }
 
-  $async.Future<$9.AccountDetail> updateAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$9.AccountDetail> request) async {
+  $async.Future<$19.AccountDetail> updateAccountDetails_Pre($grpc.ServiceCall call, $async.Future<$19.AccountDetail> request) async {
     return updateAccountDetails(call, await request);
   }
 
-  $async.Future<$4.Empty> deleteAccount_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteRequest> request) async {
+  $async.Future<$0.Empty> deleteAccount_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteRequest> request) async {
     return deleteAccount(call, await request);
   }
 
-  $async.Future<$2.ListCurrenciesResponse> listCurrencies_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListCurrenciesResponse> listCurrencies_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listCurrencies(call, await request);
   }
 
-  $async.Future<$2.ListActualCurrencyRatesResponse> listActualCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$2.ListActualCurrencyRatesRequest> request) async {
+  $async.Future<$13.ListActualCurrencyRatesResponse> listActualCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$13.ListActualCurrencyRatesRequest> request) async {
     return listActualCurrencyRates(call, await request);
   }
 
-  $async.Future<$4.Empty> batchInsertCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$2.BatchInsertCurrencyRatesRequest> request) async {
+  $async.Future<$0.Empty> batchInsertCurrencyRates_Pre($grpc.ServiceCall call, $async.Future<$13.BatchInsertCurrencyRatesRequest> request) async {
     return batchInsertCurrencyRates(call, await request);
   }
 
-  $async.Future<$2.ListFisResponse> listFis_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListFisResponse> listFis_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listFis(call, await request);
   }
 
-  $async.Future<$2.ListAccountAuditsResponse> listAccountAudits_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListAccountAuditsResponse> listAccountAudits_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listAccountAudits(call, await request);
   }
 
-  $async.Future<$10.AccountAudit> getAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$7.AccountAudit> getAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getAccountAudit(call, await request);
   }
 
-  $async.Future<$11.AccountBalance> getAccountBalance_Pre($grpc.ServiceCall call, $async.Future<$1.GetRequest> request) async {
+  $async.Future<$8.AccountBalance> getAccountBalance_Pre($grpc.ServiceCall call, $async.Future<$3.GetRequest> request) async {
     return getAccountBalance(call, await request);
   }
 
-  $async.Future<$10.AccountAudit> createAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$10.AccountAudit> request) async {
+  $async.Future<$7.AccountAudit> createAccountAudit_Pre($grpc.ServiceCall call, $async.Future<$7.AccountAudit> request) async {
     return createAccountAudit(call, await request);
   }
 
-  $async.Future<$4.Empty> requestEmployee_Pre($grpc.ServiceCall call, $async.Future<$2.RequestEmployeeRequest> request) async {
+  $async.Future<$0.Empty> requestEmployee_Pre($grpc.ServiceCall call, $async.Future<$13.RequestEmployeeRequest> request) async {
     return requestEmployee(call, await request);
   }
 
-  $async.Future<$4.Empty> requestPartnership_Pre($grpc.ServiceCall call, $async.Future<$2.RequestPartnershipRequest> request) async {
+  $async.Future<$0.Empty> requestPartnership_Pre($grpc.ServiceCall call, $async.Future<$13.RequestPartnershipRequest> request) async {
     return requestPartnership(call, await request);
   }
 
-  $async.Future<$2.ListEntityAccessesResponse> listEntityAccesses_Pre($grpc.ServiceCall call, $async.Future<$1.ListRequest> request) async {
+  $async.Future<$13.ListEntityAccessesResponse> listEntityAccesses_Pre($grpc.ServiceCall call, $async.Future<$3.ListRequest> request) async {
     return listEntityAccesses(call, await request);
   }
 
-  $async.Future<$4.Empty> deleteEntityAccess_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteRequest> request) async {
+  $async.Future<$0.Empty> deleteEntityAccess_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteRequest> request) async {
     return deleteEntityAccess(call, await request);
   }
 
-  $async.Future<$2.ListEntitiesResponse> listEntities($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$3.Entity> getEntity($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$3.Entity> createEntity($grpc.ServiceCall call, $3.Entity request);
-  $async.Future<$4.Empty> deleteEntity($grpc.ServiceCall call, $1.DeleteRequest request);
-  $async.Future<$4.Empty> batchInsertEntities($grpc.ServiceCall call, $2.BatchInsertEntitiesRequest request);
-  $async.Future<$3.Entity> updateEntity($grpc.ServiceCall call, $3.Entity request);
-  $async.Future<$5.EntityAggregate> aggregateEntity($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$6.Contract> createContract($grpc.ServiceCall call, $6.Contract request);
-  $async.Future<$2.ListContractsResponse> listContracts($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$2.ListEmployeesResponse> listEmployees($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$7.Employee> getEmployee($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$7.Employee> createEmployee($grpc.ServiceCall call, $7.Employee request);
-  $async.Future<$4.Empty> deleteEmployee($grpc.ServiceCall call, $1.DeleteRequest request);
-  $async.Future<$2.ListCountriesResponse> listCountries($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$2.ListAccountsResponse> listAccounts($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$2.ListAccountDetailsResponse> listAccountDetails($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$8.Account> getAccount($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$9.AccountDetail> getAccountDetail($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$8.Account> createAccount($grpc.ServiceCall call, $8.Account request);
-  $async.Future<$9.AccountDetail> createAccountDetails($grpc.ServiceCall call, $9.AccountDetail request);
-  $async.Future<$2.BatchInsertAccountsResponse> batchInsertAccounts($grpc.ServiceCall call, $2.BatchInsertAccountsRequest request);
-  $async.Future<$8.Account> updateAccount($grpc.ServiceCall call, $8.Account request);
-  $async.Future<$9.AccountDetail> updateAccountDetails($grpc.ServiceCall call, $9.AccountDetail request);
-  $async.Future<$4.Empty> deleteAccount($grpc.ServiceCall call, $1.DeleteRequest request);
-  $async.Future<$2.ListCurrenciesResponse> listCurrencies($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$2.ListActualCurrencyRatesResponse> listActualCurrencyRates($grpc.ServiceCall call, $2.ListActualCurrencyRatesRequest request);
-  $async.Future<$4.Empty> batchInsertCurrencyRates($grpc.ServiceCall call, $2.BatchInsertCurrencyRatesRequest request);
-  $async.Future<$2.ListFisResponse> listFis($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$2.ListAccountAuditsResponse> listAccountAudits($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$10.AccountAudit> getAccountAudit($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$11.AccountBalance> getAccountBalance($grpc.ServiceCall call, $1.GetRequest request);
-  $async.Future<$10.AccountAudit> createAccountAudit($grpc.ServiceCall call, $10.AccountAudit request);
-  $async.Future<$4.Empty> requestEmployee($grpc.ServiceCall call, $2.RequestEmployeeRequest request);
-  $async.Future<$4.Empty> requestPartnership($grpc.ServiceCall call, $2.RequestPartnershipRequest request);
-  $async.Future<$2.ListEntityAccessesResponse> listEntityAccesses($grpc.ServiceCall call, $1.ListRequest request);
-  $async.Future<$4.Empty> deleteEntityAccess($grpc.ServiceCall call, $1.DeleteRequest request);
+  $async.Future<$13.ListEntitiesResponse> listEntities($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$14.Entity> getEntity($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$14.Entity> createEntity($grpc.ServiceCall call, $14.Entity request);
+  $async.Future<$0.Empty> deleteEntity($grpc.ServiceCall call, $3.DeleteRequest request);
+  $async.Future<$0.Empty> batchInsertEntities($grpc.ServiceCall call, $13.BatchInsertEntitiesRequest request);
+  $async.Future<$14.Entity> updateEntity($grpc.ServiceCall call, $14.Entity request);
+  $async.Future<$15.EntityAggregate> aggregateEntity($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$16.Contract> createContract($grpc.ServiceCall call, $16.Contract request);
+  $async.Future<$13.ListContractsResponse> listContracts($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$13.ListEmployeesResponse> listEmployees($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$17.Employee> getEmployee($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$17.Employee> createEmployee($grpc.ServiceCall call, $17.Employee request);
+  $async.Future<$0.Empty> deleteEmployee($grpc.ServiceCall call, $3.DeleteRequest request);
+  $async.Future<$13.ListCountriesResponse> listCountries($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$13.ListAccountsResponse> listAccounts($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$13.ListAccountDetailsResponse> listAccountDetails($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$18.Account> getAccount($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$19.AccountDetail> getAccountDetail($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$18.Account> createAccount($grpc.ServiceCall call, $18.Account request);
+  $async.Future<$19.AccountDetail> createAccountDetails($grpc.ServiceCall call, $19.AccountDetail request);
+  $async.Future<$13.BatchInsertAccountsResponse> batchInsertAccounts($grpc.ServiceCall call, $13.BatchInsertAccountsRequest request);
+  $async.Future<$18.Account> updateAccount($grpc.ServiceCall call, $18.Account request);
+  $async.Future<$19.AccountDetail> updateAccountDetails($grpc.ServiceCall call, $19.AccountDetail request);
+  $async.Future<$0.Empty> deleteAccount($grpc.ServiceCall call, $3.DeleteRequest request);
+  $async.Future<$13.ListCurrenciesResponse> listCurrencies($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$13.ListActualCurrencyRatesResponse> listActualCurrencyRates($grpc.ServiceCall call, $13.ListActualCurrencyRatesRequest request);
+  $async.Future<$0.Empty> batchInsertCurrencyRates($grpc.ServiceCall call, $13.BatchInsertCurrencyRatesRequest request);
+  $async.Future<$13.ListFisResponse> listFis($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$13.ListAccountAuditsResponse> listAccountAudits($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$7.AccountAudit> getAccountAudit($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$8.AccountBalance> getAccountBalance($grpc.ServiceCall call, $3.GetRequest request);
+  $async.Future<$7.AccountAudit> createAccountAudit($grpc.ServiceCall call, $7.AccountAudit request);
+  $async.Future<$0.Empty> requestEmployee($grpc.ServiceCall call, $13.RequestEmployeeRequest request);
+  $async.Future<$0.Empty> requestPartnership($grpc.ServiceCall call, $13.RequestPartnershipRequest request);
+  $async.Future<$13.ListEntityAccessesResponse> listEntityAccesses($grpc.ServiceCall call, $3.ListRequest request);
+  $async.Future<$0.Empty> deleteEntityAccess($grpc.ServiceCall call, $3.DeleteRequest request);
 }
