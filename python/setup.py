@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dictum-proto',
-    version="0.6.3-alpha.4",
+    version="0.6.3",
     packages=find_packages(),
     install_requires=[
         'protobuf==5.27.2',
