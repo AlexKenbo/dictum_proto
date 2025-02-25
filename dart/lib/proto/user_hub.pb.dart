@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'user.pb.dart' as $7;
+import 'user.pb.dart' as $11;
 
 class ListUsersResponse extends $pb.GeneratedMessage {
   factory ListUsersResponse({
     $core.String? resourceName,
-    $core.Iterable<$7.User>? users,
+    $core.Iterable<$11.User>? users,
     $core.String? nextPageToken,
   }) {
     final $result = create();
@@ -39,7 +39,7 @@ class ListUsersResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListUsersResponse', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'resourceName')
-    ..pc<$7.User>(2, _omitFieldNames ? '' : 'users', $pb.PbFieldType.PM, subBuilder: $7.User.create)
+    ..pc<$11.User>(2, _omitFieldNames ? '' : 'users', $pb.PbFieldType.PM, subBuilder: $11.User.create)
     ..aOS(3, _omitFieldNames ? '' : 'nextPageToken')
     ..hasRequiredFields = false
   ;
@@ -75,7 +75,7 @@ class ListUsersResponse extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$7.User> get users => $_getList(1);
+  $core.List<$11.User> get users => $_getList(1);
 
   @$pb.TagNumber(3)
   $core.String get nextPageToken => $_getSZ(2);

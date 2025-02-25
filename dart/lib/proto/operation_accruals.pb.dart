@@ -13,13 +13,13 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'accrual_allocations.pb.dart' as $69;
-import 'operation.pb.dart' as $57;
+import 'accrual_allocations.pb.dart' as $66;
+import 'operation.pb.dart' as $59;
 
 class OperationAccruals extends $pb.GeneratedMessage {
   factory OperationAccruals({
-    $57.Operation? operation,
-    $core.Iterable<$69.AccrualAllocations>? accruals,
+    $59.Operation? operation,
+    $core.Iterable<$66.AccrualAllocations>? accruals,
   }) {
     final $result = create();
     if (operation != null) {
@@ -35,8 +35,8 @@ class OperationAccruals extends $pb.GeneratedMessage {
   factory OperationAccruals.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OperationAccruals', createEmptyInstance: create)
-    ..aOM<$57.Operation>(1, _omitFieldNames ? '' : 'operation', subBuilder: $57.Operation.create)
-    ..pc<$69.AccrualAllocations>(2, _omitFieldNames ? '' : 'accruals', $pb.PbFieldType.PM, subBuilder: $69.AccrualAllocations.create)
+    ..aOM<$59.Operation>(1, _omitFieldNames ? '' : 'operation', subBuilder: $59.Operation.create)
+    ..pc<$66.AccrualAllocations>(2, _omitFieldNames ? '' : 'accruals', $pb.PbFieldType.PM, subBuilder: $66.AccrualAllocations.create)
     ..hasRequiredFields = false
   ;
 
@@ -62,18 +62,18 @@ class OperationAccruals extends $pb.GeneratedMessage {
   static OperationAccruals? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $57.Operation get operation => $_getN(0);
+  $59.Operation get operation => $_getN(0);
   @$pb.TagNumber(1)
-  set operation($57.Operation v) { setField(1, v); }
+  set operation($59.Operation v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasOperation() => $_has(0);
   @$pb.TagNumber(1)
   void clearOperation() => clearField(1);
   @$pb.TagNumber(1)
-  $57.Operation ensureOperation() => $_ensure(0);
+  $59.Operation ensureOperation() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$69.AccrualAllocations> get accruals => $_getList(1);
+  $core.List<$66.AccrualAllocations> get accruals => $_getList(1);
 }
 
 
