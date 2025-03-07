@@ -74,35 +74,47 @@ class Service extends $pb.GeneratedMessage {
     return $result;
   }
   Service._() : super();
-  factory Service.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Service.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Service.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Service.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Service', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Service',
+      createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'pluginId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'clientId')
-    ..e<$72.PluginOwnerType>(4, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE, defaultOrMaker: $72.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN, valueOf: $72.PluginOwnerType.valueOf, enumValues: $72.PluginOwnerType.values)
+    ..e<$72.PluginOwnerType>(
+        4, _omitFieldNames ? '' : 'ownerType', $pb.PbFieldType.OE,
+        defaultOrMaker: $72.PluginOwnerType.PLUGIN_OWNER_TYPE_UNKNOWN,
+        valueOf: $72.PluginOwnerType.valueOf,
+        enumValues: $72.PluginOwnerType.values)
     ..a<$core.int>(6, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'accountId', $pb.PbFieldType.O3)
     ..aOS(10, _omitFieldNames ? '' : 'credentialsStorageKey')
     ..aOS(12, _omitFieldNames ? '' : 'cron')
-    ..aOM<$73.Plugin>(14, _omitFieldNames ? '' : 'plugin', subBuilder: $73.Plugin.create)
-    ..aOM<$14.Entity>(16, _omitFieldNames ? '' : 'entity', subBuilder: $14.Entity.create)
-    ..aOM<$18.Account>(18, _omitFieldNames ? '' : 'account', subBuilder: $18.Account.create)
-    ..aOM<$43.Timestamp>(19, _omitFieldNames ? '' : 'syncTime', subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$73.Plugin>(14, _omitFieldNames ? '' : 'plugin',
+        subBuilder: $73.Plugin.create)
+    ..aOM<$14.Entity>(16, _omitFieldNames ? '' : 'entity',
+        subBuilder: $14.Entity.create)
+    ..aOM<$18.Account>(18, _omitFieldNames ? '' : 'account',
+        subBuilder: $18.Account.create)
+    ..aOM<$43.Timestamp>(19, _omitFieldNames ? '' : 'syncTime',
+        subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Service clone() => Service()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Service copyWith(void Function(Service) updates) => super.copyWith((message) => updates(message as Service)) as Service;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Service copyWith(void Function(Service) updates) =>
+      super.copyWith((message) => updates(message as Service)) as Service;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -111,13 +123,17 @@ class Service extends $pb.GeneratedMessage {
   Service createEmptyInstance() => create();
   static $pb.PbList<Service> createRepeated() => $pb.PbList<Service>();
   @$core.pragma('dart2js:noInline')
-  static Service getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
+  static Service getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get serviceId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set serviceId($core.int v) { $_setSignedInt32(0, v); }
+  set serviceId($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasServiceId() => $_has(0);
   @$pb.TagNumber(1)
@@ -126,7 +142,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get pluginId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set pluginId($core.int v) { $_setSignedInt32(1, v); }
+  set pluginId($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasPluginId() => $_has(1);
   @$pb.TagNumber(2)
@@ -135,7 +154,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get clientId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set clientId($core.String v) { $_setString(2, v); }
+  set clientId($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasClientId() => $_has(2);
   @$pb.TagNumber(3)
@@ -144,7 +166,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $72.PluginOwnerType get ownerType => $_getN(3);
   @$pb.TagNumber(4)
-  set ownerType($72.PluginOwnerType v) { setField(4, v); }
+  set ownerType($72.PluginOwnerType v) {
+    setField(4, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasOwnerType() => $_has(3);
   @$pb.TagNumber(4)
@@ -153,7 +178,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.int get entityId => $_getIZ(4);
   @$pb.TagNumber(6)
-  set entityId($core.int v) { $_setSignedInt32(4, v); }
+  set entityId($core.int v) {
+    $_setSignedInt32(4, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasEntityId() => $_has(4);
   @$pb.TagNumber(6)
@@ -162,7 +190,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.int get accountId => $_getIZ(5);
   @$pb.TagNumber(8)
-  set accountId($core.int v) { $_setSignedInt32(5, v); }
+  set accountId($core.int v) {
+    $_setSignedInt32(5, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasAccountId() => $_has(5);
   @$pb.TagNumber(8)
@@ -171,7 +202,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get credentialsStorageKey => $_getSZ(6);
   @$pb.TagNumber(10)
-  set credentialsStorageKey($core.String v) { $_setString(6, v); }
+  set credentialsStorageKey($core.String v) {
+    $_setString(6, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasCredentialsStorageKey() => $_has(6);
   @$pb.TagNumber(10)
@@ -180,7 +214,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $core.String get cron => $_getSZ(7);
   @$pb.TagNumber(12)
-  set cron($core.String v) { $_setString(7, v); }
+  set cron($core.String v) {
+    $_setString(7, v);
+  }
+
   @$pb.TagNumber(12)
   $core.bool hasCron() => $_has(7);
   @$pb.TagNumber(12)
@@ -189,7 +226,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $73.Plugin get plugin => $_getN(8);
   @$pb.TagNumber(14)
-  set plugin($73.Plugin v) { setField(14, v); }
+  set plugin($73.Plugin v) {
+    setField(14, v);
+  }
+
   @$pb.TagNumber(14)
   $core.bool hasPlugin() => $_has(8);
   @$pb.TagNumber(14)
@@ -200,7 +240,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $14.Entity get entity => $_getN(9);
   @$pb.TagNumber(16)
-  set entity($14.Entity v) { setField(16, v); }
+  set entity($14.Entity v) {
+    setField(16, v);
+  }
+
   @$pb.TagNumber(16)
   $core.bool hasEntity() => $_has(9);
   @$pb.TagNumber(16)
@@ -211,7 +254,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $18.Account get account => $_getN(10);
   @$pb.TagNumber(18)
-  set account($18.Account v) { setField(18, v); }
+  set account($18.Account v) {
+    setField(18, v);
+  }
+
   @$pb.TagNumber(18)
   $core.bool hasAccount() => $_has(10);
   @$pb.TagNumber(18)
@@ -222,7 +268,10 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $43.Timestamp get syncTime => $_getN(11);
   @$pb.TagNumber(19)
-  set syncTime($43.Timestamp v) { setField(19, v); }
+  set syncTime($43.Timestamp v) {
+    setField(19, v);
+  }
+
   @$pb.TagNumber(19)
   $core.bool hasSyncTime() => $_has(11);
   @$pb.TagNumber(19)
@@ -231,6 +280,6 @@ class Service extends $pb.GeneratedMessage {
   $43.Timestamp ensureSyncTime() => $_ensure(11);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

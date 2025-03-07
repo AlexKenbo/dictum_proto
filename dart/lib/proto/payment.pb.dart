@@ -35,41 +35,55 @@ class ProcessPaymentRequest extends $pb.GeneratedMessage {
     return $result;
   }
   ProcessPaymentRequest._() : super();
-  factory ProcessPaymentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ProcessPaymentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ProcessPaymentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProcessPaymentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProcessPaymentRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProcessPaymentRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'signedTransaction')
     ..aOS(2, _omitFieldNames ? '' : 'uuid')
-    ..aOM<$27.Accrual>(3, _omitFieldNames ? '' : 'accrual', subBuilder: $27.Accrual.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$27.Accrual>(3, _omitFieldNames ? '' : 'accrual',
+        subBuilder: $27.Accrual.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ProcessPaymentRequest clone() => ProcessPaymentRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ProcessPaymentRequest copyWith(void Function(ProcessPaymentRequest) updates) => super.copyWith((message) => updates(message as ProcessPaymentRequest)) as ProcessPaymentRequest;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ProcessPaymentRequest clone() =>
+      ProcessPaymentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ProcessPaymentRequest copyWith(
+          void Function(ProcessPaymentRequest) updates) =>
+      super.copyWith((message) => updates(message as ProcessPaymentRequest))
+          as ProcessPaymentRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ProcessPaymentRequest create() => ProcessPaymentRequest._();
   ProcessPaymentRequest createEmptyInstance() => create();
-  static $pb.PbList<ProcessPaymentRequest> createRepeated() => $pb.PbList<ProcessPaymentRequest>();
+  static $pb.PbList<ProcessPaymentRequest> createRepeated() =>
+      $pb.PbList<ProcessPaymentRequest>();
   @$core.pragma('dart2js:noInline')
-  static ProcessPaymentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProcessPaymentRequest>(create);
+  static ProcessPaymentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProcessPaymentRequest>(create);
   static ProcessPaymentRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get signedTransaction => $_getSZ(0);
   @$pb.TagNumber(1)
-  set signedTransaction($core.String v) { $_setString(0, v); }
+  set signedTransaction($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasSignedTransaction() => $_has(0);
   @$pb.TagNumber(1)
@@ -78,7 +92,10 @@ class ProcessPaymentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get uuid => $_getSZ(1);
   @$pb.TagNumber(2)
-  set uuid($core.String v) { $_setString(1, v); }
+  set uuid($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasUuid() => $_has(1);
   @$pb.TagNumber(2)
@@ -87,7 +104,10 @@ class ProcessPaymentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $27.Accrual get accrual => $_getN(2);
   @$pb.TagNumber(3)
-  set accrual($27.Accrual v) { setField(3, v); }
+  set accrual($27.Accrual v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasAccrual() => $_has(2);
   @$pb.TagNumber(3)
@@ -119,42 +139,55 @@ class ProcessPaymentResponse extends $pb.GeneratedMessage {
     return $result;
   }
   ProcessPaymentResponse._() : super();
-  factory ProcessPaymentResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ProcessPaymentResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ProcessPaymentResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ProcessPaymentResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProcessPaymentResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ProcessPaymentResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uuid')
     ..aOS(2, _omitFieldNames ? '' : 'txid')
     ..aOS(3, _omitFieldNames ? '' : 'status')
     ..aOS(4, _omitFieldNames ? '' : 'error')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  ProcessPaymentResponse clone() => ProcessPaymentResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  ProcessPaymentResponse copyWith(void Function(ProcessPaymentResponse) updates) => super.copyWith((message) => updates(message as ProcessPaymentResponse)) as ProcessPaymentResponse;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  ProcessPaymentResponse clone() =>
+      ProcessPaymentResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  ProcessPaymentResponse copyWith(
+          void Function(ProcessPaymentResponse) updates) =>
+      super.copyWith((message) => updates(message as ProcessPaymentResponse))
+          as ProcessPaymentResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static ProcessPaymentResponse create() => ProcessPaymentResponse._();
   ProcessPaymentResponse createEmptyInstance() => create();
-  static $pb.PbList<ProcessPaymentResponse> createRepeated() => $pb.PbList<ProcessPaymentResponse>();
+  static $pb.PbList<ProcessPaymentResponse> createRepeated() =>
+      $pb.PbList<ProcessPaymentResponse>();
   @$core.pragma('dart2js:noInline')
-  static ProcessPaymentResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ProcessPaymentResponse>(create);
+  static ProcessPaymentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProcessPaymentResponse>(create);
   static ProcessPaymentResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uuid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set uuid($core.String v) { $_setString(0, v); }
+  set uuid($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasUuid() => $_has(0);
   @$pb.TagNumber(1)
@@ -163,7 +196,10 @@ class ProcessPaymentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get txid => $_getSZ(1);
   @$pb.TagNumber(2)
-  set txid($core.String v) { $_setString(1, v); }
+  set txid($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasTxid() => $_has(1);
   @$pb.TagNumber(2)
@@ -172,7 +208,10 @@ class ProcessPaymentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get status => $_getSZ(2);
   @$pb.TagNumber(3)
-  set status($core.String v) { $_setString(2, v); }
+  set status($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
@@ -181,7 +220,10 @@ class ProcessPaymentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get error => $_getSZ(3);
   @$pb.TagNumber(4)
-  set error($core.String v) { $_setString(3, v); }
+  set error($core.String v) {
+    $_setString(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasError() => $_has(3);
   @$pb.TagNumber(4)
@@ -199,33 +241,46 @@ class BatchProcessPaymentRequest extends $pb.GeneratedMessage {
     return $result;
   }
   BatchProcessPaymentRequest._() : super();
-  factory BatchProcessPaymentRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BatchProcessPaymentRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory BatchProcessPaymentRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory BatchProcessPaymentRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BatchProcessPaymentRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
-    ..pc<ProcessPaymentRequest>(1, _omitFieldNames ? '' : 'payments', $pb.PbFieldType.PM, subBuilder: ProcessPaymentRequest.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchProcessPaymentRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
+    ..pc<ProcessPaymentRequest>(
+        1, _omitFieldNames ? '' : 'payments', $pb.PbFieldType.PM,
+        subBuilder: ProcessPaymentRequest.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BatchProcessPaymentRequest clone() => BatchProcessPaymentRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BatchProcessPaymentRequest copyWith(void Function(BatchProcessPaymentRequest) updates) => super.copyWith((message) => updates(message as BatchProcessPaymentRequest)) as BatchProcessPaymentRequest;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  BatchProcessPaymentRequest clone() =>
+      BatchProcessPaymentRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  BatchProcessPaymentRequest copyWith(
+          void Function(BatchProcessPaymentRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as BatchProcessPaymentRequest))
+          as BatchProcessPaymentRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BatchProcessPaymentRequest create() => BatchProcessPaymentRequest._();
   BatchProcessPaymentRequest createEmptyInstance() => create();
-  static $pb.PbList<BatchProcessPaymentRequest> createRepeated() => $pb.PbList<BatchProcessPaymentRequest>();
+  static $pb.PbList<BatchProcessPaymentRequest> createRepeated() =>
+      $pb.PbList<BatchProcessPaymentRequest>();
   @$core.pragma('dart2js:noInline')
-  static BatchProcessPaymentRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BatchProcessPaymentRequest>(create);
+  static BatchProcessPaymentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchProcessPaymentRequest>(create);
   static BatchProcessPaymentRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -243,39 +298,54 @@ class CheckTransactionStatusRequest extends $pb.GeneratedMessage {
     return $result;
   }
   CheckTransactionStatusRequest._() : super();
-  factory CheckTransactionStatusRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CheckTransactionStatusRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CheckTransactionStatusRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckTransactionStatusRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckTransactionStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CheckTransactionStatusRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'txid')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CheckTransactionStatusRequest clone() => CheckTransactionStatusRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CheckTransactionStatusRequest copyWith(void Function(CheckTransactionStatusRequest) updates) => super.copyWith((message) => updates(message as CheckTransactionStatusRequest)) as CheckTransactionStatusRequest;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CheckTransactionStatusRequest clone() =>
+      CheckTransactionStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CheckTransactionStatusRequest copyWith(
+          void Function(CheckTransactionStatusRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as CheckTransactionStatusRequest))
+          as CheckTransactionStatusRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CheckTransactionStatusRequest create() => CheckTransactionStatusRequest._();
+  static CheckTransactionStatusRequest create() =>
+      CheckTransactionStatusRequest._();
   CheckTransactionStatusRequest createEmptyInstance() => create();
-  static $pb.PbList<CheckTransactionStatusRequest> createRepeated() => $pb.PbList<CheckTransactionStatusRequest>();
+  static $pb.PbList<CheckTransactionStatusRequest> createRepeated() =>
+      $pb.PbList<CheckTransactionStatusRequest>();
   @$core.pragma('dart2js:noInline')
-  static CheckTransactionStatusRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckTransactionStatusRequest>(create);
+  static CheckTransactionStatusRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CheckTransactionStatusRequest>(create);
   static CheckTransactionStatusRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get txid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set txid($core.String v) { $_setString(0, v); }
+  set txid($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTxid() => $_has(0);
   @$pb.TagNumber(1)
@@ -309,43 +379,59 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
     return $result;
   }
   CheckTransactionStatusResponse._() : super();
-  factory CheckTransactionStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory CheckTransactionStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CheckTransactionStatusResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory CheckTransactionStatusResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckTransactionStatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CheckTransactionStatusResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'txid')
     ..aOS(2, _omitFieldNames ? '' : 'status')
     ..aOS(3, _omitFieldNames ? '' : 'error')
     ..a<$core.double>(4, _omitFieldNames ? '' : 'fee', $pb.PbFieldType.OD)
-    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime',
+        subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  CheckTransactionStatusResponse clone() => CheckTransactionStatusResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  CheckTransactionStatusResponse copyWith(void Function(CheckTransactionStatusResponse) updates) => super.copyWith((message) => updates(message as CheckTransactionStatusResponse)) as CheckTransactionStatusResponse;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  CheckTransactionStatusResponse clone() =>
+      CheckTransactionStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  CheckTransactionStatusResponse copyWith(
+          void Function(CheckTransactionStatusResponse) updates) =>
+      super.copyWith(
+              (message) => updates(message as CheckTransactionStatusResponse))
+          as CheckTransactionStatusResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static CheckTransactionStatusResponse create() => CheckTransactionStatusResponse._();
+  static CheckTransactionStatusResponse create() =>
+      CheckTransactionStatusResponse._();
   CheckTransactionStatusResponse createEmptyInstance() => create();
-  static $pb.PbList<CheckTransactionStatusResponse> createRepeated() => $pb.PbList<CheckTransactionStatusResponse>();
+  static $pb.PbList<CheckTransactionStatusResponse> createRepeated() =>
+      $pb.PbList<CheckTransactionStatusResponse>();
   @$core.pragma('dart2js:noInline')
-  static CheckTransactionStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckTransactionStatusResponse>(create);
+  static CheckTransactionStatusResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CheckTransactionStatusResponse>(create);
   static CheckTransactionStatusResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get txid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set txid($core.String v) { $_setString(0, v); }
+  set txid($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTxid() => $_has(0);
   @$pb.TagNumber(1)
@@ -354,7 +440,10 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get status => $_getSZ(1);
   @$pb.TagNumber(2)
-  set status($core.String v) { $_setString(1, v); }
+  set status($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
@@ -363,7 +452,10 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get error => $_getSZ(2);
   @$pb.TagNumber(3)
-  set error($core.String v) { $_setString(2, v); }
+  set error($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasError() => $_has(2);
   @$pb.TagNumber(3)
@@ -372,7 +464,10 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get fee => $_getN(3);
   @$pb.TagNumber(4)
-  set fee($core.double v) { $_setDouble(3, v); }
+  set fee($core.double v) {
+    $_setDouble(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasFee() => $_has(3);
   @$pb.TagNumber(4)
@@ -381,7 +476,10 @@ class CheckTransactionStatusResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $43.Timestamp get confirmTime => $_getN(4);
   @$pb.TagNumber(5)
-  set confirmTime($43.Timestamp v) { setField(5, v); }
+  set confirmTime($43.Timestamp v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasConfirmTime() => $_has(4);
   @$pb.TagNumber(5)
@@ -409,41 +507,54 @@ class EstimateEnergyRequest extends $pb.GeneratedMessage {
     return $result;
   }
   EstimateEnergyRequest._() : super();
-  factory EstimateEnergyRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EstimateEnergyRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory EstimateEnergyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EstimateEnergyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EstimateEnergyRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EstimateEnergyRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'fromAddress')
     ..aOS(2, _omitFieldNames ? '' : 'toAddress')
     ..a<$core.double>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  EstimateEnergyRequest clone() => EstimateEnergyRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  EstimateEnergyRequest copyWith(void Function(EstimateEnergyRequest) updates) => super.copyWith((message) => updates(message as EstimateEnergyRequest)) as EstimateEnergyRequest;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EstimateEnergyRequest clone() =>
+      EstimateEnergyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EstimateEnergyRequest copyWith(
+          void Function(EstimateEnergyRequest) updates) =>
+      super.copyWith((message) => updates(message as EstimateEnergyRequest))
+          as EstimateEnergyRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EstimateEnergyRequest create() => EstimateEnergyRequest._();
   EstimateEnergyRequest createEmptyInstance() => create();
-  static $pb.PbList<EstimateEnergyRequest> createRepeated() => $pb.PbList<EstimateEnergyRequest>();
+  static $pb.PbList<EstimateEnergyRequest> createRepeated() =>
+      $pb.PbList<EstimateEnergyRequest>();
   @$core.pragma('dart2js:noInline')
-  static EstimateEnergyRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EstimateEnergyRequest>(create);
+  static EstimateEnergyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EstimateEnergyRequest>(create);
   static EstimateEnergyRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get fromAddress => $_getSZ(0);
   @$pb.TagNumber(1)
-  set fromAddress($core.String v) { $_setString(0, v); }
+  set fromAddress($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasFromAddress() => $_has(0);
   @$pb.TagNumber(1)
@@ -452,7 +563,10 @@ class EstimateEnergyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get toAddress => $_getSZ(1);
   @$pb.TagNumber(2)
-  set toAddress($core.String v) { $_setString(1, v); }
+  set toAddress($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasToAddress() => $_has(1);
   @$pb.TagNumber(2)
@@ -461,7 +575,10 @@ class EstimateEnergyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.double get amount => $_getN(2);
   @$pb.TagNumber(3)
-  set amount($core.double v) { $_setDouble(2, v); }
+  set amount($core.double v) {
+    $_setDouble(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasAmount() => $_has(2);
   @$pb.TagNumber(3)
@@ -487,41 +604,55 @@ class EstimateEnergyResponse extends $pb.GeneratedMessage {
     return $result;
   }
   EstimateEnergyResponse._() : super();
-  factory EstimateEnergyResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EstimateEnergyResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory EstimateEnergyResponse.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EstimateEnergyResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EstimateEnergyResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'estimatedEnergy', $pb.PbFieldType.OD)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EstimateEnergyResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
+    ..a<$core.double>(
+        1, _omitFieldNames ? '' : 'estimatedEnergy', $pb.PbFieldType.OD)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'fee', $pb.PbFieldType.OD)
     ..aOS(3, _omitFieldNames ? '' : 'error')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  EstimateEnergyResponse clone() => EstimateEnergyResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  EstimateEnergyResponse copyWith(void Function(EstimateEnergyResponse) updates) => super.copyWith((message) => updates(message as EstimateEnergyResponse)) as EstimateEnergyResponse;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EstimateEnergyResponse clone() =>
+      EstimateEnergyResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EstimateEnergyResponse copyWith(
+          void Function(EstimateEnergyResponse) updates) =>
+      super.copyWith((message) => updates(message as EstimateEnergyResponse))
+          as EstimateEnergyResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static EstimateEnergyResponse create() => EstimateEnergyResponse._();
   EstimateEnergyResponse createEmptyInstance() => create();
-  static $pb.PbList<EstimateEnergyResponse> createRepeated() => $pb.PbList<EstimateEnergyResponse>();
+  static $pb.PbList<EstimateEnergyResponse> createRepeated() =>
+      $pb.PbList<EstimateEnergyResponse>();
   @$core.pragma('dart2js:noInline')
-  static EstimateEnergyResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EstimateEnergyResponse>(create);
+  static EstimateEnergyResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EstimateEnergyResponse>(create);
   static EstimateEnergyResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get estimatedEnergy => $_getN(0);
   @$pb.TagNumber(1)
-  set estimatedEnergy($core.double v) { $_setDouble(0, v); }
+  set estimatedEnergy($core.double v) {
+    $_setDouble(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasEstimatedEnergy() => $_has(0);
   @$pb.TagNumber(1)
@@ -530,7 +661,10 @@ class EstimateEnergyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.double get fee => $_getN(1);
   @$pb.TagNumber(2)
-  set fee($core.double v) { $_setDouble(1, v); }
+  set fee($core.double v) {
+    $_setDouble(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasFee() => $_has(1);
   @$pb.TagNumber(2)
@@ -539,7 +673,10 @@ class EstimateEnergyResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get error => $_getSZ(2);
   @$pb.TagNumber(3)
-  set error($core.String v) { $_setString(2, v); }
+  set error($core.String v) {
+    $_setString(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasError() => $_has(2);
   @$pb.TagNumber(3)
@@ -557,39 +694,55 @@ class WaitTransactionConfirmationRequest extends $pb.GeneratedMessage {
     return $result;
   }
   WaitTransactionConfirmationRequest._() : super();
-  factory WaitTransactionConfirmationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory WaitTransactionConfirmationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory WaitTransactionConfirmationRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WaitTransactionConfirmationRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaitTransactionConfirmationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WaitTransactionConfirmationRequest',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'txid')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  WaitTransactionConfirmationRequest clone() => WaitTransactionConfirmationRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  WaitTransactionConfirmationRequest copyWith(void Function(WaitTransactionConfirmationRequest) updates) => super.copyWith((message) => updates(message as WaitTransactionConfirmationRequest)) as WaitTransactionConfirmationRequest;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  WaitTransactionConfirmationRequest clone() =>
+      WaitTransactionConfirmationRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  WaitTransactionConfirmationRequest copyWith(
+          void Function(WaitTransactionConfirmationRequest) updates) =>
+      super.copyWith((message) =>
+              updates(message as WaitTransactionConfirmationRequest))
+          as WaitTransactionConfirmationRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static WaitTransactionConfirmationRequest create() => WaitTransactionConfirmationRequest._();
+  static WaitTransactionConfirmationRequest create() =>
+      WaitTransactionConfirmationRequest._();
   WaitTransactionConfirmationRequest createEmptyInstance() => create();
-  static $pb.PbList<WaitTransactionConfirmationRequest> createRepeated() => $pb.PbList<WaitTransactionConfirmationRequest>();
+  static $pb.PbList<WaitTransactionConfirmationRequest> createRepeated() =>
+      $pb.PbList<WaitTransactionConfirmationRequest>();
   @$core.pragma('dart2js:noInline')
-  static WaitTransactionConfirmationRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaitTransactionConfirmationRequest>(create);
+  static WaitTransactionConfirmationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WaitTransactionConfirmationRequest>(
+          create);
   static WaitTransactionConfirmationRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get txid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set txid($core.String v) { $_setString(0, v); }
+  set txid($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTxid() => $_has(0);
   @$pb.TagNumber(1)
@@ -623,43 +776,61 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
     return $result;
   }
   WaitTransactionConfirmationResponse._() : super();
-  factory WaitTransactionConfirmationResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory WaitTransactionConfirmationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory WaitTransactionConfirmationResponse.fromBuffer(
+          $core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory WaitTransactionConfirmationResponse.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaitTransactionConfirmationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'WaitTransactionConfirmationResponse',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'payment'),
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'txid')
     ..aOS(2, _omitFieldNames ? '' : 'status')
     ..a<$core.double>(3, _omitFieldNames ? '' : 'fee', $pb.PbFieldType.OD)
     ..aOS(4, _omitFieldNames ? '' : 'error')
-    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime', subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'confirmTime',
+        subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  WaitTransactionConfirmationResponse clone() => WaitTransactionConfirmationResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  WaitTransactionConfirmationResponse copyWith(void Function(WaitTransactionConfirmationResponse) updates) => super.copyWith((message) => updates(message as WaitTransactionConfirmationResponse)) as WaitTransactionConfirmationResponse;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  WaitTransactionConfirmationResponse clone() =>
+      WaitTransactionConfirmationResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  WaitTransactionConfirmationResponse copyWith(
+          void Function(WaitTransactionConfirmationResponse) updates) =>
+      super.copyWith((message) =>
+              updates(message as WaitTransactionConfirmationResponse))
+          as WaitTransactionConfirmationResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static WaitTransactionConfirmationResponse create() => WaitTransactionConfirmationResponse._();
+  static WaitTransactionConfirmationResponse create() =>
+      WaitTransactionConfirmationResponse._();
   WaitTransactionConfirmationResponse createEmptyInstance() => create();
-  static $pb.PbList<WaitTransactionConfirmationResponse> createRepeated() => $pb.PbList<WaitTransactionConfirmationResponse>();
+  static $pb.PbList<WaitTransactionConfirmationResponse> createRepeated() =>
+      $pb.PbList<WaitTransactionConfirmationResponse>();
   @$core.pragma('dart2js:noInline')
-  static WaitTransactionConfirmationResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaitTransactionConfirmationResponse>(create);
+  static WaitTransactionConfirmationResponse getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          WaitTransactionConfirmationResponse>(create);
   static WaitTransactionConfirmationResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get txid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set txid($core.String v) { $_setString(0, v); }
+  set txid($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasTxid() => $_has(0);
   @$pb.TagNumber(1)
@@ -668,7 +839,10 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get status => $_getSZ(1);
   @$pb.TagNumber(2)
-  set status($core.String v) { $_setString(1, v); }
+  set status($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
   @$pb.TagNumber(2)
@@ -677,7 +851,10 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.double get fee => $_getN(2);
   @$pb.TagNumber(3)
-  set fee($core.double v) { $_setDouble(2, v); }
+  set fee($core.double v) {
+    $_setDouble(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasFee() => $_has(2);
   @$pb.TagNumber(3)
@@ -686,7 +863,10 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get error => $_getSZ(3);
   @$pb.TagNumber(4)
-  set error($core.String v) { $_setString(3, v); }
+  set error($core.String v) {
+    $_setString(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasError() => $_has(3);
   @$pb.TagNumber(4)
@@ -695,7 +875,10 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $43.Timestamp get confirmTime => $_getN(4);
   @$pb.TagNumber(5)
-  set confirmTime($43.Timestamp v) { setField(5, v); }
+  set confirmTime($43.Timestamp v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasConfirmTime() => $_has(4);
   @$pb.TagNumber(5)
@@ -704,6 +887,6 @@ class WaitTransactionConfirmationResponse extends $pb.GeneratedMessage {
   $43.Timestamp ensureConfirmTime() => $_ensure(4);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -43,43 +43,63 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
     return $result;
   }
   AccrualStatusTransition._() : super();
-  factory AccrualStatusTransition.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory AccrualStatusTransition.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory AccrualStatusTransition.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory AccrualStatusTransition.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccrualStatusTransition', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AccrualStatusTransition',
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'status')
     ..aOS(2, _omitFieldNames ? '' : 'nextStatus')
-    ..e<$40.PaymentType>(3, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE, defaultOrMaker: $40.PaymentType.PAYMENT_TYPE_UNKNOWN, valueOf: $40.PaymentType.valueOf, enumValues: $40.PaymentType.values)
+    ..e<$40.PaymentType>(
+        3, _omitFieldNames ? '' : 'paymentType', $pb.PbFieldType.OE,
+        defaultOrMaker: $40.PaymentType.PAYMENT_TYPE_UNKNOWN,
+        valueOf: $40.PaymentType.valueOf,
+        enumValues: $40.PaymentType.values)
     ..aOB(4, _omitFieldNames ? '' : 'isExternalFlow')
-    ..e<$41.SideDealType>(5, _omitFieldNames ? '' : 'sideDeal', $pb.PbFieldType.OE, defaultOrMaker: $41.SideDealType.SIDE_DEAL_TYPE_UNKNOWN, valueOf: $41.SideDealType.valueOf, enumValues: $41.SideDealType.values)
-    ..hasRequiredFields = false
-  ;
+    ..e<$41.SideDealType>(
+        5, _omitFieldNames ? '' : 'sideDeal', $pb.PbFieldType.OE,
+        defaultOrMaker: $41.SideDealType.SIDE_DEAL_TYPE_UNKNOWN,
+        valueOf: $41.SideDealType.valueOf,
+        enumValues: $41.SideDealType.values)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  AccrualStatusTransition clone() => AccrualStatusTransition()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  AccrualStatusTransition copyWith(void Function(AccrualStatusTransition) updates) => super.copyWith((message) => updates(message as AccrualStatusTransition)) as AccrualStatusTransition;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  AccrualStatusTransition clone() =>
+      AccrualStatusTransition()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  AccrualStatusTransition copyWith(
+          void Function(AccrualStatusTransition) updates) =>
+      super.copyWith((message) => updates(message as AccrualStatusTransition))
+          as AccrualStatusTransition;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static AccrualStatusTransition create() => AccrualStatusTransition._();
   AccrualStatusTransition createEmptyInstance() => create();
-  static $pb.PbList<AccrualStatusTransition> createRepeated() => $pb.PbList<AccrualStatusTransition>();
+  static $pb.PbList<AccrualStatusTransition> createRepeated() =>
+      $pb.PbList<AccrualStatusTransition>();
   @$core.pragma('dart2js:noInline')
-  static AccrualStatusTransition getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AccrualStatusTransition>(create);
+  static AccrualStatusTransition getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccrualStatusTransition>(create);
   static AccrualStatusTransition? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get status => $_getSZ(0);
   @$pb.TagNumber(1)
-  set status($core.String v) { $_setString(0, v); }
+  set status($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
@@ -88,7 +108,10 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get nextStatus => $_getSZ(1);
   @$pb.TagNumber(2)
-  set nextStatus($core.String v) { $_setString(1, v); }
+  set nextStatus($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasNextStatus() => $_has(1);
   @$pb.TagNumber(2)
@@ -97,7 +120,10 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $40.PaymentType get paymentType => $_getN(2);
   @$pb.TagNumber(3)
-  set paymentType($40.PaymentType v) { setField(3, v); }
+  set paymentType($40.PaymentType v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasPaymentType() => $_has(2);
   @$pb.TagNumber(3)
@@ -106,7 +132,10 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get isExternalFlow => $_getBF(3);
   @$pb.TagNumber(4)
-  set isExternalFlow($core.bool v) { $_setBool(3, v); }
+  set isExternalFlow($core.bool v) {
+    $_setBool(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasIsExternalFlow() => $_has(3);
   @$pb.TagNumber(4)
@@ -115,13 +144,16 @@ class AccrualStatusTransition extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $41.SideDealType get sideDeal => $_getN(4);
   @$pb.TagNumber(5)
-  set sideDeal($41.SideDealType v) { setField(5, v); }
+  set sideDeal($41.SideDealType v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasSideDeal() => $_has(4);
   @$pb.TagNumber(5)
   void clearSideDeal() => clearField(5);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

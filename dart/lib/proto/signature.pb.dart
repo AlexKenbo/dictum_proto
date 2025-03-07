@@ -56,31 +56,38 @@ class Signature extends $pb.GeneratedMessage {
     return $result;
   }
   Signature._() : super();
-  factory Signature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Signature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Signature.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Signature.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Signature', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Signature',
+      createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'signatureId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'signerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $43.Timestamp.create)
     ..aOS(6, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$50.Action>(7, _omitFieldNames ? '' : 'action', subBuilder: $50.Action.create)
-    ..aOM<$11.User>(8, _omitFieldNames ? '' : 'signer', subBuilder: $11.User.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$50.Action>(7, _omitFieldNames ? '' : 'action',
+        subBuilder: $50.Action.create)
+    ..aOM<$11.User>(8, _omitFieldNames ? '' : 'signer',
+        subBuilder: $11.User.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Signature clone() => Signature()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Signature copyWith(void Function(Signature) updates) => super.copyWith((message) => updates(message as Signature)) as Signature;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Signature copyWith(void Function(Signature) updates) =>
+      super.copyWith((message) => updates(message as Signature)) as Signature;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -89,13 +96,17 @@ class Signature extends $pb.GeneratedMessage {
   Signature createEmptyInstance() => create();
   static $pb.PbList<Signature> createRepeated() => $pb.PbList<Signature>();
   @$core.pragma('dart2js:noInline')
-  static Signature getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Signature>(create);
+  static Signature getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Signature>(create);
   static Signature? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get signatureId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set signatureId($core.int v) { $_setSignedInt32(0, v); }
+  set signatureId($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasSignatureId() => $_has(0);
   @$pb.TagNumber(1)
@@ -104,7 +115,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get actionId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set actionId($core.int v) { $_setSignedInt32(1, v); }
+  set actionId($core.int v) {
+    $_setSignedInt32(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasActionId() => $_has(1);
   @$pb.TagNumber(2)
@@ -113,7 +127,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get signerId => $_getIZ(2);
   @$pb.TagNumber(3)
-  set signerId($core.int v) { $_setSignedInt32(2, v); }
+  set signerId($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasSignerId() => $_has(2);
   @$pb.TagNumber(3)
@@ -122,7 +139,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.int get entityId => $_getIZ(3);
   @$pb.TagNumber(4)
-  set entityId($core.int v) { $_setSignedInt32(3, v); }
+  set entityId($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasEntityId() => $_has(3);
   @$pb.TagNumber(4)
@@ -131,7 +151,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $43.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($43.Timestamp v) { setField(5, v); }
+  set createTime($43.Timestamp v) {
+    setField(5, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
@@ -142,7 +165,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get resourceName => $_getSZ(5);
   @$pb.TagNumber(6)
-  set resourceName($core.String v) { $_setString(5, v); }
+  set resourceName($core.String v) {
+    $_setString(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasResourceName() => $_has(5);
   @$pb.TagNumber(6)
@@ -151,7 +177,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $50.Action get action => $_getN(6);
   @$pb.TagNumber(7)
-  set action($50.Action v) { setField(7, v); }
+  set action($50.Action v) {
+    setField(7, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasAction() => $_has(6);
   @$pb.TagNumber(7)
@@ -162,7 +191,10 @@ class Signature extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $11.User get signer => $_getN(7);
   @$pb.TagNumber(8)
-  set signer($11.User v) { setField(8, v); }
+  set signer($11.User v) {
+    setField(8, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasSigner() => $_has(7);
   @$pb.TagNumber(8)
@@ -171,6 +203,6 @@ class Signature extends $pb.GeneratedMessage {
   $11.User ensureSigner() => $_ensure(7);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

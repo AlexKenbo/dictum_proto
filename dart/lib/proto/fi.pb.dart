@@ -30,25 +30,30 @@ class Fi extends $pb.GeneratedMessage {
     return $result;
   }
   Fi._() : super();
-  factory Fi.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Fi.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory Fi.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Fi.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Fi', createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Fi',
+      createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..aOM<$43.Timestamp>(3, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$43.Timestamp>(3, _omitFieldNames ? '' : 'createTime',
+        subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Fi clone() => Fi()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Fi copyWith(void Function(Fi) updates) => super.copyWith((message) => updates(message as Fi)) as Fi;
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Fi copyWith(void Function(Fi) updates) =>
+      super.copyWith((message) => updates(message as Fi)) as Fi;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -57,13 +62,17 @@ class Fi extends $pb.GeneratedMessage {
   Fi createEmptyInstance() => create();
   static $pb.PbList<Fi> createRepeated() => $pb.PbList<Fi>();
   @$core.pragma('dart2js:noInline')
-  static Fi getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Fi>(create);
+  static Fi getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Fi>(create);
   static Fi? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
@@ -72,7 +81,10 @@ class Fi extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $43.Timestamp get createTime => $_getN(1);
   @$pb.TagNumber(3)
-  set createTime($43.Timestamp v) { setField(3, v); }
+  set createTime($43.Timestamp v) {
+    setField(3, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasCreateTime() => $_has(1);
   @$pb.TagNumber(3)
@@ -81,6 +93,6 @@ class Fi extends $pb.GeneratedMessage {
   $43.Timestamp ensureCreateTime() => $_ensure(1);
 }
 
-
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');
