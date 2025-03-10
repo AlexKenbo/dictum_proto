@@ -66,46 +66,33 @@ class Employee extends $pb.GeneratedMessage {
     return $result;
   }
   Employee._() : super();
-  factory Employee.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Employee.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Employee.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Employee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Employee',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Employee', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..e<$51.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE,
-        defaultOrMaker: $51.Role.ROLE_UNKNOWN,
-        valueOf: $51.Role.valueOf,
-        enumValues: $51.Role.values)
+    ..e<$51.Role>(4, _omitFieldNames ? '' : 'role', $pb.PbFieldType.OE, defaultOrMaker: $51.Role.ROLE_UNKNOWN, valueOf: $51.Role.valueOf, enumValues: $51.Role.values)
     ..aOS(7, _omitFieldNames ? '' : 'personalDocumentNumber')
     ..aOS(9, _omitFieldNames ? '' : 'personalDocumentCountryCode')
-    ..aOM<$14.Entity>(13, _omitFieldNames ? '' : 'entity',
-        subBuilder: $14.Entity.create)
-    ..aOM<$45.Country>(15, _omitFieldNames ? '' : 'country',
-        subBuilder: $45.Country.create)
-    ..aOM<$43.Timestamp>(16, _omitFieldNames ? '' : 'hireTime',
-        subBuilder: $43.Timestamp.create)
-    ..aOM<$43.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime',
-        subBuilder: $43.Timestamp.create)
-    ..pc<$23.Permission>(
-        18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM,
-        subBuilder: $23.Permission.create)
-    ..hasRequiredFields = false;
+    ..aOM<$14.Entity>(13, _omitFieldNames ? '' : 'entity', subBuilder: $14.Entity.create)
+    ..aOM<$45.Country>(15, _omitFieldNames ? '' : 'country', subBuilder: $45.Country.create)
+    ..aOM<$43.Timestamp>(16, _omitFieldNames ? '' : 'hireTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(17, _omitFieldNames ? '' : 'unhireTime', subBuilder: $43.Timestamp.create)
+    ..pc<$23.Permission>(18, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM, subBuilder: $23.Permission.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Employee clone() => Employee()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Employee copyWith(void Function(Employee) updates) =>
-      super.copyWith((message) => updates(message as Employee)) as Employee;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Employee copyWith(void Function(Employee) updates) => super.copyWith((message) => updates(message as Employee)) as Employee;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -114,17 +101,13 @@ class Employee extends $pb.GeneratedMessage {
   Employee createEmptyInstance() => create();
   static $pb.PbList<Employee> createRepeated() => $pb.PbList<Employee>();
   @$core.pragma('dart2js:noInline')
-  static Employee getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee>(create);
+  static Employee getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Employee>(create);
   static Employee? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get userId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set userId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set userId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
@@ -133,10 +116,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get entityId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set entityId($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set entityId($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasEntityId() => $_has(1);
   @$pb.TagNumber(2)
@@ -145,10 +125,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $51.Role get role => $_getN(2);
   @$pb.TagNumber(4)
-  set role($51.Role v) {
-    setField(4, v);
-  }
-
+  set role($51.Role v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRole() => $_has(2);
   @$pb.TagNumber(4)
@@ -157,10 +134,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get personalDocumentNumber => $_getSZ(3);
   @$pb.TagNumber(7)
-  set personalDocumentNumber($core.String v) {
-    $_setString(3, v);
-  }
-
+  set personalDocumentNumber($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(7)
   $core.bool hasPersonalDocumentNumber() => $_has(3);
   @$pb.TagNumber(7)
@@ -169,10 +143,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get personalDocumentCountryCode => $_getSZ(4);
   @$pb.TagNumber(9)
-  set personalDocumentCountryCode($core.String v) {
-    $_setString(4, v);
-  }
-
+  set personalDocumentCountryCode($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(9)
   $core.bool hasPersonalDocumentCountryCode() => $_has(4);
   @$pb.TagNumber(9)
@@ -181,10 +152,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $14.Entity get entity => $_getN(5);
   @$pb.TagNumber(13)
-  set entity($14.Entity v) {
-    setField(13, v);
-  }
-
+  set entity($14.Entity v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasEntity() => $_has(5);
   @$pb.TagNumber(13)
@@ -195,10 +163,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $45.Country get country => $_getN(6);
   @$pb.TagNumber(15)
-  set country($45.Country v) {
-    setField(15, v);
-  }
-
+  set country($45.Country v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasCountry() => $_has(6);
   @$pb.TagNumber(15)
@@ -209,10 +174,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $43.Timestamp get hireTime => $_getN(7);
   @$pb.TagNumber(16)
-  set hireTime($43.Timestamp v) {
-    setField(16, v);
-  }
-
+  set hireTime($43.Timestamp v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasHireTime() => $_has(7);
   @$pb.TagNumber(16)
@@ -223,10 +185,7 @@ class Employee extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   $43.Timestamp get unhireTime => $_getN(8);
   @$pb.TagNumber(17)
-  set unhireTime($43.Timestamp v) {
-    setField(17, v);
-  }
-
+  set unhireTime($43.Timestamp v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasUnhireTime() => $_has(8);
   @$pb.TagNumber(17)
@@ -239,6 +198,6 @@ class Employee extends $pb.GeneratedMessage {
   $core.List<$23.Permission> get permissions => $_getList(9);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

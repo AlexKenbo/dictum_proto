@@ -42,33 +42,28 @@ class Permission extends $pb.GeneratedMessage {
     return $result;
   }
   Permission._() : super();
-  factory Permission.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Permission.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Permission.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Permission.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Permission',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Permission', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'userId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
     ..aOS(4, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$50.Action>(5, _omitFieldNames ? '' : 'action',
-        subBuilder: $50.Action.create)
-    ..hasRequiredFields = false;
+    ..aOM<$50.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $50.Action.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Permission clone() => Permission()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Permission copyWith(void Function(Permission) updates) =>
-      super.copyWith((message) => updates(message as Permission)) as Permission;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Permission copyWith(void Function(Permission) updates) => super.copyWith((message) => updates(message as Permission)) as Permission;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -77,17 +72,13 @@ class Permission extends $pb.GeneratedMessage {
   Permission createEmptyInstance() => create();
   static $pb.PbList<Permission> createRepeated() => $pb.PbList<Permission>();
   @$core.pragma('dart2js:noInline')
-  static Permission getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Permission>(create);
+  static Permission getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Permission>(create);
   static Permission? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get userId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set userId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set userId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasUserId() => $_has(0);
   @$pb.TagNumber(1)
@@ -96,10 +87,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get entityId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set entityId($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set entityId($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasEntityId() => $_has(1);
   @$pb.TagNumber(2)
@@ -108,10 +96,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get actionId => $_getIZ(2);
   @$pb.TagNumber(3)
-  set actionId($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set actionId($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasActionId() => $_has(2);
   @$pb.TagNumber(3)
@@ -120,10 +105,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get resourceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set resourceName($core.String v) {
-    $_setString(3, v);
-  }
-
+  set resourceName($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasResourceName() => $_has(3);
   @$pb.TagNumber(4)
@@ -132,10 +114,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $50.Action get action => $_getN(4);
   @$pb.TagNumber(5)
-  set action($50.Action v) {
-    setField(5, v);
-  }
-
+  set action($50.Action v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasAction() => $_has(4);
   @$pb.TagNumber(5)
@@ -144,6 +123,6 @@ class Permission extends $pb.GeneratedMessage {
   $50.Action ensureAction() => $_ensure(4);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

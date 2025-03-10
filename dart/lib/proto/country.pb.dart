@@ -34,31 +34,26 @@ class Country extends $pb.GeneratedMessage {
     return $result;
   }
   Country._() : super();
-  factory Country.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Country.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Country.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Country.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Country',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Country', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'code')
     ..aOS(2, _omitFieldNames ? '' : 'title')
-    ..aOM<$43.Timestamp>(4, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..aOM<$43.Timestamp>(4, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Country clone() => Country()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Country copyWith(void Function(Country) updates) =>
-      super.copyWith((message) => updates(message as Country)) as Country;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Country copyWith(void Function(Country) updates) => super.copyWith((message) => updates(message as Country)) as Country;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -67,17 +62,13 @@ class Country extends $pb.GeneratedMessage {
   Country createEmptyInstance() => create();
   static $pb.PbList<Country> createRepeated() => $pb.PbList<Country>();
   @$core.pragma('dart2js:noInline')
-  static Country getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Country>(create);
+  static Country getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Country>(create);
   static Country? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get code => $_getSZ(0);
   @$pb.TagNumber(1)
-  set code($core.String v) {
-    $_setString(0, v);
-  }
-
+  set code($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
@@ -86,10 +77,7 @@ class Country extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
-  set title($core.String v) {
-    $_setString(1, v);
-  }
-
+  set title($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasTitle() => $_has(1);
   @$pb.TagNumber(2)
@@ -98,10 +86,7 @@ class Country extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $43.Timestamp get createTime => $_getN(2);
   @$pb.TagNumber(4)
-  set createTime($43.Timestamp v) {
-    setField(4, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCreateTime() => $_has(2);
   @$pb.TagNumber(4)
@@ -110,6 +95,6 @@ class Country extends $pb.GeneratedMessage {
   $43.Timestamp ensureCreateTime() => $_ensure(2);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

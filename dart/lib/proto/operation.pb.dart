@@ -50,36 +50,30 @@ class Operation extends $pb.GeneratedMessage {
     return $result;
   }
   Operation._() : super();
-  factory Operation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Operation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Operation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Operation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Operation',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Operation', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'operationId', $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..aOB(3, _omitFieldNames ? '' : 'isComposite')
     ..aOB(4, _omitFieldNames ? '' : 'isMulticurrency')
     ..aOS(6, _omitFieldNames ? '' : 'alias')
     ..aOS(8, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$43.Timestamp>(9, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..aOM<$43.Timestamp>(9, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Operation clone() => Operation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Operation copyWith(void Function(Operation) updates) =>
-      super.copyWith((message) => updates(message as Operation)) as Operation;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Operation copyWith(void Function(Operation) updates) => super.copyWith((message) => updates(message as Operation)) as Operation;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -88,17 +82,13 @@ class Operation extends $pb.GeneratedMessage {
   Operation createEmptyInstance() => create();
   static $pb.PbList<Operation> createRepeated() => $pb.PbList<Operation>();
   @$core.pragma('dart2js:noInline')
-  static Operation getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Operation>(create);
+  static Operation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Operation>(create);
   static Operation? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get operationId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set operationId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set operationId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasOperationId() => $_has(0);
   @$pb.TagNumber(1)
@@ -107,10 +97,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get conglomerateId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set conglomerateId($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set conglomerateId($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasConglomerateId() => $_has(1);
   @$pb.TagNumber(2)
@@ -119,10 +106,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get isComposite => $_getBF(2);
   @$pb.TagNumber(3)
-  set isComposite($core.bool v) {
-    $_setBool(2, v);
-  }
-
+  set isComposite($core.bool v) { $_setBool(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasIsComposite() => $_has(2);
   @$pb.TagNumber(3)
@@ -131,10 +115,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool get isMulticurrency => $_getBF(3);
   @$pb.TagNumber(4)
-  set isMulticurrency($core.bool v) {
-    $_setBool(3, v);
-  }
-
+  set isMulticurrency($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasIsMulticurrency() => $_has(3);
   @$pb.TagNumber(4)
@@ -143,10 +124,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get alias => $_getSZ(4);
   @$pb.TagNumber(6)
-  set alias($core.String v) {
-    $_setString(4, v);
-  }
-
+  set alias($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(6)
   $core.bool hasAlias() => $_has(4);
   @$pb.TagNumber(6)
@@ -155,10 +133,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.String get resourceName => $_getSZ(5);
   @$pb.TagNumber(8)
-  set resourceName($core.String v) {
-    $_setString(5, v);
-  }
-
+  set resourceName($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(8)
   $core.bool hasResourceName() => $_has(5);
   @$pb.TagNumber(8)
@@ -167,10 +142,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $43.Timestamp get createTime => $_getN(6);
   @$pb.TagNumber(9)
-  set createTime($43.Timestamp v) {
-    setField(9, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasCreateTime() => $_has(6);
   @$pb.TagNumber(9)
@@ -179,6 +151,6 @@ class Operation extends $pb.GeneratedMessage {
   $43.Timestamp ensureCreateTime() => $_ensure(6);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

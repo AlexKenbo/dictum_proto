@@ -42,35 +42,28 @@ class Action extends $pb.GeneratedMessage {
     return $result;
   }
   Action._() : super();
-  factory Action.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Action.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Action.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Action.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Action',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Action', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
-    ..e<$49.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $49.ActionType.ACTION_TYPE_UNKNOWN,
-        valueOf: $49.ActionType.valueOf,
-        enumValues: $49.ActionType.values)
+    ..e<$49.ActionType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $49.ActionType.ACTION_TYPE_UNKNOWN, valueOf: $49.ActionType.valueOf, enumValues: $49.ActionType.values)
     ..aOS(3, _omitFieldNames ? '' : 'scopeName')
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'resourceName')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Action clone() => Action()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Action copyWith(void Function(Action) updates) =>
-      super.copyWith((message) => updates(message as Action)) as Action;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Action copyWith(void Function(Action) updates) => super.copyWith((message) => updates(message as Action)) as Action;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -79,17 +72,13 @@ class Action extends $pb.GeneratedMessage {
   Action createEmptyInstance() => create();
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
   @$core.pragma('dart2js:noInline')
-  static Action getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
+  static Action getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
   static Action? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get actionId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set actionId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set actionId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasActionId() => $_has(0);
   @$pb.TagNumber(1)
@@ -98,10 +87,7 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $49.ActionType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type($49.ActionType v) {
-    setField(2, v);
-  }
-
+  set type($49.ActionType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
@@ -110,10 +96,7 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get scopeName => $_getSZ(2);
   @$pb.TagNumber(3)
-  set scopeName($core.String v) {
-    $_setString(2, v);
-  }
-
+  set scopeName($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasScopeName() => $_has(2);
   @$pb.TagNumber(3)
@@ -122,10 +105,7 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get description => $_getSZ(3);
   @$pb.TagNumber(4)
-  set description($core.String v) {
-    $_setString(3, v);
-  }
-
+  set description($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasDescription() => $_has(3);
   @$pb.TagNumber(4)
@@ -134,16 +114,13 @@ class Action extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get resourceName => $_getSZ(4);
   @$pb.TagNumber(5)
-  set resourceName($core.String v) {
-    $_setString(4, v);
-  }
-
+  set resourceName($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasResourceName() => $_has(4);
   @$pb.TagNumber(5)
   void clearResourceName() => clearField(5);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

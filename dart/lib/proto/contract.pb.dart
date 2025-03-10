@@ -67,43 +67,34 @@ class Contract extends $pb.GeneratedMessage {
     return $result;
   }
   Contract._() : super();
-  factory Contract.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Contract.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Contract.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Contract.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Contract',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Contract', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'contractId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'number')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
-    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..aOM<$14.Entity>(6, _omitFieldNames ? '' : 'payer',
-        subBuilder: $14.Entity.create)
-    ..aOM<$14.Entity>(7, _omitFieldNames ? '' : 'recipient',
-        subBuilder: $14.Entity.create)
-    ..a<$core.int>(
-        8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
-    ..aOM<$43.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom',
-        subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$14.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $14.Entity.create)
+    ..aOM<$14.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $14.Entity.create)
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
+    ..aOM<$43.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $43.Timestamp.create)
     ..aOS(10, _omitFieldNames ? '' : 'additionalNote')
     ..aOS(11, _omitFieldNames ? '' : 'explanations')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Contract clone() => Contract()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Contract copyWith(void Function(Contract) updates) =>
-      super.copyWith((message) => updates(message as Contract)) as Contract;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Contract copyWith(void Function(Contract) updates) => super.copyWith((message) => updates(message as Contract)) as Contract;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -112,17 +103,13 @@ class Contract extends $pb.GeneratedMessage {
   Contract createEmptyInstance() => create();
   static $pb.PbList<Contract> createRepeated() => $pb.PbList<Contract>();
   @$core.pragma('dart2js:noInline')
-  static Contract getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Contract>(create);
+  static Contract getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Contract>(create);
   static Contract? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get contractId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set contractId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set contractId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasContractId() => $_has(0);
   @$pb.TagNumber(1)
@@ -131,10 +118,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get number => $_getSZ(1);
   @$pb.TagNumber(2)
-  set number($core.String v) {
-    $_setString(1, v);
-  }
-
+  set number($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasNumber() => $_has(1);
   @$pb.TagNumber(2)
@@ -143,10 +127,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get payerId => $_getIZ(2);
   @$pb.TagNumber(3)
-  set payerId($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set payerId($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasPayerId() => $_has(2);
   @$pb.TagNumber(3)
@@ -155,10 +136,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.int get recipientId => $_getIZ(3);
   @$pb.TagNumber(4)
-  set recipientId($core.int v) {
-    $_setSignedInt32(3, v);
-  }
-
+  set recipientId($core.int v) { $_setSignedInt32(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasRecipientId() => $_has(3);
   @$pb.TagNumber(4)
@@ -167,10 +145,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $43.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($43.Timestamp v) {
-    setField(5, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
@@ -181,10 +156,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $14.Entity get payer => $_getN(5);
   @$pb.TagNumber(6)
-  set payer($14.Entity v) {
-    setField(6, v);
-  }
-
+  set payer($14.Entity v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasPayer() => $_has(5);
   @$pb.TagNumber(6)
@@ -195,10 +167,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $14.Entity get recipient => $_getN(6);
   @$pb.TagNumber(7)
-  set recipient($14.Entity v) {
-    setField(7, v);
-  }
-
+  set recipient($14.Entity v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasRecipient() => $_has(6);
   @$pb.TagNumber(7)
@@ -209,10 +178,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.int get payerAccountId => $_getIZ(7);
   @$pb.TagNumber(8)
-  set payerAccountId($core.int v) {
-    $_setSignedInt32(7, v);
-  }
-
+  set payerAccountId($core.int v) { $_setSignedInt32(7, v); }
   @$pb.TagNumber(8)
   $core.bool hasPayerAccountId() => $_has(7);
   @$pb.TagNumber(8)
@@ -221,10 +187,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $43.Timestamp get dateFrom => $_getN(8);
   @$pb.TagNumber(9)
-  set dateFrom($43.Timestamp v) {
-    setField(9, v);
-  }
-
+  set dateFrom($43.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDateFrom() => $_has(8);
   @$pb.TagNumber(9)
@@ -235,10 +198,7 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get additionalNote => $_getSZ(9);
   @$pb.TagNumber(10)
-  set additionalNote($core.String v) {
-    $_setString(9, v);
-  }
-
+  set additionalNote($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
   $core.bool hasAdditionalNote() => $_has(9);
   @$pb.TagNumber(10)
@@ -247,16 +207,13 @@ class Contract extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.String get explanations => $_getSZ(10);
   @$pb.TagNumber(11)
-  set explanations($core.String v) {
-    $_setString(10, v);
-  }
-
+  set explanations($core.String v) { $_setString(10, v); }
   @$pb.TagNumber(11)
   $core.bool hasExplanations() => $_has(10);
   @$pb.TagNumber(11)
   void clearExplanations() => clearField(11);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

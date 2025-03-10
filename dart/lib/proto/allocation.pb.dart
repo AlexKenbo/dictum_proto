@@ -68,44 +68,34 @@ class Allocation extends $pb.GeneratedMessage {
     return $result;
   }
   Allocation._() : super();
-  factory Allocation.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Allocation.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Allocation.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Allocation.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Allocation',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Allocation', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'accrualId', $pb.PbFieldType.O3)
     ..a<$core.int>(2, _omitFieldNames ? '' : 'transferId', $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        4, _omitFieldNames ? '' : 'accrualPaidAmount', $pb.PbFieldType.OD)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'accrualPaidAmount', $pb.PbFieldType.OD)
     ..aOS(5, _omitFieldNames ? '' : 'accrualCurrencyCode')
-    ..a<$core.double>(
-        6, _omitFieldNames ? '' : 'transferAllocatedAmount', $pb.PbFieldType.OD)
+    ..a<$core.double>(6, _omitFieldNames ? '' : 'transferAllocatedAmount', $pb.PbFieldType.OD)
     ..aOS(7, _omitFieldNames ? '' : 'transferCurrencyCode')
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$27.Accrual>(11, _omitFieldNames ? '' : 'accrual',
-        subBuilder: $27.Accrual.create)
-    ..aOM<$24.Transfer>(13, _omitFieldNames ? '' : 'transfer',
-        subBuilder: $24.Transfer.create)
-    ..aOM<$43.Timestamp>(14, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..aOM<$27.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $27.Accrual.create)
+    ..aOM<$24.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $24.Transfer.create)
+    ..aOM<$43.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Allocation clone() => Allocation()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Allocation copyWith(void Function(Allocation) updates) =>
-      super.copyWith((message) => updates(message as Allocation)) as Allocation;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Allocation copyWith(void Function(Allocation) updates) => super.copyWith((message) => updates(message as Allocation)) as Allocation;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -114,17 +104,13 @@ class Allocation extends $pb.GeneratedMessage {
   Allocation createEmptyInstance() => create();
   static $pb.PbList<Allocation> createRepeated() => $pb.PbList<Allocation>();
   @$core.pragma('dart2js:noInline')
-  static Allocation getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Allocation>(create);
+  static Allocation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Allocation>(create);
   static Allocation? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get accrualId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set accrualId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set accrualId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccrualId() => $_has(0);
   @$pb.TagNumber(1)
@@ -133,10 +119,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get transferId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set transferId($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set transferId($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasTransferId() => $_has(1);
   @$pb.TagNumber(2)
@@ -145,10 +128,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get conglomerateId => $_getIZ(2);
   @$pb.TagNumber(3)
-  set conglomerateId($core.int v) {
-    $_setSignedInt32(2, v);
-  }
-
+  set conglomerateId($core.int v) { $_setSignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasConglomerateId() => $_has(2);
   @$pb.TagNumber(3)
@@ -157,10 +137,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.double get accrualPaidAmount => $_getN(3);
   @$pb.TagNumber(4)
-  set accrualPaidAmount($core.double v) {
-    $_setDouble(3, v);
-  }
-
+  set accrualPaidAmount($core.double v) { $_setDouble(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasAccrualPaidAmount() => $_has(3);
   @$pb.TagNumber(4)
@@ -169,10 +146,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get accrualCurrencyCode => $_getSZ(4);
   @$pb.TagNumber(5)
-  set accrualCurrencyCode($core.String v) {
-    $_setString(4, v);
-  }
-
+  set accrualCurrencyCode($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasAccrualCurrencyCode() => $_has(4);
   @$pb.TagNumber(5)
@@ -181,10 +155,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.double get transferAllocatedAmount => $_getN(5);
   @$pb.TagNumber(6)
-  set transferAllocatedAmount($core.double v) {
-    $_setDouble(5, v);
-  }
-
+  set transferAllocatedAmount($core.double v) { $_setDouble(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasTransferAllocatedAmount() => $_has(5);
   @$pb.TagNumber(6)
@@ -193,10 +164,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get transferCurrencyCode => $_getSZ(6);
   @$pb.TagNumber(7)
-  set transferCurrencyCode($core.String v) {
-    $_setString(6, v);
-  }
-
+  set transferCurrencyCode($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasTransferCurrencyCode() => $_has(6);
   @$pb.TagNumber(7)
@@ -205,10 +173,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get resourceName => $_getSZ(7);
   @$pb.TagNumber(9)
-  set resourceName($core.String v) {
-    $_setString(7, v);
-  }
-
+  set resourceName($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(9)
   $core.bool hasResourceName() => $_has(7);
   @$pb.TagNumber(9)
@@ -217,10 +182,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $27.Accrual get accrual => $_getN(8);
   @$pb.TagNumber(11)
-  set accrual($27.Accrual v) {
-    setField(11, v);
-  }
-
+  set accrual($27.Accrual v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasAccrual() => $_has(8);
   @$pb.TagNumber(11)
@@ -231,10 +193,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $24.Transfer get transfer => $_getN(9);
   @$pb.TagNumber(13)
-  set transfer($24.Transfer v) {
-    setField(13, v);
-  }
-
+  set transfer($24.Transfer v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasTransfer() => $_has(9);
   @$pb.TagNumber(13)
@@ -245,10 +204,7 @@ class Allocation extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $43.Timestamp get createTime => $_getN(10);
   @$pb.TagNumber(14)
-  set createTime($43.Timestamp v) {
-    setField(14, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCreateTime() => $_has(10);
   @$pb.TagNumber(14)
@@ -257,6 +213,6 @@ class Allocation extends $pb.GeneratedMessage {
   $43.Timestamp ensureCreateTime() => $_ensure(10);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

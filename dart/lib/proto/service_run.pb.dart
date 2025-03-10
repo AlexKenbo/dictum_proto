@@ -44,38 +44,28 @@ class ServiceRun extends $pb.GeneratedMessage {
     return $result;
   }
   ServiceRun._() : super();
-  factory ServiceRun.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ServiceRun.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory ServiceRun.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ServiceRun.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ServiceRun',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ServiceRun', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
-    ..e<$74.ServiceRunState>(
-        3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: $74.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN,
-        valueOf: $74.ServiceRunState.valueOf,
-        enumValues: $74.ServiceRunState.values)
+    ..e<$74.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $74.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $74.ServiceRunState.valueOf, enumValues: $74.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
-    ..aOM<$34.Service>(6, _omitFieldNames ? '' : 'service',
-        subBuilder: $34.Service.create)
-    ..aOM<$43.Timestamp>(7, _omitFieldNames ? '' : 'syncTime',
-        subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..aOM<$34.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $34.Service.create)
+    ..aOM<$43.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   ServiceRun clone() => ServiceRun()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  ServiceRun copyWith(void Function(ServiceRun) updates) =>
-      super.copyWith((message) => updates(message as ServiceRun)) as ServiceRun;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ServiceRun copyWith(void Function(ServiceRun) updates) => super.copyWith((message) => updates(message as ServiceRun)) as ServiceRun;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -84,17 +74,13 @@ class ServiceRun extends $pb.GeneratedMessage {
   ServiceRun createEmptyInstance() => create();
   static $pb.PbList<ServiceRun> createRepeated() => $pb.PbList<ServiceRun>();
   @$core.pragma('dart2js:noInline')
-  static ServiceRun getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ServiceRun>(create);
+  static ServiceRun getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ServiceRun>(create);
   static ServiceRun? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get serviceId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set serviceId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set serviceId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasServiceId() => $_has(0);
   @$pb.TagNumber(1)
@@ -103,10 +89,7 @@ class ServiceRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $74.ServiceRunState get state => $_getN(1);
   @$pb.TagNumber(3)
-  set state($74.ServiceRunState v) {
-    setField(3, v);
-  }
-
+  set state($74.ServiceRunState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(3)
@@ -115,10 +98,7 @@ class ServiceRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.String get message => $_getSZ(2);
   @$pb.TagNumber(4)
-  set message($core.String v) {
-    $_setString(2, v);
-  }
-
+  set message($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(4)
   $core.bool hasMessage() => $_has(2);
   @$pb.TagNumber(4)
@@ -127,10 +107,7 @@ class ServiceRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $34.Service get service => $_getN(3);
   @$pb.TagNumber(6)
-  set service($34.Service v) {
-    setField(6, v);
-  }
-
+  set service($34.Service v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasService() => $_has(3);
   @$pb.TagNumber(6)
@@ -141,10 +118,7 @@ class ServiceRun extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $43.Timestamp get syncTime => $_getN(4);
   @$pb.TagNumber(7)
-  set syncTime($43.Timestamp v) {
-    setField(7, v);
-  }
-
+  set syncTime($43.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSyncTime() => $_has(4);
   @$pb.TagNumber(7)
@@ -153,6 +127,6 @@ class ServiceRun extends $pb.GeneratedMessage {
   $43.Timestamp ensureSyncTime() => $_ensure(4);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

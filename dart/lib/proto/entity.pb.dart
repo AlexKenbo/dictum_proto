@@ -104,58 +104,42 @@ class Entity extends $pb.GeneratedMessage {
     return $result;
   }
   Entity._() : super();
-  factory Entity.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Entity.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Entity.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Entity.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Entity',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Entity', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
     ..aOS(3, _omitFieldNames ? '' : 'title')
-    ..e<$48.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $48.EntityType.ENTITY_TYPE_UNKNOWN,
-        valueOf: $48.EntityType.valueOf,
-        enumValues: $48.EntityType.values)
+    ..e<$48.EntityType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $48.EntityType.ENTITY_TYPE_UNKNOWN, valueOf: $48.EntityType.valueOf, enumValues: $48.EntityType.values)
     ..aOB(5, _omitFieldNames ? '' : 'isAgent')
     ..aOB(6, _omitFieldNames ? '' : 'isEmployeeOf')
     ..aOS(9, _omitFieldNames ? '' : 'email')
     ..aOS(11, _omitFieldNames ? '' : 'phone')
     ..aOS(13, _omitFieldNames ? '' : 'address')
-    ..a<$core.int>(
-        15, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'telegramUserId', $pb.PbFieldType.O3)
     ..aOS(17, _omitFieldNames ? '' : 'countryCode')
     ..aOS(19, _omitFieldNames ? '' : 'sourceKey')
-    ..aOM<$44.TelegramUser>(21, _omitFieldNames ? '' : 'telegramUser',
-        subBuilder: $44.TelegramUser.create)
-    ..aOM<$45.Country>(23, _omitFieldNames ? '' : 'country',
-        subBuilder: $45.Country.create)
-    ..aOM<$46.Agent>(25, _omitFieldNames ? '' : 'agent',
-        subBuilder: $46.Agent.create)
-    ..pc<$47.EntitySource>(
-        27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM,
-        subBuilder: $47.EntitySource.create)
-    ..a<$core.int>(
-        28, _omitFieldNames ? '' : 'contactCreatorId', $pb.PbFieldType.O3)
+    ..aOM<$44.TelegramUser>(21, _omitFieldNames ? '' : 'telegramUser', subBuilder: $44.TelegramUser.create)
+    ..aOM<$45.Country>(23, _omitFieldNames ? '' : 'country', subBuilder: $45.Country.create)
+    ..aOM<$46.Agent>(25, _omitFieldNames ? '' : 'agent', subBuilder: $46.Agent.create)
+    ..pc<$47.EntitySource>(27, _omitFieldNames ? '' : 'sources', $pb.PbFieldType.PM, subBuilder: $47.EntitySource.create)
+    ..a<$core.int>(28, _omitFieldNames ? '' : 'contactCreatorId', $pb.PbFieldType.O3)
     ..aOS(29, _omitFieldNames ? '' : 'aliasCode')
-    ..aOM<$43.Timestamp>(30, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..hasRequiredFields = false;
+    ..aOM<$43.Timestamp>(30, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Entity clone() => Entity()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Entity copyWith(void Function(Entity) updates) =>
-      super.copyWith((message) => updates(message as Entity)) as Entity;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Entity copyWith(void Function(Entity) updates) => super.copyWith((message) => updates(message as Entity)) as Entity;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -164,17 +148,13 @@ class Entity extends $pb.GeneratedMessage {
   Entity createEmptyInstance() => create();
   static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
   @$core.pragma('dart2js:noInline')
-  static Entity getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Entity>(create);
+  static Entity getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Entity>(create);
   static Entity? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get entityId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set entityId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set entityId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasEntityId() => $_has(0);
   @$pb.TagNumber(1)
@@ -183,10 +163,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get conglomerateId => $_getIZ(1);
   @$pb.TagNumber(2)
-  set conglomerateId($core.int v) {
-    $_setSignedInt32(1, v);
-  }
-
+  set conglomerateId($core.int v) { $_setSignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasConglomerateId() => $_has(1);
   @$pb.TagNumber(2)
@@ -195,10 +172,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get title => $_getSZ(2);
   @$pb.TagNumber(3)
-  set title($core.String v) {
-    $_setString(2, v);
-  }
-
+  set title($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasTitle() => $_has(2);
   @$pb.TagNumber(3)
@@ -207,10 +181,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $48.EntityType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($48.EntityType v) {
-    setField(4, v);
-  }
-
+  set type($48.EntityType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -219,10 +190,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool get isAgent => $_getBF(4);
   @$pb.TagNumber(5)
-  set isAgent($core.bool v) {
-    $_setBool(4, v);
-  }
-
+  set isAgent($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasIsAgent() => $_has(4);
   @$pb.TagNumber(5)
@@ -231,10 +199,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool get isEmployeeOf => $_getBF(5);
   @$pb.TagNumber(6)
-  set isEmployeeOf($core.bool v) {
-    $_setBool(5, v);
-  }
-
+  set isEmployeeOf($core.bool v) { $_setBool(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasIsEmployeeOf() => $_has(5);
   @$pb.TagNumber(6)
@@ -243,10 +208,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.String get email => $_getSZ(6);
   @$pb.TagNumber(9)
-  set email($core.String v) {
-    $_setString(6, v);
-  }
-
+  set email($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(9)
   $core.bool hasEmail() => $_has(6);
   @$pb.TagNumber(9)
@@ -255,10 +217,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.String get phone => $_getSZ(7);
   @$pb.TagNumber(11)
-  set phone($core.String v) {
-    $_setString(7, v);
-  }
-
+  set phone($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(11)
   $core.bool hasPhone() => $_has(7);
   @$pb.TagNumber(11)
@@ -267,10 +226,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.String get address => $_getSZ(8);
   @$pb.TagNumber(13)
-  set address($core.String v) {
-    $_setString(8, v);
-  }
-
+  set address($core.String v) { $_setString(8, v); }
   @$pb.TagNumber(13)
   $core.bool hasAddress() => $_has(8);
   @$pb.TagNumber(13)
@@ -279,10 +235,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $core.int get telegramUserId => $_getIZ(9);
   @$pb.TagNumber(15)
-  set telegramUserId($core.int v) {
-    $_setSignedInt32(9, v);
-  }
-
+  set telegramUserId($core.int v) { $_setSignedInt32(9, v); }
   @$pb.TagNumber(15)
   $core.bool hasTelegramUserId() => $_has(9);
   @$pb.TagNumber(15)
@@ -291,10 +244,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   $core.String get countryCode => $_getSZ(10);
   @$pb.TagNumber(17)
-  set countryCode($core.String v) {
-    $_setString(10, v);
-  }
-
+  set countryCode($core.String v) { $_setString(10, v); }
   @$pb.TagNumber(17)
   $core.bool hasCountryCode() => $_has(10);
   @$pb.TagNumber(17)
@@ -303,10 +253,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $core.String get sourceKey => $_getSZ(11);
   @$pb.TagNumber(19)
-  set sourceKey($core.String v) {
-    $_setString(11, v);
-  }
-
+  set sourceKey($core.String v) { $_setString(11, v); }
   @$pb.TagNumber(19)
   $core.bool hasSourceKey() => $_has(11);
   @$pb.TagNumber(19)
@@ -315,10 +262,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   $44.TelegramUser get telegramUser => $_getN(12);
   @$pb.TagNumber(21)
-  set telegramUser($44.TelegramUser v) {
-    setField(21, v);
-  }
-
+  set telegramUser($44.TelegramUser v) { setField(21, v); }
   @$pb.TagNumber(21)
   $core.bool hasTelegramUser() => $_has(12);
   @$pb.TagNumber(21)
@@ -329,10 +273,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   $45.Country get country => $_getN(13);
   @$pb.TagNumber(23)
-  set country($45.Country v) {
-    setField(23, v);
-  }
-
+  set country($45.Country v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasCountry() => $_has(13);
   @$pb.TagNumber(23)
@@ -343,10 +284,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   $46.Agent get agent => $_getN(14);
   @$pb.TagNumber(25)
-  set agent($46.Agent v) {
-    setField(25, v);
-  }
-
+  set agent($46.Agent v) { setField(25, v); }
   @$pb.TagNumber(25)
   $core.bool hasAgent() => $_has(14);
   @$pb.TagNumber(25)
@@ -360,10 +298,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(28)
   $core.int get contactCreatorId => $_getIZ(16);
   @$pb.TagNumber(28)
-  set contactCreatorId($core.int v) {
-    $_setSignedInt32(16, v);
-  }
-
+  set contactCreatorId($core.int v) { $_setSignedInt32(16, v); }
   @$pb.TagNumber(28)
   $core.bool hasContactCreatorId() => $_has(16);
   @$pb.TagNumber(28)
@@ -372,10 +307,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(29)
   $core.String get aliasCode => $_getSZ(17);
   @$pb.TagNumber(29)
-  set aliasCode($core.String v) {
-    $_setString(17, v);
-  }
-
+  set aliasCode($core.String v) { $_setString(17, v); }
   @$pb.TagNumber(29)
   $core.bool hasAliasCode() => $_has(17);
   @$pb.TagNumber(29)
@@ -384,10 +316,7 @@ class Entity extends $pb.GeneratedMessage {
   @$pb.TagNumber(30)
   $43.Timestamp get createTime => $_getN(18);
   @$pb.TagNumber(30)
-  set createTime($43.Timestamp v) {
-    setField(30, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(30, v); }
   @$pb.TagNumber(30)
   $core.bool hasCreateTime() => $_has(18);
   @$pb.TagNumber(30)
@@ -396,6 +325,6 @@ class Entity extends $pb.GeneratedMessage {
   $43.Timestamp ensureCreateTime() => $_ensure(18);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

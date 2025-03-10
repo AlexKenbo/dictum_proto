@@ -64,43 +64,33 @@ class Attachment extends $pb.GeneratedMessage {
     return $result;
   }
   Attachment._() : super();
-  factory Attachment.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Attachment.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
+  factory Attachment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Attachment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Attachment',
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Attachment', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'attachmentId', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'rawUrl')
     ..aOS(3, _omitFieldNames ? '' : 'mimeType')
-    ..e<$42.AttachmentType>(
-        4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE,
-        defaultOrMaker: $42.AttachmentType.ATTACHMENT_TYPE_UNKNOWN,
-        valueOf: $42.AttachmentType.valueOf,
-        enumValues: $42.AttachmentType.values)
+    ..e<$42.AttachmentType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $42.AttachmentType.ATTACHMENT_TYPE_UNKNOWN, valueOf: $42.AttachmentType.valueOf, enumValues: $42.AttachmentType.values)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'uploaderId', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$43.Timestamp>(8, _omitFieldNames ? '' : 'createTime',
-        subBuilder: $43.Timestamp.create)
-    ..aOM<$11.User>(9, _omitFieldNames ? '' : 'uploader',
-        subBuilder: $11.User.create)
+    ..aOM<$43.Timestamp>(8, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$11.User>(9, _omitFieldNames ? '' : 'uploader', subBuilder: $11.User.create)
     ..aOS(10, _omitFieldNames ? '' : 'externalNumber')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   Attachment clone() => Attachment()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  Attachment copyWith(void Function(Attachment) updates) =>
-      super.copyWith((message) => updates(message as Attachment)) as Attachment;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Attachment copyWith(void Function(Attachment) updates) => super.copyWith((message) => updates(message as Attachment)) as Attachment;
 
   $pb.BuilderInfo get info_ => _i;
 
@@ -109,17 +99,13 @@ class Attachment extends $pb.GeneratedMessage {
   Attachment createEmptyInstance() => create();
   static $pb.PbList<Attachment> createRepeated() => $pb.PbList<Attachment>();
   @$core.pragma('dart2js:noInline')
-  static Attachment getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<Attachment>(create);
+  static Attachment getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Attachment>(create);
   static Attachment? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get attachmentId => $_getIZ(0);
   @$pb.TagNumber(1)
-  set attachmentId($core.int v) {
-    $_setSignedInt32(0, v);
-  }
-
+  set attachmentId($core.int v) { $_setSignedInt32(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasAttachmentId() => $_has(0);
   @$pb.TagNumber(1)
@@ -128,10 +114,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get rawUrl => $_getSZ(1);
   @$pb.TagNumber(2)
-  set rawUrl($core.String v) {
-    $_setString(1, v);
-  }
-
+  set rawUrl($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasRawUrl() => $_has(1);
   @$pb.TagNumber(2)
@@ -140,10 +123,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.String get mimeType => $_getSZ(2);
   @$pb.TagNumber(3)
-  set mimeType($core.String v) {
-    $_setString(2, v);
-  }
-
+  set mimeType($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasMimeType() => $_has(2);
   @$pb.TagNumber(3)
@@ -152,10 +132,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $42.AttachmentType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type($42.AttachmentType v) {
-    setField(4, v);
-  }
-
+  set type($42.AttachmentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
@@ -164,10 +141,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);
   @$pb.TagNumber(5)
-  set name($core.String v) {
-    $_setString(4, v);
-  }
-
+  set name($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasName() => $_has(4);
   @$pb.TagNumber(5)
@@ -176,10 +150,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.int get uploaderId => $_getIZ(5);
   @$pb.TagNumber(6)
-  set uploaderId($core.int v) {
-    $_setSignedInt32(5, v);
-  }
-
+  set uploaderId($core.int v) { $_setSignedInt32(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasUploaderId() => $_has(5);
   @$pb.TagNumber(6)
@@ -188,10 +159,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.String get resourceName => $_getSZ(6);
   @$pb.TagNumber(7)
-  set resourceName($core.String v) {
-    $_setString(6, v);
-  }
-
+  set resourceName($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasResourceName() => $_has(6);
   @$pb.TagNumber(7)
@@ -200,10 +168,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $43.Timestamp get createTime => $_getN(7);
   @$pb.TagNumber(8)
-  set createTime($43.Timestamp v) {
-    setField(8, v);
-  }
-
+  set createTime($43.Timestamp v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasCreateTime() => $_has(7);
   @$pb.TagNumber(8)
@@ -214,10 +179,7 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $11.User get uploader => $_getN(8);
   @$pb.TagNumber(9)
-  set uploader($11.User v) {
-    setField(9, v);
-  }
-
+  set uploader($11.User v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasUploader() => $_has(8);
   @$pb.TagNumber(9)
@@ -229,16 +191,13 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.String get externalNumber => $_getSZ(9);
   @$pb.TagNumber(10)
-  set externalNumber($core.String v) {
-    $_setString(9, v);
-  }
-
+  set externalNumber($core.String v) { $_setString(9, v); }
   @$pb.TagNumber(10)
   $core.bool hasExternalNumber() => $_has(9);
   @$pb.TagNumber(10)
   void clearExternalNumber() => clearField(10);
 }
 
+
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
