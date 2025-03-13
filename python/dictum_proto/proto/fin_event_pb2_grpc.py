@@ -13,6 +13,7 @@ from dictum_proto.proto import event_aggregate_pb2 as proto_dot_event__aggregate
 from dictum_proto.proto import fin_event_pb2 as proto_dot_fin__event__pb2
 from dictum_proto.proto import permission_pb2 as proto_dot_permission__pb2
 from dictum_proto.proto import position_pb2 as proto_dot_position__pb2
+from dictum_proto.proto import product_pb2 as proto_dot_product__pb2
 from dictum_proto.proto import requests_pb2 as proto_dot_requests__pb2
 from dictum_proto.proto import transfer_pb2 as proto_dot_transfer__pb2
 
@@ -165,6 +166,11 @@ class FinEventStub(object):
                 '/FinEvent/ListProducts',
                 request_serializer=proto_dot_requests__pb2.ListRequest.SerializeToString,
                 response_deserializer=proto_dot_fin__event__pb2.ListProductsResponse.FromString,
+                _registered_method=True)
+        self.CreateProduct = channel.unary_unary(
+                '/FinEvent/CreateProduct',
+                request_serializer=proto_dot_product__pb2.Product.SerializeToString,
+                response_deserializer=proto_dot_product__pb2.Product.FromString,
                 _registered_method=True)
         self.ListPositions = channel.unary_unary(
                 '/FinEvent/ListPositions',
@@ -368,6 +374,12 @@ class FinEventServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateProduct(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def ListPositions(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -552,6 +564,11 @@ def add_FinEventServicer_to_server(servicer, server):
                     servicer.ListProducts,
                     request_deserializer=proto_dot_requests__pb2.ListRequest.FromString,
                     response_serializer=proto_dot_fin__event__pb2.ListProductsResponse.SerializeToString,
+            ),
+            'CreateProduct': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateProduct,
+                    request_deserializer=proto_dot_product__pb2.Product.FromString,
+                    response_serializer=proto_dot_product__pb2.Product.SerializeToString,
             ),
             'ListPositions': grpc.unary_unary_rpc_method_handler(
                     servicer.ListPositions,
@@ -1253,6 +1270,33 @@ class FinEvent(object):
             '/FinEvent/ListProducts',
             proto_dot_requests__pb2.ListRequest.SerializeToString,
             proto_dot_fin__event__pb2.ListProductsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def CreateProduct(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/FinEvent/CreateProduct',
+            proto_dot_product__pb2.Product.SerializeToString,
+            proto_dot_product__pb2.Product.FromString,
             options,
             channel_credentials,
             insecure,

@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $42;
+import '../google/protobuf/timestamp.pb.dart' as $43;
 import 'entity.pb.dart' as $14;
 
 class Contract extends $pb.GeneratedMessage {
@@ -22,11 +22,13 @@ class Contract extends $pb.GeneratedMessage {
     $core.String? number,
     $core.int? payerId,
     $core.int? recipientId,
-    $42.Timestamp? createTime,
+    $43.Timestamp? createTime,
     $14.Entity? payer,
     $14.Entity? recipient,
     $core.int? payerAccountId,
-    $42.Timestamp? dateFrom,
+    $43.Timestamp? dateFrom,
+    $core.String? additionalNote,
+    $core.String? explanations,
   }) {
     final $result = create();
     if (contractId != null) {
@@ -56,6 +58,12 @@ class Contract extends $pb.GeneratedMessage {
     if (dateFrom != null) {
       $result.dateFrom = dateFrom;
     }
+    if (additionalNote != null) {
+      $result.additionalNote = additionalNote;
+    }
+    if (explanations != null) {
+      $result.explanations = explanations;
+    }
     return $result;
   }
   Contract._() : super();
@@ -67,11 +75,13 @@ class Contract extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'number')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'recipientId', $pb.PbFieldType.O3)
-    ..aOM<$42.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$43.Timestamp>(5, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
     ..aOM<$14.Entity>(6, _omitFieldNames ? '' : 'payer', subBuilder: $14.Entity.create)
     ..aOM<$14.Entity>(7, _omitFieldNames ? '' : 'recipient', subBuilder: $14.Entity.create)
     ..a<$core.int>(8, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
-    ..aOM<$42.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $42.Timestamp.create)
+    ..aOM<$43.Timestamp>(9, _omitFieldNames ? '' : 'dateFrom', subBuilder: $43.Timestamp.create)
+    ..aOS(10, _omitFieldNames ? '' : 'additionalNote')
+    ..aOS(11, _omitFieldNames ? '' : 'explanations')
     ..hasRequiredFields = false
   ;
 
@@ -133,15 +143,15 @@ class Contract extends $pb.GeneratedMessage {
   void clearRecipientId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $42.Timestamp get createTime => $_getN(4);
+  $43.Timestamp get createTime => $_getN(4);
   @$pb.TagNumber(5)
-  set createTime($42.Timestamp v) { setField(5, v); }
+  set createTime($43.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
   @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
   @$pb.TagNumber(5)
-  $42.Timestamp ensureCreateTime() => $_ensure(4);
+  $43.Timestamp ensureCreateTime() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $14.Entity get payer => $_getN(5);
@@ -175,15 +185,33 @@ class Contract extends $pb.GeneratedMessage {
   void clearPayerAccountId() => clearField(8);
 
   @$pb.TagNumber(9)
-  $42.Timestamp get dateFrom => $_getN(8);
+  $43.Timestamp get dateFrom => $_getN(8);
   @$pb.TagNumber(9)
-  set dateFrom($42.Timestamp v) { setField(9, v); }
+  set dateFrom($43.Timestamp v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDateFrom() => $_has(8);
   @$pb.TagNumber(9)
   void clearDateFrom() => clearField(9);
   @$pb.TagNumber(9)
-  $42.Timestamp ensureDateFrom() => $_ensure(8);
+  $43.Timestamp ensureDateFrom() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  $core.String get additionalNote => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set additionalNote($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasAdditionalNote() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearAdditionalNote() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.String get explanations => $_getSZ(10);
+  @$pb.TagNumber(11)
+  set explanations($core.String v) { $_setString(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasExplanations() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearExplanations() => clearField(11);
 }
 
 

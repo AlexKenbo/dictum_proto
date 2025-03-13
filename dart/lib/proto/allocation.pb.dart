@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $42;
+import '../google/protobuf/timestamp.pb.dart' as $43;
 import 'accrual.pb.dart' as $27;
 import 'transfer.pb.dart' as $24;
 
@@ -29,7 +29,7 @@ class Allocation extends $pb.GeneratedMessage {
     $core.String? resourceName,
     $27.Accrual? accrual,
     $24.Transfer? transfer,
-    $42.Timestamp? createTime,
+    $43.Timestamp? createTime,
   }) {
     final $result = create();
     if (accrualId != null) {
@@ -82,7 +82,7 @@ class Allocation extends $pb.GeneratedMessage {
     ..aOS(9, _omitFieldNames ? '' : 'resourceName')
     ..aOM<$27.Accrual>(11, _omitFieldNames ? '' : 'accrual', subBuilder: $27.Accrual.create)
     ..aOM<$24.Transfer>(13, _omitFieldNames ? '' : 'transfer', subBuilder: $24.Transfer.create)
-    ..aOM<$42.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$43.Timestamp>(14, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -202,15 +202,15 @@ class Allocation extends $pb.GeneratedMessage {
   $24.Transfer ensureTransfer() => $_ensure(9);
 
   @$pb.TagNumber(14)
-  $42.Timestamp get createTime => $_getN(10);
+  $43.Timestamp get createTime => $_getN(10);
   @$pb.TagNumber(14)
-  set createTime($42.Timestamp v) { setField(14, v); }
+  set createTime($43.Timestamp v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCreateTime() => $_has(10);
   @$pb.TagNumber(14)
   void clearCreateTime() => clearField(14);
   @$pb.TagNumber(14)
-  $42.Timestamp ensureCreateTime() => $_ensure(10);
+  $43.Timestamp ensureCreateTime() => $_ensure(10);
 }
 
 
