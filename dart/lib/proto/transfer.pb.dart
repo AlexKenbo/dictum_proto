@@ -16,11 +16,11 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../google/protobuf/timestamp.pb.dart' as $42;
 import 'account.pb.dart' as $18;
 import 'attachment.pb.dart' as $4;
-import 'color.pbenum.dart' as $62;
+import 'color.pbenum.dart' as $63;
 import 'entity.pb.dart' as $14;
-import 'source.pbenum.dart' as $61;
-import 'status.pbenum.dart' as $63;
-import 'transfer_type.pbenum.dart' as $64;
+import 'source.pbenum.dart' as $62;
+import 'status.pbenum.dart' as $64;
+import 'transfer_type.pbenum.dart' as $65;
 import 'user.pb.dart' as $11;
 
 class Transfer extends $pb.GeneratedMessage {
@@ -32,7 +32,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.int? verifierId,
     $core.String? resourceName,
     $core.String? number,
-    $64.TransferType? type,
+    $65.TransferType? type,
     $11.User? verifier,
     $core.int? payerId,
     $core.int? payerAccountId,
@@ -43,8 +43,8 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? amount,
     $core.double? allocatedAmount,
     $core.int? parentId,
-    $61.Source? datasource,
-    $62.Color? color,
+    $62.Source? datasource,
+    $63.Color? color,
     $core.String? note,
     $18.Account? payerAccount,
     $18.Account? recipientAccount,
@@ -63,7 +63,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? recipientAmount,
     $core.String? payerCurrencyCode,
     $core.String? externalUrl,
-    $63.Status? status,
+    $64.Status? status,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -197,7 +197,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.int>(14, _omitFieldNames ? '' : 'verifierId', $pb.PbFieldType.O3)
     ..aOS(18, _omitFieldNames ? '' : 'resourceName')
     ..aOS(20, _omitFieldNames ? '' : 'number')
-    ..e<$64.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $64.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $64.TransferType.valueOf, enumValues: $64.TransferType.values)
+    ..e<$65.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $65.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $65.TransferType.valueOf, enumValues: $65.TransferType.values)
     ..aOM<$11.User>(28, _omitFieldNames ? '' : 'verifier', subBuilder: $11.User.create)
     ..a<$core.int>(31, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(32, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
@@ -208,8 +208,8 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(37, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(38, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
     ..a<$core.int>(40, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
-    ..e<$61.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $61.Source.SOURCE_UNKNOWN, valueOf: $61.Source.valueOf, enumValues: $61.Source.values)
-    ..e<$62.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $62.Color.COLOR_UNKNOWN, valueOf: $62.Color.valueOf, enumValues: $62.Color.values)
+    ..e<$62.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $62.Source.SOURCE_UNKNOWN, valueOf: $62.Source.valueOf, enumValues: $62.Source.values)
+    ..e<$63.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $63.Color.COLOR_UNKNOWN, valueOf: $63.Color.valueOf, enumValues: $63.Color.values)
     ..aOS(44, _omitFieldNames ? '' : 'note')
     ..aOM<$18.Account>(47, _omitFieldNames ? '' : 'payerAccount', subBuilder: $18.Account.create)
     ..aOM<$18.Account>(48, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $18.Account.create)
@@ -228,7 +228,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(62, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
     ..aOS(63, _omitFieldNames ? '' : 'payerCurrencyCode')
     ..aOS(64, _omitFieldNames ? '' : 'externalUrl')
-    ..e<$63.Status>(65, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $63.Status.STATUS_UNSPECIFIED, valueOf: $63.Status.valueOf, enumValues: $63.Status.values)
+    ..e<$64.Status>(65, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $64.Status.STATUS_UNSPECIFIED, valueOf: $64.Status.valueOf, enumValues: $64.Status.values)
     ..hasRequiredFields = false
   ;
 
@@ -317,9 +317,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearNumber() => clearField(20);
 
   @$pb.TagNumber(22)
-  $64.TransferType get type => $_getN(7);
+  $65.TransferType get type => $_getN(7);
   @$pb.TagNumber(22)
-  set type($64.TransferType v) { setField(22, v); }
+  set type($65.TransferType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasType() => $_has(7);
   @$pb.TagNumber(22)
@@ -418,18 +418,18 @@ class Transfer extends $pb.GeneratedMessage {
   void clearParentId() => clearField(40);
 
   @$pb.TagNumber(42)
-  $61.Source get datasource => $_getN(18);
+  $62.Source get datasource => $_getN(18);
   @$pb.TagNumber(42)
-  set datasource($61.Source v) { setField(42, v); }
+  set datasource($62.Source v) { setField(42, v); }
   @$pb.TagNumber(42)
   $core.bool hasDatasource() => $_has(18);
   @$pb.TagNumber(42)
   void clearDatasource() => clearField(42);
 
   @$pb.TagNumber(43)
-  $62.Color get color => $_getN(19);
+  $63.Color get color => $_getN(19);
   @$pb.TagNumber(43)
-  set color($62.Color v) { setField(43, v); }
+  set color($63.Color v) { setField(43, v); }
   @$pb.TagNumber(43)
   $core.bool hasColor() => $_has(19);
   @$pb.TagNumber(43)
@@ -610,9 +610,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearExternalUrl() => clearField(64);
 
   @$pb.TagNumber(65)
-  $63.Status get status => $_getN(38);
+  $64.Status get status => $_getN(38);
   @$pb.TagNumber(65)
-  set status($63.Status v) { setField(65, v); }
+  set status($64.Status v) { setField(65, v); }
   @$pb.TagNumber(65)
   $core.bool hasStatus() => $_has(38);
   @$pb.TagNumber(65)

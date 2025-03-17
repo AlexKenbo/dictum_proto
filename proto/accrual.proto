@@ -3,6 +3,7 @@ syntax = "proto3";
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
 import "google/protobuf/timestamp.proto";
+import "google/type/date.proto";
 
 import "proto/account.proto";
 import "proto/attachment.proto";
@@ -62,9 +63,9 @@ message Accrual {
   google.protobuf.Timestamp full_allocation_time = 39;  
   Entity payer = 40;
   Entity recipient = 41;
-  google.protobuf.Timestamp perform_time = 42;
+  google.protobuf.Timestamp perform_time = 42; // @deprecated migrates to perform_date
   google.protobuf.Timestamp payment_due_time = 43;
-  google.protobuf.Timestamp payout_date = 44;
+  google.protobuf.Timestamp payout_date = 44; // @deprecated migrates to payment_date
   google.protobuf.Timestamp pay_time = 45;
   google.protobuf.Timestamp create_time = 46;
   Status status = 47;
@@ -103,4 +104,7 @@ message Accrual {
   // 
   int32 contract_id = 71;
   Contract contract = 72;
+
+  google.type.Date payment_date = 73;
+  google.type.Date perform_date = 74;
 }
