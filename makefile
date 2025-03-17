@@ -49,68 +49,31 @@ update_version: ## Update version of package in corresponding dependency files
 	@sed -i '' 's/version=.*,/version="$(VERSION)",/' $(VERSION_FILE_PYTHON)
 	@echo "Version updated to $(VERSION) in both files."
 
-build: ## Generation to Python, Dart and Go
+build: ## Generate to Python, Dart and Go
 	@echo "\n$(BLUE)===== Starting All Build =====$(RESET)\n"
 	@$(MAKE) build_go
 	@$(MAKE) build_dart
+	@$(MAKE) build_py
 	@echo "\n"
 
-# TODO: add build go command for windows, current command for mac
-build_go: ## Generation to Go
+build_go: ## Generate to Go
 	@echo "\n$(BLUE)===== Starting Go Build =====$(RESET)\n"
-	@echo "Installing protoc-gen-go..."
-	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+	docker build -t dictum_proto_generator_go -f go/Dockerfile .
+	docker run --rm -v $$(pwd)/:/go dictum_proto_generator_go
+	@echo "$(GREEN)Go build completed successfully!$(RESET)"
 
-	@echo "Building proto to go..."
-	protoc \
-      -I . -I ./google \
-      --go_out=go --go_opt=paths=source_relative \
-      --go-grpc_out=go --go-grpc_opt=paths=source_relative \
-      $(shell find . -name "*.proto")
-	
-	@echo "$(GREEN)Go build completed succesfully!$(RESET)"
-	
-build_dart: ## Generation to Dart
+build_dart: ## Generate proto to Dart
 	@echo "\n$(BLUE)===== Starting Dart Build =====$(RESET)\n"
-	@echo "Installing protoc-plugin..."
-	dart pub global activate protoc_plugin
-
-	@echo "Activating protoc-plugin..."
-	dart pub global activate protoc_plugin
-	export PATH="$PATH:$HOME/.pub-cache/bin"
-
-ifeq ($(UNAME_S), Linux)
-		@echo "Building on Linux..."
-		protoc -I . -I ./google --dart_out=grpc:dart/lib $(shell find . -name "*.proto")
-endif
-
-ifeq ($(UNAME_S), Darwin)
-		@echo "Building on macOS..."
-		protoc -I . -I ./google --dart_out=grpc:dart/lib $(shell find . -name "*.proto")
-endif
-
-ifeq ($(OS), Windows_NT)
-		@echo "Building on Windows..."
-		powershell -Command \
-			"$base_dir = Get-Location; \
-			$proto_files = Get-ChildItem -Recurse -Filter '*.proto'; \
-			foreach ($proto_file in $proto_files) { \
-				$relative_path = $proto_file.FullName.Replace('$base_dir\\', '.\\'); \
-				protoc -I . -I .\google --dart_out=grpc:dart/lib $relative_path; \
-			}"
-endif
-
-	@echo "$(GREEN)Dart build completed succesfully!$(RESET)"
+	@pwd
+	docker build -t dictum_proto_generator_dart -f dart/Dockerfile .
+	docker run --rm -v $$(pwd)/dart:/dart dictum_proto_generator_dart
+	@echo "$(GREEN)Dart build completed successfully!$(RESET)"
 
 build_py: ## Generation to Python
 	@echo "\n$(BLUE)===== Starting Python Build =====$(RESET)\n"
-
-	@echo "Building Docker..."
-	docker build -t dictum_proto_generator -f python/Dockerfile .
-
-	@echo "Running Docker..."
-	docker run --rm -v $(pwd)/python/dictum_proto:/python/dictum_proto dictum_proto_generator
-	@echo "$(GREEN)Python build completed succesfully!$(RESET)"
+	docker build -t dictum_proto_generator_python -f python/Dockerfile .
+	docker run --rm -v $$(pwd)/python/dictum_proto:/python/dictum_proto dictum_proto_generator_python
+	@echo "$(GREEN)Python build completed successfully!$(RESET)"
 
 # Aborting make in case the version is interpreted as a target
 %:
