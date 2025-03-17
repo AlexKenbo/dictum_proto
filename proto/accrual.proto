@@ -105,6 +105,8 @@ message Accrual {
   int32 contract_id = 71;
   Contract contract = 72;
 
-  google.type.Date payment_date = 73;
-  google.type.Date perform_date = 74;
+  int32 parent_id = 73;
+  
+  google.type.Date payment_date = 74;
+  google.type.Date perform_date = 75;
 }

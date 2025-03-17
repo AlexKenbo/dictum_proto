@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $42;
+import '../google/protobuf/timestamp.pb.dart' as $43;
 import 'employee.pb.dart' as $17;
-import 'telegram_user.pb.dart' as $43;
+import 'telegram_user.pb.dart' as $44;
 
 class User extends $pb.GeneratedMessage {
   factory User({
@@ -27,8 +27,8 @@ class User extends $pb.GeneratedMessage {
     $core.String? refKey,
     $core.String? resourceName,
     $core.Iterable<$17.Employee>? employees,
-    $43.TelegramUser? telegramUser,
-    $42.Timestamp? createTime,
+    $44.TelegramUser? telegramUser,
+    $43.Timestamp? createTime,
   }) {
     final $result = create();
     if (userId != null) {
@@ -76,8 +76,8 @@ class User extends $pb.GeneratedMessage {
     ..aOS(9, _omitFieldNames ? '' : 'refKey')
     ..aOS(11, _omitFieldNames ? '' : 'resourceName')
     ..pc<$17.Employee>(15, _omitFieldNames ? '' : 'employees', $pb.PbFieldType.PM, subBuilder: $17.Employee.create)
-    ..aOM<$43.TelegramUser>(16, _omitFieldNames ? '' : 'telegramUser', subBuilder: $43.TelegramUser.create)
-    ..aOM<$42.Timestamp>(17, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$44.TelegramUser>(16, _omitFieldNames ? '' : 'telegramUser', subBuilder: $44.TelegramUser.create)
+    ..aOM<$43.Timestamp>(17, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -169,26 +169,26 @@ class User extends $pb.GeneratedMessage {
   $core.List<$17.Employee> get employees => $_getList(7);
 
   @$pb.TagNumber(16)
-  $43.TelegramUser get telegramUser => $_getN(8);
+  $44.TelegramUser get telegramUser => $_getN(8);
   @$pb.TagNumber(16)
-  set telegramUser($43.TelegramUser v) { setField(16, v); }
+  set telegramUser($44.TelegramUser v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasTelegramUser() => $_has(8);
   @$pb.TagNumber(16)
   void clearTelegramUser() => clearField(16);
   @$pb.TagNumber(16)
-  $43.TelegramUser ensureTelegramUser() => $_ensure(8);
+  $44.TelegramUser ensureTelegramUser() => $_ensure(8);
 
   @$pb.TagNumber(17)
-  $42.Timestamp get createTime => $_getN(9);
+  $43.Timestamp get createTime => $_getN(9);
   @$pb.TagNumber(17)
-  set createTime($42.Timestamp v) { setField(17, v); }
+  set createTime($43.Timestamp v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasCreateTime() => $_has(9);
   @$pb.TagNumber(17)
   void clearCreateTime() => clearField(17);
   @$pb.TagNumber(17)
-  $42.Timestamp ensureCreateTime() => $_ensure(9);
+  $43.Timestamp ensureCreateTime() => $_ensure(9);
 }
 
 

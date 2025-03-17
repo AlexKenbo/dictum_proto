@@ -89,8 +89,9 @@ const Accrual$json = {
     {'1': 'has_comments', '3': 70, '4': 1, '5': 8, '10': 'hasComments'},
     {'1': 'contract_id', '3': 71, '4': 1, '5': 5, '10': 'contractId'},
     {'1': 'contract', '3': 72, '4': 1, '5': 11, '6': '.Contract', '10': 'contract'},
-    {'1': 'payment_date', '3': 73, '4': 1, '5': 11, '6': '.google.type.Date', '10': 'paymentDate'},
-    {'1': 'perform_date', '3': 74, '4': 1, '5': 11, '6': '.google.type.Date', '10': 'performDate'},
+    {'1': 'parent_id', '3': 73, '4': 1, '5': 5, '10': 'parentId'},
+    {'1': 'payment_date', '3': 74, '4': 1, '5': 11, '6': '.google.type.Date', '10': 'paymentDate'},
+    {'1': 'perform_date', '3': 75, '4': 1, '5': 11, '6': '.google.type.Date', '10': 'performDate'},
   ],
 };
 
@@ -147,7 +148,8 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'c2lnbmF0dXJlcxhCIAMoCzIKLlNpZ25hdHVyZVIKc2lnbmF0dXJlcxIUCgV0b3RhbBhEIAEoAV'
     'IFdG90YWwSKAoQY2FuY2VsX21hcmtfcGFpZBhFIAEoCFIOY2FuY2VsTWFya1BhaWQSIQoMaGFz'
     'X2NvbW1lbnRzGEYgASgIUgtoYXNDb21tZW50cxIfCgtjb250cmFjdF9pZBhHIAEoBVIKY29udH'
-    'JhY3RJZBIlCghjb250cmFjdBhIIAEoCzIJLkNvbnRyYWN0Ughjb250cmFjdBI0CgxwYXltZW50'
-    'X2RhdGUYSSABKAsyES5nb29nbGUudHlwZS5EYXRlUgtwYXltZW50RGF0ZRI0CgxwZXJmb3JtX2'
-    'RhdGUYSiABKAsyES5nb29nbGUudHlwZS5EYXRlUgtwZXJmb3JtRGF0ZQ==');
+    'JhY3RJZBIlCghjb250cmFjdBhIIAEoCzIJLkNvbnRyYWN0Ughjb250cmFjdBIbCglwYXJlbnRf'
+    'aWQYSSABKAVSCHBhcmVudElkEjQKDHBheW1lbnRfZGF0ZRhKIAEoCzIRLmdvb2dsZS50eXBlLk'
+    'RhdGVSC3BheW1lbnREYXRlEjQKDHBlcmZvcm1fZGF0ZRhLIAEoCzIRLmdvb2dsZS50eXBlLkRh'
+    'dGVSC3BlcmZvcm1EYXRl');
 

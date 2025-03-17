@@ -13,12 +13,12 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'operation_type.pbenum.dart' as $68;
+import 'operation_type.pbenum.dart' as $69;
 
 class Subscription extends $pb.GeneratedMessage {
   factory Subscription({
     $core.int? subscriptionId,
-    $68.OperationType? operationType,
+    $69.OperationType? operationType,
     $core.String? table,
     $core.String? fields,
     $core.String? webhookUrl,
@@ -51,7 +51,7 @@ class Subscription extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Subscription', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'subscriptionId', $pb.PbFieldType.O3)
-    ..e<$68.OperationType>(3, _omitFieldNames ? '' : 'operationType', $pb.PbFieldType.OE, defaultOrMaker: $68.OperationType.OPERATION_TYPE_UNKNOWN, valueOf: $68.OperationType.valueOf, enumValues: $68.OperationType.values)
+    ..e<$69.OperationType>(3, _omitFieldNames ? '' : 'operationType', $pb.PbFieldType.OE, defaultOrMaker: $69.OperationType.OPERATION_TYPE_UNKNOWN, valueOf: $69.OperationType.valueOf, enumValues: $69.OperationType.values)
     ..aOS(4, _omitFieldNames ? '' : 'table')
     ..aOS(5, _omitFieldNames ? '' : 'fields')
     ..aOS(6, _omitFieldNames ? '' : 'webhookUrl')
@@ -90,9 +90,9 @@ class Subscription extends $pb.GeneratedMessage {
   void clearSubscriptionId() => clearField(1);
 
   @$pb.TagNumber(3)
-  $68.OperationType get operationType => $_getN(1);
+  $69.OperationType get operationType => $_getN(1);
   @$pb.TagNumber(3)
-  set operationType($68.OperationType v) { setField(3, v); }
+  set operationType($69.OperationType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasOperationType() => $_has(1);
   @$pb.TagNumber(3)

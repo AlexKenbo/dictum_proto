@@ -13,14 +13,14 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $42;
+import '../google/protobuf/timestamp.pb.dart' as $43;
 import 'account.pb.dart' as $18;
 import 'attachment.pb.dart' as $4;
-import 'color.pbenum.dart' as $63;
+import 'color.pbenum.dart' as $64;
 import 'entity.pb.dart' as $14;
-import 'source.pbenum.dart' as $62;
-import 'status.pbenum.dart' as $64;
-import 'transfer_type.pbenum.dart' as $65;
+import 'source.pbenum.dart' as $63;
+import 'status.pbenum.dart' as $65;
+import 'transfer_type.pbenum.dart' as $66;
 import 'user.pb.dart' as $11;
 
 class Transfer extends $pb.GeneratedMessage {
@@ -32,7 +32,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.int? verifierId,
     $core.String? resourceName,
     $core.String? number,
-    $65.TransferType? type,
+    $66.TransferType? type,
     $11.User? verifier,
     $core.int? payerId,
     $core.int? payerAccountId,
@@ -43,17 +43,17 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? amount,
     $core.double? allocatedAmount,
     $core.int? parentId,
-    $62.Source? datasource,
-    $63.Color? color,
+    $63.Source? datasource,
+    $64.Color? color,
     $core.String? note,
     $18.Account? payerAccount,
     $18.Account? recipientAccount,
     $14.Entity? payer,
     $14.Entity? recipient,
-    $42.Timestamp? createTime,
-    $42.Timestamp? fullAllocationTime,
-    $42.Timestamp? paymentTime,
-    $42.Timestamp? verifyTime,
+    $43.Timestamp? createTime,
+    $43.Timestamp? fullAllocationTime,
+    $43.Timestamp? paymentTime,
+    $43.Timestamp? verifyTime,
     Transfer? parent,
     $core.String? recipientCurrencyCode,
     $core.Iterable<$4.Attachment>? attachments,
@@ -63,7 +63,7 @@ class Transfer extends $pb.GeneratedMessage {
     $core.double? recipientAmount,
     $core.String? payerCurrencyCode,
     $core.String? externalUrl,
-    $64.Status? status,
+    $65.Status? status,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -197,7 +197,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.int>(14, _omitFieldNames ? '' : 'verifierId', $pb.PbFieldType.O3)
     ..aOS(18, _omitFieldNames ? '' : 'resourceName')
     ..aOS(20, _omitFieldNames ? '' : 'number')
-    ..e<$65.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $65.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $65.TransferType.valueOf, enumValues: $65.TransferType.values)
+    ..e<$66.TransferType>(22, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: $66.TransferType.TRANSFER_TYPE_UNKNOWN, valueOf: $66.TransferType.valueOf, enumValues: $66.TransferType.values)
     ..aOM<$11.User>(28, _omitFieldNames ? '' : 'verifier', subBuilder: $11.User.create)
     ..a<$core.int>(31, _omitFieldNames ? '' : 'payerId', $pb.PbFieldType.O3)
     ..a<$core.int>(32, _omitFieldNames ? '' : 'payerAccountId', $pb.PbFieldType.O3)
@@ -208,17 +208,17 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(37, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
     ..a<$core.double>(38, _omitFieldNames ? '' : 'allocatedAmount', $pb.PbFieldType.OD)
     ..a<$core.int>(40, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
-    ..e<$62.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $62.Source.SOURCE_UNKNOWN, valueOf: $62.Source.valueOf, enumValues: $62.Source.values)
-    ..e<$63.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $63.Color.COLOR_UNKNOWN, valueOf: $63.Color.valueOf, enumValues: $63.Color.values)
+    ..e<$63.Source>(42, _omitFieldNames ? '' : 'datasource', $pb.PbFieldType.OE, defaultOrMaker: $63.Source.SOURCE_UNKNOWN, valueOf: $63.Source.valueOf, enumValues: $63.Source.values)
+    ..e<$64.Color>(43, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OE, defaultOrMaker: $64.Color.COLOR_UNKNOWN, valueOf: $64.Color.valueOf, enumValues: $64.Color.values)
     ..aOS(44, _omitFieldNames ? '' : 'note')
     ..aOM<$18.Account>(47, _omitFieldNames ? '' : 'payerAccount', subBuilder: $18.Account.create)
     ..aOM<$18.Account>(48, _omitFieldNames ? '' : 'recipientAccount', subBuilder: $18.Account.create)
     ..aOM<$14.Entity>(49, _omitFieldNames ? '' : 'payer', subBuilder: $14.Entity.create)
     ..aOM<$14.Entity>(50, _omitFieldNames ? '' : 'recipient', subBuilder: $14.Entity.create)
-    ..aOM<$42.Timestamp>(52, _omitFieldNames ? '' : 'createTime', subBuilder: $42.Timestamp.create)
-    ..aOM<$42.Timestamp>(53, _omitFieldNames ? '' : 'fullAllocationTime', subBuilder: $42.Timestamp.create)
-    ..aOM<$42.Timestamp>(54, _omitFieldNames ? '' : 'paymentTime', subBuilder: $42.Timestamp.create)
-    ..aOM<$42.Timestamp>(55, _omitFieldNames ? '' : 'verifyTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$43.Timestamp>(52, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(53, _omitFieldNames ? '' : 'fullAllocationTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(54, _omitFieldNames ? '' : 'paymentTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(55, _omitFieldNames ? '' : 'verifyTime', subBuilder: $43.Timestamp.create)
     ..aOM<Transfer>(56, _omitFieldNames ? '' : 'parent', subBuilder: Transfer.create)
     ..aOS(57, _omitFieldNames ? '' : 'recipientCurrencyCode')
     ..pc<$4.Attachment>(58, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: $4.Attachment.create)
@@ -228,7 +228,7 @@ class Transfer extends $pb.GeneratedMessage {
     ..a<$core.double>(62, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
     ..aOS(63, _omitFieldNames ? '' : 'payerCurrencyCode')
     ..aOS(64, _omitFieldNames ? '' : 'externalUrl')
-    ..e<$64.Status>(65, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $64.Status.STATUS_UNSPECIFIED, valueOf: $64.Status.valueOf, enumValues: $64.Status.values)
+    ..e<$65.Status>(65, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $65.Status.STATUS_UNSPECIFIED, valueOf: $65.Status.valueOf, enumValues: $65.Status.values)
     ..hasRequiredFields = false
   ;
 
@@ -317,9 +317,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearNumber() => clearField(20);
 
   @$pb.TagNumber(22)
-  $65.TransferType get type => $_getN(7);
+  $66.TransferType get type => $_getN(7);
   @$pb.TagNumber(22)
-  set type($65.TransferType v) { setField(22, v); }
+  set type($66.TransferType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasType() => $_has(7);
   @$pb.TagNumber(22)
@@ -418,18 +418,18 @@ class Transfer extends $pb.GeneratedMessage {
   void clearParentId() => clearField(40);
 
   @$pb.TagNumber(42)
-  $62.Source get datasource => $_getN(18);
+  $63.Source get datasource => $_getN(18);
   @$pb.TagNumber(42)
-  set datasource($62.Source v) { setField(42, v); }
+  set datasource($63.Source v) { setField(42, v); }
   @$pb.TagNumber(42)
   $core.bool hasDatasource() => $_has(18);
   @$pb.TagNumber(42)
   void clearDatasource() => clearField(42);
 
   @$pb.TagNumber(43)
-  $63.Color get color => $_getN(19);
+  $64.Color get color => $_getN(19);
   @$pb.TagNumber(43)
-  set color($63.Color v) { setField(43, v); }
+  set color($64.Color v) { setField(43, v); }
   @$pb.TagNumber(43)
   $core.bool hasColor() => $_has(19);
   @$pb.TagNumber(43)
@@ -489,48 +489,48 @@ class Transfer extends $pb.GeneratedMessage {
   $14.Entity ensureRecipient() => $_ensure(24);
 
   @$pb.TagNumber(52)
-  $42.Timestamp get createTime => $_getN(25);
+  $43.Timestamp get createTime => $_getN(25);
   @$pb.TagNumber(52)
-  set createTime($42.Timestamp v) { setField(52, v); }
+  set createTime($43.Timestamp v) { setField(52, v); }
   @$pb.TagNumber(52)
   $core.bool hasCreateTime() => $_has(25);
   @$pb.TagNumber(52)
   void clearCreateTime() => clearField(52);
   @$pb.TagNumber(52)
-  $42.Timestamp ensureCreateTime() => $_ensure(25);
+  $43.Timestamp ensureCreateTime() => $_ensure(25);
 
   @$pb.TagNumber(53)
-  $42.Timestamp get fullAllocationTime => $_getN(26);
+  $43.Timestamp get fullAllocationTime => $_getN(26);
   @$pb.TagNumber(53)
-  set fullAllocationTime($42.Timestamp v) { setField(53, v); }
+  set fullAllocationTime($43.Timestamp v) { setField(53, v); }
   @$pb.TagNumber(53)
   $core.bool hasFullAllocationTime() => $_has(26);
   @$pb.TagNumber(53)
   void clearFullAllocationTime() => clearField(53);
   @$pb.TagNumber(53)
-  $42.Timestamp ensureFullAllocationTime() => $_ensure(26);
+  $43.Timestamp ensureFullAllocationTime() => $_ensure(26);
 
   @$pb.TagNumber(54)
-  $42.Timestamp get paymentTime => $_getN(27);
+  $43.Timestamp get paymentTime => $_getN(27);
   @$pb.TagNumber(54)
-  set paymentTime($42.Timestamp v) { setField(54, v); }
+  set paymentTime($43.Timestamp v) { setField(54, v); }
   @$pb.TagNumber(54)
   $core.bool hasPaymentTime() => $_has(27);
   @$pb.TagNumber(54)
   void clearPaymentTime() => clearField(54);
   @$pb.TagNumber(54)
-  $42.Timestamp ensurePaymentTime() => $_ensure(27);
+  $43.Timestamp ensurePaymentTime() => $_ensure(27);
 
   @$pb.TagNumber(55)
-  $42.Timestamp get verifyTime => $_getN(28);
+  $43.Timestamp get verifyTime => $_getN(28);
   @$pb.TagNumber(55)
-  set verifyTime($42.Timestamp v) { setField(55, v); }
+  set verifyTime($43.Timestamp v) { setField(55, v); }
   @$pb.TagNumber(55)
   $core.bool hasVerifyTime() => $_has(28);
   @$pb.TagNumber(55)
   void clearVerifyTime() => clearField(55);
   @$pb.TagNumber(55)
-  $42.Timestamp ensureVerifyTime() => $_ensure(28);
+  $43.Timestamp ensureVerifyTime() => $_ensure(28);
 
   @$pb.TagNumber(56)
   Transfer get parent => $_getN(29);
@@ -610,9 +610,9 @@ class Transfer extends $pb.GeneratedMessage {
   void clearExternalUrl() => clearField(64);
 
   @$pb.TagNumber(65)
-  $64.Status get status => $_getN(38);
+  $65.Status get status => $_getN(38);
   @$pb.TagNumber(65)
-  set status($64.Status v) { setField(65, v); }
+  set status($65.Status v) { setField(65, v); }
   @$pb.TagNumber(65)
   $core.bool hasStatus() => $_has(38);
   @$pb.TagNumber(65)
