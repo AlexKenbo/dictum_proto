@@ -105,6 +105,10 @@ class Accrual extends $pb.GeneratedMessage {
     $core.int? contractId,
     $16.Contract? contract,
     $core.int? parentId,
+    $core.double? recipientAmount,
+    $core.double? recipientCurrencyCode,
+    $core.bool? recipientConfirmed,
+    $43.Timestamp? recipientReceivedDate,
   }) {
     final $result = create();
     if (eventId != null) {
@@ -326,6 +330,18 @@ class Accrual extends $pb.GeneratedMessage {
     if (parentId != null) {
       $result.parentId = parentId;
     }
+    if (recipientAmount != null) {
+      $result.recipientAmount = recipientAmount;
+    }
+    if (recipientCurrencyCode != null) {
+      $result.recipientCurrencyCode = recipientCurrencyCode;
+    }
+    if (recipientConfirmed != null) {
+      $result.recipientConfirmed = recipientConfirmed;
+    }
+    if (recipientReceivedDate != null) {
+      $result.recipientReceivedDate = recipientReceivedDate;
+    }
     return $result;
   }
   Accrual._() : super();
@@ -406,6 +422,10 @@ class Accrual extends $pb.GeneratedMessage {
     ..a<$core.int>(71, _omitFieldNames ? '' : 'contractId', $pb.PbFieldType.O3)
     ..aOM<$16.Contract>(72, _omitFieldNames ? '' : 'contract', subBuilder: $16.Contract.create)
     ..a<$core.int>(73, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
+    ..a<$core.double>(74, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
+    ..a<$core.double>(75, _omitFieldNames ? '' : 'recipientCurrencyCode', $pb.PbFieldType.OD)
+    ..aOB(76, _omitFieldNames ? '' : 'recipientConfirmed')
+    ..aOM<$43.Timestamp>(77, _omitFieldNames ? '' : 'recipientReceivedDate', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -1113,6 +1133,44 @@ class Accrual extends $pb.GeneratedMessage {
   $core.bool hasParentId() => $_has(72);
   @$pb.TagNumber(73)
   void clearParentId() => clearField(73);
+
+  @$pb.TagNumber(74)
+  $core.double get recipientAmount => $_getN(73);
+  @$pb.TagNumber(74)
+  set recipientAmount($core.double v) { $_setDouble(73, v); }
+  @$pb.TagNumber(74)
+  $core.bool hasRecipientAmount() => $_has(73);
+  @$pb.TagNumber(74)
+  void clearRecipientAmount() => clearField(74);
+
+  @$pb.TagNumber(75)
+  $core.double get recipientCurrencyCode => $_getN(74);
+  @$pb.TagNumber(75)
+  set recipientCurrencyCode($core.double v) { $_setDouble(74, v); }
+  @$pb.TagNumber(75)
+  $core.bool hasRecipientCurrencyCode() => $_has(74);
+  @$pb.TagNumber(75)
+  void clearRecipientCurrencyCode() => clearField(75);
+
+  @$pb.TagNumber(76)
+  $core.bool get recipientConfirmed => $_getBF(75);
+  @$pb.TagNumber(76)
+  set recipientConfirmed($core.bool v) { $_setBool(75, v); }
+  @$pb.TagNumber(76)
+  $core.bool hasRecipientConfirmed() => $_has(75);
+  @$pb.TagNumber(76)
+  void clearRecipientConfirmed() => clearField(76);
+
+  @$pb.TagNumber(77)
+  $43.Timestamp get recipientReceivedDate => $_getN(76);
+  @$pb.TagNumber(77)
+  set recipientReceivedDate($43.Timestamp v) { setField(77, v); }
+  @$pb.TagNumber(77)
+  $core.bool hasRecipientReceivedDate() => $_has(76);
+  @$pb.TagNumber(77)
+  void clearRecipientReceivedDate() => clearField(77);
+  @$pb.TagNumber(77)
+  $43.Timestamp ensureRecipientReceivedDate() => $_ensure(76);
 }
 
 

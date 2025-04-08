@@ -69,7 +69,7 @@ message Accrual {
   google.protobuf.Timestamp create_time = 46;
   Status status = 47;
   repeated Attachment attachments = 48;
-
+  
   // Invoicing fields
   int32 initiator_id = 49;
   int32 author_id = 50;
@@ -91,17 +91,22 @@ message Accrual {
   Entity initiator = 64;
   Entity consignee = 65;
   repeated Signature signatures = 66;
-
+  
   //
   double total = 68;
-
+  
   // 
   bool cancel_mark_paid = 69;
-
+  
   //
   bool has_comments = 70;
   // 
   int32 contract_id = 71;
   Contract contract = 72;
   int32 parent_id = 73;
+  
+  double recipient_amount = 74;
+  double recipient_currency_code = 75;
+  bool recipient_confirmed = 76;
+  google.protobuf.Timestamp recipient_received_date = 77;
 }
