@@ -106,7 +106,7 @@ class Accrual extends $pb.GeneratedMessage {
     $16.Contract? contract,
     $core.int? parentId,
     $core.double? recipientAmount,
-    $core.double? recipientCurrencyCode,
+    $core.String? recipientCurrencyCode,
     $core.bool? recipientConfirmed,
     $43.Timestamp? recipientReceivedDate,
   }) {
@@ -423,7 +423,7 @@ class Accrual extends $pb.GeneratedMessage {
     ..aOM<$16.Contract>(72, _omitFieldNames ? '' : 'contract', subBuilder: $16.Contract.create)
     ..a<$core.int>(73, _omitFieldNames ? '' : 'parentId', $pb.PbFieldType.O3)
     ..a<$core.double>(74, _omitFieldNames ? '' : 'recipientAmount', $pb.PbFieldType.OD)
-    ..a<$core.double>(75, _omitFieldNames ? '' : 'recipientCurrencyCode', $pb.PbFieldType.OD)
+    ..aOS(75, _omitFieldNames ? '' : 'recipientCurrencyCode')
     ..aOB(76, _omitFieldNames ? '' : 'recipientConfirmed')
     ..aOM<$43.Timestamp>(77, _omitFieldNames ? '' : 'recipientReceivedDate', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
@@ -1144,9 +1144,9 @@ class Accrual extends $pb.GeneratedMessage {
   void clearRecipientAmount() => clearField(74);
 
   @$pb.TagNumber(75)
-  $core.double get recipientCurrencyCode => $_getN(74);
+  $core.String get recipientCurrencyCode => $_getSZ(74);
   @$pb.TagNumber(75)
-  set recipientCurrencyCode($core.double v) { $_setDouble(74, v); }
+  set recipientCurrencyCode($core.String v) { $_setString(74, v); }
   @$pb.TagNumber(75)
   $core.bool hasRecipientCurrencyCode() => $_has(74);
   @$pb.TagNumber(75)
