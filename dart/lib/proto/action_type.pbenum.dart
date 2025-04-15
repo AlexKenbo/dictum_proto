@@ -27,6 +27,7 @@ class ActionType extends $pb.ProtobufEnum {
   static const ActionType ACTION_TYPE_CANCEL_MARK_PAID = ActionType._(10, _omitEnumNames ? '' : 'ACTION_TYPE_CANCEL_MARK_PAID');
   static const ActionType ACTION_TYPE_RECIPIENT_CONFIRM = ActionType._(11, _omitEnumNames ? '' : 'ACTION_TYPE_RECIPIENT_CONFIRM');
   static const ActionType ACTION_TYPE_RECIPIENT_MARK_PAID = ActionType._(12, _omitEnumNames ? '' : 'ACTION_TYPE_RECIPIENT_MARK_PAID');
+  static const ActionType ACTION_TYPE_CANCEL_RECIPIENT_CONFIRM = ActionType._(13, _omitEnumNames ? '' : 'ACTION_TYPE_CANCEL_RECIPIENT_CONFIRM');
 
   static const $core.List<ActionType> values = <ActionType> [
     ACTION_TYPE_UNKNOWN,
@@ -42,6 +43,7 @@ class ActionType extends $pb.ProtobufEnum {
     ACTION_TYPE_CANCEL_MARK_PAID,
     ACTION_TYPE_RECIPIENT_CONFIRM,
     ACTION_TYPE_RECIPIENT_MARK_PAID,
+    ACTION_TYPE_CANCEL_RECIPIENT_CONFIRM,
   ];
 
   static final $core.Map<$core.int, ActionType> _byValue = $pb.ProtobufEnum.initByValue(values);

@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17proto/action_type.proto*\x92\x03\n\nActionType\x12\x17\n\x13\x41\x43TION_TYPE_UNKNOWN\x10\x00\x12\x1d\n\x19\x41\x43TION_TYPE_CONFIRM_ENTRY\x10\x01\x12\x15\n\x11\x41\x43TION_TYPE_AUDIT\x10\x02\x12\x1c\n\x18\x41\x43TION_TYPE_ALLOW_PAYOUT\x10\x03\x12\x16\n\x12\x41\x43TION_TYPE_PAYOUT\x10\x04\x12\x19\n\x15\x41\x43TION_TYPE_MARK_PAID\x10\x05\x12\x1f\n\x1b\x41\x43TION_TYPE_DISALLOW_PAYOUT\x10\x06\x12\x1c\n\x18\x41\x43TION_TYPE_CANCEL_AUDIT\x10\x07\x12#\n\x1f\x41\x43TION_TYPE_CANCEL_CONFIRMATION\x10\x08\x12\x16\n\x12\x41\x43TION_TYPE_CANCEL\x10\t\x12 \n\x1c\x41\x43TION_TYPE_CANCEL_MARK_PAID\x10\n\x12!\n\x1d\x41\x43TION_TYPE_RECIPIENT_CONFIRM\x10\x0b\x12#\n\x1f\x41\x43TION_TYPE_RECIPIENT_MARK_PAID\x10\x0c\x42&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17proto/action_type.proto*\xbc\x03\n\nActionType\x12\x17\n\x13\x41\x43TION_TYPE_UNKNOWN\x10\x00\x12\x1d\n\x19\x41\x43TION_TYPE_CONFIRM_ENTRY\x10\x01\x12\x15\n\x11\x41\x43TION_TYPE_AUDIT\x10\x02\x12\x1c\n\x18\x41\x43TION_TYPE_ALLOW_PAYOUT\x10\x03\x12\x16\n\x12\x41\x43TION_TYPE_PAYOUT\x10\x04\x12\x19\n\x15\x41\x43TION_TYPE_MARK_PAID\x10\x05\x12\x1f\n\x1b\x41\x43TION_TYPE_DISALLOW_PAYOUT\x10\x06\x12\x1c\n\x18\x41\x43TION_TYPE_CANCEL_AUDIT\x10\x07\x12#\n\x1f\x41\x43TION_TYPE_CANCEL_CONFIRMATION\x10\x08\x12\x16\n\x12\x41\x43TION_TYPE_CANCEL\x10\t\x12 \n\x1c\x41\x43TION_TYPE_CANCEL_MARK_PAID\x10\n\x12!\n\x1d\x41\x43TION_TYPE_RECIPIENT_CONFIRM\x10\x0b\x12#\n\x1f\x41\x43TION_TYPE_RECIPIENT_MARK_PAID\x10\x0c\x12(\n$ACTION_TYPE_CANCEL_RECIPIENT_CONFIRM\x10\rB&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -33,5 +33,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z$github.com/AlexKenbo/dictum_proto/go'
   _globals['_ACTIONTYPE']._serialized_start=28
-  _globals['_ACTIONTYPE']._serialized_end=430
+  _globals['_ACTIONTYPE']._serialized_end=472
 # @@protoc_insertion_point(module_scope)
