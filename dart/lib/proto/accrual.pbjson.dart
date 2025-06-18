@@ -90,6 +90,10 @@ const Accrual$json = {
     {'1': 'contract_id', '3': 71, '4': 1, '5': 5, '10': 'contractId'},
     {'1': 'contract', '3': 72, '4': 1, '5': 11, '6': '.Contract', '10': 'contract'},
     {'1': 'parent_id', '3': 73, '4': 1, '5': 5, '10': 'parentId'},
+    {'1': 'recipient_amount', '3': 74, '4': 1, '5': 1, '10': 'recipientAmount'},
+    {'1': 'recipient_currency_code', '3': 75, '4': 1, '5': 9, '10': 'recipientCurrencyCode'},
+    {'1': 'recipient_confirmed', '3': 76, '4': 1, '5': 8, '10': 'recipientConfirmed'},
+    {'1': 'recipient_received_date', '3': 77, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'recipientReceivedDate'},
   ],
 };
 
@@ -147,5 +151,9 @@ final $typed_data.Uint8List accrualDescriptor = $convert.base64Decode(
     'IFdG90YWwSKAoQY2FuY2VsX21hcmtfcGFpZBhFIAEoCFIOY2FuY2VsTWFya1BhaWQSIQoMaGFz'
     'X2NvbW1lbnRzGEYgASgIUgtoYXNDb21tZW50cxIfCgtjb250cmFjdF9pZBhHIAEoBVIKY29udH'
     'JhY3RJZBIlCghjb250cmFjdBhIIAEoCzIJLkNvbnRyYWN0Ughjb250cmFjdBIbCglwYXJlbnRf'
-    'aWQYSSABKAVSCHBhcmVudElk');
+    'aWQYSSABKAVSCHBhcmVudElkEikKEHJlY2lwaWVudF9hbW91bnQYSiABKAFSD3JlY2lwaWVudE'
+    'Ftb3VudBI2ChdyZWNpcGllbnRfY3VycmVuY3lfY29kZRhLIAEoCVIVcmVjaXBpZW50Q3VycmVu'
+    'Y3lDb2RlEi8KE3JlY2lwaWVudF9jb25maXJtZWQYTCABKAhSEnJlY2lwaWVudENvbmZpcm1lZB'
+    'JSChdyZWNpcGllbnRfcmVjZWl2ZWRfZGF0ZRhNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l'
+    'c3RhbXBSFXJlY2lwaWVudFJlY2VpdmVkRGF0ZQ==');
 
