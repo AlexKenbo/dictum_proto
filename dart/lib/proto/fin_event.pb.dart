@@ -301,10 +301,14 @@ class ListActionsResponse extends $pb.GeneratedMessage {
 class ListArticlesRequest extends $pb.GeneratedMessage {
   factory ListArticlesRequest({
     $core.String? filter,
+    $core.String? parent,
   }) {
     final $result = create();
     if (filter != null) {
       $result.filter = filter;
+    }
+    if (parent != null) {
+      $result.parent = parent;
     }
     return $result;
   }
@@ -314,6 +318,7 @@ class ListArticlesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListArticlesRequest', createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'filter')
+    ..aOS(2, _omitFieldNames ? '' : 'parent')
     ..hasRequiredFields = false
   ;
 
@@ -346,6 +351,15 @@ class ListArticlesRequest extends $pb.GeneratedMessage {
   $core.bool hasFilter() => $_has(0);
   @$pb.TagNumber(1)
   void clearFilter() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set parent($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearParent() => clearField(2);
 }
 
 class ListTransfersResponse extends $pb.GeneratedMessage {
