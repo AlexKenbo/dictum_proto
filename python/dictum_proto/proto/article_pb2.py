@@ -22,12 +22,13 @@ _runtime_version.ValidateProtobufRuntimeVersion(
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from dictum_proto.proto import article_group_pb2 as proto_dot_article__group__pb2
 from dictum_proto.proto import direction_pb2 as proto_dot_direction__pb2
 from dictum_proto.proto import fund_flow_pb2 as proto_dot_fund__flow__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13proto/article.proto\x1a\x19proto/article_group.proto\x1a\x15proto/direction.proto\x1a\x15proto/fund_flow.proto\"\x88\x03\n\x07\x41rticle\x12\x12\n\narticle_id\x18\x01 \x01(\x05\x12\x14\n\x0c\x65nglish_name\x18\x02 \x01(\t\x12\x15\n\ris_computable\x18\x03 \x01(\x08\x12\x13\n\x0bis_standard\x18\x04 \x01(\x08\x12\x19\n\x11\x61llow_subarticles\x18\x05 \x01(\x08\x12\x15\n\rallow_linking\x18\x06 \x01(\x08\x12\x17\n\x0f\x63onglomerate_id\x18\x07 \x01(\x05\x12$\n\rarticle_group\x18\x08 \x01(\x0e\x32\r.ArticleGroup\x12\x1d\n\tdirection\x18\t \x01(\x0e\x32\n.Direction\x12\x19\n\x11parent_article_id\x18\n \x01(\x05\x12 \n\x0eparent_article\x18\x0b \x01(\x0b\x32\x08.Article\x12\x1b\n\x08\x66undFlow\x18\x0c \x01(\x0e\x32\t.FundFlow\x12\x11\n\tentity_id\x18\r \x01(\x05\x12\x15\n\rsort_position\x18\x0e \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x0f \x01(\tB&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13proto/article.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19proto/article_group.proto\x1a\x15proto/direction.proto\x1a\x15proto/fund_flow.proto\"\xea\x03\n\x07\x41rticle\x12\x12\n\narticle_id\x18\x01 \x01(\x05\x12\x14\n\x0c\x65nglish_name\x18\x02 \x01(\t\x12\x15\n\ris_computable\x18\x03 \x01(\x08\x12\x13\n\x0bis_standard\x18\x04 \x01(\x08\x12\x19\n\x11\x61llow_subarticles\x18\x05 \x01(\x08\x12\x15\n\rallow_linking\x18\x06 \x01(\x08\x12\x17\n\x0f\x63onglomerate_id\x18\x07 \x01(\x05\x12$\n\rarticle_group\x18\x08 \x01(\x0e\x32\r.ArticleGroup\x12\x1d\n\tdirection\x18\t \x01(\x0e\x32\n.Direction\x12\x19\n\x11parent_article_id\x18\n \x01(\x05\x12 \n\x0eparent_article\x18\x0b \x01(\x0b\x32\x08.Article\x12\x1b\n\x08\x66undFlow\x18\x0c \x01(\x0e\x32\t.FundFlow\x12\x11\n\tentity_id\x18\r \x01(\x05\x12\x15\n\rsort_position\x18\x0e \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x0f \x01(\t\x12/\n\x0b\x63reate_time\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x11 \x01(\x0b\x32\x1a.google.protobuf.TimestampB&Z$github.com/AlexKenbo/dictum_proto/gob\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,6 +36,6 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'proto.article_pb2', _global
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'Z$github.com/AlexKenbo/dictum_proto/go'
-  _globals['_ARTICLE']._serialized_start=97
-  _globals['_ARTICLE']._serialized_end=489
+  _globals['_ARTICLE']._serialized_start=130
+  _globals['_ARTICLE']._serialized_end=620
 # @@protoc_insertion_point(module_scope)

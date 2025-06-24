@@ -13,6 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../google/protobuf/timestamp.pb.dart' as $43;
 import 'article_group.pbenum.dart' as $56;
 import 'direction.pbenum.dart' as $57;
 import 'fund_flow.pbenum.dart' as $58;
@@ -34,6 +35,8 @@ class Article extends $pb.GeneratedMessage {
     $core.int? entityId,
     $core.int? sortPosition,
     $core.String? description,
+    $43.Timestamp? createTime,
+    $43.Timestamp? updateTime,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -81,6 +84,12 @@ class Article extends $pb.GeneratedMessage {
     if (description != null) {
       $result.description = description;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
+    if (updateTime != null) {
+      $result.updateTime = updateTime;
+    }
     return $result;
   }
   Article._() : super();
@@ -103,6 +112,8 @@ class Article extends $pb.GeneratedMessage {
     ..a<$core.int>(13, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(14, _omitFieldNames ? '' : 'sortPosition', $pb.PbFieldType.O3)
     ..aOS(15, _omitFieldNames ? '' : 'description')
+    ..aOM<$43.Timestamp>(16, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(17, _omitFieldNames ? '' : 'updateTime', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -263,6 +274,28 @@ class Article extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(14);
   @$pb.TagNumber(15)
   void clearDescription() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $43.Timestamp get createTime => $_getN(15);
+  @$pb.TagNumber(16)
+  set createTime($43.Timestamp v) { setField(16, v); }
+  @$pb.TagNumber(16)
+  $core.bool hasCreateTime() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearCreateTime() => clearField(16);
+  @$pb.TagNumber(16)
+  $43.Timestamp ensureCreateTime() => $_ensure(15);
+
+  @$pb.TagNumber(17)
+  $43.Timestamp get updateTime => $_getN(16);
+  @$pb.TagNumber(17)
+  set updateTime($43.Timestamp v) { setField(17, v); }
+  @$pb.TagNumber(17)
+  $core.bool hasUpdateTime() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearUpdateTime() => clearField(17);
+  @$pb.TagNumber(17)
+  $43.Timestamp ensureUpdateTime() => $_ensure(16);
 }
 
 
