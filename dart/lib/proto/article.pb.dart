@@ -13,9 +13,10 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'article_group.pbenum.dart' as $55;
-import 'direction.pbenum.dart' as $56;
-import 'fund_flow.pbenum.dart' as $57;
+import '../google/protobuf/timestamp.pb.dart' as $43;
+import 'article_group.pbenum.dart' as $56;
+import 'direction.pbenum.dart' as $57;
+import 'fund_flow.pbenum.dart' as $58;
 
 class Article extends $pb.GeneratedMessage {
   factory Article({
@@ -26,14 +27,16 @@ class Article extends $pb.GeneratedMessage {
     $core.bool? allowSubarticles,
     $core.bool? allowLinking,
     $core.int? conglomerateId,
-    $55.ArticleGroup? articleGroup,
-    $56.Direction? direction,
+    $56.ArticleGroup? articleGroup,
+    $57.Direction? direction,
     $core.int? parentArticleId,
     Article? parentArticle,
-    $57.FundFlow? fundFlow,
+    $58.FundFlow? fundFlow,
     $core.int? entityId,
     $core.int? sortPosition,
     $core.String? description,
+    $43.Timestamp? createTime,
+    $43.Timestamp? updateTime,
   }) {
     final $result = create();
     if (articleId != null) {
@@ -81,6 +84,12 @@ class Article extends $pb.GeneratedMessage {
     if (description != null) {
       $result.description = description;
     }
+    if (createTime != null) {
+      $result.createTime = createTime;
+    }
+    if (updateTime != null) {
+      $result.updateTime = updateTime;
+    }
     return $result;
   }
   Article._() : super();
@@ -95,14 +104,16 @@ class Article extends $pb.GeneratedMessage {
     ..aOB(5, _omitFieldNames ? '' : 'allowSubarticles')
     ..aOB(6, _omitFieldNames ? '' : 'allowLinking')
     ..a<$core.int>(7, _omitFieldNames ? '' : 'conglomerateId', $pb.PbFieldType.O3)
-    ..e<$55.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $55.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $55.ArticleGroup.valueOf, enumValues: $55.ArticleGroup.values)
-    ..e<$56.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $56.Direction.DIRECTION_UNKNOWN, valueOf: $56.Direction.valueOf, enumValues: $56.Direction.values)
+    ..e<$56.ArticleGroup>(8, _omitFieldNames ? '' : 'articleGroup', $pb.PbFieldType.OE, defaultOrMaker: $56.ArticleGroup.ARTICLE_GROUP_UNKNOWN, valueOf: $56.ArticleGroup.valueOf, enumValues: $56.ArticleGroup.values)
+    ..e<$57.Direction>(9, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE, defaultOrMaker: $57.Direction.DIRECTION_UNKNOWN, valueOf: $57.Direction.valueOf, enumValues: $57.Direction.values)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'parentArticleId', $pb.PbFieldType.O3)
     ..aOM<Article>(11, _omitFieldNames ? '' : 'parentArticle', subBuilder: Article.create)
-    ..e<$57.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $57.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $57.FundFlow.valueOf, enumValues: $57.FundFlow.values)
+    ..e<$58.FundFlow>(12, _omitFieldNames ? '' : 'fundFlow', $pb.PbFieldType.OE, protoName: 'fundFlow', defaultOrMaker: $58.FundFlow.FUND_FLOW_UNKNOWN, valueOf: $58.FundFlow.valueOf, enumValues: $58.FundFlow.values)
     ..a<$core.int>(13, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(14, _omitFieldNames ? '' : 'sortPosition', $pb.PbFieldType.O3)
     ..aOS(15, _omitFieldNames ? '' : 'description')
+    ..aOM<$43.Timestamp>(16, _omitFieldNames ? '' : 'createTime', subBuilder: $43.Timestamp.create)
+    ..aOM<$43.Timestamp>(17, _omitFieldNames ? '' : 'updateTime', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -191,18 +202,18 @@ class Article extends $pb.GeneratedMessage {
   void clearConglomerateId() => clearField(7);
 
   @$pb.TagNumber(8)
-  $55.ArticleGroup get articleGroup => $_getN(7);
+  $56.ArticleGroup get articleGroup => $_getN(7);
   @$pb.TagNumber(8)
-  set articleGroup($55.ArticleGroup v) { setField(8, v); }
+  set articleGroup($56.ArticleGroup v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasArticleGroup() => $_has(7);
   @$pb.TagNumber(8)
   void clearArticleGroup() => clearField(8);
 
   @$pb.TagNumber(9)
-  $56.Direction get direction => $_getN(8);
+  $57.Direction get direction => $_getN(8);
   @$pb.TagNumber(9)
-  set direction($56.Direction v) { setField(9, v); }
+  set direction($57.Direction v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasDirection() => $_has(8);
   @$pb.TagNumber(9)
@@ -229,9 +240,9 @@ class Article extends $pb.GeneratedMessage {
   Article ensureParentArticle() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $57.FundFlow get fundFlow => $_getN(11);
+  $58.FundFlow get fundFlow => $_getN(11);
   @$pb.TagNumber(12)
-  set fundFlow($57.FundFlow v) { setField(12, v); }
+  set fundFlow($58.FundFlow v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasFundFlow() => $_has(11);
   @$pb.TagNumber(12)
@@ -263,6 +274,28 @@ class Article extends $pb.GeneratedMessage {
   $core.bool hasDescription() => $_has(14);
   @$pb.TagNumber(15)
   void clearDescription() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $43.Timestamp get createTime => $_getN(15);
+  @$pb.TagNumber(16)
+  set createTime($43.Timestamp v) { setField(16, v); }
+  @$pb.TagNumber(16)
+  $core.bool hasCreateTime() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearCreateTime() => clearField(16);
+  @$pb.TagNumber(16)
+  $43.Timestamp ensureCreateTime() => $_ensure(15);
+
+  @$pb.TagNumber(17)
+  $43.Timestamp get updateTime => $_getN(16);
+  @$pb.TagNumber(17)
+  set updateTime($43.Timestamp v) { setField(17, v); }
+  @$pb.TagNumber(17)
+  $core.bool hasUpdateTime() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearUpdateTime() => clearField(17);
+  @$pb.TagNumber(17)
+  $43.Timestamp ensureUpdateTime() => $_ensure(16);
 }
 
 

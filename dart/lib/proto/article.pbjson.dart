@@ -32,6 +32,8 @@ const Article$json = {
     {'1': 'entity_id', '3': 13, '4': 1, '5': 5, '10': 'entityId'},
     {'1': 'sort_position', '3': 14, '4': 1, '5': 5, '10': 'sortPosition'},
     {'1': 'description', '3': 15, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'create_time', '3': 16, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createTime'},
+    {'1': 'update_time', '3': 17, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'updateTime'},
   ],
 };
 
@@ -47,5 +49,7 @@ final $typed_data.Uint8List articleDescriptor = $convert.base64Decode(
     'VSD3BhcmVudEFydGljbGVJZBIvCg5wYXJlbnRfYXJ0aWNsZRgLIAEoCzIILkFydGljbGVSDXBh'
     'cmVudEFydGljbGUSJQoIZnVuZEZsb3cYDCABKA4yCS5GdW5kRmxvd1IIZnVuZEZsb3cSGwoJZW'
     '50aXR5X2lkGA0gASgFUghlbnRpdHlJZBIjCg1zb3J0X3Bvc2l0aW9uGA4gASgFUgxzb3J0UG9z'
-    'aXRpb24SIAoLZGVzY3JpcHRpb24YDyABKAlSC2Rlc2NyaXB0aW9u');
+    'aXRpb24SIAoLZGVzY3JpcHRpb24YDyABKAlSC2Rlc2NyaXB0aW9uEjsKC2NyZWF0ZV90aW1lGB'
+    'AgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRI7Cgt1cGRhdGVf'
+    'dGltZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnVwZGF0ZVRpbWU=');
 

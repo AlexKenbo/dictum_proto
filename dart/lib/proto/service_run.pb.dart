@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../google/protobuf/timestamp.pb.dart' as $42;
-import 'service.pb.dart' as $33;
+import '../google/protobuf/timestamp.pb.dart' as $43;
+import 'service.pb.dart' as $34;
 import 'service_run_state.pbenum.dart' as $74;
 
 class ServiceRun extends $pb.GeneratedMessage {
@@ -22,8 +22,8 @@ class ServiceRun extends $pb.GeneratedMessage {
     $core.int? serviceId,
     $74.ServiceRunState? state,
     $core.String? message,
-    $33.Service? service,
-    $42.Timestamp? syncTime,
+    $34.Service? service,
+    $43.Timestamp? syncTime,
   }) {
     final $result = create();
     if (serviceId != null) {
@@ -51,8 +51,8 @@ class ServiceRun extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serviceId', $pb.PbFieldType.O3)
     ..e<$74.ServiceRunState>(3, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: $74.ServiceRunState.SERVICE_RUN_STATE_UNKNOWN, valueOf: $74.ServiceRunState.valueOf, enumValues: $74.ServiceRunState.values)
     ..aOS(4, _omitFieldNames ? '' : 'message')
-    ..aOM<$33.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $33.Service.create)
-    ..aOM<$42.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $42.Timestamp.create)
+    ..aOM<$34.Service>(6, _omitFieldNames ? '' : 'service', subBuilder: $34.Service.create)
+    ..aOM<$43.Timestamp>(7, _omitFieldNames ? '' : 'syncTime', subBuilder: $43.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -105,26 +105,26 @@ class ServiceRun extends $pb.GeneratedMessage {
   void clearMessage() => clearField(4);
 
   @$pb.TagNumber(6)
-  $33.Service get service => $_getN(3);
+  $34.Service get service => $_getN(3);
   @$pb.TagNumber(6)
-  set service($33.Service v) { setField(6, v); }
+  set service($34.Service v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasService() => $_has(3);
   @$pb.TagNumber(6)
   void clearService() => clearField(6);
   @$pb.TagNumber(6)
-  $33.Service ensureService() => $_ensure(3);
+  $34.Service ensureService() => $_ensure(3);
 
   @$pb.TagNumber(7)
-  $42.Timestamp get syncTime => $_getN(4);
+  $43.Timestamp get syncTime => $_getN(4);
   @$pb.TagNumber(7)
-  set syncTime($42.Timestamp v) { setField(7, v); }
+  set syncTime($43.Timestamp v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSyncTime() => $_has(4);
   @$pb.TagNumber(7)
   void clearSyncTime() => clearField(7);
   @$pb.TagNumber(7)
-  $42.Timestamp ensureSyncTime() => $_ensure(4);
+  $43.Timestamp ensureSyncTime() => $_ensure(4);
 }
 
 

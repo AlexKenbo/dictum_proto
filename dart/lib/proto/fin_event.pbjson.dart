@@ -80,12 +80,14 @@ const ListArticlesRequest$json = {
   '1': 'ListArticlesRequest',
   '2': [
     {'1': 'filter', '3': 1, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
   ],
 };
 
 /// Descriptor for `ListArticlesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listArticlesRequestDescriptor = $convert.base64Decode(
-    'ChNMaXN0QXJ0aWNsZXNSZXF1ZXN0EhYKBmZpbHRlchgBIAEoCVIGZmlsdGVy');
+    'ChNMaXN0QXJ0aWNsZXNSZXF1ZXN0EhYKBmZpbHRlchgBIAEoCVIGZmlsdGVyEhYKBnBhcmVudB'
+    'gCIAEoCVIGcGFyZW50');
 
 @$core.Deprecated('Use listTransfersResponseDescriptor instead')
 const ListTransfersResponse$json = {

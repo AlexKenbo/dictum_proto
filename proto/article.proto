@@ -2,6 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/AlexKenbo/dictum_proto/go";
 
+import "google/protobuf/timestamp.proto";
 
 import "proto/article_group.proto";
 import "proto/direction.proto";
@@ -26,4 +27,7 @@ message Article
 
   int32 sort_position = 14;
   string description = 15;
+
+  google.protobuf.Timestamp create_time = 16;
+  google.protobuf.Timestamp update_time = 17;
 } 

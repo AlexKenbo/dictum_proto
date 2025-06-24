@@ -195,6 +195,12 @@ service FinEvent {
             }
         };
     }
+    rpc CreateProduct(Product) returns (Product) {
+        option (google.api.http) = {
+            post: "/v1/products"
+            body: "product"
+        };
+    }
 
     rpc ListPositions(ListRequest) returns (ListPositionsResponse) {
         option (google.api.http) = {
@@ -227,6 +233,9 @@ service FinEvent {
     rpc ListArticles(ListArticlesRequest) returns (ListArticlesResponse) {
         option (google.api.http) = {
             get: "/v1/articles"
+            additional_bindings {
+              get: "/v1/{parent=entities/*}/articles"
+            }
         };
     }
     
@@ -305,6 +314,7 @@ message ListActionsResponse {
 
 message ListArticlesRequest {
     string filter = 1;
+    string parent = 2;
 }
 
 message ListTransfersResponse {

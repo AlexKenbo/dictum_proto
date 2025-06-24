@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'action.pb.dart' as $49;
+import 'action.pb.dart' as $50;
 
 class Permission extends $pb.GeneratedMessage {
   factory Permission({
@@ -21,7 +21,7 @@ class Permission extends $pb.GeneratedMessage {
     $core.int? entityId,
     $core.int? actionId,
     $core.String? resourceName,
-    $49.Action? action,
+    $50.Action? action,
   }) {
     final $result = create();
     if (userId != null) {
@@ -50,7 +50,7 @@ class Permission extends $pb.GeneratedMessage {
     ..a<$core.int>(2, _omitFieldNames ? '' : 'entityId', $pb.PbFieldType.O3)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'actionId', $pb.PbFieldType.O3)
     ..aOS(4, _omitFieldNames ? '' : 'resourceName')
-    ..aOM<$49.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $49.Action.create)
+    ..aOM<$50.Action>(5, _omitFieldNames ? '' : 'action', subBuilder: $50.Action.create)
     ..hasRequiredFields = false
   ;
 
@@ -112,15 +112,15 @@ class Permission extends $pb.GeneratedMessage {
   void clearResourceName() => clearField(4);
 
   @$pb.TagNumber(5)
-  $49.Action get action => $_getN(4);
+  $50.Action get action => $_getN(4);
   @$pb.TagNumber(5)
-  set action($49.Action v) { setField(5, v); }
+  set action($50.Action v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasAction() => $_has(4);
   @$pb.TagNumber(5)
   void clearAction() => clearField(5);
   @$pb.TagNumber(5)
-  $49.Action ensureAction() => $_ensure(4);
+  $50.Action ensureAction() => $_ensure(4);
 }
 
 
